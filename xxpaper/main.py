@@ -32,7 +32,7 @@ def main ():
       sys.exit (1)
   if len (sys.argv) >= 4:
     page = sys.argv[3]
-    if not page in conf["xtype"].sections:
+    if not page in conf[xtype].sections:
       print >> sys.stderr, ("Error: Cannot find section %s.%s in file: %s"
                             % (xtype, page, cfg_name))
       sys.exit (1)
@@ -48,7 +48,7 @@ def main ():
     for p in conf[xtype].sections:
       make (conf, xtype, p, os.path.join ("./", "%s_%s.ps" % (t, p)))
   else:
-    make (conf, xtype, page, fname)
+    make (conf, xtype, page, os.path.join ("./", "%s_%s.ps" % (xtype, page)))
   sys.exit (0)
 
 if __name__ == '__main__':
