@@ -26,6 +26,7 @@ class Sheet (object):
     # Offsets for inner tile block
     self.x_off = (self.rubber_x - (self.tile_x * 3)) / 2
     self.y_off = (self.rubber_y - (self.tile_y * 3)) / 2
+    self.align_length = 20
 
   def __enter__ (self):
     return self
@@ -82,6 +83,17 @@ class Sheet (object):
         v = self.value (k, x, y) # Replacement token
     return v
 
+  def page_align (self):
+    for i in [((self.rubber_x / 2.0, 0), (0, 0 - self.align_length)),
+              ((self.rubber_x /2.0, self.rubber_y), (0, self.align_length)),
+              ((0, self.rubber_y / 2.0), (0 - self.align_length, 0)),
+              ((self.rubber_x, self.rubber_y / 2.0), (self.align_length, 0)),]:
+      self.fd.append ("0 setgray")
+      self.fd.append ("0.1 setlinewidth")
+      self.fd.append ("%f %f moveto" % (i[0][0], i[0][1]))
+      self.fd.append ("%f %f lineto" % (i[0][0] + i[1][0], i[0][1] + i[1][1]))
+      self.fd.append ("stroke")
+
   def page_frame (self):
     self.fd.append ("%s %s %s setrgbcolor" % self.value ("base_colour"))
     self.fd.append ("0 0 %d %d rectfill" % (self.rubber_x, self.rubber_y))
@@ -112,6 +124,7 @@ class Sheet (object):
 
   def make (self):
     self.open ()
+    self.page_align ()
     self.page_frame ()
     self.page_tiles ()
     self.page_details ()
