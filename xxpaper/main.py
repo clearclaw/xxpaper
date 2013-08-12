@@ -47,7 +47,7 @@ def main ():
         make (conf, t, p, os.path.join ("./", "%s_%s-%s.ps" % (t, p, paper)))
   elif len (sys.argv) == 3:
     for p in conf[xtype].sections:
-      make (conf, xtype, p, os.path.join ("./", "%s_%s-%s.ps" % (t, p, paper)))
+      make (conf, xtype, p, os.path.join ("./", "%s_%s-%s.ps" % (xtype, p, paper)))
   else:
     make (conf, xtype, page, os.path.join ("./", "%s_%s-%s.ps"
                                            % (xtype, page, paper)))

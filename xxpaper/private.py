@@ -13,6 +13,8 @@ class Private (Sheet):
     self.title_inset_y = 30
     self.title_line_height = 13
     self.desc_line_height = 12
+    self.close_text_inset_x = 5
+    self.close_text_inset_y = 15
 
   def page_details (self):
     self.number_stripe ()
@@ -22,6 +24,7 @@ class Private (Sheet):
     self.description (x, y)
     self.number_cost (x, y)
     self.number_revenue (x, y)
+    self.closes (x, y)
 
   def number_stripe (self):
     oy = self.y_off + self.number_stripe_inset_y
@@ -82,3 +85,12 @@ class Private (Sheet):
       self.fd.append ("(%s) dup stringwidth pop 2 div neg 0 rmoveto show"
                       % t)
       by -= self.desc_line_height
+
+  def closes (self, x, y):
+    bx = self.close_text_inset_x
+    by = self.tile_y - self.close_text_inset_y
+    self.fd.append ("/%s %s selectfont" % self.value ("close_font", x, y))
+    self.fd.append ("%s %s %s setrgbcolor"
+                    % self.value ("close_text_colour", x, y))
+    self.fd.append ("%d %d moveto" % (bx, by))
+    self.fd.append ("(%s) show" % self.value ("close", x, y))
