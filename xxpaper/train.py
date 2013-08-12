@@ -1,7 +1,5 @@
 #! /usr/bin/env python
 
-import os, sys
-from configobj import ConfigObj
 from xxpaper.sheet import Sheet
 
 class Train (Sheet):
@@ -83,22 +81,3 @@ class Train (Sheet):
     self.fd.append ("%d %d moveto" % (bx, by))
     self.fd.append ("(%s) dup stringwidth pop 2 div neg 0 rmoveto show"
                     % self.value ("type", x, y))
-
-def main ():
-  if len (sys.argv) != 3:
-    print >> sys.stderr, "Syntax: %s <cfg_file> <sheet>" % sys.argv[0]
-    sys.exit (0)
-  cfg_name = sys.argv[1]
-  page = sys.argv[2]
-  fname = sys.argv[2]+".ps"
-  if not os.path.isfile (cfg_name):
-    print >> sys.stderr, ("Error: Cannot access configuration file: %s"
-                          % cfg_name)
-    sys.exit (2)
-  conf = ConfigObj (cfg_name)
-  with Train (conf, "train", page, fname) as t:
-    t.make ()
-  sys.exit (0)
-
-if __name__ == '__main__':
-  main ()
