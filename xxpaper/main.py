@@ -38,17 +38,19 @@ def main ():
       sys.exit (1)
   if len (sys.argv) >= 5:
     error ()
+  paper = conf["DEFAULT"]["paper"]
   if len (sys.argv) == 2:
     for t in conf.sections:
       if t == "DEFAULT":
         continue
       for p in conf[t].sections:
-        make (conf, t, p, os.path.join ("./", "%s_%s.ps" % (t,p)))
+        make (conf, t, p, os.path.join ("./", "%s_%s-%s.ps" % (t, p, paper)))
   elif len (sys.argv) == 3:
     for p in conf[xtype].sections:
-      make (conf, xtype, p, os.path.join ("./", "%s_%s.ps" % (t, p)))
+      make (conf, xtype, p, os.path.join ("./", "%s_%s-%s.ps" % (t, p, paper)))
   else:
-    make (conf, xtype, page, os.path.join ("./", "%s_%s.ps" % (xtype, page)))
+    make (conf, xtype, page, os.path.join ("./", "%s_%s-%s.ps"
+                                           % (xtype, page, paper)))
   sys.exit (0)
 
 if __name__ == '__main__':

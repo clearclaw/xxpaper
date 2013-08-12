@@ -106,18 +106,30 @@ class Share (Sheet):
       self.fd.append ("stroke")
       self.fd.append ("closepath")
       # Top token colour
-      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 0 + 15, 180 - 15))
-      self.fd.append ("closepath")
       self.fd.append ("%s %s %s setrgbcolor"
                       % self.value ("token_top_colour", x, y))
+      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 0 + 15, 180 - 15))
+      self.fd.append ("closepath")
       self.fd.append ("fill")
       self.fd.append ("stroke")
-      # Bottom token colour
-      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 180 + 15, 0 - 15))
+      # Top token outline
+      self.fd.append ("0 setgray")
+      self.fd.append ("0.3 setlinewidth")
+      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 0 + 15, 180 - 15))
       self.fd.append ("closepath")
+      self.fd.append ("stroke")
+      # Bottom token colour
       self.fd.append ("%s %s %s setrgbcolor"
                       % self.value ("token_bottom_colour", x, y))
+      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 180 + 15, 0 - 15))
+      self.fd.append ("closepath")
       self.fd.append ("fill")
+      self.fd.append ("stroke")
+      # Bottom token outline
+      self.fd.append ("0 setgray")
+      self.fd.append ("0.3 setlinewidth")
+      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 180 + 15, 0 - 15))
+      self.fd.append ("closepath")
       self.fd.append ("stroke")
       # Token text
       self.fd.append ("/%s %s selectfont" % self.value ("token_font", x, y))
