@@ -7,18 +7,22 @@ class Share (Sheet):
   def __init__ (self, conf, sheet, page, fname):
     Sheet.__init__ (self, conf, sheet, page, fname)
     # Offsets within tile
-    self.side_stripe_inset_x = 5
-    self.side_stripe_width = 30
-    self.type_stripe_height = 10
-    self.type_stripe_width = self.x_off + self.tile_x - 10
-    self.type_note_inset_x = 10
-    self.type_stripe_inset_y = 5
-    self.title_inset_x = 5
-    self.title_inset_y = 20
-    self.title_line_height = 13
-    self.type_desc_inset_x = 5
-    self.token_inset_y = 5
-    self.token_stripe_width = 10
+    self.side_stripe_inset_x = int (self.value ("side_stripe_inset_x"))
+    self.side_stripe_width = int (self.value ("side_stripe_width"))
+    self.title_inset_x = int (self.value ("title_inset_x"))
+    self.title_inset_y = int (self.value ("title_inset_y"))
+    self.title_line_height = int (self.value ("title_line_height"))
+    self.token_radius = int (self.value ("token_radius"))
+    self.token_inset_y = int (self.value ("token_inset_y"))
+    self.token_stripe_angle = int (self.value ("token_stripe_angle"))
+    self.token_stripe_text_fudge = float (self.value ("token_stripe_text_fudge"))
+    self.type_desc_inset_x = int (self.value ("type_desc_inset_x"))
+    self.type_note_inset_x = int (self.value ("type_note_inset_x"))
+    self.type_stripe_height = int (self.value ("type_stripe_height"))
+    self.type_stripe_inset_x = int (self.value ("type_stripe_inset_x"))
+    self.type_stripe_inset_y = int (self.value ("type_stripe_inset_y"))
+    self.type_stripe_inset_y_fudge = float (self.value ("type_stripe_inset_y_fudge"))
+    self.type_stripe_width = self.x_off + self.tile_x - self.type_stripe_inset_x
 
   def page_details (self):
     self.side_stripe ()
@@ -52,7 +56,7 @@ class Share (Sheet):
 
   def type_size (self, x, y):
     bx = self.side_stripe_inset_x + (self.side_stripe_width / 2)
-    by = self.type_stripe_inset_y + 2.75
+    by = self.type_stripe_inset_y + self.type_stripe_inset_y_fudge
     self.fd.append ("/%s %s selectfont" % self.value ("type_font", x, y))
     self.fd.append ("%s %s %s setrgbcolor"
                     % self.value ("type_text_colour", x, y))
@@ -63,7 +67,7 @@ class Share (Sheet):
   def type_note (self, x, y):
     bx = (self.side_stripe_inset_x + self.side_stripe_width
           + self.type_note_inset_x)
-    by = self.type_stripe_inset_y + 2.75
+    by = self.type_stripe_inset_y + self.type_stripe_inset_y_fudge
     if self.value ("type_note", x, y):
       self.fd.append ("/%s %s selectfont" % self.value ("type_font", x, y))
       self.fd.append ("%s %s %s setrgbcolor"
@@ -73,7 +77,7 @@ class Share (Sheet):
 
   def type_desc (self, x, y):
     bx = self.type_stripe_width - self.type_desc_inset_x - self.x_off
-    by = self.type_stripe_inset_y + 2.75
+    by = self.type_stripe_inset_y + self.type_stripe_inset_y_fudge
     self.fd.append ("/%s %s selectfont" % self.value ("type_font", x, y))
     self.fd.append ("%s %s %s setrgbcolor"
                     % self.value ("type_text_colour", x, y))
@@ -90,68 +94,14 @@ class Share (Sheet):
     for i in xrange (1, count + 1):
       bx = ox
       by = oy + (i * spacing)
-      # Token interior
-      self.fd.append ("0 setgray")
-      self.fd.append ("0.3 setlinewidth")
-      self.fd.append ("%d %d 15 0 360 arc" % (bx, by))
-      self.fd.append ("%s %s %s setrgbcolor"
-                      % self.value ("token_base_colour", x, y))
-      self.fd.append ("fill")
-      self.fd.append ("stroke")
-      self.fd.append ("closepath")
-      # Token outline
-      self.fd.append ("0 setgray")
-      self.fd.append ("0.3 setlinewidth")
-      self.fd.append ("%d %d 15 0 360 arc" % (bx, by))
-      self.fd.append ("stroke")
-      self.fd.append ("closepath")
-      # Top token colour
-      self.fd.append ("%s %s %s setrgbcolor"
-                      % self.value ("token_top_colour", x, y))
-      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 0 + 15, 180 - 15))
-      self.fd.append ("closepath")
-      self.fd.append ("fill")
-      self.fd.append ("stroke")
-      # Top token outline
-      self.fd.append ("0 setgray")
-      self.fd.append ("0.3 setlinewidth")
-      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 0 + 15, 180 - 15))
-      self.fd.append ("closepath")
-      self.fd.append ("stroke")
-      # Bottom token colour
-      self.fd.append ("%s %s %s setrgbcolor"
-                      % self.value ("token_bottom_colour", x, y))
-      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 180 + 15, 0 - 15))
-      self.fd.append ("closepath")
-      self.fd.append ("fill")
-      self.fd.append ("stroke")
-      # Bottom token outline
-      self.fd.append ("0 setgray")
-      self.fd.append ("0.3 setlinewidth")
-      self.fd.append ("%d %d 15 %f %f arc" % (bx, by, 180 + 15, 0 - 15))
-      self.fd.append ("closepath")
-      self.fd.append ("stroke")
-      # Token text
-      self.fd.append ("/%s %s selectfont" % self.value ("token_font", x, y))
-      self.fd.append ("0 0 0 setrgbcolor")
-      self.fd.append ("%d %f moveto" % (bx, by - 10/2 + 2.5))
-      self.fd.append ("(%s) dup stringwidth pop 2 div neg 0 rmoveto show"
-                      % self.value ("token_name", x, y))
+      self.fd.append ("%d %d moveto" % (bx, by))
+      self.company_token (x, y)
 
   def title (self, x, y):
-    bx = (self.side_stripe_inset_x + self.side_stripe_width
-          + self.title_inset_x
-          + ((self.tile_x - self.side_stripe_inset_x
-              - self.side_stripe_width - self.title_inset_x) / 2))
+    o = (self.side_stripe_inset_x + self.side_stripe_width
+         + self.title_inset_x)
+    w = self.tile_x - o
+    bx = (o + (w / 2))
     by = self.tile_y - self.title_inset_y
-    self.fd.append ("/%s %s selectfont" % self.value ("title_font", x, y))
-    self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("title_colour", x, y))
-    tl = self.value ("title", x, y)
-    if isinstance (tl, StringType):
-      tl = [tl,]
-    for t in tl:
-      self.fd.append ("%d %d moveto" % (bx, by))
-      self.fd.append ("(%s) dup stringwidth pop 2 div neg 0 rmoveto show"
-                      % t)
-      by -= self.title_line_height
+    self.fd.append ("%f %f moveto" % (bx, by))
+    self.text ("title", x, y, h_centre = 0, v_centre = 1)
