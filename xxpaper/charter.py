@@ -17,11 +17,11 @@ class Charter (Sheet):
     self.token_inset_x = int (self.value ("token_inset_x"))
     self.token_inset_y = int (self.value ("token_inset_y"))
     self.token_radius = int (self.value ("token_radius"))
+    self.note_inset_x_fudge = int (self.value ("note_inset_x_fudge"))
+    self.note_inset_y_fudge = int (self.value ("note_inset_y_fudge"))
     self.desc_inset_x = (self.box_inset_x + (self.token_inset_x * 2)
                          + (self.token_radius * 2))
     self.desc_inset_y = (self.box_inset_y + self.stripe_height + 30)
-    self.note_inset_x_fudge = int (self.value ("note_inset_x_fudge"))
-    self.note_inset_y_fudge = int (self.value ("note_inset_y_fudge"))
 
   def page_details (self):
     self.macro_roundbox ()

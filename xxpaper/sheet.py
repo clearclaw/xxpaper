@@ -211,7 +211,7 @@ class Sheet (object):
       by = line_height * (len (tl) - 1)
       self.fd.append ("0 %d moveto" % by)
     format = {
-      -1: "(%s)  show",
+      -1: "(%s) show",
       0: "(%s) dup stringwidth pop 2 div neg 0 rmoveto show",
       1: "(%s) dup stringwidth pop neg 0 rmoveto show",
       }
