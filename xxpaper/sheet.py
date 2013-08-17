@@ -26,7 +26,6 @@ class Sheet (object):
     # Offsets for inner tile block
     self.x_off = (self.rubber_x - (self.tile_x * self.num_x)) / 2
     self.y_off = (self.rubber_y - (self.tile_y * self.num_y)) / 2
-    self.align_length = 20
 
   def __enter__ (self):
     return self
@@ -85,111 +84,51 @@ class Sheet (object):
     return v
 
   def page_align (self):
+    align_length = float (self.value ("align_length"))
     self.fd.append ("gsave")
-    for i in [((self.rubber_x / 2.0, 0), (0, 0 - self.align_length)),
-              ((self.rubber_x /2.0, self.rubber_y), (0, self.align_length)),
-              ((0, self.rubber_y / 2.0), (0 - self.align_length, 0)),
-              ((self.rubber_x, self.rubber_y / 2.0), (self.align_length, 0)),]:
-      self.fd.append ("0 setgray")
-      self.fd.append ("0.1 setlinewidth")
-      self.fd.append ("%f %f moveto" % (i[0][0], i[0][1]))
-      self.fd.append ("%f %f lineto" % (i[0][0] + i[1][0], i[0][1] + i[1][1]))
-      self.fd.append ("stroke")
+    for i in [((self.rubber_x / 2.0, 0), (0, 0 - align_length)),
+              ((self.rubber_x /2.0, self.rubber_y), (0, align_length)),
+              ((0, self.rubber_y / 2.0), (0 - align_length, 0)),
+              ((self.rubber_x, self.rubber_y / 2.0), (align_length, 0)),]:
+      self.line ("align", i[0][0], i[0][1], i[1][0], i[1][1])
     self.fd.append ("grestore")
 
   def page_frame (self):
-    self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor" % self.value ("base_colour"))
-    self.fd.append ("0 0 %d %d rectfill" % (self.rubber_x, self.rubber_y))
-    self.fd.append ("0 setgray")
-    self.fd.append ("0.1 setlinewidth")
-    self.fd.append ("0 0 %d %d rectstroke"
-                    % (self.rubber_x, self.rubber_y))
-    self.fd.append ("grestore")
+    self.box ("frame", 0, 0, self.rubber_x, self.rubber_y)
 
   def push_tile (self, x, y):
     self.fd.append ("gsave")
     self.fd.append ("%d %d translate" % (x, y))
     if self.value ("outline", x, y) == "1":
-      self.fd.append ("0 setgray")
-      self.fd.append ("0.1 setlinewidth")
-      self.fd.append ("%d %d %d %d rectstroke"
-                      % (0, 0, self.tile_x, self.tile_y))
+      self.box ("tile", 0, 0, self.tile_x, self.tile_y)
     self.fd.append ("newpath")
 
   def pop_tile (self):
     self.fd.append ("grestore")
 
-  def company_token_circle (self, x, y):
-    self.token_radius = int (self.value ("token_radius", x, y))
-    self.token_stripe_angle = int (self.value ("token_stripe_angle", x, y))
-    # Find centre
+  def line (self, typ, x, y, w, h):
+    stroke_width = float (self.value ("%s_stroke" % typ))
+    colour = self.value ("%s_colour" % typ)
     self.fd.append ("gsave")
-    self.fd.append ("currentpoint translate")
-    self.fd.append ("newpath")
-    # Token
-    self.fd.append ("0 0 %f 0 360 arc" % (self.token_radius))
-    self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("token_base_colour", x, y))
-    self.fd.append ("fill")
-    self.fd.append ("grestore")
-    self.fd.append ("0 setgray")
-    self.fd.append ("0.3 setlinewidth")
+    self.fd.append ("%s %s %s setrgbcolor" % colour)
+    self.fd.append ("%f setlinewidth" % stroke_width)
+    self.fd.append ("%f %f moveto" % (x, y))
+    self.fd.append ("%f %f lineto" % (x + w, y + h))
     self.fd.append ("stroke")
     self.fd.append ("grestore")
 
-  def company_token (self, x, y):
-    self.token_radius = int (self.value ("token_radius", x, y))
-    self.token_stripe_angle = int (self.value ("token_stripe_angle", x, y))
-    self.token_stripe_text_fudge = float (
-      self.value ("token_stripe_text_fudge", x, y))
-    self.company_token_circle (x, y)
-    # Setup
+  def box (self, typ, x, y, w, h):
+    stroke = float (self.value ("%s_stroke" % typ))
+    stroke_colour = self.value ("%s_stroke_colour" % typ)
+    colour_bg = self.value ("%s_colour" % typ)
     self.fd.append ("gsave")
-    self.fd.append ("currentpoint translate")
-    self.fd.append ("newpath")
-    # Token top
-    self.fd.append ("gsave")
-    self.fd.append ("0 0 %f %f %f arc"
-                    % (self.token_radius,
-                       0 + self.token_stripe_angle,
-                      180 - self.token_stripe_angle))
-    self.fd.append ("closepath")
-    self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("token_top_colour", x, y))
-    self.fd.append ("fill")
-    self.fd.append ("grestore")
-    self.fd.append ("0 setgray")
-    self.fd.append ("0.3 setlinewidth")
-    self.fd.append ("stroke")
-    self.fd.append ("grestore")
-    # Token bottom
-    self.fd.append ("gsave")
-    self.fd.append ("0 0 %f %f %f arc"
-                    % (self.token_radius,
-                       180 + self.token_stripe_angle,
-                      0 - self.token_stripe_angle))
-    self.fd.append ("closepath")
-    self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("token_top_colour", x, y))
-    self.fd.append ("fill")
-    self.fd.append ("grestore")
-    self.fd.append ("0 setgray")
-    self.fd.append ("0.3 setlinewidth")
-    self.fd.append ("stroke")
-    self.fd.append ("grestore")
-    # Token text
-    self.fd.append ("gsave")
-    self.fd.append ("/%s %s selectfont" % self.value ("token_font", x, y))
-    self.fd.append ("0 0 0 setrgbcolor")
-    self.fd.append ("0 %f moveto" % (0 - self.token_stripe_text_fudge))
-    self.fd.append ("(%s) dup stringwidth pop 2 div neg 0 rmoveto show"
-                    % self.value ("token_name", x, y))
-    self.fd.append ("grestore")
-    # Done
+    if colour_bg != "transparent":
+      self.fd.append ("%s %s %s setrgbcolor" % colour_bg)
+      self.fd.append ("%f %f %f %f rectfill" % (x, y, w, h))
+    if stroke_colour != "transparent":
+      self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
+      self.fd.append ("%f setlinewidth" % stroke)
+      self.fd.append ("%f %f %f %f rectstroke" % (x, y, w, h))
     self.fd.append ("grestore")
 
   def text (self, typ, x, y, h_centre = -1, v_centre = 1):
@@ -219,6 +158,71 @@ class Sheet (object):
       self.fd.append (format[h_centre] % t)
       by -= line_height
       self.fd.append ("0 %d moveto" % by)
+    self.fd.append ("grestore")
+
+  def company_token_circle (self, x, y):
+    token_radius = float (self.value ("token_radius", x, y))
+    colour = self.value ("token_colour", x, y)
+    stroke = float (self.value ("token_stroke", x, y))
+    stroke_colour = self.value ("token_stroke_colour", x, y)
+    self.fd.append ("gsave")
+    self.fd.append ("currentpoint translate")
+    self.fd.append ("newpath")
+    self.fd.append ("0 0 %f 0 360 arc" % token_radius)
+    self.fd.append ("gsave")
+    self.fd.append ("%s %s %s setrgbcolor" % colour)
+    self.fd.append ("fill")
+    self.fd.append ("grestore")
+    self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
+    self.fd.append ("%f setlinewidth" % stroke)
+    self.fd.append ("stroke")
+    self.fd.append ("grestore")
+
+  def company_token (self, x, y):
+    stroke = float (self.value ("token_stroke", x, y))
+    stroke_colour = self.value ("token_stroke_colour", x, y)
+    radius = float (self.value ("token_radius", x, y))
+    stripe_angle = float (self.value ("token_stripe_angle", x, y))
+    stripe_text_fudge = float (self.value ("token_stripe_text_fudge", x, y))
+    self.company_token_circle (x, y)
+    # Setup
+    self.fd.append ("gsave")
+    self.fd.append ("currentpoint translate")
+    self.fd.append ("newpath")
+    # Token top
+    self.fd.append ("gsave")
+    self.fd.append ("0 0 %f %f %f arc"
+                    % (radius, 0 + stripe_angle, 180 - stripe_angle))
+    self.fd.append ("closepath")
+    self.fd.append ("gsave")
+    self.fd.append ("%s %s %s setrgbcolor"
+                    % self.value ("token_top_colour", x, y))
+    self.fd.append ("fill")
+    self.fd.append ("grestore")
+    self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
+    self.fd.append ("%f setlinewidth" % stroke)
+    self.fd.append ("stroke")
+    self.fd.append ("grestore")
+    # Token bottom
+    self.fd.append ("gsave")
+    self.fd.append ("0 0 %f %f %f arc"
+                    % (radius, 180 + stripe_angle, 0 - stripe_angle))
+    self.fd.append ("closepath")
+    self.fd.append ("gsave")
+    self.fd.append ("%s %s %s setrgbcolor"
+                    % self.value ("token_top_colour", x, y))
+    self.fd.append ("fill")
+    self.fd.append ("grestore")
+    self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
+    self.fd.append ("%f setlinewidth" % stroke)
+    self.fd.append ("stroke")
+    self.fd.append ("grestore")
+    # Token text
+    self.fd.append ("gsave")
+    self.fd.append ("0 %f moveto" % (0 - stripe_text_fudge))
+    self.text ("token_name", x, y, h_centre = 0, v_centre = 0)
+    self.fd.append ("grestore")
+    # Done
     self.fd.append ("grestore")
 
   def make (self):

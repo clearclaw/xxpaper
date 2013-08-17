@@ -5,13 +5,6 @@ from xxpaper.sheet import Sheet
 class Token (Sheet):
   def __init__ (self, conf, sheet, page, fname):
     Sheet.__init__ (self, conf, sheet, page, fname)
-    # Offsets within tile
-    self.text_stripe_height = float (self.value ("text_stripe_height"))
-    self.token_space_x = float (self.value ("token_space_x"))
-    self.token_radius = int (self.value ("token_radius"))
-    self.token_inset_y = int (self.value ("token_inset_y"))
-    self.token_stripe_angle = int (self.value ("token_stripe_angle"))
-    self.token_stripe_text_fudge = float (self.value ("token_stripe_text_fudge"))
 
   def page_details (self):
     pass
@@ -43,25 +36,30 @@ class Token (Sheet):
     self.fd.append ("grestore")
 
   def text_stripe (self, x, y):
+    stroke = float (self.value ("token_stroke"))
+    stroke_colour = self.value ("token_stroke_colour")
+    stripe_height = float (self.value ("text_stripe_height"))
     bx = self.tile_x
-    by = self.text_stripe_height
+    by = stripe_height
     self.fd.append ("gsave")
     self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("text_stripe_colour", x, y))
+                    % self.value ("token_colour", x, y))
     self.fd.append ("%f %f %f %f rectfill"
-                    % (0, float (self.tile_y / 2) - float (self.text_stripe_height / 2),
+                    % (0, float (self.tile_y / 2) - (stripe_height / 2),
                        bx, by))
-    self.fd.append ("0 setgray")
-    self.fd.append ("0.3 setlinewidth")
+    self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
+    self.fd.append ("%f setlinewidth" % stroke)
     self.fd.append ("%f %f %f %f rectstroke"
-                    % (0, float (self.tile_y / 2) - float (self.text_stripe_height / 2),
+                    % (0, float (self.tile_y / 2) - (stripe_height / 2),
                        bx, by))
     self.fd.append ("grestore")
 
   def token_circles (self, x, y):
-    ox = self.token_space_x
+    space_x = float (self.value ("token_space_x"))
+    radius = float (self.value ("token_radius"))
+    ox = space_x
     oy = float (self.tile_y / 2)
-    spacing = self.token_space_x + (self.token_radius * 2)
+    spacing = space_x + (radius * 2)
     count = int (self.value ("token_count", x, y))
     self.fd.append ("gsave")
     for i in xrange (1, count + 1):
