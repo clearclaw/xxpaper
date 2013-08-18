@@ -39,13 +39,13 @@ def main ():
   if len (sys.argv) >= 5:
     error ()
   papers = conf["DEFAULT"]["papers"]
-  outlines = conf["DEFAULT"]["papers"]
+  outlines = conf["DEFAULT"]["outlines"]
   # All the shapes!
   for paper in papers:
     conf["DEFAULT"]["paper"] = paper
     for outline in outlines:
       conf["DEFAULT"]["outline"] = outline
-      o = "outline" if outline else "nooutline"
+      o = "outline" if outline == "1" else "nooutline"
       if len (sys.argv) == 2:
         for t in conf.sections:
           if t == "DEFAULT":
