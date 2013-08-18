@@ -38,19 +38,28 @@ def main ():
       sys.exit (1)
   if len (sys.argv) >= 5:
     error ()
-  paper = conf["DEFAULT"]["paper"]
-  if len (sys.argv) == 2:
-    for t in conf.sections:
-      if t == "DEFAULT":
-        continue
-      for p in conf[t].sections:
-        make (conf, t, p, os.path.join ("./", "%s_%s-%s.ps" % (t, p, paper)))
-  elif len (sys.argv) == 3:
-    for p in conf[xtype].sections:
-      make (conf, xtype, p, os.path.join ("./", "%s_%s-%s.ps" % (xtype, p, paper)))
-  else:
-    make (conf, xtype, page, os.path.join ("./", "%s_%s-%s.ps"
-                                           % (xtype, page, paper)))
+  papers = conf["DEFAULT"]["papers"]
+  outlines = conf["DEFAULT"]["papers"]
+  # All the shapes!
+  for paper in papers:
+    conf["DEFAULT"]["paper"] = paper
+    for outline in outlines:
+      conf["DEFAULT"]["outline"] = outline
+      o = "outline" if outline else "nooutline"
+      if len (sys.argv) == 2:
+        for t in conf.sections:
+          if t == "DEFAULT":
+            continue
+          for p in conf[t].sections:
+            make (conf, t, p,
+                  os.path.join ("./", "%s_%s-%s-%s.ps" % (t, p, o, paper)))
+      elif len (sys.argv) == 3:
+        for p in conf[xtype].sections:
+          make (conf, xtype, p,
+                os.path.join ("./", "%s_%s-%s-%s.ps" % (xtype, p, o, paper)))
+      else:
+        make (conf, xtype, page, os.path.join ("./", "%s_%s-%s-%s.ps"
+                                               % (xtype, page, o, paper)))
   sys.exit (0)
 
 if __name__ == '__main__':
