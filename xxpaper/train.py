@@ -8,7 +8,6 @@ class Train (Sheet):
     # Offsets within tile
     self.rust_stripe_inset_y = int (self.value ("rust_stripe_inset_y"))
     self.rust_stripe_height = int (self.value ("rust_stripe_height"))
-    self.train_type_inset_y = int (self.value ("train_type_inset_y"))
 
   def page_details (self):
     self.rust_stripe ()
@@ -23,41 +22,36 @@ class Train (Sheet):
   def train_cost (self, x, y):
     bx = self.tile_x / 2
     by = self.rust_stripe_inset_y + (self.rust_stripe_height * 4)
-    self.fd.append ("%d %d moveto" % (bx, by))
+    self.fd.append ("%f %f moveto" % (bx, by))
     self.text ("cost", x, y, h_centre = 0, v_centre = 1)
 
   def trade_to (self, x, y):
     bx = self.tile_x / 2
     by = (self.rust_stripe_inset_y * 2) + self.rust_stripe_height + 3
-    self.fd.append ("%d %d moveto" % (bx, by))
+    self.fd.append ("%f %f moveto" % (bx, by))
     self.text ("trade", x, y, h_centre = 0, v_centre = 1)
 
   def trade_stripe (self):
     oy = self.y_off + (self.rust_stripe_inset_y * 2) + self.rust_stripe_height
     for y in xrange (self.num_y):
       by = (y * self.tile_y) + oy
-      self.fd.append ("%s %s %s setrgbcolor"
-                      % self.value ("trade_stripe_colour", 0, y))
-      self.fd.append ("0 %d %d %d rectfill"
-                      % (by, self.rubber_x, self.rust_stripe_height))
+      self.box ("trade_stripe", 0, by, self.rubber_x, self.rust_stripe_height)
 
   def rust (self, x, y):
     bx = self.tile_x / 2
     by = self.rust_stripe_inset_y + 2
-    self.fd.append ("%d %d moveto" % (bx, by))
+    self.fd.append ("%f %f moveto" % (bx, by))
     self.text ("rust", x, y, h_centre = 0, v_centre = 1)
 
   def rust_stripe (self):
     oy = self.y_off + self.rust_stripe_inset_y
     for y in xrange (self.num_y):
       by = (y * self.tile_y) + oy
-      self.fd.append ("%s %s %s setrgbcolor"
-                      % self.value ("rust_stripe_colour", 0, y))
-      self.fd.append ("0 %d %d %d rectfill"
-                      % (by, self.rubber_x, self.rust_stripe_height))
+      self.box ("rust_stripe", 0, by, self.rubber_x, self.rust_stripe_height)
 
   def train_type (self, x, y):
+    inset_y = int (self.value ("train_type_inset_y"))
     bx = self.tile_x / 2
-    by = self.tile_y - self.train_type_inset_y
-    self.fd.append ("%d %d moveto" % (bx, by))
+    by = self.tile_y - inset_y
+    self.fd.append ("%f %f moveto" % (bx, by))
     self.text ("train", x, y, h_centre = 0, v_centre = 1)
