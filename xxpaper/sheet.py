@@ -210,7 +210,7 @@ class Sheet (object):
     self.fd.append ("closepath")
     self.fd.append ("gsave")
     self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("token_top_colour", x, y))
+                    % self.value ("token_bottom_colour", x, y))
     self.fd.append ("fill")
     self.fd.append ("grestore")
     self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)

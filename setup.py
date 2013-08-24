@@ -16,7 +16,7 @@ setup (name = "xxpaper",
   license = "Creative Commons Attribution-ShareAlike 3.0 Unported",
   packages = find_packages (exclude = ["tests",]),
   package_data = {
-    # If any package contains *.txt or *.rst files, include them:
+    'defaults': ['DEFAULT.conf'],
   },
   zip_safe = True,
   install_requires = [

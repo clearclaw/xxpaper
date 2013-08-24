@@ -15,21 +15,21 @@ class Token (Sheet):
     self.text_stripe (x, y)
     self.token_circles (x, y)
 
-  def top_stripe (self, x, y):
+  def bottom_stripe (self, x, y):
     bx = self.tile_x
     by = self.tile_y / 2
     self.fd.append ("gsave")
     self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("token_top_colour",x ,y))
+                    % self.value ("token_bottom_colour",x ,y))
     self.fd.append ("%d %d %d %d rectfill" % (0, 0, bx, by))
     self.fd.append ("grestore")
 
-  def bottom_stripe (self, x, y):
+  def top_stripe (self, x, y):
     bx = self.tile_x
     by = float (self.tile_y / 2)
     self.fd.append ("gsave")
     self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("token_bottom_colour", x, y))
+                    % self.value ("token_top_colour", x, y))
     self.fd.append ("%f %f %f %f rectfill"
                     % (0, self.tile_y / 2,
                        bx, self.tile_y / 2))
