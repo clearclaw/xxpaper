@@ -5,8 +5,9 @@ from psfile import PSFile
 from types import ListType, StringType
 
 class Sheet (object):
-  def __init__ (self, conf, sheet, page, fname):
+  def __init__ (self, defaults, conf, sheet, page, fname):
     self.re_var = re.compile (r"^\$\{([A-Za-z0-9._]+)\}$")
+    self.defaults = defaults
     self.conf = conf
     self.fname = fname
     self.fd = None
@@ -45,8 +46,8 @@ class Sheet (object):
       self.fd.close ()
       self.fd = None
 
-  def _get_value (self, sl, k):
-    base = self.conf
+  def _value_lookup (self, data, sl, k):
+    base = data
     al = list ()
     # Descending list of sections
     for s in sl:
@@ -55,12 +56,18 @@ class Sheet (object):
         break
       al.insert (0, a)
       base = a
-    al.append (self.conf.get ("DEFAULT"))
+    al.append (data.get ("DEFAULT"))
     for d in al:
       # print "K: ", k , "D: ", d, "V: [%s]" % d.get (k)
       if d.has_key (k):
         return d.get (k)
     raise ValueError
+
+  def _get_value (self, sl, k):
+    try:
+      return self._value_lookup (self.conf, sl, k)
+    except:
+      return self._value_lookup (self.defaults, sl, k)
 
   def value (self, n, x = 0, y = 0):
     sl = [self.sheet, self.page, "tile_%d%d" % (x + 1, y + 1)]
@@ -94,13 +101,13 @@ class Sheet (object):
     self.fd.append ("grestore")
 
   def page_frame (self):
-    self.box ("frame", 0, 0, self.rubber_x, self.rubber_y)
+    self.box ("frame", 0, 0, 0, 0, self.rubber_x, self.rubber_y)
 
   def push_tile (self, x, y):
     self.fd.append ("gsave")
     self.fd.append ("%d %d translate" % (x, y))
     if self.value ("outline", x, y) == "1":
-      self.box ("tile", 0, 0, self.tile_x, self.tile_y)
+      self.box ("tile", 0, 0, 0, 0, self.tile_x, self.tile_y)
     self.fd.append ("newpath")
 
   def pop_tile (self):
@@ -117,18 +124,18 @@ class Sheet (object):
     self.fd.append ("stroke")
     self.fd.append ("grestore")
 
-  def box (self, typ, x, y, w, h):
-    stroke = float (self.value ("%s_stroke" % typ))
-    stroke_colour = self.value ("%s_stroke_colour" % typ)
-    colour_bg = self.value ("%s_colour" % typ)
+  def box (self, typ, x, y, bx, by, w, h):
+    stroke = float (self.value ("%s_stroke" % typ, x, y))
+    stroke_colour = self.value ("%s_stroke_colour" % typ, x, y)
+    colour_bg = self.value ("%s_colour" % typ, x, y)
     self.fd.append ("gsave")
     if colour_bg != "transparent":
       self.fd.append ("%s %s %s setrgbcolor" % colour_bg)
-      self.fd.append ("%f %f %f %f rectfill" % (x, y, w, h))
+      self.fd.append ("%f %f %f %f rectfill" % (bx, by, w, h))
     if stroke_colour != "transparent":
       self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
       self.fd.append ("%f setlinewidth" % stroke)
-      self.fd.append ("%f %f %f %f rectstroke" % (x, y, w, h))
+      self.fd.append ("%f %f %f %f rectstroke" % (bx, by, w, h))
     self.fd.append ("grestore")
 
   def text (self, typ, x, y, h_centre = -1, v_centre = 1):

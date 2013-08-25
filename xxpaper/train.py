@@ -3,8 +3,8 @@
 from xxpaper.sheet import Sheet
 
 class Train (Sheet):
-  def __init__ (self, conf, sheet, page, fname):
-    Sheet.__init__ (self, conf, sheet, page, fname)
+  def __init__ (self, defaults, conf, sheet, page, fname):
+    Sheet.__init__ (self, defaults, conf, sheet, page, fname)
     # Offsets within tile
     self.rust_stripe_inset_y = int (self.value ("rust_stripe_inset_y"))
     self.rust_stripe_height = int (self.value ("rust_stripe_height"))
@@ -35,7 +35,8 @@ class Train (Sheet):
     oy = self.y_off + (self.rust_stripe_inset_y * 2) + self.rust_stripe_height
     for y in xrange (self.num_y):
       by = (y * self.tile_y) + oy
-      self.box ("trade_stripe", 0, by, self.rubber_x, self.rust_stripe_height)
+      self.box ("trade_stripe", 0, y, 0, by,
+                self.rubber_x, self.rust_stripe_height)
 
   def rust (self, x, y):
     bx = self.tile_x / 2
@@ -47,7 +48,8 @@ class Train (Sheet):
     oy = self.y_off + self.rust_stripe_inset_y
     for y in xrange (self.num_y):
       by = (y * self.tile_y) + oy
-      self.box ("rust_stripe", 0, by, self.rubber_x, self.rust_stripe_height)
+      self.box ("rust_stripe", 0, y, 0, by,
+                self.rubber_x, self.rust_stripe_height)
 
   def train_type (self, x, y):
     inset_y = int (self.value ("train_type_inset_y"))

@@ -3,8 +3,8 @@
 from xxpaper.sheet import Sheet
 
 class Charter (Sheet):
-  def __init__ (self, conf, sheet, page, fname):
-    Sheet.__init__ (self, conf, sheet, page, fname)
+  def __init__ (self, defaults, conf, sheet, page, fname):
+    Sheet.__init__ (self, defaults, conf, sheet, page, fname)
     # Offsets within tile
     self.box_inset_x = float (self.value ("box_inset_x"))
     self.box_inset_y = float (self.value ("box_inset_y"))

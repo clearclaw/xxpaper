@@ -1,11 +1,12 @@
 #! /usr/bin/env python
 
-import os, sys
+import os, pkg_resources, sys
 from configobj import ConfigObj
 import xxpaper
 
-def make (conf, xtype, page, fname):
-  with getattr (xxpaper, xtype.capitalize ()) (conf, xtype, page, fname) as t:
+def make (defaults, conf, xtype, page, fname):
+  with getattr (xxpaper, xtype.capitalize ()) (defaults, conf, xtype,
+                                               page, fname) as t:
     t.make ()
   print fname
 
@@ -15,6 +16,8 @@ def error ():
   sys.exit (0)
 
 def main ():
+  s = pkg_resources.resource_string ("xxpaper", "DEFAULT.conf")
+  defaults = ConfigObj (s.split ("\n"))
   if len (sys.argv) == 1:
     error ()
   if len (sys.argv) >= 2:
@@ -38,8 +41,14 @@ def main ():
       sys.exit (1)
   if len (sys.argv) >= 5:
     error ()
-  papers = conf["DEFAULT"]["papers"]
-  outlines = conf["DEFAULT"]["outlines"]
+  try:
+    papers = conf["DEFAULT"]["papers"]
+  except:
+    papers = defaults["DEFAULT"]["papers"]
+  try:
+    outlines = conf["DEFAULT"]["outlines"]
+  except:
+    outlines = defaults["DEFAULT"]["outlines"]
   # All the shapes!
   for paper in papers:
     conf["DEFAULT"]["paper"] = paper
@@ -51,15 +60,15 @@ def main ():
           if t == "DEFAULT":
             continue
           for p in conf[t].sections:
-            make (conf, t, p,
+            make (defaults, conf, t, p,
                   os.path.join ("./", "%s_%s-%s-%s.ps" % (t, p, o, paper)))
       elif len (sys.argv) == 3:
         for p in conf[xtype].sections:
-          make (conf, xtype, p,
+          make (defaults, conf, xtype, p,
                 os.path.join ("./", "%s_%s-%s-%s.ps" % (xtype, p, o, paper)))
       else:
-        make (conf, xtype, page, os.path.join ("./", "%s_%s-%s-%s.ps"
-                                               % (xtype, page, o, paper)))
+        make (defaults, conf, xtype, page,
+              os.path.join ("./", "%s_%s-%s-%s.ps" % (xtype, page, o, paper)))
   sys.exit (0)
 
 if __name__ == '__main__':
