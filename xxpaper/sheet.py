@@ -6,7 +6,7 @@ from types import ListType, StringType
 
 class Sheet (object):
   def __init__ (self, defaults, conf, sheet, page, fname):
-    self.re_var = re.compile (r"^\$\{([A-Za-z0-9._]+)\}$")
+    self.re_var = re.compile (r"\$\{([A-Za-z0-9._]+)\}")
     self.defaults = defaults
     self.conf = conf
     self.fname = fname
@@ -84,10 +84,17 @@ class Sheet (object):
     elif isinstance (v, ListType): # So it satisfies the % operator
       v = tuple (v)
     else: # Substitute ${VAR} value
-      m = self.re_var.search (v)
-      if m:
+      while True:
+        m = self.re_var.search (v)
+        if not m:
+          break
         k = m.group (1) # Variable name
-        v = self.value (k, x, y) # Replacement token
+        r = self.value (k, x, y) # Replacement token
+        if isinstance (r, StringType):
+          v = "%s%s%s" % (v[:m.start(0)], r, v[m.end(0):])
+        else: # Scummy, but kinda handles the tuples
+          v = r
+          break
     return v
 
   def page_align (self):
@@ -97,7 +104,7 @@ class Sheet (object):
               ((self.rubber_x /2.0, self.rubber_y), (0, align_length)),
               ((0, self.rubber_y / 2.0), (0 - align_length, 0)),
               ((self.rubber_x, self.rubber_y / 2.0), (align_length, 0)),]:
-      self.line ("align", i[0][0], i[0][1], i[1][0], i[1][1])
+      self.line ("align", 0, 0, i[0][0], i[0][1], i[1][0], i[1][1])
     self.fd.append ("grestore")
 
   def page_frame (self):
@@ -113,16 +120,17 @@ class Sheet (object):
   def pop_tile (self):
     self.fd.append ("grestore")
 
-  def line (self, typ, x, y, w, h):
-    stroke_width = float (self.value ("%s_stroke" % typ))
-    colour = self.value ("%s_colour" % typ)
-    self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor" % colour)
-    self.fd.append ("%f setlinewidth" % stroke_width)
-    self.fd.append ("%f %f moveto" % (x, y))
-    self.fd.append ("%f %f lineto" % (x + w, y + h))
-    self.fd.append ("stroke")
-    self.fd.append ("grestore")
+  def line (self, typ, x, y, bx, by, w, h):
+    stroke_width = float (self.value ("%s_stroke" % typ, x, y))
+    colour = self.value ("%s_colour" % typ, x, y)
+    if colour != "transparent":
+      self.fd.append ("gsave")
+      self.fd.append ("%s %s %s setrgbcolor" % colour)
+      self.fd.append ("%f setlinewidth" % stroke_width)
+      self.fd.append ("%f %f moveto" % (bx, by))
+      self.fd.append ("%f %f lineto" % (bx + w, by + h))
+      self.fd.append ("stroke")
+      self.fd.append ("grestore")
 
   def box (self, typ, x, y, bx, by, w, h):
     stroke = float (self.value ("%s_stroke" % typ, x, y))
