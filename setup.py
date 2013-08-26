@@ -2,7 +2,8 @@ from setuptools import setup, find_packages
 
 __version__ = "unknown"
 
-exec open ("xxpaper/version.py")
+import pyver
+__version__, __version_info__ = pyver.get_version (pkg = "xxpaper")
 
 setup (name = "xxpaper",
   version = __version__,
@@ -22,6 +23,7 @@ setup (name = "xxpaper",
   install_requires = [
     "configobj",
     "psfile",
+    "pyver",
   ],
   entry_points = {
     "console_scripts": [

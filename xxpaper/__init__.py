@@ -1,8 +1,7 @@
 #! /usr/bin/env python
 
-#import xxpaper.metaversion as metaversion
-import xxpaper.version as version
-from xxpaper.version import __version__, __version_info__
+import pyver
+__version__, __version_info__ = pyver.get_version (pkg = __name__)
 from xxpaper.sheet import Sheet
 from xxpaper.charter import Charter
 from xxpaper.private import Private

@@ -4,8 +4,11 @@ xxpaper
 Installation dependency:
 
 	     PsFile: http://www.seehuhn.de/pages/psfile
+	     PyVer: https://github.com/clearclaw/pyver
 
-Unfortunately PsFile is not available via setuptools and the cheese factory.
+Unfortunately PsFile is not available via setuptools and the cheese
+factory.  I'll get around to putting PyVer in the Cheese Shop at some
+point.
 
 XXPaper generates Postscript files representing charters, privates,
 shares, and trains as defined by a configuration passed on the
