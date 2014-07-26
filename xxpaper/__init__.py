@@ -8,3 +8,4 @@ from xxpaper.private import Private
 from xxpaper.share import Share
 from xxpaper.token import Token
 from xxpaper.train import Train
+from xxpaper.market import Market

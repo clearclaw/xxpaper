@@ -70,7 +70,7 @@ class Sheet (object):
       return self._value_lookup (self.defaults, sl, k)
 
   def value (self, n, x = 0, y = 0):
-    sl = [self.sheet, self.page, "tile_%d%d" % (x + 1, y + 1)]
+    sl = [self.sheet, self.page, "tile_%d.%d" % (x + 1, y + 1)]
     try:
       v = self._get_value (sl, n)
     except:
@@ -110,11 +110,11 @@ class Sheet (object):
   def page_frame (self):
     self.box ("frame", 0, 0, 0, 0, self.rubber_x, self.rubber_y)
 
-  def push_tile (self, x, y):
+  def push_tile (self, x, y, bx, by):
     self.fd.append ("gsave")
-    self.fd.append ("%d %d translate" % (x, y))
+    self.fd.append ("%d %d translate" % (bx, by))
     if self.value ("outline", x, y) == "1":
-      self.box ("tile", 0, 0, 0, 0, self.tile_x, self.tile_y)
+      self.box ("tile", x, y, 0, 0, self.tile_x, self.tile_y)
     self.fd.append ("newpath")
 
   def pop_tile (self):
@@ -251,7 +251,7 @@ class Sheet (object):
       for y in xrange (self.num_y):
         bx = (x * self.tile_x) + ox
         by = (y * self.tile_y) + oy
-        self.push_tile (bx, by)
+        self.push_tile (x, y, bx, by)
         self.tile_details (x, y)
         self.pop_tile ()
     self.close ()
