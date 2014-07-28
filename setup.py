@@ -16,9 +16,7 @@ setup (name = "xxpaper",
   url = "http://kanga.nu/~claw/",
   license = "Creative Commons Attribution-ShareAlike 3.0 Unported",
   packages = find_packages (exclude = ["tests",]),
-  package_data = {
-    'defaults': ['DEFAULT.conf',],
-  },
+  include_package_data = True,
   zip_safe = False,
   install_requires = [
     "configobj",
