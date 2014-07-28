@@ -19,7 +19,7 @@ setup (name = "xxpaper",
   package_data = {
     'defaults': ['DEFAULT.conf',],
   },
-  zip_safe = True,
+  zip_safe = False,
   install_requires = [
     "configobj",
     "psfile",
