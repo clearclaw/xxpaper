@@ -29,3 +29,8 @@ train art sized suitably for the test die that comes with an Ellison
 Pro die cutter.
 
 -- JCL
+
+P.S. PsFile appears to have fallen off the 'net.  A copy may be
+found here:
+
+     https://github.com/clearclaw/psfile
