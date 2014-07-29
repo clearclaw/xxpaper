@@ -21,6 +21,7 @@ class Charter (Sheet):
     self.charter_stripe (x, y)
     self.centre_stripe (x, y)
     self.charter_stripe_token (x, y)
+    self.charter_token_spacing (x)
     self.title (x, y)
     self.token_circles (x, y)
     self.desc1 (x, y)
@@ -117,7 +118,12 @@ closepath
           - token_inset_y)
     gap = oy - token_inset_y
     count = int (self.value ("token_count", x, y))
-    spacing = gap / (count + 1)
+    token_spacing = int (self.value ("charter_token_spacing", x))
+    if token_spacing:
+      spacing = gap / token_spacing
+    else:
+      spacing = gap / (count + 1)
+
     self.fd.append ("gsave")
     for i in xrange (1, count + 1):
       bx = ox
@@ -179,3 +185,6 @@ closepath
     self.fd.append ("%f %f moveto" % (bx, by))
     self.text ("note2", x, y, h_centre = 0, v_centre = -1)
     self.fd.append ("grestore")
+
+  def charter_token_spacing (self, x):
+    self.value("charter_token_spacing", x)
