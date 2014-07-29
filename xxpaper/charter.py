@@ -118,10 +118,7 @@ closepath
     gap = oy - token_inset_y
     count = int (self.value ("token_count", x, y))
     token_spacing = int (self.value ("charter_token_spacing", x))
-    if token_spacing:
-      spacing = gap / token_spacing
-    else:
-      spacing = gap / (count + 1)
+    spacing = gap / token_spacing if token_spacing else gap / (count + 1)
     self.fd.append ("gsave")
     for i in xrange (1, count + 1):
       bx = ox
