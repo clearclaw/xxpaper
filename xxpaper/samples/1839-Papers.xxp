@@ -1,4 +1,55 @@
 [DEFAULT]
+  BLACK = 0, 0, 0
+  BLUE = 0, 1, 1
+  # BROWN = 0.98, 0.64, 0.38
+  BROWN = 0.922, 0.780, 0.620
+  DARK_BLACK = 0.184, 0.310, 0.310
+  GRAY = 0.663, 0.663, 0.663
+  GREEN = 0.5, 1.0, 0
+  LIGHT_BLUE = 0.686, 0.933, 0.933
+  LIGHT_GREEN = 0.83, 1.0, 0.83
+  LIGHT_ORANGE = 0.98, 0.98, 0.82
+  LIGHT_RED = 1.000, 0.894, 0.882
+  ORANGE = 1.000, 0.647, 0.000
+  RED = 1.0, 0.0, 0.0
+  WHITE = 1, 1, 1
+  YELLOW = 1.0, 1.0, 0.0
+
+  20f10f_DARK = 0.439, 0.859, 0.859
+  20f10f_LIGHT = 0.686, 0.933, 0.933
+  80f_DARK = 0.941, 0.902, 0.549
+  80f_LIGHT = 0.914, 0.761, 0.651
+  AMS_DARK = 0.600, 0.196, 0.800
+  AMS_LIGHT = 0.933, 0.510, 0.933
+  BEL_DARK = ${WHITE}
+  BEL_LIGHT = 0.941, 0.902, 0.549
+  GER_DARK = ${WHITE}
+  GER_LIGHT = 0.847, 0.847, 0.749
+  HISM_DARK = ${BLACK}
+  HISM_LIGHT = ${GRAY}
+  NBDS_DARK = 0.000, 0.000, 0.804
+  NBDS_LIGHT = 0.392, 0.584, 0.929
+  NCS_DARK = 1, 0, 0
+  NCS_LIGHT = 0.941, 0.502, 0.502
+  NWS_DARK = 1, 1, 0
+  NWS_LIGHT = 1.000, 0.843, 0.000
+  OVER_DARK = ${WHITE}
+  OVER_LIGHT = 0.498, 1.000, 0.831
+  ROUND_DARK = 1.0, 0.0, 0.0
+  ROUND_LIGHT = 0.0, 0.0, 1.0
+  RS_DARK = 0.804, 0.522, 0.247
+  RS_LIGHT = 0.871, 0.722, 0.529
+  SAVED_DARK = 0.804, 0.804, 0.804
+  SAVED_LIGHT = 0.686, 0.933, 0.933
+  SS_DARK = 0.604, 0.804, 0.196
+  SS_LIGHT = 0.686, 0.933, 0.933
+  ZHESM_DARK = 0.129, 0.369, 0.129
+  ZHESM_LIGHT = 0.565, 0.933, 0.565
+
+  OVER_TOKEN_BOTTOM = 0.498, 1.000, 0.831
+  BEL_TOKEN_BOTTOM = 0.902, 0.902, 0.980
+  GER_TOKEN_BOTTOM = 0.941, 0.902, 0.549
+
 
 [charter]
   desc1 = "Assets, Treasury & Trains"
@@ -11,46 +62,46 @@ on map * value of revenue location."""
   [[sheet1]]
 
     [[[tile_1.1]]]
-      LIGHT = 0.933, 0.510, 0.933
-      DARK = 0.600, 0.196, 0.800
+      LIGHT = ${AMS_LIGHT}
+      DARK = ${AMS_DARK}
       title = "Aachen-Maastricht", "Spoorweg"
       token_name = AMS
 
     [[[tile_1.2]]]
-      LIGHT = ${GRAY}
-      DARK = ${BLACK}
+      LIGHT = ${HISM_LIGHT}
+      DARK = ${HISM_DARK}
       title = "Hollandsche IJzeren", "Spoorweg"
       token_name = HISM
 
     [[[tile_2.1]]]
-      LIGHT = 0.392, 0.584, 0.929
-      DARK = 0.000, 0.000, 0.804
+      LIGHT = ${NBDS_LIGHT}
+      DARK = ${NBDS_DARK}
       title = "Noord-Brabantsch-Duitsche", "Spoorweg"
       token_name = NBDS
 
     [[[tile_2.2]]]
-      LIGHT = 0.941, 0.502, 0.502
-      DARK = 1, 0, 0
+      LIGHT = ${NCS_LIGHT}
+      DARK = ${NCS_DARK}
       title = "Nederlandsche Centraal", "Spoorweg"
       token_name = NCS
 
   [[sheet2]]
 
     [[[tile_1.1]]]
-      LIGHT = 1.000, 0.843, 0.000
-      DARK = 1, 1, 0
+      LIGHT = ${NWS_LIGHT}
+      DARK = ${NWS_DARK}
       title = "Nederlandsch-Westfaalsche", "Spoorweg"
       token_name = NWS
 
     [[[tile_1.2]]]
-      LIGHT = 0.871, 0.722, 0.529
-      DARK = 0.804, 0.522, 0.247
+      LIGHT = ${RS_LIGHT}
+      DARK = ${RS_DARK}
       title = Rijn Spoorweg
       token_name = RS
 
     [[[tile_2.1]]]
-      LIGHT = 0.686, 0.933, 0.933
-      DARK = 0.604, 0.804, 0.196
+      LIGHT = ${SS_LIGHT}
+      DARK = ${SS_DARK}
       title = "Maatschappij", "tot Exploitatie van", "Staatsspoorwegen"
       note1 = """Once per game may place a third
 and optionally a fourth track tile
@@ -64,15 +115,12 @@ on map * value of revenue location."""
       token_name = SS
 
     [[[tile_2.2]]]
-      LIGHT = 0.565, 0.933, 0.565
-      DARK = 0.129, 0.369, 0.129
+      LIGHT = ${ZHESM_LIGHT}
+      DARK = ${ZHESM_DARK}
       title = "Zuid-Hollandsche", "Electrische Spoorweg"
       token_name = ZHESM
 
   [[sheet3]]
-    LIGHT_BLUE = 0.686, 0.933, 0.933
-    LIGHT_ORANGE = 0.98, 0.98, 0.82
-    LIGHT_RED = 1.000, 0.894, 0.882
     centre_colour = ${BLACK}
     desc1 = "Shares & Treasury"
     desc2 = "Income"
@@ -89,34 +137,36 @@ Buy market shares and return to treasury first, then buy trains."""
 
     [[[tile_1.1]]]
       COUNTRY = "n Overseas"
-      LIGHT = 0.498, 1.000, 0.831
-      DARK = ${WHITE}
+      LIGHT = ${OVER_LIGHT}
+      DARK = ${OVER_DARK}
       title = "Overseas"
       token_name = OVER
       box_colour = ${LIGHT_BLUE}
+      token_bottom_colour = ${OVER_TOKEN_BOTTOM}
 
     [[[tile_1.2]]]
       COUNTRY = " Belgian"
-      LIGHT = 0.902, 0.902, 0.980
-      DARK = ${WHITE}
+      LIGHT = ${BEL_LIGHT}
+      DARK = ${BEL_DARK}
       title = "Belgium"
-      token_name = GER
+      token_name = BEL
       box_colour = ${LIGHT_ORANGE}
+      token_bottom_colour = ${BEL_TOKEN_BOTTOM}
 
     [[[tile_1.3]]]
       COUNTRY = " German"
-      LIGHT = 0.941, 0.902, 0.549
-      DARK = ${WHITE}
+      LIGHT = ${GER_LIGHT}
+      DARK = ${GER_DARK}
       title = "Germany"
       token_name = GER
       box_colour = ${LIGHT_RED}
+      token_bottom_colour = ${GER_TOKEN_BOTTOM}
+
 
 [private]
-  BROWN = 0.922, 0.780, 0.620
-  GREEN = 0.83, 1.0, 0.83
 
   [[green]]
-    frame_colour = ${GREEN}
+    frame_colour = ${LIGHT_GREEN}
 
     [[[tile_1.1]]]
       cost = Cost: 300f
@@ -326,10 +376,6 @@ for 10f each plus any terrain costs."""
       close = "Close: In brown phase or when power used."
 
 [share]
-  LIGHT_BLUE = 0.686, 0.933, 0.933
-  LIGHT_ORANGE = 0.98, 0.98, 0.82
-  LIGHT_RED = 1.000, 0.894, 0.882
-  ORANGE = 1.000, 0.647, 0.000
   token_count = 1
   size = 10%
   note = ""
@@ -442,38 +488,42 @@ for 10f each plus any terrain costs."""
 
   [[OVER]]
     frame_colour = ${LIGHT_BLUE}
-    LIGHT = 0.498, 1.000, 0.831
-    DARK = ${WHITE}
+    LIGHT = ${OVER_LIGHT}
+    DARK = ${OVER_DARK}
     title = "Overseas"
     token_name = OVER
     note = "Foreign"
     size = 5%
-
-  [[GER]]
-    frame_colour = ${LIGHT_RED}
-    LIGHT = 0.941, 0.902, 0.549
-    DARK = ${WHITE}
-    title = "Germany"
-    token_name = "GER"
-    note = "Foreign"
-    size = 5%
+    token_bottom_colour = ${OVER_TOKEN_BOTTOM}
 
   [[BEL]]
     frame_colour = ${LIGHT_ORANGE}
-    LIGHT = 0.902, 0.902, 0.980
-    DARK = ${WHITE}
+    LIGHT = ${BEL_LIGHT}
+    DARK = ${BEL_DARK}
     title = "Belgium"
     token_name = "BEL"
     note = "Foreign"
     size = 5%
+    token_bottom_colour = ${BEL_TOKEN_BOTTOM}
+
+  [[GER]]
+    frame_colour = ${LIGHT_RED}
+    LIGHT = ${GER_LIGHT}
+    DARK = ${GER_DARK}
+    title = "Germany"
+    token_name = "GER"
+    note = "Foreign"
+    size = 5%
+    token_bottom_colour = ${GER_TOKEN_BOTTOM}
+
 
 [token]
 
   [[sheet1]]
 
     [[[tile_1.1]]]
-      LIGHT = 0.933, 0.510, 0.933
-      DARK = 0.600, 0.196, 0.800
+      LIGHT = ${AMS_LIGHT}
+      DARK = ${AMS_DARK}
       token_name = AMS
 
     [[[tile_1.2]]]
@@ -482,88 +532,78 @@ for 10f each plus any terrain costs."""
       token_name = HISM
 
     [[[tile_1.3]]]
-      LIGHT = 0.392, 0.584, 0.929
-      DARK = 0.000, 0.000, 0.804
+      LIGHT = ${NBDS_LIGHT}
+      DARK = ${NBDS_DARK}
       token_name = NBDS
 
     [[[tile_1.4]]]
-      LIGHT = 0.941, 0.502, 0.502
-      DARK = 1, 0, 0
+      LIGHT = ${NCS_LIGHT}
+      DARK = ${NCS_DARK}
       token_name = NCS
 
     [[[tile_1.5]]]
-      LIGHT = 1.000, 0.843, 0.000
-      DARK = 1, 1, 0
+      LIGHT = ${NWS_LIGHT}
+      DARK = ${NWS_DARK}
       token_name = NWS
 
     [[[tile_1.6]]]
-      LIGHT = 0.871, 0.722, 0.529
-      DARK = 0.804, 0.522, 0.247
+      LIGHT = ${RS_LIGHT}
+      DARK = ${RS_DARK}
       token_name = RS
 
     [[[tile_1.7]]]
-      LIGHT = 0.686, 0.933, 0.933
-      DARK = 0.604, 0.804, 0.196
+      LIGHT = ${SS_LIGHT}
+      DARK = ${SS_DARK}
       token_name = SS
 
     [[[tile_1.8]]]
-      LIGHT = 0.565, 0.933, 0.565
-      DARK = 0.129, 0.369, 0.129
+      LIGHT = ${ZHESM_LIGHT}
+      DARK = ${ZHESM_DARK}
       token_name = ZHESM
 
     [[[tile_1.9]]]
-      LIGHT = 0.498, 1.000, 0.831
-      DARK = ${WHITE}
+      LIGHT = ${OVER_LIGHT}
+      DARK = ${OVER_DARK}
       token_name = OVER
-      token_bottom_colour = 0.498, 1.000, 0.831
+      token_bottom_colour = ${OVER_TOKEN_BOTTOM}
 
     [[[tile_1.10]]]
-      LIGHT = 0.941, 0.902, 0.549
-      DARK = ${WHITE}
+      LIGHT = ${BEL_LIGHT}
+      DARK = ${BEL_DARK}
       token_name = BEL
-      token_bottom_colour = 0.902, 0.902, 0.980
+      token_bottom_colour = ${BEL_TOKEN_BOTTOM}
 
     [[[tile_1.11]]]
-      LIGHT = 0.847, 0.847, 0.749
-      DARK = ${WHITE}
+      LIGHT = ${GER_LIGHT}
+      DARK = ${GER_DARK}
       token_name = GER
-      token_bottom_colour = 0.941, 0.902, 0.549
+      token_bottom_colour = ${GER_TOKEN_BOTTOM}
 
     [[[tile_1.12]]]
-      LIGHT = 0.914, 0.761, 0.651
-      DARK = 0.941, 0.902, 0.549
-      token_bottom_colour = 0.922, 0.780, 0.620
+      LIGHT = ${80f_LIGHT}
+      DARK = ${80f_DARK}
       token_name = "80f"
+      token_bottom_colour = 0.922, 0.780, 0.620
 
     [[[tile_1.13]]]
-      LIGHT = 0.686, 0.933, 0.933
-      DARK = 0.439, 0.859, 0.859
-      token_bottom_colour = 0.274, 0.510, 0.706
+      LIGHT = ${20f10f_LIGHT}
+      DARK = ${20f10f_DARK}
       token_name = "20f/10f"
+      token_bottom_colour = 0.274, 0.510, 0.706
 
     [[[tile_1.14]]]
-      LIGHT = 0.686, 0.933, 0.933
-      DARK = 0.804, 0.804, 0.804
+      LIGHT = ${SAVED_LIGHT}
+      DARK = ${SAVED_DARK}
+      token_name = SAVED
       token_bottom_colour = ${BLACK}
-      token_name = "SAVED"
 
     [[[tile_1.15]]]
-      LIGHT = 0.0, 0.0, 1.0
-      DARK = 1.0, 0.0, 0.0
+      LIGHT = ${ROUND_LIGHT}
+      DARK = ${ROUND_DARK}
+      token_name = ROUND
       token_bottom_colour = ${LIGHT}
-      token_name = "ROUND"
 
 [train]
-  BLACK = 0, 0, 0
-  BLUE = 0, 1, 1
-  # BROWN = 0.98, 0.64, 0.38
-  BROWN = 0.922, 0.780, 0.620
-  DARK_BLACK = 0.184, 0.310, 0.310
-  GRAY = 0.663, 0.663, 0.663
-  GREEN = 0.5, 1.0, 0
-  RED = 1.0, 0.0, 0.0
-  WHITE = 1, 1, 1
-  YELLOW = 1.0, 1.0, 0.0
   trade = ""
 
   [[yellow]]
@@ -688,13 +728,8 @@ for 10f each plus any terrain costs."""
     [[[tile_2.3]]]
       train = "6"
 
+
 [market]
-  WHITE = 1, 1, 1
-  YELLOW = 1.0, 1.0, 0.0
-  GREEN = 0.5, 1.0, 0
-  BLUE = 0, 1, 1
-  BROWN = 0.922, 0.780, 0.620
-  LIGHT_RED = 1.000, 0.894, 0.882
 
   [[sheet1]]
     tile_colour = ${WHITE}
