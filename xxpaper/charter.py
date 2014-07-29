@@ -120,7 +120,6 @@ closepath
     count = int (self.value ("token_count", x, y))
     token_spacing = int (self.value ("charter_token_spacing", x))
     if token_spacing:
-      spacing = gap / int (self.value ("charter_token_spacing", x))
       spacing = gap / token_spacing
     else:
       spacing = gap / (count + 1)
