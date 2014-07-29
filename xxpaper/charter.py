@@ -122,7 +122,6 @@ closepath
       spacing = gap / token_spacing
     else:
       spacing = gap / (count + 1)
-
     self.fd.append ("gsave")
     for i in xrange (1, count + 1):
       bx = ox
