@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 
 from xxpaper.sheet import Sheet
-from types import StringType
 
 class Private (Sheet):
   def __init__ (self, cfgs, sheet, page, fname):
@@ -25,7 +24,8 @@ class Private (Sheet):
     oy = self.y_off + self.number_stripe_inset_y
     for y in xrange (self.num_y):
       by = (y * self.tile_y) + oy
-      self.box ("number", 0, 0, 0, by, self.rubber_x, self.number_stripe_height)
+      self.box ("number", 0, 0, 0, by, self.rubber_x,
+                self.number_stripe_height)
 
   def number_cost (self, x, y):
     bx = self.number_text_inset_x

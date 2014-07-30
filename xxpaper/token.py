@@ -6,9 +6,6 @@ class Token (Sheet):
   def __init__ (self, cfgs, sheet, page, fname):
     Sheet.__init__ (self, cfgs, sheet, page, fname)
 
-  def page_details (self):
-    pass
-
   def tile_details (self, x, y):
     self.top_stripe (x, y)
     self.bottom_stripe (x, y)
@@ -26,7 +23,7 @@ class Token (Sheet):
 
   def top_stripe (self, x, y):
     bx = self.tile_x
-    by = float (self.tile_y / 2)
+    # by = float (self.tile_y / 2)
     self.fd.append ("gsave")
     self.fd.append ("%s %s %s setrgbcolor"
                     % self.value ("token_top_colour", x, y))

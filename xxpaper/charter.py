@@ -80,7 +80,8 @@ closepath
                        self.stripe_height,
                        self.stripe_radius))
     self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor" % self.value ("stripe_colour", x, y))
+    self.fd.append ("%s %s %s setrgbcolor"
+                    % self.value ("stripe_colour", x, y))
     self.fd.append ("fill")
     self.fd.append ("grestore")
     self.fd.append ("%s setlinewidth" % self.value ("stripe_stroke", x, y))

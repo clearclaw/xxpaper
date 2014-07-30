@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 
 from xxpaper.sheet import Sheet
-from types import StringType
 
 class Market (Sheet):
   def __init__ (self, cfgs, sheet, page, fname):

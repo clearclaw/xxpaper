@@ -15,10 +15,10 @@ def get_cfgval (cfgs, sheet, name):
       return cfg[sheet][name]
     except:
       pass
-  try:
-    return cfg["DEFAULT"][name]
-  except:
-    pass
+    try:
+      return cfg["DEFAULT"][name]
+    except:
+      pass
   print >> sys.stderr, ("Error: Cannot find the value of: %s"
                         % name)
   sys.exit (1)

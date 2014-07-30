@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 
 from xxpaper.sheet import Sheet
-from types import StringType
 
 class Share (Sheet):
   def __init__ (self, cfgs, sheet, page, fname):
@@ -12,7 +11,8 @@ class Share (Sheet):
     self.type_stripe_height = float (self.value ("type_stripe_height"))
     self.type_stripe_inset_x = float (self.value ("type_stripe_inset_x"))
     self.type_stripe_inset_y = float (self.value ("type_stripe_inset_y"))
-    self.type_stripe_inset_y_fudge = float (self.value ("type_stripe_inset_y_fudge"))
+    self.type_stripe_inset_y_fudge = float (
+      self.value ("type_stripe_inset_y_fudge"))
     self.type_stripe_width = (self.x_off + self.tile_x -
                               self.type_stripe_inset_x)
 

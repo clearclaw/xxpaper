@@ -100,6 +100,12 @@ class Sheet (object):
           break
     return v
 
+  def page_details (self):
+    pass # Specialised in childrend
+
+  def tile_details (self, x, y):
+    pass # Specialised in childrend
+
   def page_align (self):
     align_length = float (self.value ("align_length"))
     self.fd.append ("gsave")
@@ -167,13 +173,13 @@ class Sheet (object):
     if v_centre == -1:
       by = line_height * (len (tl) - 1)
       self.fd.append ("0 %d moveto" % by)
-    format = {
+    tformat = {
       -1: "(%s) show",
       0: "(%s) dup stringwidth pop 2 div neg 0 rmoveto show",
       1: "(%s) dup stringwidth pop neg 0 rmoveto show",
       }
     for t in tl:
-      self.fd.append (format[h_centre] % t)
+      self.fd.append (tformat[h_centre] % t)
       by -= line_height
       self.fd.append ("0 %d moveto" % by)
     self.fd.append ("grestore")
