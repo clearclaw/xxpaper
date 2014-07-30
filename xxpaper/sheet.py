@@ -1,14 +1,13 @@
 #! /usr/bin/env python
 
-import re, sys
+import itertools, re, sys
 from psfile import PSFile
 from types import ListType, StringType
 
 class Sheet (object):
-  def __init__ (self, defaults, conf, sheet, page, fname):
+  def __init__ (self, cfgs, sheet, page, fname):
     self.re_var = re.compile (r"\$\{([A-Za-z0-9._]+)\}")
-    self.defaults = defaults
-    self.conf = conf
+    self.cfgs = cfgs
     self.fname = fname
     self.fd = None
     # Type of sheet
@@ -46,8 +45,8 @@ class Sheet (object):
       self.fd.close ()
       self.fd = None
 
-  def _value_lookup (self, data, sl, k):
-    base = data
+  def _value_lookup (self, cfg, sl, k):
+    base = cfg
     al = list ()
     # Descending list of sections
     for s in sl:
@@ -56,18 +55,22 @@ class Sheet (object):
         break
       al.insert (0, a)
       base = a
-    al.append (data.get ("DEFAULT"))
+    al.append (cfg.get ("DEFAULT"))
     for d in al:
       # print "K: ", k , "D: ", d, "V: [%s]" % d.get (k)
       if d.has_key (k):
+        # print "Found %s / %s in %s" % (k, sl, cfg.my_name)
         return d.get (k)
+    # print "Failed to find %s / %s in %s" % (k, sl, cfg.my_name)
     raise ValueError
 
   def _get_value (self, sl, k):
-    try:
-      return self._value_lookup (self.conf, sl, k)
-    except:
-      return self._value_lookup (self.defaults, sl, k)
+    for cfg in itertools.chain (self.cfgs):
+      try:
+        return self._value_lookup (cfg, sl, k)
+      except:
+        pass
+    raise ValueError
 
   def value (self, n, x = 0, y = 0):
     sl = [self.sheet, self.page, "tile_%d.%d" % (x + 1, y + 1)]
@@ -77,7 +80,7 @@ class Sheet (object):
       print >> sys.stderr, (
         "FAULT: No definition found for: %s.%s.%s (%d, %d)"
         % (self.sheet, self.page, n, x + 1, y + 1))
-      sys.exit (1)
+      sys.exit (3)
     if v == "randomcolour": # Development ease
       from random import uniform
       v = (uniform (0, 1), uniform (0, 1), uniform (0, 1))

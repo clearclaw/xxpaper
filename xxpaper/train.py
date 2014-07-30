@@ -3,8 +3,8 @@
 from xxpaper.sheet import Sheet
 
 class Train (Sheet):
-  def __init__ (self, defaults, conf, sheet, page, fname):
-    Sheet.__init__ (self, defaults, conf, sheet, page, fname)
+  def __init__ (self, cfgs, sheet, page, fname):
+    Sheet.__init__ (self, cfgs, sheet, page, fname)
     # Offsets within tile
     self.rust_stripe_inset_y = int (self.value ("rust_stripe_inset_y"))
     self.rust_stripe_height = int (self.value ("rust_stripe_height"))

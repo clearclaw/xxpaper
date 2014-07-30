@@ -4,8 +4,8 @@ from xxpaper.sheet import Sheet
 from types import StringType
 
 class Market (Sheet):
-  def __init__ (self, defaults, conf, sheet, page, fname):
-    Sheet.__init__ (self, defaults, conf, sheet, page, fname)
+  def __init__ (self, cfgs, sheet, page, fname):
+    Sheet.__init__ (self, cfgs, sheet, page, fname)
 
   def page_details (self):
     pass

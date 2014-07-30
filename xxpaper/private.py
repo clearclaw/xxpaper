@@ -4,8 +4,8 @@ from xxpaper.sheet import Sheet
 from types import StringType
 
 class Private (Sheet):
-  def __init__ (self, defaults, conf, sheet, page, fname):
-    Sheet.__init__ (self, defaults, conf, sheet, page, fname)
+  def __init__ (self, cfgs, sheet, page, fname):
+    Sheet.__init__ (self, cfgs, sheet, page, fname)
     # Offsets within tile
     self.number_stripe_height = float (self.value ("number_stripe_height"))
     self.number_text_inset_x = float (self.value ("number_text_inset_x"))

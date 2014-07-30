@@ -1,74 +1,89 @@
 #! /usr/bin/env python
 
-import os, pkg_resources, sys
+import argparse, itertools, os, pkg_resources, sys
 from configobj import ConfigObj
 import xxpaper
 
-def make (defaults, conf, xtype, page, fname):
-  with getattr (xxpaper, xtype.capitalize ()) (defaults, conf, xtype,
-                                               page, fname) as t:
+def make (cfgs, sheet, page, fname):
+  with getattr (xxpaper, sheet.capitalize ()) (cfgs, sheet, page, fname) as t:
     t.make ()
   print fname
 
-def error ():
-  print >> sys.stderr, ("Syntax: %s <cfg_file> [[[type] page] output_file]"
-                        % sys.argv[0])
-  sys.exit (0)
+def get_cfgval (cfgs, sheet, name):
+  for cfg in itertools.chain (cfgs):
+    try:
+      return cfg[sheet][name]
+    except:
+      pass
+  try:
+    return cfg["DEFAULT"][name]
+  except:
+    pass
+  print >> sys.stderr, ("Error: Cannot find the value of: %s"
+                        % name)
+  sys.exit (1)
+
+def read_overrides (values):
+  return ConfigObj (itertools.chain (["[DEFAULT]",], values.split (",")))
+
+def read_config (fname):
+  return ConfigObj (file (fname).readlines ())
+
+def process_args ():
+  parser = argparse.ArgumentParser (
+    description = "18xx rapid prototyping tool.")
+  parser.add_argument (
+    "-o", "--override", metavar = "ASSIGNMENTS", dest = "override",
+    type = read_overrides, required = False,
+    help = "Individual settings to override all others")
+  parser.add_argument (
+    "-l", "--local", metavar = "FILE", dest = "local",
+    type = read_config, required = False,
+    help = "Option file to override game configuration and DEFAULTs")
+  parser.add_argument (nargs = 1, metavar = "FILE", dest = "conf",
+                       type = read_config, help = "Game configuration file")
+  parser.add_argument (nargs = '?', metavar = "SECTION", dest = "sheet",
+                       default = None, help = "Section to render")
+  parser.add_argument (nargs = '?', metavar = "PAGE", dest = "page",
+                       default = None, help = "Page in section to render")
+  args = parser.parse_args ()
+  args.conf = args.conf[0] # nargs=1 makes it a silly list
+  #  args.conf.my_name = "user_conf"
+  s = pkg_resources.resource_string ("xxpaper", "DEFAULT.conf")
+  args.default = ConfigObj (s.split ("\n"))
+  # args.default.my_name = "default_conf"
+  # args.override.my_name = "cli_conf"
+  args.runtime = ConfigObj (["[DEFAULT]",])
+  if args.sheet and args.sheet not in args.conf.sections:
+    print >> sys.stderr, ("Error: Cannot find section %s in game file."
+                          % args.sheet)
+    sys.exit (1)
+  if (args.sheet and args.page
+      and args.page not in args.conf[args.sheet].sections):
+    print >> sys.stderr, ("Error: Cannot find section %s.%s in game file."
+                          % (args.sheet, args.page))
+    sys.exit (2)
+  return args
 
 def main ():
-  s = pkg_resources.resource_string ("xxpaper", "DEFAULT.conf")
-  defaults = ConfigObj (s.split ("\n"))
-  if len (sys.argv) == 1:
-    error ()
-  if len (sys.argv) >= 2:
-    cfg_name = sys.argv[1]
-    conf = ConfigObj (cfg_name)
-    if not os.path.isfile (cfg_name):
-      print >> sys.stderr, ("Error: Cannot access configuration file: %s"
-                            % cfg_name)
-      sys.exit (2)
-  if len (sys.argv) >= 3:
-    xtype = sys.argv[2]
-    if not xtype in conf.sections:
-      print >> sys.stderr, ("Error: Cannot find section %s in file: %s"
-                            % (xtype, cfg_name))
-      sys.exit (1)
-  if len (sys.argv) >= 4:
-    page = sys.argv[3]
-    if not page in conf[xtype].sections:
-      print >> sys.stderr, ("Error: Cannot find section %s.%s in file: %s"
-                            % (xtype, page, cfg_name))
-      sys.exit (1)
-  if len (sys.argv) >= 5:
-    error ()
-  try:
-    papers = conf["DEFAULT"]["papers"]
-  except:
-    papers = defaults["DEFAULT"]["papers"]
-  try:
-    outlines = conf["DEFAULT"]["outlines"]
-  except:
-    outlines = defaults["DEFAULT"]["outlines"]
-  # All the shapes!
+  args = process_args ()
+  cfgs = [x for x in [args.runtime, args.override, args.local,
+                      args.conf, args.default] if not None]
+  papers = get_cfgval (cfgs, "DEFAULT", "papers")
+  outlines = get_cfgval (cfgs, "DEFAULT", "outlines")
   for paper in papers:
-    conf["DEFAULT"]["paper"] = paper
+    args.runtime["DEFAULT"]["paper"] = paper
     for outline in outlines:
-      conf["DEFAULT"]["outline"] = outline
+      args.runtime["DEFAULT"]["outline"] = outline
       o = "outline" if outline == "1" else "nooutline"
-      if len (sys.argv) == 2:
-        for t in conf.sections:
-          if t == "DEFAULT":
+      for sheet in args.conf.sections:
+        if sheet == "DEFAULT" or (args.sheet and sheet != args.sheet):
+          continue
+        for page in args.conf[sheet].sections:
+          if args.page and page != args.page:
             continue
-          for p in conf[t].sections:
-            make (defaults, conf, t, p,
-                  os.path.join ("./", "%s_%s-%s-%s.ps" % (t, p, o, paper)))
-      elif len (sys.argv) == 3:
-        for p in conf[xtype].sections:
-          make (defaults, conf, xtype, p,
-                os.path.join ("./", "%s_%s-%s-%s.ps" % (xtype, p, o, paper)))
-      else:
-        make (defaults, conf, xtype, page,
-              os.path.join ("./", "%s_%s-%s-%s.ps" % (xtype, page, o, paper)))
+          make (cfgs, sheet, page,
+                os.path.join ("./", "%s_%s-%s-%s.ps" % (sheet, page, o, paper)))
   sys.exit (0)
 
 if __name__ == '__main__':

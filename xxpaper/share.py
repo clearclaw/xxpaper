@@ -4,8 +4,8 @@ from xxpaper.sheet import Sheet
 from types import StringType
 
 class Share (Sheet):
-  def __init__ (self, defaults, conf, sheet, page, fname):
-    Sheet.__init__ (self, defaults, conf, sheet, page, fname)
+  def __init__ (self, cfgs, sheet, page, fname):
+    Sheet.__init__ (self, cfgs, sheet, page, fname)
     # Offsets within tile
     self.side_stripe_inset_x = float (self.value ("side_stripe_inset_x"))
     self.side_stripe_width = float (self.value ("side_stripe_width"))
