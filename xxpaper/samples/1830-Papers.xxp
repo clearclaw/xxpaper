@@ -32,7 +32,7 @@
   desc1 = "Assets, Treasury & Trains"
   note1 = """Purchase price of shares goes to bank.
 Market shares pay dividends to treasury.
-Station cost: Free/$40/$100"""
+Station cost: $Free/$40/$100/..."""
   token_count = 4
 
   [[sheet1]]
@@ -102,51 +102,53 @@ Station cost: Free/$40/$100"""
       cost = Cost: $20
       revenue = Revenue: $5
       title = "Schuylkill Valley Navigation Co."
-      desc = "Blocks hex G15"
+      desc = "Blocks: G15"
       close = "Close: In brown phase."
 
     [[[tile_1.2]]]
       cost = Cost: $40
       revenue = Revenue: $10
       title = "Champlain & St. Lawrence Railroad"
-      desc = """Blocks B20.
-  Owning corporation may place a free,
-  extra tile at hex B20."""
+      desc = """Blocks: B20.
+Owning corporation may place a free,
+extra tile at hex B20."""
       close = "Close: In brown phase."
 
     [[[tile_1.3]]]
       cost = Cost: $70
       revenue = Revenue: $15
       title = "Delaware & Hudson Railroad"
-      desc = """Blocks F16.
-  Owning corporation may place a tile
-  and/or a token at F16 (for free)."""
+      desc = """Blocks: F16.
+Owning corporation may place a station
+marker, or a yellow tile and station 
+marker (must be both) at F16 for $120."""
       close = "Close: In brown phase."
 
     [[[tile_2.1]]]
       cost = Cost: $110
       revenue = Revenue: $20
       title = "Mohawk & Hudson Railroad"
-      desc = """Blocks D18.
-  Owning player may exchange for a share
-  of NYC from bank or IPO."""
-      close = "Close: In brown phase or if exchange power used."
+      desc = """Blocks: D18.
+Owning player may exchange for a share
+of NYC from bank or IPO."""
+      close = "Close: In brown phase or when power used."
 
     [[[tile_2.2]]]
       cost = Cost: $160
       revenue = Revenue: $25
       title = "Camden & Amboy Railroad"
-      desc = """Blocks H18.
-  Purchaser receives 10% PRR share."""
+      desc = """Blocks: H18.
+Purchaser receives 10% PRR share."""
       close = "Close: In brown phase."
 
     [[[tile_2.3]]]
       cost = Cost: $220
       revenue = Revenue: $30
       title = "Baltimore & Ohio Railroad"
-      desc = """Blocks I13 & I15.
-  Purchaser receives B&O presidency and
-  sets par price. May not be sold to a company."""
+      desc = """Blocks: I13 & I15.
+Purchaser receives B&O presidency and
+sets par price. May not be sold to a 
+public company."""
       close = "Close: In brown phase or when B&O purchases a train."
 
 
