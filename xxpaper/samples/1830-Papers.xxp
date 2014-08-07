@@ -119,8 +119,8 @@ extra tile at hex B20."""
       revenue = Revenue: $15
       title = "Delaware & Hudson Railroad"
       desc = """Blocks: F16.
-Owning corporation may place a station
-marker, or a yellow tile and station 
+Owning corporation may place a yellow 
+track tile, or a yellow tile and station 
 marker (must be both) at F16 for $120."""
       close = "Close: In brown phase."
 
