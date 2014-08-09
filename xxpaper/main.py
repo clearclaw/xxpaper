@@ -27,7 +27,11 @@ def read_overrides (values):
   return ConfigObj (itertools.chain (["[DEFAULT]",], values.split (",")))
 
 def read_config (fname):
-  return ConfigObj (file (fname).readlines ())
+  conf = ConfigObj (file (fname).readlines ())
+  if "DEFAULT" not in conf.sections:
+    conf["DEFAULT"] = {}
+  conf["DEFAULT"]["source_filename"] = "File: %s" % fname
+  return conf
 
 def process_args ():
   parser = argparse.ArgumentParser (
