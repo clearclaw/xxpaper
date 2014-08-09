@@ -118,6 +118,10 @@ class Sheet (object):
 
   def page_frame (self):
     self.box ("frame", 0, 0, 0, 0, self.rubber_x, self.rubber_y)
+    self.fd.append ("gsave")
+    self.fd.append ("%f %f moveto" % (0, self.rubber_y + 6))
+    self.text ("copyright", 0, 0, v_centre = -1)
+    self.fd.append ("grestore")
 
   def push_tile (self, x, y, bx, by):
     self.fd.append ("gsave")
