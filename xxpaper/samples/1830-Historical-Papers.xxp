@@ -1,0 +1,405 @@
+[DEFAULT]
+  BLACK = 0, 0, 0
+  GRAY = 0.663, 0.663, 0.663
+  WHITE = 1, 1, 1
+  YELLOW = 1.0, 1.0, 0.0
+  GREEN = 0.5, 1.0, 0
+  BROWN = 0.922, 0.780, 0.620
+  RED = 1.0, 0.0, 0.0
+  BLUE = 0, 0.0, 1.0
+  ORANGE = 1.000, 0.647, 0.000
+  LIGHT_BLUE = 0.686, 0.933, 0.933
+  COLOR1_BM = 0.000, 0.000, 1.000
+  COLOR2_BM = 0.000, 0.670, 1.000
+  COLOR1_NYC = ${BLACK}
+  COLOR2_NYC = ${GRAY}
+  COLOR1_CO = 0.429, 0.869, 0.129
+  COLOR2_CO = 0.665, 0.933, 0.665
+  COLOR1_BO = 0.170, 0.170, 1.000
+  COLOR2_BO = 0.830, 0.830, 1.000
+  COLOR1_PRR = 0.830, 0.000, 0.170
+  COLOR2_PRR = 1.000, 0.500, 0.500
+  COLOR1_CPR = 0.000, 0.330, 0.000
+  COLOR2_CPR = 0.000, 0.830, 0.000
+  COLOR1_NYNH = 1, 0.522, 0
+  COLOR2_NYNH = 1, 0.722, 0.4
+  COLOR1_ERIE = 1, 1, 0
+  COLOR2_ERIE = 1.000, 0.843, 0.000
+  PRESIDENT_STRIPE = ${ORANGE}
+  PRIVATE_BACKGROUND =  ${LIGHT_BLUE}
+
+[charter]
+  desc1 = "Assets, Treasury & Trains"
+  note1 = """Purchase price of shares goes to bank.
+Market shares pay dividends to treasury.
+Station cost: $Free/$40/$100/..."""
+  token_count = 4
+
+  [[sheet1]]
+
+    [[[tile_1.1]]]
+      DARK = ${COLOR1_CO}
+      LIGHT = ${COLOR2_CO}
+      title = "Chesapeake & Ohio Railroad"
+      token_name = C&O
+      token_count = 3
+
+    [[[tile_1.2]]]
+      LIGHT = ${COLOR2_NYC}
+      DARK = ${COLOR1_NYC}
+      title = "New York Central Railroad"
+      token_name = NYC
+
+    [[[tile_2.1]]]
+      DARK = ${COLOR1_BO}
+      LIGHT = ${COLOR2_BO}
+      title = "Baltimore & Ohio Railroad"
+      token_name = B&O
+      token_count = 3
+
+    [[[tile_2.2]]]
+      LIGHT = ${COLOR2_CPR}
+      DARK = ${COLOR1_CPR}
+      title = "Canadian Pacific Railroad"
+      token_name = CPR
+
+  [[sheet2]]
+
+    [[[tile_1.1]]]
+      LIGHT = ${COLOR2_ERIE}
+      DARK = ${COLOR1_ERIE}
+      title = "Erie Railroad"
+      token_name = ERIE
+      token_count = 3
+
+    [[[tile_1.2]]]
+      DARK = ${COLOR1_NYNH}
+      LIGHT = ${COLOR2_NYNH}
+      title = "New York, New Haven", "& Hartford Railroad"
+      token_name = NYNH
+      token_count = 2
+
+    [[[tile_2.1]]]
+      LIGHT = ${COLOR2_BM}
+      DARK = ${COLOR1_BM}
+      title = "Baltimore & Maine Railroad"
+      token_name = B&M
+      token_count = 2
+
+    [[[tile_2.2]]]
+      LIGHT = ${COLOR2_PRR}
+      DARK = ${COLOR1_PRR}
+      title = "Pennsylvania Railroad"
+      token_name = PRR
+
+
+[private]
+  frame_colour = ${PRIVATE_BACKGROUND}
+
+  [[Sheet1]]
+
+    [[[tile_1.1]]]
+      cost = Cost: $20
+      revenue = Revenue: $5
+      title = "Schuylkill Valley Navigation Co."
+      desc = "Blocks: G15"
+      close = "Close: In brown phase."
+
+    [[[tile_1.2]]]
+      cost = Cost: $40
+      revenue = Revenue: $10
+      title = "Champlain & St. Lawrence Railroad"
+      desc = """Blocks: B20.
+Owning corporation may place a free,
+extra tile at hex B20."""
+      close = "Close: In brown phase."
+
+    [[[tile_1.3]]]
+      cost = Cost: $70
+      revenue = Revenue: $15
+      title = "Delaware & Hudson Railroad"
+      desc = """Blocks: F16.
+Owning corporation may place a yellow
+track tile, or a yellow tile and station
+marker (must be both) at F16 for $120."""
+      close = "Close: In brown phase."
+
+    [[[tile_2.1]]]
+      cost = Cost: $110
+      revenue = Revenue: $20
+      title = "Mohawk & Hudson Railroad"
+      desc = """Blocks: D18.
+Owning player may exchange for a share
+of NYC from bank or IPO."""
+      close = "Close: In brown phase or when power used."
+
+    [[[tile_2.2]]]
+      cost = Cost: $160
+      revenue = Revenue: $25
+      title = "Camden & Amboy Railroad"
+      desc = """Blocks: H18.
+Purchaser receives 10% PRR share."""
+      close = "Close: In brown phase."
+
+    [[[tile_2.3]]]
+      cost = Cost: $220
+      revenue = Revenue: $30
+      title = "Baltimore & Ohio Railroad"
+      desc = """Blocks: I13 & I15.
+Purchaser receives B&O presidency and
+sets par price. May not be sold to a
+public company."""
+      close = "Close: In brown phase or when B&O purchases a train."
+
+
+[share]
+  token_count = 1
+  size = 10%
+  note = ""
+  desc = "1 Share"
+  type_colour = transparent
+
+  [[B&O]]
+    LIGHT = ${COLOR2_BO}
+    DARK = ${COLOR1_BO}
+    title = "Baltimore & Ohio Railroad"
+    token_name = B&O
+
+    [[[tile_1.1]]]
+      size = 20%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${PRESIDENT_STRIPE}
+
+  [[NYC]]
+    LIGHT = ${COLOR2_NYC}
+    DARK = ${COLOR1_NYC}
+    title = "New York Central Railroad"
+    token_name = NYC
+
+    [[[tile_1.1]]]
+      size = 20%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${PRESIDENT_STRIPE}
+
+  [[B&M]]
+    LIGHT = ${COLOR2_BM}
+    DARK = ${COLOR1_BM}
+    title = "Baltimore & Maine Railroad"
+    token_name = B&M
+
+    [[[tile_1.1]]]
+      size = 20%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${PRESIDENT_STRIPE}
+
+  [[PRR]]
+    LIGHT = ${COLOR2_PRR}
+    DARK = ${COLOR1_PRR}
+    title = "Pennsylvania Railroad"
+    token_name = PRR
+
+    [[[tile_1.1]]]
+      size = 20%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${PRESIDENT_STRIPE}
+
+  [[ERIE]]
+    LIGHT = ${COLOR2_ERIE}
+    DARK = ${COLOR1_ERIE}
+    title = "Eerie Railroad"
+    token_name = ERIE
+
+    [[[tile_1.1]]]
+      size = 20%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${PRESIDENT_STRIPE}
+
+  [[CPR]]
+    LIGHT = ${COLOR2_CPR}
+    DARK = ${COLOR1_CPR}
+    title = "Canadian Pacific Railroad"
+    token_name = CPR
+
+    [[[tile_1.1]]]
+      size = 20%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${PRESIDENT_STRIPE}
+
+  [[C&O]]
+    LIGHT = ${COLOR2_CO}
+    DARK = ${COLOR1_CO}
+    title = "Chesapeake & Ohio Railroad"
+    token_name = C&O
+
+    [[[tile_1.1]]]
+      size = 20%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${PRESIDENT_STRIPE}
+
+  [[NYNH]]
+    LIGHT = ${COLOR2_NYNH}
+    DARK = ${COLOR1_NYNH}
+    title = "New York, New Haven", "& Hartford Railroad"
+    token_name = NYNH
+
+    [[[tile_1.1]]]
+      size = 20%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${PRESIDENT_STRIPE}
+
+[token]
+
+  [[sheet1]]
+
+    [[[tile_1.1]]]
+      LIGHT = ${COLOR1_BO}
+      DARK = ${COLOR1_BO}
+      token_name = B&O
+
+    [[[tile_1.2]]]
+      LIGHT = ${COLOR2_CO}
+      DARK = ${COLOR1_CO}
+      token_name = C&O
+
+    [[[tile_1.3]]]
+      LIGHT = ${COLOR2_NYC}
+      DARK = ${COLOR1_NYC}
+      token_name = NYC
+      token_count = 7
+
+    [[[tile_1.4]]]
+      LIGHT = ${COLOR2_PRR}
+      DARK = ${COLOR1_PRR}
+      token_name = PRR
+      token_count = 7
+
+    [[[tile_1.5]]]
+      LIGHT = ${COLOR2_BM}
+      DARK = ${COLOR1_BM}
+      token_name = B&M
+      token_count = 5
+
+    [[[tile_1.6]]]
+      LIGHT = ${COLOR2_CPR}
+      DARK = ${COLOR1_CPR}
+      token_name = CPR
+      token_count = 7
+
+    [[[tile_1.7]]]
+      LIGHT = ${COLOR2_NYNH}
+      DARK = ${COLOR1_NYNH}
+      token_name = NYNH
+      token_count = 5
+
+    [[[tile_1.8]]]
+      LIGHT = ${COLOR2_ERIE}
+      DARK = ${COLOR1_ERIE}
+      token_name = ERIE
+
+    [[[tile_1.9]]]
+      LIGHT = 1, 1, 1
+      DARK = 1, 1, 1
+      token_name = "ROUND"
+      token_count = 1
+
+
+[train]
+  trade = ""
+
+  [[yellow]]
+    train = 2
+    frame_colour = ${YELLOW}
+    cost = Cost: $80
+    rust = Rusted by: 4
+    trade_stripe_colour = ${GREEN}
+    rust_stripe_colour = ${GREEN}
+
+  [[green3]]
+    frame_colour = ${GREEN}
+    train = 3
+    cost = Cost: $180
+    rust = Rusted by: 6
+    trade_stripe_colour = ${GRAY}
+    rust_stripe_colour = ${BROWN}
+
+  [[green4]]
+    frame_colour = ${GREEN}
+    train = 4
+    cost = Cost: $300
+    rust = Rusted by: D
+    trade_stripe_colour = ${GRAY}
+    rust_stripe_colour = ${GRAY}
+
+  [[brown]]
+    frame_colour = ${BROWN}
+    train = 5
+    cost = Cost: $450
+    rust = PERMANENT
+    trade_stripe_colour = ${GRAY}
+    rust_stripe_colour = ${GRAY}
+
+    [[[tile_3.1]]]
+      train = 6
+      cost = Cost: $630
+
+    [[[tile_3.2]]]
+      train = 6
+      cost = Cost: $630
+
+    [[[tile_3.3]]]
+      train = 6
+      cost = Cost: $630
+
+  [[gray]]
+    frame_colour = ${GRAY}
+    train = D
+    cost = Cost: $1,100
+    rust = PERMANENT
+    trade_stripe_colour = ${GRAY}
+    rust_stripe_colour = ${BLACK}
+    trade_colour = ${WHITE}
+    rust_colour = ${WHITE}
+
+  [[player]]
+    frame_colour = ${RED}
+    train = ""
+    cost = ""
+    rust = ""
+    trade_stripe_colour = ${BLUE}
+    rust_stripe_colour = ${GREEN}
+    train_rust_colour = ${WHITE}
+    rust_colour = ${WHITE}
+
+    [[[tile_1.1]]]
+      train = "1"
+
+    [[[tile_1.2]]]
+      train = "2"
+
+    [[[tile_1.3]]]
+      train = "3"
+
+    [[[tile_2.1]]]
+      train = "4"
+
+    [[[tile_2.2]]]
+      train = "5"
+
+    [[[tile_2.3]]]
+      train = "6"
