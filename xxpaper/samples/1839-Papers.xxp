@@ -729,75 +729,83 @@ for 10f each plus any terrain costs."""
       train = "6"
 
 
-[market]
+[market15]
 
   [[sheet1]]
     tile_colour = ${WHITE}
+    NO_JUMP_COLOUR = 1.0, 1.0, 0.83
 
     [[[tile_1.1]]]
       desc = "55"
 
-    [[[tile_2.1]]]
+    [[[tile_1.2]]]
       desc = "56"
 
-    [[[tile_3.1]]]
+    [[[tile_2.1]]]
       desc = "59"
 
-    [[[tile_4.1]]]
+    [[[tile_2.2]]]
       desc = "62"
 
-    [[[tile_5.1]]]
+    [[[tile_3.1]]]
       desc = "67"
       tile_colour = ${YELLOW}
 
-    [[[tile_6.1]]]
+    [[[tile_3.2]]]
       desc = "72"
       tile_colour = ${YELLOW}
 
-    [[[tile_7.1]]]
+    [[[tile_4.1]]]
       desc = "80"
       tile_colour = ${YELLOW}
 
-    [[[tile_8.1]]]
+    [[[tile_4.2]]]
       desc = "89"
       tile_colour = ${GREEN}
 
-    [[[tile_9.1]]]
+    [[[tile_5.1]]]
       desc = "101"
       tile_colour = ${GREEN}
 
-    [[[tile_10.1]]]
+    [[[tile_5.2]]]
       desc = "116"
       tile_colour = ${BLUE}
 
-    [[[tile_11.1]]]
+    [[[tile_6.1]]]
       desc = "135"
       tile_colour = ${BROWN}
 
-    [[[tile_12.1]]]
+    [[[tile_6.2]]]
       desc = "160"
 
-    [[[tile_13.1]]]
+    [[[tile_7.1]]]
       desc = "192"
+      tile_colour = ${NO_JUMP_COLOUR}
 
-    [[[tile_14.1]]]
+    [[[tile_7.2]]]
       desc = "233"
+      tile_colour = ${NO_JUMP_COLOUR}
 
-    [[[tile_15.1]]]
+    [[[tile_8.1]]]
       desc = "287"
+      tile_colour = ${NO_JUMP_COLOUR}
 
-    [[[tile_16.1]]]
+    [[[tile_8.2]]]
       desc = "359"
+      tile_colour = ${NO_JUMP_COLOUR}
 
-    [[[tile_17.1]]]
+    [[[tile_9.1]]]
       desc = "454"
+      tile_colour = ${NO_JUMP_COLOUR}
 
-    [[[tile_18.1]]]
+    [[[tile_9.2]]]
       desc = "584"
+      tile_colour = ${NO_JUMP_COLOUR}
 
-    [[[tile_19.1]]]
+    [[[tile_10.1]]]
       desc = "761"
+      tile_colour = ${NO_JUMP_COLOUR}
 
-    [[[tile_20.1]]]
+    [[[tile_10.2]]]
       desc = "1,000"
       tile_colour = ${LIGHT_RED}

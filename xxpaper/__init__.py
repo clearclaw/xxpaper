@@ -9,3 +9,4 @@ from xxpaper.share import Share
 from xxpaper.token import Token
 from xxpaper.train import Train
 from xxpaper.market import Market
+from xxpaper.market15 import Market15

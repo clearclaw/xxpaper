@@ -101,10 +101,21 @@ class Sheet (object):
     return v
 
   def page_details (self):
-    pass # Specialised in childrend
+    pass # Specialised in children
 
   def tile_details (self, x, y):
-    pass # Specialised in childrend
+    pass # Specialised in children
+
+  def tile_block (self):
+    ox = self.x_off
+    oy = self.y_off
+    for x in xrange (self.num_x):
+      for y in xrange (self.num_y):
+        bx = (x * self.tile_x) + ox
+        by = (y * self.tile_y) + oy
+        self.push_tile (x, y, bx, by)
+        self.tile_details (x, y)
+        self.pop_tile ()
 
   def page_align (self):
     align_length = float (self.value ("align_length"))
@@ -264,14 +275,6 @@ class Sheet (object):
     self.page_align ()
     self.page_frame ()
     self.page_details ()
-    ox = self.x_off
-    oy = self.y_off
-    for x in xrange (self.num_x):
-      for y in xrange (self.num_y):
-        bx = (x * self.tile_x) + ox
-        by = (y * self.tile_y) + oy
-        self.push_tile (x, y, bx, by)
-        self.tile_details (x, y)
-        self.pop_tile ()
+    self.tile_block ()
     self.copyright ()
     self.close ()
