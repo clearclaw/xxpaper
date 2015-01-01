@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 __version__ = "unknown"
 
 import pyver
-__version__, __version_info__ = pyver.get_version (pkg = "xxpaper")
+__version__, __version_info__ = pyver.get_version (pkg = "xxpaper", public = True)
 
 setup (name = "xxpaper",
   version = __version__,
