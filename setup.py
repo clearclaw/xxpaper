@@ -22,7 +22,6 @@ setup (
   install_requires = [
     "configobj",
     "psfile",
-    "pyver",
   ],
   entry_points = {
     "console_scripts": [
