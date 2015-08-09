@@ -1,29 +1,15 @@
 #! /usr/bin/env python
 
-try:
-  import pyver # pylint: disable=W0611
-except ImportError:
-  import os, subprocess
-  try:
-    environment = os.environ.copy()
-    cmd = "pip install pyver".split (" ")
-    subprocess.check_call (cmd, env = environment)
-  except subprocess.CalledProcessError:
-    import sys
-    print >> sys.stderr, "Problem installing 'pyver' dependency."
-    print >> sys.stderr, "Please install pyver manually."
-    sys.exit (1)
-  import pyver # pylint: disable=W0611
 
 from setuptools import setup, find_packages
+import versioneer
 
-__version__, __version_info__ = pyver.get_version (pkg = "xxpaper",
-                                                   public = True)
-
-setup (name = "xxpaper",
-  version = __version__,
+setup (
+  name = "xxpaper",
+  version = versioneer.get_version (),
   description = "Tools for generating images of 18xx papers.",
   long_description = "Tools for generating images of shares, privates, trains etc for 18xx and like games.",
+  cmdclass = versioneer.get_cmdclass (),
   classifiers = [],
   keywords = "18xx, game files",
   author = "J C Lawrence",

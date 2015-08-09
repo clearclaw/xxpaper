@@ -1,7 +1,9 @@
 #! /usr/bin/env python
 
-import pyver
-__version__, __version_info__ = pyver.get_version (pkg = __name__)
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
+
 from xxpaper.sheet import Sheet
 from xxpaper.charter import Charter
 from xxpaper.private import Private
@@ -10,3 +12,4 @@ from xxpaper.token import Token
 from xxpaper.train import Train
 from xxpaper.market import Market
 from xxpaper.market15 import Market15
+
