@@ -7,8 +7,8 @@ import versioneer
 setup (
   name = "xxpaper",
   version = versioneer.get_version (),
-  description = "Tools for generating images of 18xx papers.",
-  long_description = "Tools for generating images of shares, privates, trains etc for 18xx and like games.",
+  description = "Tools for generating files of 18xx papers.",
+  long_description = "Tools for generating printable files of shares, privates, trains etc for 18xx and like games.",
   cmdclass = versioneer.get_cmdclass (),
   classifiers = [],
   keywords = "18xx, game files",
