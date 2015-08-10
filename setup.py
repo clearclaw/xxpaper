@@ -22,6 +22,7 @@ setup (
   install_requires = [
     "configobj",
     "psfile",
+    "versioneer",
   ],
   entry_points = {
     "console_scripts": [

@@ -14,3 +14,7 @@ from xxpaper.train import Train
 from xxpaper.market import Market
 from xxpaper.market15 import Market15
 
+
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
