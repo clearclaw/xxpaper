@@ -1,4 +1,4 @@
-
+# pylint: skip-file
 # Version: 0.15+dev
 
 """The Versioneer - like a rocketeer, but for versions.

@@ -15,9 +15,12 @@ class Share (Sheet):
       self.value ("type_stripe_inset_y_fudge"))
     self.type_stripe_width = (self.x_off + self.tile_x -
                               self.type_stripe_inset_x)
+    self.side_split_count = int (self.value ("side_split_count"))
+    self.side_split_width = float (self.value ("side_split_width"))
 
   def page_details (self):
     self.side_stripe ()
+    self.side_stripe_split ()
     self.type_stripe ()
 
   def tile_details (self, x, y):
@@ -33,6 +36,15 @@ class Share (Sheet):
       bx = (self.tile_x * x) + ox
       self.box ("stripe", 0, 0, bx, 0, self.side_stripe_width, self.rubber_y)
 
+  def side_stripe_split (self):
+    gap = (self.side_stripe_width / (self.side_split_count + 1)
+           - (self.side_split_width / 2))
+    ox = self.x_off + self.side_stripe_inset_x
+    for x in xrange (self.num_x):
+      for i in xrange (self.side_split_count):
+        bx = (self.tile_x * x) + ox + ((i + 1) * gap)
+        self.box ("side_split", 0, 0, bx, 0, self.side_split_width, self.rubber_y)
+
   def type_stripe (self):
     oy = self.y_off + self.type_stripe_inset_y
     for y in xrange (self.num_y):
@@ -41,6 +53,12 @@ class Share (Sheet):
                 self.type_stripe_width, self.type_stripe_height)
 
   def type_size (self, x, y):
+    type_colour = self.value ("type_colour", x, y)
+    if type_colour == "transparent":
+      bx = self.side_stripe_inset_x
+      by = self.type_stripe_inset_y
+      self.box ("size_box", x, y, bx, by,
+                self.side_stripe_width, self.type_stripe_height)
     bx = self.side_stripe_inset_x + (self.side_stripe_width / 2)
     by = self.type_stripe_inset_y + self.type_stripe_inset_y_fudge
     self.fd.append ("%f %f moveto" % (bx, by))
