@@ -37,9 +37,8 @@ class Share (Sheet):
       self.box ("stripe", 0, 0, bx, 0, self.side_stripe_width, self.rubber_y)
 
   def side_stripe_split (self):
-    gap = (self.side_stripe_width / (self.side_split_count + 1)
-           - (self.side_split_width / 2))
-    ox = self.x_off + self.side_stripe_inset_x
+    gap = self.side_stripe_width / (self.side_split_count + 1)
+    ox = self.x_off + self.side_stripe_inset_x - (self.side_split_width / 2)
     for x in xrange (self.num_x):
       for i in xrange (self.side_split_count):
         bx = (self.tile_x * x) + ox + ((i + 1) * gap)
