@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 
+import math
 from xxpaper.sheet import Sheet
 
 class Token (Sheet):
@@ -7,12 +8,14 @@ class Token (Sheet):
     Sheet.__init__ (self, cfgs, sheet, page, fname)
 
   def tile_details (self, x, y):
-    self.top_stripe (x, y)
-    self.bottom_stripe (x, y)
+    self.top (x, y)
+#    self.top_stripe (x, y)
+    self.bottom (x, y)
+#    self.bottom_stripe (x, y)
     self.text_stripe (x, y)
     self.token_circles (x, y)
 
-  def bottom_stripe (self, x, y):
+  def bottom (self, x, y):
     bx = self.tile_x
     by = self.tile_y / 2
     self.fd.append ("gsave")
@@ -21,7 +24,23 @@ class Token (Sheet):
     self.fd.append ("%d %d %d %d rectfill" % (0, 0, bx, by))
     self.fd.append ("grestore")
 
-  def top_stripe (self, x, y):
+  def bottom_stripe (self, x, y):
+    stripe_colour = self.value ("token_bottom_stripe_colour", x, y)
+    if stripe_colour == "transparent":
+      return
+    bx = self.tile_x
+    by = self.tile_y / 2
+    radius = float (self.value ("token_radius", x, y))
+    angle = float (self.value ("token_bottom_stripe_angle", x, y))
+    height = math.sin (math.radians (angle)) * radius
+    self.fd.append ("gsave")
+    self.fd.append ("%s %s %s setrgbcolor" % stripe_colour)
+    self.fd.append ("%f %f %f %f rectfill"
+                    % (0, 0,
+                       bx, (self.tile_y / 2) - height,))
+    self.fd.append ("grestore")
+
+  def top (self, x, y):
     bx = self.tile_x
     # by = float (self.tile_y / 2)
     self.fd.append ("gsave")
@@ -30,6 +49,22 @@ class Token (Sheet):
     self.fd.append ("%f %f %f %f rectfill"
                     % (0, self.tile_y / 2,
                        bx, self.tile_y / 2))
+    self.fd.append ("grestore")
+
+  def top_stripe (self, x, y):
+    stripe_colour = self.value ("token_top_stripe_colour", x, y)
+    if stripe_colour == "transparent":
+      return
+    bx = self.tile_x
+    # by = float (self.tile_y / 2)
+    radius = float (self.value ("token_radius", x, y))
+    angle = float (self.value ("token_top_stripe_angle", x, y))
+    height = math.sin (math.radians (angle)) * radius
+    self.fd.append ("gsave")
+    self.fd.append ("%s %s %s setrgbcolor" % stripe_colour)
+    self.fd.append ("%f %f %f %f rectfill"
+                    % (0, (self.tile_y / 2) + height,
+                       bx, self.tile_y / 2,))
     self.fd.append ("grestore")
 
   def text_stripe (self, x, y):
