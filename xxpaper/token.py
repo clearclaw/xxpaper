@@ -9,9 +9,9 @@ class Token (Sheet):
 
   def tile_details (self, x, y):
     self.top (x, y)
-#    self.top_stripe (x, y)
+    self.top_stripe (x, y)
     self.bottom (x, y)
-#    self.bottom_stripe (x, y)
+    self.bottom_stripe (x, y)
     self.text_stripe (x, y)
     self.token_circles (x, y)
 
