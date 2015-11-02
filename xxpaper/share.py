@@ -42,7 +42,8 @@ class Share (Sheet):
     for x in xrange (self.num_x):
       for i in xrange (self.side_split_count):
         bx = (self.tile_x * x) + ox + ((i + 1) * gap)
-        self.box ("side_split", 0, 0, bx, 0, self.side_split_width, self.rubber_y)
+        self.box ("side_split", 0, 0, bx, 0,
+                  self.side_split_width, self.rubber_y)
 
   def type_stripe (self):
     oy = self.y_off + self.type_stripe_inset_y

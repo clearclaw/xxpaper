@@ -13,11 +13,11 @@ def get_cfgval (cfgs, sheet, name):
   for cfg in itertools.chain (cfgs):
     try:
       return cfg[sheet][name]
-    except:
+    except: # pylint: disable=bare-except
       pass
     try:
       return cfg["DEFAULT"][name]
-    except:
+    except: # pylint: disable=bare-except
       pass
   print >> sys.stderr, ("Error: Cannot find the value of: %s"
                         % name)
@@ -87,7 +87,8 @@ def main ():
           if args.page and page != args.page:
             continue
           make (cfgs, sheet, page,
-                os.path.join ("./", "%s_%s-%s-%s.ps" % (sheet, page, o, paper)))
+                os.path.join ("./", "%s_%s-%s-%s.ps"
+                              % (sheet, page, o, paper)))
   sys.exit (0)
 
 if __name__ == '__main__':

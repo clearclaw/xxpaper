@@ -68,7 +68,7 @@ class Sheet (object):
     for cfg in itertools.chain (self.cfgs):
       try:
         return self._value_lookup (cfg, sl, k)
-      except:
+      except: # pylint: disable=bare-except
         pass
     raise ValueError
 
@@ -76,7 +76,7 @@ class Sheet (object):
     sl = [self.sheet, self.page, "tile_%d.%d" % (x + 1, y + 1)]
     try:
       v = self._get_value (sl, n)
-    except:
+    except: # pylint: disable=bare-except
       print >> sys.stderr, (
         "FAULT: No definition found for: %s.%s.%s (%d, %d)"
         % (self.sheet, self.page, n, x + 1, y + 1))
@@ -210,24 +210,39 @@ class Sheet (object):
     colour = self.value ("token_colour", x, y)
     stroke = float (self.value ("token_stroke", x, y))
     stroke_colour = self.value ("token_stroke_colour", x, y)
-    self.fd.append ("gsave")
-    self.fd.append ("currentpoint translate")
-    self.fd.append ("newpath")
-    self.fd.append ("0 0 %f 0 360 arc" % token_radius)
-    self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor" % colour)
-    self.fd.append ("fill")
-    self.fd.append ("grestore")
-    self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
-    self.fd.append ("%f setlinewidth" % stroke)
-    self.fd.append ("stroke")
-    self.fd.append ("grestore")
+    ps = """
+      gsave
+      currentpoint translate
+      newpath
+      0 0 {token_radius} 0 360 arc
+      gsave
+      {colour} setrgbcolor
+      fill
+      grestore
+      {stroke_colour} setrgbcolor
+      {stroke} setlinewidth
+      stroke
+      grestore
+    """.format (**{
+      "token_radius": token_radius,
+      "colour": "%s %s %s" % colour,
+      "stroke_colour": "%s %s %s" % stroke_colour,
+      "stroke": stroke,
+    })
+    self.fd.append (ps)
 
   def company_token (self, x, y):
     stroke = float (self.value ("token_stroke", x, y))
     stroke_colour = self.value ("token_stroke_colour", x, y)
     radius = float (self.value ("token_radius", x, y))
     stripe_angle = float (self.value ("token_stripe_angle", x, y))
+    top_stripe_angle = float (self.value ("token_top_stripe_angle", x, y))
+    bottom_stripe_angle = float (
+      self.value ("token_bottom_stripe_angle", x, y))
+    top_colour = self.value ("token_top_colour", x, y)
+    top_stripe_colour = self.value ("token_top_stripe_colour", x, y)
+    bottom_colour = self.value ("token_bottom_colour", x, y)
+    bottom_stripe_colour = self.value ("token_bottom_stripe_colour", x, y)
     stripe_text_fudge = float (self.value ("token_stripe_text_fudge", x, y))
     self.company_token_circle (x, y)
     # Setup
@@ -240,28 +255,55 @@ class Sheet (object):
                     % (radius, 0 + stripe_angle, 180 - stripe_angle))
     self.fd.append ("closepath")
     self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("token_top_colour", x, y))
+    self.fd.append ("%s %s %s setrgbcolor" % top_colour)
     self.fd.append ("fill")
     self.fd.append ("grestore")
     self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
     self.fd.append ("%f setlinewidth" % stroke)
     self.fd.append ("stroke")
     self.fd.append ("grestore")
+    # Token top stripe
+    if top_stripe_colour != "transparent":
+      self.fd.append ("gsave")
+      self.fd.append ("0 0 %f %f %f arc"
+                      % (radius, 0 + top_stripe_angle, 180 - top_stripe_angle))
+      self.fd.append ("closepath")
+      self.fd.append ("gsave")
+      self.fd.append ("%s %s %s setrgbcolor" % top_stripe_colour)
+      self.fd.append ("fill")
+      self.fd.append ("grestore")
+      self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
+      self.fd.append ("%f setlinewidth" % stroke)
+      self.fd.append ("stroke")
+      self.fd.append ("grestore")
     # Token bottom
     self.fd.append ("gsave")
     self.fd.append ("0 0 %f %f %f arc"
                     % (radius, 180 + stripe_angle, 0 - stripe_angle))
     self.fd.append ("closepath")
     self.fd.append ("gsave")
-    self.fd.append ("%s %s %s setrgbcolor"
-                    % self.value ("token_bottom_colour", x, y))
+    self.fd.append ("%s %s %s setrgbcolor" % bottom_colour)
     self.fd.append ("fill")
     self.fd.append ("grestore")
     self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
     self.fd.append ("%f setlinewidth" % stroke)
     self.fd.append ("stroke")
     self.fd.append ("grestore")
+    # Token bottom stripe
+    if bottom_stripe_colour != "transparent":
+      self.fd.append ("gsave")
+      self.fd.append ("0 0 %f %f %f arc"
+                      % (radius, 180 + bottom_stripe_angle,
+                         0 - bottom_stripe_angle))
+      self.fd.append ("closepath")
+      self.fd.append ("gsave")
+      self.fd.append ("%s %s %s setrgbcolor" % bottom_stripe_colour)
+      self.fd.append ("fill")
+      self.fd.append ("grestore")
+      self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
+      self.fd.append ("%f setlinewidth" % stroke)
+      self.fd.append ("stroke")
+      self.fd.append ("grestore")
     # Token text
     self.fd.append ("gsave")
     self.fd.append ("0 %f moveto" % (0 - stripe_text_fudge))
