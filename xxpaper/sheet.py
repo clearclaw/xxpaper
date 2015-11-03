@@ -236,9 +236,6 @@ class Sheet (object):
     stroke_colour = self.value ("token_stroke_colour", x, y)
     radius = float (self.value ("token_radius", x, y))
     stripe_angle = float (self.value ("token_stripe_angle", x, y))
-    top_stripe_angle = float (self.value ("token_top_stripe_angle", x, y))
-    bottom_stripe_angle = float (
-      self.value ("token_bottom_stripe_angle", x, y))
     top_colour = self.value ("token_top_colour", x, y)
     top_stripe_colour = self.value ("token_top_stripe_colour", x, y)
     bottom_colour = self.value ("token_bottom_colour", x, y)
@@ -264,9 +261,13 @@ class Sheet (object):
     self.fd.append ("grestore")
     # Token top stripe
     if top_stripe_colour != "transparent":
+      angle1 = float (self.value ("token_top_stripe_angle1", x, y))
+      angle2 = float (self.value ("token_top_stripe_angle2", x, y))
       self.fd.append ("gsave")
       self.fd.append ("0 0 %f %f %f arc"
-                      % (radius, 0 + top_stripe_angle, 180 - top_stripe_angle))
+                      % (radius, 0 + angle1, 0 + angle2))
+      self.fd.append ("0 0 %f %f %f arc"
+                      % (radius, 180 - angle2, 180 - angle1))
       self.fd.append ("closepath")
       self.fd.append ("gsave")
       self.fd.append ("%s %s %s setrgbcolor" % top_stripe_colour)
@@ -291,10 +292,13 @@ class Sheet (object):
     self.fd.append ("grestore")
     # Token bottom stripe
     if bottom_stripe_colour != "transparent":
+      angle1 = float (self.value ("token_bottom_stripe_angle1", x, y))
+      angle2 = float (self.value ("token_bottom_stripe_angle2", x, y))
       self.fd.append ("gsave")
       self.fd.append ("0 0 %f %f %f arc"
-                      % (radius, 180 + bottom_stripe_angle,
-                         0 - bottom_stripe_angle))
+                      % (radius, 180 + angle1, 180 + angle2))
+      self.fd.append ("0 0 %f %f %f arc"
+                      % (radius, 0 - angle2, 0 - angle1))
       self.fd.append ("closepath")
       self.fd.append ("gsave")
       self.fd.append ("%s %s %s setrgbcolor" % bottom_stripe_colour)

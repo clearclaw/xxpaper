@@ -31,13 +31,15 @@ class Token (Sheet):
     bx = self.tile_x
     by = self.tile_y / 2
     radius = float (self.value ("token_radius", x, y))
-    angle = float (self.value ("token_bottom_stripe_angle", x, y))
-    height = math.sin (math.radians (angle)) * radius
+    angle1 = float (self.value ("token_bottom_stripe_angle1", x, y))
+    angle2 = float (self.value ("token_bottom_stripe_angle2", x, y))
+    height1 = math.sin (math.radians (angle1)) * radius
+    height2 = math.sin (math.radians (angle2)) * radius
     self.fd.append ("gsave")
     self.fd.append ("%s %s %s setrgbcolor" % stripe_colour)
     self.fd.append ("%f %f %f %f rectfill"
-                    % (0, 0,
-                       bx, (self.tile_y / 2) - height,))
+                    % (0, (self.tile_y / 2) - height2,
+                       bx, height2 - height1))
     self.fd.append ("grestore")
 
   def top (self, x, y):
@@ -58,13 +60,15 @@ class Token (Sheet):
     bx = self.tile_x
     # by = float (self.tile_y / 2)
     radius = float (self.value ("token_radius", x, y))
-    angle = float (self.value ("token_top_stripe_angle", x, y))
-    height = math.sin (math.radians (angle)) * radius
+    angle1 = float (self.value ("token_top_stripe_angle1", x, y))
+    angle2 = float (self.value ("token_top_stripe_angle2", x, y))
+    height1 = math.sin (math.radians (angle1)) * radius
+    height2 = math.sin (math.radians (angle2)) * radius
     self.fd.append ("gsave")
     self.fd.append ("%s %s %s setrgbcolor" % stripe_colour)
     self.fd.append ("%f %f %f %f rectfill"
-                    % (0, (self.tile_y / 2) + height,
-                       bx, self.tile_y / 2,))
+                    % (0, (self.tile_y / 2) + height1,
+                       bx, height2 - height1))
     self.fd.append ("grestore")
 
   def text_stripe (self, x, y):
