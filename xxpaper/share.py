@@ -29,6 +29,7 @@ class Share (Sheet):
     self.type_desc (x, y)
     self.tokens (x, y)
     self.title (x, y)
+    self.description (x, y)
 
   def side_stripe (self):
     ox = self.x_off + self.side_stripe_inset_x
@@ -101,3 +102,13 @@ class Share (Sheet):
     by = self.tile_y - inset_y
     self.fd.append ("%f %f moveto" % (bx, by))
     self.text ("title", x, y, h_centre = 0, v_centre = 1)
+    
+  def description (self, x, y):
+    inset_x = float (self.value ("description_inset_x"))
+    inset_y = float (self.value ("description_inset_y"))
+    o = (self.side_stripe_inset_x + self.side_stripe_width + inset_x)
+    w = self.tile_x - o
+    bx = (o + (w / 2))
+    by = inset_y
+    self.fd.append ("%f %f moveto" % (bx, by))
+    self.text ("description", x, y, h_centre = 0, v_centre = -1)

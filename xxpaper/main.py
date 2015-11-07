@@ -30,8 +30,8 @@ def read_config (fname):
   cfg = file (fname).read ()
   template = jinja2.Template (cfg)
   xxp = StringIO.StringIO (template.render ())
-  # with open (fname + "-cfg", "w") as f:
-  #  f.write (xxp.getvalue ())
+  with open (fname + "-cfg", "w") as f:
+    f.write (xxp.getvalue ())
   conf = ConfigObj (xxp.readlines ())
   # conf = ConfigObj (file (fname).readlines ())
   if "DEFAULT" not in conf.sections:
