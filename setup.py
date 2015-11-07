@@ -21,6 +21,7 @@ setup (
   zip_safe = False,
   install_requires = [
     "configobj",
+    "jinja2",
     "psfile",
   ],
   entry_points = {

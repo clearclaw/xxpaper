@@ -2,7 +2,7 @@
 
 import itertools, re, sys
 from psfile import PSFile
-from types import ListType, StringType
+from types import ListType
 
 class Sheet (object):
   def __init__ (self, cfgs, sheet, page, fname):
@@ -93,7 +93,7 @@ class Sheet (object):
           break
         k = m.group (1) # Variable name
         r = self.value (k, x, y) # Replacement token
-        if isinstance (r, StringType):
+        if isinstance (r, basestring):
           v = "%s%s%s" % (v[:m.start(0)], r, v[m.end(0):])
         else: # Scummy, but kinda handles the tuples
           v = r
@@ -184,7 +184,7 @@ class Sheet (object):
     self.fd.append ("%s %s %s setrgbcolor"
                     % self.value ("%s_colour" % typ, x, y))
     tl = self.value (typ, x, y)
-    if isinstance (tl, StringType):
+    if isinstance (tl, basestring):
       tl = tl.split ("\n")
     if v_centre == 1:
       by = 0

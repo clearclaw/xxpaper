@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-import argparse, itertools, os, pkg_resources, sys
+import argparse, itertools, jinja2, os, pkg_resources, StringIO, sys
 from configobj import ConfigObj
 import xxpaper
 
@@ -27,7 +27,13 @@ def read_overrides (values):
   return ConfigObj (itertools.chain (["[DEFAULT]",], values.split (",")))
 
 def read_config (fname):
-  conf = ConfigObj (file (fname).readlines ())
+  cfg = file (fname).read ()
+  template = jinja2.Template (cfg)
+  xxp = StringIO.StringIO (template.render ())
+  # with open (fname + "-cfg", "w") as f:
+  #  f.write (xxp.getvalue ())
+  conf = ConfigObj (xxp.readlines ())
+  # conf = ConfigObj (file (fname).readlines ())
   if "DEFAULT" not in conf.sections:
     conf["DEFAULT"] = {}
   conf["DEFAULT"]["source_filename"] = "File: %s" % fname
