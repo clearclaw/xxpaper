@@ -1,12 +1,19 @@
 #! /usr/bin/env python
 
-import itertools, re, sys
+from __future__ import absolute_import
+import itertools, logtool, re, sys
 from psfile import PSFile
 from types import ListType
+from .cmdio import CmdIO
 
-class Sheet (object):
-  def __init__ (self, cfgs, sheet, page, fname):
+class Sheet (CmdIO):
+
+  @logtool.log_call (log_args = False)
+  def __init__ (self, cfgs, paper, outline, sheet, page, fname):
+    super (Sheet, self).__init__ (cfgs)
     self.re_var = re.compile (r"\$\{([A-Za-z0-9._]+)\}")
+    self.paper = paper
+    self.outline = outline
     self.cfgs = cfgs
     self.fname = fname
     self.fd = None
@@ -27,24 +34,28 @@ class Sheet (object):
     self.x_off = (self.rubber_x - (self.tile_x * self.num_x)) / 2
     self.y_off = (self.rubber_y - (self.tile_y * self.num_y)) / 2
 
+  @logtool.log_call
   def __enter__ (self):
     return self
 
+  @logtool.log_call
   def __exit__ (self, t, v, tr):
     pass
 
+  @logtool.log_call
   def open (self):
-    self.fd = PSFile (self.fname, paper = self.value ("paper"),
-                      margin = 36)
+    self.fd = PSFile (self.fname, paper = self.paper, margin = 36)
     if self.rotate == "1":
       self.fd.append ("270 rotate")
       self.fd.append ("-%d %d translate" % (self.fd.height, 0))
 
+  @logtool.log_call
   def close (self):
     if self.fd:
       self.fd.close ()
       self.fd = None
 
+  @logtool.log_call (log_args = False)
   def _value_lookup (self, cfg, sl, k):
     base = cfg
     al = list ()
@@ -64,6 +75,7 @@ class Sheet (object):
     # print "Failed to find %s / %s in %s" % (k, sl, cfg.my_name)
     raise ValueError
 
+  @logtool.log_call
   def _get_value (self, sl, k):
     for cfg in itertools.chain (self.cfgs):
       try:
@@ -72,6 +84,7 @@ class Sheet (object):
         pass
     raise ValueError
 
+  @logtool.log_call
   def value (self, n, x = 0, y = 0):
     sl = [self.sheet, self.page, "tile_%d.%d" % (x + 1, y + 1)]
     try:
@@ -100,12 +113,15 @@ class Sheet (object):
           break
     return v
 
+  @logtool.log_call
   def page_details (self):
     pass # Specialised in children
 
+  @logtool.log_call
   def tile_details (self, x, y):
     pass # Specialised in children
 
+  @logtool.log_call
   def tile_block (self):
     ox = self.x_off
     oy = self.y_off
@@ -117,6 +133,7 @@ class Sheet (object):
         self.tile_details (x, y)
         self.pop_tile ()
 
+  @logtool.log_call
   def page_align (self):
     align_length = float (self.value ("align_length"))
     self.fd.append ("gsave")
@@ -127,9 +144,11 @@ class Sheet (object):
       self.line ("align", 0, 0, i[0][0], i[0][1], i[1][0], i[1][1])
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def page_frame (self):
     self.box ("frame", 0, 0, 0, 0, self.rubber_x, self.rubber_y)
 
+  @logtool.log_call
   def copyright (self):
     self.fd.append ("gsave")
     self.fd.append ("%f %f moveto" % (0, self.rubber_y + 6))
@@ -140,16 +159,19 @@ class Sheet (object):
     self.text ("source_filename", 0, -12, v_centre = -1)
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def push_tile (self, x, y, bx, by):
     self.fd.append ("gsave")
     self.fd.append ("%d %d translate" % (bx, by))
-    if self.value ("outline", x, y) == "1":
+    if self.value ("outline", x, y) == "outline":
       self.box ("tile", x, y, 0, 0, self.tile_x, self.tile_y)
     self.fd.append ("newpath")
 
+  @logtool.log_call
   def pop_tile (self):
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def line (self, typ, x, y, bx, by, w, h):
     stroke_width = float (self.value ("%s_stroke" % typ, x, y))
     colour = self.value ("%s_colour" % typ, x, y)
@@ -162,6 +184,7 @@ class Sheet (object):
       self.fd.append ("stroke")
       self.fd.append ("grestore")
 
+  @logtool.log_call
   def box (self, typ, x, y, bx, by, w, h):
     stroke = float (self.value ("%s_stroke" % typ, x, y))
     stroke_colour = self.value ("%s_stroke_colour" % typ, x, y)
@@ -176,6 +199,7 @@ class Sheet (object):
       self.fd.append ("%f %f %f %f rectstroke" % (bx, by, w, h))
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def text (self, typ, x, y, h_centre = -1, v_centre = 1):
     line_height = float (self.value ("%s_line_height" % typ))
     self.fd.append ("gsave")
@@ -185,7 +209,7 @@ class Sheet (object):
                     % self.value ("%s_colour" % typ, x, y))
     tl = self.value (typ, x, y)
     if isinstance (tl, basestring):
-      tl = tl.split ("\n")
+      tl = tl.split ("\n") # pylint: disable=no-member
     if v_centre == 1:
       by = 0
     if v_centre == 0:
@@ -205,6 +229,7 @@ class Sheet (object):
       self.fd.append ("0 %d moveto" % by)
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def company_token_circle (self, x, y):
     token_radius = float (self.value ("token_radius", x, y))
     colour = self.value ("token_colour", x, y)
@@ -231,6 +256,7 @@ class Sheet (object):
     })
     self.fd.append (ps)
 
+  @logtool.log_call
   def company_token (self, x, y):
     stroke = float (self.value ("token_stroke", x, y))
     stroke_colour = self.value ("token_stroke_colour", x, y)

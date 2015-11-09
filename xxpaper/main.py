@@ -1,101 +1,181 @@
 #! /usr/bin/env python
 
-import argparse, itertools, jinja2, os, pkg_resources, StringIO, sys
+from __future__ import absolute_import
+import clip, fnmatch, itertools, jinja2, logging, logtool
+import os, pkg_resources, sys
+from addict import Dict
 from configobj import ConfigObj
+from functools import partial
+from path import Path
+from StringIO import StringIO
+from .cmdio import CmdIO
 import xxpaper
 
-def make (cfgs, sheet, page, fname):
-  with getattr (xxpaper, sheet.capitalize ()) (cfgs, sheet, page, fname) as t:
-    t.make ()
-  print fname
+logging.basicConfig (level = logging.WARN)
+APP = clip.App (name = "xxpaper")
+CONFIG = Dict ({
+  "directory": Path ("./"),
+  "formats": ["outline", "nooutline",],
+  "game_fname": None,
+  "nocolour": False,
+  "pages": ["*",],
+  "papers": ["*",],
+  "sections": ["*",],
+  "template": None,
+  "quiet": False,
+  "verbose": False,
+})
+IO = CmdIO (CONFIG)
 
-def get_cfgval (cfgs, sheet, name):
+@logtool.log_call (log_args = False)
+def make (cfgs, paper, outline, section, page, fname):
+  with getattr (xxpaper, section.capitalize ()) (
+      cfgs, paper, outline, section, page, fname) as t:
+    t.make ()
+  IO.info (fname)
+
+@logtool.log_call
+def match_filter (name, filters):
+  for f in filters:
+    if fnmatch.fnmatch (name, f):
+      return True
+  return False
+
+@logtool.log_call
+def get_cfgval (cfgs, section, name):
   for cfg in itertools.chain (cfgs):
     try:
-      return cfg[sheet][name]
+      return cfg[section][name]
     except: # pylint: disable=bare-except
       pass
     try:
       return cfg["DEFAULT"][name]
     except: # pylint: disable=bare-except
       pass
-  print >> sys.stderr, ("Error: Cannot find the value of: %s"
-                        % name)
-  sys.exit (1)
+  clip.exit ("Error: Cannot find the value of: %s" % name, err = True)
 
-def read_overrides (values):
-  return ConfigObj (itertools.chain (["[DEFAULT]",], values.split (",")))
-
-def read_config (fname):
-  cfg = file (fname).read ()
-  template = jinja2.Template (cfg)
-  xxp = StringIO.StringIO (template.render ())
-  with open (fname + "-cfg", "w") as f:
-    f.write (xxp.getvalue ())
-  conf = ConfigObj (xxp.readlines ())
+@logtool.log_call (log_args = False, log_rc = False)
+def load_configs ():
+  fname = CONFIG.game_fname
+  raw = fname.bytes ()
+  xxp = StringIO (jinja2.Template (raw).render ())
+  if CONFIG.template:
+    fn = CONFIG.directory / fname.namebase + "_expanded.cfg"
+    IO.debug ("Expanded template: %s" % fn)
+    with open (fn, "w") as f:
+      f.write (xxp.getvalue ())
+  game = ConfigObj (xxp.readlines ())
   # conf = ConfigObj (file (fname).readlines ())
-  if "DEFAULT" not in conf.sections:
-    conf["DEFAULT"] = {}
-  conf["DEFAULT"]["source_filename"] = "File: %s" % fname
-  return conf
+  if "DEFAULT" not in game.sections:
+    game["DEFAULT"] = {}
+  game["DEFAULT"]["source_filename"] = "File: %s" % CONFIG.game_fname
+  runtime = ConfigObj (["[DEFAULT]",])
+  cfgdata = pkg_resources.resource_string ("xxpaper", "DEFAULT.conf")
+  default = ConfigObj (cfgdata.split ("\n"))
+  return runtime, game, default
 
-def process_args ():
-  parser = argparse.ArgumentParser (
-    description = "18xx rapid prototyping tool.")
-  parser.add_argument (
-    "-o", "--override", metavar = "ASSIGNMENTS", dest = "override",
-    type = read_overrides, required = False,
-    help = "Individual settings to override all others")
-  parser.add_argument (
-    "-l", "--local", metavar = "FILE", dest = "local",
-    type = read_config, required = False,
-    help = "Option file to override game configuration and DEFAULTs")
-  parser.add_argument (nargs = 1, metavar = "FILE", dest = "conf",
-                       type = read_config, help = "Game configuration file")
-  parser.add_argument (nargs = '?', metavar = "SECTION", dest = "sheet",
-                       default = None, help = "Section to render")
-  parser.add_argument (nargs = '?', metavar = "PAGE", dest = "page",
-                       default = None, help = "Page in section to render")
-  args = parser.parse_args ()
-  args.conf = args.conf[0] # nargs=1 makes it a silly list
-  #  args.conf.my_name = "user_conf"
-  s = pkg_resources.resource_string ("xxpaper", "DEFAULT.conf")
-  args.default = ConfigObj (s.split ("\n"))
-  # args.default.my_name = "default_conf"
-  # args.override.my_name = "cli_conf"
-  args.runtime = ConfigObj (["[DEFAULT]",])
-  if args.sheet and args.sheet not in args.conf.sections:
-    print >> sys.stderr, ("Error: Cannot find section %s in game file."
-                          % args.sheet)
-    sys.exit (1)
-  if (args.sheet and args.page
-      and args.page not in args.conf[args.sheet].sections):
-    print >> sys.stderr, ("Error: Cannot find section %s.%s in game file."
-                          % (args.sheet, args.page))
-    sys.exit (2)
-  return args
+@logtool.log_call
+def option_dir (directory):
+  CONFIG.directory = Path (directory)
+  CONFIG.directory.makedirs_p ()
 
-def main ():
-  args = process_args ()
-  cfgs = [x for x in [args.runtime, args.override, args.local,
-                      args.conf, args.default] if not None]
-  papers = get_cfgval (cfgs, "DEFAULT", "papers")
-  outlines = get_cfgval (cfgs, "DEFAULT", "outlines")
-  for paper in papers:
-    args.runtime["DEFAULT"]["paper"] = paper
-    for outline in outlines:
-      args.runtime["DEFAULT"]["outline"] = outline
-      o = "outline" if outline == "1" else "nooutline"
-      for sheet in args.conf.sections:
-        if sheet == "DEFAULT" or (args.sheet and sheet != args.sheet):
-          continue
-        for page in args.conf[sheet].sections:
-          if args.page and page != args.page:
-            continue
-          make (cfgs, sheet, page,
-                os.path.join ("./", "%s_%s-%s-%s.ps"
-                              % (sheet, page, o, paper)))
+@logtool.log_call
+def option_logging (flag): # pylint: disable=unused-argument
+  logging.root.setLevel (logging.DEBUG)
+
+@logtool.log_call
+def option_list (option, value):
+  CONFIG[option] = [s.strip () for s in value.split (",")]
+
+@logtool.log_call
+def option_setopt (option, value):
+  CONFIG[option] = value
+
+@logtool.log_call
+def option_version (opt): # pylint: disable = W0613
+  clip.echo (xxpaper.__version__)
   sys.exit (0)
 
-if __name__ == '__main__':
+@logtool.log_call
+def arg_game_file (fname):
+  fname = Path (fname)
+  if not fname.isfile ():
+    clip.exit ("Game file not found: %s" % fname, err = True)
+  CONFIG.game_fname = fname
+
+@APP.main (name = Path (sys.argv[0]).basename (),
+           description = "18xx rapid prototyping tool",
+           tree_view = "-H")
+@clip.flag ('-H', '--HELP',  help = "Help for all sub-commands")
+@clip.flag ("-C", "--nocolour", name = "nocolour",
+            help = "Suppress colours in reports",
+            callback = partial (option_setopt, "nocolour"))
+@clip.flag ("-D", "--debug", name = "debug", help = "Enable debug logging",
+            callback = option_logging)
+@clip.opt ("-d", "--dir", name = "directory", help = "Directory to process",
+           callback = option_dir)
+@clip.opt ("-f", "--formats", name = "formats", help = "Art formats",
+           callback = partial (option_list, "formats"))
+@clip.opt ("-P", "--papers", name = "papers", help = "Paper sizes",
+           required = False, callback = partial (option_list, "papers"))
+@clip.opt ("-p", "--pages", name = "pages", help = "Pages to process",
+           required = False, callback = partial (option_setopt, "pages"))
+@clip.opt ("-s", "--sections", name = "sections", help = "Sections to process",
+           required = False, callback = partial (option_list, "sections"))
+@clip.flag ("-t", "--template", name = "template", help = "Save template file",
+           required = False, callback = partial (option_setopt, "template"))
+@clip.flag ("-q", "--quiet", name = "quiet",
+            help = "Suppress information messages",
+            callback = partial (option_setopt, "quiet"))
+@clip.flag ("-v", "--verbose", name = "verbose",
+            help = "Extra information messages",
+            callback = partial (option_setopt, "verbose"))
+@clip.flag ("-V", "--Version", help = "Report installed version",
+            callback = option_version)
+@clip.arg (name = "game_file", nargs = 1, default = None,
+           help = "XXPaper game file", required = True,
+           callback = arg_game_file)
+@logtool.log_call
+def app_main (*args, **kwargs): # pylint: disable=unused-argument
+  if not CONFIG.conf.debug:
+    logging.basicConfig (level = logging.ERROR)
+  if not sys.stdout.isatty ():
+    option_setopt ("nocolour", True)
+  runtime, game, default = load_configs ()
+  cfgs = [runtime, game, default,]
+  formats = (CONFIG.formats if CONFIG.formats
+              else get_cfgval (cfgs, "DEFAULT", "formats"))
+  for paper in get_cfgval (cfgs, "DEFAULT", "papers"):
+    if not match_filter (paper, CONFIG.papers):
+      continue
+    IO.debug ("Paper size: %s" % paper)
+    for form in formats:
+      runtime["DEFAULT"]["outline"] = form
+      IO.debug ("  Format: %s" % form)
+      for section in game.sections:
+        if section == "DEFAULT" or not match_filter (section, CONFIG.sections):
+          continue
+        IO.debug ("    Section: %s" % section)
+        for page in game[section].sections:
+          IO.debug ("      Page: %s" % page)
+          if not match_filter (page, CONFIG.pages):
+            continue
+          make (cfgs, paper, form, section, page,
+                os.path.join ("./", "%s_%s-%s-%s.ps"
+                              % (section, page, form, paper)))
+
+@logtool.log_call
+def main ():
+  try:
+    APP.run ()
+  except KeyboardInterrupt:
+    pass
+  except clip.ClipExit:
+    clip.exit ()
+  except Exception as e:
+    logtool.log_fault (e)
+    IO.error ("Something broke!")
+    clip.exit (err = True)
+
+if __name__ == "__main__":
   main ()

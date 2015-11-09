@@ -1,17 +1,19 @@
 #! /usr/bin/env python
 
+import logtool
 from xxpaper.sheet import Sheet
 
 class Market (Sheet):
-  def __init__ (self, cfgs, sheet, page, fname):
-    Sheet.__init__ (self, cfgs, sheet, page, fname)
 
+  @logtool.log_call
   def page_details (self):
     pass
 
+  @logtool.log_call
   def tile_details (self, x, y):
     self.type_desc (x, y)
 
+  @logtool.log_call
   def type_desc (self, x, y):
     bx = self.tile_x / 2
     by = self.tile_y / 10

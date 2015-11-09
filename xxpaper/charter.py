@@ -1,10 +1,13 @@
 #! /usr/bin/env python
 
+import logtool
 from xxpaper.sheet import Sheet
 
 class Charter (Sheet):
-  def __init__ (self, cfgs, sheet, page, fname):
-    Sheet.__init__ (self, cfgs, sheet, page, fname)
+
+  @logtool.log_call (log_args = False)
+  def __init__ (self, cfgs, paper, outline, sheet, page, fname):
+    super (Charter, self).__init__ (cfgs, paper, outline, sheet, page, fname)
     # Offsets within tile
     self.box_inset_x = float (self.value ("box_inset_x"))
     self.box_inset_y = float (self.value ("box_inset_y"))
@@ -13,9 +16,11 @@ class Charter (Sheet):
     self.stripe_radius = float (self.value ("stripe_radius"))
     self.title_inset_x = float (self.value ("title_inset_x"))
 
+  @logtool.log_call
   def page_details (self):
     self.macro_roundbox ()
 
+  @logtool.log_call
   def tile_details (self, x, y):
     self.charter_box (x, y)
     self.charter_stripe (x, y)
@@ -28,6 +33,7 @@ class Charter (Sheet):
     self.note1 (x, y)
     self.note2 (x, y)
 
+  @logtool.log_call
   def macro_roundbox (self):
     self.fd.define (
       "roundbox",
@@ -48,6 +54,7 @@ closepath
 % } def
 """)
 
+  @logtool.log_call
   def charter_box (self, x, y):
     bx = self.box_inset_x
     by = self.box_inset_y
@@ -69,6 +76,7 @@ closepath
     self.fd.append ("stroke")
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def charter_stripe (self, x, y):
     bx = self.box_inset_x
     by = self.tile_y - self.box_inset_y - self.stripe_height
@@ -91,12 +99,14 @@ closepath
     self.fd.append ("stroke")
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def charter_stripe_token (self, x, y):
     bx = self.box_inset_x + self.stripe_radius
     by = self.tile_y - self.box_inset_y - self.stripe_radius
     self.fd.append ("%f %f moveto" % (bx, by))
     self.company_token (x, y)
 
+  @logtool.log_call
   def title (self, x, y):
     title_inset_y_fudge = float (self.value ("title_inset_y_fudge", x, y))
     bx = (self.box_inset_x + ((self.tile_x - (self.box_inset_x * 2)) / 2)
@@ -108,6 +118,7 @@ closepath
     self.text ("title", x, y, h_centre = 0, v_centre = 0)
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def token_circles (self, x, y):
     token_inset_x = float (self.value ("token_inset_x", x, y))
     token_inset_y = float (self.value ("token_inset_y", x, y))
@@ -128,12 +139,14 @@ closepath
       self.company_token_circle (x, y)
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def centre_stripe (self, x, y):
     bx = self.tile_x / 2
     by = self.box_inset_y
     h = self.tile_y - by - self.box_inset_y - self.stripe_height
     self.line ("centre", x, y, bx, by, 0, h)
 
+  @logtool.log_call
   def desc1 (self, x, y):
     centre = self.value ("centre_colour", x, y)
     if centre == "transparent":
@@ -147,6 +160,7 @@ closepath
     self.text ("desc1", x, y, h_centre = 0, v_centre = 0)
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def desc2 (self, x, y):
     centre = self.value ("centre_colour", x, y)
     if centre == "transparent":
@@ -159,6 +173,7 @@ closepath
     self.text ("desc2", x, y, h_centre = 0, v_centre = 0)
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def note1 (self, x, y):
     centre = self.value ("centre_colour", x, y)
     if centre == "transparent":
@@ -171,6 +186,7 @@ closepath
     self.text ("note1", x, y, h_centre = 0, v_centre = -1)
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def note2 (self, x, y):
     centre = self.value ("centre_colour", x, y)
     if centre == "transparent":

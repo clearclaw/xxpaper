@@ -1,12 +1,11 @@
 #! /usr/bin/env python
 
-import math
+import logtool, math
 from xxpaper.sheet import Sheet
 
 class Token (Sheet):
-  def __init__ (self, cfgs, sheet, page, fname):
-    Sheet.__init__ (self, cfgs, sheet, page, fname)
 
+  @logtool.log_call
   def tile_details (self, x, y):
     self.top (x, y)
     self.top_stripe (x, y)
@@ -15,6 +14,7 @@ class Token (Sheet):
     self.text_stripe (x, y)
     self.token_circles (x, y)
 
+  @logtool.log_call
   def bottom (self, x, y):
     bx = self.tile_x
     by = self.tile_y / 2
@@ -24,12 +24,13 @@ class Token (Sheet):
     self.fd.append ("%d %d %d %d rectfill" % (0, 0, bx, by))
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def bottom_stripe (self, x, y):
     stripe_colour = self.value ("token_bottom_stripe_colour", x, y)
     if stripe_colour == "transparent":
       return
     bx = self.tile_x
-    by = self.tile_y / 2
+    # by = self.tile_y / 2
     radius = float (self.value ("token_radius", x, y))
     angle1 = float (self.value ("token_bottom_stripe_angle1", x, y))
     angle2 = float (self.value ("token_bottom_stripe_angle2", x, y))
@@ -42,6 +43,7 @@ class Token (Sheet):
                        bx, height2 - height1))
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def top (self, x, y):
     bx = self.tile_x
     # by = float (self.tile_y / 2)
@@ -53,6 +55,7 @@ class Token (Sheet):
                        bx, self.tile_y / 2))
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def top_stripe (self, x, y):
     stripe_colour = self.value ("token_top_stripe_colour", x, y)
     if stripe_colour == "transparent":
@@ -71,6 +74,7 @@ class Token (Sheet):
                        bx, height2 - height1))
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def text_stripe (self, x, y):
     stroke = float (self.value ("token_stroke"))
     stroke_colour = self.value ("token_stroke_colour")
@@ -90,6 +94,7 @@ class Token (Sheet):
                        bx, by))
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def token_circles (self, x, y):
     space_x = float (self.value ("token_space_x"))
     radius = float (self.value ("token_radius"))
