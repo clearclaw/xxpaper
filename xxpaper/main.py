@@ -12,6 +12,7 @@ from .cmdio import CmdIO
 import xxpaper
 
 logging.basicConfig (level = logging.WARN)
+LOG = logging.getLogger (__name__)
 APP = clip.App (name = "xxpaper")
 CONFIG = Dict ({
   "directory": Path ("./"),
@@ -119,14 +120,14 @@ def arg_game_file (fname):
 @clip.opt ("-P", "--papers", name = "papers", help = "Paper sizes",
            required = False, callback = partial (option_list, "papers"))
 @clip.opt ("-p", "--pages", name = "pages", help = "Pages to process",
-           required = False, callback = partial (option_setopt, "pages"))
+           required = False, callback = partial (option_list, "pages"))
+@clip.flag ("-q", "--quiet", name = "quiet",
+            help = "Suppress information messages",
+            callback = partial (option_setopt, "quiet"))
 @clip.opt ("-s", "--sections", name = "sections", help = "Sections to process",
            required = False, callback = partial (option_list, "sections"))
 @clip.flag ("-t", "--template", name = "template", help = "Save template file",
            required = False, callback = partial (option_setopt, "template"))
-@clip.flag ("-q", "--quiet", name = "quiet",
-            help = "Suppress information messages",
-            callback = partial (option_setopt, "quiet"))
 @clip.flag ("-v", "--verbose", name = "verbose",
             help = "Extra information messages",
             callback = partial (option_setopt, "verbose"))
@@ -171,11 +172,11 @@ def main ():
   except KeyboardInterrupt:
     pass
   except clip.ClipExit:
-    clip.exit ()
+    sys.exit (0)
   except Exception as e:
     logtool.log_fault (e)
     IO.error ("Something broke!")
-    clip.exit (err = True)
+    sys.exit (1)
 
 if __name__ == "__main__":
   main ()
