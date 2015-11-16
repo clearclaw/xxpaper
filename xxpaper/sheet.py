@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 from __future__ import absolute_import
-import itertools, logtool, re, sys
+import itertools, logtool, numbers, re, sys
 from psfile import PSFile
 from types import ListType
 from .cmdio import CmdIO
@@ -52,8 +52,8 @@ class Sheet (CmdIO):
   @logtool.log_call
   def close (self):
     if self.fd:
-      self.fd.close ()
-      self.fd = None
+     self.fd.close ()
+     self.fd = None
 
   @logtool.log_call (log_args = False)
   def _value_lookup (self, cfg, sl, k):
@@ -158,6 +158,10 @@ class Sheet (CmdIO):
     self.fd.append ("%f %f moveto" % (0, -12))
     self.text ("source_filename", 0, -12, v_centre = -1)
     self.fd.append ("grestore")
+    self.fd.append ("gsave")
+    self.fd.append ("%f %f moveto" % (0, -24))
+    self.text ("print_instruction", 0, -24, v_centre = -1)
+    self.fd.append ("grestore")
 
   @logtool.log_call
   def push_tile (self, x, y, bx, by):
@@ -172,11 +176,15 @@ class Sheet (CmdIO):
     self.fd.append ("grestore")
 
   @logtool.log_call
-  def line (self, typ, x, y, bx, by, w, h):
+  def line (self, typ, x, y, bx, by, w, h,
+            dash_length = None, dash_space = 5, dash_start = 0):
     stroke_width = float (self.value ("%s_stroke" % typ, x, y))
     colour = self.value ("%s_colour" % typ, x, y)
     if colour != "transparent":
       self.fd.append ("gsave")
+      if isinstance (dash_length, numbers.Number):
+        self.fd.append ("1 setlinecap")
+        self.fd.append ("[%s %s] %s setdash" % (dash_length, dash_space, dash_start))
       self.fd.append ("%s %s %s setrgbcolor" % colour)
       self.fd.append ("%f setlinewidth" % stroke_width)
       self.fd.append ("%f %f moveto" % (bx, by))

@@ -19,7 +19,6 @@ class Share (Sheet):
     self.type_stripe_width = (self.x_off + self.tile_x -
                               self.type_stripe_inset_x)
     self.side_split_count = int (self.value ("side_split_count"))
-    self.side_split_width = float (self.value ("side_split_width"))
 
   @logtool.log_call
   def page_details (self):
@@ -45,13 +44,26 @@ class Share (Sheet):
 
   @logtool.log_call
   def side_stripe_split (self):
-    gap = self.side_stripe_width / (self.side_split_count + 1)
-    ox = self.x_off + self.side_stripe_inset_x - (self.side_split_width / 2)
+    dash_length = self.value ("side_split_dash_length")
+    dash_space = self.value ("side_split_dash_space")
+    place = self.value ("side_split_place")
+    gap = float (self.value ("side_split_gap"))
+
+    if place == "left":
+      ox = self.x_off + self.side_stripe_inset_x
+    elif place == "centre":
+      gap = self.side_stripe_width / (self.side_split_count + 1)
+      ox = self.x_off + self.side_stripe_inset_x
+    elif place == "right":
+      ox = (self.x_off + self.side_stripe_inset_x + self.type_stripe_width
+            - (gap * self.side_split_count))
+
     for x in xrange (self.num_x):
       for i in xrange (self.side_split_count):
         bx = (self.tile_x * x) + ox + ((i + 1) * gap)
-        self.box ("side_split", 0, 0, bx, 0,
-                  self.side_split_width, self.rubber_y)
+        self.line ("side_split", 0, 0, bx, 0,
+                   0, self.rubber_y,
+                   dash_length = 10, dash_space = 5, dash_start = 5 * (i % 2))
 
   @logtool.log_call
   def type_stripe (self):

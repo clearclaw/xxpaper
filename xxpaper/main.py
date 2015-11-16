@@ -58,7 +58,7 @@ def get_cfgval (cfgs, section, name):
 @logtool.log_call (log_args = False, log_rc = False)
 def load_configs ():
   fname = CONFIG.game_fname
-  raw = fname.bytes ()
+  raw = fname.bytes ().decode ('unicode_escape')
   xxp = StringIO (jinja2.Template (raw).render ())
   if CONFIG.template:
     fn = CONFIG.directory / fname.namebase + "_expanded.cfg"
