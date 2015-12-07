@@ -123,7 +123,6 @@ closepath
     token_inset_x = float (self.value ("token_inset_x", x, y))
     token_inset_y = float (self.value ("token_inset_y", x, y))
     token_radius = float (self.value ("token_radius", x, y))
-    price_height_fudge = float (self.value ("price_height_fudge", x, y))
     ox = (self.box_inset_x
           + token_inset_x + token_radius)
     oy = (self.tile_y - self.box_inset_y - self.stripe_height
@@ -138,8 +137,9 @@ closepath
       by = oy - (i * spacing)
       self.fd.append ("%f %f moveto" % (bx, by))
       self.company_token_circle (x, y)
+      price_height_fudge = float (self.value ("price%s_height_fudge" % i, x, y))
       self.fd.append ("%f %f moveto" % (bx, by - price_height_fudge))
-      self.text ("price", x, y, h_centre = 0, v_centre = 1)
+      self.text ("price%s" % i, x, y, h_centre = 0, v_centre = 1)
     self.fd.append ("grestore")
 
   @logtool.log_call
