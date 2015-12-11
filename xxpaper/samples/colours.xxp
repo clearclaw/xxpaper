@@ -1,0 +1,23 @@
+{% set colours = ["GRAY", "RED", "GREEN", "BLUE", 
+                  "YELLOW", "PURPLE", "BROWN",] %}
+{% set shades = ["P", "L", "B", "M", "D",] %}
+[market]
+  num_across_x = 7
+  num_across_y = 5
+  tile_x = 64
+  tile_y = 64
+  tile_colour = ${WHITE}
+  tile_stroke_colour = ${BLACK}
+  desc = ""
+
+  [[colours]]
+{% for ndx_x in range (colours | count) %}
+  {% set colour = colours[ndx_x] %}
+  {% for ndx_y in range (shades | count) %}
+    {% set shade = shades[ndx_y] %}
+    {% set colnam = shade + "_" + colour %}
+    [[[tile_{{ ndx_x + 1 }}.{{ ndx_y + 1 }}]]]
+      desc = "{{ colnam }}"
+      tile_colour = ${{ "{" }}{{ colnam }}{{ "}" }}
+  {% endfor %}
+{% endfor %}
