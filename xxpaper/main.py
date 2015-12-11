@@ -59,7 +59,9 @@ def get_cfgval (cfgs, section, name):
 def load_configs ():
   fname = CONFIG.game_fname
   raw = fname.bytes ().decode ('unicode_escape')
-  xxp = StringIO (jinja2.Template (raw).render ())
+  env = jinja2.Environment(extensions = ["jinja2.ext.loopcontrols",
+                                         "jinja2.ext.with_",])
+  xxp = StringIO (env.from_string (raw).render ())
   if CONFIG.template:
     fn = CONFIG.directory / fname.namebase + "_expanded.cfg"
     IO.debug ("Expanded template: %s" % fn)
@@ -72,7 +74,7 @@ def load_configs ():
   game["DEFAULT"]["source_filename"] = "File: %s" % CONFIG.game_fname
   runtime = ConfigObj (["[DEFAULT]",])
   defdata = pkg_resources.resource_string ("xxpaper", "DEFAULT.conf")
-  defproc = StringIO (jinja2.Template (defdata).render ())
+  defproc = StringIO (env.from_string (defdata).render ())
   default = ConfigObj (defproc.readlines ())
   return runtime, game, default
 
