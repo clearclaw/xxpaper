@@ -1,4 +1,216 @@
+{% set companies = [
+    {
+      "name": """Aken-Maastrichtsche
+Spoorweg-Maatschappij""",
+      "token": "AMS",
+      "token_top": "0.600, 0.196, 0.800",
+      "token_bottom": "0.600, 0.196, 0.800",
+      "share_stripe": "0.933, 0.510, 0.933",
+      "description": "",
+      "url": "https://nl.wikipedia.org/wiki/Aken-Maastrichtsche_Spoorweg-Maatschappij",
+      "note": """Owns the IJzeren Rijn and
+Staatslijn E: Maastricht - Venlo
+private companies.""",
+    },
+    {
+      "name": """Hollandsche IJzeren
+Spoorweg-Maatschappij""",
+      "token": "HISM",
+      "token_top": "${BLACK}",
+      "token_bottom": "${BLACK}",
+      "share_stripe": "${GRAY}",
+      "description": "",
+      "url": "https://en.wikipedia.org/wiki/Hollandsche_IJzeren_Spoorweg-Maatschappij",
+      "note": """Owns the IJzeren Rijn and
+Staatslijn E: Maastricht - Venlo
+private companies.""",
+      "description": """First railway company
+in the Netherlands""",
+    },
+    {
+      "name": """Noord-Brabantsch-Duitsche
+Spoorweg-Maatschappij""",
+      "token": "NBDS",
+      "token_top": " 0.000, 0.000, 0.804",
+      "token_bottom": " 0.000, 0.000, 0.804",
+      "share_stripe": "0.392, 0.584, 0.929",
+      "description": "",
+      "url": "https://nl.wikipedia.org/wiki/Noord-Brabantsch-Duitsche_Spoorweg-Maatschappij",
+      "note": "",
+      "description": "German Lijntje / Boxteler Bahn",
+    },
+    {
+      "name": """Nederlandsche Centraal-
+Spoorweg-Maatschappij""",
+      "token": "NCS",
+      "token_top": "1, 0, 0",
+      "token_bottom": "1, 0, 0",
+      "share_stripe": "0.941, 0.502, 0.502",
+      "description": "",
+      "url": "https://nl.wikipedia.org/wiki/Nederlandsche_Centraal-Spoorweg-Maatschappij",
+      "note": "",
+    },
+    {
+      "name": """Nederlandsche
+Rhijnspoorweg-Maatschappij""",
+      "token": "NRS",
+      "token_top": "0.804, 0.522, 0.247",
+      "token_bottom": "0.804, 0.522, 0.247",
+      "share_stripe": "0.871, 0.722, 0.529",
+      "description": "",
+      "url": "https://nl.wikipedia.org/wiki/Nederlandsche_Rhijnspoorweg-Maatschappij",
+      "note": """Owns the private company:
+Spoorlijn Zevenaar - Kleef.""",
+    },
+    {
+      "name": """Nederlandsch-Westfaalsche
+Spoorweg-Maatschappij""",
+      "token": "NWS",
+      "token_top": "1, 1, 0",
+      "token_bottom": "1, 1, 0",
+      "share_stripe": "1.000, 0.843, 0.000",
+      "description": "",
+      "url": "https://nl.wikipedia.org/wiki/Nederlandsch-Westfaalsche_Spoorweg-Maatschappij",
+      "note": """Owns the private company:
+Staatslijn D: Zutphen - Glanerbeek."""
+    },
+    {
+      "name": """Maatschappij
+tot Exploitatie van
+Staatsspoorwegen""",
+      "token": "SS",
+      "token_top": "0.604, 0.804, 0.196",
+      "token_bottom": "0.604, 0.804, 0.196",
+      "share_stripe": "0.686, 0.933, 0.933",
+      "description": "",
+      "url": "https://en.wikipedia.org/wiki/Maatschappij_tot_Exploitatie_van_Staatsspoorwegen",
+      "note": """Owns the private company:
+Staatslijn C: Meppel - Groningen.""",
+      "description": """Along with the HISM, the largest
+railway company in the Netherlands""",
+    },
+    {
+      "name": """Zuid-Hollandsche Electrische
+Spoorweg-Maatschappij""",
+      "token": "ZHESM",
+      "token_top": "0.129, 0.369, 0.129",
+      "token_bottom": "0.129, 0.369, 0.129",
+      "share_stripe": "0.565, 0.933, 0.565",
+      "description": "",
+      "url": "https://nl.wikipedia.org/wiki/Zuid-Hollandsche_Electrische_Spoorweg-Maatschappij",
+      "note": "",
+      "description": "First electric railway in the Netherlands",
+    },
+  ]
+%}
+
+{% set foreigners = [
+    {
+      "box_colour": "${LIGHT_BLUE}",
+      "name": "Overzees",
+      "token": "OZ",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_top": "${BLUE}",
+      "token_bottom": "0.42, 0.87, 0.15",
+      "share_stripe": "0.498, 1.000, 0.831",
+      "description": "",
+      "url": "",
+      "note": "",
+      "country": "n Overzees",
+    },
+    {
+      "box_colour": "${LIGHT_ORANGE}",
+      "name": "Belgie",
+      "token": "BEL",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_top": "${BROWN}",
+      "token_bottom": "0.902, 0.902, 0.980",
+      "share_stripe": "0.941, 0.902, 0.549",
+      "description": "",
+      "url": "",
+      "note": "",
+      "country": " Belgie",
+    },
+    {
+      "box_colour": "${LIGHT_RED}",
+      "name": "Duitsland",
+      "token": "D",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_top": "${RED}",
+      "token_bottom": "0.941, 0.902, 0.549",
+      "share_stripe": "0.847, 0.847, 0.749",
+      "description": "0.941, 0.902, 0.549",
+      "url": "",
+      "note": "",
+      "country": " Duitsland",
+    },
+  ]
+%}
+
+{% set trains = [
+    {
+      "cost": "f100",
+      "frame_colour": "${YELLOW}",
+      "name": "2",
+      "rust": "Rusted by BLUE",
+      "rust_stripe": "${BLUE}",
+      "trade_stripe": "${GREEN}",
+    },
+    {
+      "cost": "f250",
+      "frame_colour": "${GREEN}",
+      "name": "3+",
+      "rust": "Rusted by BROWN",
+      "rust_stripe": "${BROWN}",
+      "trade_stripe": "${BLUE}",
+    },
+    {
+      "cost": "f450",
+      "frame_colour": "${BLUE}",
+      "name": "5+",
+      "rust": "Rusted by RED",
+      "rust_stripe": "${RED}",
+      "trade_stripe": "${BROWN}",
+      "optional": 1,
+    },
+    {
+      "cost": "f800",
+      "frame_colour": "${BROWN}",
+      "name": "7+",
+      "rust": "Rusted by GRAY",
+      "rust_stripe": "${GRAY}",
+      "trade_stripe": "${RED}",
+    },
+    {
+      "cost": "f1,250",
+      "frame_colour": "${RED}",
+      "name": "5D+",
+      "rust": "PERMANENT",
+      "rust_stripe": "${GRAY}",
+      "trade_stripe": "${RED}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+    {
+      "cost": "f2,000",
+      "frame_colour": "${GRAY}",
+      "name": "FLOOD",
+      "rust": "PERMANENT",
+      "rust_stripe": "${BLACK}",
+      "trade_stripe": "${GRAY}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+      "train_font": '"Times-Roman", 36',
+    }
+  ]
+%}
+
 [DEFAULT]
+  print_instruction = "Print one copy of this page."
+
   BLACK = 0, 0, 0
   BLUE = 0, 1, 1
   # BROWN = 0.98, 0.64, 0.38
@@ -10,236 +222,262 @@
   LIGHT_GREEN = 0.83, 1.0, 0.83
   LIGHT_ORANGE = 0.98, 0.98, 0.82
   LIGHT_RED = 1.000, 0.894, 0.882
+  LIGHT_YELLOW = 0.12,	0.85,	0.56
   ORANGE = 1.000, 0.647, 0.000
   RED = 1.0, 0.0, 0.0
   WHITE = 1, 1, 1
   YELLOW = 1.0, 1.0, 0.0
 
-  AMS_DARK = 0.600, 0.196, 0.800
-  AMS_LIGHT = 0.933, 0.510, 0.933
-  BEL_DARK = ${WHITE}
-  BEL_LIGHT = 0.941, 0.902, 0.549
-  GER_DARK = ${WHITE}
-  GER_LIGHT = 0.847, 0.847, 0.749
-  HISM_DARK = ${BLACK}
-  HISM_LIGHT = ${GRAY}
-  NBDS_DARK = 0.000, 0.000, 0.804
-  NBDS_LIGHT = 0.392, 0.584, 0.929
-  NCS_DARK = 1, 0, 0
-  NCS_LIGHT = 0.941, 0.502, 0.502
-  NWS_DARK = 1, 1, 0
-  NWS_LIGHT = 1.000, 0.843, 0.000
-  OVER_DARK = ${WHITE}
-  OVER_LIGHT = 0.498, 1.000, 0.831
   ROUND_DARK = 1.0, 0.647, 0.0
   ROUND_LIGHT = 0.0, 0.0, 1.0
-  RS_DARK = 0.804, 0.522, 0.247
-  RS_LIGHT = 0.871, 0.722, 0.529
   SAVED_DARK = 0.804, 0.804, 0.804
   SAVED_LIGHT = 0.686, 0.933, 0.933
-  SS_DARK = 0.604, 0.804, 0.196
-  SS_LIGHT = 0.686, 0.933, 0.933
-  ZHESM_DARK = 0.129, 0.369, 0.129
-  ZHESM_LIGHT = 0.565, 0.933, 0.565
-
-  OVER_TOKEN_BOTTOM = 0.498, 1.000, 0.831
-  BEL_TOKEN_BOTTOM = 0.902, 0.902, 0.980
-  GER_TOKEN_BOTTOM = 0.941, 0.902, 0.549
-
 
 [charter]
   desc1 = "Assets, Treasury & Trains"
-  note1 = """Purchase price of shares goes to bank.
-Market shares pay dividends to treasury.
-Station cost: Number of token locations
-on map * value of revenue location."""
   token_count = 5
 
-  [[sheet1]]
-
-    [[[tile_1.1]]]
-      LIGHT = ${AMS_LIGHT}
-      DARK = ${AMS_DARK}
-      title = "Aken-Maastrichtsche", "Spoorweg-Maatschappij"
-      token_name = AMS
-      note1 = """Owns the private company:
-Staatslijn E: Maastricht–Venlo.
+{% set page_size = 4 %}
+{% set blocks = ((companies | count + 3) / page_size) | int %}
+{% set tiles = ["1.1", "1.2", "2.1", "2.2",] %}
+{% for sheet in range (blocks) %}
+  [[sheet{{ sheet + 1 }}]]
+  {% set index = sheet * page_size %}
+  {% for tile in range (page_size) %}
+    {% set company = companies[index + tile] %}
+    [[[tile_{{ tiles[tile] }}]]]
+      stripe_colour = {{ company.share_stripe }}
+      token_bottom_colour = {{ company.token_bottom }}
+      token_colour = ${WHITE}
+      token_top_colour = {{ company.token_top }}
+      title = """{{ company.name }}"""
+      token_name = {{ company.token }}
+      price1 = "$ x #"
+      price2 = "$ x #"
+      price3 = "$ x #"
+      price4 = "$ x #"
+      price5 = "$ x #"
+      note1 = """{{ company.note }}
 
 Purchase price of shares goes to bank.
 Market shares pay dividends to treasury.
 Station cost: Number of token locations
 on map * value of revenue location."""
+    {% if "token_name_font" in company.keys () %}
+      token_name_font = {{ company.token_name_font }}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
 
-    [[[tile_1.2]]]
-      LIGHT = ${HISM_LIGHT}
-      DARK = ${HISM_DARK}
-      title = "Hollandsche IJzeren", "Spoorweg-Maatschappij"
-      token_name = HISM
-
-    [[[tile_2.1]]]
-      LIGHT = ${NBDS_LIGHT}
-      DARK = ${NBDS_DARK}
-      title = "Noord-Brabantsch-Duitsche", "Spoorweg-Maatschappij"
-      token_name = NBDS
-
-    [[[tile_2.2]]]
-      LIGHT = ${NCS_LIGHT}
-      DARK = ${NCS_DARK}
-      title = "Nederlandsche Centraal-", "Spoorweg-Maatschappij"
-      token_name = NCS
-
-  [[sheet2]]
-
-    [[[tile_1.1]]]
-      LIGHT = ${NWS_LIGHT}
-      DARK = ${NWS_DARK}
-      title = "Nederlandsch-Westfaalsche", "Spoorweg-Maatschappij"
-      token_name = NWS
-
-    [[[tile_1.2]]]
-      LIGHT = ${RS_LIGHT}
-      DARK = ${RS_DARK}
-      title = "Nederlandsche", "Rhijnspoorweg-Maatschappij"
-      token_name = NRS
-
-    [[[tile_2.1]]]
-      LIGHT = ${SS_LIGHT}
-      DARK = ${SS_DARK}
-      title = "Maatschappij", "tot Exploitatie van", "Staatsspoorwegen"
-      token_name = SS
-
-    [[[tile_2.2]]]
-      LIGHT = ${ZHESM_LIGHT}
-      DARK = ${ZHESM_DARK}
-      title = "Zuid-Hollandsche Electrische", "Spoorweg-Maatschappij"
-      token_name = ZHESM
-
-  [[sheet3]]
+  [[foreign]]
     centre_colour = ${BLACK}
     desc1 = "Shares & Treasury"
     desc2 = "Income"
-    note1 = """Purchase price of shares goes to treasury.
+    note1 = """Half purchase price of shares goes to treasury
+until brown phase, then full purchase price
+goes to treasury.
 Shares in treasury pay dividends to treasury."""
-    note2 = """Income: 50% company's income that runs to a${COUNTRY} off-board.
-Buy market shares first, pay dividend and adjust stock
-price, then buy trains.  Stock up once per train bought.
-Dividend: Half-pay total revenue."""
+    note2 = """Income: 50% public company's income that runs to a${COUNTRY}
+off-board. Buy market shares first, pay dividend and adjust
+stock price, then buy trains.  Stock price moves up once per
+pair of trains bought (rounding up).
+Dividend: Half-pay total income."""
     num_across_x = 1
     num_across_y = 3
     tile_x = 510
     tile_y = 236
     token_count = 0
+    token_colour = ${BLACK}
+    token_name_colour = ${WHITE}
 
-    [[[tile_1.1]]]
-      COUNTRY = "n Overzees"
-      LIGHT = ${OVER_LIGHT}
-      DARK = ${OVER_DARK}
-      title = "Overzees"
-      token_name = OZ
-      box_colour = ${LIGHT_BLUE}
-      token_bottom_colour = ${OVER_TOKEN_BOTTOM}
-
-    [[[tile_1.2]]]
-      COUNTRY = " Belgie"
-      LIGHT = ${BEL_LIGHT}
-      DARK = ${BEL_DARK}
-      title = "Belgie"
-      token_name = BEL
-      box_colour = ${LIGHT_ORANGE}
-      token_bottom_colour = ${BEL_TOKEN_BOTTOM}
-
-    [[[tile_1.3]]]
-      COUNTRY = " Duitsland"
-      LIGHT = ${GER_LIGHT}
-      DARK = ${GER_DARK}
-      title = "Duitsland"
-      token_name = D
-      box_colour = ${LIGHT_RED}
-      token_bottom_colour = ${GER_TOKEN_BOTTOM}
-
+{% set page_size = 3 %}
+{% set blocks = ((foreigners | count + 3) / page_size) | int %}
+{% set tiles = ["1.1", "1.2", "1.3",] %}
+{% for tile in range (page_size) %}
+    {% set company = foreigners[tile] %}
+    [[[tile_{{ tiles[tile] }}]]]
+      box_colour = {{ company.box_colour }}
+      COUNTRY = {{ company.country }}
+      token_bottom_colour = {{ company.token_bottom }}
+      token_top_colour = {{ company.token_top }}
+      stripe_colour = {{ company.share_stripe }}
+      title = """{{ company.name }}"""
+      token_name = {{ company.token }}
+      price = ""
+    {% if "token_name_font" in company.keys () %}
+      token_name_font = {{ company.token_name_font }}
+    {% endif %}
+{% endfor %}
 
 [market]
+
+{% set revsheets = 3 %}
+{% for sheet in range (revsheets) %}
+  {% for sheet_type in ["a", "b",] %}
+  [[revenue{{ sheet + 1 }}{{ sheet_type }}]]
+    num_across_x = 15
+    num_across_y = 12
+    tile_x = 40
+    tile_y = 40
+    tile_colour = ${WHITE}
+    tile_stroke_colour = ${BLACK}
+
+    {% for row in range (12) %}
+      {% for ndx in range (15) %}
+    [[[tile_{{ ndx + 1 }}.{{ row + 1 }}]]]
+        {% if sheet_type == "a" %}
+          {% set value = (sheet * 15) + (row * revsheets * 15) + ndx %}
+        {% elif sheet_type == "b" %}
+          {% set value = (sheet * 180) + (row * 15) + ndx %}
+        {% endif %}
+      desc = {{ value }}
+        {% if not value % 50 %}
+      tile_colour = ${LIGHT_BLUE}
+        {% elif not value % 10 %}
+      tile_colour = ${LIGHT_RED}
+        {%elif not value % 5 %}
+      tile_colour = ${LIGHT_ORANGE}
+        {% else %}
+      tile_colour = ${WHITE}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+  [[round]]
+    num_across_x = 10
+    num_across_y = 2
+    tile_x = 64
+    tile_y = 64
+    tile_colour = ${WHITE}
+    tile_stroke_colour = ${WHITE}
+    desc = ""
+
+    [[[tile_4.2]]]
+      desc = "Stock"
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_4.1]]]
+      desc = "Operating"
+      tile_colour = ${YELLOW}
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_5.1]]]
+      desc = "Operating"
+      tile_colour = ${GREEN}
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_6.1]]]
+      desc = "Operating"
+      tile_colour = ${BROWN}
+      tile_stroke_colour = ${BLACK}
 
   [[sheet1]]
     tile_colour = ${WHITE}
 
-    [[[tile_1.1]]]
-      desc = "55"
-
-    [[[tile_2.1]]]
-      desc = "56"
-
-    [[[tile_3.1]]]
-      desc = "59"
-
-    [[[tile_4.1]]]
-      desc = "62"
-
-    [[[tile_5.1]]]
-      desc = "67"
+{% set stock_values = [55, 56, 59, 62, 67, 72, 80, 89, 101, 116, 135, 160, 192,
+                       233, 287, 359, 454, 584, 761, 1000, ] %}
+{% for ndx in range (stock_values | count) %}
+  {% set value = stock_values[ndx] %}
+    [[[tile_{{ ndx + 1 }}.1]]]
+      desc = {{ value }}
+      {% if value >= 67 and value <= 80%}
       tile_colour = ${YELLOW}
-
-    [[[tile_6.1]]]
-      desc = "72"
-      tile_colour = ${YELLOW}
-
-    [[[tile_7.1]]]
-      desc = "80"
-      tile_colour = ${YELLOW}
-
-    [[[tile_8.1]]]
-      desc = "89"
+      {% elif value >= 89 and value <= 101 %}
       tile_colour = ${GREEN}
-
-    [[[tile_9.1]]]
-      desc = "101"
-      tile_colour = ${GREEN}
-
-    [[[tile_10.1]]]
-      desc = "116"
+      {% elif value == 116 %}
       tile_colour = ${BLUE}
-
-    [[[tile_11.1]]]
-      desc = "135"
+      {% elif value == 135 %}
       tile_colour = ${BROWN}
-
-    [[[tile_12.1]]]
-      desc = "160"
-
-    [[[tile_13.1]]]
-      desc = "192"
-
-    [[[tile_14.1]]]
-      desc = "233"
-
-    [[[tile_15.1]]]
-      desc = "287"
-
-    [[[tile_16.1]]]
-      desc = "359"
-
-    [[[tile_17.1]]]
-      desc = "454"
-
-    [[[tile_18.1]]]
-      desc = "584"
-
-    [[[tile_19.1]]]
-      desc = "761"
-
-    [[[tile_20.1]]]
-      desc = "1,000"
+      {% elif value == 1000 %}
       tile_colour = ${LIGHT_RED}
-
+      {% endif %}
+{% endfor %}
 
 [private]
+
+  [[yellow]]
+    frame_colour = ${LIGHT_ORANGE}
+
+    [[[tile_1.1]]]
+      cost = Cost: f0
+      revenue = Revenue: f20
+      title = Staatslijn C: Meppel - Groningen
+      desc = """Owned by the SS.
+Owning company may place up to four
+track tiles \(two may be upgrades\)
+as its entire track lay, for f10 each
+plus any terrain and upgrade costs."""
+      close = """Close: In brown phase or when power used."""
+
+    [[[tile_1.2]]]
+      cost = Cost: f0
+      revenue = Revenue: f20
+      title = Staatslijn D: Zutphen - Glanerbeek
+      desc = """Owned by the NWS.
+Owning company may place up to four
+track tiles \(two may be upgrades\)
+as its entire track lay, for f10 each
+plus any terrain and upgrade costs."""
+      close = """Close: In brown phase or when power used."""
+
+    [[[tile_1.3]]]
+      cost = Cost: f0
+      revenue = Revenue: f20
+      title = Staatslijn E: Maastricht - Venlo
+      desc = """Owned by the AMS.
+Owning company may place up to five
+track tiles \(two may be upgrades\)
+as its entire track lay, for f10 each
+plus any terrain and upgrade costs."""
+      close = """Close: In brown phase or when power used."""
+
+    [[[tile_2.1]]]
+      cost = Cost: f0
+      revenue = Revenue: f20
+      title = """Staatslijn K:
+Den Helder - Amsterdam"""
+      desc = """Owned by the HIJSM.
+Owning company may place up to four
+track tiles \(two may be upgrades\)
+as its entire track lay, for f10 each
+plus any terrain and upgrade costs."""
+      close = """Close: In brown phase or when power used."""
+
+    [[[tile_2.2]]]
+      cost = Cost: f0
+      revenue = Revenue: f0
+      title = Spoorlijn Zevenaar - Kleef
+      desc = """Owned by the NRS.
+Owning company may place or upgrade
+a tile and a station marker \(must be both\)
+for f80 at I16 or K16 as part of their
+normal station placement."""
+      close = """Close: In brown phase."""
+
+    [[[tile_3.2]]]
+      cost = ""
+      revenue = ""
+      title = Bank Pool
+      title_font = "Times-Roman", 36
+      desc = ""
+      close = ""
+
+    [[[tile_3.3]]]
+      cost = ""
+      revenue = ""
+      title = IPO
+      title_font = "Times-Roman", 36
+      desc = ""
+      close = ""
 
   [[green]]
     frame_colour = ${LIGHT_GREEN}
 
     [[[tile_1.1]]]
-      cost = Cost: 300f
-      revenue = Revenue: 25f
+      cost = Cost: f300
+      revenue = Revenue: f25
       title = Spoorwegwerken Oost
       desc = """Blocks C10 and D9.
 Comes with a 10% certificate. Owning
@@ -249,100 +487,101 @@ when closed or bought by a company."""
       close = "Close: In brown phase or when power used."
 
     [[[tile_1.2]]]
-      cost = Cost: 160f
-      revenue = Revenue: 20f
+      cost = Cost: f160
+      revenue = Revenue: f20
       title = Schielands Hoge Zeedijk
       desc = """Owning company may place or upgrade
 a tile and a station marker \(must be both\)
-for 80f at K16 or for free at L3
+for f80 at K16 or for free at L3
 as their yellow or upgrade track
 lay and station placement."""
       close = "Close: In brown phase or when power used."
 
     [[[tile_1.3]]]
-      cost = Cost: 70f
-      revenue = Revenue: 5f
+      cost = Cost: f70
+      revenue = Revenue: f5
       title = Het Laantje van Van der Gaag
       desc = """Blocks H7.
 Owning company may place an additional
-yellow track tile or tile upgrade \(all
+yellow track tile or tile upgrade \(if at
+H7 there are no terrain costs, otherwise all
 terrain costs must be paid as usual\) in
 addition to the company's normal track lay."""
       close = "Close: In brown phase or when power used."
 
     [[[tile_2.1]]]
-      cost = Cost: 160f
-      revenue = Revenue: 20f
-      title = Cornelis Outshorn
+      cost = Cost: f160
+      revenue = Revenue: f20
+      title = Cornelis Outshoorn
       desc = """Owning company may place a
 exchange or station marker for free."""
       close = "Close: In brown phase or when power used."
 
     [[[tile_2.2]]]
-      cost = Cost: 250f
-      revenue = Revenue: 35f
+      cost = Cost: f250
+      revenue = Revenue: f35
       title = Rijkswaterstaat
       desc = """Blocks F13 & G12.
-Comes with a 20% presidency parred at 101f.
-Flevoland bypass built when closed. May
-not be purchased by a company."""
+Comes with a 20% presidency parred at f101.
+That company gains a home station in
+Emmen (D19).  Flevoland bypass built when
+closed. May not be purchased by a company."""
       close = """Close: In brown phase or when related company buys
 a train."""
 
     [[[tile_2.3]]]
-      cost = Cost: 0f
-      revenue = Revenue: 20f
-      title = Staatslijn E: Maastricht–Venlo
-      desc = """Owned by the AMS.
-Owning company may place up to four
-track tiles \(two may be upgrades\)
-as its entire track lay, for 10f each
-plus any terrain and upgrade costs."""
-      close = """Close: In brown phase or when power used."""
+      cost = Cost: f50
+      revenue = Revenue: f20
+      title = IJzeren Rijn
+      desc = """Blocks L11 - L17.
+Owned by the AMS.
+IJzeren Rijn built when the first
+green 3+ train is bought."""
+      close = """Close: In green phase."""
 
   [[blue]]
     frame_colour = ${LIGHT_BLUE}
 
     [[[tile_1.1]]]
-      cost = Cost: 180f
-      revenue = Revenue: 20f
+      cost = Cost: f180
+      revenue = Revenue: f20
       title = "August Borsig"
-      desc = """All towns are +20f revenue
+      desc = """All towns are +f20 revenue
 for the owning company."""
       close = "Close: In brown phase."
 
     [[[tile_1.2]]]
-      cost = Cost: 220f
-      revenue = Revenue: 15f
+      cost = Cost: f220
+      revenue = Revenue: f15
       title = "Staatsbedrijf der Posterijen,", "Telegrafie en Telefonie"
-      desc = """Owning company may add 10f to its
+      desc = """Owning company may add f10 to its
 income for every town or city encountered
 by one of its train's routes."""
       close = "Close: In brown phase."
 
     [[[tile_1.3]]]
-      cost = Cost: 140f
-      revenue = Revenue: 15f
+      cost = Cost: f140
+      revenue = Revenue: f15
       title = Lokaalspoorweg
       desc = """Owning company may convert a yellow
-town to a yellow city for a 20f terrain
+town to a yellow city for a f20 terrain
 fee as the company's yellow tile lay,
 or may convert a yellow double town to
-a green city for a 40f terrain fee
+a green city for a f40 terrain fee
 as the company's upgrade tile lay."""
       close = "Close: In brown phase."
 
     [[[tile_2.1]]]
-      cost = Cost: 160f
-      revenue = Revenue: 20f / 0f
+      cost = Cost: f160
+      revenue = Revenue: f20 / f0
       title = Regiment Genietroepen
-      desc = """Owning company has a 40f
+      desc = """Owning company has a f40
 discount on all terrain costs."""
       close = "Close: In brown phase."
 
     [[[tile_2.2]]]
-      cost = Cost: 180f
-      revenue = Revenue: 15f / 0f
+      cost = Cost: f180
+      revenue = Revenue: f15 / f0
       title = "Westlandsche Stoomtramweg", "Maatschappij"
       desc = """Owning company may move one
 of its placed station markers to
@@ -352,8 +591,8 @@ a station marker, or visa versa."""
       close = "Close: In brown phase or when power used."
 
     [[[tile_2.3]]]
-      cost = Cost: 180f
-      revenue = Revenue: 15f / 0f
+      cost = Cost: f180
+      revenue = Revenue: f15 / f0
       title = "IJsel Stoomtramweg-Maatschappij"
       desc = """Owning company may have one of its trains
 run a route that is one city longer than
@@ -362,28 +601,28 @@ revenue to its income."""
       close = "Close: In brown phase."
 
     [[[tile_3.1]]]
-      cost = Cost: 120f
-      revenue = Revenue: 15f
+      cost = Cost: f120
+      revenue = Revenue: f15
       title = "Van Vlissingen & Dudok van Heel"
       desc = """Owning company may place up to four
 track tiles \(one may be an upgrade\)
-as its entire track lay, for 10f each
+as its entire track lay, for f10 each
 plus any terrain and upgrade costs."""
       close = "Close: In brown phase or when power used."
 
     [[[tile_3.2]]]
-      cost = Cost: 140f
-      revenue = Revenue: 20f/10f
+      cost = Cost: f140
+      revenue = Revenue: f20 / f10
       title = De Ambachtsschool
       desc = """Owning company may do two track upgrades
 per operating round as their entire
-track lay for a total cost of 20f
+track lay for a total cost of f20
 plus any terrain costs."""
       close = "Close: In brown phase."
 
     [[[tile_3.3]]]
-      cost = Cost: 300f
-      revenue = Revenue: ?f/20f
+      cost = Cost: f300
+      revenue = Revenue: f? / f20
       title = "Noord Friesche", "Locaalspoorweg-Maatschappij"
       desc = """Owning player may place a yellow track
 tile on a route connected to Leeuwarden,
@@ -395,8 +634,8 @@ is the 2-train route from that tile."""
     frame_colour = ${BROWN}
 
     [[[tile_1.1]]]
-      cost = Cost: 200f
-      revenue = Revenue: 10f
+      cost = Cost: f200
+      revenue = Revenue: f10
       title = "Kabinet-Rochussen"
       desc = """Owning player may declare at SR end that
 an unfloated company with 30% bought from
@@ -407,8 +646,8 @@ to the company as those shares are bought."""
       close = "Close: In brown phase."
 
     [[[tile_1.2]]]
-      cost = Cost: 180f
-      revenue = Revenue: 20f
+      cost = Cost: f180
+      revenue = Revenue: f20
       title = Verveers
       desc = """Owning company may mark a train
 so that it will run one more time after
@@ -416,26 +655,27 @@ it rusts, and will then immediately rust."""
       close = "Close: In brown phase or when power used."
 
     [[[tile_1.3]]]
-      cost = Cost: 200f
-      revenue = Revenue: 10f
+      cost = Cost: f200
+      revenue = Revenue: f10
       title = "Credit Mobilier"
       desc = """Owning company has a discount on
-train purchases: Green: 100f,
-Blue: 150f, Brown: 250f."""
+train purchases: Green: f100,
+Blue: f150, Brown: f250."""
       close = "Close: In brown phase."
 
     [[[tile_2.1]]]
-      cost = Cost: 210f
-      revenue = Revenue: 20f
-      title = "Nederlandsche Fabriek van", "Werktuigen en", "Spooerwegmaterieel"
+      cost = Cost: f210
+      revenue = Revenue: f20
+      title = "Nederlandsche Fabriek van", "Werktuigen en", "Spoorwegmaterieel"
       desc = """Owning company may buy a train,
-as usual or as an emergency purchase,
-at any time during its operations."""
+as usual or as an emergency purchase
+(if it has no train), at any time
+during its operations."""
       close = "Close: In brown phase."
 
     [[[tile_2.2]]]
-      cost = Cost: 260f
-      revenue = Revenue: 0f
+      cost = Cost: f260
+      revenue = Revenue: f0
       title = "Fabriek van Rijtuigen", "en Spoorwagens J. J. Beijnes"
       desc = """May be converted by the owning company
 to any single train prior to brown phase.
@@ -444,20 +684,20 @@ start of brown phase if owned by a company."""
       close = "Close: In brown phase."
 
     [[[tile_2.3]]]
-      cost = Cost: 240f
-      revenue = Revenue: 25f/0f
+      cost = Cost: f240
+      revenue = Revenue: f25 / f0
       title = "Beyer, Peacock & Company"
       desc = """Owning company sells train markers \(3\)
-to other companies for 200f each \(50f
-to treasury, 150f to bank\).  Marked
+to other companies for f200 each \(f50
+to treasury, f150 to bank\).  Marked
 trains run one more time after they
 rust and then rust."""
       close = "Close: In brown phase."
 
     [[[tile_3.1]]]
-      cost = Cost: 180f
-      revenue = Revenue: ?f / 0f
-      title = "Maatschappij tot Explotatie", "van Staatsspoorgen"
+      cost = Cost: f180
+      revenue = Revenue: f? / f0
+      title = "Maatschappij tot Exploitatie", "van Staatsspoorwegen"
       desc = """Owning player or company is paid the
 revenue value of each town or city that
 a company that player or company
@@ -466,19 +706,22 @@ for the first time."""
       close = "Close: In brown phase."
 
     [[[tile_3.2]]]
-      cost = Cost: 200f
-      revenue = Revenue: 30f
+      cost = Cost: f200
+      revenue = Revenue: f30
       title = Rotterdamsche Bank
-      desc = """Owning company may draw
-freely on their president's assets for
-station, track and train expenses."""
+      desc = """Owning company may draw freely
+on their president's assets for
+station, track and train expenses,
+including causing the president to
+sell shares as if the expense were
+an Emergency Train Purchase."""
       close = "Close: In brown phase."
 
     [[[tile_3.3]]]
-      cost = Cost: 300f
-      revenue = Revenue: 50f / 0f
+      cost = Cost: f320
+      revenue = Revenue: f50 / f0
       title = Ketwich & Voombergh
-      desc = """In Green phase or later, during a
+      desc = """In yellow phase or later, during a
 stock round, owning player can re-par
 a company they just floated.  Re-parred
 company is capitalised at the new rate."""
@@ -492,11 +735,17 @@ company is capitalised at the new rate."""
   desc = "1 Share"
   type_colour = transparent
 
-  [[AMS]]
-    LIGHT = 0.933, 0.510, 0.933
-    DARK = 0.600, 0.196, 0.800
-    title = "Aken-Maastrichtsche", "Spoorweg-Maatschappij"
-    token_name = AMS
+{% for company in companies %}
+  [[{{ company.token }}1]]
+    token_bottom_colour = {{ company.token_bottom }}
+    token_colour = ${WHITE}
+    token_top_colour = {{ company.token_top }}
+    stripe_colour = {{ company.share_stripe }}
+    title = """{{ company.name }}"""
+    token_name = {{ company.token }}
+    size = 10%
+    desc = 1 Share
+    description = """{{ company.get ("description", "") }}"""
 
     [[[tile_1.1]]]
       size = 20%
@@ -504,264 +753,112 @@ company is capitalised at the new rate."""
       note = Director
       token_count = 2
       type_colour = ${ORANGE}
+{% endfor %}
 
-  [[HISM]]
-    LIGHT = ${GRAY}
-    DARK = ${BLACK}
-    title = "Hollandsche IJzeren", "Spoorweg-Maatschappij"
-    token_name = HISM
-
-    [[[tile_1.1]]]
-      size = 20%
-      desc = 2 Shares
-      note = Director
-      token_count = 2
-      type_colour = ${ORANGE}
-
-  [[NBDS]]
-    LIGHT = 0.392, 0.584, 0.929
-    DARK = 0.000, 0.000, 0.804
-    title = "Noord-Brabantsch-Duitsche", "Spoorweg-Maatschappij"
-    token_name = NBDS
-
-    [[[tile_1.1]]]
-      size = 20%
-      desc = 2 Shares
-      note = Director
-      token_count = 2
-      type_colour = ${ORANGE}
-
-  [[NCS]]
-    LIGHT = 0.941, 0.502, 0.502
-    DARK = 1, 0, 0
-    title = "Nederlandsche Centraal-", "Spoorweg-Maatschappij"
-    token_name = NCS
-
-    [[[tile_1.1]]]
-      size = 20%
-      desc = 2 Shares
-      note = Director
-      token_count = 2
-      type_colour = ${ORANGE}
-
-  [[NWS]]
-    LIGHT = 1.000, 0.843, 0.000
-    DARK = 1, 1, 0
-    title = "Nederlandsch-Westfaalsche", "Spoorweg-Maatschappij"
-    token_name = NWS
-
-    [[[tile_1.1]]]
-      size = 20%
-      desc = 2 Shares
-      note = Director
-      token_count = 2
-      type_colour = ${ORANGE}
-
-  [[NRS]]
-    LIGHT = 0.871, 0.722, 0.529
-    DARK = 0.804, 0.522, 0.247
-    title = "Nederlandsche", "Rhijnspoorweg-Maatschappij"
-    token_name = NRS
-
-    [[[tile_1.1]]]
-      size = 20%
-      desc = 2 Shares
-      note = Director
-      token_count = 2
-      type_colour = ${ORANGE}
-
-  [[SS]]
-    LIGHT = 0.686, 0.933, 0.933
-    DARK = 0.741, 0.718, 0.420
-    title = "Maatschappij", "tot Exploitatie van", "Staatsspoorwegen"
-    token_name = SS
-
-    [[[tile_1.1]]]
-      size = 20%
-      desc = 2 Shares
-      note = Director
-      token_count = 2
-      type_colour = ${ORANGE}
-
-  [[ZHESM]]
-    LIGHT = 0.565, 0.933, 0.565
-    DARK = 0.129, 0.369, 0.129
-    title = "Zuid-Hollandsche", "Electrische", "Spoorweg-Maatschappij"
-    token_name = ZHESM
-
-    [[[tile_1.1]]]
-      size = 20%
-      desc = 2 Shares
-      note = Director
-      token_count = 2
-      type_colour = ${ORANGE}
-
-  [[OVER]]
-    frame_colour = ${LIGHT_BLUE}
-    LIGHT = ${OVER_LIGHT}
-    DARK = ${OVER_DARK}
-    title = "Overzees"
-    token_name = OZ
+{% for company in foreigners %}
+  [[{{ company.token }}]]
+    print_instruction = "Print four copies of this page."
+    frame_colour = {{ company.box_colour }}
+    title = {{ company.name }}
+    desc = 2 Shares
+    stripe_colour = {{ company.share_stripe }}
+    token_name = {{ company.token }}
+    token_colour = ${BLACK}
+    token_count = 2
+    token_name_colour = ${WHITE}
     note = "Foreign"
-    size = 5%
-    token_bottom_colour = ${OVER_TOKEN_BOTTOM}
-
-  [[BEL]]
-    frame_colour = ${LIGHT_ORANGE}
-    LIGHT = ${BEL_LIGHT}
-    DARK = ${BEL_DARK}
-    title = "Belgie"
-    token_name = "BEL"
-    note = "Foreign"
-    size = 5%
-    token_bottom_colour = ${BEL_TOKEN_BOTTOM}
-
-  [[GER]]
-    frame_colour = ${LIGHT_RED}
-    LIGHT = ${GER_LIGHT}
-    DARK = ${GER_DARK}
-    title = "Duitsland"
-    token_name = "D"
-    note = "Foreign"
-    size = 5%
-    token_bottom_colour = ${GER_TOKEN_BOTTOM}
-
-
-[token]
-
-  [[sheet1]]
+    size = 4%
+    token_bottom_colour = {{ company.token_bottom }}
+    token_top_colour = {{ company.token_top }}
 
     [[[tile_1.1]]]
-      LIGHT = ${AMS_LIGHT}
-      DARK = ${AMS_DARK}
-      token_name = AMS
+    token_count = 1
+    desc = 1 Share
+    size = 2%
 
     [[[tile_1.2]]]
-      LIGHT = ${GRAY}
-      DARK = ${BLACK}
-      token_name = HISM
+    token_count = 1
+    desc = 1 Share
+    size = 2%
 
     [[[tile_1.3]]]
-      LIGHT = ${NBDS_LIGHT}
-      DARK = ${NBDS_DARK}
-      token_name = NBDS
+    token_count = 1
+    desc = 1 Share
+    size = 2%
+{% endfor %}
 
-    [[[tile_1.4]]]
-      LIGHT = ${NCS_LIGHT}
-      DARK = ${NCS_DARK}
-      token_name = NCS
-
-    [[[tile_1.5]]]
-      LIGHT = ${NWS_LIGHT}
-      DARK = ${NWS_DARK}
-      token_name = NWS
-
-    [[[tile_1.6]]]
-      LIGHT = ${RS_LIGHT}
-      DARK = ${RS_DARK}
-      token_name = NRS
-
-    [[[tile_1.7]]]
-      LIGHT = ${SS_LIGHT}
-      DARK = ${SS_DARK}
-      token_name = SS
-
-    [[[tile_1.8]]]
-      LIGHT = ${ZHESM_LIGHT}
-      DARK = ${ZHESM_DARK}
-      token_name = ZHESM
-
-    [[[tile_1.9]]]
-      LIGHT = ${OVER_LIGHT}
-      DARK = ${OVER_DARK}
-      token_colour = ${BLACK}
-      token_name_colour = ${WHITE}
-      token_name = OZ
-      token_bottom_colour = ${OVER_TOKEN_BOTTOM}
-
-    [[[tile_1.10]]]
-      LIGHT = ${BEL_LIGHT}
-      DARK = ${BEL_DARK}
-      token_colour = ${BLACK}
-      token_name_colour = ${WHITE}
-      token_name = BEL
-      token_bottom_colour = ${BEL_TOKEN_BOTTOM}
-
-    [[[tile_1.11]]]
-      LIGHT = ${GER_LIGHT}
-      DARK = ${GER_DARK}
-      token_colour = ${BLACK}
-      token_name_colour = ${WHITE}
-      token_name = D
-      token_bottom_colour = ${GER_TOKEN_BOTTOM}
+[token]
+  token_count = 10
+{% set page_size = 16 %}
+{% set everything = companies + foreigners %}
+{% set company_count = everything|count %}
+{% set blocks = ((company_count + page_size - 1) / page_size) | int %}
+  [[sheet1]]
+  {% for tile in range (page_size) %}
+    {% set company = everything[tile] %}
+    {% if tile < company_count %}
+    [[[tile_1.{{ tile + 1 }}]]]
+      token_bottom_colour = {{ company.token_bottom }}
+      token_top_colour = {{ company.token_top }}
+      token_name = {{ company.token }}
+      {% if tile > 7 %}
+      token_count = 2
+      {% endif %}
+      {% if "token_colour" in company.keys () %}
+      token_colour = {{ company.token_colour}}
+      token_name_colour = {{ company.token_name_colour}}
+      {% endif %}
+      {% if "token_name_font" in company.keys () %}
+      token_name_font = {{ company.token_name_font }}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 
     [[[tile_1.12]]]
+      token_count = 4
       LIGHT = ${SAVED_LIGHT}
       DARK = ${SAVED_DARK}
       token_name = SAVED
       token_bottom_colour = ${BLACK}
 
     [[[tile_1.13]]]
+      token_count = 1
       LIGHT = ${ROUND_LIGHT}
       DARK = ${ROUND_DARK}
       token_name = ROUND
       token_bottom_colour = ${LIGHT}
 
+    [[[tile_1.14]]]
+      token_count = 4
+      LIGHT = ${WHITE}
+      DARK = ${WHITE}
+      token_name = NFLM
+
 [train]
   trade = ""
 
-  [[yellow]]
-    frame_colour = ${YELLOW}
-    train = 2
-    cost = Cost: 100f
-    rust = Rusted by: BLUE
-    trade_stripe_colour = ${GREEN}
-    rust_stripe_colour = ${BLUE}
-
-  [[green]]
-    frame_colour = ${GREEN}
-    train = 3+
-    cost = Cost: 250f
-    rust = Rusted by: BROWN
-    trade_stripe_colour = ${BLUE}
-    rust_stripe_colour = ${BROWN}
-
-  [[blue]]
-    frame_colour = ${BLUE}
-    train = 5+
-    cost = Cost: 450f
-    rust = Rusted by: RED
-    trade_stripe_colour = ${BROWN}
-    rust_stripe_colour = ${RED}
-
-  [[brown]]
-    frame_colour = ${BROWN}
-    train = 7+
-    cost = Cost: 800f
-    rust = Rusted by: GRAY
-    trade_stripe_colour = ${RED}
-    rust_stripe_colour = ${GRAY}
-
-  [[red]]
-    frame_colour = ${RED}
-    train = 5D+
-    cost = "Cost: 1,250f"
-    rust = PERMANENT
-    trade_stripe_colour = ${GRAY}
-    rust_stripe_colour = ${DARK_BLACK}
-    train_rust_colour = ${WHITE}
-    rust_colour = ${WHITE}
-
-  [[gray]]
-    frame_colour = ${GRAY}
-    train = FLOOD
-    train_font = "Times-Roman", 36
-    cost = "Cost: 2,000f"
-    rust = PERMANENT
-    trade_stripe_colour = ${DARK_BLACK}
-    rust_stripe_colour = ${BLACK}
-    trade_colour = ${WHITE}
-    rust_colour = ${WHITE}
+{% for train in trains %}
+  [[{{ train.name }}]]
+    frame_colour = {{ train.frame_colour }}
+    train = {{ train.name }}
+    cost = "Cost: {{ train.cost }}"
+    rust = "{{ train.rust }}"
+    trade_stripe_colour = {{ train.trade_stripe }}
+    rust_stripe_colour = {{ train.rust_stripe }}
+    {% if "rust_colour" in train.keys () %}
+    rust_colour = {{ train.rust_colour }}
+    {% endif %}
+    {% if "trade_colour" in train.keys () %}
+    trade_colour = {{ train.trade_colour }}
+    {% endif %}
+    {% if "train_font" in train.keys () %}
+    "train_font" = {{ train.train_font }}
+    {% endif %}
+    {% if "optional" in train.keys () %}
+    [[[tile_1.1]]]
+      trade = (OPTIONAL)
+    {% endif %}
+{% endfor %}
 
   [[player1]]
     frame_colour = ${RED}
