@@ -3,9 +3,9 @@
       "name": """Aken-Maastrichtsche
 Spoorweg-Maatschappij""",
       "token": "AMS",
-      "token_top": "0.600, 0.196, 0.800",
-      "token_bottom": "0.600, 0.196, 0.800",
-      "share_stripe": "0.933, 0.510, 0.933",
+      "token_top": "${M_PURPLE}",
+      "token_bottom": "${M_PURPLE}",
+      "share_stripe": "${P_PURPLE}",
       "description": "",
       "url": "https://nl.wikipedia.org/wiki/Aken-Maastrichtsche_Spoorweg-Maatschappij",
       "note": """Owns the IJzeren Rijn and
@@ -31,9 +31,9 @@ in the Netherlands""",
       "name": """Noord-Brabantsch-Duitsche
 Spoorweg-Maatschappij""",
       "token": "NBDS",
-      "token_top": " 0.000, 0.000, 0.804",
-      "token_bottom": " 0.000, 0.000, 0.804",
-      "share_stripe": "0.392, 0.584, 0.929",
+      "token_top": " ${M_BLUE}",
+      "token_bottom": "${M_BLUE}",
+      "share_stripe": "${P_BLUE}",
       "description": "",
       "url": "https://nl.wikipedia.org/wiki/Noord-Brabantsch-Duitsche_Spoorweg-Maatschappij",
       "note": "",
@@ -43,20 +43,21 @@ Spoorweg-Maatschappij""",
       "name": """Nederlandsche Centraal-
 Spoorweg-Maatschappij""",
       "token": "NCS",
-      "token_top": "1, 0, 0",
-      "token_bottom": "1, 0, 0",
-      "share_stripe": "0.941, 0.502, 0.502",
+      "token_top": "${M_RED}",
+      "token_bottom": "${M_RED}",
+      "share_stripe": "${P_RED}",
       "description": "",
       "url": "https://nl.wikipedia.org/wiki/Nederlandsche_Centraal-Spoorweg-Maatschappij",
       "note": "",
     },
     {
       "name": """Nederlandsche
-Rhijnspoorweg-Maatschappij""",
+Rhijnspoorweg-
+Maatschappij""",
       "token": "NRS",
-      "token_top": "0.804, 0.522, 0.247",
-      "token_bottom": "0.804, 0.522, 0.247",
-      "share_stripe": "0.871, 0.722, 0.529",
+      "token_top": "${D_BROWN}",
+      "token_bottom": "${D_BROWN}",
+      "share_stripe": "${P_BROWN}",
       "description": "",
       "url": "https://nl.wikipedia.org/wiki/Nederlandsche_Rhijnspoorweg-Maatschappij",
       "note": """Owns the private company:
@@ -66,9 +67,9 @@ Spoorlijn Zevenaar - Kleef.""",
       "name": """Nederlandsch-Westfaalsche
 Spoorweg-Maatschappij""",
       "token": "NWS",
-      "token_top": "1, 1, 0",
-      "token_bottom": "1, 1, 0",
-      "share_stripe": "1.000, 0.843, 0.000",
+      "token_top": "${M_YELLOW}",
+      "token_bottom": "${M_YELLOW}",
+      "share_stripe": "${P_YELLOW}",
       "description": "",
       "url": "https://nl.wikipedia.org/wiki/Nederlandsch-Westfaalsche_Spoorweg-Maatschappij",
       "note": """Owns the private company:
@@ -79,9 +80,9 @@ Staatslijn D: Zutphen - Glanerbeek."""
 tot Exploitatie van
 Staatsspoorwegen""",
       "token": "SS",
-      "token_top": "0.604, 0.804, 0.196",
-      "token_bottom": "0.604, 0.804, 0.196",
-      "share_stripe": "0.686, 0.933, 0.933",
+      "token_top": "${L_GREEN}",
+      "token_bottom": "${L_GREEN}",
+      "share_stripe": "${P_GREEN}",
       "description": "",
       "url": "https://en.wikipedia.org/wiki/Maatschappij_tot_Exploitatie_van_Staatsspoorwegen",
       "note": """Owns the private company:
@@ -90,12 +91,13 @@ Staatslijn C: Meppel - Groningen.""",
 railway company in the Netherlands""",
     },
     {
-      "name": """Zuid-Hollandsche Electrische
+      "name": """Zuid-Hollandsche
+Electrische
 Spoorweg-Maatschappij""",
       "token": "ZHESM",
-      "token_top": "0.129, 0.369, 0.129",
-      "token_bottom": "0.129, 0.369, 0.129",
-      "share_stripe": "0.565, 0.933, 0.565",
+      "token_top": "${D_GREEN}",
+      "token_bottom": "${D_GREEN}",
+      "share_stripe": "${P_GREEN}",
       "description": "",
       "url": "https://nl.wikipedia.org/wiki/Zuid-Hollandsche_Electrische_Spoorweg-Maatschappij",
       "note": "",
@@ -106,43 +108,43 @@ Spoorweg-Maatschappij""",
 
 {% set foreigners = [
     {
-      "box_colour": "${LIGHT_BLUE}",
+      "box_colour": "${P_GREEN}",
       "name": "Overzees",
       "token": "OZ",
       "token_colour": "${BLACK}",
       "token_name_colour": "${WHITE}",
-      "token_top": "${BLUE}",
-      "token_bottom": "0.42, 0.87, 0.15",
-      "share_stripe": "0.498, 1.000, 0.831",
+      "token_top": "${L_GREEN}",
+      "token_bottom": "${D_BLUE}",
+      "share_stripe": "${M_BLUE}",
       "description": "",
       "url": "",
       "note": "",
       "country": "n Overzees",
     },
     {
-      "box_colour": "${LIGHT_ORANGE}",
+      "box_colour": "${P_BROWN}",
       "name": "Belgie",
       "token": "BEL",
       "token_colour": "${BLACK}",
       "token_name_colour": "${WHITE}",
-      "token_top": "${BROWN}",
-      "token_bottom": "0.902, 0.902, 0.980",
-      "share_stripe": "0.941, 0.902, 0.549",
+      "token_top": "${L_BROWN}",
+      "token_bottom": "${L_PURPLE}",
+      "share_stripe": "${P_PURPLE}",
       "description": "",
       "url": "",
       "note": "",
       "country": " Belgie",
     },
     {
-      "box_colour": "${LIGHT_RED}",
+      "box_colour": "${P_RED}",
       "name": "Duitsland",
       "token": "D",
       "token_colour": "${BLACK}",
       "token_name_colour": "${WHITE}",
-      "token_top": "${RED}",
-      "token_bottom": "0.941, 0.902, 0.549",
-      "share_stripe": "0.847, 0.847, 0.749",
-      "description": "0.941, 0.902, 0.549",
+      "token_top": "${M_RED}",
+      "token_bottom": "${M_YELLOW}",
+      "share_stripe": "${P_YELLOW}",
+      "description": "",
       "url": "",
       "note": "",
       "country": " Duitsland",
@@ -153,54 +155,55 @@ Spoorweg-Maatschappij""",
 {% set trains = [
     {
       "cost": "f100",
-      "frame_colour": "${YELLOW}",
+      "frame_colour": "${L_YELLOW}",
       "name": "2",
       "rust": "Rusted by BLUE",
-      "rust_stripe": "${BLUE}",
-      "trade_stripe": "${GREEN}",
+      "rust_stripe": "${L_BLUE}",
+      "trade_stripe": "${L_GREEN}",
+      "rust_colour": "${WHITE}",
     },
     {
       "cost": "f250",
-      "frame_colour": "${GREEN}",
+      "frame_colour": "${L_GREEN}",
       "name": "3+",
       "rust": "Rusted by BROWN",
-      "rust_stripe": "${BROWN}",
-      "trade_stripe": "${BLUE}",
+      "rust_stripe": "${M_BROWN}",
+      "trade_stripe": "${L_BLUE}",
     },
     {
       "cost": "f450",
-      "frame_colour": "${BLUE}",
+      "frame_colour": "${L_BLUE}",
       "name": "5+",
       "rust": "Rusted by RED",
-      "rust_stripe": "${RED}",
-      "trade_stripe": "${BROWN}",
+      "rust_stripe": "${M_RED}",
+      "trade_stripe": "${M_BROWN}",
       "optional": 1,
     },
     {
       "cost": "f800",
-      "frame_colour": "${BROWN}",
+      "frame_colour": "${M_BROWN}",
       "name": "7+",
       "rust": "Rusted by GRAY",
-      "rust_stripe": "${GRAY}",
-      "trade_stripe": "${RED}",
+      "rust_stripe": "${L_GRAY}",
+      "trade_stripe": "${M_RED}",
     },
     {
       "cost": "f1,250",
-      "frame_colour": "${RED}",
+      "frame_colour": "${M_RED}",
       "name": "5D+",
       "rust": "PERMANENT",
-      "rust_stripe": "${GRAY}",
-      "trade_stripe": "${RED}",
+      "rust_stripe": "${L_GRAY}",
+      "trade_stripe": "${L_GRAY}",
       "rust_colour": "${WHITE}",
       "trade_colour": "${WHITE}",
     },
     {
       "cost": "f2,000",
-      "frame_colour": "${GRAY}",
+      "frame_colour": "${L_GRAY}",
       "name": "FLOOD",
       "rust": "PERMANENT",
       "rust_stripe": "${BLACK}",
-      "trade_stripe": "${GRAY}",
+      "trade_stripe": "${BLACK}",
       "rust_colour": "${WHITE}",
       "trade_colour": "${WHITE}",
       "train_font": '"Times-Roman", 36',
@@ -210,23 +213,6 @@ Spoorweg-Maatschappij""",
 
 [DEFAULT]
   print_instruction = "Print one copy of this page."
-
-  BLACK = 0, 0, 0
-  BLUE = 0, 1, 1
-  # BROWN = 0.98, 0.64, 0.38
-  BROWN = 0.922, 0.780, 0.620
-  DARK_BLACK = 0.184, 0.310, 0.310
-  GRAY = 0.663, 0.663, 0.663
-  GREEN = 0.5, 1.0, 0
-  LIGHT_BLUE = 0.686, 0.933, 0.933
-  LIGHT_GREEN = 0.83, 1.0, 0.83
-  LIGHT_ORANGE = 0.98, 0.98, 0.82
-  LIGHT_RED = 1.000, 0.894, 0.882
-  LIGHT_YELLOW = 0.12,	0.85,	0.56
-  ORANGE = 1.000, 0.647, 0.000
-  RED = 1.0, 0.0, 0.0
-  WHITE = 1, 1, 1
-  YELLOW = 1.0, 1.0, 0.0
 
   ROUND_DARK = 1.0, 0.647, 0.0
   ROUND_LIGHT = 0.0, 0.0, 1.0
@@ -332,11 +318,11 @@ Dividend: Half-pay total income."""
         {% endif %}
       desc = {{ value }}
         {% if not value % 50 %}
-      tile_colour = ${LIGHT_BLUE}
+      tile_colour = ${P_GREEN}
         {% elif not value % 10 %}
-      tile_colour = ${LIGHT_RED}
+      tile_colour = ${P_RED}
         {%elif not value % 5 %}
-      tile_colour = ${LIGHT_ORANGE}
+      tile_colour = ${P_YELLOW}
         {% else %}
       tile_colour = ${WHITE}
         {% endif %}
@@ -360,17 +346,17 @@ Dividend: Half-pay total income."""
 
     [[[tile_4.1]]]
       desc = "Operating"
-      tile_colour = ${YELLOW}
+      tile_colour = ${L_YELLOW}
       tile_stroke_colour = ${BLACK}
 
     [[[tile_5.1]]]
       desc = "Operating"
-      tile_colour = ${GREEN}
+      tile_colour = ${L_GREEN}
       tile_stroke_colour = ${BLACK}
 
     [[[tile_6.1]]]
       desc = "Operating"
-      tile_colour = ${BROWN}
+      tile_colour = ${L_BROWN}
       tile_stroke_colour = ${BLACK}
 
   [[sheet1]]
@@ -383,22 +369,22 @@ Dividend: Half-pay total income."""
     [[[tile_{{ ndx + 1 }}.1]]]
       desc = {{ value }}
       {% if value >= 67 and value <= 80%}
-      tile_colour = ${YELLOW}
+      tile_colour = ${L_YELLOW}
       {% elif value >= 89 and value <= 101 %}
-      tile_colour = ${GREEN}
+      tile_colour = ${L_GREEN}
       {% elif value == 116 %}
-      tile_colour = ${BLUE}
+      tile_colour = ${L_BLUE}
       {% elif value == 135 %}
-      tile_colour = ${BROWN}
+      tile_colour = ${L_BROWN}
       {% elif value == 1000 %}
-      tile_colour = ${LIGHT_RED}
+      tile_colour = ${L_RED}
       {% endif %}
 {% endfor %}
 
 [private]
 
   [[yellow]]
-    frame_colour = ${LIGHT_ORANGE}
+    frame_colour = ${P_YELLOW}
 
     [[[tile_1.1]]]
       cost = Cost: f0
@@ -473,7 +459,7 @@ normal station placement."""
       close = ""
 
   [[green]]
-    frame_colour = ${LIGHT_GREEN}
+    frame_colour = ${P_GREEN}
 
     [[[tile_1.1]]]
       cost = Cost: f300
@@ -540,7 +526,7 @@ green 3+ train is bought."""
       close = """Close: In green phase."""
 
   [[blue]]
-    frame_colour = ${LIGHT_BLUE}
+    frame_colour = ${P_BLUE}
 
     [[[tile_1.1]]]
       cost = Cost: f180
@@ -631,7 +617,7 @@ is the 2-train route from that tile."""
       close = "Close: In brown phase."
 
   [[brown]]
-    frame_colour = ${BROWN}
+    frame_colour = ${P_BROWN}
 
     [[[tile_1.1]]]
       cost = Cost: f200
@@ -736,7 +722,7 @@ company is capitalised at the new rate."""
   type_colour = transparent
 
 {% for company in companies %}
-  [[{{ company.token }}1]]
+  [[{{ company.token }}]]
     token_bottom_colour = {{ company.token_bottom }}
     token_colour = ${WHITE}
     token_top_colour = {{ company.token_top }}
@@ -861,12 +847,12 @@ company is capitalised at the new rate."""
 {% endfor %}
 
   [[player1]]
-    frame_colour = ${RED}
+    frame_colour = ${M_RED}
     train = ""
     cost = ""
     rust = ""
-    trade_stripe_colour = ${BLUE}
-    rust_stripe_colour = ${BLUE}
+    trade_stripe_colour = ${M_BLUE}
+    rust_stripe_colour = ${M_BLUE}
     train_rust_colour = ${WHITE}
     rust_colour = ${WHITE}
 
@@ -889,12 +875,12 @@ company is capitalised at the new rate."""
       train = "6"
 
   [[player2]]
-    frame_colour = ${BLUE}
+    frame_colour = ${M_BLUE}
     train = ""
     cost = ""
     rust = ""
-    trade_stripe_colour = ${RED}
-    rust_stripe_colour = ${RED}
+    trade_stripe_colour = ${M_RED}
+    rust_stripe_colour = ${M_RED}
 
     [[[tile_1.1]]]
       train = "1"

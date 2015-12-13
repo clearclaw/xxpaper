@@ -48,7 +48,6 @@ class Share (Sheet):
     dash_space = self.value ("side_split_dash_space")
     place = self.value ("side_split_place")
     gap = float (self.value ("side_split_gap"))
-
     if place == "left":
       ox = self.x_off + self.side_stripe_inset_x
     elif place == "centre":
@@ -57,7 +56,6 @@ class Share (Sheet):
     elif place == "right":
       ox = (self.x_off + self.side_stripe_inset_x + self.type_stripe_width
             - (gap * self.side_split_count))
-
     for x in xrange (self.num_x):
       for i in xrange (self.side_split_count):
         bx = (self.tile_x * x) + ox + ((i + 1) * gap)
@@ -76,7 +74,7 @@ class Share (Sheet):
   @logtool.log_call
   def type_size (self, x, y):
     type_colour = self.value ("type_colour", x, y)
-    if type_colour == "transparent":
+    if type_colour == "transparent" and self.value ("size", x, y):
       bx = self.side_stripe_inset_x
       by = self.type_stripe_inset_y
       self.box ("size_box", x, y, bx, by,

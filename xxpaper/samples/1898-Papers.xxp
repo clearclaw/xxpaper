@@ -1,0 +1,699 @@
+{% set companies = [
+    {
+      "name": "Burgunder Bahn Lyon",
+      "token": "BBL",
+      "token_top": "${M_RED}",
+      "token_bottom": "${M_RED}",
+      "share_stripe": "${P_RED}",
+      "token_count": 5,
+      "note": "Home stations: Lyon, Marseilles",
+      "description": """May merge with the 'car'
+to form the 'RTB'.""",
+      "historical": 1,
+      "share_count": 10,
+    },
+    {
+      "name": "Canal du Midi Bahn",
+      "token": "CMB",
+      "token_top": " ${M_BLUE}",
+      "token_bottom": "${M_BLUE}",
+      "share_stripe": "${P_BLUE}",
+      "token_count": 5,
+      "note": "Home stations: Marseilles, Toulouse",
+      "historical": 1,
+      "share_count": 10,
+    },
+    {
+      "name": "Normanische Overlord Bahn",
+      "token": "NOB",
+      "token_top": "${M_PURPLE}",
+      "token_bottom": "${M_PURPLE}",
+      "share_stripe": "${P_PURPLE}",
+      "token_count": 5,
+      "note": "Home stations: Firenze, Pisa",
+      "historical": 1,
+      "share_count": 10,
+    },
+    {
+      "name": "Rhonetal-Bahn",
+      "token": "RTB",
+      "token_top": "${L_GREEN}",
+      "token_bottom": "${L_PURPLE}",
+      "share_stripe": "${P_PURPLE}",
+      "token_count": 5,
+      "note": "Home stations: Lyon, Marseilles, Monaco",
+      "description": """May be formed from
+the 'car' and 'BBL'.""",
+      "historical": 1,
+      "share_count": 10,
+    },
+    {
+      "name": "Tour De France",
+      "token": "TDF",
+      "token_top": "${M_GREEN}",
+      "token_bottom": "${M_GREEN}",
+      "share_stripe": "${M_GREEN}",
+      "token_count": 5,
+      "note": "Home stations: Paris, Bordeaux	",
+      "historical": 1,
+      "share_count": 10,
+    },
+    {
+      "name": "Jules Verne	",
+      "token": "VERN",
+      "token_top": "${L_GRAY}",
+      "token_bottom": "${L_BROWN}",
+      "share_stripe": "${P_BROWN}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Napoleon Bonaparte",
+      "token": "BONA",
+      "token_top": "${L_RED}",
+      "token_bottom": "${L_BLUE}",
+      "share_stripe": "${P_BLUE}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Marie Sophie Curie",
+      "token": "CURI",
+      "token_top": "${L_GRAY}",
+      "token_bottom": "${L_GREEN}",
+      "share_stripe": "${P_GREEN}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Jeanne D'Arc",
+      "token": "DARC",
+      "token_top": "${M_BROWN}",
+      "token_bottom": "${M_BROWN}",
+      "share_stripe": "${P_BROWN}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Jacques Louis David",
+      "token": "DAVI",
+      "token_top": "${L_BLUE}",
+      "token_bottom": "${L_YELLOW}",
+      "share_stripe": "${P_YELLOW}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Rene Descartes",
+      "token": "DESC",
+      "token_top": "${L_BLUE}",
+      "token_bottom": "${L_GRAY}",
+      "share_stripe": "${P_GRAY}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Abel Gance",
+      "token": "GANC",
+      "token_top": "${L_GREEN}",
+      "token_bottom": "${L_RED}",
+      "share_stripe": "${P_RED}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Albert Lamorisse",
+      "token": "LAMO",
+      "token_top": "${L_YELLOW}",
+      "token_bottom": "${L_PURPLE}",
+      "share_stripe": "${P_PURPLE}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Michel de Notre Dame",
+      "token": "NOST",
+      "token_top": "${L_GREEN}",
+      "token_bottom": "${L_BLUE}",
+      "share_stripe": "${P_BLUE}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Edith Piaf",
+      "token": "PIAF",
+      "token_top": "${L_BROWN}",
+      "token_bottom": "${L_RED}",
+      "share_stripe": "${P_RED}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Michel Platini",
+      "token": "PLAT",
+      "token_top": "${L_RED}",
+      "token_bottom": "${L_GRAY}",
+      "share_stripe": "${P_GRAY}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+    {
+      "name": "Maurice Ravel",
+      "token": "RAVE",
+      "token_top": "${L_PURPLE}",
+      "token_bottom": "${L_GRAY}",
+      "share_stripe": "${P_GRAY}",
+      "token_count": 5,
+      "note": "",
+      "historical": 0,
+      "share_count": 10,
+    },
+
+    {
+      "name": "Cote D'Argent Bahn",
+      "box_colour": "${P_BLUE}",
+      "token": "cab",
+      "token_top": "${M_PURPLE}",
+      "token_bottom": "${M_PURPLE}",
+      "share_stripe": "${P_PURPLE}",
+      "token_top_stripe": "${L_BLUE}",
+      "token_bottom_stripe": "${L_BLUE}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "Home stations: Bordeaux",
+      "description": "Splits from the TDF",
+      "historical": 1,
+      "share_count": 5,
+    },
+    {
+      "name": "Pariser Stadtbahnen",
+      "box_colour": "${P_BLUE}",
+      "token": "psb",
+      "token_top": "${M_GREEN}",
+      "token_bottom": "${M_GREEN}",
+      "share_stripe": "${P_GREEN}",
+      "token_top_stripe": "${L_BLUE}",
+      "token_bottom_stripe": "${L_BLUE}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "",
+      "description": "Splits from the TDF",
+      "historical": 1,
+      "share_count": 5,
+    },
+    {
+      "name": "Kohlebahnen Lille-Roubaix",
+      "box_colour": "${P_GRAY}",
+      "token": "klr",
+      "token_top": "${M_RED}",
+      "token_bottom": "${M_RED}",
+      "share_stripe": "${P_RED}",
+      "token_top_stripe": "${L_GREEN}",
+      "token_bottom_stripe": "${L_GREEN}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "Home stations: Lille/Roubaix",
+      "historical": 1,
+      "share_count": 5,
+    },
+    {
+      "name": "Cote D'Azur Route",
+      "box_colour": "${P_GREEN}",
+      "token": "car",
+      "token_top": "${M_BLUE}",
+      "token_bottom": "${M_BLUE}",
+      "share_stripe": "${P_BLUE}",
+      "token_top_stripe": "${L_RED}",
+      "token_bottom_stripe": "${L_RED}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "Home stations: Monaco",
+      "description": """May merge with the 'BBL'
+to form the 'RTB'.""",
+      "historical": 1,
+      "share_count": 5,
+    },
+    {
+      "name": """Elsassisch-Lothringische
+Eisen-Bahn""",
+      "box_colour": "${P_GRAY}",
+      "token": "ele",
+      "token_top": "${M_GREEN}",
+      "token_bottom": "${M_GREEN}",
+      "share_stripe": "${P_GREEN}",
+      "token_top_stripe": "${L_YELLOW}",
+      "token_bottom_stripe": "${L_YELLOW}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "Home stations: Nancy/Metz",
+      "historical": 1,
+      "share_count": 5,
+    },
+
+    {
+      "name": "L'Egalite",
+      "box_colour": "${P_GRAY}",
+      "token": "egal",
+      "token_top": "${M_YELLOW}",
+      "token_bottom": "${M_YELLOW}",
+      "share_stripe": "${P_YELLOW}",
+      "token_top_stripe": "${L_PURPLE}",
+      "token_bottom_stripe": "${L_PURPLE}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "",
+      "historical": 0,
+      "share_count": 5,
+    },
+    {
+      "name": "La Fraternite",
+      "box_colour": "${P_GRAY}",
+      "token": "frat",
+      "token_top": "${M_YELLOW}",
+      "token_bottom": "${M_YELLOW}",
+      "share_stripe": "${P_YELLOW}",
+      "token_top_stripe": "${M_BROWN}",
+      "token_bottom_stripe": "${M_BROWN}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "",
+      "historical": 0,
+      "share_count": 5,
+    },
+    {
+      "name": "La Liberte",
+      "box_colour": "${P_GRAY}",
+      "token": "libe",
+      "token_top": "${M_BROWN}",
+      "token_bottom": "${M_BROWN}",
+      "share_stripe": "${P_BROWN}",
+      "token_top_stripe": "${L_GRAY}",
+      "token_bottom_stripe": "${L_GRAY}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "",
+      "historical": 0,
+      "share_count": 5,
+    },
+    {
+      "name": "La Resistance",
+      "box_colour": "${P_GRAY}",
+      "token": "resi",
+      "token_top": "${BLACK}",
+      "token_bottom": "${BLACK}",
+      "share_stripe": "${M_GRAY}",
+      "token_top_stripe": "${M_RED}",
+      "token_bottom_stripe": "${M_RED}",
+      "token_colour": "${BLACK}",
+      "token_name_colour": "${WHITE}",
+      "token_count": 2,
+      "note": "",
+      "historical": 0,
+      "share_count": 5,
+    },
+  ]
+%}
+
+{% set trains = [
+    {
+      "cost": "100fr",
+      "frame_colour": "${L_YELLOW}",
+      "name": "2",
+      "rust": "Rusted by 4",
+      "rust_stripe": "${M_GREEN}",
+      "trade_stripe": "${L_GREEN}",
+    },
+    {
+      "cost": "200fr",
+      "frame_colour": "${L_GREEN}",
+      "name": "3",
+      "rust": "Rusted by 5",
+      "rust_stripe": "${M_BROWN}",
+      "trade_stripe": "${M_GREEN}",
+    },
+    {
+      "cost": "350fr",
+      "frame_colour": "${M_GREEN}",
+      "name": "4",
+      "rust": "Rusted by 7",
+      "rust_stripe": "${D_RED}",
+      "trade_stripe": "${M_BROWN}",
+    },
+    {
+      "cost": "550fr",
+      "frame_colour": "${M_BROWN}",
+      "name": "5",
+      "rust": "Rusted by 8",
+      "rust_stripe": "${M_GRAY}",
+      "trade_stripe": "${M_RED}",
+    },
+    {
+      "cost": "800fr",
+      "frame_colour": "${M_RED}",
+      "name": "6",
+      "rust": "PERMANENT",
+      "rust_stripe": "${M_GRAY}",
+      "trade_stripe": "${D_RED}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+    {
+      "cost": "1,100fr",
+      "frame_colour": "${D_RED}",
+      "name": "7",
+      "rust": "PERMANENT",
+      "rust_stripe": "${M_GRAY}",
+      "trade_stripe": "${D_GRAY}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+    {
+      "cost": "1,450fr",
+      "frame_colour": "${M_GRAY}",
+      "name": "8",
+      "rust": "PERMANENT",
+      "rust_stripe": "${D_GRAY}",
+      "trade_stripe": "${D_GRAY}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+  ]
+%}
+
+[DEFAULT]
+  print_instruction = "Print one copy of this page."
+
+  ROUND_DARK = 1.0, 0.647, 0.0
+  ROUND_LIGHT = 0.0, 0.0, 1.0
+  SAVED_DARK = 0.804, 0.804, 0.804
+  SAVED_LIGHT = 0.686, 0.933, 0.933
+
+[charter]
+  desc1 = "Assets, Treasury & Trains"
+
+{% set page_size = 4 %}
+{% set blocks = ((companies | count + 3) / page_size) | int %}
+{% set tiles = ["1.1", "1.2", "2.1", "2.2",] %}
+{% for sheet in range (blocks) %}
+  [[sheet{{ sheet + 1 }}]]
+  {% set index = sheet * page_size %}
+  {% for tile in range (page_size) %}
+    {% if index + tile >= companies | count %}
+      {% continue %}
+    {% endif %}
+    {% set company = companies[index + tile] %}
+    [[[tile_{{ tiles[tile] }}]]]
+    {% if "box_colour" in company.keys () %}
+      box_colour = {{ company.box_colour }}
+    {% endif %}
+      stripe_colour = {{ company.share_stripe }}
+      token_bottom_colour = {{ company.token_bottom }}
+      token_top_colour = {{ company.token_top }}
+      title = """{{ company.name }}"""
+      token_name = {{ company.token }}
+      token_count = {{ company.token_count}}
+    {% if "token_colour" in company.keys () %}
+      token_colour = {{ company.token_colour }}
+      token_name_colour = {{ company.token_name_colour }}
+    {% endif %}
+    {% if "token_bottom_stripe" in company.keys () %}
+      token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+    {% endif %}
+    {% if "token_top_stripe" in company.keys () %}
+      token_top_stripe_colour = {{ company.token_top_stripe }}
+    {% endif %}
+      note1 = """{{ company.note }}
+
+Un-bought shares are in treasury.
+Purchase shares from treasury.
+Market shares pay dividends to bank.
+Station costs: 25fr / 50fr / 100fr / 200fr"""
+    {% if "token_name_font" in company.keys () %}
+      token_name_font = {{ company.token_name_font }}
+    {% endif %}
+    {% for ndx in range (company.token_count) %}
+      {% if company.historical %}
+      price{{ ndx + 1}} = "H"
+      {% if company.token_colour %}
+      price{{ ndx + 1}}_colour = ${WHITE}
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+[market]
+
+{% set revsheets = 3 %}
+{% for sheet in range (revsheets) %}
+  {% for sheet_type in ["a", "b",] %}
+  [[revenue{{ sheet + 1 }}{{ sheet_type }}]]
+    num_across_x = 15
+    num_across_y = 12
+    tile_x = 40
+    tile_y = 40
+    tile_colour = ${WHITE}
+    tile_stroke_colour = ${BLACK}
+
+    {% for row in range (12) %}
+      {% for ndx in range (15) %}
+    [[[tile_{{ ndx + 1 }}.{{ row + 1 }}]]]
+        {% if sheet_type == "a" %}
+          {% set value = (sheet * 15) + (row * revsheets * 15) + ndx %}
+        {% elif sheet_type == "b" %}
+          {% set value = (sheet * 180) + (row * 15) + ndx %}
+        {% endif %}
+      desc = {{ value }}
+        {% if not value % 50 %}
+      tile_colour = ${P_GREEN}
+        {% elif not value % 10 %}
+      tile_colour = ${P_RED}
+        {%elif not value % 5 %}
+      tile_colour = ${P_YELLOW}
+        {% else %}
+      tile_colour = ${WHITE}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+  [[round]]
+    num_across_x = 10
+    num_across_y = 2
+    tile_x = 64
+    tile_y = 64
+    tile_colour = ${WHITE}
+    tile_stroke_colour = ${WHITE}
+    desc = ""
+
+    [[[tile_4.2]]]
+      desc = "Stock"
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_4.1]]]
+      desc = "Operating"
+      tile_colour = ${L_YELLOW}
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_5.1]]]
+      desc = "Operating"
+      tile_colour = ${L_GREEN}
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_6.1]]]
+      desc = "Operating"
+      tile_colour = ${L_BROWN}
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_7.1]]]
+      desc = "Operating"
+      tile_colour = ${L_GRAY}
+      tile_stroke_colour = ${BLACK}
+
+
+[private]
+
+  [[yellow]]
+    frame_colour = ${P_YELLOW}
+
+    [[[tile_1.1]]]
+      cost = Cost: L.20 / L.50
+      revenue = Revenue: L.20
+      title = Bruckenbaugesellschaft Avignon
+      desc = """Owned by the SS.
+Owning company may place up to four
+track tiles \(two may be upgrades\)
+as its entire track lay, for f10 each
+plus any terrain and upgrade costs."""
+      close = """Close: In brown phase or when power used."""
+
+[share]
+  token_count = 1
+  note = ""
+  desc = "1 Share"
+  type_colour = transparent
+
+{% for company in companies %}
+  [[{{ company.token }}]]
+  {% if "box_colour" in company.keys () %}
+    frame_colour = {{ company.box_colour}}
+  {% endif %}
+  {% if not company.historical %}
+    side_split_dash_length = 10
+    side_split_place = centre
+    side_split_count = 5
+    side_split_colour = ${BLACK}
+  {% endif %}
+    token_bottom_colour = {{ company.token_bottom }}
+    token_top_colour = {{ company.token_top }}
+  {% if "token_colour" in company.keys () %}
+    token_colour = {{ company.token_colour }}
+    token_name_colour = {{ company.token_name_colour }}
+  {% endif %}
+  {% if "token_bottom_stripe" in company.keys () %}
+    token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+  {% endif %}
+  {% if "token_top_stripe" in company.keys () %}
+    token_top_stripe_colour = {{ company.token_top_stripe }}
+  {% endif %}
+    stripe_colour = {{ company.share_stripe }}
+    title = """{{ company.name }}"""
+    token_name = {{ company.token }}
+    size = {{ 100 / company.share_count }}%
+    desc = 1 Share
+    description = """{{ company.get ("description", "") }}"""
+
+    [[[tile_1.1]]]
+      size = {{ 200 / company.share_count }}%
+      desc = 2 Shares
+      note = Director
+      token_count = 2
+      type_colour = ${ORANGE}
+{% endfor %}
+
+{% for company in companies %}
+  [[concession_{{ company.token }}]]
+    token_count = 2
+    frame_colour = ${M_GRAY}
+    side_split_dash_length = 10
+    side_split_place = centre
+    side_split_count = 5
+    side_split_colour = ${WHITE}
+    token_bottom_colour = {{ company.token_bottom }}
+    token_top_colour = {{ company.token_top }}
+  {% if "token_colour" in company.keys () %}
+    token_colour = {{ company.token_colour }}
+    token_name_colour = {{ company.token_name_colour }}
+  {% endif %}
+  {% if "token_bottom_stripe" in company.keys () %}
+    token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+  {% endif %}
+  {% if "token_top_stripe" in company.keys () %}
+    token_top_stripe_colour = {{ company.token_top_stripe }}
+  {% endif %}
+    stripe_colour = {{ company.share_stripe }}
+    title = """{{ company.name }}"""
+    title_colour = ${WHITE}
+    token_name = {{ company.token }}
+    size = ""
+    desc = ""
+    description_font = "Times-Italic", 18
+    description = "CONCESSION"
+    description_colour = ${WHITE}
+{% endfor %}
+
+
+
+[token]
+  token_count = 11
+
+{% set page_size = 16 %}
+{% set company_count = companies | count %}
+{% set blocks = ((company_count + page_size - 1) / page_size) | int %}
+{% for sheet in range (blocks) %}
+  [[sheet{{ sheet + 1 }}]]
+  {% set index = sheet * page_size %}
+  {% for tile in range (page_size) %}
+    {% set company = companies[index + tile] %}
+    {% if (sheet * page_size) + tile < company_count %}
+    [[[tile_1.{{ tile + 1 }}]]]
+      token_bottom_colour = {{ company.token_bottom }}
+      token_top_colour = {{ company.token_top }}
+      token_name = {{ company.token }}
+      {% if "token_colour" in company.keys () %}
+      token_colour = {{ company.token_colour }}
+      token_name_colour = {{ company.token_name_colour }}
+      {% endif %}
+      {% if "token_bottom_stripe" in company.keys () %}
+      token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+      {% endif %}
+      {% if "token_top_stripe" in company.keys () %}
+      token_top_stripe_colour = {{ company.token_top_stripe }}
+      {% endif %}
+      {% if "token_name_font" in company.keys () %}
+      token_name_font = {{ company.token_name_font }}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if sheet == blocks - 1 %}
+     [[[tile_1.16]]]
+      token_top_colour = ${M_RED}
+      token_bottom_colour = ${M_BLUE}
+      token_colour = "${BLACK}"
+      token_name = "ROUND"
+      token_name_colour = "${WHITE}"
+   {% endif %}
+{% endfor %}
+
+[train]
+  trade = ""
+
+{% for train in trains %}
+  [[{{ train.name }}]]
+    frame_colour = {{ train.frame_colour }}
+    train = {{ train.name }}
+    cost = "Cost: {{ train.cost }}"
+    rust = "{{ train.rust }}"
+    trade_stripe_colour = {{ train.trade_stripe }}
+    rust_stripe_colour = {{ train.rust_stripe }}
+    {% if "rust_colour" in train.keys () %}
+    rust_colour = {{ train.rust_colour }}
+    {% endif %}
+    {% if "trade_colour" in train.keys () %}
+    trade_colour = {{ train.trade_colour }}
+    {% endif %}
+    {% if "train_font" in train.keys () %}
+    "train_font" = {{ train.train_font }}
+    {% endif %}
+{% endfor %}
