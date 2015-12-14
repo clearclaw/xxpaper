@@ -1,3 +1,5 @@
 recursive-include xxpaper *.conf
 include versioneer.py
 include xxpaper/_version.py
+include requirements.txt
+include LICENSE
