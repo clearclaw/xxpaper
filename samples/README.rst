@@ -24,6 +24,8 @@ traditional colours for the companies from the Avalon Hill game.
 1851-Papers.xxp
 ===============
 
+NOTE: Not yet verified as correct.
+
 A simple and mostly straight-forward implementation for 1851 using
 just a little Jinja to centralise all the company and train
 information. 
@@ -37,7 +39,6 @@ automatically picked up for charters, shares, tokens etc.  Also
 includes such details as two sizes of charters, jinja-calculated
 revenue charts in two orientations, a phase track (drawn as a type of
 market), player turn order cards (drawn as a type of train), etc.
-
 
 1898-Papers.xxp
 ===============
