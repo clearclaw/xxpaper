@@ -3,8 +3,8 @@ Sample XXPaper files to demonstrate the tool and techniques:
 colours.xxp
 ===========
 
-A demonstration file using jinja to create a gid of the 28 default
-colours and thier names.
+A demonstration file using jinja to create a grid of the 28 default
+colours and their names.
 
 
 1830-Historical-Papers.xxp
@@ -35,6 +35,5 @@ market), player turn order cards (drawn as a type of train), etc.
 1898-Papers.xxp
 ===============
 
-A more complex jinja-based implementation with multiple share/issue
-sizes, side splits on share stripes, etc.
-
+A complex jinja-based implementation with multiple share/issue sizes,
+side splits on share stripes, etc.
