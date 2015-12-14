@@ -21,6 +21,13 @@ A simple and very straight-forward implementation for 1830 using the
 traditional colours for the companies from the Avalon Hill game.
 
 
+1851-Papers.xxp
+===============
+
+A simple and mostly straight-forward implementation for 1851 using
+just a little Jinja to centralise all the company and train
+information. 
+
 1839-Papers.xxp
 ===============
 
@@ -34,6 +41,8 @@ market), player turn order cards (drawn as a type of train), etc.
 
 1898-Papers.xxp
 ===============
+
+NOTE: Not yet verified as correct.
 
 A complex jinja-based implementation with multiple share/issue sizes,
 side splits on share stripes, etc.
