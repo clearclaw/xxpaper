@@ -697,3 +697,31 @@ plus any terrain and upgrade costs."""
     "train_font" = {{ train.train_font }}
     {% endif %}
 {% endfor %}
+
+  [[player1]]
+    frame_colour = ${M_RED}
+    train = ""
+    cost = ""
+    rust = ""
+    trade_stripe_colour = ${M_BLUE}
+    rust_stripe_colour = ${M_BLUE}
+    train_rust_colour = ${WHITE}
+    rust_colour = ${WHITE}
+
+    [[[tile_1.1]]]
+      train = "1"
+
+    [[[tile_1.2]]]
+      train = "2"
+
+    [[[tile_1.3]]]
+      train = "3"
+
+    [[[tile_2.1]]]
+      train = "4"
+
+    [[[tile_2.2]]]
+      train = "5"
+
+    [[[tile_2.3]]]
+      train = "6"
