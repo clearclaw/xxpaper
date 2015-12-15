@@ -38,57 +38,65 @@ Station cost: $Free/$40/$100/..."""
   [[sheet1]]
 
     [[[tile_1.1]]]
-      DARK = ${COLOR1_CO}
-      LIGHT = ${COLOR2_CO}
+      token_top_colour = ${COLOR1_CO}
+      token_bottom_colour = ${COLOR1_CO}
+      stripe_colour = ${COLOR2_CO}
       title = "Chesapeake & Ohio Railroad"
       token_name = C&O
       token_count = 3
 
     [[[tile_1.2]]]
-      LIGHT = ${COLOR2_NYC}
-      DARK = ${COLOR1_NYC}
+      token_top_colour = ${COLOR1_NYC}
+      token_bottom_colour = ${COLOR1_NYC}
+      stripe_colour = ${COLOR2_NYC}
       title = "New York Central Railroad"
       token_name = NYC
 
     [[[tile_2.1]]]
-      DARK = ${COLOR1_BO}
-      LIGHT = ${COLOR2_BO}
+      token_top_colour = ${COLOR1_BO}
+      token_bottom_colour = ${COLOR1_BO}
+      stripe_colour = ${COLOR2_BO}
       title = "Baltimore & Ohio Railroad"
       token_name = B&O
       token_count = 3
 
     [[[tile_2.2]]]
-      LIGHT = ${COLOR2_CPR}
-      DARK = ${COLOR1_CPR}
+      token_top_colour = ${COLOR1_CPR}
+      token_bottom_colour = ${COLOR1_CPR}
+      stripe_colour = ${COLOR2_CPR}
       title = "Canadian Pacific Railroad"
       token_name = CPR
 
   [[sheet2]]
 
     [[[tile_1.1]]]
-      LIGHT = ${COLOR2_ERIE}
-      DARK = ${COLOR1_ERIE}
+      token_top_colour = ${COLOR1_ERIE}
+      token_bottom_colour = ${COLOR1_ERIE}
+      stripe_colour = ${COLOR2_ERIE}
       title = "Erie Railroad"
       token_name = ERIE
       token_count = 3
 
     [[[tile_1.2]]]
-      DARK = ${COLOR1_NYNH}
-      LIGHT = ${COLOR2_NYNH}
+      token_top_colour = ${COLOR1_NYNH}
+      token_bottom_colour = ${COLOR1_NYNH}
+      stripe_colour = ${COLOR2_NYNH}
       title = "New York, New Haven", "& Hartford Railroad"
       token_name = NYNH
       token_count = 2
 
     [[[tile_2.1]]]
-      LIGHT = ${COLOR2_BM}
-      DARK = ${COLOR1_BM}
+      token_top_colour = ${COLOR1_BM}
+      token_bottom_colour = ${COLOR1_BM}
+      stripe_colour = ${COLOR2_BM}
       title = "Baltimore & Maine Railroad"
       token_name = B&M
       token_count = 2
 
     [[[tile_2.2]]]
-      LIGHT = ${COLOR2_PRR}
-      DARK = ${COLOR1_PRR}
+      token_top_colour = ${COLOR1_PRR}
+      token_bottom_colour = ${COLOR1_PRR}
+      stripe_colour = ${COLOR2_PRR}
       title = "Pennsylvania Railroad"
       token_name = PRR
 
@@ -160,8 +168,9 @@ public company."""
   type_colour = transparent
 
   [[B&O]]
-    LIGHT = ${COLOR2_BO}
-    DARK = ${COLOR1_BO}
+    token_top_colour = ${COLOR1_BO}
+    token_bottom_colour = ${COLOR1_BO}
+    stripe_colour = ${COLOR2_BO}
     title = "Baltimore & Ohio Railroad"
     token_name = B&O
 
@@ -173,8 +182,9 @@ public company."""
       type_colour = ${PRESIDENT_STRIPE}
 
   [[NYC]]
-    LIGHT = ${COLOR2_NYC}
-    DARK = ${COLOR1_NYC}
+    token_top_colour = ${COLOR1_NYC}
+    token_bottom_colour = ${COLOR1_NYC}
+    stripe_colour = ${COLOR2_NYC}
     title = "New York Central Railroad"
     token_name = NYC
 
@@ -186,8 +196,9 @@ public company."""
       type_colour = ${PRESIDENT_STRIPE}
 
   [[B&M]]
-    LIGHT = ${COLOR2_BM}
-    DARK = ${COLOR1_BM}
+    token_top_colour = ${COLOR1_BM}
+    token_bottom_colour = ${COLOR1_BM}
+    stripe_colour = ${COLOR2_BM}
     title = "Baltimore & Maine Railroad"
     token_name = B&M
 
@@ -199,8 +210,9 @@ public company."""
       type_colour = ${PRESIDENT_STRIPE}
 
   [[PRR]]
-    LIGHT = ${COLOR2_PRR}
-    DARK = ${COLOR1_PRR}
+    token_top_colour = ${COLOR1_PRR}
+    token_bottom_colour = ${COLOR1_PRR}
+    stripe_colour = ${COLOR2_PRR}
     title = "Pennsylvania Railroad"
     token_name = PRR
 
@@ -212,8 +224,9 @@ public company."""
       type_colour = ${PRESIDENT_STRIPE}
 
   [[ERIE]]
-    LIGHT = ${COLOR2_ERIE}
-    DARK = ${COLOR1_ERIE}
+    token_top_colour = ${COLOR1_ERIE}
+    token_bottom_colour = ${COLOR1_ERIE}
+    stripe_colour = ${COLOR2_ERIE}
     title = "Eerie Railroad"
     token_name = ERIE
 
@@ -225,8 +238,9 @@ public company."""
       type_colour = ${PRESIDENT_STRIPE}
 
   [[CPR]]
-    LIGHT = ${COLOR2_CPR}
-    DARK = ${COLOR1_CPR}
+    token_top_colour = ${COLOR1_CPR}
+    token_bottom_colour = ${COLOR1_CPR}
+    stripe_colour = ${COLOR2_CPR}
     title = "Canadian Pacific Railroad"
     token_name = CPR
 
@@ -238,8 +252,9 @@ public company."""
       type_colour = ${PRESIDENT_STRIPE}
 
   [[C&O]]
-    LIGHT = ${COLOR2_CO}
-    DARK = ${COLOR1_CO}
+    token_top_colour = ${COLOR1_CO}
+    token_bottom_colour = ${COLOR1_CO}
+    stripe_colour = ${COLOR2_CO}
     title = "Chesapeake & Ohio Railroad"
     token_name = C&O
 
@@ -251,8 +266,9 @@ public company."""
       type_colour = ${PRESIDENT_STRIPE}
 
   [[NYNH]]
-    LIGHT = ${COLOR2_NYNH}
-    DARK = ${COLOR1_NYNH}
+    token_top_colour = ${COLOR1_NYNH}
+    token_bottom_colour = ${COLOR1_NYNH}
+    stripe_colour = ${COLOR2_NYNH}
     title = "New York, New Haven", "& Hartford Railroad"
     token_name = NYNH
 
@@ -268,48 +284,48 @@ public company."""
   [[sheet1]]
 
     [[[tile_1.1]]]
-      LIGHT = ${COLOR1_BO}
-      DARK = ${COLOR1_BO}
+      token_top_colour = ${COLOR1_BO}
+      token_bottom_colour = ${COLOR1_BO}
       token_name = B&O
 
     [[[tile_1.2]]]
-      LIGHT = ${COLOR2_CO}
-      DARK = ${COLOR1_CO}
+      token_top_colour = ${COLOR1_CO}
+      token_bottom_colour = ${COLOR1_CO}
       token_name = C&O
 
     [[[tile_1.3]]]
-      LIGHT = ${COLOR2_NYC}
-      DARK = ${COLOR1_NYC}
+      token_top_colour = ${COLOR1_NYC}
+      token_bottom_colour = ${COLOR1_NYC}
       token_name = NYC
       token_count = 7
 
     [[[tile_1.4]]]
-      LIGHT = ${COLOR2_PRR}
-      DARK = ${COLOR1_PRR}
+      token_top_colour = ${COLOR1_PRR}
+      token_bottom_colour = ${COLOR1_PRR}
       token_name = PRR
       token_count = 7
 
     [[[tile_1.5]]]
-      LIGHT = ${COLOR2_BM}
-      DARK = ${COLOR1_BM}
+      token_top_colour = ${COLOR1_BM}
+      token_bottom_colour = ${COLOR1_BM}
       token_name = B&M
       token_count = 5
 
     [[[tile_1.6]]]
-      LIGHT = ${COLOR2_CPR}
-      DARK = ${COLOR1_CPR}
+      token_top_colour = ${COLOR1_CPR}
+      token_bottom_colour = ${COLOR1_CPR}
       token_name = CPR
       token_count = 7
 
     [[[tile_1.7]]]
-      LIGHT = ${COLOR2_NYNH}
-      DARK = ${COLOR1_NYNH}
+      token_top_colour = ${COLOR1_NYNH}
+      token_bottom_colour = ${COLOR1_NYNH}
       token_name = NYNH
       token_count = 5
 
     [[[tile_1.8]]]
-      LIGHT = ${COLOR2_ERIE}
-      DARK = ${COLOR1_ERIE}
+      token_top_colour = ${COLOR1_ERIE}
+      token_bottom_colour = ${COLOR1_ERIE}
       token_name = ERIE
 
     [[[tile_1.9]]]
@@ -317,7 +333,6 @@ public company."""
       DARK = 1, 1, 1
       token_name = "ROUND"
       token_count = 1
-
 
 [train]
   trade = ""
