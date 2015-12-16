@@ -139,7 +139,7 @@ closepath
       self.company_token_circle (x, y)
       price_height_fudge = float (self.value ("price%s_height_fudge" % i, x, y))
       self.fd.append ("%f %f moveto" % (bx, by - price_height_fudge))
-      self.text ("price%s" % i, x, y, h_centre = 0, v_centre = 1)
+      self.text ("price%s" % i, x, y, h_centre = 0, v_centre = 0)
     self.fd.append ("grestore")
 
   @logtool.log_call

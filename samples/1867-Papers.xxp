@@ -9,10 +9,11 @@
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_PURPLE}",
       "token_count": 1,
-      "note": "Historical start: Sudbury (1988)",
+      "note": "Historical start: Sudbury (1899)",
       "description": """Began as the Manitoulin &
 North Shore Railway (M&NS)""",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": "Bay of Quinte Railway",
@@ -26,7 +27,8 @@ North Shore Railway (M&NS)""",
       "token_count": 1,
       "note": "Historical start: Kingston (1879)",
       "description": "Absorbed by CNoR (1910)",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": """Brockville & Ottawa Railway""",
@@ -41,7 +43,8 @@ North Shore Railway (M&NS)""",
       "note": "Historical start: Ottawa (1853)",
       "description": """Amalgamated in 1878 with
 Canada Central Railway (CCR)""",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": """Buffalo, Brantford
@@ -56,7 +59,8 @@ Canada Central Railway (CCR)""",
       "token_count": 1,
       "note": "Historical start: Berlin (1851)",
       "description": "Leased to the Grant Trunk Railway (GTR) in 1870",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": "Canada Atlantic Railway",
@@ -70,7 +74,8 @@ Canada Central Railway (CCR)""",
       "token_count": 1,
       "note": "Historical start: Ottawa (1880)",
       "description": "Sold to the Grant Trunk Railway (GTR) in 1904",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": "Canada Southern Railway",
@@ -85,7 +90,8 @@ Canada Central Railway (CCR)""",
       "note": "Historical start: London (1868)",
       "description": """Originally called the
 Erie & Niagara Extension Railway""",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": "Carillon & Grenville Railway",
@@ -101,7 +107,8 @@ Erie & Niagara Extension Railway""",
       "description": """Situated on Ottawa River but
 never actually connected
 Ottawa & Montreal""",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": """Cobourg &
@@ -116,7 +123,8 @@ Peterborough Railway""",
       "token_count": 1,
       "note": "Historical start: Peterborough (1852)",
       "description": "Absorbed by the Grant Trunk Railway (GTR) in 1893",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": """London & Port Stanley
@@ -132,7 +140,8 @@ Railway""",
       "note": "Historical start: London (1856)",
       "description": """Leased by the
 Great Western Railway (GWR) from 1871""",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": "New York & Ottawa Railway",
@@ -147,7 +156,8 @@ Great Western Railway (GWR) from 1871""",
       "note": "Historical start: Ottawa (1897)",
       "description": """Absorbed by the
 New York Central Railway (NYC) in 1913""",
-      "box_colour": "${L_GRAY}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
 
     {
@@ -164,7 +174,8 @@ Railway""",
       "note": "Historical start: Quebec City (1885)",
       "description": """Taken over by the National Transcontinental Railway (NTR)
 in 1906 and nationalised in 1918""",
-      "box_colour": "${L_YELLOW}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": """Sherbrooke
@@ -178,9 +189,10 @@ Eastern Townships
       "token_bottom_stripe": "${M_BLUE}",
       "share_stripe": "${P_BROWN}",
       "token_count": 1,
-      "note": "Historical start: Sherbrooke (1969)",
+      "note": "Historical start: Sherbrooke (1869)",
       "description": "In 1875 became the Quebec Central Railway (QCR)",
-      "box_colour": "${L_YELLOW}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": """Stanstead, Shefford
@@ -193,9 +205,10 @@ Eastern Townships
       "token_bottom_stripe": "${L_GREEN}",
       "share_stripe": "${P_GRAY}",
       "token_count": 1,
-      "note": "Historical start: Montreal / Ganby",
+      "note": "Historical start: Montreal / Ganby (1853)",
       "description": "Leased by the Central Vermont Railway (CVR) in 1871",
-      "box_colour": "${L_YELLOW}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": "Thousand Island Railway",
@@ -209,7 +222,8 @@ Eastern Townships
       "token_count": 1,
       "note": "Historical start: Kingston (1883)",
       "description": "Started as Gananoque & Rideau Railway (G&R) in 1871",
-      "box_colour": "${L_YELLOW}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": "Toronto & Nipissing Railway",
@@ -221,9 +235,10 @@ Eastern Townships
       "token_bottom_stripe": "${M_RED}",
       "share_stripe": "${P_BLUE}",
       "token_count": 1,
-      "note": "Historical start: (1868)",
+      "note": "Historical start: Toronto (1868)",
       "description": "Amalgamated into the Midland Railway of Canada in 1882",
-      "box_colour": "${L_YELLOW}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
     {
       "name": """Toronto, Grey
@@ -238,7 +253,8 @@ Eastern Townships
       "token_count": 1,
       "note": "Historical start: Torinto (1892)",
       "description": "The Grand Trunk Railway (GTR) gained control of in 1881",
-      "box_colour": "${L_YELLOW}"
+      "box_colour": "${P_GRAY}",
+      "company_type": "minor",
     },
   ]
 %}
@@ -250,9 +266,10 @@ Eastern Townships
       "token_top": "${M_RED}",
       "token_bottom": "${M_RED}",
       "share_stripe": "${P_RED}",
-      "token_count": 1,
+      "token_count": 3,
       "note": "Historical start: Manitoba (1899)",
       "description": """""",
+      "company_type": "major",
     },
     {
       "name": "Canadian Pacific Railway",
@@ -260,9 +277,10 @@ Eastern Townships
       "token_top": "${M_YELLOW}",
       "token_bottom": "${M_YELLOW}",
       "share_stripe": "${P_YELLOW}",
-      "token_count": 1,
+      "token_count": 3,
       "note": "Historical start: Montreal (1880)",
       "description": """""",
+      "company_type": "major",
     },
     {
       "name": "Grand Trunk Railway",
@@ -270,9 +288,10 @@ Eastern Townships
       "token_top": "${M_BLUE}",
       "token_bottom": "${M_BLUE}",
       "share_stripe": "${P_BLUE}",
-      "token_count": 1,
+      "token_count": 3,
       "note": "Historical start: Montreal / Toronto (1852)",
       "description": """""",
+      "company_type": "major",
     },
     {
       "name": """National Transcontinental
@@ -281,9 +300,10 @@ Railway""",
       "token_top": "${M_GREEN}",
       "token_bottom": "${M_GREEN}",
       "share_stripe": "${P_GREEN}",
-      "token_count": 1,
+      "token_count": 3,
       "note": "Historical start: Quebec City (1905)",
       "description": """""",
+      "company_type": "major",
     },
     {
       "name": "Quebec Central Railway",
@@ -291,9 +311,10 @@ Railway""",
       "token_top": "${M_BROWN}",
       "token_bottom": "${M_BROWN}",
       "share_stripe": "${P_BROWN}",
-      "token_count": 1,
+      "token_count": 3,
       "note": "Historical start: Quebec City (1875)",
       "description": """""",
+      "company_type": "major",
     },
     {
       "name": "Great Western Railway",
@@ -301,9 +322,10 @@ Railway""",
       "token_top": "${M_PURPLE}",
       "token_bottom": "${M_PURPLE}",
       "share_stripe": "${P_PURPLE}",
-      "token_count": 1,
+      "token_count": 3,
       "note": "Historical start: London (1853)",
       "description": """""",
+      "company_type": "major",
     },
     {
       "name": "Canada Central Railway",
@@ -311,9 +333,10 @@ Railway""",
       "token_top": "${L_GRAY}",
       "token_bottom": "${L_GRAY}",
       "share_stripe": "${P_GRAY}",
-      "token_count": 1,
+      "token_count": 3,
       "note": "Historical start: North Bay / Sudbury",
       "description": """""",
+      "company_type": "major",
     },
     {
       "name": """Toronto Hamilton
@@ -322,9 +345,10 @@ Railway""",
       "token_top": "${BLACK}",
       "token_bottom": "${BLACK}",
       "share_stripe": "${M_GRAY}",
-      "token_count": 1,
+      "token_count": 3,
       "note": "Historical start: Hamilton (1892)",
       "description": """Never ran to Toronto or Buffalo""",
+      "company_type": "major",
     },
   ]
 %}
@@ -337,9 +361,10 @@ Railway""",
       "token_bottom": "${M_RED}",
       "share_stripe": "${P_RED}",
       "token_count": 9,
-      "note": "Historical start: )",
+      "note": "Historical start: ",
       "description": """Succeeded the Canadian Government Railways (CGR)
 created during the First World War""",
+      "company_type": "national",
     },
   ]
 %}
@@ -351,7 +376,7 @@ created during the First World War""",
   desc1 = "Assets, Treasury & Trains"
 
 {% set page_size = 4 %}
-{% set everything = minors + companies %}
+{% set everything = minors + companies + nationals %}
 {% set blocks = ((everything | count + 3) / page_size) | int %}
 {% set tiles = ["1.1", "1.2", "2.1", "2.2",] %}
 {% for sheet in range (blocks) %}
@@ -382,15 +407,30 @@ created during the First World War""",
       title = """{{ company.name }}"""
       token_name = {{ company.token }}
       token_count = {{ company.token_count}}
+    {% if company.company_type == "minor" %}
       note1 = """{{ company.note }}
 
+Maximum two (2) loans.
+Always half-pay and cannot withhold dividends.
+Nationalised if trainless at the start of an OR,
+at the start of Phase 4 or 6,
+or (always) at the start of Phase 8.
+"""
+    {% elif company.company_type == "major" %}
+      note1 = """{{ company.note }}
+
+Maximum five (5) loans.
 Un-bought shares are in treasury.
 Purchase shares from treasury.
 Market shares pay dividends to bank."""
-      price1 = $100
-      price2 = Free
-      price3 = Free
-      price4 = Free
+      price1 = Free
+      price2 = """$20
+/hex"""
+      price3 = """$40
+/hex"""
+      {% elif company.company_type == "national" %}
+      note1 = """{{ company.note }}"""
+    {% endif %}
   {% endfor %}
 {% endfor %}
 
@@ -420,20 +460,27 @@ Market shares pay dividends to bank."""
 {% endfor %}
 
 [token]
-  token_count = 3
 
 {% set page_size = 16 %}
-{% set company_count = companies | count %}
+{% set everything = minors + companies + nationals %}
+{% set company_count = everything | count %}
 {% set blocks = ((company_count + page_size - 1) / page_size) | int %}
 {% for sheet in range (blocks) %}
   [[sheet{{ sheet + 1 }}]]
   {% set index = sheet * page_size %}
   {% for tile in range (page_size) %}
-    {% set company = companies[index + tile] %}
+    {% set company = everything[index + tile] %}
     {% if (sheet * page_size) + tile < company_count %}
     [[[tile_1.{{ tile + 1 }}]]]
+      token_count = {{ company.token_count + 2}}
       token_bottom_colour = {{ company.token_bottom }}
       token_top_colour = {{ company.token_top }}
+    {% if "token_bottom_stripe" in company.keys () %}
+      token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+    {% endif %}
+    {% if "token_top_stripe" in company.keys () %}
+      token_top_stripe_colour = {{ company.token_top_stripe }}
+    {% endif %}
       token_name = {{ company.token }}
     {% endif %}
   {% endfor %}
