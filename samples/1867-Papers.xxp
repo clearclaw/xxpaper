@@ -251,7 +251,7 @@ Eastern Townships
       "token_bottom_stripe": "${L_RED}",
       "share_stripe": "${P_GREEN}",
       "token_count": 1,
-      "note": "Historical start: Torinto (1892)",
+      "note": "Historical start: Toronto (1892)",
       "description": "The Grand Trunk Railway (GTR) gained control of in 1881",
       "box_colour": "${P_GRAY}",
       "company_type": "minor",
@@ -349,15 +349,15 @@ in 1923""",
       "company_type": "major",
     },
     {
-      "name": """Toronto Hamilton
-& Buffalo Railway""",
-      "token": "THB",
+      "name": """Canada Southern Railway""",
+      "token": "CSR",
       "token_top": "${BLACK}",
       "token_bottom": "${BLACK}",
       "share_stripe": "${M_GRAY}",
       "token_count": 3,
-      "note": "Historical start: Hamilton (1892)",
-      "description": """Never ran to Toronto or Buffalo""",
+      "note": "Historical start: London (1868)",
+      "description": """Originally called the
+Erie & Niagara Extension Railway""",
       "company_type": "major",
     },
   ]
@@ -439,7 +439,10 @@ Market shares pay dividends to bank."""
       price3 = """$40
 /hex"""
       {% elif company.company_type == "national" %}
-      note1 = """{{ company.note }}"""
+      note1 = """{{ company.note }}
+
+At the end of each OR
+take the next train from the supply"""
     {% endif %}
   {% endfor %}
 {% endfor %}

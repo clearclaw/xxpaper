@@ -10,6 +10,7 @@ from path import Path
 from StringIO import StringIO
 from .cmdio import CmdIO
 import xxpaper
+from ._version import get_versions
 
 logging.basicConfig (level = logging.WARN)
 LOG = logging.getLogger (__name__)
@@ -76,6 +77,7 @@ def load_configs ():
   defdata = pkg_resources.resource_string ("xxpaper", "DEFAULT.conf")
   defproc = StringIO (env.from_string (defdata).render ())
   default = ConfigObj (defproc.readlines ())
+  default["DEFAULT"]["XXP_VERSION"] = get_versions()['version']
   return runtime, game, default
 
 @logtool.log_call
