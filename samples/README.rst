@@ -30,6 +30,15 @@ A simple and mostly straight-forward implementation for 1851 using
 just a little Jinja to centralise all the company and train
 information. 
 
+1867-Papers.xxp
+===============
+
+NOTE: Not yet verified as correct.
+
+A simple and mostly straight-forward implementation of charters,
+shares and tokens for 1867 using just a little Jinja to 
+centralise all the company information. 
+
 1839-Papers.xxp
 ===============
 
