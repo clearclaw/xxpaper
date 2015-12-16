@@ -268,7 +268,9 @@ Eastern Townships
       "share_stripe": "${P_RED}",
       "token_count": 3,
       "note": "Historical start: Manitoba (1899)",
-      "description": """""",
+      "description": """Joined the
+Canadian National Railways
+in 1918""",
       "company_type": "major",
     },
     {
@@ -290,7 +292,9 @@ Eastern Townships
       "share_stripe": "${P_BLUE}",
       "token_count": 3,
       "note": "Historical start: Montreal / Toronto (1852)",
-      "description": """""",
+      "description": """Absorbed by the
+Canadian National Railway (CNR)
+in 1923""",
       "company_type": "major",
     },
     {
@@ -302,7 +306,9 @@ Railway""",
       "share_stripe": "${P_GREEN}",
       "token_count": 3,
       "note": "Historical start: Quebec City (1905)",
-      "description": """""",
+      "description": """Joined the
+Canadian National Railway (CNR)
+in 1905""",
       "company_type": "major",
     },
     {
@@ -313,7 +319,8 @@ Railway""",
       "share_stripe": "${P_BROWN}",
       "token_count": 3,
       "note": "Historical start: Quebec City (1875)",
-      "description": """""",
+      "description": """The Quebec Centrail Railway
+is still around today!""",
       "company_type": "major",
     },
     {
@@ -324,7 +331,8 @@ Railway""",
       "share_stripe": "${P_PURPLE}",
       "token_count": 3,
       "note": "Historical start: London (1853)",
-      "description": """""",
+      "description": """Absorbed by
+Grand Truk Railway (GT) in 1882""",
       "company_type": "major",
     },
     {
@@ -335,7 +343,9 @@ Railway""",
       "share_stripe": "${P_GRAY}",
       "token_count": 3,
       "note": "Historical start: North Bay / Sudbury",
-      "description": """""",
+      "description": """Joined the
+Canadian National Railway (CNR)
+in 1923""",
       "company_type": "major",
     },
     {
@@ -361,7 +371,7 @@ Railway""",
       "token_bottom": "${M_RED}",
       "share_stripe": "${P_RED}",
       "token_count": 9,
-      "note": "Historical start: ",
+      "note": "Government Railway",
       "description": """Succeeded the Canadian Government Railways (CGR)
 created during the First World War""",
       "company_type": "national",
