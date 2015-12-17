@@ -330,8 +330,10 @@ is still around today!""",
       "token_bottom": "${M_PURPLE}",
       "share_stripe": "${P_PURPLE}",
       "token_count": 3,
-      "note": "Historical start: London (1833)",
-      "description": """Absorbed by
+      "note": "Historical start: London (1853)",
+      "description": """Started as the
+London & Gore Railroad Company (L&GR)
+in 1845.  Absorbed by
 Grand Truk Railway (GT) in 1882""",
       "company_type": "major",
     },
