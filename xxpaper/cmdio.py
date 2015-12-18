@@ -25,7 +25,7 @@ class CmdIO (object):
 
   @logtool.log_call
   def debug (self, msg):
-    if not self.conf.quiet and self.conf.verbose:
+    if not self.conf.quiet:
       clip.echo (self.colourise (msg, COLOUR_DEBUG))
 
   @logtool.log_call
