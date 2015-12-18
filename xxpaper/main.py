@@ -116,16 +116,16 @@ def arg_game_file (fname):
             callback = partial (option_setopt, "nocolour"))
 @clip.flag ("-D", "--debug", name = "debug", help = "Enable debug logging",
             callback = option_logging)
-@clip.opt ("-f", "--formats", name = "formats", help = "Art formats",
+@clip.opt ("-f", "--formats", name = "formats", help = "Art formats to produce",
            callback = partial (option_list, "formats"))
-@clip.opt ("-P", "--papers", name = "papers", help = "Paper sizes",
+@clip.opt ("-P", "--papers", name = "papers", help = "Paper sizes to produce",
            required = False, callback = partial (option_list, "papers"))
-@clip.opt ("-p", "--pages", name = "pages", help = "Pages to process",
+@clip.opt ("-p", "--pages", name = "pages", help = "Pages to produce",
            required = False, callback = partial (option_list, "pages"))
 @clip.flag ("-q", "--quiet", name = "quiet",
             help = "Suppress information messages",
             callback = partial (option_setopt, "quiet"))
-@clip.opt ("-s", "--sections", name = "sections", help = "Sections to process",
+@clip.opt ("-s", "--sections", name = "sections", help = "Sections to produce",
            required = False, callback = partial (option_list, "sections"))
 @clip.flag ("-t", "--template", name = "template", help = "Export Jinja-expanded template file",
            required = False, callback = partial (option_setopt, "template"))
