@@ -108,8 +108,7 @@ def arg_game_file (fname):
   CONFIG.game_fname = fname
 
 @APP.main (name = Path (sys.argv[0]).basename (),
-           description = "18xx rapid prototyping tool",
-           tree_view = "-H")
+           description = "18xx rapid prototyping tool")
 @clip.flag ('-H', '--HELP',  help = "Help for all sub-commands")
 @clip.flag ("-C", "--nocolour", name = "nocolour",
             help = "Suppress colours in reports",
