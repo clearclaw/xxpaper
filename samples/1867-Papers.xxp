@@ -1,6 +1,7 @@
-{% set minors = [
+{% set minors_bicolour = [
     {
-      "name": "Algoma Eastern Railway",
+      "name": """Stanstead, Shefford
+& Chambly Railroad""",
       "token": "AER",
       "token_colour": "${BLACK}",
       "token_top": "${L_GREEN}",
@@ -63,7 +64,9 @@ Canada Central Railway (CCR)""",
       "company_type": "minor",
     },
     {
-      "name": "Canada Atlantic Railway",
+      "name": """Sherbrooke
+Eastern Townships
+& Kennebec Railway""",
       "token": "CAR",
       "token_colour": "${BLACK}",
       "token_top": "${L_GRAY}",
@@ -78,8 +81,8 @@ Canada Central Railway (CCR)""",
       "company_type": "minor",
     },
     {
-      "name": "Canada Southern Railway",
-      "token": "CASO",
+      "name": "Credit Valley Railway",
+      "token": "CV",
       "token_colour": "${BLACK}",
       "token_top": "${L_GREEN}",
       "token_top_stripe": "transparent",
@@ -87,9 +90,9 @@ Canada Central Railway (CCR)""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_RED}",
       "token_count": 1,
-      "note": "Historical start: London (1868)",
-      "description": """Originally called the
-Erie & Niagara Extension Railway""",
+      "note": "Historical start: Barrie (1871)",
+      "description": """Leased to the
+Ontario & Quebec Railway (OQR) in 1881""",
       "box_colour": "${P_GRAY}",
       "company_type": "minor",
     },
@@ -144,7 +147,8 @@ Great Western Railway (GWR) from 1871""",
       "company_type": "minor",
     },
     {
-      "name": "New York & Ottawa Railway",
+      "name": """Toronto, Grey
+& Bruce Railway""",
       "token": "NY&O",
       "token_colour": "${BLACK}",
       "token_top": "${L_BLUE}",
@@ -159,7 +163,10 @@ New York Central Railway (NYC) in 1913""",
       "box_colour": "${P_GRAY}",
       "company_type": "minor",
     },
+  ]
+%}
 
+{% set minors_stripey = [
     {
       "name": """Quebec & Lake St. John
 Railway""",
@@ -178,9 +185,7 @@ in 1906 and nationalised in 1918""",
       "company_type": "minor",
     },
     {
-      "name": """Sherbrooke
-Eastern Townships
-& Kennebec Railway""",
+      "name": "Canada Atlantic Railway",
       "token": "SET&KR",
       "token_colour": "${BLACK}",
       "token_top": "${L_BROWN}",
@@ -195,8 +200,7 @@ Eastern Townships
       "company_type": "minor",
     },
     {
-      "name": """Stanstead, Shefford
-& Chambly Railroad""",
+      "name": "Algoma Eastern Railway",
       "token": "SS&CR",
       "token_colour": "${BLACK}",
       "token_top": "${M_GRAY}",
@@ -241,8 +245,7 @@ Eastern Townships
       "company_type": "minor",
     },
     {
-      "name": """Toronto, Grey
-& Bruce Railway""",
+      "name": "New York & Ottawa Railway",
       "token": "TG&BR",
       "token_colour": "${BLACK}",
       "token_top": "${M_GREEN}",
@@ -258,6 +261,8 @@ Eastern Townships
     },
   ]
 %}
+
+{% set minors = minors_bicolour + minors_stripey %}
 
 {% set companies = [
     {
