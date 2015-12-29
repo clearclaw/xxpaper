@@ -8,8 +8,9 @@ addict==0.4.0
 clip.py==0.3.2
 configobj==5.0.6
 jinja2==2.8
-logtool==0.3.post8
+logtool==0.3.post13
 markupsafe==0.23          # via jinja2
 path.py==8.1.2
-six==1.10.0               # via configobj
-wrapt==1.10.5             # via logtool
+six==1.10.0               # via configobj, logtool
+termcolor==1.1.0
+wrapt==1.10.6             # via logtool
