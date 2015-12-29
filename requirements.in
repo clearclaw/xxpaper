@@ -4,4 +4,4 @@ configobj
 jinja2
 logtool
 path.py
-
+termcolor

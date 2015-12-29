@@ -16,7 +16,6 @@ logging.basicConfig (level = logging.WARN)
 LOG = logging.getLogger (__name__)
 APP = clip.App (name = "xxpaper")
 CONFIG = Dict ({
-  "directory": Path ("./"),
   "formats": ["outline", "nooutline",],
   "game_fname": None,
   "nocolour": False,
@@ -25,7 +24,6 @@ CONFIG = Dict ({
   "sections": ["*",],
   "template": None,
   "quiet": False,
-  "verbose": False,
 })
 IO = CmdIO (CONFIG)
 
@@ -110,33 +108,30 @@ def arg_game_file (fname):
   CONFIG.game_fname = fname
 
 @APP.main (name = Path (sys.argv[0]).basename (),
-           description = "18xx rapid prototyping tool",
-           tree_view = "-H")
+           description = "18xx rapid prototyping tool")
 @clip.flag ('-H', '--HELP',  help = "Help for all sub-commands")
 @clip.flag ("-C", "--nocolour", name = "nocolour",
             help = "Suppress colours in reports",
             callback = partial (option_setopt, "nocolour"))
 @clip.flag ("-D", "--debug", name = "debug", help = "Enable debug logging",
             callback = option_logging)
-@clip.opt ("-d", "--dir", name = "directory", help = "Directory to process",
-           callback = option_dir)
-@clip.opt ("-f", "--formats", name = "formats", help = "Art formats",
+@clip.opt ("-f", "--formats", name = "formats", help = "Art formats to produce",
            callback = partial (option_list, "formats"))
-@clip.opt ("-P", "--papers", name = "papers", help = "Paper sizes",
+@clip.opt ("-P", "--papers", name = "papers", help = "Paper sizes to produce",
            required = False, callback = partial (option_list, "papers"))
-@clip.opt ("-p", "--pages", name = "pages", help = "Pages to process",
+@clip.opt ("-p", "--pages", name = "pages",
+           help = "Pages to produce (comma separated)",
            required = False, callback = partial (option_list, "pages"))
 @clip.flag ("-q", "--quiet", name = "quiet",
             help = "Suppress information messages",
             callback = partial (option_setopt, "quiet"))
-@clip.opt ("-s", "--sections", name = "sections", help = "Sections to process",
+@clip.opt ("-s", "--sections", name = "sections",
+           help = "Sections to produce (comma-separated)",
            required = False, callback = partial (option_list, "sections"))
-@clip.flag ("-t", "--template", name = "template", help = "Save template file",
+@clip.flag ("-t", "--template", name = "template",
+            help = "Export Jinja-expanded template file",
            required = False, callback = partial (option_setopt, "template"))
-@clip.flag ("-v", "--verbose", name = "verbose",
-            help = "Extra information messages",
-            callback = partial (option_setopt, "verbose"))
-@clip.flag ("-V", "--Version", help = "Report installed version",
+@clip.flag ("-v", "--version", help = "Report installed version",
             callback = option_version)
 @clip.arg (name = "game_file", nargs = 1, default = None,
            help = "XXPaper game file", required = True,
