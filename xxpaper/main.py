@@ -119,14 +119,17 @@ def arg_game_file (fname):
            callback = partial (option_list, "formats"))
 @clip.opt ("-P", "--papers", name = "papers", help = "Paper sizes to produce",
            required = False, callback = partial (option_list, "papers"))
-@clip.opt ("-p", "--pages", name = "pages", help = "Pages to produce",
+@clip.opt ("-p", "--pages", name = "pages",
+           help = "Pages to produce (comma separated)",
            required = False, callback = partial (option_list, "pages"))
 @clip.flag ("-q", "--quiet", name = "quiet",
             help = "Suppress information messages",
             callback = partial (option_setopt, "quiet"))
-@clip.opt ("-s", "--sections", name = "sections", help = "Sections to produce",
+@clip.opt ("-s", "--sections", name = "sections",
+           help = "Sections to produce (comma-separated)",
            required = False, callback = partial (option_list, "sections"))
-@clip.flag ("-t", "--template", name = "template", help = "Export Jinja-expanded template file",
+@clip.flag ("-t", "--template", name = "template",
+            help = "Export Jinja-expanded template file",
            required = False, callback = partial (option_setopt, "template"))
 @clip.flag ("-v", "--version", help = "Report installed version",
             callback = option_version)
