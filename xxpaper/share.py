@@ -82,7 +82,7 @@ class Share (Sheet):
     bx = self.side_stripe_inset_x + (self.side_stripe_width / 2)
     by = self.type_stripe_inset_y + self.type_stripe_inset_y_fudge
     self.fd.append ("%f %f moveto" % (bx, by))
-    self.text ("size", x, y, h_centre = 0, v_centre = 1)
+    self.text ("size", x, y, h_centre = 0, v_centre = -1)
 
   @logtool.log_call
   def type_note (self, x, y):

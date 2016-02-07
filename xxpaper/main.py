@@ -59,10 +59,11 @@ def load_configs ():
   fname = CONFIG.game_fname
   raw = fname.bytes ().decode ('unicode_escape')
   env = jinja2.Environment(extensions = ["jinja2.ext.loopcontrols",
-                                         "jinja2.ext.with_",])
+                                         "jinja2.ext.with_",
+                                         "jinja2.ext.do",])
   xxp = StringIO (env.from_string (raw).render ())
   if CONFIG.template:
-    fn = CONFIG.directory / fname.namebase + "_expanded.cfg"
+    fn = Path ("./") / fname.namebase + "_expanded.cfg"
     IO.debug ("Expanded template: %s" % fn)
     with open (fn, "w") as f:
       f.write (xxp.getvalue ())
@@ -77,11 +78,6 @@ def load_configs ():
   default = ConfigObj (defproc.readlines ())
   default["DEFAULT"]["XXP_VERSION"] = get_versions()['version']
   return runtime, game, default
-
-@logtool.log_call
-def option_dir (directory):
-  CONFIG.directory = Path (directory)
-  CONFIG.directory.makedirs_p ()
 
 @logtool.log_call
 def option_logging (flag): # pylint: disable=unused-argument
@@ -149,21 +145,22 @@ def app_main (*args, **kwargs): # pylint: disable=unused-argument
   for paper in get_cfgval (cfgs, "DEFAULT", "papers"):
     if not match_filter (paper, CONFIG.papers):
       continue
-    IO.debug ("Paper size: %s" % paper)
+    # IO.debug ("Paper size: %s" % paper)
     for form in formats:
       runtime["DEFAULT"]["outline"] = form
-      IO.debug ("  Format: %s" % form)
+      # IO.debug ("  Format: %s" % form)
       for section in game.sections:
         if section == "DEFAULT" or not match_filter (section, CONFIG.sections):
           continue
-        IO.debug ("    Section: %s" % section)
+        # IO.debug ("    Section: %s" % section)
         for page in game[section].sections:
-          IO.debug ("      Page: %s" % page)
+          # IO.debug ("      Page: %s" % page)
           if not match_filter (page, CONFIG.pages):
             continue
-          make (cfgs, paper, form, section, page,
-                os.path.join ("./", "%s_%s-%s-%s.ps"
-                              % (section, page, form, paper)))
+          fname = os.path.join ("./", "%s_%s-%s-%s.ps"
+                                % (section, page, form, paper))
+          game["DEFAULT"]["this_filename"] = " This file: %s" % fname
+          make (cfgs, paper, form, section, page, fname)
 
 @logtool.log_call
 def main ():

@@ -154,10 +154,17 @@ class Sheet (CmdIO):
     self.fd.append ("%f %f moveto" % (0, self.rubber_y + 6))
     self.text ("copyright", 0, 0, v_centre = -1)
     self.fd.append ("grestore")
+    
     self.fd.append ("gsave")
     self.fd.append ("%f %f moveto" % (0, -12))
     self.text ("source_filename", 0, -12, v_centre = -1)
     self.fd.append ("grestore")
+    
+    self.fd.append ("gsave")
+    self.fd.append ("%f %f moveto" % (self.rubber_x / 2, -12))
+    self.text ("this_filename", 0, -12, v_centre = -1)
+    self.fd.append ("grestore")
+    
     self.fd.append ("gsave")
     self.fd.append ("%f %f moveto" % (0, -24))
     self.text ("print_instruction", 0, -24, v_centre = -1)
