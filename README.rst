@@ -26,6 +26,10 @@ of the source tree.  The sample file produces privates, shares and
 train art sized suitably for the test die that comes with an Ellison
 Pro die cutter.
 
+A variety of sample files can be found in the samples/ subdirectory.
+Please see http://kanga.nu/~claw/xxpaper/example to see the files
+they produce.
+
 -- JCL
 
 P.S. PsFile appears to have fallen off the 'net.  A copy may be

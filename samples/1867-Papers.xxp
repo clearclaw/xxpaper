@@ -397,7 +397,7 @@ created during the First World War""",
 {% set blocks = ((everything | count + 3) / page_size) | int %}
 {% set tiles = ["1.1", "1.2", "2.1", "2.2",] %}
 {% for sheet in range (blocks) %}
-  [[sheet{{ sheet + 1 }}]]
+  [[small{{ sheet + 1 }}]]
   {% set index = sheet * page_size %}
   {% for tile in range (page_size) %}
     {% if index + tile >= everything | count %}
@@ -431,8 +431,7 @@ Maximum two (2) loans.
 Always half-pay and cannot withhold dividends.
 Nationalised if trainless at the start of an OR,
 at the start of Phase 4 or 6,
-or (always) at the start of Phase 8.
-"""
+or (always) at the start of Phase 8."""
     {% elif company.company_type == "major" %}
       note1 = """{{ company.note }}
 
@@ -450,6 +449,82 @@ Market shares pay dividends to bank."""
 
 At the end of each OR
 take the next train from the supply"""
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% set page_size = 3 %}
+{% set everything = minors + companies + nationals %}
+{% set blocks = ((everything | count + 3) / page_size) | int %}
+{% set tiles = ["1.1", "1.2", "1.3",] %}
+{% for sheet in range (blocks) %}
+  [[wide{{ sheet + 1 }}]]
+    num_across_x = 1
+    num_across_y = 3
+    tile_x = 510
+    tile_y = 236
+    centre_colour = ${BLACK}
+    desc1 = Treasury & Loans
+    desc2 = Trains
+    note1 = sample
+    note2 = sample
+    
+  {% set index = sheet * page_size %}
+  {% for tile in range (page_size) %}
+    {% if index + tile >= everything | count %}
+      {% continue %}
+    {% endif %}
+    {% set company = everything[index + tile] %}
+    [[[tile_{{ tiles[tile] }}]]]
+    {% if "box_colour" in company.keys () %}
+      box_colour = {{ company.box_colour }}
+    {% endif %}
+    {% if "token_colour" in company.keys () %}
+      token_colour = {{ company.token_colour}}
+      token_name_colour = ${WHITE}
+    {% endif %}
+      stripe_colour = {{ company.share_stripe }}
+      token_bottom_colour = {{ company.token_bottom }}
+      token_top_colour = {{ company.token_top }}
+    {% if "token_bottom_stripe" in company.keys () %}
+      token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+    {% endif %}
+    {% if "token_top_stripe" in company.keys () %}
+      token_top_stripe_colour = {{ company.token_top_stripe }}
+    {% endif %}
+      title = """{{ company.name }}"""
+      token_name = {{ company.token }}
+      token_count = {{ company.token_count}}
+    {% if company.company_type == "minor" %}
+      note1 = """{{ company.note }}
+
+Always half-pay and cannot withhold dividends.
+Nationalised if trainless at the start of an OR,
+at the start of Phase 4 or 6,
+or (always) at the start of Phase 8."""
+      note2 = """Maximum two (2) loans.
+Loans only to lay/upgrade track, pay interest 
+or buy a train from Bank or Bank Pool."""
+    {% elif company.company_type == "major" %}
+      note1 = """{{ company.note }}
+
+Un-bought shares are in treasury.
+Purchase shares from treasury.
+Market shares pay dividends to bank."""
+      note2 = """Maximum two (5) loans.
+Loans only to lay/upgrade track, pay interest 
+or buy a train from Bank or Bank Pool."""
+      price1 = Free
+      price2 = """$20
+/hex"""
+      price3 = """$40
+/hex"""
+      {% elif company.company_type == "national" %}
+      centre_colour = transparent
+      note1 = """{{ company.note }}
+
+At the end of each OR take the next train from the supply"""
+      note2 = ""
     {% endif %}
   {% endfor %}
 {% endfor %}

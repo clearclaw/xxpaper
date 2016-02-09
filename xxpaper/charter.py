@@ -127,7 +127,7 @@ closepath
           + token_inset_x + token_radius)
     oy = (self.tile_y - self.box_inset_y - self.stripe_height
           - token_inset_y)
-    gap = oy - token_inset_y
+    gap = oy - token_inset_y - token_radius / 2
     count = int (self.value ("token_count", x, y))
     token_spacing = int (self.value ("charter_token_spacing", x))
     spacing = gap / token_spacing if token_spacing else gap / (count + 1)
