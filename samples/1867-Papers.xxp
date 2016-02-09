@@ -296,7 +296,8 @@ in 1918""",
       "token_bottom": "${M_BLUE}",
       "share_stripe": "${P_BLUE}",
       "token_count": 3,
-      "note": "Historical start: Montreal / Toronto (1852)",
+      "note": """Historical start:
+Montreal / Toronto (1852)""",
       "description": """Absorbed by the
 Canadian National Railway (CNR)
 in 1923""",
