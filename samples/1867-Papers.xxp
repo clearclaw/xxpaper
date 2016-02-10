@@ -106,7 +106,8 @@ Ontario & Quebec Railway (OQR) in 1881""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_BLUE}",
       "token_count": 1,
-      "note": "Historical start: Ottawa / Montreal (1854)",
+      "note": """Historical start: 
+Ottawa / Montreal (1854)""",
       "description": """Situated on Ottawa River but
 never actually connected
 Ottawa & Montreal""",
