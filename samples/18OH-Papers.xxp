@@ -8,9 +8,11 @@
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_PURPLE}",
       "tranche": "Standard",
-      "note": "Home Station: Columbus (E10)",
-      "power": """$75 discount on fuirst train bought from the supply.
-Can build up to three track tiles in its first OR.""",
+      "note": "Home Station: Columbus (H10)",
+      "power": """$75 discount on first train
+bought from the supply.
+Can build up to three track-tiles
+in its first OR.""",
       "stations": [50, "free"],
     },
     {
@@ -22,7 +24,7 @@ Can build up to three track tiles in its first OR.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_GREEN}",
       "tranche": "Standard",
-      "note": "Home Station: Cincinnati (B3)",
+      "note": "Home Station: Cincinnati (K3)",
       "power": "Reserved hex.",
       "stations": [50, "free"],
     },
@@ -36,8 +38,9 @@ Can build up to three track tiles in its first OR.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_RED}",
       "tranche": "Standard",
-      "note": "Home Station: Sandusky (J11)",
-      "power": "Reserved hex and may move one station.",
+      "note": "Home Station: Sandusky (C11)",
+      "power": """Reserved hex.
+May move one station.""",
       "stations": [25, "free"],
     },
     {
@@ -49,14 +52,14 @@ Can build up to three track tiles in its first OR.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_BLUE}",
       "tranche": "Northern",
-      "note": "Home Station: Ashtabula (K20)",
+      "note": "Home Station: Ashtabula (B20)",
       "power": """Home station is free.
 Can move already placed station.""",
       "stations": ["free", "free"],
     },
     {
       "name": """Cleveland, Columbus
-& Concinnati""",
+& Cincinnati""",
       "token": "CCC",
       "token_top": "${D_YELLOW}",
       "token_top_stripe": "transparent",
@@ -64,8 +67,9 @@ Can move already placed station.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_YELLOW}",
       "tranche": "Northern",
-      "note": "Home Station: Cleveland (J17)",
-      "power": """$25 discount on fuirst train bought from the supply.
+      "note": "Home Station: Cleveland (C17)",
+      "power": """$25 discount on first train
+bought from the supply.
 Can buy two trains from the supply at once.""",
       "stations": [25, 25],
     },
@@ -78,9 +82,10 @@ Can buy two trains from the supply at once.""",
       "token_bottom_stripe": " transparent",
       "share_stripe": "${P_GREEN}",
       "tranche": "Northern",
-      "note": "Home Station: Youngstown (I20)",
+      "note": "Home Station: Youngstown (D20)",
       "power": """Ignores terrain costs in its first OR.
-$50 discount on fuirst train bought from the supply.""",
+$50 discount on first train
+bought from the supply.""",
       "stations": [25, "free"],
     },
     {
@@ -92,9 +97,10 @@ $50 discount on fuirst train bought from the supply.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_BROWN}",
       "tranche": "Northern",
-      "note": "Home Station: Sandusky (J11)",
+      "note": "Home Station: Sandusky (C11)",
       "power": """Reserved hex.
-$50 discount on first train bought from the supply.""",
+$50 discount on first train
+bought from the supply.""",
       "stations": [50, 50],
     },
     {
@@ -107,7 +113,7 @@ $50 discount on first train bought from the supply.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_YELLOW}",
       "tranche": "Southern",
-      "note": "Home Station: Cincinnati (B3)",
+      "note": "Home Station: Cincinnati (K3)",
       "power": "Can move an already placed station.",
       "stations": [25, 25],
     },
@@ -121,8 +127,8 @@ Hamilton & Dayton""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_GRAY}",
       "tranche": "Southern",
-      "note": "Home Station: Cincinnati (B3)",
-      "power": "",
+      "note": "Home Station: Cincinnati (K3)",
+      "power": "None.",
       "stations": [50, 25],
     },
   ]
@@ -138,8 +144,9 @@ Hamilton & Dayton""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_BROWN}",
       "tranche": "Standard",
-      "note": "Home Station: Zanesville (E16)",
-      "power": """Can build up to three track tiles in its first OR.
+      "note": "Home Station: Zanesville (H16)",
+      "power": """Can build up to three track-tiles
+in its first OR.
 Can place two stations at once.""",
       "stations": [25, 75, 75],
     },
@@ -152,8 +159,9 @@ Can place two stations at once.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_PURPLE}",
       "tranche": "Standard",
-      "note": "Home Station: Hudson (I16)",
-      "power": "$25 discount on first train bought from the supply.",
+      "note": "Home Station: Hudson (D16)",
+      "power": """$25 discount on first train
+bought from the supply.""",
       "stations": [25, 50, 100],
     },
     {
@@ -166,8 +174,8 @@ Wilmington & Zanesville""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_BROWN}",
       "tranche": "Standard",
-      "note": "Home Station: Morrow (C6)",
-      "power": "",
+      "note": "Home Station: Morrow (J6)",
+      "power": "None.",
       "stations": [25, 50, 75],
     },
     {
@@ -179,9 +187,10 @@ Wilmington & Zanesville""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_PURPLE}",
       "tranche": "Standard",
-      "note": "Home Station: Toledo (K8)",
-      "power": """Rserved hex.
-$50 discount on first train bought from the supply.""",
+      "note": "Home Station: Toledo (B8)",
+      "power": """Reserved hex.
+$50 discount on first train
+bought from the supply.""",
       "stations": [50, 50, 50],
     },
     {
@@ -193,7 +202,7 @@ $50 discount on first train bought from the supply.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_GREEN}",
       "tranche": "Standard",
-      "note": "Home Station: Steubenville (G20)",
+      "note": "Home Station: Steubenville (F20)",
       "power": "Can ignore terrain costs in its first OR.",
       "stations": [50, 75, 76],
     },
@@ -206,7 +215,7 @@ $50 discount on first train bought from the supply.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_BROWN}",
       "tranche": "Northern",
-      "note": "Home Station: Massillion (H17)",
+      "note": "Home Station: Massillion (E17)",
       "power": "Can place two stations at once.",
       "stations": [50, 75. 75],
     },
@@ -219,8 +228,8 @@ $50 discount on first train bought from the supply.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_GRAY}",
       "tranche": "Northern",
-      "note": "Home Station: Toledo (K8)",
-      "power": """Rserved hex.
+      "note": "Home Station: Toledo (B8)",
+      "power": """Reserved hex.
 Can place two stations at once.""",
       "stations": [25, 50, 75],
     },
@@ -233,7 +242,7 @@ Can place two stations at once.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_RED}",
       "tranche": "Southern",
-      "note": "Home Station: Dayton (D5)",
+      "note": "Home Station: Dayton (I5)",
       "power": "Can ignore terrain costs in its first OR.",
       "stations": [50, 50, 100],
     },
@@ -246,7 +255,7 @@ Can place two stations at once.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_GREEN}",
       "tranche": "Southern",
-      "note": "Home Station: Xenia (D7)",
+      "note": "Home Station: Xenia (I7)",
       "power": "Can ignore terrain costs in its first OR.",
       "stations": [25, 75, 100],
     },
@@ -259,8 +268,9 @@ Can place two stations at once.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_RED}",
       "tranche": "Southern",
-      "note": "Home Station: Cincinnati (B3)",
-      "power": "Can buy two trains from the supply at once.",
+      "note": "Home Station: Cincinnati (K3)",
+      "power": """Can buy two trains
+from the supply at once.""",
       "stations": [25, 75, 75],
     },
     {
@@ -272,7 +282,7 @@ Can place two stations at once.""",
       "token_bottom_stripe": "transparent",
       "share_stripe": "${P_BLUE}",
       "tranche": "Southern",
-      "note": "Home Station: Fort Wayne (G2)",
+      "note": "Home Station: Fort Wayne (F2)",
       "power": "Can place two stations at once.",
       "stations": [25, 50, 50],
     },
@@ -289,8 +299,9 @@ Can place two stations at once.""",
       "token_bottom_stripe": "${M_BLUE}",
       "share_stripe": "${P_BROWN}",
       "tranche": "Southern",
-      "note": "Home Station: Portsmouth (A10)",
-      "power": "Can build up to three track tiles in its first OR.",
+      "note": "Home Station: Portsmouth (L10)",
+      "power": """Can build up to three track-tiles
+in its first OR.""",
       "stations": [25, 75, 75, 100],
     },
     {
@@ -302,8 +313,9 @@ Can place two stations at once.""",
       "token_bottom_stripe": "${WHITE}",
       "share_stripe": "${P_GRAY}",
       "tranche": "Standard",
-      "note": "Home Station: Parkersburg (B17)",
-      "power": "Can build up to three track tiles in its first OR.",
+      "note": "Home Station: Parkersburg (K17)",
+      "power": """Can build up to three track tiles
+in its first OR.""",
       "stations": [20, 75, 75, 100],
     },
   ]
@@ -424,6 +436,7 @@ Can place two stations at once.""",
       "rust_stripe": "${D_GRAY}",
       "trade_stripe": "${D_GRAY}",
       "rust": "PERMANENT",
+      "rust_colour": "${WHITE}",
       "train_font": '"Times-Roman", 36',
     },
   ]
@@ -433,7 +446,6 @@ Can place two stations at once.""",
 [DEFAULT]
   print_instruction = "Print one copy of this page."
   PRESIDENT_STRIPE = ${ORANGE}
-  token_stripe_text_fudge = 3.0
 
 
 [charter]
@@ -472,6 +484,9 @@ Can place two stations at once.""",
       price4 = ${{ company.stations[3] }}
     {% endif %}
   note1 = """{{ company.tranche }} Group
+{{ company.note  }}
+
+{{ company.power  }}
 
 IPO shares sell for par.
 Purchase price of IPO shares goes to treasury.
@@ -480,6 +495,37 @@ Market shares pay dividends to treasury."""
   {% endfor %}
 {% endfor %}
 
+
+[share]
+  size = 10%
+  note = ""
+  desc = "1 Share"
+  type_colour = transparent
+  side_split_dash_length = 10
+  side_split_place = centre
+
+{% for company in companies %}
+  [[{{ company.token }}]]
+    frame_colour = {{ charter_groups[company.tranche] }}
+    token_bottom_colour = {{ company.token_bottom }}
+    token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+    token_colour = ${WHITE}
+    token_top_colour = {{ company.token_top }}
+    token_top_stripe_colour = {{ company.token_top_stripe }}
+    stripe_colour = {{ company.share_stripe }}
+    title = """{{ company.name }}"""
+    token_name = {{ company.token }}
+    desc = 1 Share
+    description = """{{ company.get ("description", "") }}"""
+    token_count = 1
+
+      [[[tile_1.1]]]
+        size = 20%
+        desc = 2 Shares
+        note = Director
+        token_count = 2
+        type_colour = ${ORANGE}
+{% endfor %}
 
 [token]
 {% set page_size = 16 %}
@@ -502,16 +548,28 @@ Market shares pay dividends to treasury."""
   {% endfor %}
 
   {% if sheet == blocks - 1 %}
+     [[[tile_1.12]]]
+      token_top_colour = ${WHITE}
+      token_bottom_colour = ${WHITE}
+      token_colour = "${M_RED}"
+      token_name = "NORTH"
+      token_name_colour = "${WHITE}"
+     [[[tile_1.13]]]
+      token_top_colour = ${WHITE}
+      token_bottom_colour = ${WHITE}
+      token_colour = "${M_GREEN}"
+      token_name = "NORTH"
+      token_name_colour = "${WHITE}"
      [[[tile_1.14]]]
-      token_top_colour = ${M_BLUE}
-      token_bottom_colour = ${M_BLUE}
+      token_top_colour = ${H_RED}
+      token_bottom_colour = ${H_RED}
       token_colour = "${M_RED}"
       token_name = "NORTH"
       token_name_colour = "${WHITE}"
      [[[tile_1.15]]]
-      token_top_colour = ${M_GREEN}
-      token_bottom_colour = ${M_GREEN}
-      token_colour = "${M_RED}"
+      token_top_colour = ${H_GREEN}
+      token_bottom_colour = ${H_GREEN}
+      token_colour = "${M_GREEN}"
       token_name = "SOUTH"
       token_name_colour = "${WHITE}"
      [[[tile_1.16]]]
@@ -530,6 +588,9 @@ Market shares pay dividends to treasury."""
 {% for train in trains %}
   [[{{ train.name }}]]
     frame_colour = {{ train.frame_colour }}
+  {% if "train_font" in train.keys () %}
+    train_font = {{ train.train_font }}
+  {% endif %}
     train = {{ train.name }}
   {% if "train_colour" in train %}
     train_colour = {{ train.train_colour }}

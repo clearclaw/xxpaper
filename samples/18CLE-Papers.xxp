@@ -1,0 +1,563 @@
+{% set companies = [
+    {
+      "name": """Akron, Bedford
+& Cleveland Railroad""",
+      "token": "ABC",
+      "token_top": "${L_YELLOW}",
+      "token_bottom": "${L_YELLOW}",
+      "share_stripe": "${P_YELLOW}",
+      "token_count": 3,
+      "note": "Home station: Bedford (K26)",
+      "description": """Doubles revenues of Akrom (O20)
+for all trains.""",
+      "share_count": 10,
+    },
+    {
+      "name": """Cleveland Southwestern
+& Columbus Railway
+Company""",
+      "token": "CSC",
+      "token_top": " ${L_BROWN}",
+      "token_bottom": "${L_BROWN}",
+      "share_stripe": "${P_BROWN}",
+      "token_count": 3,
+      "note": "Home station: Berea (K10)",
+      "description": "",
+      "share_count": 10,
+    },
+    {
+      "name": """Cleveland & Eastern
+Interurban""",
+      "token": "C&E",
+      "token_top": "${M_GREEN}",
+      "token_bottom": "${M_GREEN}",
+      "share_stripe": "${P_GREEN}",
+      "token_count": 3,
+      "note": "Home station: University Circle (E22)",
+      "description": "",
+      "share_count": 10,
+    },
+    {
+      "name": """Cleveland Painesville
+& Eastern Railroad
+Company""",
+      "token": "CPE",
+      "token_top": "${BLACK}",
+      "token_bottom": "${BLACK}",
+      "share_stripe": "${M_GRAY}",
+      "token_count": 3,
+      "note": "Home station: Painesville (A26)",
+      "description": "",
+      "share_count": 10,
+    },
+    {
+      "name": """Cleveland & Mahoning
+Valley Railroad Company""",
+      "token": "CMV",
+      "token_top": "${M_GRAY}",
+      "token_bottom": "${M_GRAY}",
+      "share_stripe": "${L_GRAY}",
+      "token_count": 3,
+      "note": "Home station: The Flats (G19)",
+      "description": "",
+      "share_count": 10,
+    },
+    {
+      "name": """Lakeshore Electric
+Railway Company""",
+      "token": "LSE",
+      "token_top": "${L_BLUE}",
+      "token_bottom": "${L_BLUE}",
+      "share_stripe": "${P_BLUE}",
+      "token_count": 3,
+      "note": "Home station: Lakewood (G12)",
+      "description": "",
+      "share_count": 10,
+    },
+    {
+      "name": """Shaker Heights
+Rapid Transit Company""",
+      "token": "SHR",
+      "token_top": "${M_PURPLE}",
+      "token_bottom": "${M_PURPLE}",
+      "share_stripe": "${P_PURPLE}",
+      "token_count": 3,
+      "note": "Home station: Shaker Heights (G26)",
+      "description": "",
+      "share_count": 10,
+    },
+    {
+      "name": """Woodland Avenue
+& West Side Railroad
+Company""",
+      "token": "WWS",
+      "token_top": "${M_BROWN}",
+      "token_bottom": "${M_BROWN}",
+      "share_stripe": "${P_BROWN}",
+      "token_count": 3,
+      "note": "Home station: West 25th Street (H15)",
+      "description": "",
+      "share_count": 10,
+    },
+    {
+      "name": """Cincinatti
+& Lake Erie Railroad
+Company""",
+      "token": "CLE",
+      "token_top": "${L_RED}",
+      "token_bottom": "${L_RED}",
+      "share_stripe": "${P_RED}",
+      "token_count": 3,
+      "note": "Home Station: Lorain (H2)",
+      "description": "",
+      "share_count": 10,
+    },
+    {
+      "name": """Regional Transit Authority""",
+      "token": "RTA",
+      "token_top": "${D_RED}",
+      "token_bottom": "${D_RED}",
+      "share_stripe": "${P_RED}",
+      "token_count": 6,
+      "note": "",
+      "description": "",
+      "share_count": 20,
+      "frame_colour": "${H_RED}"
+    },
+  ]
+%}
+
+{% set privates = [
+  {
+    "cost":  20,
+    "revenue": 5,
+    "title": "Euclid Railroad",
+    "desc": """Blocks South Euclid (26).""",
+    "close": "In red phase",
+  },
+  {
+    "cost": 35,
+    "revenue": 10,
+    "title": "Union depot",
+    "desc": """Owning company may upgrade
+E18 to green & brown track tiles.
+No connection to E18 is required.""",
+    "close": "In red phase or when E18 gets a brown track tile",
+  },
+  {
+    "cost": 50,
+    "revenue": 10,
+    "title": "West Side Market",
+    "desc": """May upgrade a town to a city.
+Or may add $10 revenue to a revenue
+location, or may add $20 revenue to
+Ohio City (G16).""",
+    "close": "In red phase or when power used",
+  },
+  {
+    "cost": 60,
+    "revenue": 10,
+    "title": "Central Viaduct",
+    "desc": """Blocks routes across the
+Cuyahoga River.
+Owning corporation may place
+a track tile on a river hex for free.""",
+    "close": "In red phase or when power used",
+  },
+  {
+    "cost": 80,
+    "revenue": 15,
+    "title": "Azko Nobel Salt, Inc",
+    "desc": """Blocks Whiskey Island (F15).
+Only owning company may place a tile on
+Whiskey Island (F15).""",
+    "close": "Does not close.",
+  },
+  {
+    "cost": 110,
+    "revenue": 15,
+    "title": "Terminal Tower",
+    "desc": """Blocks train routes through F17.
+Owning company may place a station marker
+for normal cost in F17 without needing to
+be connected.""",
+    "close": "When power used",
+  },
+  {
+    "cost": 135,
+    "revenue": 20,
+    "title": """Cleveland, Painesville
+& Ashtabula Railroad""",
+    "desc": """Comes with a 10% share of the CLE.""",
+    "close": "When the CLE pays a dividend",
+  },
+  {
+    "cost": 150,
+    "revenue": 0,
+    "title": """Cleveland & Berea
+Street Railroad Company""",
+    "desc": """Comes with the CSC director's certificate.""",
+    "close": "When the CSC buys a train",
+  },
+]
+%}
+
+{% set trains = [
+    {
+      "cost": "$80",
+      "frame_colour": "${L_YELLOW}",
+      "name": "2",
+      "rust": "Rusted by 4",
+      "rust_stripe": "${M_GREEN}",
+      "trade_stripe": "${L_GREEN}",
+    },
+    {
+      "cost": "$180",
+      "frame_colour": "${L_GREEN}",
+      "name": "3",
+      "rust": "Rusted by 6",
+      "rust_stripe": "${M_BROWN}",
+      "trade_stripe": "${M_GREEN}",
+    },
+    {
+      "cost": "$300",
+      "frame_colour": "${M_GREEN}",
+      "name": "4",
+      "rust": "Rusted by 8",
+      "rust_stripe": "${D_RED}",
+      "trade_stripe": "${M_BROWN}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+    {
+      "cost": "$450",
+      "frame_colour": "${M_BROWN}",
+      "name": "5",
+      "rust": "Rusted by 10",
+      "rust_stripe": "${M_GRAY}",
+      "trade_stripe": "${M_RED}",
+    },
+    {
+      "cost": "$630",
+      "frame_colour": "${M_RED}",
+      "name": "6",
+      "rust": "Rusted by 6D",
+      "rust_stripe": "${M_GRAY}",
+      "trade_stripe": "${D_RED}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+    {
+      "cost": "$800",
+      "frame_colour": "${D_RED}",
+      "name": "8",
+      "rust": "PERMANENT",
+      "rust_stripe": "${M_GRAY}",
+      "trade_stripe": "${D_GRAY}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+    {
+      "cost": "$950",
+      "frame_colour": "${M_GRAY}",
+      "name": "10",
+      "rust": "PERMANENT",
+      "rust_stripe": "${D_GRAY}",
+      "trade_stripe": "${D_GRAY}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+    {
+      "cost": "$1,100",
+      "frame_colour": "${M_GRAY}",
+      "name": "6D",
+      "rust": "PERMANENT",
+      "rust_stripe": "${D_GRAY}",
+      "trade_stripe": "${D_GRAY}",
+      "rust_colour": "${WHITE}",
+      "trade_colour": "${WHITE}",
+    },
+  ]
+%}
+
+[DEFAULT]
+  print_instruction = "Print one copy of this page."
+  token_stripe_text_fudge = 3.0
+
+[charter]
+  desc1 = "Assets, Treasury & Trains"
+  note1 = """Purchase price of shares goes to bank.
+Market shares pay dividends to treasury."""
+  token_count = 3
+
+{% set page_size = 4 %}
+{% set company_count = companies | count %}
+{% set blocks = ((companies|count + 3) / page_size) | int %}
+{% set tiles = ["1.1", "1.2", "2.1", "2.2",] %}
+{% for sheet in range (blocks) %}
+  [[sheet{{ sheet + 1 }}]]
+  {% set index = sheet * page_size %}
+  {% for tile in range (page_size) %}
+    {% if index + tile >= company_count %}
+      {% continue %}
+    {% endif %}
+    {% set company = companies[index + tile] %}
+    [[[tile_{{ tiles[tile] }}]]]
+      token_bottom_colour = {{ company.token_bottom }}
+      token_colour = ${WHITE}
+      token_top_colour = {{ company.token_top }}
+      stripe_colour = {{ company.share_stripe }}
+      title = """{{ company.name }}"""
+      token_name = {{ company.token }}
+      price1 = "free"
+      price2 = "$40"
+      price3 = "$100"
+  {% endfor %}
+{% endfor %}
+
+[market]
+
+{% set revsheets = 3 %}
+{% for sheet in range (revsheets) %}
+  {% for sheet_type in ["a", "b",] %}
+  [[revenue{{ sheet + 1 }}{{ sheet_type }}]]
+    num_across_x = 15
+    num_across_y = 12
+    tile_x = 40
+    tile_y = 40
+    tile_colour = ${WHITE}
+    tile_stroke_colour = ${BLACK}
+
+    {% for row in range (12) %}
+      {% for ndx in range (15) %}
+    [[[tile_{{ ndx + 1 }}.{{ row + 1 }}]]]
+        {% if sheet_type == "a" %}
+          {% set value = (sheet * 15) + (row * revsheets * 15) + ndx %}
+        {% elif sheet_type == "b" %}
+          {% set value = (sheet * 180) + (row * 15) + ndx %}
+        {% endif %}
+      desc = {{ value }}
+        {% if not value % 50 %}
+      tile_colour = ${P_GREEN}
+        {% elif not value % 10 %}
+      tile_colour = ${P_RED}
+        {%elif not value % 5 %}
+      tile_colour = ${P_YELLOW}
+        {% else %}
+      tile_colour = ${WHITE}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+  [[round]]
+    num_across_x = 10
+    num_across_y = 2
+    tile_x = 64
+    tile_y = 64
+    tile_colour = ${WHITE}
+    tile_stroke_colour = ${WHITE}
+    desc = ""
+
+    [[[tile_4.2]]]
+      desc = "Stock"
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_4.1]]]
+      desc = "Operating"
+      tile_colour = ${L_YELLOW}
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_5.1]]]
+      desc = "Operating"
+      tile_colour = ${L_GREEN}
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_6.1]]]
+      desc = "Operating"
+      tile_colour = ${L_BROWN}
+      tile_stroke_colour = ${BLACK}
+
+    [[[tile_7.1]]]
+      desc = "Operating"
+      tile_colour = ${L_GRAY}
+      tile_stroke_colour = ${BLACK}
+
+[private]
+  frame_colour = ${P_YELLOW}
+
+{% set page_size = 9 %}
+{% set private_count = privates | count %}
+{% set blocks = ((privates|count + 8) / page_size) | int %}
+{% set tiles = ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3"] %}
+{% for sheet in range (blocks) %}
+  [[sheet{{ sheet + 1 }}]]
+  {% set index = sheet * page_size %}
+  {% for tile in range (page_size) %}
+    {% if index + tile >= private_count %}
+      {% continue %}
+    {% endif %}
+    {% set private = privates[index + tile] %}
+    [[[tile_{{ tiles[tile] }}]]]
+      cost = Cost: ${{ private.cost }}
+      revenue = Revenue: ${{ private.revenue }}
+      title = """{{ private.title }}"""
+      desc = """{{ private.desc }}"""
+      close = """Close: {{ private.close }}"""
+  {% endfor %}
+{% endfor %}
+
+[share]
+  token_count = 1
+  note = ""
+  desc = "1 Share"
+  type_colour = transparent
+{% for company in companies %}
+  [[{{ company.token }}]]
+  {% if "frame_colour" in company.keys () %}
+    frame_colour = {{ company.frame_colour }}
+  {% endif %}
+  {% if company.token == "RTA" %}
+    print_instruction = "Print three copies of this page."
+  {% endif %}
+    token_bottom_colour = {{ company.token_bottom }}
+    token_top_colour = {{ company.token_top }}
+  {% if "token_colour" in company.keys () %}
+    token_colour = {{ company.token_colour }}
+    token_name_colour = {{ company.token_name_colour }}
+  {% endif %}
+    stripe_colour = {{ company.share_stripe }}
+    title = """{{ company.name }}"""
+    token_name = {{ company.token }}
+    size = {{ 100 // company.share_count }}%
+    desc = 1 Share
+    description = """{{ company.get ("description", "") }}"""
+
+    [[[tile_1.1]]]
+      size = {{ 200 / company.share_count }}%
+      desc = 2 Shares
+      note = """Director"""
+      token_count = 2
+      type_colour = ${ORANGE}
+  {% if company.token == "RTA" %}
+      description = "PRIORITY   DEAL"
+  {% endif %}
+{% endfor %}
+
+[token]
+  token_count = 6
+
+{% set page_size = 16 %}
+{% set company_count = companies | count %}
+{% set blocks = ((company_count + page_size - 1) / page_size) | int %}
+{% for sheet in range (blocks) %}
+  [[sheet{{ sheet + 1 }}]]
+  {% set index = sheet * page_size %}
+  {% for tile in range (page_size) %}
+    {% set company = companies[index + tile] %}
+    {% if (sheet * page_size) + tile < company_count %}
+    [[[tile_1.{{ tile + 1 }}]]]
+      token_bottom_colour = {{ company.token_bottom }}
+      token_top_colour = {{ company.token_top }}
+      token_name = {{ company.token }}
+      {% if "token_colour" in company.keys () %}
+      token_colour = {{ company.token_colour }}
+      token_name_colour = {{ company.token_name_colour }}
+      {% endif %}
+      {% if "token_bottom_stripe" in company.keys () %}
+      token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+      {% endif %}
+      {% if "token_top_stripe" in company.keys () %}
+      token_top_stripe_colour = {{ company.token_top_stripe }}
+      {% endif %}
+      {% if "token_name_font" in company.keys () %}
+      token_name_font = {{ company.token_name_font }}
+      {% endif %}
+      {% if company.token == "RTA" %}
+      token_count = 10
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if sheet == blocks - 1 %}
+    {% set company = companies[company_count - 1] %}
+     [[[tile_1.11]]]
+      token_bottom_colour = {{ company.token_bottom }}
+      token_top_colour = {{ company.token_top }}
+      token_name = {{ company.token }}
+      {% if "token_colour" in company.keys () %}
+      token_colour = {{ company.token_colour }}
+      token_name_colour = {{ company.token_name_colour }}
+      {% endif %}
+      {% if "token_bottom_stripe" in company.keys () %}
+      token_bottom_stripe_colour = {{ company.token_bottom_stripe }}
+      {% endif %}
+      {% if "token_top_stripe" in company.keys () %}
+      token_top_stripe_colour = {{ company.token_top_stripe }}
+      {% endif %}
+      {% if "token_name_font" in company.keys () %}
+      token_name_font = {{ company.token_name_font }}
+      {% endif %}
+      {% if company.token == "RTA" %}
+      token_count = 10
+      {% endif %}
+
+     [[[tile_1.16]]]
+      token_count = 1
+      token_top_colour = ${M_RED}
+      token_bottom_colour = ${M_BLUE}
+      token_colour = "${BLACK}"
+      token_name = "ROUND"
+      token_name_colour = "${WHITE}"
+   {% endif %}
+{% endfor %}
+
+[train]
+  trade = ""
+
+{% for train in trains %}
+  [[{{ train.name }}]]
+    frame_colour = {{ train.frame_colour }}
+    train = {{ train.name }}
+    cost = "Cost: {{ train.cost }}"
+    rust = "{{ train.rust }}"
+    trade_stripe_colour = {{ train.trade_stripe }}
+    rust_stripe_colour = {{ train.rust_stripe }}
+    {% if "rust_colour" in train.keys () %}
+    rust_colour = {{ train.rust_colour }}
+    {% endif %}
+    {% if "trade_colour" in train.keys () %}
+    trade_colour = {{ train.trade_colour }}
+    {% endif %}
+    {% if "train_font" in train.keys () %}
+    "train_font" = {{ train.train_font }}
+    {% endif %}
+{% endfor %}
+
+  [[player1]]
+    frame_colour = ${M_RED}
+    train = ""
+    cost = ""
+    rust = ""
+    trade_stripe_colour = ${M_BLUE}
+    rust_stripe_colour = ${M_BLUE}
+    train_rust_colour = ${WHITE}
+    rust_colour = ${WHITE}
+
+    [[[tile_1.1]]]
+      train = "1"
+
+    [[[tile_1.2]]]
+      train = "2"
+
+    [[[tile_1.3]]]
+      train = "3"
+
+    [[[tile_2.1]]]
+      train = "4"
+
+    [[[tile_2.2]]]
+      train = "5"
+
+    [[[tile_2.3]]]
+      train = "6"
