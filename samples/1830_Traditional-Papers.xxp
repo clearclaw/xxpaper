@@ -44,6 +44,9 @@ Station cost: $Free/$40/$100/..."""
       title = "Chesapeake & Ohio Railroad"
       token_name = C&O
       token_count = 3
+      price1 = Free
+      price2 = $40
+      price3 = $100
 
     [[[tile_1.2]]]
       token_top_colour = ${COLOR1_NYC}
@@ -51,6 +54,10 @@ Station cost: $Free/$40/$100/..."""
       stripe_colour = ${COLOR2_NYC}
       title = "New York Central Railroad"
       token_name = NYC
+      price1 = Free
+      price2 = $40
+      price3 = $100
+      price4 = $100
 
     [[[tile_2.1]]]
       token_top_colour = ${COLOR1_BO}
@@ -59,6 +66,9 @@ Station cost: $Free/$40/$100/..."""
       title = "Baltimore & Ohio Railroad"
       token_name = B&O
       token_count = 3
+      price1 = Free
+      price2 = $40
+      price3 = $100
 
     [[[tile_2.2]]]
       token_top_colour = ${COLOR1_CPR}
@@ -66,6 +76,10 @@ Station cost: $Free/$40/$100/..."""
       stripe_colour = ${COLOR2_CPR}
       title = "Canadian Pacific Railroad"
       token_name = CPR
+      price1 = Free
+      price2 = $40
+      price3 = $100
+      price4 = $100
 
   [[sheet2]]
 
@@ -76,6 +90,9 @@ Station cost: $Free/$40/$100/..."""
       title = "Erie Railroad"
       token_name = ERIE
       token_count = 3
+      price1 = Free
+      price2 = $40
+      price3 = $100
 
     [[[tile_1.2]]]
       token_top_colour = ${COLOR1_NYNH}
@@ -84,6 +101,8 @@ Station cost: $Free/$40/$100/..."""
       title = "New York, New Haven", "& Hartford Railroad"
       token_name = NYNH
       token_count = 2
+      price1 = Free
+      price2 = $40
 
     [[[tile_2.1]]]
       token_top_colour = ${COLOR1_BM}
@@ -92,6 +111,8 @@ Station cost: $Free/$40/$100/..."""
       title = "Baltimore & Maine Railroad"
       token_name = B&M
       token_count = 2
+      price1 = Free
+      price2 = $40
 
     [[[tile_2.2]]]
       token_top_colour = ${COLOR1_PRR}
@@ -99,6 +120,10 @@ Station cost: $Free/$40/$100/..."""
       stripe_colour = ${COLOR2_PRR}
       title = "Pennsylvania Railroad"
       token_name = PRR
+      price1 = Free
+      price2 = $40
+      price3 = $100
+      price4 = $100
 
 
 [private]
