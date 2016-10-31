@@ -141,7 +141,8 @@ Station cost: $Free/$40/$100/..."""
     [[[tile_1.2]]]
       cost = Cost: $40
       revenue = Revenue: $10
-      title = "Champlain & St. Lawrence Railroad"
+      title = """Champlain
+& St. Lawrence Railroad"""
       desc = """Blocks: B20.
 Owning corporation may place a free,
 extra tile at hex B20."""
