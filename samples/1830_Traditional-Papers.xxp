@@ -339,30 +339,50 @@ public company."""
 
   [[yellow]]
     train = 2
-    frame_colour = ${YELLOW}
+    frame_colour = ${M_YELLOW}
     cost = Cost: $80
     rust = Rusted by: 4
     trade_stripe_colour = ${GREEN}
     rust_stripe_colour = ${GREEN}
 
-  [[green3]]
-    frame_colour = ${GREEN}
+  [[green]]
+    frame_colour = ${M_GREEN}
     train = 3
     cost = Cost: $180
     rust = Rusted by: 6
     trade_stripe_colour = ${GRAY}
     rust_stripe_colour = ${BROWN}
 
-  [[green4]]
-    frame_colour = ${GREEN}
-    train = 4
-    cost = Cost: $300
-    rust = Rusted by: D
-    trade_stripe_colour = ${GRAY}
-    rust_stripe_colour = ${GRAY}
+    [[[tile_2.3]]]
+      train = 4
+      cost = Cost: $300
+      rust = Rusted by: D
+      trade_stripe_colour = ${GRAY}
+      rust_stripe_colour = ${GRAY}
+
+    [[[tile_3.1]]]
+      train = 4
+      cost = Cost: $300
+      rust = Rusted by: D
+      trade_stripe_colour = ${GRAY}
+      rust_stripe_colour = ${GRAY}
+
+    [[[tile_3.2]]]
+      train = 4
+      cost = Cost: $300
+      rust = Rusted by: D
+      trade_stripe_colour = ${GRAY}
+      rust_stripe_colour = ${GRAY}
+      
+    [[[tile_3.3]]]
+      train = 4
+      cost = Cost: $300
+      rust = Rusted by: D
+      trade_stripe_colour = ${GRAY}
+      rust_stripe_colour = ${GRAY}
 
   [[brown]]
-    frame_colour = ${BROWN}
+    frame_colour = ${M_BROWN}
     train = 5
     cost = Cost: $450
     rust = PERMANENT
@@ -380,6 +400,7 @@ public company."""
     [[[tile_3.3]]]
       train = 6
       cost = Cost: $630
+      trade = (Optional)
 
   [[gray]]
     frame_colour = ${GRAY}
