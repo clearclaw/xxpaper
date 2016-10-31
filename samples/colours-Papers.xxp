@@ -1,9 +1,9 @@
 {% set colours = ["GRAY", "RED", "GREEN", "BLUE", 
                   "YELLOW", "PURPLE", "BROWN",] %}
-{% set shades = ["P", "L", "M", "D",] %}
+{% set shades = ["H", "P", "L", "M", "D",] %}
 [market]
   num_across_x = 7
-  num_across_y = 4
+  num_across_y = 5
   tile_x = 64
   tile_y = 64
   tile_colour = ${WHITE}
