@@ -8,6 +8,12 @@ Installation dependency:
 Unfortunately PsFile is not available via setuptools and the cheese
 factory.
 
+Otherwise:
+
+	     pip install xppaper
+
+Should do the job.
+
 XXPaper generates Postscript files representing charters, privates,
 shares, station markers, trains and (linear) stock markets (2D stock
 markets coming later) as defined by a configuration passed on the
@@ -21,15 +27,13 @@ accurate die placement when using a die cutter.
 The resulting Postscript files can be converted to PDFs using the
 `ps2pdf` utility that comes with Ghostscript.
 
-A sample configuration file can be found in the "samples" directory
-of the source tree.  The sample file produces privates, shares and
-train art sized suitably for the test die that comes with an Ellison
-Pro die cutter.
+Sample configuration files can be found in the "samples" directory
+of the source tree.  The README there lists the various sample files,
+their complexity and purpose (some are much more involved than 
+others).  The files produced by those sample files can be seen at:
 
-A variety of sample files can be found in the samples/ subdirectory.
-Please see http://kanga.nu/~claw/xxpaper/example to see the files
-they produce.
-
+	     http://kanga.nu/~claw/xxpaper/example
+       
 -- JCL
 
 P.S. PsFile appears to have fallen off the 'net.  A copy may be
