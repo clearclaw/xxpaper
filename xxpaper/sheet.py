@@ -9,13 +9,14 @@ from .cmdio import CmdIO
 class Sheet (CmdIO):
 
   @logtool.log_call (log_args = False)
-  def __init__ (self, cfgs, paper, outline, sheet, page, fname):
+  def __init__ (self, cfgs, paper, outline, sheet, page, fname_p):
     super (Sheet, self).__init__ (cfgs)
     self.re_var = re.compile (r"\$\{([A-Za-z0-9._]+)\}")
     self.paper = paper
     self.outline = outline
     self.cfgs = cfgs
-    self.fname = fname
+    self.fname_p = fname_p
+    self.fname = None
     self.fd = None
     # Type of sheet
     self.sheet = sheet
@@ -35,6 +36,11 @@ class Sheet (CmdIO):
     self.y_off = (self.rubber_y - (self.tile_y * self.num_y)) / 2
 
   @logtool.log_call
+  def _mk_fname (self, tilespec):
+      return (("%s.ps" % self.fname_p) if not tilespec
+              else ("%s__%s.ps" % (self.fname_p, tilespec)))
+
+  @logtool.log_call
   def __enter__ (self):
     return self
 
@@ -43,8 +49,11 @@ class Sheet (CmdIO):
     pass
 
   @logtool.log_call
-  def open (self):
-    self.fd = PSFile (self.fname, paper = self.paper, margin = 36)
+  def open (self, tilespec = None):
+    self.fname = self._mk_fname (tilespec)
+    self.cfgs[1]["DEFAULT"]["this_filename"] = " This file: %s" % self.fname
+    margin = int (self.value ("psfile_margin"))
+    self.fd = PSFile (self.fname, paper = self.paper, margin = margin)
     if self.rotate == "1":
       self.fd.append ("270 rotate")
       self.fd.append ("-%d %d translate" % (self.fd.height, 0))
@@ -52,8 +61,10 @@ class Sheet (CmdIO):
   @logtool.log_call
   def close (self):
     if self.fd:
-     self.fd.close ()
-     self.fd = None
+      self.fd.close ()
+      self.fd = None
+    self.info (self.fname)
+    self.fname = None
 
   @logtool.log_call (log_args = False)
   def _value_lookup (self, cfg, sl, k):
@@ -115,6 +126,7 @@ class Sheet (CmdIO):
 
   @logtool.log_call
   def page_details (self):
+    """Special page-level stuff for this page"""
     pass # Specialised in children
 
   @logtool.log_call
@@ -122,19 +134,26 @@ class Sheet (CmdIO):
     pass # Specialised in children
 
   @logtool.log_call
-  def tile_block (self):
+  def tile_block (self, onlyone = False):
     ox = self.x_off
     oy = self.y_off
     for x in xrange (self.num_x):
       for y in xrange (self.num_y):
+        if self.value ("onlyone") == "1":
+          self.open ("%s_%s" % (x, y))
+          self.page_frame ()
+          self.page_details ()
         bx = (x * self.tile_x) + ox
         by = (y * self.tile_y) + oy
         self.push_tile (x, y, bx, by)
         self.tile_details (x, y)
         self.pop_tile ()
+        if self.value ("onlyone") == "1":
+          self.close ()
 
   @logtool.log_call
   def page_align (self):
+    """Die alignment marks"""
     align_length = float (self.value ("align_length"))
     self.fd.append ("gsave")
     for i in [((self.rubber_x / 2.0, 0), (0, 0 - align_length)),
@@ -146,6 +165,7 @@ class Sheet (CmdIO):
 
   @logtool.log_call
   def page_frame (self):
+    """Rubber box"""
     self.box ("frame", 0, 0, 0, 0, self.rubber_x, self.rubber_y)
 
   @logtool.log_call
@@ -154,17 +174,17 @@ class Sheet (CmdIO):
     self.fd.append ("%f %f moveto" % (0, self.rubber_y + 6))
     self.text ("copyright", 0, 0, v_centre = -1)
     self.fd.append ("grestore")
-    
+
     self.fd.append ("gsave")
     self.fd.append ("%f %f moveto" % (0, -12))
     self.text ("source_filename", 0, -12, v_centre = -1)
     self.fd.append ("grestore")
-    
+
     self.fd.append ("gsave")
     self.fd.append ("%f %f moveto" % (self.rubber_x / 2, -12))
     self.text ("this_filename", 0, -12, v_centre = -1)
     self.fd.append ("grestore")
-    
+
     self.fd.append ("gsave")
     self.fd.append ("%f %f moveto" % (0, -24))
     self.text ("print_instruction", 0, -24, v_centre = -1)
@@ -173,6 +193,7 @@ class Sheet (CmdIO):
   @logtool.log_call
   def push_tile (self, x, y, bx, by):
     self.fd.append ("gsave")
+    self.fd.append ("% pushtile")
     self.fd.append ("%d %d translate" % (bx, by))
     if self.value ("outline", x, y) == "outline":
       self.box ("tile", x, y, 0, 0, self.tile_x, self.tile_y)
@@ -357,11 +378,15 @@ class Sheet (CmdIO):
     # Done
     self.fd.append ("grestore")
 
+  @logtool.log_call
   def make (self):
-    self.open ()
-    self.page_align ()
-    self.page_frame ()
-    self.page_details ()
+    onlyone = self.value ("onlyone")
+    if onlyone == "0":
+      self.open ()
+      self.page_align ()
+      self.page_frame ()
+      self.page_details ()
     self.tile_block ()
-    self.copyright ()
-    self.close ()
+    if onlyone == "0":
+      self.copyright ()
+      self.close ()
