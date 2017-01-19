@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 from __future__ import absolute_import
-import itertools, logtool, numbers, re, sys
+import fnmatch, itertools, logtool, numbers, re, sys
 from psfile import PSFile
 from types import ListType
 from .cmdio import CmdIO
@@ -23,8 +23,17 @@ class Sheet (CmdIO):
     self.page = page
     self.rotate = self.value ("rotate")
     # Size of grid
-    self.num_x = int (self.value ("num_across_x"))
-    self.num_y = int (self.value ("num_across_y"))
+    self.onlyone = self.value ("onlyone")
+    if self.onlyone == "0":
+      self.num_x = int (self.value ("num_across_x"))
+      self.num_y = int (self.value ("num_across_y"))
+      self.num_x_real = self.num_x
+      self.num_y_real = self.num_y
+    else:
+      self.num_x = 1
+      self.num_y = 1
+      self.num_x_real = int (self.value ("num_across_x"))
+      self.num_y_real = int (self.value ("num_across_y"))
     # Size of tile
     self.tile_x = int (self.value ("tile_x"))
     self.tile_y = int (self.value ("tile_y"))
@@ -34,11 +43,12 @@ class Sheet (CmdIO):
     # Offsets for inner tile block
     self.x_off = (self.rubber_x - (self.tile_x * self.num_x)) / 2
     self.y_off = (self.rubber_y - (self.tile_y * self.num_y)) / 2
+    self.current_tile = None
 
   @logtool.log_call
   def _mk_fname (self, tilespec):
-      return (("%s.ps" % self.fname_p) if not tilespec
-              else ("%s__%s.ps" % (self.fname_p, tilespec)))
+    return (("%s.ps" % self.fname_p) if not tilespec
+            else ("%s__%s.ps" % (self.fname_p, tilespec)))
 
   @logtool.log_call
   def __enter__ (self):
@@ -65,6 +75,13 @@ class Sheet (CmdIO):
       self.fd = None
     self.info (self.fname)
     self.fname = None
+
+  @logtool.log_call
+  def _tile_filter (self, name):
+    for f in self.value ("tile_filter"):
+      if fnmatch.fnmatch (name, f):
+        return True
+    return False
 
   @logtool.log_call (log_args = False)
   def _value_lookup (self, cfg, sl, k):
@@ -134,34 +151,41 @@ class Sheet (CmdIO):
     pass # Specialised in children
 
   @logtool.log_call
-  def tile_block (self, onlyone = False):
+  def tile_block (self):
     ox = self.x_off
     oy = self.y_off
-    for x in xrange (self.num_x):
-      for y in xrange (self.num_y):
-        if self.value ("onlyone") == "1":
-          self.open ("%s_%s" % (x, y))
+    for x in xrange (self.num_x_real):
+      for y in xrange (self.num_y_real):
+        if self.onlyone == "1":
+          tilespec = "%s_%s" % (x + 1, y + 1)
+          if not self._tile_filter (tilespec):
+            continue
+          self.current_tile = (x, y)
+          self.open (tilespec)
           self.page_frame ()
           self.page_details ()
+          self.push_tile (x, y, ox, oy)
+          self.tile_details (x, y)
+          self.pop_tile ()
+          self.close ()
+          continue
         bx = (x * self.tile_x) + ox
         by = (y * self.tile_y) + oy
         self.push_tile (x, y, bx, by)
         self.tile_details (x, y)
         self.pop_tile ()
-        if self.value ("onlyone") == "1":
-          self.close ()
 
   @logtool.log_call
   def page_align (self):
     """Die alignment marks"""
     align_length = float (self.value ("align_length"))
-    self.fd.append ("gsave")
+    self.fd.append ("gsave % page_align")
     for i in [((self.rubber_x / 2.0, 0), (0, 0 - align_length)),
               ((self.rubber_x /2.0, self.rubber_y), (0, align_length)),
               ((0, self.rubber_y / 2.0), (0 - align_length, 0)),
               ((self.rubber_x, self.rubber_y / 2.0), (align_length, 0)),]:
       self.line ("align", 0, 0, i[0][0], i[0][1], i[1][0], i[1][1])
-    self.fd.append ("grestore")
+    self.fd.append ("grestore % page_align")
 
   @logtool.log_call
   def page_frame (self):
@@ -170,7 +194,7 @@ class Sheet (CmdIO):
 
   @logtool.log_call
   def copyright (self):
-    self.fd.append ("gsave")
+    self.fd.append ("gsave % copyright")
     self.fd.append ("%f %f moveto" % (0, self.rubber_y + 6))
     self.text ("copyright", 0, 0, v_centre = -1)
     self.fd.append ("grestore")
@@ -188,20 +212,19 @@ class Sheet (CmdIO):
     self.fd.append ("gsave")
     self.fd.append ("%f %f moveto" % (0, -24))
     self.text ("print_instruction", 0, -24, v_centre = -1)
-    self.fd.append ("grestore")
+    self.fd.append ("grestore % copyright")
 
   @logtool.log_call
   def push_tile (self, x, y, bx, by):
-    self.fd.append ("gsave")
-    self.fd.append ("% pushtile")
+    self.fd.append ("gsave % push_tile")
     self.fd.append ("%d %d translate" % (bx, by))
     if self.value ("outline", x, y) == "outline":
       self.box ("tile", x, y, 0, 0, self.tile_x, self.tile_y)
-    self.fd.append ("newpath")
+    self.fd.append ("newpath % /push_tile")
 
   @logtool.log_call
   def pop_tile (self):
-    self.fd.append ("grestore")
+    self.fd.append ("grestore % pop_tile")
 
   @logtool.log_call
   def line (self, typ, x, y, bx, by, w, h,
@@ -209,7 +232,7 @@ class Sheet (CmdIO):
     stroke_width = float (self.value ("%s_stroke" % typ, x, y))
     colour = self.value ("%s_colour" % typ, x, y)
     if colour != "transparent":
-      self.fd.append ("gsave")
+      self.fd.append ("gsave % line")
       if isinstance (dash_length, numbers.Number):
         self.fd.append ("1 setlinecap")
         self.fd.append ("[%s %s] %s setdash" % (dash_length, dash_space, dash_start))
@@ -218,14 +241,14 @@ class Sheet (CmdIO):
       self.fd.append ("%f %f moveto" % (bx, by))
       self.fd.append ("%f %f lineto" % (bx + w, by + h))
       self.fd.append ("stroke")
-      self.fd.append ("grestore")
+      self.fd.append ("grestore % line")
 
   @logtool.log_call
   def box (self, typ, x, y, bx, by, w, h):
     stroke = float (self.value ("%s_stroke" % typ, x, y))
     stroke_colour = self.value ("%s_stroke_colour" % typ, x, y)
     colour_bg = self.value ("%s_colour" % typ, x, y)
-    self.fd.append ("gsave")
+    self.fd.append ("gsave % box")
     if colour_bg != "transparent":
       self.fd.append ("%s %s %s setrgbcolor" % colour_bg)
       self.fd.append ("%f %f %f %f rectfill" % (bx, by, w, h))
@@ -233,12 +256,12 @@ class Sheet (CmdIO):
       self.fd.append ("%s %s %s setrgbcolor" % stroke_colour)
       self.fd.append ("%f setlinewidth" % stroke)
       self.fd.append ("%f %f %f %f rectstroke" % (bx, by, w, h))
-    self.fd.append ("grestore")
+    self.fd.append ("grestore % box")
 
   @logtool.log_call
   def text (self, typ, x, y, h_centre = -1, v_centre = 1):
     line_height = float (self.value ("%s_line_height" % typ))
-    self.fd.append ("gsave")
+    self.fd.append ("gsave % text")
     self.fd.append ("currentpoint translate")
     self.fd.append ("/%s %s selectfont" % self.value ("%s_font" % typ, x, y))
     self.fd.append ("%s %s %s setrgbcolor"
@@ -263,7 +286,7 @@ class Sheet (CmdIO):
       self.fd.append (tformat[h_centre] % t)
       by -= line_height
       self.fd.append ("0 %d moveto" % by)
-    self.fd.append ("grestore")
+    self.fd.append ("grestore % text")
 
   @logtool.log_call
   def company_token_circle (self, x, y):
@@ -272,7 +295,7 @@ class Sheet (CmdIO):
     stroke = float (self.value ("token_stroke", x, y))
     stroke_colour = self.value ("token_stroke_colour", x, y)
     ps = """
-      gsave
+      gsave % company_token_circle
       currentpoint translate
       newpath
       0 0 {token_radius} 0 360 arc
@@ -283,7 +306,7 @@ class Sheet (CmdIO):
       {stroke_colour} setrgbcolor
       {stroke} setlinewidth
       stroke
-      grestore
+      grestore % company_token_circle
     """.format (**{
       "token_radius": token_radius,
       "colour": "%s %s %s" % colour,
@@ -305,7 +328,7 @@ class Sheet (CmdIO):
     stripe_text_fudge = float (self.value ("token_stripe_text_fudge", x, y))
     self.company_token_circle (x, y)
     # Setup
-    self.fd.append ("gsave")
+    self.fd.append ("gsave % copany_token")
     self.fd.append ("currentpoint translate")
     self.fd.append ("newpath")
     # Token top
@@ -376,17 +399,16 @@ class Sheet (CmdIO):
     self.text ("token_name", x, y, h_centre = 0, v_centre = 0)
     self.fd.append ("grestore")
     # Done
-    self.fd.append ("grestore")
+    self.fd.append ("grestore % company_token")
 
   @logtool.log_call
   def make (self):
-    onlyone = self.value ("onlyone")
-    if onlyone == "0":
+    if self.onlyone == "0":
       self.open ()
       self.page_align ()
       self.page_frame ()
       self.page_details ()
     self.tile_block ()
-    if onlyone == "0":
+    if self.onlyone == "0":
       self.copyright ()
       self.close ()

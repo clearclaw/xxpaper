@@ -431,7 +431,7 @@ public company."""
   [[gray]]
     frame_colour = ${GRAY}
     train = D
-    cost = Cost: $1,100
+    cost = "Cost: $1,100"
     rust = PERMANENT
     trade_stripe_colour = ${GRAY}
     rust_stripe_colour = ${BLACK}

@@ -65,6 +65,10 @@ class Share (Sheet):
 
   @logtool.log_call
   def type_stripe (self):
+    if (self.onlyone == "1"
+        and self.value ("type_colour", self.current_tile[0], self.current_tile[1])
+        == "transparent"):
+      return
     oy = self.y_off + self.type_stripe_inset_y
     for y in xrange (self.num_y):
       by = (y * self.tile_y) + oy

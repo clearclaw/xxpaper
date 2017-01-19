@@ -27,6 +27,7 @@ CONFIG = Dict ({
   "sections": ["*",],
   "single_tiles": False,
   "template": None,
+  "tile_filter": ["*",],
   "quiet": False,
 })
 IO = CmdIO (CONFIG)
@@ -172,6 +173,9 @@ def arg_game_file (fname):
 @clip.flag ("-t", "--template", name = "template",
             help = "Export Jinja-expanded template file",
            required = False, callback = partial (option_setopt, "template"))
+@clip.opt ("-T", "--TILE", name = "tile",
+           help = "Tiles to produce (comma separated)",
+           required = False, callback = partial (option_list, "tile_filter"))
 @clip.flag ("-v", "--version", help = "Report installed version",
             callback = option_version)
 @clip.arg (name = "game_file", nargs = 1, default = None,
@@ -219,6 +223,7 @@ def app_main (*args, **kwargs): # pylint: disable=unused-argument
                  else ("%sx%s" % (paper[0], paper[1])))
           fname_p = os.path.join ("./", "%s_%s-%s-%s"
                                 % (section, page, form, p_s))
+          runtime["DEFAULT"]["tile_filter"] = CONFIG.tile_filter
           # game["DEFAULT"]["this_filename"] = " This file: %s" % fname
           make (cfgs, paper, form, section, page, fname_p)
 
