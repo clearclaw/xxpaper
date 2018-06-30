@@ -289,11 +289,12 @@ class Sheet (CmdIO):
     self.fd.append ("grestore % text")
 
   @logtool.log_call
-  def company_token_circle (self, x, y):
+  def company_token_circle (self, x, y, i = None):
     token_radius = float (self.value ("token_radius", x, y))
-    colour = self.value ("token_colour", x, y)
+    colour = self.value ("token_colour%s" % (i if i else ""), x, y)
     stroke = float (self.value ("token_stroke", x, y))
-    stroke_colour = self.value ("token_stroke_colour", x, y)
+    stroke_colour = self.value ("token_stroke_colour%s" % (i if i else ""),
+                                x, y)
     ps = """
       gsave % company_token_circle
       currentpoint translate

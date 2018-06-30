@@ -136,7 +136,7 @@ closepath
       bx = ox
       by = oy - (i * spacing)
       self.fd.append ("%f %f moveto" % (bx, by))
-      self.company_token_circle (x, y)
+      self.company_token_circle (x, y, i)
       price_height_fudge = float (self.value ("price%s_height_fudge" % i, x, y))
       self.fd.append ("%f %f moveto" % (bx, by - price_height_fudge))
       self.text ("price%s" % i, x, y, h_centre = 0, v_centre = 0)
