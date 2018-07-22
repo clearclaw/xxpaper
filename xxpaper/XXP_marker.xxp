@@ -1,0 +1,20 @@
+marker:
+
+  index:
+
+  -missing-:
+    ELEMENTS:
+      - token_interior_box
+      - top_half_box
+      - bottom_half_box
+      - name_stripe_box
+      - short_name_text
+
+    EMBED_ELEMENTS:
+      - top_half_box
+      - bottom_half_box
+      - name_stripe_box
+      - short_name_text
+
+  _include_:
+    - XXP_token_objects.xxp

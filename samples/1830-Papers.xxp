@@ -1,0 +1,317 @@
+company:
+
+  index:
+
+    B&M:
+      _:
+        long_name_text_text: |
+            Baltimore & Maine
+        short_name_text_text: B&M
+        token_1_text_text: Free
+        token_2_text_text: $40
+        _major_fill: ${colour/wikipedia/ultramarine}
+        _minor_fill: ${colour/wikipedia/ultramarine}
+        comment_text_text: |
+            Founded in 1833 as the
+            Andover & Wilmington Railroad
+        _related_fill: ${colour/wikipedia/han_blue}
+
+      token:
+        index: "$[{'%s' % i: None for i in range (5)}]"
+
+    B&O:
+      _:
+        long_name_text_text: |
+            Baltimore & Ohio
+        short_name_text_text: B&O
+        token_1_text_text: Free
+        token_2_text_text: $40
+        token_3_text_text: $100
+        _major_fill: ${colour/wikipedia/banana_yellow}
+        _minor_fill: ${colour/hollasch/blue}
+        comment_text_text: |
+            First to offer scheduled
+            passenger service
+        _related_fill: ${colour/hollasch/steel_blue}
+
+      token:
+        index: "$[{'%s' % i: None for i in range (6)}]"
+
+    CPR:
+      _:
+        long_name_text_text: |
+            Canada Pacific
+            Railroad
+        short_name_text_text: CPR
+        token_1_text_text: Free
+        token_2_text_text: $40
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/hollasch/brown_ochre}
+        _minor_fill: ${colour/hollasch/brown_ochre}
+        comment_text_text: |
+            Canada's first
+            transcontinental railway
+        _related_fill: ${colour/hollasch/brick}
+
+      token:
+        index: "$[{'%s' % i: None for i in range (7)}]"
+
+    C&O:
+      _:
+        long_name_text_text: |
+            Chesapeake & Ohio
+            Railroad
+        short_name_text_text: C&O
+        token_1_text_text: Free
+        token_2_text_text: $40
+        token_3_text_text: $100
+        _major_fill: ${colour/hollasch/sky_blue_deep}
+        _minor_fill: ${colour/hollasch/sky_blue_deep}
+        comment_text_text: |
+            The first C&O train ran on
+            Wednesday, 20 December 1837
+        _related_fill: ${colour/hollasch/powder_blue}
+
+      token:
+        index: "$[{'%s' % i: None for i in range (6)}]"
+
+    ERIE:
+      _:
+        long_name_text_text: |
+            Erie Railroad
+        short_name_text_text: ERIE
+        token_1_text_text: Free
+        token_2_text_text: $40
+        token_3_text_text: $100
+        _major_fill: ${colour/x11/yellow}
+        _minor_fill: ${colour/x11/yellow}
+        comment_text_text: |
+            The scarlet woman
+            of Wall Street
+        _related_fill: ${colour/x11/darkgoldenrod1}
+
+      token:
+        index: "$[{'%s' % i: None for i in range (6)}]"
+
+    NYNH&H:
+      _:
+        long_name_text_text: |
+            New York New Haven
+            & Hartford Railway
+        short_name_text_text: NH
+        token_1_text_text: Free
+        token_2_text_text: $40
+        _major_fill: ${colour/x11/sandybrown}
+        _minor_fill: ${colour/x11/sandybrown}
+        comment_text_text: '"The Consolidated"'
+        _related_fill: ${colour/x11/khaki2}
+
+      share:
+        long_name_text:
+          size: 13
+
+      token:
+        index: "$[{'%s' % i: None for i in range (5)}]"
+
+    NYC:
+      _:
+        long_name_text_text: |
+            New York Central
+            Railroad
+        short_name_text_text: NYC
+        token_1_text_text: Free
+        token_2_text_text: $40
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/xxp/BLACK}
+        _minor_fill: ${colour/xxp/BLACK}
+        comment_text_text: The Water Level Route
+        _related_fill: ${colour/x11/gray50}
+        station_extra_count: 3
+
+      token:
+        index: "$[{'%s' % i: None for i in range (7)}]"
+
+    PRR:
+      _:
+        long_name_text_text: |
+             Pennsylania
+             Railroad
+        short_name_text_text: PRR
+        token_1_text_text: Free
+        token_2_text_text: $40
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/hollasch/cadmium_red_light}
+        _minor_fill: ${colour/hollasch/cadmium_red_light}
+        comment_text_text: 'The "Pennsy"'
+        _related_fill: ${colour/hollasch/tomato}
+        station_extra_count: 3
+
+      token:
+        index: "$[{'%s' % i: None for i in range (7)}]"
+
+marker:
+  index:
+    "round":
+      -missing-:
+        ELEMENTS:
+          - token_interior_box
+          - outer_circle
+          - middle_circle
+          - inner_circle
+
+      outer_circle:
+        fill: ${colour/xxp/M_RED}
+
+      middle_circle:
+        fill: ${colour/xxp/WHITE}
+
+      inner_circle:
+        fill: ${colour/xxp/M_BLUE}
+
+private:
+
+  index:
+
+    SV:
+      _:
+        long_name_text_text: |
+            Schuykill Valley
+            Railroad
+        power_text_text: "Blocks: G15"
+        cost_text_text: "Cost: $40"
+        revenue_text_text: "Revenue: $5"
+
+    C&StL:
+      _:
+        long_name_text_text: |
+            Champlain & St Larence
+            Railway
+        power_text_text: |
+            Blocks: B20.
+            Owning corporation may place a free,
+            track tile at B20 in addition to
+            its normal track tile lay.
+        cost_text_text: "Cost: $60"
+        revenue_text_text: "Revenue: $10"
+
+    D&H:
+      _:
+        long_name_text_text: |
+            Delaware & Hudson
+            Railroad
+        power_text_text: |
+            Blocks: F16.
+            Owning corporation may place a yellow
+            track tile, or a yellow tile and station
+            marker (must be both) at F16 for $120.
+        cost_text_text: "Cost: $70"
+        revenue_text_text: "Revenue: $15"
+
+    M&H:
+      _:
+        closes_text_text: "Closes: In BROWN phase or when power used"
+        long_name_text_text: |
+            Mohawk & Hudson
+            Railroad
+        power_text_text: |
+            Blocks: D18.
+            Owning player may exchange for a share
+            of NYC from bank or IPO.
+        cost_text_text: "Cost: $110"
+        revenue_text_text: "Revenue: $20"
+
+    C&A:
+      _:
+        long_name_text_text: |
+            Camden & Amboy
+            Railroad
+        power_text_text: |
+            Blocks: H18.
+            Purchaser receives 10% PRR share.
+        cost_text_text: "Cost: $160"
+        revenue_text_text: "Revenue: $25"
+
+    B&O:
+      _:
+        long_name_text_text: |
+            Baltimore & Ohio
+            Railroad
+        power_text_text: |
+            Blocks: I13 & I15.
+            Purchaser receives B&O presidency and
+            sets par price. May not be sold to a
+            public company.
+        cost_text_text: "Cost: $200"
+        revenue_text_text: "Revenue: $30"
+
+train:
+
+  index:
+    2T:
+      _:
+        asset_interior_box_fill_p: YELLOW
+        rust_bar_box_fill_p: BLUE
+        long_name_text_text: "2"
+        cost_text_text_p: $80
+      model:
+        index: "$[{'%s' % i: None for i in range (6)}]"
+
+    3T:
+      _:
+        asset_interior_box_fill_p: GREEN
+        rust_bar_box_fill_p: RED
+        long_name_text_text: "3"
+        cost_text_text_p: $180
+      model:
+        index: "$[{'%s' % i: None for i in range (5)}]"
+
+    4T:
+      _:
+        asset_interior_box_fill_p: BLUE
+        rust_bar_box_fill_p: GRAY
+        long_name_text_text: "4"
+        cost_text_text_p: $300
+        note_text_text: |
+            To DIESEL: $800
+      model:
+        index: "$[{'%s' % i: None for i in range (4)}]"
+
+    5T:
+      _:
+        asset_interior_box_fill_p: BROWN
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "5"
+        cost_text_text_p: $450
+        rusted_text_text: PERMANENT
+      model:
+        index: "$[{'%s' % i: None for i in range (3)}]"
+
+    6T:
+      _:
+        asset_interior_box_fill_p: RED
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "6"
+        cost_text_text_p: $630
+        rusted_text_text: PERMANENT
+      model:
+        index:
+          "1":
+            note_text:
+              text: Optional
+          "2":
+          "3":
+
+    Diesel:
+      _:
+        asset_interior_box_fill_p: GRAY
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "Diesel"
+        cost_text_text_p: $1,100
+        rusted_text_text: PERMANENT
+      long_name_text:
+        size: 32
+      model:
+        index: "$[{'%s' % i: None for i in range (8)}]"

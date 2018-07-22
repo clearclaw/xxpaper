@@ -1,0 +1,4154 @@
+swatch:
+  swatch_interior_box:
+    fill: ${colour/resene/${name_black_text/text}}
+
+  index:
+    MexicanRed:
+      name_black_text:
+        text: MexicanRed
+    Zombie:
+      name_black_text:
+        text: Zombie
+    Casper:
+      name_black_text:
+        text: Casper
+    YellowMetal:
+      name_black_text:
+        text: YellowMetal
+    MetallicBronze:
+      name_black_text:
+        text: MetallicBronze
+    Romance:
+      name_black_text:
+        text: Romance
+    Romantic:
+      name_black_text:
+        text: Romantic
+    HalfPearlLusta:
+      name_black_text:
+        text: HalfPearlLusta
+    WaxFlower:
+      name_black_text:
+        text: WaxFlower
+    SaddleBrown:
+      name_black_text:
+        text: SaddleBrown
+    GrassHopper:
+      name_black_text:
+        text: GrassHopper
+    GulfStream:
+      name_black_text:
+        text: GulfStream
+    MineShaft:
+      name_black_text:
+        text: MineShaft
+    RomanCoffee:
+      name_black_text:
+        text: RomanCoffee
+    Thunderbird:
+      name_black_text:
+        text: Thunderbird
+    ParisDaisy:
+      name_black_text:
+        text: ParisDaisy
+    Cruise:
+      name_black_text:
+        text: Cruise
+    PalmGreen:
+      name_black_text:
+        text: PalmGreen
+    Finch:
+      name_black_text:
+        text: Finch
+    ElSalva:
+      name_black_text:
+        text: ElSalva
+    Blackcurrant:
+      name_black_text:
+        text: Blackcurrant
+    MintJulep:
+      name_black_text:
+        text: MintJulep
+    Dawn:
+      name_black_text:
+        text: Dawn
+    Olivetone:
+      name_black_text:
+        text: Olivetone
+    Barberry:
+      name_black_text:
+        text: Barberry
+    Pacifika:
+      name_black_text:
+        text: Pacifika
+    BlackWhite:
+      name_black_text:
+        text: BlackWhite
+    Hacienda:
+      name_black_text:
+        text: Hacienda
+    PineGlade:
+      name_black_text:
+        text: PineGlade
+    RiceFlower:
+      name_black_text:
+        text: RiceFlower
+    YellowSea:
+      name_black_text:
+        text: YellowSea
+    Canary:
+      name_black_text:
+        text: Canary
+    Sangria:
+      name_black_text:
+        text: Sangria
+    Selago:
+      name_black_text:
+        text: Selago
+    Vulcan:
+      name_black_text:
+        text: Vulcan
+    BlueGem:
+      name_black_text:
+        text: BlueGem
+    Chardonnay:
+      name_black_text:
+        text: Chardonnay
+    Anakiwa:
+      name_black_text:
+        text: Anakiwa
+    PirateGold:
+      name_black_text:
+        text: PirateGold
+    Caramel:
+      name_black_text:
+        text: Caramel
+    Goblin:
+      name_black_text:
+        text: Goblin
+    JungleMist:
+      name_black_text:
+        text: JungleMist
+    Havana:
+      name_black_text:
+        text: Havana
+    Alabaster:
+      name_black_text:
+        text: Alabaster
+    RodeoDust:
+      name_black_text:
+        text: RodeoDust
+    Capri:
+      name_black_text:
+        text: Capri
+    Bazaar:
+      name_black_text:
+        text: Bazaar
+    CoveGrey:
+      name_black_text:
+        text: CoveGrey
+    NileBlue:
+      name_black_text:
+        text: NileBlue
+    RockBlue:
+      name_black_text:
+        text: RockBlue
+    RioGrande:
+      name_black_text:
+        text: RioGrande
+    GreenLeaf:
+      name_black_text:
+        text: GreenLeaf
+    Tolopea:
+      name_black_text:
+        text: Tolopea
+    Tobago:
+      name_black_text:
+        text: Tobago
+    MardiGras:
+      name_black_text:
+        text: MardiGras
+    BreakerBay:
+      name_black_text:
+        text: BreakerBay
+    StarDust:
+      name_black_text:
+        text: StarDust
+    Clairvoyant:
+      name_black_text:
+        text: Clairvoyant
+    PaleSlate:
+      name_black_text:
+        text: PaleSlate
+    DeepBlush:
+      name_black_text:
+        text: DeepBlush
+    PersianRed:
+      name_black_text:
+        text: PersianRed
+    Wheatfield:
+      name_black_text:
+        text: Wheatfield
+    DarkEbony:
+      name_black_text:
+        text: DarkEbony
+    TowerGrey:
+      name_black_text:
+        text: TowerGrey
+    Amulet:
+      name_black_text:
+        text: Amulet
+    Atoll:
+      name_black_text:
+        text: Atoll
+    TexasRose:
+      name_black_text:
+        text: TexasRose
+    CedarWoodFinish:
+      name_black_text:
+        text: CedarWoodFinish
+    Harp:
+      name_black_text:
+        text: Harp
+    Chenin:
+      name_black_text:
+        text: Chenin
+    LividBrown:
+      name_black_text:
+        text: LividBrown
+    Nevada:
+      name_black_text:
+        text: Nevada
+    Bourbon:
+      name_black_text:
+        text: Bourbon
+    Tutu:
+      name_black_text:
+        text: Tutu
+    Cherokee:
+      name_black_text:
+        text: Cherokee
+    AthensGrey:
+      name_black_text:
+        text: AthensGrey
+    Zumthor:
+      name_black_text:
+        text: Zumthor
+    BajaWhite:
+      name_black_text:
+        text: BajaWhite
+    MaiTai:
+      name_black_text:
+        text: MaiTai
+    PeachSchnapps:
+      name_black_text:
+        text: PeachSchnapps
+    Tequila:
+      name_black_text:
+        text: Tequila
+    BahamaBlue:
+      name_black_text:
+        text: BahamaBlue
+    Cognac:
+      name_black_text:
+        text: Cognac
+    Mahogany:
+      name_black_text:
+        text: Mahogany
+    DeepOak:
+      name_black_text:
+        text: DeepOak
+    Sundance:
+      name_black_text:
+        text: Sundance
+    Calypso:
+      name_black_text:
+        text: Calypso
+    TwilightBlue:
+      name_black_text:
+        text: TwilightBlue
+    Aubergine:
+      name_black_text:
+        text: Aubergine
+    HunterGreen:
+      name_black_text:
+        text: HunterGreen
+    FieryOrange:
+      name_black_text:
+        text: FieryOrange
+    BayofMany:
+      name_black_text:
+        text: BayofMany
+    AquaSpring:
+      name_black_text:
+        text: AquaSpring
+    ColdTurkey:
+      name_black_text:
+        text: ColdTurkey
+    VeniceBlue:
+      name_black_text:
+        text: VeniceBlue
+    Verdigris:
+      name_black_text:
+        text: Verdigris
+    Cumin:
+      name_black_text:
+        text: Cumin
+    DustStorm:
+      name_black_text:
+        text: DustStorm
+    DarkRimu:
+      name_black_text:
+        text: DarkRimu
+    Nepal:
+      name_black_text:
+        text: Nepal
+    Rouge:
+      name_black_text:
+        text: Rouge
+    Roman:
+      name_black_text:
+        text: Roman
+    Melanie:
+      name_black_text:
+        text: Melanie
+    HawkesBlue:
+      name_black_text:
+        text: HawkesBlue
+    Hemlock:
+      name_black_text:
+        text: Hemlock
+    JacksonsPurple:
+      name_black_text:
+        text: JacksonsPurple
+    Feta:
+      name_black_text:
+        text: Feta
+    Eminence:
+      name_black_text:
+        text: Eminence
+    Valentino:
+      name_black_text:
+        text: Valentino
+    Cascade:
+      name_black_text:
+        text: Cascade
+    Porsche:
+      name_black_text:
+        text: Porsche
+    GableGreen:
+      name_black_text:
+        text: GableGreen
+    Bilbao:
+      name_black_text:
+        text: Bilbao
+    Chiffon:
+      name_black_text:
+        text: Chiffon
+    Woodrush:
+      name_black_text:
+        text: Woodrush
+    DairyCream:
+      name_black_text:
+        text: DairyCream
+    GinFizz:
+      name_black_text:
+        text: GinFizz
+    Thunder:
+      name_black_text:
+        text: Thunder
+    Pewter:
+      name_black_text:
+        text: Pewter
+    BigStone:
+      name_black_text:
+        text: BigStone
+    QuarterSpanishWhite:
+      name_black_text:
+        text: QuarterSpanishWhite
+    AquaSqueeze:
+      name_black_text:
+        text: AquaSqueeze
+    Sorbus:
+      name_black_text:
+        text: Sorbus
+    FuscousGrey:
+      name_black_text:
+        text: FuscousGrey
+    BattleshipGrey:
+      name_black_text:
+        text: BattleshipGrey
+    OxfordBlue:
+      name_black_text:
+        text: OxfordBlue
+    Soapstone:
+      name_black_text:
+        text: Soapstone
+    PattensBlue:
+      name_black_text:
+        text: PattensBlue
+    BarleyWhite:
+      name_black_text:
+        text: BarleyWhite
+    AeroBlue:
+      name_black_text:
+        text: AeroBlue
+    SteelGrey:
+      name_black_text:
+        text: SteelGrey
+    Cherub:
+      name_black_text:
+        text: Cherub
+    BlackMagic:
+      name_black_text:
+        text: BlackMagic
+    Chinook:
+      name_black_text:
+        text: Chinook
+    Oasis:
+      name_black_text:
+        text: Oasis
+    MidnightExpress:
+      name_black_text:
+        text: MidnightExpress
+    Galliano:
+      name_black_text:
+        text: Galliano
+    CrownofThorns:
+      name_black_text:
+        text: CrownofThorns
+    Ribbon:
+      name_black_text:
+        text: Ribbon
+    Narvik:
+      name_black_text:
+        text: Narvik
+    Natural:
+      name_black_text:
+        text: Natural
+    BleachWhite:
+      name_black_text:
+        text: BleachWhite
+    SpicyPink:
+      name_black_text:
+        text: SpicyPink
+    Jewel:
+      name_black_text:
+        text: Jewel
+    Hampton:
+      name_black_text:
+        text: Hampton
+    Illusion:
+      name_black_text:
+        text: Illusion
+    Allports:
+      name_black_text:
+        text: Allports
+    LaRioja:
+      name_black_text:
+        text: LaRioja
+    GreyChateau:
+      name_black_text:
+        text: GreyChateau
+    TreePoppy:
+      name_black_text:
+        text: TreePoppy
+    ChathamsBlue:
+      name_black_text:
+        text: ChathamsBlue
+    Himalaya:
+      name_black_text:
+        text: Himalaya
+    SurfieGreen:
+      name_black_text:
+        text: SurfieGreen
+    Americano:
+      name_black_text:
+        text: Americano
+    Quincy:
+      name_black_text:
+        text: Quincy
+    PeaSoup:
+      name_black_text:
+        text: PeaSoup
+    ButterflyBush:
+      name_black_text:
+        text: ButterflyBush
+    Manz:
+      name_black_text:
+        text: Manz
+    PrussianBlue:
+      name_black_text:
+        text: PrussianBlue
+    LinkWater:
+      name_black_text:
+        text: LinkWater
+    Loafer:
+      name_black_text:
+        text: Loafer
+    Cadillac:
+      name_black_text:
+        text: Cadillac
+    Chantilly:
+      name_black_text:
+        text: Chantilly
+    ViolentViolet:
+      name_black_text:
+        text: ViolentViolet
+    Hurricane:
+      name_black_text:
+        text: Hurricane
+    WildSand:
+      name_black_text:
+        text: WildSand
+    EnergyYellow:
+      name_black_text:
+        text: EnergyYellow
+    Jaffa:
+      name_black_text:
+        text: Jaffa
+    Sail:
+      name_black_text:
+        text: Sail
+    Zydeco:
+      name_black_text:
+        text: Zydeco
+    Kabul:
+      name_black_text:
+        text: Kabul
+    CoralTree:
+      name_black_text:
+        text: CoralTree
+    Apricot:
+      name_black_text:
+        text: Apricot
+    Lola:
+      name_black_text:
+        text: Lola
+    Bamboo:
+      name_black_text:
+        text: Bamboo
+    Stiletto:
+      name_black_text:
+        text: Stiletto
+    TiaMaria:
+      name_black_text:
+        text: TiaMaria
+    HitPink:
+      name_black_text:
+        text: HitPink
+    PeruTan:
+      name_black_text:
+        text: PeruTan
+    Wafer:
+      name_black_text:
+        text: Wafer
+    Carla:
+      name_black_text:
+        text: Carla
+    Citron:
+      name_black_text:
+        text: Citron
+    Mocha:
+      name_black_text:
+        text: Mocha
+    PowderBlue:
+      name_black_text:
+        text: PowderBlue
+    SmokeTree:
+      name_black_text:
+        text: SmokeTree
+    TobaccoBrown:
+      name_black_text:
+        text: TobaccoBrown
+    CannonPink:
+      name_black_text:
+        text: CannonPink
+    Wistful:
+      name_black_text:
+        text: Wistful
+    Sprout:
+      name_black_text:
+        text: Sprout
+    SmokeyAsh:
+      name_black_text:
+        text: SmokeyAsh
+    Martinique:
+      name_black_text:
+        text: Martinique
+    Tallow:
+      name_black_text:
+        text: Tallow
+    BronzeOlive:
+      name_black_text:
+        text: BronzeOlive
+    Wattle:
+      name_black_text:
+        text: Wattle
+    Coral:
+      name_black_text:
+        text: Coral
+    SpaceShuttle:
+      name_black_text:
+        text: SpaceShuttle
+    Calico:
+      name_black_text:
+        text: Calico
+    Birch:
+      name_black_text:
+        text: Birch
+    SolidPink:
+      name_black_text:
+        text: SolidPink
+    Crusoe:
+      name_black_text:
+        text: Crusoe
+    Leather:
+      name_black_text:
+        text: Leather
+    Jambalaya:
+      name_black_text:
+        text: Jambalaya
+    CitrineWhite:
+      name_black_text:
+        text: CitrineWhite
+    Ottoman:
+      name_black_text:
+        text: Ottoman
+    WhitePointer:
+      name_black_text:
+        text: WhitePointer
+    Burnham:
+      name_black_text:
+        text: Burnham
+    CoffeeBean:
+      name_black_text:
+        text: CoffeeBean
+    NewAmber:
+      name_black_text:
+        text: NewAmber
+    Flint:
+      name_black_text:
+        text: Flint
+    Mandalay:
+      name_black_text:
+        text: Mandalay
+    Silk:
+      name_black_text:
+        text: Silk
+    Cobalt:
+      name_black_text:
+        text: Cobalt
+    GoldTips:
+      name_black_text:
+        text: GoldTips
+    Acapulco:
+      name_black_text:
+        text: Acapulco
+    Disco:
+      name_black_text:
+        text: Disco
+    OceanGreen:
+      name_black_text:
+        text: OceanGreen
+    Azalea:
+      name_black_text:
+        text: Azalea
+    Cello:
+      name_black_text:
+        text: Cello
+    BlackSqueeze:
+      name_black_text:
+        text: BlackSqueeze
+    Zorba:
+      name_black_text:
+        text: Zorba
+    LondonHue:
+      name_black_text:
+        text: LondonHue
+    MilkPunch:
+      name_black_text:
+        text: MilkPunch
+    Rock:
+      name_black_text:
+        text: Rock
+    ChromeWhite:
+      name_black_text:
+        text: ChromeWhite
+    LaPalma:
+      name_black_text:
+        text: LaPalma
+    Locust:
+      name_black_text:
+        text: Locust
+    Flirt:
+      name_black_text:
+        text: Flirt
+    HitGrey:
+      name_black_text:
+        text: HitGrey
+    Spectra:
+      name_black_text:
+        text: Spectra
+    CreamCan:
+      name_black_text:
+        text: CreamCan
+    HotToddy:
+      name_black_text:
+        text: HotToddy
+    Mimosa:
+      name_black_text:
+        text: Mimosa
+    AmethystSmoke:
+      name_black_text:
+        text: AmethystSmoke
+    SpanishWhite:
+      name_black_text:
+        text: SpanishWhite
+    SpunPearl:
+      name_black_text:
+        text: SpunPearl
+    SanJuan:
+      name_black_text:
+        text: SanJuan
+    ClayCreek:
+      name_black_text:
+        text: ClayCreek
+    Lavender:
+      name_black_text:
+        text: Lavender
+    Bahia:
+      name_black_text:
+        text: Bahia
+    Matisse:
+      name_black_text:
+        text: Matisse
+    MonteCarlo:
+      name_black_text:
+        text: MonteCarlo
+    Ironstone:
+      name_black_text:
+        text: Ironstone
+    Gimblet:
+      name_black_text:
+        text: Gimblet
+    FoggyGrey:
+      name_black_text:
+        text: FoggyGrey
+    Acorn:
+      name_black_text:
+        text: Acorn
+    Firefly:
+      name_black_text:
+        text: Firefly
+    Kidnapper:
+      name_black_text:
+        text: Kidnapper
+    GoBen:
+      name_black_text:
+        text: GoBen
+    Malibu:
+      name_black_text:
+        text: Malibu
+    SpicyMix:
+      name_black_text:
+        text: SpicyMix
+    Heather:
+      name_black_text:
+        text: Heather
+    Mandy:
+      name_black_text:
+        text: Mandy
+    Picasso:
+      name_black_text:
+        text: Picasso
+    Tea:
+      name_black_text:
+        text: Tea
+    Wedgewood:
+      name_black_text:
+        text: Wedgewood
+    ChateauGreen:
+      name_black_text:
+        text: ChateauGreen
+    Snuff:
+      name_black_text:
+        text: Snuff
+    Lotus:
+      name_black_text:
+        text: Lotus
+    Persimmon:
+      name_black_text:
+        text: Persimmon
+    Celeste:
+      name_black_text:
+        text: Celeste
+    BlackRock:
+      name_black_text:
+        text: BlackRock
+    Kilamanjaro:
+      name_black_text:
+        text: Kilamanjaro
+    Maverick:
+      name_black_text:
+        text: Maverick
+    Zanah:
+      name_black_text:
+        text: Zanah
+    AustralianMint:
+      name_black_text:
+        text: AustralianMint
+    Tango:
+      name_black_text:
+        text: Tango
+    Keppel:
+      name_black_text:
+        text: Keppel
+    Haiti:
+      name_black_text:
+        text: Haiti
+    Mustard:
+      name_black_text:
+        text: Mustard
+    Vesuvius:
+      name_black_text:
+        text: Vesuvius
+    WhiteLilac:
+      name_black_text:
+        text: WhiteLilac
+    Kimberly:
+      name_black_text:
+        text: Kimberly
+    Bastille:
+      name_black_text:
+        text: Bastille
+    Karry:
+      name_black_text:
+        text: Karry
+    Pizza:
+      name_black_text:
+        text: Pizza
+    Clinker:
+      name_black_text:
+        text: Clinker
+    McKenzie:
+      name_black_text:
+        text: McKenzie
+    IndianTan:
+      name_black_text:
+        text: IndianTan
+    Westar:
+      name_black_text:
+        text: Westar
+    Sunset:
+      name_black_text:
+        text: Sunset
+    Greenstone:
+      name_black_text:
+        text: Greenstone
+    Bronco:
+      name_black_text:
+        text: Bronco
+    Martini:
+      name_black_text:
+        text: Martini
+    Saltpan:
+      name_black_text:
+        text: Saltpan
+    Zuccini:
+      name_black_text:
+        text: Zuccini
+    Surf:
+      name_black_text:
+        text: Surf
+    OldBrick:
+      name_black_text:
+        text: OldBrick
+    Jonquil:
+      name_black_text:
+        text: Jonquil
+    CarouselPink:
+      name_black_text:
+        text: CarouselPink
+    FrenchPass:
+      name_black_text:
+        text: FrenchPass
+    Conifer:
+      name_black_text:
+        text: Conifer
+    Swamp:
+      name_black_text:
+        text: Swamp
+    SeaMist:
+      name_black_text:
+        text: SeaMist
+    RoseofSharon:
+      name_black_text:
+        text: RoseofSharon
+    Muesli:
+      name_black_text:
+        text: Muesli
+    Koromiko:
+      name_black_text:
+        text: Koromiko
+    AntiqueBrass:
+      name_black_text:
+        text: AntiqueBrass
+    Domino:
+      name_black_text:
+        text: Domino
+    GulfBlue:
+      name_black_text:
+        text: GulfBlue
+    Eternity:
+      name_black_text:
+        text: Eternity
+    ButteredRum:
+      name_black_text:
+        text: ButteredRum
+    WillowGrove:
+      name_black_text:
+        text: WillowGrove
+    TrendyPink:
+      name_black_text:
+        text: TrendyPink
+    Pizazz:
+      name_black_text:
+        text: Pizazz
+    DarkTan:
+      name_black_text:
+        text: DarkTan
+    Anzac:
+      name_black_text:
+        text: Anzac
+    RegalBlue:
+      name_black_text:
+        text: RegalBlue
+    RiceCake:
+      name_black_text:
+        text: RiceCake
+    Arrowtown:
+      name_black_text:
+        text: Arrowtown
+    Envy:
+      name_black_text:
+        text: Envy
+    Lynch:
+      name_black_text:
+        text: Lynch
+    PearlBush:
+      name_black_text:
+        text: PearlBush
+    Beeswax:
+      name_black_text:
+        text: Beeswax
+    Blossom:
+      name_black_text:
+        text: Blossom
+    Gondola:
+      name_black_text:
+        text: Gondola
+    HotPurple:
+      name_black_text:
+        text: HotPurple
+    Avocado:
+      name_black_text:
+        text: Avocado
+    RenoSand:
+      name_black_text:
+        text: RenoSand
+    Charade:
+      name_black_text:
+        text: Charade
+    BlueHaze:
+      name_black_text:
+        text: BlueHaze
+    MyPink:
+      name_black_text:
+        text: MyPink
+    Sundown:
+      name_black_text:
+        text: Sundown
+    ShadyLady:
+      name_black_text:
+        text: ShadyLady
+    Pumice:
+      name_black_text:
+        text: Pumice
+    SnowDrift:
+      name_black_text:
+        text: SnowDrift
+    Sidecar:
+      name_black_text:
+        text: Sidecar
+    JetStream:
+      name_black_text:
+        text: JetStream
+    ChelseaGem:
+      name_black_text:
+        text: ChelseaGem
+    Smoky:
+      name_black_text:
+        text: Smoky
+    Chambray:
+      name_black_text:
+        text: Chambray
+    Thatch:
+      name_black_text:
+        text: Thatch
+    SpringGreen:
+      name_black_text:
+        text: SpringGreen
+    Bitter:
+      name_black_text:
+        text: Bitter
+    PickledBean:
+      name_black_text:
+        text: PickledBean
+    MoodyBlue:
+      name_black_text:
+        text: MoodyBlue
+    Porcelain:
+      name_black_text:
+        text: Porcelain
+    Jaguar:
+      name_black_text:
+        text: Jaguar
+    CrabApple:
+      name_black_text:
+        text: CrabApple
+    Frangipani:
+      name_black_text:
+        text: Frangipani
+    RobinsEggBlue:
+      name_black_text:
+        text: RobinsEggBlue
+    Pipi:
+      name_black_text:
+        text: Pipi
+    Jumbo:
+      name_black_text:
+        text: Jumbo
+    Boulder:
+      name_black_text:
+        text: Boulder
+    Buttermilk:
+      name_black_text:
+        text: Buttermilk
+    Nutmeg:
+      name_black_text:
+        text: Nutmeg
+    Alpine:
+      name_black_text:
+        text: Alpine
+    SnowyMint:
+      name_black_text:
+        text: SnowyMint
+    Niagara:
+      name_black_text:
+        text: Niagara
+    NutmegWoodFinish:
+      name_black_text:
+        text: NutmegWoodFinish
+    Corduroy:
+      name_black_text:
+        text: Corduroy
+    Sahara:
+      name_black_text:
+        text: Sahara
+    BrightRed:
+      name_black_text:
+        text: BrightRed
+    PaleSky:
+      name_black_text:
+        text: PaleSky
+    TitanWhite:
+      name_black_text:
+        text: TitanWhite
+    TePapaGreen:
+      name_black_text:
+        text: TePapaGreen
+    Observatory:
+      name_black_text:
+        text: Observatory
+    Voodoo:
+      name_black_text:
+        text: Voodoo
+    Gunmetal:
+      name_black_text:
+        text: Gunmetal
+    RoyalHeath:
+      name_black_text:
+        text: RoyalHeath
+    VisVis:
+      name_black_text:
+        text: VisVis
+    Diesel:
+      name_black_text:
+        text: Diesel
+    Trinidad:
+      name_black_text:
+        text: Trinidad
+    Sunshade:
+      name_black_text:
+        text: Sunshade
+    DarkSlate:
+      name_black_text:
+        text: DarkSlate
+    BlackMarlin:
+      name_black_text:
+        text: BlackMarlin
+    SmaltBlue:
+      name_black_text:
+        text: SmaltBlue
+    DonkeyBrown:
+      name_black_text:
+        text: DonkeyBrown
+    Lipstick:
+      name_black_text:
+        text: Lipstick
+    Mulberry:
+      name_black_text:
+        text: Mulberry
+    Chicago:
+      name_black_text:
+        text: Chicago
+    FunGreen:
+      name_black_text:
+        text: FunGreen
+    CottonSeed:
+      name_black_text:
+        text: CottonSeed
+    SherwoodGreen:
+      name_black_text:
+        text: SherwoodGreen
+    ColonialWhite:
+      name_black_text:
+        text: ColonialWhite
+    William:
+      name_black_text:
+        text: William
+    CabbagePont:
+      name_black_text:
+        text: CabbagePont
+    ShingleFawn:
+      name_black_text:
+        text: ShingleFawn
+    Bean:
+      name_black_text:
+        text: Bean
+    Tide:
+      name_black_text:
+        text: Tide
+    Linen:
+      name_black_text:
+        text: Linen
+    ForgetMeNot:
+      name_black_text:
+        text: ForgetMeNot
+    WoodyBay:
+      name_black_text:
+        text: WoodyBay
+    Dorado:
+      name_black_text:
+        text: Dorado
+    JapaneseLaurel:
+      name_black_text:
+        text: JapaneseLaurel
+    Bush:
+      name_black_text:
+        text: Bush
+    Cola:
+      name_black_text:
+        text: Cola
+    Flamingo:
+      name_black_text:
+        text: Flamingo
+    Eclipse:
+      name_black_text:
+        text: Eclipse
+    Axolotl:
+      name_black_text:
+        text: Axolotl
+    VerdunGreen:
+      name_black_text:
+        text: VerdunGreen
+    Kobi:
+      name_black_text:
+        text: Kobi
+    CoconutCream:
+      name_black_text:
+        text: CoconutCream
+    Mallard:
+      name_black_text:
+        text: Mallard
+    Paradiso:
+      name_black_text:
+        text: Paradiso
+    BulgarianRose:
+      name_black_text:
+        text: BulgarianRose
+    Blackwood:
+      name_black_text:
+        text: Blackwood
+    Banjul:
+      name_black_text:
+        text: Banjul
+    Peppermint:
+      name_black_text:
+        text: Peppermint
+    Brandy:
+      name_black_text:
+        text: Brandy
+    BayLeaf:
+      name_black_text:
+        text: BayLeaf
+    SeaNymph:
+      name_black_text:
+        text: SeaNymph
+    Watercourse:
+      name_black_text:
+        text: Watercourse
+    AthsSpecial:
+      name_black_text:
+        text: AthsSpecial
+    MorningGlory:
+      name_black_text:
+        text: MorningGlory
+    BrownPod:
+      name_black_text:
+        text: BrownPod
+    Wewak:
+      name_black_text:
+        text: Wewak
+    Christi:
+      name_black_text:
+        text: Christi
+    Supernova:
+      name_black_text:
+        text: Supernova
+    Solitude:
+      name_black_text:
+        text: Solitude
+    Tuatara:
+      name_black_text:
+        text: Tuatara
+    Highball:
+      name_black_text:
+        text: Highball
+    ElfGreen:
+      name_black_text:
+        text: ElfGreen
+    BondiBlue:
+      name_black_text:
+        text: BondiBlue
+    PictonBlue:
+      name_black_text:
+        text: PictonBlue
+    BlueBell:
+      name_black_text:
+        text: BlueBell
+    Canvas:
+      name_black_text:
+        text: Canvas
+    Brazil:
+      name_black_text:
+        text: Brazil
+    PinkSwan:
+      name_black_text:
+        text: PinkSwan
+    Paco:
+      name_black_text:
+        text: Paco
+    Biscay:
+      name_black_text:
+        text: Biscay
+    Dallas:
+      name_black_text:
+        text: Dallas
+    AlmondFrost:
+      name_black_text:
+        text: AlmondFrost
+    Blanc:
+      name_black_text:
+        text: Blanc
+    Wisteria:
+      name_black_text:
+        text: Wisteria
+    Sandwisp:
+      name_black_text:
+        text: Sandwisp
+    BlueCharcoal:
+      name_black_text:
+        text: BlueCharcoal
+    Splash:
+      name_black_text:
+        text: Splash
+    GumLeaf:
+      name_black_text:
+        text: GumLeaf
+    Moccaccino:
+      name_black_text:
+        text: Moccaccino
+    Maroon:
+      name_black_text:
+        text: Maroon
+    Tara:
+      name_black_text:
+        text: Tara
+    GreenMist:
+      name_black_text:
+        text: GreenMist
+    Chalky:
+      name_black_text:
+        text: Chalky
+    Windsor:
+      name_black_text:
+        text: Windsor
+    CopperRust:
+      name_black_text:
+        text: CopperRust
+    EarlsGreen:
+      name_black_text:
+        text: EarlsGreen
+    Festival:
+      name_black_text:
+        text: Festival
+    MoonYellow:
+      name_black_text:
+        text: MoonYellow
+    AquaHaze:
+      name_black_text:
+        text: AquaHaze
+    Saffron:
+      name_black_text:
+        text: Saffron
+    Ziggurat:
+      name_black_text:
+        text: Ziggurat
+    Glacier:
+      name_black_text:
+        text: Glacier
+    Charm:
+      name_black_text:
+        text: Charm
+    Candlelight:
+      name_black_text:
+        text: Candlelight
+    Ceramic:
+      name_black_text:
+        text: Ceramic
+    ChileanHeath:
+      name_black_text:
+        text: ChileanHeath
+    Reef:
+      name_black_text:
+        text: Reef
+    Punch:
+      name_black_text:
+        text: Punch
+    Crete:
+      name_black_text:
+        text: Crete
+    Sage:
+      name_black_text:
+        text: Sage
+    Tranquil:
+      name_black_text:
+        text: Tranquil
+    Maize:
+      name_black_text:
+        text: Maize
+    BlueLagoon:
+      name_black_text:
+        text: BlueLagoon
+    Rose:
+      name_black_text:
+        text: Rose
+    Squirrel:
+      name_black_text:
+        text: Squirrel
+    Tasman:
+      name_black_text:
+        text: Tasman
+    Shark:
+      name_black_text:
+        text: Shark
+    Opal:
+      name_black_text:
+        text: Opal
+    CabSav:
+      name_black_text:
+        text: CabSav
+    HavelockBlue:
+      name_black_text:
+        text: HavelockBlue
+    PigeonPost:
+      name_black_text:
+        text: PigeonPost
+    JellyBean:
+      name_black_text:
+        text: JellyBean
+    HeatheredGrey:
+      name_black_text:
+        text: HeatheredGrey
+    Bone:
+      name_black_text:
+        text: Bone
+    DeepSea:
+      name_black_text:
+        text: DeepSea
+    Everglade:
+      name_black_text:
+        text: Everglade
+    Paprika:
+      name_black_text:
+        text: Paprika
+    Submarine:
+      name_black_text:
+        text: Submarine
+    Lusty:
+      name_black_text:
+        text: Lusty
+    CareysPink:
+      name_black_text:
+        text: CareysPink
+    Lonestar:
+      name_black_text:
+        text: Lonestar
+    KaitokeGreen:
+      name_black_text:
+        text: KaitokeGreen
+    Viking:
+      name_black_text:
+        text: Viking
+    Nordic:
+      name_black_text:
+        text: Nordic
+    Promenade:
+      name_black_text:
+        text: Promenade
+    NightRider:
+      name_black_text:
+        text: NightRider
+    Gin:
+      name_black_text:
+        text: Gin
+    Broom:
+      name_black_text:
+        text: Broom
+    Pumpkin:
+      name_black_text:
+        text: Pumpkin
+    MoonMist:
+      name_black_text:
+        text: MoonMist
+    OysterBay:
+      name_black_text:
+        text: OysterBay
+    Toast:
+      name_black_text:
+        text: Toast
+    Schooner:
+      name_black_text:
+        text: Schooner
+    Limerick:
+      name_black_text:
+        text: Limerick
+    RumSwizzle:
+      name_black_text:
+        text: RumSwizzle
+    Bronzetone:
+      name_black_text:
+        text: Bronzetone
+    PinkLace:
+      name_black_text:
+        text: PinkLace
+    Waiouru:
+      name_black_text:
+        text: Waiouru
+    Caper:
+      name_black_text:
+        text: Caper
+    Redwood:
+      name_black_text:
+        text: Redwood
+    Crowshead:
+      name_black_text:
+        text: Crowshead
+    Azure:
+      name_black_text:
+        text: Azure
+    Bunker:
+      name_black_text:
+        text: Bunker
+    WoodyBrown:
+      name_black_text:
+        text: WoodyBrown
+    Tuna:
+      name_black_text:
+        text: Tuna
+    Cyprus:
+      name_black_text:
+        text: Cyprus
+    CapeCod:
+      name_black_text:
+        text: CapeCod
+    Graphite:
+      name_black_text:
+        text: Graphite
+    SummerGreen:
+      name_black_text:
+        text: SummerGreen
+    Chino:
+      name_black_text:
+        text: Chino
+    Meteor:
+      name_black_text:
+        text: Meteor
+    Lime:
+      name_black_text:
+        text: Lime
+    Blumine:
+      name_black_text:
+        text: Blumine
+    Lima:
+      name_black_text:
+        text: Lima
+    Como:
+      name_black_text:
+        text: Como
+    AuChico:
+      name_black_text:
+        text: AuChico
+    Tacha:
+      name_black_text:
+        text: Tacha
+    TouchWood:
+      name_black_text:
+        text: TouchWood
+    MoroccoBrown:
+      name_black_text:
+        text: MoroccoBrown
+    HippieGreen:
+      name_black_text:
+        text: HippieGreen
+    Contessa:
+      name_black_text:
+        text: Contessa
+    TurkishRose:
+      name_black_text:
+        text: TurkishRose
+    GullGrey:
+      name_black_text:
+        text: GullGrey
+    AstronautBlue:
+      name_black_text:
+        text: AstronautBlue
+    CavernPink:
+      name_black_text:
+        text: CavernPink
+    CocoaBean:
+      name_black_text:
+        text: CocoaBean
+    Merlot:
+      name_black_text:
+        text: Merlot
+    Apple:
+      name_black_text:
+        text: Apple
+    FringyFlower:
+      name_black_text:
+        text: FringyFlower
+    Christine:
+      name_black_text:
+        text: Christine
+    Nero:
+      name_black_text:
+        text: Nero
+    Nugget:
+      name_black_text:
+        text: Nugget
+    BlueDianne:
+      name_black_text:
+        text: BlueDianne
+    OffGreen:
+      name_black_text:
+        text: OffGreen
+    Logan:
+      name_black_text:
+        text: Logan
+    Deco:
+      name_black_text:
+        text: Deco
+    Emperor:
+      name_black_text:
+        text: Emperor
+    Pistachio:
+      name_black_text:
+        text: Pistachio
+    Iron:
+      name_black_text:
+        text: Iron
+    Turbo:
+      name_black_text:
+        text: Turbo
+    Sambuca:
+      name_black_text:
+        text: Sambuca
+    CannonBlack:
+      name_black_text:
+        text: CannonBlack
+    Eden:
+      name_black_text:
+        text: Eden
+    RedRobin:
+      name_black_text:
+        text: RedRobin
+    Dolphin:
+      name_black_text:
+        text: Dolphin
+    VidaLoca:
+      name_black_text:
+        text: VidaLoca
+    Cigar:
+      name_black_text:
+        text: Cigar
+    TomThumb:
+      name_black_text:
+        text: TomThumb
+    Stack:
+      name_black_text:
+        text: Stack
+    Bunting:
+      name_black_text:
+        text: Bunting
+    Pampas:
+      name_black_text:
+        text: Pampas
+    Eunry:
+      name_black_text:
+        text: Eunry
+    BlackForest:
+      name_black_text:
+        text: BlackForest
+    VanCleef:
+      name_black_text:
+        text: VanCleef
+    Revolver:
+      name_black_text:
+        text: Revolver
+    HeavyMetal:
+      name_black_text:
+        text: HeavyMetal
+    Ming:
+      name_black_text:
+        text: Ming
+    Panda:
+      name_black_text:
+        text: Panda
+    Joanna:
+      name_black_text:
+        text: Joanna
+    Arapawa:
+      name_black_text:
+        text: Arapawa
+    Scandal:
+      name_black_text:
+        text: Scandal
+    IslandSpice:
+      name_black_text:
+        text: IslandSpice
+    BokaraGrey:
+      name_black_text:
+        text: BokaraGrey
+    Mariner:
+      name_black_text:
+        text: Mariner
+    Merino:
+      name_black_text:
+        text: Merino
+    Heath:
+      name_black_text:
+        text: Heath
+    Cinnamon:
+      name_black_text:
+        text: Cinnamon
+    Aluminium:
+      name_black_text:
+        text: Aluminium
+    Shilo:
+      name_black_text:
+        text: Shilo
+    Bizarre:
+      name_black_text:
+        text: Bizarre
+    CatskillWhite:
+      name_black_text:
+        text: CatskillWhite
+    Zest:
+      name_black_text:
+        text: Zest
+    AlbescentWhite:
+      name_black_text:
+        text: AlbescentWhite
+    GoldenDream:
+      name_black_text:
+        text: GoldenDream
+    Dingley:
+      name_black_text:
+        text: Dingley
+    Laurel:
+      name_black_text:
+        text: Laurel
+    QuillGrey:
+      name_black_text:
+        text: QuillGrey
+    DeepFir:
+      name_black_text:
+        text: DeepFir
+    BarleyCorn:
+      name_black_text:
+        text: BarleyCorn
+    Akaroa:
+      name_black_text:
+        text: Akaroa
+    HalfSpanishWhite:
+      name_black_text:
+        text: HalfSpanishWhite
+    Madras:
+      name_black_text:
+        text: Madras
+    LimedAsh:
+      name_black_text:
+        text: LimedAsh
+    DoveGrey:
+      name_black_text:
+        text: DoveGrey
+    CuriousBlue:
+      name_black_text:
+        text: CuriousBlue
+    Geebung:
+      name_black_text:
+        text: Geebung
+    Onahau:
+      name_black_text:
+        text: Onahau
+    HawaiianTan:
+      name_black_text:
+        text: HawaiianTan
+    TealBlue:
+      name_black_text:
+        text: TealBlue
+    SpringWood:
+      name_black_text:
+        text: SpringWood
+    WildRice:
+      name_black_text:
+        text: WildRice
+    Geraldine:
+      name_black_text:
+        text: Geraldine
+    OliveHaze:
+      name_black_text:
+        text: OliveHaze
+    Elephant:
+      name_black_text:
+        text: Elephant
+    Lily:
+      name_black_text:
+        text: Lily
+    Hillary:
+      name_black_text:
+        text: Hillary
+    Negroni:
+      name_black_text:
+        text: Negroni
+    Swirl:
+      name_black_text:
+        text: Swirl
+    TulipTree:
+      name_black_text:
+        text: TulipTree
+    RainForest:
+      name_black_text:
+        text: RainForest
+    Yuma:
+      name_black_text:
+        text: Yuma
+    RoseWhite:
+      name_black_text:
+        text: RoseWhite
+    Cashmere:
+      name_black_text:
+        text: Cashmere
+    Sazerac:
+      name_black_text:
+        text: Sazerac
+    Eagle:
+      name_black_text:
+        text: Eagle
+    Bubbles:
+      name_black_text:
+        text: Bubbles
+    Mindaro:
+      name_black_text:
+        text: Mindaro
+    CapePalliser:
+      name_black_text:
+        text: CapePalliser
+    Elm:
+      name_black_text:
+        text: Elm
+    SpanishGreen:
+      name_black_text:
+        text: SpanishGreen
+    Celtic:
+      name_black_text:
+        text: Celtic
+    Turmeric:
+      name_black_text:
+        text: Turmeric
+    OsloGrey:
+      name_black_text:
+        text: OsloGrey
+    OldCopper:
+      name_black_text:
+        text: OldCopper
+    Pharlap:
+      name_black_text:
+        text: Pharlap
+    SoftPeach:
+      name_black_text:
+        text: SoftPeach
+    Norway:
+      name_black_text:
+        text: Norway
+    CongoBrown:
+      name_black_text:
+        text: CongoBrown
+    Clover:
+      name_black_text:
+        text: Clover
+    JudgeGrey:
+      name_black_text:
+        text: JudgeGrey
+    WhiskeySour:
+      name_black_text:
+        text: WhiskeySour
+    VistaWhite:
+      name_black_text:
+        text: VistaWhite
+    Edward:
+      name_black_text:
+        text: Edward
+    JustRight:
+      name_black_text:
+        text: JustRight
+    MySin:
+      name_black_text:
+        text: MySin
+    LimedOak:
+      name_black_text:
+        text: LimedOak
+    Salem:
+      name_black_text:
+        text: Salem
+    Gothic:
+      name_black_text:
+        text: Gothic
+    EchoBlue:
+      name_black_text:
+        text: EchoBlue
+    ShipGrey:
+      name_black_text:
+        text: ShipGrey
+    PetiteOrchid:
+      name_black_text:
+        text: PetiteOrchid
+    Dell:
+      name_black_text:
+        text: Dell
+    Mikado:
+      name_black_text:
+        text: Mikado
+    Mamba:
+      name_black_text:
+        text: Mamba
+    Deluge:
+      name_black_text:
+        text: Deluge
+    Driftwood:
+      name_black_text:
+        text: Driftwood
+    CanCan:
+      name_black_text:
+        text: CanCan
+    LisbonBrown:
+      name_black_text:
+        text: LisbonBrown
+    MountainMist:
+      name_black_text:
+        text: MountainMist
+    MilkWhite:
+      name_black_text:
+        text: MilkWhite
+    Jazz:
+      name_black_text:
+        text: Jazz
+    Tapa:
+      name_black_text:
+        text: Tapa
+    FruitSalad:
+      name_black_text:
+        text: FruitSalad
+    HalfDutchWhite:
+      name_black_text:
+        text: HalfDutchWhite
+    HotCurry:
+      name_black_text:
+        text: HotCurry
+    SandDune:
+      name_black_text:
+        text: SandDune
+    Mortar:
+      name_black_text:
+        text: Mortar
+    StarkWhite:
+      name_black_text:
+        text: StarkWhite
+    Dolly:
+      name_black_text:
+        text: Dolly
+    ToryBlue:
+      name_black_text:
+        text: ToryBlue
+    BurningSand:
+      name_black_text:
+        text: BurningSand
+    Derby:
+      name_black_text:
+        text: Derby
+    CarnabyTan:
+      name_black_text:
+        text: CarnabyTan
+    Karaka:
+      name_black_text:
+        text: Karaka
+    Woodsmoke:
+      name_black_text:
+        text: Woodsmoke
+    Raffia:
+      name_black_text:
+        text: Raffia
+    Kumera:
+      name_black_text:
+        text: Kumera
+    Tapestry:
+      name_black_text:
+        text: Tapestry
+    BlueDiamond:
+      name_black_text:
+        text: BlueDiamond
+    WhiteRock:
+      name_black_text:
+        text: WhiteRock
+    Foam:
+      name_black_text:
+        text: Foam
+    Conch:
+      name_black_text:
+        text: Conch
+    Ironbark:
+      name_black_text:
+        text: Ironbark
+    Malta:
+      name_black_text:
+        text: Malta
+    Gossip:
+      name_black_text:
+        text: Gossip
+    Salomie:
+      name_black_text:
+        text: Salomie
+    SwansDown:
+      name_black_text:
+        text: SwansDown
+    Cranberry:
+      name_black_text:
+        text: Cranberry
+    Sunglo:
+      name_black_text:
+        text: Sunglo
+    Tangaroa:
+      name_black_text:
+        text: Tangaroa
+    BrownDerby:
+      name_black_text:
+        text: BrownDerby
+    Matrix:
+      name_black_text:
+        text: Matrix
+    Astra:
+      name_black_text:
+        text: Astra
+    ForestGreen:
+      name_black_text:
+        text: ForestGreen
+    Woodland:
+      name_black_text:
+        text: Woodland
+    CraterBrown:
+      name_black_text:
+        text: CraterBrown
+    OuterSpace:
+      name_black_text:
+        text: OuterSpace
+    Seagull:
+      name_black_text:
+        text: Seagull
+    GrannySmith:
+      name_black_text:
+        text: GrannySmith
+    VenetianRed:
+      name_black_text:
+        text: VenetianRed
+    SilverTree:
+      name_black_text:
+        text: SilverTree
+    TahunaSands:
+      name_black_text:
+        text: TahunaSands
+    Wasabi:
+      name_black_text:
+        text: Wasabi
+    Parchment:
+      name_black_text:
+        text: Parchment
+    Camelot:
+      name_black_text:
+        text: Camelot
+    Flax:
+      name_black_text:
+        text: Flax
+    LimedSpruce:
+      name_black_text:
+        text: LimedSpruce
+    CloudBurst:
+      name_black_text:
+        text: CloudBurst
+    IronsideGrey:
+      name_black_text:
+        text: IronsideGrey
+    Sulu:
+      name_black_text:
+        text: Sulu
+    Venus:
+      name_black_text:
+        text: Venus
+    BurntCrimson:
+      name_black_text:
+        text: BurntCrimson
+    MandysPink:
+      name_black_text:
+        text: MandysPink
+    DeepKoamaru:
+      name_black_text:
+        text: DeepKoamaru
+    TawnyPort:
+      name_black_text:
+        text: TawnyPort
+    Creole:
+      name_black_text:
+        text: Creole
+    Rum:
+      name_black_text:
+        text: Rum
+    PearlLusta:
+      name_black_text:
+        text: PearlLusta
+    BleachedCedar:
+      name_black_text:
+        text: BleachedCedar
+    RedStage:
+      name_black_text:
+        text: RedStage
+    FountainBlue:
+      name_black_text:
+        text: FountainBlue
+    Kokoda:
+      name_black_text:
+        text: Kokoda
+    HippieBlue:
+      name_black_text:
+        text: HippieBlue
+    Siam:
+      name_black_text:
+        text: Siam
+    Kournikova:
+      name_black_text:
+        text: Kournikova
+    Camarone:
+      name_black_text:
+        text: Camarone
+    Bordeaux:
+      name_black_text:
+        text: Bordeaux
+    RichGold:
+      name_black_text:
+        text: RichGold
+    Sirocco:
+      name_black_text:
+        text: Sirocco
+    Gigas:
+      name_black_text:
+        text: Gigas
+    SeaBuckthorn:
+      name_black_text:
+        text: SeaBuckthorn
+    Portica:
+      name_black_text:
+        text: Portica
+    BullShot:
+      name_black_text:
+        text: BullShot
+    DiSerria:
+      name_black_text:
+        text: DiSerria
+    Bud:
+      name_black_text:
+        text: Bud
+    Cornflower:
+      name_black_text:
+        text: Cornflower
+    BlueMarguerite:
+      name_black_text:
+        text: BlueMarguerite
+    Chocolate:
+      name_black_text:
+        text: Chocolate
+    Milan:
+      name_black_text:
+        text: Milan
+    CodGrey:
+      name_black_text:
+        text: CodGrey
+    CuttySark:
+      name_black_text:
+        text: CuttySark
+    SweetPink:
+      name_black_text:
+        text: SweetPink
+    LilacBush:
+      name_black_text:
+        text: LilacBush
+    PaleRose:
+      name_black_text:
+        text: PaleRose
+    BitterLemon:
+      name_black_text:
+        text: BitterLemon
+    Mabel:
+      name_black_text:
+        text: Mabel
+    Ecstasy:
+      name_black_text:
+        text: Ecstasy
+    Fern:
+      name_black_text:
+        text: Fern
+    Nandor:
+      name_black_text:
+        text: Nandor
+    HintofRed:
+      name_black_text:
+        text: HintofRed
+    CapeHoney:
+      name_black_text:
+        text: CapeHoney
+    Laser:
+      name_black_text:
+        text: Laser
+    Oil:
+      name_black_text:
+        text: Oil
+    IrishCoffee:
+      name_black_text:
+        text: IrishCoffee
+    Opium:
+      name_black_text:
+        text: Opium
+    Rope:
+      name_black_text:
+        text: Rope
+    Atlantis:
+      name_black_text:
+        text: Atlantis
+    JaggedIce:
+      name_black_text:
+        text: JaggedIce
+    Stonewall:
+      name_black_text:
+        text: Stonewall
+    Pancho:
+      name_black_text:
+        text: Pancho
+    Oracle:
+      name_black_text:
+        text: Oracle
+    Meteorite:
+      name_black_text:
+        text: Meteorite
+    Polar:
+      name_black_text:
+        text: Polar
+    HarvestGold:
+      name_black_text:
+        text: HarvestGold
+    Acadia:
+      name_black_text:
+        text: Acadia
+    Indochine:
+      name_black_text:
+        text: Indochine
+    SeaFog:
+      name_black_text:
+        text: SeaFog
+    Riptide:
+      name_black_text:
+        text: Riptide
+    PaleLeaf:
+      name_black_text:
+        text: PaleLeaf
+    Dune:
+      name_black_text:
+        text: Dune
+    BlueBayoux:
+      name_black_text:
+        text: BlueBayoux
+    Celery:
+      name_black_text:
+        text: Celery
+    Jacarta:
+      name_black_text:
+        text: Jacarta
+    Crail:
+      name_black_text:
+        text: Crail
+    Solitaire:
+      name_black_text:
+        text: Solitaire
+    Gossamer:
+      name_black_text:
+        text: Gossamer
+    Raven:
+      name_black_text:
+        text: Raven
+    MidnightMoss:
+      name_black_text:
+        text: MidnightMoss
+    Toledo:
+      name_black_text:
+        text: Toledo
+    Tiara:
+      name_black_text:
+        text: Tiara
+    RedOxide:
+      name_black_text:
+        text: RedOxide
+    WestCoast:
+      name_black_text:
+        text: WestCoast
+    IceCold:
+      name_black_text:
+        text: IceCold
+    LuckyPoint:
+      name_black_text:
+        text: LuckyPoint
+    Ash:
+      name_black_text:
+        text: Ash
+    Bermuda:
+      name_black_text:
+        text: Bermuda
+    Midnight:
+      name_black_text:
+        text: Midnight
+    Saratoga:
+      name_black_text:
+        text: Saratoga
+    Mongoose:
+      name_black_text:
+        text: Mongoose
+    Equator:
+      name_black_text:
+        text: Equator
+    Eucalyptus:
+      name_black_text:
+        text: Eucalyptus
+    Espresso:
+      name_black_text:
+        text: Espresso
+    JungleGreen:
+      name_black_text:
+        text: JungleGreen
+    Gunsmoke:
+      name_black_text:
+        text: Gunsmoke
+    ElPaso:
+      name_black_text:
+        text: ElPaso
+    Cumulus:
+      name_black_text:
+        text: Cumulus
+    Kangaroo:
+      name_black_text:
+        text: Kangaroo
+    Janna:
+      name_black_text:
+        text: Janna
+    ParisWhite:
+      name_black_text:
+        text: ParisWhite
+    Stromboli:
+      name_black_text:
+        text: Stromboli
+    Cinder:
+      name_black_text:
+        text: Cinder
+    LimedGum:
+      name_black_text:
+        text: LimedGum
+    OrangeWhite:
+      name_black_text:
+        text: OrangeWhite
+    TaxBreak:
+      name_black_text:
+        text: TaxBreak
+    BlackRussian:
+      name_black_text:
+        text: BlackRussian
+    Frost:
+      name_black_text:
+        text: Frost
+    BrightSun:
+      name_black_text:
+        text: BrightSun
+    SanguineBrown:
+      name_black_text:
+        text: SanguineBrown
+    California:
+      name_black_text:
+        text: California
+    MuleFawn:
+      name_black_text:
+        text: MuleFawn
+    TallPoppy:
+      name_black_text:
+        text: TallPoppy
+    ClearDay:
+      name_black_text:
+        text: ClearDay
+    Mantis:
+      name_black_text:
+        text: Mantis
+    Seashell:
+      name_black_text:
+        text: Seashell
+    Licorice:
+      name_black_text:
+        text: Licorice
+    BrightGrey:
+      name_black_text:
+        text: BrightGrey
+    Gurkha:
+      name_black_text:
+        text: Gurkha
+    Pelorous:
+      name_black_text:
+        text: Pelorous
+    SandyBeach:
+      name_black_text:
+        text: SandyBeach
+    OrchidWhite:
+      name_black_text:
+        text: OrchidWhite
+    Edgewater:
+      name_black_text:
+        text: Edgewater
+    Iroko:
+      name_black_text:
+        text: Iroko
+    PoloBlue:
+      name_black_text:
+        text: PoloBlue
+    TuftBush:
+      name_black_text:
+        text: TuftBush
+    Tarawera:
+      name_black_text:
+        text: Tarawera
+    Bossanova:
+      name_black_text:
+        text: Bossanova
+    Pablo:
+      name_black_text:
+        text: Pablo
+    ScarpaFlow:
+      name_black_text:
+        text: ScarpaFlow
+    PickledBluewood:
+      name_black_text:
+        text: PickledBluewood
+    Twine:
+      name_black_text:
+        text: Twine
+    Studio:
+      name_black_text:
+        text: Studio
+    Cork:
+      name_black_text:
+        text: Cork
+    LightningYellow:
+      name_black_text:
+        text: LightningYellow
+    Corn:
+      name_black_text:
+        text: Corn
+    Blush:
+      name_black_text:
+        text: Blush
+    FunBlue:
+      name_black_text:
+        text: FunBlue
+    TaupeGrey:
+      name_black_text:
+        text: TaupeGrey
+    GreenHouse:
+      name_black_text:
+        text: GreenHouse
+    Portafino:
+      name_black_text:
+        text: Portafino
+    TrendyGreen:
+      name_black_text:
+        text: TrendyGreen
+    Tuscany:
+      name_black_text:
+        text: Tuscany
+    Genoa:
+      name_black_text:
+        text: Genoa
+    Finn:
+      name_black_text:
+        text: Finn
+    Travertine:
+      name_black_text:
+        text: Travertine
+    Zeus:
+      name_black_text:
+        text: Zeus
+    Java:
+      name_black_text:
+        text: Java
+    CafeRoyale:
+      name_black_text:
+        text: CafeRoyale
+    FuelYellow:
+      name_black_text:
+        text: FuelYellow
+    LunarGreen:
+      name_black_text:
+        text: LunarGreen
+    Embers:
+      name_black_text:
+        text: Embers
+    BlueSmoke:
+      name_black_text:
+        text: BlueSmoke
+    DoubleColonialWhite:
+      name_black_text:
+        text: DoubleColonialWhite
+    GreenWaterloo:
+      name_black_text:
+        text: GreenWaterloo
+    RustyNail:
+      name_black_text:
+        text: RustyNail
+    Chatelle:
+      name_black_text:
+        text: Chatelle
+    GovernorBay:
+      name_black_text:
+        text: GovernorBay
+    Sepia:
+      name_black_text:
+        text: Sepia
+    Feijoa:
+      name_black_text:
+        text: Feijoa
+    MistGrey:
+      name_black_text:
+        text: MistGrey
+    Cosmic:
+      name_black_text:
+        text: Cosmic
+    Varden:
+      name_black_text:
+        text: Varden
+    Aqua:
+      name_black_text:
+        text: Aqua
+    ChileanFire:
+      name_black_text:
+        text: ChileanFire
+    CremeDeBanane:
+      name_black_text:
+        text: CremeDeBanane
+    Tusk:
+      name_black_text:
+        text: Tusk
+    Daintree:
+      name_black_text:
+        text: Daintree
+    Tamarind:
+      name_black_text:
+        text: Tamarind
+    Jade:
+      name_black_text:
+        text: Jade
+    PrairieSand:
+      name_black_text:
+        text: PrairieSand
+    Ferra:
+      name_black_text:
+        text: Ferra
+    Tana:
+      name_black_text:
+        text: Tana
+    Delta:
+      name_black_text:
+        text: Delta
+    ScarletGum:
+      name_black_text:
+        text: ScarletGum
+    Camouflage:
+      name_black_text:
+        text: Camouflage
+    Nobel:
+      name_black_text:
+        text: Nobel
+    CornField:
+      name_black_text:
+        text: CornField
+    Froly:
+      name_black_text:
+        text: Froly
+    Tidal:
+      name_black_text:
+        text: Tidal
+    Parsley:
+      name_black_text:
+        text: Parsley
+    Paua:
+      name_black_text:
+        text: Paua
+    ClamShell:
+      name_black_text:
+        text: ClamShell
+    FijiGreen:
+      name_black_text:
+        text: FijiGreen
+    Watusi:
+      name_black_text:
+        text: Watusi
+    Bianca:
+      name_black_text:
+        text: Bianca
+    Cinderella:
+      name_black_text:
+        text: Cinderella
+    Merlin:
+      name_black_text:
+        text: Merlin
+    Spindle:
+      name_black_text:
+        text: Spindle
+    PuertoRico:
+      name_black_text:
+        text: PuertoRico
+    MulledWine:
+      name_black_text:
+        text: MulledWine
+    Bismark:
+      name_black_text:
+        text: Bismark
+    Mash:
+      name_black_text:
+        text: Mash
+    Sun:
+      name_black_text:
+        text: Sun
+    Sushi:
+      name_black_text:
+        text: Sushi
+    SpringSun:
+      name_black_text:
+        text: SpringSun
+    StormDust:
+      name_black_text:
+        text: StormDust
+    SeaGreen:
+      name_black_text:
+        text: SeaGreen
+    AppleBlossom:
+      name_black_text:
+        text: AppleBlossom
+    Barossa:
+      name_black_text:
+        text: Barossa
+    Pompadour:
+      name_black_text:
+        text: Pompadour
+    Casablanca:
+      name_black_text:
+        text: Casablanca
+    Masala:
+      name_black_text:
+        text: Masala
+    Peat:
+      name_black_text:
+        text: Peat
+    CubanTan:
+      name_black_text:
+        text: CubanTan
+    Cioccolato:
+      name_black_text:
+        text: Cioccolato
+    SantaFe:
+      name_black_text:
+        text: SantaFe
+    SorrellBrown:
+      name_black_text:
+        text: SorrellBrown
+    SwissCoffee:
+      name_black_text:
+        text: SwissCoffee
+    Jacaranda:
+      name_black_text:
+        text: Jacaranda
+    Crusta:
+      name_black_text:
+        text: Crusta
+    MonaLisa:
+      name_black_text:
+        text: MonaLisa
+    Horizon:
+      name_black_text:
+        text: Horizon
+    CherryPie:
+      name_black_text:
+        text: CherryPie
+    Meranti:
+      name_black_text:
+        text: Meranti
+    Valhalla:
+      name_black_text:
+        text: Valhalla
+    GoldenTainoi:
+      name_black_text:
+        text: GoldenTainoi
+    ProvincialPink:
+      name_black_text:
+        text: ProvincialPink
+    Quicksand:
+      name_black_text:
+        text: Quicksand
+    WePeep:
+      name_black_text:
+        text: WePeep
+    Orinoco:
+      name_black_text:
+        text: Orinoco
+    Whiskey:
+      name_black_text:
+        text: Whiskey
+    Downriver:
+      name_black_text:
+        text: Downriver
+    Gorse:
+      name_black_text:
+        text: Gorse
+    Husk:
+      name_black_text:
+        text: Husk
+    WhiteLinen:
+      name_black_text:
+        text: WhiteLinen
+    HintofGrey:
+      name_black_text:
+        text: HintofGrey
+    Stratos:
+      name_black_text:
+        text: Stratos
+    HintofYellow:
+      name_black_text:
+        text: HintofYellow
+    FlamePea:
+      name_black_text:
+        text: FlamePea
+    Shocking:
+      name_black_text:
+        text: Shocking
+    MalachiteGreen:
+      name_black_text:
+        text: MalachiteGreen
+    Matterhorn:
+      name_black_text:
+        text: Matterhorn
+    Magnolia:
+      name_black_text:
+        text: Magnolia
+    Mirage:
+      name_black_text:
+        text: Mirage
+    GreyNurse:
+      name_black_text:
+        text: GreyNurse
+    FairPink:
+      name_black_text:
+        text: FairPink
+    Tradewind:
+      name_black_text:
+        text: Tradewind
+    Viola:
+      name_black_text:
+        text: Viola
+    Patina:
+      name_black_text:
+        text: Patina
+    Shalimar:
+      name_black_text:
+        text: Shalimar
+    Marzipan:
+      name_black_text:
+        text: Marzipan
+    RoseBudCherry:
+      name_black_text:
+        text: RoseBudCherry
+    WineBerry:
+      name_black_text:
+        text: WineBerry
+    BrownBramble:
+      name_black_text:
+        text: BrownBramble
+    Raincloud:
+      name_black_text:
+        text: Raincloud
+    Spray:
+      name_black_text:
+        text: Spray
+    KingfisherDaisy:
+      name_black_text:
+        text: KingfisherDaisy
+    Minsk:
+      name_black_text:
+        text: Minsk
+    Blackberry:
+      name_black_text:
+        text: Blackberry
+    Cactus:
+      name_black_text:
+        text: Cactus
+    ChetwodeBlue:
+      name_black_text:
+        text: ChetwodeBlue
+    Fog:
+      name_black_text:
+        text: Fog
+    SourDough:
+      name_black_text:
+        text: SourDough
+    Buttercup:
+      name_black_text:
+        text: Buttercup
+    MineralGreen:
+      name_black_text:
+        text: MineralGreen
+    SurfCrest:
+      name_black_text:
+        text: SurfCrest
+    Cupid:
+      name_black_text:
+        text: Cupid
+    Danube:
+      name_black_text:
+        text: Danube
+    Oxley:
+      name_black_text:
+        text: Oxley
+    Charlotte:
+      name_black_text:
+        text: Charlotte
+    Geyser:
+      name_black_text:
+        text: Geyser
+    BlueWhale:
+      name_black_text:
+        text: BlueWhale
+    PaleOyster:
+      name_black_text:
+        text: PaleOyster
+    GreenWhite:
+      name_black_text:
+        text: GreenWhite
+    Orient:
+      name_black_text:
+        text: Orient
+    Tumbleweed:
+      name_black_text:
+        text: Tumbleweed
+    Spice:
+      name_black_text:
+        text: Spice
+    RangoonGreen:
+      name_black_text:
+        text: RangoonGreen
+    Neptune:
+      name_black_text:
+        text: Neptune
+    Cardinal:
+      name_black_text:
+        text: Cardinal
+    Chablis:
+      name_black_text:
+        text: Chablis
+    SherpaBlue:
+      name_black_text:
+        text: SherpaBlue
+    VistaBlue:
+      name_black_text:
+        text: VistaBlue
+    BlueRomance:
+      name_black_text:
+        text: BlueRomance
+    BaliHai:
+      name_black_text:
+        text: BaliHai
+    RedDamask:
+      name_black_text:
+        text: RedDamask
+    Mondo:
+      name_black_text:
+        text: Mondo
+    HairyHeath:
+      name_black_text:
+        text: HairyHeath
+    Jon:
+      name_black_text:
+        text: Jon
+    Christalle:
+      name_black_text:
+        text: Christalle
+    Hibiscus:
+      name_black_text:
+        text: Hibiscus
+    Holly:
+      name_black_text:
+        text: Holly
+    GoldenBell:
+      name_black_text:
+        text: GoldenBell
+    Twilight:
+      name_black_text:
+        text: Twilight
+    RegentStBlue:
+      name_black_text:
+        text: RegentStBlue
+    GrainBrown:
+      name_black_text:
+        text: GrainBrown
+    Buccaneer:
+      name_black_text:
+        text: Buccaneer
+    JapaneseMaple:
+      name_black_text:
+        text: JapaneseMaple
+    Bombay:
+      name_black_text:
+        text: Bombay
+    Rangitoto:
+      name_black_text:
+        text: Rangitoto
+    Cowboy:
+      name_black_text:
+        text: Cowboy
+    DeepBronze:
+      name_black_text:
+        text: DeepBronze
+    Tangerine:
+      name_black_text:
+        text: Tangerine
+    CornHarvest:
+      name_black_text:
+        text: CornHarvest
+    Bouquet:
+      name_black_text:
+        text: Bouquet
+    Amour:
+      name_black_text:
+        text: Amour
+    HintofGreen:
+      name_black_text:
+        text: HintofGreen
+    Scooter:
+      name_black_text:
+        text: Scooter
+    Temptress:
+      name_black_text:
+        text: Temptress
+    Fiord:
+      name_black_text:
+        text: Fiord
+    Pippin:
+      name_black_text:
+        text: Pippin
+    SilverChalice:
+      name_black_text:
+        text: SilverChalice
+    Downy:
+      name_black_text:
+        text: Downy
+    Pavlova:
+      name_black_text:
+        text: Pavlova
+    Saddle:
+      name_black_text:
+        text: Saddle
+    Nightclub:
+      name_black_text:
+        text: Nightclub
+    Slugger:
+      name_black_text:
+        text: Slugger
+    BlueChalk:
+      name_black_text:
+        text: BlueChalk
+    BlackBean:
+      name_black_text:
+        text: BlackBean
+    Finlandia:
+      name_black_text:
+        text: Finlandia
+    Mobster:
+      name_black_text:
+        text: Mobster
+    Valencia:
+      name_black_text:
+        text: Valencia
+    GreyGreen:
+      name_black_text:
+        text: GreyGreen
+    Loulou:
+      name_black_text:
+        text: Loulou
+    Prim:
+      name_black_text:
+        text: Prim
+    GreySuit:
+      name_black_text:
+        text: GreySuit
+    Bracken:
+      name_black_text:
+        text: Bracken
+    Mantle:
+      name_black_text:
+        text: Mantle
+    Thistle:
+      name_black_text:
+        text: Thistle
+    DustyGrey:
+      name_black_text:
+        text: DustyGrey
+    ScotchMist:
+      name_black_text:
+        text: ScotchMist
+    RobRoy:
+      name_black_text:
+        text: RobRoy
+    DeepTeal:
+      name_black_text:
+        text: DeepTeal
+    Comet:
+      name_black_text:
+        text: Comet
+    Kelp:
+      name_black_text:
+        text: Kelp
+    PotPourri:
+      name_black_text:
+        text: PotPourri
+    MoonGlow:
+      name_black_text:
+        text: MoonGlow
+    TeakWoodFinish:
+      name_black_text:
+        text: TeakWoodFinish
+    Concrete:
+      name_black_text:
+        text: Concrete
+    Cosmos:
+      name_black_text:
+        text: Cosmos
+    Crocodile:
+      name_black_text:
+        text: Crocodile
+    SugarCane:
+      name_black_text:
+        text: SugarCane
+    Atomic:
+      name_black_text:
+        text: Atomic
+    Madison:
+      name_black_text:
+        text: Madison
+    RacingGreen:
+      name_black_text:
+        text: RacingGreen
+    Empress:
+      name_black_text:
+        text: Empress
+    Ronchi:
+      name_black_text:
+        text: Ronchi
+    TrueV:
+      name_black_text:
+        text: TrueV
+    Fantasy:
+      name_black_text:
+        text: Fantasy
+    Tussock:
+      name_black_text:
+        text: Tussock
+    TotemPole:
+      name_black_text:
+        text: TotemPole
+    Lemon:
+      name_black_text:
+        text: Lemon
+    GreenPea:
+      name_black_text:
+        text: GreenPea
+    BerylGreen:
+      name_black_text:
+        text: BerylGreen
+    GoldenGlow:
+      name_black_text:
+        text: GoldenGlow
+    Lucky:
+      name_black_text:
+        text: Lucky
+    Zircon:
+      name_black_text:
+        text: Zircon
+    GrannyApple:
+      name_black_text:
+        text: GrannyApple
+    Juniper:
+      name_black_text:
+        text: Juniper
+    PersianPlum:
+      name_black_text:
+        text: PersianPlum
+    Fuego:
+      name_black_text:
+        text: Fuego
+    QuarterPearlLusta:
+      name_black_text:
+        text: QuarterPearlLusta
+    GuardsmanRed:
+      name_black_text:
+        text: GuardsmanRed
+    Japonica:
+      name_black_text:
+        text: Japonica
+    GreyNickel:
+      name_black_text:
+        text: GreyNickel
+    ThatchGreen:
+      name_black_text:
+        text: ThatchGreen
+    Skeptic:
+      name_black_text:
+        text: Skeptic
+    SoyaBean:
+      name_black_text:
+        text: SoyaBean
+    Scrub:
+      name_black_text:
+        text: Scrub
+    Cloud:
+      name_black_text:
+        text: Cloud
+    PixieGreen:
+      name_black_text:
+        text: PixieGreen
+    Sapling:
+      name_black_text:
+        text: Sapling
+    OrangeRoughy:
+      name_black_text:
+        text: OrangeRoughy
+    WanWhite:
+      name_black_text:
+        text: WanWhite
+    Sycamore:
+      name_black_text:
+        text: Sycamore
+    BonJour:
+      name_black_text:
+        text: BonJour
+    Scorpion:
+      name_black_text:
+        text: Scorpion
+    WildWillow:
+      name_black_text:
+        text: WildWillow
+    Falcon:
+      name_black_text:
+        text: Falcon
+    Schist:
+      name_black_text:
+        text: Schist
+    Cedar:
+      name_black_text:
+        text: Cedar
+    OrientalPink:
+      name_black_text:
+        text: OrientalPink
+    BridalHeath:
+      name_black_text:
+        text: BridalHeath
+    BisonHide:
+      name_black_text:
+        text: BisonHide
+    Grandis:
+      name_black_text:
+        text: Grandis
+    PortGore:
+      name_black_text:
+        text: PortGore
+    RockSalt:
+      name_black_text:
+        text: RockSalt
+    CeSoir:
+      name_black_text:
+        text: CeSoir
+    DaisyBush:
+      name_black_text:
+        text: DaisyBush
+    Gravel:
+      name_black_text:
+        text: Gravel
+    PalePrim:
+      name_black_text:
+        text: PalePrim
+    PineTree:
+      name_black_text:
+        text: PineTree
+    Straw:
+      name_black_text:
+        text: Straw
+    Rajah:
+      name_black_text:
+        text: Rajah
+    Victoria:
+      name_black_text:
+        text: Victoria
+    Monsoon:
+      name_black_text:
+        text: Monsoon
+    EnglishWalnut:
+      name_black_text:
+        text: EnglishWalnut
+    NeutralGreen:
+      name_black_text:
+        text: NeutralGreen
+    DelRio:
+      name_black_text:
+        text: DelRio
+    DonJuan:
+      name_black_text:
+        text: DonJuan
+    EbonyClay:
+      name_black_text:
+        text: EbonyClay
+    WispPink:
+      name_black_text:
+        text: WispPink
+    Sandal:
+      name_black_text:
+        text: Sandal
+    GreenSpring:
+      name_black_text:
+        text: GreenSpring
+    Rhino:
+      name_black_text:
+        text: Rhino
+    Armadillo:
+      name_black_text:
+        text: Armadillo
+    Scampi:
+      name_black_text:
+        text: Scampi
+    Prelude:
+      name_black_text:
+        text: Prelude
+    SanMarino:
+      name_black_text:
+        text: SanMarino
+    MetallicCopper:
+      name_black_text:
+        text: MetallicCopper
+    NewOrleans:
+      name_black_text:
+        text: NewOrleans
+    BlueStone:
+      name_black_text:
+        text: BlueStone
+    CopperCanyon:
+      name_black_text:
+        text: CopperCanyon
+    GreenKelp:
+      name_black_text:
+        text: GreenKelp
+    Sunflower:
+      name_black_text:
+        text: Sunflower
+    BrandyRose:
+      name_black_text:
+        text: BrandyRose
+    Casal:
+      name_black_text:
+        text: Casal
+    Violet:
+      name_black_text:
+        text: Violet
+    Alto:
+      name_black_text:
+        text: Alto
+    RedBeech:
+      name_black_text:
+        text: RedBeech
+    Fuchsia:
+      name_black_text:
+        text: Fuchsia
+    HokeyPokey:
+      name_black_text:
+        text: HokeyPokey
+    SilverSand:
+      name_black_text:
+        text: SilverSand
+    Sinbad:
+      name_black_text:
+        text: Sinbad
+    Botticelli:
+      name_black_text:
+        text: Botticelli
+    Roti:
+      name_black_text:
+        text: Roti
+    Honeysuckle:
+      name_black_text:
+        text: Honeysuckle
+    Marshland:
+      name_black_text:
+        text: Marshland
+    SuvaGrey:
+      name_black_text:
+        text: SuvaGrey
+    GreyOlive:
+      name_black_text:
+        text: GreyOlive
+    JordyBlue:
+      name_black_text:
+        text: JordyBlue
+    Treehouse:
+      name_black_text:
+        text: Treehouse
+    TonysPink:
+      name_black_text:
+        text: TonysPink
+    OiledCedar:
+      name_black_text:
+        text: OiledCedar
+    WestSide:
+      name_black_text:
+        text: WestSide
+    ParisM:
+      name_black_text:
+        text: ParisM
+    Claret:
+      name_black_text:
+        text: Claret
+    Mercury:
+      name_black_text:
+        text: Mercury
+    Ghost:
+      name_black_text:
+        text: Ghost
+    Planter:
+      name_black_text:
+        text: Planter
+    ShipCove:
+      name_black_text:
+        text: ShipCove
+    FrenchLilac:
+      name_black_text:
+        text: FrenchLilac
+    DoublePearlLusta:
+      name_black_text:
+        text: DoublePearlLusta
+    EggSour:
+      name_black_text:
+        text: EggSour
+    Tamarillo:
+      name_black_text:
+        text: Tamarillo
+    HalfBaked:
+      name_black_text:
+        text: HalfBaked
+    Madang:
+      name_black_text:
+        text: Madang
+    BlueZodiac:
+      name_black_text:
+        text: BlueZodiac
+    Stinger:
+      name_black_text:
+        text: Stinger
+    SweetCorn:
+      name_black_text:
+        text: SweetCorn
+    WhiteIce:
+      name_black_text:
+        text: WhiteIce
+    PottersClay:
+      name_black_text:
+        text: PottersClay
+    FireBush:
+      name_black_text:
+        text: FireBush
+    FlameRed:
+      name_black_text:
+        text: FlameRed
+    Cararra:
+      name_black_text:
+        text: Cararra
+    CocoaBrown:
+      name_black_text:
+        text: CocoaBrown
+    ChinaIvory:
+      name_black_text:
+        text: ChinaIvory
+    ChaletGreen:
+      name_black_text:
+        text: ChaletGreen
+    Oregon:
+      name_black_text:
+        text: Oregon
+    Panache:
+      name_black_text:
+        text: Panache
+    Strikemaster:
+      name_black_text:
+        text: Strikemaster
+    WinterHazel:
+      name_black_text:
+        text: WinterHazel
+    Loblolly:
+      name_black_text:
+        text: Loblolly
+    WhiteNectar:
+      name_black_text:
+        text: WhiteNectar
+    Coriander:
+      name_black_text:
+        text: Coriander
+    Amazon:
+      name_black_text:
+        text: Amazon
+    WellRead:
+      name_black_text:
+        text: WellRead
+    Tosca:
+      name_black_text:
+        text: Tosca
+    PinkFlare:
+      name_black_text:
+        text: PinkFlare
+    Starship:
+      name_black_text:
+        text: Starship
+    Sauvignon:
+      name_black_text:
+        text: Sauvignon
+    EarlyDawn:
+      name_black_text:
+        text: EarlyDawn
+    EveningSea:
+      name_black_text:
+        text: EveningSea
+    BlackPepper:
+      name_black_text:
+        text: BlackPepper
+    ShuttleGrey:
+      name_black_text:
+        text: ShuttleGrey
+    Russett:
+      name_black_text:
+        text: Russett
+    Desert:
+      name_black_text:
+        text: Desert
+    ColdPurple:
+      name_black_text:
+        text: ColdPurple
+    LemonGinger:
+      name_black_text:
+        text: LemonGinger
+    Grape:
+      name_black_text:
+        text: Grape
+    BilobaFlower:
+      name_black_text:
+        text: BilobaFlower
+    Plantation:
+      name_black_text:
+        text: Plantation
+    KenyanCopper:
+      name_black_text:
+        text: KenyanCopper
+    Peanut:
+      name_black_text:
+        text: Peanut
+    Napa:
+      name_black_text:
+        text: Napa
+    Paarl:
+      name_black_text:
+        text: Paarl
+    Monza:
+      name_black_text:
+        text: Monza
+    WillowBrook:
+      name_black_text:
+        text: WillowBrook
+    ApricotWhite:
+      name_black_text:
+        text: ApricotWhite
+    GordonsGreen:
+      name_black_text:
+        text: GordonsGreen
+    Punga:
+      name_black_text:
+        text: Punga
+    GunPowder:
+      name_black_text:
+        text: GunPowder
+    Tiber:
+      name_black_text:
+        text: Tiber
+    PinkLady:
+      name_black_text:
+        text: PinkLady
+    AfghanTan:
+      name_black_text:
+        text: AfghanTan
+    RegentGrey:
+      name_black_text:
+        text: RegentGrey
+    Pueblo:
+      name_black_text:
+        text: Pueblo
+    Concord:
+      name_black_text:
+        text: Concord
+    ChelseaCucumber:
+      name_black_text:
+        text: ChelseaCucumber
+    BirdFlower:
+      name_black_text:
+        text: BirdFlower
+    Melrose:
+      name_black_text:
+        text: Melrose
+    NightShadz:
+      name_black_text:
+        text: NightShadz
+    RollingStone:
+      name_black_text:
+        text: RollingStone
+    RockSpray:
+      name_black_text:
+        text: RockSpray
+    Teak:
+      name_black_text:
+        text: Teak
+    Hemp:
+      name_black_text:
+        text: Hemp
+    BeautyBush:
+      name_black_text:
+        text: BeautyBush
+    Asphalt:
+      name_black_text:
+        text: Asphalt
+    Putty:
+      name_black_text:
+        text: Putty
+    WitchHaze:
+      name_black_text:
+        text: WitchHaze
+    DoubleSpanishWhite:
+      name_black_text:
+        text: DoubleSpanishWhite
+    Topaz:
+      name_black_text:
+        text: Topaz
+    PeriglacialBlue:
+      name_black_text:
+        text: PeriglacialBlue
+    Citrus:
+      name_black_text:
+        text: Citrus
+    SantasGrey:
+      name_black_text:
+        text: SantasGrey
+    WaikawaGrey:
+      name_black_text:
+        text: WaikawaGrey
+    EastSide:
+      name_black_text:
+        text: EastSide
+    Apache:
+      name_black_text:
+        text: Apache
+    BermudaGrey:
+      name_black_text:
+        text: BermudaGrey
+    WesternRed:
+      name_black_text:
+        text: WesternRed
+    GoldenSand:
+      name_black_text:
+        text: GoldenSand
+    GreenVogue:
+      name_black_text:
+        text: GreenVogue
+    OliveGreen:
+      name_black_text:
+        text: OliveGreen
+    HalfandHalf:
+      name_black_text:
+        text: HalfandHalf
+    Portage:
+      name_black_text:
+        text: Portage
+    Bronze:
+      name_black_text:
+        text: Bronze
+    Limeade:
+      name_black_text:
+        text: Limeade
+    EasternBlue:
+      name_black_text:
+        text: EasternBlue
+    TurtleGreen:
+      name_black_text:
+        text: TurtleGreen
+    Affair:
+      name_black_text:
+        text: Affair
+    Burgundy:
+      name_black_text:
+        text: Burgundy
+    CatalinaBlue:
+      name_black_text:
+        text: CatalinaBlue
+    YukonGold:
+      name_black_text:
+        text: YukonGold
+    Gallery:
+      name_black_text:
+        text: Gallery
+    BlueBark:
+      name_black_text:
+        text: BlueBark
+    ToreaBay:
+      name_black_text:
+        text: ToreaBay
+    CardinGreen:
+      name_black_text:
+        text: CardinGreen
+    Fedora:
+      name_black_text:
+        text: Fedora
+    HummingBird:
+      name_black_text:
+        text: HummingBird
+    CostaDelSol:
+      name_black_text:
+        text: CostaDelSol
+    Cherrywood:
+      name_black_text:
+        text: Cherrywood
+    KashmirBlue:
+      name_black_text:
+        text: KashmirBlue
+    DeYork:
+      name_black_text:
+        text: DeYork
+    Tacao:
+      name_black_text:
+        text: Tacao
+    Pesto:
+      name_black_text:
+        text: Pesto
+    PickledAspen:
+      name_black_text:
+        text: PickledAspen
+    Volcano:
+      name_black_text:
+        text: Volcano
+    Plum:
+      name_black_text:
+        text: Plum
+    Mojo:
+      name_black_text:
+        text: Mojo
+    MidGrey:
+      name_black_text:
+        text: MidGrey
+    Cabaret:
+      name_black_text:
+        text: Cabaret
+    Jarrah:
+      name_black_text:
+        text: Jarrah
+    Carissma:
+      name_black_text:
+        text: Carissma
+    Siren:
+      name_black_text:
+        text: Siren
+    SpringRain:
+      name_black_text:
+        text: SpringRain
+    Xanadu:
+      name_black_text:
+        text: Xanadu
+    Montana:
+      name_black_text:
+        text: Montana
+    DesertStorm:
+      name_black_text:
+        text: DesertStorm
+    HorsesNeck:
+      name_black_text:
+        text: HorsesNeck
+    BuddhaGold:
+      name_black_text:
+        text: BuddhaGold
+    MuddyWaters:
+      name_black_text:
+        text: MuddyWaters
+    Lochinvar:
+      name_black_text:
+        text: Lochinvar
+    Tabasco:
+      name_black_text:
+        text: Tabasco
+    FernFrond:
+      name_black_text:
+        text: FernFrond
+    Confetti:
+      name_black_text:
+        text: Confetti
+    Remy:
+      name_black_text:
+        text: Remy
+    NewYorkPink:
+      name_black_text:
+        text: NewYorkPink
+    Maire:
+      name_black_text:
+        text: Maire
+    BalticSea:
+      name_black_text:
+        text: BalticSea
+    OffYellow:
+      name_black_text:
+        text: OffYellow
+    Champagne:
+      name_black_text:
+        text: Champagne
+    BrandyPunch:
+      name_black_text:
+        text: BrandyPunch
+    Chamois:
+      name_black_text:
+        text: Chamois
+    EcruWhite:
+      name_black_text:
+        text: EcruWhite
+    OysterPink:
+      name_black_text:
+        text: OysterPink
+    Sandrift:
+      name_black_text:
+        text: Sandrift
+    GoldenFizz:
+      name_black_text:
+        text: GoldenFizz
+    RedDevil:
+      name_black_text:
+        text: RedDevil
+    GoldDrop:
+      name_black_text:
+        text: GoldDrop
+    LuxorGold:
+      name_black_text:
+        text: LuxorGold
+    LilyWhite:
+      name_black_text:
+        text: LilyWhite
+    Lochmara:
+      name_black_text:
+        text: Lochmara
+    Melanzane:
+      name_black_text:
+        text: Melanzane
+    Dixie:
+      name_black_text:
+        text: Dixie
+    TropicalBlue:
+      name_black_text:
+        text: TropicalBlue
+    Seaweed:
+      name_black_text:
+        text: Seaweed
+    AlertTan:
+      name_black_text:
+        text: AlertTan
+    Corvette:
+      name_black_text:
+        text: Corvette
+    Zambezi:
+      name_black_text:
+        text: Zambezi
+    AshBrown:
+      name_black_text:
+        text: AshBrown
+    RiverBed:
+      name_black_text:
+        text: RiverBed
+    Millbrook:
+      name_black_text:
+        text: Millbrook
+    RoseBud:
+      name_black_text:
+        text: RoseBud
+    Bandicoot:
+      name_black_text:
+        text: Bandicoot
+    ShadowGreen:
+      name_black_text:
+        text: ShadowGreen
+    Marigold:
+      name_black_text:
+        text: Marigold
+    Aquamarine:
+      name_black_text:
+        text: Aquamarine
+    SaltBox:
+      name_black_text:
+        text: SaltBox
+    MilanoRed:
+      name_black_text:
+        text: MilanoRed
+    HalfColonialWhite:
+      name_black_text:
+        text: HalfColonialWhite
+    Pohutukawa:
+      name_black_text:
+        text: Pohutukawa
+    AppleGreen:
+      name_black_text:
+        text: AppleGreen
+    CoralCandy:
+      name_black_text:
+        text: CoralCandy
+    BlackRose:
+      name_black_text:
+        text: BlackRose
+    Korma:
+      name_black_text:
+        text: Korma
+    HoneyFlower:
+      name_black_text:
+        text: HoneyFlower
+    MintTulip:
+      name_black_text:
+        text: MintTulip
+    Rainee:
+      name_black_text:
+        text: Rainee
+    PineCone:
+      name_black_text:
+        text: PineCone
+    Aztec:
+      name_black_text:
+        text: Aztec
+    Nebula:
+      name_black_text:
+        text: Nebula
+    Perfume:
+      name_black_text:
+        text: Perfume
+    Padua:
+      name_black_text:
+        text: Padua
+    DarkRum:
+      name_black_text:
+        text: DarkRum
+    Astral:
+      name_black_text:
+        text: Astral
+    Vanilla:
+      name_black_text:
+        text: Vanilla
+    EggWhite:
+      name_black_text:
+        text: EggWhite
+    Perano:
+      name_black_text:
+        text: Perano
+    Flamenco:
+      name_black_text:
+        text: Flamenco
+    Givry:
+      name_black_text:
+        text: Givry
+    ViridianGreen:
+      name_black_text:
+        text: ViridianGreen
+    TimberGreen:
+      name_black_text:
+        text: TimberGreen
+    Clementine:
+      name_black_text:
+        text: Clementine
+    Iceberg:
+      name_black_text:
+        text: Iceberg
+    DutchWhite:
+      name_black_text:
+        text: DutchWhite
+    HippiePink:
+      name_black_text:
+        text: HippiePink
+    HotChile:
+      name_black_text:
+        text: HotChile
+    SanFelix:
+      name_black_text:
+        text: SanFelix
+    ResolutionBlue:
+      name_black_text:
+        text: ResolutionBlue
+    Whisper:
+      name_black_text:
+        text: Whisper
+    Mako:
+      name_black_text:
+        text: Mako
+    BottleGreen:
+      name_black_text:
+        text: BottleGreen
+    Astronaut:
+      name_black_text:
+        text: Astronaut
+    DawnPink:
+      name_black_text:
+        text: DawnPink
+    Bridesmaid:
+      name_black_text:
+        text: Bridesmaid
+    Sapphire:
+      name_black_text:
+        text: Sapphire
+    Primrose:
+      name_black_text:
+        text: Primrose
+    RedBerry:
+      name_black_text:
+        text: RedBerry
+    Chardon:
+      name_black_text:
+        text: Chardon
+    Frostee:
+      name_black_text:
+        text: Frostee
+    VanillaIce:
+      name_black_text:
+        text: VanillaIce
+    Endeavour:
+      name_black_text:
+        text: Endeavour
+    Cameo:
+      name_black_text:
+        text: Cameo
+    GreenSmoke:
+      name_black_text:
+        text: GreenSmoke
+    WoodBark:
+      name_black_text:
+        text: WoodBark
+    Abbey:
+      name_black_text:
+        text: Abbey
+    StormGrey:
+      name_black_text:
+        text: StormGrey
+    Woodburn:
+      name_black_text:
+        text: Woodburn
+    Sandstone:
+      name_black_text:
+        text: Sandstone
+    Trout:
+      name_black_text:
+        text: Trout
+    DeepCove:
+      name_black_text:
+        text: DeepCove
+    Scarlett:
+      name_black_text:
+        text: Scarlett
+    Rebel:
+      name_black_text:
+        text: Rebel
+    FrenchGrey:
+      name_black_text:
+        text: FrenchGrey
+    Jagger:
+      name_black_text:
+        text: Jagger
+    EnglishHolly:
+      name_black_text:
+        text: EnglishHolly
+    BlackHaze:
+      name_black_text:
+        text: BlackHaze
+    Cloudy:
+      name_black_text:
+        text: Cloudy
+    Serenade:
+      name_black_text:
+        text: Serenade
+    BlueChill:
+      name_black_text:
+        text: BlueChill
+    ReefGold:
+      name_black_text:
+        text: ReefGold
+    FrostedMint:
+      name_black_text:
+        text: FrostedMint
+    MoonRaker:
+      name_black_text:
+        text: MoonRaker
+    Rosewood:
+      name_black_text:
+        text: Rosewood
+    GraniteGreen:
+      name_black_text:
+        text: GraniteGreen
+    LasPalmas:
+      name_black_text:
+        text: LasPalmas
+    Grenadier:
+      name_black_text:
+        text: Grenadier
+    Peach:
+      name_black_text:
+        text: Peach
+    Gumbo:
+      name_black_text:
+        text: Gumbo
+    ButteryWhite:
+      name_black_text:
+        text: ButteryWhite
+    Hoki:
+      name_black_text:
+        text: Hoki
+    TahitiGold:
+      name_black_text:
+        text: TahitiGold
+    EastBay:
+      name_black_text:
+        text: EastBay
+    Monarch:
+      name_black_text:
+        text: Monarch
+    Castro:
+      name_black_text:
+        text: Castro
+    Dew:
+      name_black_text:
+        text: Dew
+    Cement:
+      name_black_text:
+        text: Cement
+    JackoBean:
+      name_black_text:
+        text: JackoBean
+    Walnut:
+      name_black_text:
+        text: Walnut
+    BostonBlue:
+      name_black_text:
+        text: BostonBlue
+    ClassicRose:
+      name_black_text:
+        text: ClassicRose
+    Shakespeare:
+      name_black_text:
+        text: Shakespeare
+    SeaPink:
+      name_black_text:
+        text: SeaPink
+    Mosaic:
+      name_black_text:
+        text: Mosaic
+    Onion:
+      name_black_text:
+        text: Onion
+    Seance:
+      name_black_text:
+        text: Seance
+    Ebony:
+      name_black_text:
+        text: Ebony
+    Fire:
+      name_black_text:
+        text: Fire
+    Killarney:
+      name_black_text:
+        text: Killarney
+    SnowFlurry:
+      name_black_text:
+        text: SnowFlurry
+    Mosque:
+      name_black_text:
+        text: Mosque
+    YourPink:
+      name_black_text:
+        text: YourPink
+    Mischka:
+      name_black_text:
+        text: Mischka
+    Waterloo:
+      name_black_text:
+        text: Waterloo
+    Coffee:
+      name_black_text:
+        text: Coffee
+    FriarGrey:
+      name_black_text:
+        text: FriarGrey
+    Manhattan:
+      name_black_text:
+        text: Manhattan
+    Highland:
+      name_black_text:
+        text: Highland
+    CreamBrulee:
+      name_black_text:
+        text: CreamBrulee
+    VinRouge:
+      name_black_text:
+        text: VinRouge
+    Mystic:
+      name_black_text:
+        text: Mystic
+    RusticRed:
+      name_black_text:
+        text: RusticRed
+    LemonGrass:
+      name_black_text:
+        text: LemonGrass
+    Hopbush:
+      name_black_text:
+        text: Hopbush
+    Ebb:
+      name_black_text:
+        text: Ebb
+    LogCabin:
+      name_black_text:
+        text: LogCabin
+    Tundora:
+      name_black_text:
+        text: Tundora
+    Nomad:
+      name_black_text:
+        text: Nomad
+    Makara:
+      name_black_text:
+        text: Makara
+    DarkOak:
+      name_black_text:
+        text: DarkOak
+    Sisal:
+      name_black_text:
+        text: Sisal
+    GladeGreen:
+      name_black_text:
+        text: GladeGreen
+    StTropaz:
+      name_black_text:
+        text: StTropaz
+    BlackPearl:
+      name_black_text:
+        text: BlackPearl
+    Shiraz:
+      name_black_text:
+        text: Shiraz
+    Piper:
+      name_black_text:
+        text: Piper
+    CountyGreen:
+      name_black_text:
+        text: CountyGreen
+    PalmLeaf:
+      name_black_text:
+        text: PalmLeaf
+    SoftAmber:
+      name_black_text:
+        text: SoftAmber
+    Marlin:
+      name_black_text:
+        text: Marlin
+    Texas:
+      name_black_text:
+        text: Texas
+    Drover:
+      name_black_text:
+        text: Drover
+    WaterLeaf:
+      name_black_text:
+        text: WaterLeaf
+    RoofTerracotta:
+      name_black_text:
+        text: RoofTerracotta

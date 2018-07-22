@@ -1,0 +1,10 @@
+colour:
+
+# http://people.csail.mit.edu/jaffer/Color/Dictionaries#bang
+
+  _include_:
+    - XXP_colour_hollasch.xxp
+    - XXP_colour_resene.xxp
+    - XXP_colour_wikipedia.xxp
+    - XXP_colour_xxp.xxp
+    - XXP_colour_x11.xxp

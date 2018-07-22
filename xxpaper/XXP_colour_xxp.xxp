@@ -1,0 +1,84 @@
+xxp:
+
+  WHITE: [1, 1, 1]
+  BLACK: [0, 0, 0]
+
+  DIRECTOR: ${colour/hollasch/light_goldenrod}
+
+  TRAIN_YELLOW: ${colour/hollasch/khaki}
+  TRAIN_GREEN: ${colour/resene/Wistful}
+  TRAIN_BLUE: ${colour/resene/Downy}
+  TRAIN_BROWN: ${colour/resene/Viola}
+  TRAIN_RED: ${colour/wikipedia/light_carmine_pink}
+  TRAIN_GRAY: ${colour/x11/gray70}
+  TRAIN_PURPLE: ${colour/wikipedia/wisteria}
+  TRAIN_BLACK: ${colour/xxp/BLACK}
+
+  TRAIN_YELLOW_TEXT: ${colour/xxp/BLACK}
+  TRAIN_GREEN_TEXT: ${colour/xxp/BLACK}
+  TRAIN_BLUE_TEXT: ${colour/xxp/BLACK}
+  TRAIN_BROWN_TEXT: ${colour/xxp/BLACK}
+  TRAIN_RED_TEXT: ${colour/xxp/BLACK}
+  TRAIN_GRAY_TEXT: ${colour/xxp/BLACK}
+  TRAIN_PURPLE_TEXT: ${colour/xxp/BLACK}
+  TRAIN_BLACK_TEXT: ${colour/xxp/WHITE}
+
+  H_GRAY: [0.95, 0.95, 0.95]
+  P_GRAY: [0.863, 0.863, 0.863]
+  L_GRAY: [0.663, 0.663, 0.663]
+  M_GRAY: [0.467, 0.467, 0.467]
+  D_GRAY: [0.184, 0.184, 0.184]
+
+  L_GREEN: [0.051, 1, 0]
+  H_GREEN: [0.663, 1, 0.643]
+  P_GREEN: [0.471, 1, 0.443]
+  M_GREEN: [0.035, 0.69, 0]
+  D_GREEN: [0.027, 0.533, 0]
+
+  L_TAN: [1, 0.694, 0]
+  H_TAN: [1, 0.89, 0.643]
+  P_TAN: [1, 0.831, 0.443]
+  M_TAN: [0.851, 0.592, 0]
+  D_TAN: [0.659, 0.455, 0]
+
+  L_PURPLE: [0.569, 0.071, 1]
+  H_PURPLE: [0.847, 0.671, 1]
+  P_PURPLE: [0.761, 0.482, 1]
+  M_PURPLE: [0.31, 0, 0.573]
+  D_PURPLE: [0.239, 0, 0.443]
+
+  L_RED: [1, 0, 0]
+  H_RED: [1, 0.643, 0.643]
+  P_RED: [1, 0.439, 0.439]
+  M_RED: [0.851, 0, 0]
+  D_RED: [0.655, 0, 0]
+
+  L_BLUE: [0.102, 0.376, 1]
+  H_BLUE: [0.678, 0.776, 1]
+  P_BLUE: [0.498, 0.651, 1]
+  M_BLUE: [0, 0.173, 0.569]
+  D_BLUE: [0, 0.133, 0.439]
+
+  L_YELLOW: [1, 1, 0]
+  H_YELLOW: [1, 1, 0.643]
+  P_YELLOW: [1, 1, 0.439]
+  M_YELLOW: [0.851, 0.851, 0]
+  D_YELLOW: [0.655, 0.655, 0]
+
+  L_BROWN: [1, 0.455, 0]
+  H_BROWN: [1, 0.804, 0.643]
+  P_BROWN: [1, 0.694, 0.443]
+  M_BROWN: [0.851, 0.388, 0]
+  D_BROWN: [0.659, 0.298, 0]
+
+  L_PINK: [1, 0, 0.957]
+  H_PINK: [1, 0.643, 0.984]
+  P_PINK: [1, 0.443, 0.976]
+  M_PINK: [0.569, 0, 0.541]
+  D_PINK: [0.435, 0, 0.42]
+
+  L_AQUA: [0, 1, 0.749]
+  H_AQUA: [0.643, 1, 0.91]
+  P_AQUA: [0.443, 1, 0.859]
+  M_AQUA: [0, 0.553, 0.416]
+  D_AQUA: [0, 0.427, 0.322]

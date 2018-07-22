@@ -1,0 +1,23 @@
+market2d:
+
+  index:
+
+  -missing-:
+
+    CUT_ELEMENT: cutline_box
+
+    ELEMENTS:
+      - market2d_interior_box
+      - cell_text
+
+  cutline_box: ${DEFAULT/market2d_tile}
+
+  cell_text:
+    h_center: 0
+    v_center: 0
+    typeface: Times-Roman
+    size: 14
+    dssx: 30
+    y: 6
+    x: $[${market2d_interior_box/x} / 2.0]
+    fill: ${colour/xxp/BLACK}

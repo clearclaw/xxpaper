@@ -19,11 +19,10 @@ setup (
     include_package_data = True,
     zip_safe = False,
     install_requires = [line.strip ()
-                        for line in file ("requirements.txt").readlines ()
-                    ] + ["psfile",],
-  entry_points = {
-    "console_scripts": [
-      "xxpaper = xxpaper.main:main",
+                        for line in file ("requirements.txt").readlines ()],
+    entry_points = {
+      "console_scripts": [
+        "xxpaper = xxpaper.main:main",
       ],
     },
   )

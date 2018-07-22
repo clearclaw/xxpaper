@@ -1,0 +1,85 @@
+private:
+
+  index:
+
+  -missing-:
+    ELEMENTS:
+      - asset_interior_box
+      - rotate
+      - close_bar_box
+      - closes_text
+      - long_name_text
+      - power_text
+      - money_bar_box
+      - cost_text
+      - revenue_text
+
+    CUT_ELEMENT: cutline_box
+
+  _:
+    closes_text_text: "Closes: In BROWN phase"
+    long_name_text_text: ""
+    power_text_text: ""
+    cost_text_text: "Cost: £XXX"
+    revenue_text_text: "Revenue: £XXX"
+
+
+  cutline_box: ${DEFAULT/asset_tile}
+
+  asset_interior_box:
+    fill: ${colour/xxp/P_BROWN}
+
+  close_bar_box:
+    x_inset: 0
+    y_inset: 89
+    x: ${asset_interior_box/y}
+    y: 11
+    fill: ${colour/xxp/BLACK}
+
+  closes_text:
+    h_center: 1
+    v_center: 0
+    typeface: Times-Italic
+    size: 8
+    x_inset: 0
+    y_inset: 92
+    x: 4
+    y: 0
+    fill: ${colour/xxp/WHITE}
+
+  long_name_text:
+    size: 12
+    x: 82
+    y: 78
+
+  power_text:
+    h_center: 0
+    v_center: -1
+    size: 9
+    x_inset: 82
+    y_inset: 16
+    x: 0
+    y: 0
+
+  money_bar_box:
+    x: ${asset_interior_box/y}
+    y: 11
+    fill: ${colour/xxp/L_RED}
+
+  cost_text:
+    x: 4
+    y: 2
+    h_center: 1
+    v_center: 0
+    typeface: Times-Italic
+    size: 11
+    fill: ${colour/xxp/BLACK}
+
+  revenue_text:
+    x: 158
+    y: 2
+    h_center: -1
+    v_center: 0
+    typeface: Times-Italic
+    size: 11
+    fill: ${colour/xxp/BLACK}

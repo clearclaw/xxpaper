@@ -1,4 +1,4 @@
-recursive-include xxpaper *.conf
+recursive-include xxpaper *.yml
 include versioneer.py
 include xxpaper/_version.py
 include requirements.txt

@@ -1,0 +1,2600 @@
+swatch:
+  swatch_interior_box:
+    fill: ${colour/wikipedia/${name_black_text/text}}
+
+  index:
+    air_force_blue_raf:
+      name_black_text:
+        text: air_force_blue_raf
+    air_force_blue_usaf:
+      name_black_text:
+        text: air_force_blue_usaf
+    air_superiority_blue:
+      name_black_text:
+        text: air_superiority_blue
+    alabama_crimson:
+      name_black_text:
+        text: alabama_crimson
+    alice_blue:
+      name_black_text:
+        text: alice_blue
+    alizarin_crimson:
+      name_black_text:
+        text: alizarin_crimson
+    alloy_orange:
+      name_black_text:
+        text: alloy_orange
+    almond:
+      name_black_text:
+        text: almond
+    amaranth:
+      name_black_text:
+        text: amaranth
+    amber:
+      name_black_text:
+        text: amber
+    amber_sae_ece:
+      name_black_text:
+        text: amber_sae_ece
+    american_rose:
+      name_black_text:
+        text: american_rose
+    amethyst:
+      name_black_text:
+        text: amethyst
+    android_green:
+      name_black_text:
+        text: android_green
+    anti_flash_white:
+      name_black_text:
+        text: anti_flash_white
+    antique_brass:
+      name_black_text:
+        text: antique_brass
+    antique_fuchsia:
+      name_black_text:
+        text: antique_fuchsia
+    antique_ruby:
+      name_black_text:
+        text: antique_ruby
+    antique_white:
+      name_black_text:
+        text: antique_white
+    ao_english:
+      name_black_text:
+        text: ao_english
+    apple_green:
+      name_black_text:
+        text: apple_green
+    apricot:
+      name_black_text:
+        text: apricot
+    aqua:
+      name_black_text:
+        text: aqua
+    aquamarine:
+      name_black_text:
+        text: aquamarine
+    army_green:
+      name_black_text:
+        text: army_green
+    arsenic:
+      name_black_text:
+        text: arsenic
+    arylide_yellow:
+      name_black_text:
+        text: arylide_yellow
+    ash_grey:
+      name_black_text:
+        text: ash_grey
+    asparagus:
+      name_black_text:
+        text: asparagus
+    atomic_tangerine:
+      name_black_text:
+        text: atomic_tangerine
+    auburn:
+      name_black_text:
+        text: auburn
+    aureolin:
+      name_black_text:
+        text: aureolin
+    aurometalsaurus:
+      name_black_text:
+        text: aurometalsaurus
+    avocado:
+      name_black_text:
+        text: avocado
+    azure:
+      name_black_text:
+        text: azure
+    azure_mist_web:
+      name_black_text:
+        text: azure_mist_web
+    baby_blue:
+      name_black_text:
+        text: baby_blue
+    baby_blue_eyes:
+      name_black_text:
+        text: baby_blue_eyes
+    baby_pink:
+      name_black_text:
+        text: baby_pink
+    ball_blue:
+      name_black_text:
+        text: ball_blue
+    banana_mania:
+      name_black_text:
+        text: banana_mania
+    banana_yellow:
+      name_black_text:
+        text: banana_yellow
+    barn_red:
+      name_black_text:
+        text: barn_red
+    battleship_grey:
+      name_black_text:
+        text: battleship_grey
+    bazaar:
+      name_black_text:
+        text: bazaar
+    beau_blue:
+      name_black_text:
+        text: beau_blue
+    beaver:
+      name_black_text:
+        text: beaver
+    beige:
+      name_black_text:
+        text: beige
+    big_dip_o_ruby:
+      name_black_text:
+        text: big_dip_o_ruby
+    bisque:
+      name_black_text:
+        text: bisque
+    bistre:
+      name_black_text:
+        text: bistre
+    bittersweet:
+      name_black_text:
+        text: bittersweet
+    bittersweet_shimmer:
+      name_black_text:
+        text: bittersweet_shimmer
+    black:
+      name_black_text:
+        text: black
+    black_bean:
+      name_black_text:
+        text: black_bean
+    black_leather_jacket:
+      name_black_text:
+        text: black_leather_jacket
+    black_olive:
+      name_black_text:
+        text: black_olive
+    blanched_almond:
+      name_black_text:
+        text: blanched_almond
+    blast_off_bronze:
+      name_black_text:
+        text: blast_off_bronze
+    bleu_de_france:
+      name_black_text:
+        text: bleu_de_france
+    blizzard_blue:
+      name_black_text:
+        text: blizzard_blue
+    blond:
+      name_black_text:
+        text: blond
+    blue:
+      name_black_text:
+        text: blue
+    blue_bell:
+      name_black_text:
+        text: blue_bell
+    blue_crayola:
+      name_black_text:
+        text: blue_crayola
+    blue_gray:
+      name_black_text:
+        text: blue_gray
+    blue_green:
+      name_black_text:
+        text: blue_green
+    blue_munsell:
+      name_black_text:
+        text: blue_munsell
+    blue_ncs:
+      name_black_text:
+        text: blue_ncs
+    blue_pigment:
+      name_black_text:
+        text: blue_pigment
+    blue_ryb:
+      name_black_text:
+        text: blue_ryb
+    blue_sapphire:
+      name_black_text:
+        text: blue_sapphire
+    blue_violet:
+      name_black_text:
+        text: blue_violet
+    blush:
+      name_black_text:
+        text: blush
+    bole:
+      name_black_text:
+        text: bole
+    bondi_blue:
+      name_black_text:
+        text: bondi_blue
+    bone:
+      name_black_text:
+        text: bone
+    boston_university_red:
+      name_black_text:
+        text: boston_university_red
+    bottle_green:
+      name_black_text:
+        text: bottle_green
+    boysenberry:
+      name_black_text:
+        text: boysenberry
+    brandeis_blue:
+      name_black_text:
+        text: brandeis_blue
+    brass:
+      name_black_text:
+        text: brass
+    brick_red:
+      name_black_text:
+        text: brick_red
+    bright_cerulean:
+      name_black_text:
+        text: bright_cerulean
+    bright_green:
+      name_black_text:
+        text: bright_green
+    bright_lavender:
+      name_black_text:
+        text: bright_lavender
+    bright_maroon:
+      name_black_text:
+        text: bright_maroon
+    bright_pink:
+      name_black_text:
+        text: bright_pink
+    bright_turquoise:
+      name_black_text:
+        text: bright_turquoise
+    bright_ube:
+      name_black_text:
+        text: bright_ube
+    brilliant_lavender:
+      name_black_text:
+        text: brilliant_lavender
+    brilliant_rose:
+      name_black_text:
+        text: brilliant_rose
+    brink_pink:
+      name_black_text:
+        text: brink_pink
+    british_racing_green:
+      name_black_text:
+        text: british_racing_green
+    bronze:
+      name_black_text:
+        text: bronze
+    brown_traditional:
+      name_black_text:
+        text: brown_traditional
+    brown_web:
+      name_black_text:
+        text: brown_web
+    bubble_gum:
+      name_black_text:
+        text: bubble_gum
+    bubbles:
+      name_black_text:
+        text: bubbles
+    buff:
+      name_black_text:
+        text: buff
+    bulgarian_rose:
+      name_black_text:
+        text: bulgarian_rose
+    burgundy:
+      name_black_text:
+        text: burgundy
+    burlywood:
+      name_black_text:
+        text: burlywood
+    burnt_orange:
+      name_black_text:
+        text: burnt_orange
+    burnt_sienna:
+      name_black_text:
+        text: burnt_sienna
+    burnt_umber:
+      name_black_text:
+        text: burnt_umber
+    byzantine:
+      name_black_text:
+        text: byzantine
+    byzantium:
+      name_black_text:
+        text: byzantium
+    cadet:
+      name_black_text:
+        text: cadet
+    cadet_blue:
+      name_black_text:
+        text: cadet_blue
+    cadet_grey:
+      name_black_text:
+        text: cadet_grey
+    cadmium_green:
+      name_black_text:
+        text: cadmium_green
+    cadmium_orange:
+      name_black_text:
+        text: cadmium_orange
+    cadmium_red:
+      name_black_text:
+        text: cadmium_red
+    cadmium_yellow:
+      name_black_text:
+        text: cadmium_yellow
+    caf_au_lait:
+      name_black_text:
+        text: caf_au_lait
+    caf_noir:
+      name_black_text:
+        text: caf_noir
+    cal_poly_green:
+      name_black_text:
+        text: cal_poly_green
+    cambridge_blue:
+      name_black_text:
+        text: cambridge_blue
+    camel:
+      name_black_text:
+        text: camel
+    cameo_pink:
+      name_black_text:
+        text: cameo_pink
+    camouflage_green:
+      name_black_text:
+        text: camouflage_green
+    canary_yellow:
+      name_black_text:
+        text: canary_yellow
+    candy_apple_red:
+      name_black_text:
+        text: candy_apple_red
+    candy_pink:
+      name_black_text:
+        text: candy_pink
+    capri:
+      name_black_text:
+        text: capri
+    caput_mortuum:
+      name_black_text:
+        text: caput_mortuum
+    cardinal:
+      name_black_text:
+        text: cardinal
+    caribbean_green:
+      name_black_text:
+        text: caribbean_green
+    carmine:
+      name_black_text:
+        text: carmine
+    carmine_m_p:
+      name_black_text:
+        text: carmine_m_p
+    carmine_pink:
+      name_black_text:
+        text: carmine_pink
+    carmine_red:
+      name_black_text:
+        text: carmine_red
+    carnation_pink:
+      name_black_text:
+        text: carnation_pink
+    carnelian:
+      name_black_text:
+        text: carnelian
+    carolina_blue:
+      name_black_text:
+        text: carolina_blue
+    carrot_orange:
+      name_black_text:
+        text: carrot_orange
+    catalina_blue:
+      name_black_text:
+        text: catalina_blue
+    ceil:
+      name_black_text:
+        text: ceil
+    celadon:
+      name_black_text:
+        text: celadon
+    celadon_blue:
+      name_black_text:
+        text: celadon_blue
+    celadon_green:
+      name_black_text:
+        text: celadon_green
+    celeste_colour:
+      name_black_text:
+        text: celeste_colour
+    celestial_blue:
+      name_black_text:
+        text: celestial_blue
+    cerise:
+      name_black_text:
+        text: cerise
+    cerise_pink:
+      name_black_text:
+        text: cerise_pink
+    cerulean:
+      name_black_text:
+        text: cerulean
+    cerulean_blue:
+      name_black_text:
+        text: cerulean_blue
+    cerulean_frost:
+      name_black_text:
+        text: cerulean_frost
+    cg_blue:
+      name_black_text:
+        text: cg_blue
+    cg_red:
+      name_black_text:
+        text: cg_red
+    chamoisee:
+      name_black_text:
+        text: chamoisee
+    champagne:
+      name_black_text:
+        text: champagne
+    charcoal:
+      name_black_text:
+        text: charcoal
+    charm_pink:
+      name_black_text:
+        text: charm_pink
+    chartreuse_traditional:
+      name_black_text:
+        text: chartreuse_traditional
+    chartreuse_web:
+      name_black_text:
+        text: chartreuse_web
+    cherry:
+      name_black_text:
+        text: cherry
+    cherry_blossom_pink:
+      name_black_text:
+        text: cherry_blossom_pink
+    chestnut:
+      name_black_text:
+        text: chestnut
+    china_pink:
+      name_black_text:
+        text: china_pink
+    china_rose:
+      name_black_text:
+        text: china_rose
+    chinese_red:
+      name_black_text:
+        text: chinese_red
+    chocolate_traditional:
+      name_black_text:
+        text: chocolate_traditional
+    chocolate_web:
+      name_black_text:
+        text: chocolate_web
+    chrome_yellow:
+      name_black_text:
+        text: chrome_yellow
+    cinereous:
+      name_black_text:
+        text: cinereous
+    cinnabar:
+      name_black_text:
+        text: cinnabar
+    cinnamon:
+      name_black_text:
+        text: cinnamon
+    citrine:
+      name_black_text:
+        text: citrine
+    classic_rose:
+      name_black_text:
+        text: classic_rose
+    cobalt:
+      name_black_text:
+        text: cobalt
+    cocoa_brown:
+      name_black_text:
+        text: cocoa_brown
+    coffee:
+      name_black_text:
+        text: coffee
+    columbia_blue:
+      name_black_text:
+        text: columbia_blue
+    congo_pink:
+      name_black_text:
+        text: congo_pink
+    cool_black:
+      name_black_text:
+        text: cool_black
+    cool_grey:
+      name_black_text:
+        text: cool_grey
+    copper:
+      name_black_text:
+        text: copper
+    copper_crayola:
+      name_black_text:
+        text: copper_crayola
+    copper_penny:
+      name_black_text:
+        text: copper_penny
+    copper_red:
+      name_black_text:
+        text: copper_red
+    copper_rose:
+      name_black_text:
+        text: copper_rose
+    coquelicot:
+      name_black_text:
+        text: coquelicot
+    coral:
+      name_black_text:
+        text: coral
+    coral_pink:
+      name_black_text:
+        text: coral_pink
+    coral_red:
+      name_black_text:
+        text: coral_red
+    cordovan:
+      name_black_text:
+        text: cordovan
+    corn:
+      name_black_text:
+        text: corn
+    cornell_red:
+      name_black_text:
+        text: cornell_red
+    cornflower_blue:
+      name_black_text:
+        text: cornflower_blue
+    cornsilk:
+      name_black_text:
+        text: cornsilk
+    cosmic_latte:
+      name_black_text:
+        text: cosmic_latte
+    cotton_candy:
+      name_black_text:
+        text: cotton_candy
+    cream:
+      name_black_text:
+        text: cream
+    crimson:
+      name_black_text:
+        text: crimson
+    crimson_glory:
+      name_black_text:
+        text: crimson_glory
+    cyan:
+      name_black_text:
+        text: cyan
+    cyan_process:
+      name_black_text:
+        text: cyan_process
+    daffodil:
+      name_black_text:
+        text: daffodil
+    dandelion:
+      name_black_text:
+        text: dandelion
+    dark_blue:
+      name_black_text:
+        text: dark_blue
+    dark_brown:
+      name_black_text:
+        text: dark_brown
+    dark_byzantium:
+      name_black_text:
+        text: dark_byzantium
+    dark_candy_apple_red:
+      name_black_text:
+        text: dark_candy_apple_red
+    dark_cerulean:
+      name_black_text:
+        text: dark_cerulean
+    dark_chestnut:
+      name_black_text:
+        text: dark_chestnut
+    dark_coral:
+      name_black_text:
+        text: dark_coral
+    dark_cyan:
+      name_black_text:
+        text: dark_cyan
+    dark_electric_blue:
+      name_black_text:
+        text: dark_electric_blue
+    dark_goldenrod:
+      name_black_text:
+        text: dark_goldenrod
+    dark_gray:
+      name_black_text:
+        text: dark_gray
+    dark_green:
+      name_black_text:
+        text: dark_green
+    dark_imperial_blue:
+      name_black_text:
+        text: dark_imperial_blue
+    dark_jungle_green:
+      name_black_text:
+        text: dark_jungle_green
+    dark_khaki:
+      name_black_text:
+        text: dark_khaki
+    dark_lava:
+      name_black_text:
+        text: dark_lava
+    dark_lavender:
+      name_black_text:
+        text: dark_lavender
+    dark_magenta:
+      name_black_text:
+        text: dark_magenta
+    dark_midnight_blue:
+      name_black_text:
+        text: dark_midnight_blue
+    dark_olive_green:
+      name_black_text:
+        text: dark_olive_green
+    dark_orange:
+      name_black_text:
+        text: dark_orange
+    dark_orchid:
+      name_black_text:
+        text: dark_orchid
+    dark_pastel_blue:
+      name_black_text:
+        text: dark_pastel_blue
+    dark_pastel_green:
+      name_black_text:
+        text: dark_pastel_green
+    dark_pastel_purple:
+      name_black_text:
+        text: dark_pastel_purple
+    dark_pastel_red:
+      name_black_text:
+        text: dark_pastel_red
+    dark_pink:
+      name_black_text:
+        text: dark_pink
+    dark_powder_blue:
+      name_black_text:
+        text: dark_powder_blue
+    dark_raspberry:
+      name_black_text:
+        text: dark_raspberry
+    dark_red:
+      name_black_text:
+        text: dark_red
+    dark_salmon:
+      name_black_text:
+        text: dark_salmon
+    dark_scarlet:
+      name_black_text:
+        text: dark_scarlet
+    dark_sea_green:
+      name_black_text:
+        text: dark_sea_green
+    dark_sienna:
+      name_black_text:
+        text: dark_sienna
+    dark_slate_blue:
+      name_black_text:
+        text: dark_slate_blue
+    dark_slate_gray:
+      name_black_text:
+        text: dark_slate_gray
+    dark_spring_green:
+      name_black_text:
+        text: dark_spring_green
+    dark_tan:
+      name_black_text:
+        text: dark_tan
+    dark_tangerine:
+      name_black_text:
+        text: dark_tangerine
+    dark_taupe:
+      name_black_text:
+        text: dark_taupe
+    dark_terra_cotta:
+      name_black_text:
+        text: dark_terra_cotta
+    dark_turquoise:
+      name_black_text:
+        text: dark_turquoise
+    dark_violet:
+      name_black_text:
+        text: dark_violet
+    dark_yellow:
+      name_black_text:
+        text: dark_yellow
+    dartmouth_green:
+      name_black_text:
+        text: dartmouth_green
+    davy_s_grey:
+      name_black_text:
+        text: davy_s_grey
+    debian_red:
+      name_black_text:
+        text: debian_red
+    deep_carmine:
+      name_black_text:
+        text: deep_carmine
+    deep_carmine_pink:
+      name_black_text:
+        text: deep_carmine_pink
+    deep_carrot_orange:
+      name_black_text:
+        text: deep_carrot_orange
+    deep_cerise:
+      name_black_text:
+        text: deep_cerise
+    deep_champagne:
+      name_black_text:
+        text: deep_champagne
+    deep_chestnut:
+      name_black_text:
+        text: deep_chestnut
+    deep_coffee:
+      name_black_text:
+        text: deep_coffee
+    deep_fuchsia:
+      name_black_text:
+        text: deep_fuchsia
+    deep_jungle_green:
+      name_black_text:
+        text: deep_jungle_green
+    deep_lilac:
+      name_black_text:
+        text: deep_lilac
+    deep_magenta:
+      name_black_text:
+        text: deep_magenta
+    deep_peach:
+      name_black_text:
+        text: deep_peach
+    deep_pink:
+      name_black_text:
+        text: deep_pink
+    deep_ruby:
+      name_black_text:
+        text: deep_ruby
+    deep_saffron:
+      name_black_text:
+        text: deep_saffron
+    deep_sky_blue:
+      name_black_text:
+        text: deep_sky_blue
+    deep_tuscan_red:
+      name_black_text:
+        text: deep_tuscan_red
+    denim:
+      name_black_text:
+        text: denim
+    desert:
+      name_black_text:
+        text: desert
+    desert_sand:
+      name_black_text:
+        text: desert_sand
+    dim_gray:
+      name_black_text:
+        text: dim_gray
+    dodger_blue:
+      name_black_text:
+        text: dodger_blue
+    dogwood_rose:
+      name_black_text:
+        text: dogwood_rose
+    dollar_bill:
+      name_black_text:
+        text: dollar_bill
+    drab:
+      name_black_text:
+        text: drab
+    duke_blue:
+      name_black_text:
+        text: duke_blue
+    earth_yellow:
+      name_black_text:
+        text: earth_yellow
+    ebony:
+      name_black_text:
+        text: ebony
+    ecru:
+      name_black_text:
+        text: ecru
+    eggplant:
+      name_black_text:
+        text: eggplant
+    eggshell:
+      name_black_text:
+        text: eggshell
+    egyptian_blue:
+      name_black_text:
+        text: egyptian_blue
+    electric_blue:
+      name_black_text:
+        text: electric_blue
+    electric_crimson:
+      name_black_text:
+        text: electric_crimson
+    electric_cyan:
+      name_black_text:
+        text: electric_cyan
+    electric_green:
+      name_black_text:
+        text: electric_green
+    electric_indigo:
+      name_black_text:
+        text: electric_indigo
+    electric_lavender:
+      name_black_text:
+        text: electric_lavender
+    electric_lime:
+      name_black_text:
+        text: electric_lime
+    electric_purple:
+      name_black_text:
+        text: electric_purple
+    electric_ultramarine:
+      name_black_text:
+        text: electric_ultramarine
+    electric_violet:
+      name_black_text:
+        text: electric_violet
+    electric_yellow:
+      name_black_text:
+        text: electric_yellow
+    emerald:
+      name_black_text:
+        text: emerald
+    english_lavender:
+      name_black_text:
+        text: english_lavender
+    eton_blue:
+      name_black_text:
+        text: eton_blue
+    fallow:
+      name_black_text:
+        text: fallow
+    falu_red:
+      name_black_text:
+        text: falu_red
+    fandango:
+      name_black_text:
+        text: fandango
+    fashion_fuchsia:
+      name_black_text:
+        text: fashion_fuchsia
+    fawn:
+      name_black_text:
+        text: fawn
+    feldgrau:
+      name_black_text:
+        text: feldgrau
+    fern_green:
+      name_black_text:
+        text: fern_green
+    ferrari_red:
+      name_black_text:
+        text: ferrari_red
+    field_drab:
+      name_black_text:
+        text: field_drab
+    fire_engine_red:
+      name_black_text:
+        text: fire_engine_red
+    firebrick:
+      name_black_text:
+        text: firebrick
+    flame:
+      name_black_text:
+        text: flame
+    flamingo_pink:
+      name_black_text:
+        text: flamingo_pink
+    flavescent:
+      name_black_text:
+        text: flavescent
+    flax:
+      name_black_text:
+        text: flax
+    floral_white:
+      name_black_text:
+        text: floral_white
+    fluorescent_orange:
+      name_black_text:
+        text: fluorescent_orange
+    fluorescent_pink:
+      name_black_text:
+        text: fluorescent_pink
+    fluorescent_yellow:
+      name_black_text:
+        text: fluorescent_yellow
+    folly:
+      name_black_text:
+        text: folly
+    forest_green_traditional:
+      name_black_text:
+        text: forest_green_traditional
+    forest_green_web:
+      name_black_text:
+        text: forest_green_web
+    french_beige:
+      name_black_text:
+        text: french_beige
+    french_blue:
+      name_black_text:
+        text: french_blue
+    french_lilac:
+      name_black_text:
+        text: french_lilac
+    french_lime:
+      name_black_text:
+        text: french_lime
+    french_raspberry:
+      name_black_text:
+        text: french_raspberry
+    french_rose:
+      name_black_text:
+        text: french_rose
+    fuchsia:
+      name_black_text:
+        text: fuchsia
+    fuchsia_crayola:
+      name_black_text:
+        text: fuchsia_crayola
+    fuchsia_pink:
+      name_black_text:
+        text: fuchsia_pink
+    fuchsia_rose:
+      name_black_text:
+        text: fuchsia_rose
+    fulvous:
+      name_black_text:
+        text: fulvous
+    fuzzy_wuzzy:
+      name_black_text:
+        text: fuzzy_wuzzy
+    gainsboro:
+      name_black_text:
+        text: gainsboro
+    gamboge:
+      name_black_text:
+        text: gamboge
+    ghost_white:
+      name_black_text:
+        text: ghost_white
+    ginger:
+      name_black_text:
+        text: ginger
+    glaucous:
+      name_black_text:
+        text: glaucous
+    glitter:
+      name_black_text:
+        text: glitter
+    gold_metallic:
+      name_black_text:
+        text: gold_metallic
+    gold_web_golden:
+      name_black_text:
+        text: gold_web_golden
+    golden_brown:
+      name_black_text:
+        text: golden_brown
+    golden_poppy:
+      name_black_text:
+        text: golden_poppy
+    golden_yellow:
+      name_black_text:
+        text: golden_yellow
+    goldenrod:
+      name_black_text:
+        text: goldenrod
+    granny_smith_apple:
+      name_black_text:
+        text: granny_smith_apple
+    gray:
+      name_black_text:
+        text: gray
+    gray_asparagus:
+      name_black_text:
+        text: gray_asparagus
+    gray_html_css_gray:
+      name_black_text:
+        text: gray_html_css_gray
+    gray_x11_gray:
+      name_black_text:
+        text: gray_x11_gray
+    green_color_wheel_x11_green:
+      name_black_text:
+        text: green_color_wheel_x11_green
+    green_crayola:
+      name_black_text:
+        text: green_crayola
+    green_html_css_green:
+      name_black_text:
+        text: green_html_css_green
+    green_munsell:
+      name_black_text:
+        text: green_munsell
+    green_ncs:
+      name_black_text:
+        text: green_ncs
+    green_pigment:
+      name_black_text:
+        text: green_pigment
+    green_ryb:
+      name_black_text:
+        text: green_ryb
+    green_yellow:
+      name_black_text:
+        text: green_yellow
+    grullo:
+      name_black_text:
+        text: grullo
+    guppie_green:
+      name_black_text:
+        text: guppie_green
+    halay_be:
+      name_black_text:
+        text: halay_be
+    han_blue:
+      name_black_text:
+        text: han_blue
+    han_purple:
+      name_black_text:
+        text: han_purple
+    hansa_yellow:
+      name_black_text:
+        text: hansa_yellow
+    harlequin:
+      name_black_text:
+        text: harlequin
+    harvard_crimson:
+      name_black_text:
+        text: harvard_crimson
+    harvest_gold:
+      name_black_text:
+        text: harvest_gold
+    heart_gold:
+      name_black_text:
+        text: heart_gold
+    heliotrope:
+      name_black_text:
+        text: heliotrope
+    hollywood_cerise:
+      name_black_text:
+        text: hollywood_cerise
+    honeydew:
+      name_black_text:
+        text: honeydew
+    honolulu_blue:
+      name_black_text:
+        text: honolulu_blue
+    hooker_s_green:
+      name_black_text:
+        text: hooker_s_green
+    hot_magenta:
+      name_black_text:
+        text: hot_magenta
+    hot_pink:
+      name_black_text:
+        text: hot_pink
+    hunter_green:
+      name_black_text:
+        text: hunter_green
+    iceberg:
+      name_black_text:
+        text: iceberg
+    icterine:
+      name_black_text:
+        text: icterine
+    imperial_blue:
+      name_black_text:
+        text: imperial_blue
+    inchworm:
+      name_black_text:
+        text: inchworm
+    india_green:
+      name_black_text:
+        text: india_green
+    indian_red:
+      name_black_text:
+        text: indian_red
+    indian_yellow:
+      name_black_text:
+        text: indian_yellow
+    indigo:
+      name_black_text:
+        text: indigo
+    indigo_dye:
+      name_black_text:
+        text: indigo_dye
+    indigo_web:
+      name_black_text:
+        text: indigo_web
+    international_klein_blue:
+      name_black_text:
+        text: international_klein_blue
+    international_orange_aerospace:
+      name_black_text:
+        text: international_orange_aerospace
+    international_orange_engineering:
+      name_black_text:
+        text: international_orange_engineering
+    international_orange_golden_gate_bridge:
+      name_black_text:
+        text: international_orange_golden_gate_bridge
+    iris:
+      name_black_text:
+        text: iris
+    isabelline:
+      name_black_text:
+        text: isabelline
+    islamic_green:
+      name_black_text:
+        text: islamic_green
+    ivory:
+      name_black_text:
+        text: ivory
+    jade:
+      name_black_text:
+        text: jade
+    jasmine:
+      name_black_text:
+        text: jasmine
+    jasper:
+      name_black_text:
+        text: jasper
+    jazzberry_jam:
+      name_black_text:
+        text: jazzberry_jam
+    jet:
+      name_black_text:
+        text: jet
+    jonquil:
+      name_black_text:
+        text: jonquil
+    june_bud:
+      name_black_text:
+        text: june_bud
+    jungle_green:
+      name_black_text:
+        text: jungle_green
+    kelly_green:
+      name_black_text:
+        text: kelly_green
+    kenyan_copper:
+      name_black_text:
+        text: kenyan_copper
+    khaki_html_css_khaki:
+      name_black_text:
+        text: khaki_html_css_khaki
+    khaki_x11_light_khaki:
+      name_black_text:
+        text: khaki_x11_light_khaki
+    ku_crimson:
+      name_black_text:
+        text: ku_crimson
+    la_salle_green:
+      name_black_text:
+        text: la_salle_green
+    languid_lavender:
+      name_black_text:
+        text: languid_lavender
+    lapis_lazuli:
+      name_black_text:
+        text: lapis_lazuli
+    laser_lemon:
+      name_black_text:
+        text: laser_lemon
+    laurel_green:
+      name_black_text:
+        text: laurel_green
+    lava:
+      name_black_text:
+        text: lava
+    lavender_blue:
+      name_black_text:
+        text: lavender_blue
+    lavender_blush:
+      name_black_text:
+        text: lavender_blush
+    lavender_floral:
+      name_black_text:
+        text: lavender_floral
+    lavender_gray:
+      name_black_text:
+        text: lavender_gray
+    lavender_indigo:
+      name_black_text:
+        text: lavender_indigo
+    lavender_magenta:
+      name_black_text:
+        text: lavender_magenta
+    lavender_mist:
+      name_black_text:
+        text: lavender_mist
+    lavender_pink:
+      name_black_text:
+        text: lavender_pink
+    lavender_purple:
+      name_black_text:
+        text: lavender_purple
+    lavender_rose:
+      name_black_text:
+        text: lavender_rose
+    lavender_web:
+      name_black_text:
+        text: lavender_web
+    lawn_green:
+      name_black_text:
+        text: lawn_green
+    lemon:
+      name_black_text:
+        text: lemon
+    lemon_chiffon:
+      name_black_text:
+        text: lemon_chiffon
+    lemon_lime:
+      name_black_text:
+        text: lemon_lime
+    licorice:
+      name_black_text:
+        text: licorice
+    light_apricot:
+      name_black_text:
+        text: light_apricot
+    light_blue:
+      name_black_text:
+        text: light_blue
+    light_brown:
+      name_black_text:
+        text: light_brown
+    light_carmine_pink:
+      name_black_text:
+        text: light_carmine_pink
+    light_coral:
+      name_black_text:
+        text: light_coral
+    light_cornflower_blue:
+      name_black_text:
+        text: light_cornflower_blue
+    light_crimson:
+      name_black_text:
+        text: light_crimson
+    light_cyan:
+      name_black_text:
+        text: light_cyan
+    light_fuchsia_pink:
+      name_black_text:
+        text: light_fuchsia_pink
+    light_goldenrod_yellow:
+      name_black_text:
+        text: light_goldenrod_yellow
+    light_gray:
+      name_black_text:
+        text: light_gray
+    light_green:
+      name_black_text:
+        text: light_green
+    light_khaki:
+      name_black_text:
+        text: light_khaki
+    light_pastel_purple:
+      name_black_text:
+        text: light_pastel_purple
+    light_pink:
+      name_black_text:
+        text: light_pink
+    light_red_ochre:
+      name_black_text:
+        text: light_red_ochre
+    light_salmon:
+      name_black_text:
+        text: light_salmon
+    light_salmon_pink:
+      name_black_text:
+        text: light_salmon_pink
+    light_sea_green:
+      name_black_text:
+        text: light_sea_green
+    light_sky_blue:
+      name_black_text:
+        text: light_sky_blue
+    light_slate_gray:
+      name_black_text:
+        text: light_slate_gray
+    light_taupe:
+      name_black_text:
+        text: light_taupe
+    light_thulian_pink:
+      name_black_text:
+        text: light_thulian_pink
+    light_yellow:
+      name_black_text:
+        text: light_yellow
+    lilac:
+      name_black_text:
+        text: lilac
+    lime_color_wheel:
+      name_black_text:
+        text: lime_color_wheel
+    lime_green:
+      name_black_text:
+        text: lime_green
+    lime_web_x11_green:
+      name_black_text:
+        text: lime_web_x11_green
+    limerick:
+      name_black_text:
+        text: limerick
+    lincoln_green:
+      name_black_text:
+        text: lincoln_green
+    linen:
+      name_black_text:
+        text: linen
+    lion:
+      name_black_text:
+        text: lion
+    little_boy_blue:
+      name_black_text:
+        text: little_boy_blue
+    liver:
+      name_black_text:
+        text: liver
+    lust:
+      name_black_text:
+        text: lust
+    magenta:
+      name_black_text:
+        text: magenta
+    magenta_dye:
+      name_black_text:
+        text: magenta_dye
+    magenta_process:
+      name_black_text:
+        text: magenta_process
+    magic_mint:
+      name_black_text:
+        text: magic_mint
+    magnolia:
+      name_black_text:
+        text: magnolia
+    mahogany:
+      name_black_text:
+        text: mahogany
+    maize:
+      name_black_text:
+        text: maize
+    majorelle_blue:
+      name_black_text:
+        text: majorelle_blue
+    malachite:
+      name_black_text:
+        text: malachite
+    manatee:
+      name_black_text:
+        text: manatee
+    mango_tango:
+      name_black_text:
+        text: mango_tango
+    mantis:
+      name_black_text:
+        text: mantis
+    mardi_gras:
+      name_black_text:
+        text: mardi_gras
+    maroon_crayola:
+      name_black_text:
+        text: maroon_crayola
+    maroon_html_css:
+      name_black_text:
+        text: maroon_html_css
+    maroon_x11:
+      name_black_text:
+        text: maroon_x11
+    mauve:
+      name_black_text:
+        text: mauve
+    mauve_taupe:
+      name_black_text:
+        text: mauve_taupe
+    mauvelous:
+      name_black_text:
+        text: mauvelous
+    maya_blue:
+      name_black_text:
+        text: maya_blue
+    meat_brown:
+      name_black_text:
+        text: meat_brown
+    medium_aquamarine:
+      name_black_text:
+        text: medium_aquamarine
+    medium_blue:
+      name_black_text:
+        text: medium_blue
+    medium_candy_apple_red:
+      name_black_text:
+        text: medium_candy_apple_red
+    medium_carmine:
+      name_black_text:
+        text: medium_carmine
+    medium_champagne:
+      name_black_text:
+        text: medium_champagne
+    medium_electric_blue:
+      name_black_text:
+        text: medium_electric_blue
+    medium_jungle_green:
+      name_black_text:
+        text: medium_jungle_green
+    medium_lavender_magenta:
+      name_black_text:
+        text: medium_lavender_magenta
+    medium_orchid:
+      name_black_text:
+        text: medium_orchid
+    medium_persian_blue:
+      name_black_text:
+        text: medium_persian_blue
+    medium_purple:
+      name_black_text:
+        text: medium_purple
+    medium_red_violet:
+      name_black_text:
+        text: medium_red_violet
+    medium_ruby:
+      name_black_text:
+        text: medium_ruby
+    medium_sea_green:
+      name_black_text:
+        text: medium_sea_green
+    medium_slate_blue:
+      name_black_text:
+        text: medium_slate_blue
+    medium_spring_bud:
+      name_black_text:
+        text: medium_spring_bud
+    medium_spring_green:
+      name_black_text:
+        text: medium_spring_green
+    medium_taupe:
+      name_black_text:
+        text: medium_taupe
+    medium_turquoise:
+      name_black_text:
+        text: medium_turquoise
+    medium_tuscan_red:
+      name_black_text:
+        text: medium_tuscan_red
+    medium_vermilion:
+      name_black_text:
+        text: medium_vermilion
+    medium_violet_red:
+      name_black_text:
+        text: medium_violet_red
+    mellow_apricot:
+      name_black_text:
+        text: mellow_apricot
+    mellow_yellow:
+      name_black_text:
+        text: mellow_yellow
+    melon:
+      name_black_text:
+        text: melon
+    midnight_blue:
+      name_black_text:
+        text: midnight_blue
+    midnight_green_eagle_green:
+      name_black_text:
+        text: midnight_green_eagle_green
+    mikado_yellow:
+      name_black_text:
+        text: mikado_yellow
+    mint:
+      name_black_text:
+        text: mint
+    mint_cream:
+      name_black_text:
+        text: mint_cream
+    mint_green:
+      name_black_text:
+        text: mint_green
+    misty_rose:
+      name_black_text:
+        text: misty_rose
+    moccasin:
+      name_black_text:
+        text: moccasin
+    mode_beige:
+      name_black_text:
+        text: mode_beige
+    moonstone_blue:
+      name_black_text:
+        text: moonstone_blue
+    mordant_red_19:
+      name_black_text:
+        text: mordant_red_19
+    moss_green:
+      name_black_text:
+        text: moss_green
+    mountain_meadow:
+      name_black_text:
+        text: mountain_meadow
+    mountbatten_pink:
+      name_black_text:
+        text: mountbatten_pink
+    msu_green:
+      name_black_text:
+        text: msu_green
+    mulberry:
+      name_black_text:
+        text: mulberry
+    mustard:
+      name_black_text:
+        text: mustard
+    myrtle:
+      name_black_text:
+        text: myrtle
+    nadeshiko_pink:
+      name_black_text:
+        text: nadeshiko_pink
+    napier_green:
+      name_black_text:
+        text: napier_green
+    naples_yellow:
+      name_black_text:
+        text: naples_yellow
+    navajo_white:
+      name_black_text:
+        text: navajo_white
+    navy_blue:
+      name_black_text:
+        text: navy_blue
+    neon_carrot:
+      name_black_text:
+        text: neon_carrot
+    neon_fuchsia:
+      name_black_text:
+        text: neon_fuchsia
+    neon_green:
+      name_black_text:
+        text: neon_green
+    new_york_pink:
+      name_black_text:
+        text: new_york_pink
+    non_photo_blue:
+      name_black_text:
+        text: non_photo_blue
+    north_texas_green:
+      name_black_text:
+        text: north_texas_green
+    ocean_boat_blue:
+      name_black_text:
+        text: ocean_boat_blue
+    ochre:
+      name_black_text:
+        text: ochre
+    office_green:
+      name_black_text:
+        text: office_green
+    old_gold:
+      name_black_text:
+        text: old_gold
+    old_lace:
+      name_black_text:
+        text: old_lace
+    old_lavender:
+      name_black_text:
+        text: old_lavender
+    old_mauve:
+      name_black_text:
+        text: old_mauve
+    old_rose:
+      name_black_text:
+        text: old_rose
+    olive:
+      name_black_text:
+        text: olive
+    olive_drab_7:
+      name_black_text:
+        text: olive_drab_7
+    olive_drab_web_olive_drab_3:
+      name_black_text:
+        text: olive_drab_web_olive_drab_3
+    olivine:
+      name_black_text:
+        text: olivine
+    onyx:
+      name_black_text:
+        text: onyx
+    opera_mauve:
+      name_black_text:
+        text: opera_mauve
+    orange_color_wheel:
+      name_black_text:
+        text: orange_color_wheel
+    orange_peel:
+      name_black_text:
+        text: orange_peel
+    orange_red:
+      name_black_text:
+        text: orange_red
+    orange_ryb:
+      name_black_text:
+        text: orange_ryb
+    orange_web_color:
+      name_black_text:
+        text: orange_web_color
+    orchid:
+      name_black_text:
+        text: orchid
+    otter_brown:
+      name_black_text:
+        text: otter_brown
+    ou_crimson_red:
+      name_black_text:
+        text: ou_crimson_red
+    outer_space:
+      name_black_text:
+        text: outer_space
+    outrageous_orange:
+      name_black_text:
+        text: outrageous_orange
+    oxford_blue:
+      name_black_text:
+        text: oxford_blue
+    pakistan_green:
+      name_black_text:
+        text: pakistan_green
+    palatinate_blue:
+      name_black_text:
+        text: palatinate_blue
+    palatinate_purple:
+      name_black_text:
+        text: palatinate_purple
+    pale_aqua:
+      name_black_text:
+        text: pale_aqua
+    pale_blue:
+      name_black_text:
+        text: pale_blue
+    pale_brown:
+      name_black_text:
+        text: pale_brown
+    pale_carmine:
+      name_black_text:
+        text: pale_carmine
+    pale_cerulean:
+      name_black_text:
+        text: pale_cerulean
+    pale_chestnut:
+      name_black_text:
+        text: pale_chestnut
+    pale_copper:
+      name_black_text:
+        text: pale_copper
+    pale_cornflower_blue:
+      name_black_text:
+        text: pale_cornflower_blue
+    pale_gold:
+      name_black_text:
+        text: pale_gold
+    pale_goldenrod:
+      name_black_text:
+        text: pale_goldenrod
+    pale_green:
+      name_black_text:
+        text: pale_green
+    pale_lavender:
+      name_black_text:
+        text: pale_lavender
+    pale_magenta:
+      name_black_text:
+        text: pale_magenta
+    pale_pink:
+      name_black_text:
+        text: pale_pink
+    pale_plum:
+      name_black_text:
+        text: pale_plum
+    pale_red_violet:
+      name_black_text:
+        text: pale_red_violet
+    pale_robin_egg_blue:
+      name_black_text:
+        text: pale_robin_egg_blue
+    pale_silver:
+      name_black_text:
+        text: pale_silver
+    pale_spring_bud:
+      name_black_text:
+        text: pale_spring_bud
+    pale_taupe:
+      name_black_text:
+        text: pale_taupe
+    pale_violet_red:
+      name_black_text:
+        text: pale_violet_red
+    pansy_purple:
+      name_black_text:
+        text: pansy_purple
+    papaya_whip:
+      name_black_text:
+        text: papaya_whip
+    paris_green:
+      name_black_text:
+        text: paris_green
+    pastel_blue:
+      name_black_text:
+        text: pastel_blue
+    pastel_brown:
+      name_black_text:
+        text: pastel_brown
+    pastel_gray:
+      name_black_text:
+        text: pastel_gray
+    pastel_green:
+      name_black_text:
+        text: pastel_green
+    pastel_magenta:
+      name_black_text:
+        text: pastel_magenta
+    pastel_orange:
+      name_black_text:
+        text: pastel_orange
+    pastel_pink:
+      name_black_text:
+        text: pastel_pink
+    pastel_purple:
+      name_black_text:
+        text: pastel_purple
+    pastel_red:
+      name_black_text:
+        text: pastel_red
+    pastel_violet:
+      name_black_text:
+        text: pastel_violet
+    pastel_yellow:
+      name_black_text:
+        text: pastel_yellow
+    patriarch:
+      name_black_text:
+        text: patriarch
+    payne_s_grey:
+      name_black_text:
+        text: payne_s_grey
+    peach:
+      name_black_text:
+        text: peach
+    peach_crayola:
+      name_black_text:
+        text: peach_crayola
+    peach_orange:
+      name_black_text:
+        text: peach_orange
+    peach_puff:
+      name_black_text:
+        text: peach_puff
+    peach_yellow:
+      name_black_text:
+        text: peach_yellow
+    pear:
+      name_black_text:
+        text: pear
+    pearl:
+      name_black_text:
+        text: pearl
+    pearl_aqua:
+      name_black_text:
+        text: pearl_aqua
+    pearly_purple:
+      name_black_text:
+        text: pearly_purple
+    peridot:
+      name_black_text:
+        text: peridot
+    periwinkle:
+      name_black_text:
+        text: periwinkle
+    persian_blue:
+      name_black_text:
+        text: persian_blue
+    persian_green:
+      name_black_text:
+        text: persian_green
+    persian_indigo:
+      name_black_text:
+        text: persian_indigo
+    persian_orange:
+      name_black_text:
+        text: persian_orange
+    persian_pink:
+      name_black_text:
+        text: persian_pink
+    persian_plum:
+      name_black_text:
+        text: persian_plum
+    persian_red:
+      name_black_text:
+        text: persian_red
+    persian_rose:
+      name_black_text:
+        text: persian_rose
+    persimmon:
+      name_black_text:
+        text: persimmon
+    peru:
+      name_black_text:
+        text: peru
+    phlox:
+      name_black_text:
+        text: phlox
+    phthalo_blue:
+      name_black_text:
+        text: phthalo_blue
+    phthalo_green:
+      name_black_text:
+        text: phthalo_green
+    piggy_pink:
+      name_black_text:
+        text: piggy_pink
+    pine_green:
+      name_black_text:
+        text: pine_green
+    pink:
+      name_black_text:
+        text: pink
+    pink_lace:
+      name_black_text:
+        text: pink_lace
+    pink_orange:
+      name_black_text:
+        text: pink_orange
+    pink_pearl:
+      name_black_text:
+        text: pink_pearl
+    pink_sherbet:
+      name_black_text:
+        text: pink_sherbet
+    pistachio:
+      name_black_text:
+        text: pistachio
+    platinum:
+      name_black_text:
+        text: platinum
+    plum_traditional:
+      name_black_text:
+        text: plum_traditional
+    plum_web:
+      name_black_text:
+        text: plum_web
+    portland_orange:
+      name_black_text:
+        text: portland_orange
+    powder_blue_web:
+      name_black_text:
+        text: powder_blue_web
+    princeton_orange:
+      name_black_text:
+        text: princeton_orange
+    prune:
+      name_black_text:
+        text: prune
+    prussian_blue:
+      name_black_text:
+        text: prussian_blue
+    psychedelic_purple:
+      name_black_text:
+        text: psychedelic_purple
+    puce:
+      name_black_text:
+        text: puce
+    pumpkin:
+      name_black_text:
+        text: pumpkin
+    purple_heart:
+      name_black_text:
+        text: purple_heart
+    purple_html_css:
+      name_black_text:
+        text: purple_html_css
+    purple_mountain_majesty:
+      name_black_text:
+        text: purple_mountain_majesty
+    purple_munsell:
+      name_black_text:
+        text: purple_munsell
+    purple_pizzazz:
+      name_black_text:
+        text: purple_pizzazz
+    purple_taupe:
+      name_black_text:
+        text: purple_taupe
+    purple_x11:
+      name_black_text:
+        text: purple_x11
+    quartz:
+      name_black_text:
+        text: quartz
+    rackley:
+      name_black_text:
+        text: rackley
+    radical_red:
+      name_black_text:
+        text: radical_red
+    rajah:
+      name_black_text:
+        text: rajah
+    raspberry:
+      name_black_text:
+        text: raspberry
+    raspberry_glace:
+      name_black_text:
+        text: raspberry_glace
+    raspberry_pink:
+      name_black_text:
+        text: raspberry_pink
+    raspberry_rose:
+      name_black_text:
+        text: raspberry_rose
+    raw_umber:
+      name_black_text:
+        text: raw_umber
+    razzle_dazzle_rose:
+      name_black_text:
+        text: razzle_dazzle_rose
+    razzmatazz:
+      name_black_text:
+        text: razzmatazz
+    red:
+      name_black_text:
+        text: red
+    red_brown:
+      name_black_text:
+        text: red_brown
+    red_devil:
+      name_black_text:
+        text: red_devil
+    red_munsell:
+      name_black_text:
+        text: red_munsell
+    red_ncs:
+      name_black_text:
+        text: red_ncs
+    red_orange:
+      name_black_text:
+        text: red_orange
+    red_pigment:
+      name_black_text:
+        text: red_pigment
+    red_ryb:
+      name_black_text:
+        text: red_ryb
+    red_violet:
+      name_black_text:
+        text: red_violet
+    redwood:
+      name_black_text:
+        text: redwood
+    regalia:
+      name_black_text:
+        text: regalia
+    resolution_blue:
+      name_black_text:
+        text: resolution_blue
+    rich_black:
+      name_black_text:
+        text: rich_black
+    rich_brilliant_lavender:
+      name_black_text:
+        text: rich_brilliant_lavender
+    rich_carmine:
+      name_black_text:
+        text: rich_carmine
+    rich_electric_blue:
+      name_black_text:
+        text: rich_electric_blue
+    rich_lavender:
+      name_black_text:
+        text: rich_lavender
+    rich_lilac:
+      name_black_text:
+        text: rich_lilac
+    rich_maroon:
+      name_black_text:
+        text: rich_maroon
+    rifle_green:
+      name_black_text:
+        text: rifle_green
+    robin_egg_blue:
+      name_black_text:
+        text: robin_egg_blue
+    rose:
+      name_black_text:
+        text: rose
+    rose_bonbon:
+      name_black_text:
+        text: rose_bonbon
+    rose_ebony:
+      name_black_text:
+        text: rose_ebony
+    rose_gold:
+      name_black_text:
+        text: rose_gold
+    rose_madder:
+      name_black_text:
+        text: rose_madder
+    rose_pink:
+      name_black_text:
+        text: rose_pink
+    rose_quartz:
+      name_black_text:
+        text: rose_quartz
+    rose_taupe:
+      name_black_text:
+        text: rose_taupe
+    rose_vale:
+      name_black_text:
+        text: rose_vale
+    rosewood:
+      name_black_text:
+        text: rosewood
+    rosso_corsa:
+      name_black_text:
+        text: rosso_corsa
+    rosy_brown:
+      name_black_text:
+        text: rosy_brown
+    royal_azure:
+      name_black_text:
+        text: royal_azure
+    royal_blue_traditional:
+      name_black_text:
+        text: royal_blue_traditional
+    royal_blue_web:
+      name_black_text:
+        text: royal_blue_web
+    royal_fuchsia:
+      name_black_text:
+        text: royal_fuchsia
+    royal_purple:
+      name_black_text:
+        text: royal_purple
+    royal_yellow:
+      name_black_text:
+        text: royal_yellow
+    rubine_red:
+      name_black_text:
+        text: rubine_red
+    ruby:
+      name_black_text:
+        text: ruby
+    ruby_red:
+      name_black_text:
+        text: ruby_red
+    ruddy:
+      name_black_text:
+        text: ruddy
+    ruddy_brown:
+      name_black_text:
+        text: ruddy_brown
+    ruddy_pink:
+      name_black_text:
+        text: ruddy_pink
+    rufous:
+      name_black_text:
+        text: rufous
+    russet:
+      name_black_text:
+        text: russet
+    rust:
+      name_black_text:
+        text: rust
+    rusty_red:
+      name_black_text:
+        text: rusty_red
+    sacramento_state_green:
+      name_black_text:
+        text: sacramento_state_green
+    saddle_brown:
+      name_black_text:
+        text: saddle_brown
+    safety_orange_blaze_orange:
+      name_black_text:
+        text: safety_orange_blaze_orange
+    saffron:
+      name_black_text:
+        text: saffron
+    salmon:
+      name_black_text:
+        text: salmon
+    salmon_pink:
+      name_black_text:
+        text: salmon_pink
+    sand:
+      name_black_text:
+        text: sand
+    sand_dune:
+      name_black_text:
+        text: sand_dune
+    sandstorm:
+      name_black_text:
+        text: sandstorm
+    sandy_brown:
+      name_black_text:
+        text: sandy_brown
+    sandy_taupe:
+      name_black_text:
+        text: sandy_taupe
+    sangria:
+      name_black_text:
+        text: sangria
+    sap_green:
+      name_black_text:
+        text: sap_green
+    sapphire:
+      name_black_text:
+        text: sapphire
+    sapphire_blue:
+      name_black_text:
+        text: sapphire_blue
+    satin_sheen_gold:
+      name_black_text:
+        text: satin_sheen_gold
+    scarlet:
+      name_black_text:
+        text: scarlet
+    scarlet_crayola:
+      name_black_text:
+        text: scarlet_crayola
+    school_bus_yellow:
+      name_black_text:
+        text: school_bus_yellow
+    screamin_green:
+      name_black_text:
+        text: screamin_green
+    sea_blue:
+      name_black_text:
+        text: sea_blue
+    sea_green:
+      name_black_text:
+        text: sea_green
+    seal_brown:
+      name_black_text:
+        text: seal_brown
+    seashell:
+      name_black_text:
+        text: seashell
+    selective_yellow:
+      name_black_text:
+        text: selective_yellow
+    sepia:
+      name_black_text:
+        text: sepia
+    shadow:
+      name_black_text:
+        text: shadow
+    shamrock_green:
+      name_black_text:
+        text: shamrock_green
+    shocking_pink:
+      name_black_text:
+        text: shocking_pink
+    shocking_pink_crayola:
+      name_black_text:
+        text: shocking_pink_crayola
+    sienna:
+      name_black_text:
+        text: sienna
+    silver:
+      name_black_text:
+        text: silver
+    sinopia:
+      name_black_text:
+        text: sinopia
+    skobeloff:
+      name_black_text:
+        text: skobeloff
+    sky_blue:
+      name_black_text:
+        text: sky_blue
+    sky_magenta:
+      name_black_text:
+        text: sky_magenta
+    slate_blue:
+      name_black_text:
+        text: slate_blue
+    slate_gray:
+      name_black_text:
+        text: slate_gray
+    smalt_dark_powder_blue:
+      name_black_text:
+        text: smalt_dark_powder_blue
+    smokey_topaz:
+      name_black_text:
+        text: smokey_topaz
+    smoky_black:
+      name_black_text:
+        text: smoky_black
+    snow:
+      name_black_text:
+        text: snow
+    spiro_disco_ball:
+      name_black_text:
+        text: spiro_disco_ball
+    spring_bud:
+      name_black_text:
+        text: spring_bud
+    spring_green:
+      name_black_text:
+        text: spring_green
+    st_patrick_s_blue:
+      name_black_text:
+        text: st_patrick_s_blue
+    steel_blue:
+      name_black_text:
+        text: steel_blue
+    stil_de_grain_yellow:
+      name_black_text:
+        text: stil_de_grain_yellow
+    stizza:
+      name_black_text:
+        text: stizza
+    stormcloud:
+      name_black_text:
+        text: stormcloud
+    straw:
+      name_black_text:
+        text: straw
+    sunglow:
+      name_black_text:
+        text: sunglow
+    sunset:
+      name_black_text:
+        text: sunset
+    tan:
+      name_black_text:
+        text: tan
+    tangelo:
+      name_black_text:
+        text: tangelo
+    tangerine:
+      name_black_text:
+        text: tangerine
+    tangerine_yellow:
+      name_black_text:
+        text: tangerine_yellow
+    tango_pink:
+      name_black_text:
+        text: tango_pink
+    taupe:
+      name_black_text:
+        text: taupe
+    taupe_gray:
+      name_black_text:
+        text: taupe_gray
+    tea_green:
+      name_black_text:
+        text: tea_green
+    tea_rose_orange:
+      name_black_text:
+        text: tea_rose_orange
+    tea_rose_rose:
+      name_black_text:
+        text: tea_rose_rose
+    teal:
+      name_black_text:
+        text: teal
+    teal_blue:
+      name_black_text:
+        text: teal_blue
+    teal_green:
+      name_black_text:
+        text: teal_green
+    telemagenta:
+      name_black_text:
+        text: telemagenta
+    tenn_tawny:
+      name_black_text:
+        text: tenn_tawny
+    terra_cotta:
+      name_black_text:
+        text: terra_cotta
+    thistle:
+      name_black_text:
+        text: thistle
+    thulian_pink:
+      name_black_text:
+        text: thulian_pink
+    tickle_me_pink:
+      name_black_text:
+        text: tickle_me_pink
+    tiffany_blue:
+      name_black_text:
+        text: tiffany_blue
+    tiger_s_eye:
+      name_black_text:
+        text: tiger_s_eye
+    timberwolf:
+      name_black_text:
+        text: timberwolf
+    titanium_yellow:
+      name_black_text:
+        text: titanium_yellow
+    tomato:
+      name_black_text:
+        text: tomato
+    toolbox:
+      name_black_text:
+        text: toolbox
+    topaz:
+      name_black_text:
+        text: topaz
+    tractor_red:
+      name_black_text:
+        text: tractor_red
+    trolley_grey:
+      name_black_text:
+        text: trolley_grey
+    tropical_rain_forest:
+      name_black_text:
+        text: tropical_rain_forest
+    true_blue:
+      name_black_text:
+        text: true_blue
+    tufts_blue:
+      name_black_text:
+        text: tufts_blue
+    tumbleweed:
+      name_black_text:
+        text: tumbleweed
+    turkish_rose:
+      name_black_text:
+        text: turkish_rose
+    turquoise:
+      name_black_text:
+        text: turquoise
+    turquoise_blue:
+      name_black_text:
+        text: turquoise_blue
+    turquoise_green:
+      name_black_text:
+        text: turquoise_green
+    tuscan_red:
+      name_black_text:
+        text: tuscan_red
+    twilight_lavender:
+      name_black_text:
+        text: twilight_lavender
+    tyrian_purple:
+      name_black_text:
+        text: tyrian_purple
+    ua_blue:
+      name_black_text:
+        text: ua_blue
+    ua_red:
+      name_black_text:
+        text: ua_red
+    ube:
+      name_black_text:
+        text: ube
+    ucla_blue:
+      name_black_text:
+        text: ucla_blue
+    ucla_gold:
+      name_black_text:
+        text: ucla_gold
+    ufo_green:
+      name_black_text:
+        text: ufo_green
+    ultra_pink:
+      name_black_text:
+        text: ultra_pink
+    ultramarine:
+      name_black_text:
+        text: ultramarine
+    ultramarine_blue:
+      name_black_text:
+        text: ultramarine_blue
+    umber:
+      name_black_text:
+        text: umber
+    unbleached_silk:
+      name_black_text:
+        text: unbleached_silk
+    united_nations_blue:
+      name_black_text:
+        text: united_nations_blue
+    university_of_california_gold:
+      name_black_text:
+        text: university_of_california_gold
+    unmellow_yellow:
+      name_black_text:
+        text: unmellow_yellow
+    up_forest_green:
+      name_black_text:
+        text: up_forest_green
+    up_maroon:
+      name_black_text:
+        text: up_maroon
+    upsdell_red:
+      name_black_text:
+        text: upsdell_red
+    urobilin:
+      name_black_text:
+        text: urobilin
+    usafa_blue:
+      name_black_text:
+        text: usafa_blue
+    usc_cardinal:
+      name_black_text:
+        text: usc_cardinal
+    usc_gold:
+      name_black_text:
+        text: usc_gold
+    utah_crimson:
+      name_black_text:
+        text: utah_crimson
+    vanilla:
+      name_black_text:
+        text: vanilla
+    vegas_gold:
+      name_black_text:
+        text: vegas_gold
+    venetian_red:
+      name_black_text:
+        text: venetian_red
+    verdigris:
+      name_black_text:
+        text: verdigris
+    vermilion_cinnabar:
+      name_black_text:
+        text: vermilion_cinnabar
+    vermilion_plochere:
+      name_black_text:
+        text: vermilion_plochere
+    veronica:
+      name_black_text:
+        text: veronica
+    violet:
+      name_black_text:
+        text: violet
+    violet_blue:
+      name_black_text:
+        text: violet_blue
+    violet_color_wheel:
+      name_black_text:
+        text: violet_color_wheel
+    violet_ryb:
+      name_black_text:
+        text: violet_ryb
+    violet_web:
+      name_black_text:
+        text: violet_web
+    viridian:
+      name_black_text:
+        text: viridian
+    vivid_auburn:
+      name_black_text:
+        text: vivid_auburn
+    vivid_burgundy:
+      name_black_text:
+        text: vivid_burgundy
+    vivid_cerise:
+      name_black_text:
+        text: vivid_cerise
+    vivid_tangerine:
+      name_black_text:
+        text: vivid_tangerine
+    vivid_violet:
+      name_black_text:
+        text: vivid_violet
+    warm_black:
+      name_black_text:
+        text: warm_black
+    waterspout:
+      name_black_text:
+        text: waterspout
+    wenge:
+      name_black_text:
+        text: wenge
+    wheat:
+      name_black_text:
+        text: wheat
+    white:
+      name_black_text:
+        text: white
+    white_smoke:
+      name_black_text:
+        text: white_smoke
+    wild_blue_yonder:
+      name_black_text:
+        text: wild_blue_yonder
+    wild_strawberry:
+      name_black_text:
+        text: wild_strawberry
+    wild_watermelon:
+      name_black_text:
+        text: wild_watermelon
+    wine:
+      name_black_text:
+        text: wine
+    wine_dregs:
+      name_black_text:
+        text: wine_dregs
+    wisteria:
+      name_black_text:
+        text: wisteria
+    wood_brown:
+      name_black_text:
+        text: wood_brown
+    xanadu:
+      name_black_text:
+        text: xanadu
+    yale_blue:
+      name_black_text:
+        text: yale_blue
+    yellow:
+      name_black_text:
+        text: yellow
+    yellow_green:
+      name_black_text:
+        text: yellow_green
+    yellow_munsell:
+      name_black_text:
+        text: yellow_munsell
+    yellow_ncs:
+      name_black_text:
+        text: yellow_ncs
+    yellow_orange:
+      name_black_text:
+        text: yellow_orange
+    yellow_process:
+      name_black_text:
+        text: yellow_process
+    yellow_ryb:
+      name_black_text:
+        text: yellow_ryb
+    zaffre:
+      name_black_text:
+        text: zaffre
+    zinnwaldite_brown:
+      name_black_text:
+        text: zinnwaldite_brown

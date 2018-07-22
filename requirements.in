@@ -1,8 +1,8 @@
-addict
+cfgstack
 clip.py
-configobj
-jinja2
 logtool
-raven
 path.py
-termcolor
+pyyaml
+raven
+reportlab
+toml

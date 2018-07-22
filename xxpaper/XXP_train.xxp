@@ -1,0 +1,66 @@
+train:
+
+  index:
+
+  model:
+
+    CUT_ELEMENT: cutline_box
+
+    ELEMENTS:
+      - asset_interior_box
+      - long_name_text
+      - cost_text
+      - note_text
+      - rust_bar_box
+      - rusted_text
+
+  _:
+    cost_text_text_p: $999
+    long_name_text_text: 000
+    note_text_text: ""
+    rust_bar_box_fill_p: YELLOW
+    rusted_text_text: "Rusted by: ${_/rust_bar_box_fill_p}"
+    asset_interior_box_fill_p: YELLOW
+
+  cutline_box: ${DEFAULT/asset_tile}
+
+  asset_interior_box:
+    fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}}
+
+  long_name_text:
+    fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}_TEXT}
+    size: 72
+    x: 50
+    y: 100
+
+  cost_text:
+    fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}_TEXT}
+    size: 14
+    h_center: 0
+    v_center: 0
+    x: 50
+    y: 70
+    text: "Cost: ${_/cost_text_text_p}"
+
+  note_text:
+    fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}_TEXT}
+    suppress: False
+    typeface: Times-Italic
+    size: 10
+    h_center: 0
+    v_center: -1
+    x: 50
+    y: 34
+
+  rust_bar_box:
+    fill: ${colour/xxp/TRAIN_${_/rust_bar_box_fill_p}}
+    x: ${asset_interior_box/x}
+    y: 30
+
+  rusted_text:
+    fill: ${colour/xxp/TRAIN_${_/rust_bar_box_fill_p}_TEXT}
+    size: 12
+    h_center: 0
+    v_center: -1
+    x: 50
+    y: $[${rust_bar_box/y} / 2 - ${rusted_text/size} / 2]

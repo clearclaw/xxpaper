@@ -1,0 +1,32 @@
+swatch:
+
+  index:
+
+  -missing-:
+    ELEMENTS:
+      - swatch_interior_box
+      - name_white_text
+      - name_black_text
+
+  name_black_text:
+    h_center: 0
+    v_center: 0
+    typeface: Times-Roman
+    size: 12
+    x_inset: 54
+    y_inset: 20
+    x: 0
+    y: 0
+    fill: ${colour/xxp/BLACK}
+
+  name_white_text:
+    text: ${name_black_text/text}
+    h_center: 0
+    v_center: 0
+    typeface: Times-Roman
+    size: 12
+    x_inset: 54
+    y_inset: 8
+    x: 0
+    y: 0
+    fill: ${colour/xxp/WHITE}

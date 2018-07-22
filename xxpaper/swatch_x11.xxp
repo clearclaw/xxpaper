@@ -1,0 +1,1955 @@
+swatch:
+  swatch_interior_box:
+    fill: ${colour/x11/${name_black_text/text}}
+
+  index:
+    aliceblue:
+      name_black_text:
+        text: aliceblue
+    antiquewhite:
+      name_black_text:
+        text: antiquewhite
+    antiquewhite1:
+      name_black_text:
+        text: antiquewhite1
+    antiquewhite2:
+      name_black_text:
+        text: antiquewhite2
+    antiquewhite3:
+      name_black_text:
+        text: antiquewhite3
+    antiquewhite4:
+      name_black_text:
+        text: antiquewhite4
+    aquamarine:
+      name_black_text:
+        text: aquamarine
+    aquamarine1:
+      name_black_text:
+        text: aquamarine1
+    aquamarine2:
+      name_black_text:
+        text: aquamarine2
+    aquamarine3:
+      name_black_text:
+        text: aquamarine3
+    aquamarine4:
+      name_black_text:
+        text: aquamarine4
+    azure:
+      name_black_text:
+        text: azure
+    azure1:
+      name_black_text:
+        text: azure1
+    azure2:
+      name_black_text:
+        text: azure2
+    azure3:
+      name_black_text:
+        text: azure3
+    azure4:
+      name_black_text:
+        text: azure4
+    beige:
+      name_black_text:
+        text: beige
+    bisque:
+      name_black_text:
+        text: bisque
+    bisque1:
+      name_black_text:
+        text: bisque1
+    bisque2:
+      name_black_text:
+        text: bisque2
+    bisque3:
+      name_black_text:
+        text: bisque3
+    bisque4:
+      name_black_text:
+        text: bisque4
+    black:
+      name_black_text:
+        text: black
+    blanchedalmond:
+      name_black_text:
+        text: blanchedalmond
+    blue:
+      name_black_text:
+        text: blue
+    blue1:
+      name_black_text:
+        text: blue1
+    blue2:
+      name_black_text:
+        text: blue2
+    blue3:
+      name_black_text:
+        text: blue3
+    blue4:
+      name_black_text:
+        text: blue4
+    blueviolet:
+      name_black_text:
+        text: blueviolet
+    brown:
+      name_black_text:
+        text: brown
+    brown1:
+      name_black_text:
+        text: brown1
+    brown2:
+      name_black_text:
+        text: brown2
+    brown3:
+      name_black_text:
+        text: brown3
+    brown4:
+      name_black_text:
+        text: brown4
+    burlywood:
+      name_black_text:
+        text: burlywood
+    burlywood1:
+      name_black_text:
+        text: burlywood1
+    burlywood2:
+      name_black_text:
+        text: burlywood2
+    burlywood3:
+      name_black_text:
+        text: burlywood3
+    burlywood4:
+      name_black_text:
+        text: burlywood4
+    cadetblue:
+      name_black_text:
+        text: cadetblue
+    cadetblue1:
+      name_black_text:
+        text: cadetblue1
+    cadetblue2:
+      name_black_text:
+        text: cadetblue2
+    cadetblue3:
+      name_black_text:
+        text: cadetblue3
+    cadetblue4:
+      name_black_text:
+        text: cadetblue4
+    chartreuse:
+      name_black_text:
+        text: chartreuse
+    chartreuse1:
+      name_black_text:
+        text: chartreuse1
+    chartreuse2:
+      name_black_text:
+        text: chartreuse2
+    chartreuse3:
+      name_black_text:
+        text: chartreuse3
+    chartreuse4:
+      name_black_text:
+        text: chartreuse4
+    chocolate:
+      name_black_text:
+        text: chocolate
+    chocolate1:
+      name_black_text:
+        text: chocolate1
+    chocolate2:
+      name_black_text:
+        text: chocolate2
+    chocolate3:
+      name_black_text:
+        text: chocolate3
+    chocolate4:
+      name_black_text:
+        text: chocolate4
+    coral:
+      name_black_text:
+        text: coral
+    coral1:
+      name_black_text:
+        text: coral1
+    coral2:
+      name_black_text:
+        text: coral2
+    coral3:
+      name_black_text:
+        text: coral3
+    coral4:
+      name_black_text:
+        text: coral4
+    cornflowerblue:
+      name_black_text:
+        text: cornflowerblue
+    cornsilk:
+      name_black_text:
+        text: cornsilk
+    cornsilk1:
+      name_black_text:
+        text: cornsilk1
+    cornsilk2:
+      name_black_text:
+        text: cornsilk2
+    cornsilk3:
+      name_black_text:
+        text: cornsilk3
+    cornsilk4:
+      name_black_text:
+        text: cornsilk4
+    cyan:
+      name_black_text:
+        text: cyan
+    cyan1:
+      name_black_text:
+        text: cyan1
+    cyan2:
+      name_black_text:
+        text: cyan2
+    cyan3:
+      name_black_text:
+        text: cyan3
+    cyan4:
+      name_black_text:
+        text: cyan4
+    darkgoldenrod:
+      name_black_text:
+        text: darkgoldenrod
+    darkgoldenrod1:
+      name_black_text:
+        text: darkgoldenrod1
+    darkgoldenrod2:
+      name_black_text:
+        text: darkgoldenrod2
+    darkgoldenrod3:
+      name_black_text:
+        text: darkgoldenrod3
+    darkgoldenrod4:
+      name_black_text:
+        text: darkgoldenrod4
+    darkgreen:
+      name_black_text:
+        text: darkgreen
+    darkkhaki:
+      name_black_text:
+        text: darkkhaki
+    darkolivegreen:
+      name_black_text:
+        text: darkolivegreen
+    darkolivegreen1:
+      name_black_text:
+        text: darkolivegreen1
+    darkolivegreen2:
+      name_black_text:
+        text: darkolivegreen2
+    darkolivegreen3:
+      name_black_text:
+        text: darkolivegreen3
+    darkolivegreen4:
+      name_black_text:
+        text: darkolivegreen4
+    darkorange:
+      name_black_text:
+        text: darkorange
+    darkorange1:
+      name_black_text:
+        text: darkorange1
+    darkorange2:
+      name_black_text:
+        text: darkorange2
+    darkorange3:
+      name_black_text:
+        text: darkorange3
+    darkorange4:
+      name_black_text:
+        text: darkorange4
+    darkorchid:
+      name_black_text:
+        text: darkorchid
+    darkorchid1:
+      name_black_text:
+        text: darkorchid1
+    darkorchid2:
+      name_black_text:
+        text: darkorchid2
+    darkorchid3:
+      name_black_text:
+        text: darkorchid3
+    darkorchid4:
+      name_black_text:
+        text: darkorchid4
+    darksalmon:
+      name_black_text:
+        text: darksalmon
+    darkseagreen:
+      name_black_text:
+        text: darkseagreen
+    darkseagreen1:
+      name_black_text:
+        text: darkseagreen1
+    darkseagreen2:
+      name_black_text:
+        text: darkseagreen2
+    darkseagreen3:
+      name_black_text:
+        text: darkseagreen3
+    darkseagreen4:
+      name_black_text:
+        text: darkseagreen4
+    darkslateblue:
+      name_black_text:
+        text: darkslateblue
+    darkslategray:
+      name_black_text:
+        text: darkslategray
+    darkslategray1:
+      name_black_text:
+        text: darkslategray1
+    darkslategray2:
+      name_black_text:
+        text: darkslategray2
+    darkslategray3:
+      name_black_text:
+        text: darkslategray3
+    darkslategray4:
+      name_black_text:
+        text: darkslategray4
+    darkslategrey:
+      name_black_text:
+        text: darkslategrey
+    darkturquoise:
+      name_black_text:
+        text: darkturquoise
+    darkviolet:
+      name_black_text:
+        text: darkviolet
+    deeppink:
+      name_black_text:
+        text: deeppink
+    deeppink1:
+      name_black_text:
+        text: deeppink1
+    deeppink2:
+      name_black_text:
+        text: deeppink2
+    deeppink3:
+      name_black_text:
+        text: deeppink3
+    deeppink4:
+      name_black_text:
+        text: deeppink4
+    deepskyblue:
+      name_black_text:
+        text: deepskyblue
+    deepskyblue1:
+      name_black_text:
+        text: deepskyblue1
+    deepskyblue2:
+      name_black_text:
+        text: deepskyblue2
+    deepskyblue3:
+      name_black_text:
+        text: deepskyblue3
+    deepskyblue4:
+      name_black_text:
+        text: deepskyblue4
+    dimgray:
+      name_black_text:
+        text: dimgray
+    dimgrey:
+      name_black_text:
+        text: dimgrey
+    dodgerblue:
+      name_black_text:
+        text: dodgerblue
+    dodgerblue1:
+      name_black_text:
+        text: dodgerblue1
+    dodgerblue2:
+      name_black_text:
+        text: dodgerblue2
+    dodgerblue3:
+      name_black_text:
+        text: dodgerblue3
+    dodgerblue4:
+      name_black_text:
+        text: dodgerblue4
+    firebrick:
+      name_black_text:
+        text: firebrick
+    firebrick1:
+      name_black_text:
+        text: firebrick1
+    firebrick2:
+      name_black_text:
+        text: firebrick2
+    firebrick3:
+      name_black_text:
+        text: firebrick3
+    firebrick4:
+      name_black_text:
+        text: firebrick4
+    floralwhite:
+      name_black_text:
+        text: floralwhite
+    forestgreen:
+      name_black_text:
+        text: forestgreen
+    gainsboro:
+      name_black_text:
+        text: gainsboro
+    ghostwhite:
+      name_black_text:
+        text: ghostwhite
+    gold:
+      name_black_text:
+        text: gold
+    gold1:
+      name_black_text:
+        text: gold1
+    gold2:
+      name_black_text:
+        text: gold2
+    gold3:
+      name_black_text:
+        text: gold3
+    gold4:
+      name_black_text:
+        text: gold4
+    goldenrod:
+      name_black_text:
+        text: goldenrod
+    goldenrod1:
+      name_black_text:
+        text: goldenrod1
+    goldenrod2:
+      name_black_text:
+        text: goldenrod2
+    goldenrod3:
+      name_black_text:
+        text: goldenrod3
+    goldenrod4:
+      name_black_text:
+        text: goldenrod4
+    gray0:
+      name_black_text:
+        text: gray0
+    gray:
+      name_black_text:
+        text: gray
+    gray100:
+      name_black_text:
+        text: gray100
+    gray10:
+      name_black_text:
+        text: gray10
+    gray1:
+      name_black_text:
+        text: gray1
+    gray11:
+      name_black_text:
+        text: gray11
+    gray12:
+      name_black_text:
+        text: gray12
+    gray13:
+      name_black_text:
+        text: gray13
+    gray14:
+      name_black_text:
+        text: gray14
+    gray15:
+      name_black_text:
+        text: gray15
+    gray16:
+      name_black_text:
+        text: gray16
+    gray17:
+      name_black_text:
+        text: gray17
+    gray18:
+      name_black_text:
+        text: gray18
+    gray19:
+      name_black_text:
+        text: gray19
+    gray2:
+      name_black_text:
+        text: gray2
+    gray20:
+      name_black_text:
+        text: gray20
+    gray21:
+      name_black_text:
+        text: gray21
+    gray22:
+      name_black_text:
+        text: gray22
+    gray23:
+      name_black_text:
+        text: gray23
+    gray24:
+      name_black_text:
+        text: gray24
+    gray25:
+      name_black_text:
+        text: gray25
+    gray26:
+      name_black_text:
+        text: gray26
+    gray27:
+      name_black_text:
+        text: gray27
+    gray28:
+      name_black_text:
+        text: gray28
+    gray29:
+      name_black_text:
+        text: gray29
+    gray30:
+      name_black_text:
+        text: gray30
+    gray3:
+      name_black_text:
+        text: gray3
+    gray31:
+      name_black_text:
+        text: gray31
+    gray32:
+      name_black_text:
+        text: gray32
+    gray33:
+      name_black_text:
+        text: gray33
+    gray34:
+      name_black_text:
+        text: gray34
+    gray35:
+      name_black_text:
+        text: gray35
+    gray36:
+      name_black_text:
+        text: gray36
+    gray37:
+      name_black_text:
+        text: gray37
+    gray38:
+      name_black_text:
+        text: gray38
+    gray39:
+      name_black_text:
+        text: gray39
+    gray4:
+      name_black_text:
+        text: gray4
+    gray40:
+      name_black_text:
+        text: gray40
+    gray41:
+      name_black_text:
+        text: gray41
+    gray42:
+      name_black_text:
+        text: gray42
+    gray43:
+      name_black_text:
+        text: gray43
+    gray44:
+      name_black_text:
+        text: gray44
+    gray45:
+      name_black_text:
+        text: gray45
+    gray46:
+      name_black_text:
+        text: gray46
+    gray47:
+      name_black_text:
+        text: gray47
+    gray48:
+      name_black_text:
+        text: gray48
+    gray49:
+      name_black_text:
+        text: gray49
+    gray50:
+      name_black_text:
+        text: gray50
+    gray5:
+      name_black_text:
+        text: gray5
+    gray51:
+      name_black_text:
+        text: gray51
+    gray52:
+      name_black_text:
+        text: gray52
+    gray53:
+      name_black_text:
+        text: gray53
+    gray54:
+      name_black_text:
+        text: gray54
+    gray55:
+      name_black_text:
+        text: gray55
+    gray56:
+      name_black_text:
+        text: gray56
+    gray57:
+      name_black_text:
+        text: gray57
+    gray58:
+      name_black_text:
+        text: gray58
+    gray59:
+      name_black_text:
+        text: gray59
+    gray6:
+      name_black_text:
+        text: gray6
+    gray60:
+      name_black_text:
+        text: gray60
+    gray61:
+      name_black_text:
+        text: gray61
+    gray62:
+      name_black_text:
+        text: gray62
+    gray63:
+      name_black_text:
+        text: gray63
+    gray64:
+      name_black_text:
+        text: gray64
+    gray65:
+      name_black_text:
+        text: gray65
+    gray66:
+      name_black_text:
+        text: gray66
+    gray67:
+      name_black_text:
+        text: gray67
+    gray68:
+      name_black_text:
+        text: gray68
+    gray69:
+      name_black_text:
+        text: gray69
+    gray70:
+      name_black_text:
+        text: gray70
+    gray7:
+      name_black_text:
+        text: gray7
+    gray71:
+      name_black_text:
+        text: gray71
+    gray72:
+      name_black_text:
+        text: gray72
+    gray73:
+      name_black_text:
+        text: gray73
+    gray74:
+      name_black_text:
+        text: gray74
+    gray75:
+      name_black_text:
+        text: gray75
+    gray76:
+      name_black_text:
+        text: gray76
+    gray77:
+      name_black_text:
+        text: gray77
+    gray78:
+      name_black_text:
+        text: gray78
+    gray79:
+      name_black_text:
+        text: gray79
+    gray8:
+      name_black_text:
+        text: gray8
+    gray80:
+      name_black_text:
+        text: gray80
+    gray81:
+      name_black_text:
+        text: gray81
+    gray82:
+      name_black_text:
+        text: gray82
+    gray83:
+      name_black_text:
+        text: gray83
+    gray84:
+      name_black_text:
+        text: gray84
+    gray85:
+      name_black_text:
+        text: gray85
+    gray86:
+      name_black_text:
+        text: gray86
+    gray87:
+      name_black_text:
+        text: gray87
+    gray88:
+      name_black_text:
+        text: gray88
+    gray89:
+      name_black_text:
+        text: gray89
+    gray90:
+      name_black_text:
+        text: gray90
+    gray9:
+      name_black_text:
+        text: gray9
+    gray91:
+      name_black_text:
+        text: gray91
+    gray92:
+      name_black_text:
+        text: gray92
+    gray93:
+      name_black_text:
+        text: gray93
+    gray94:
+      name_black_text:
+        text: gray94
+    gray95:
+      name_black_text:
+        text: gray95
+    gray96:
+      name_black_text:
+        text: gray96
+    gray97:
+      name_black_text:
+        text: gray97
+    gray98:
+      name_black_text:
+        text: gray98
+    gray99:
+      name_black_text:
+        text: gray99
+    green:
+      name_black_text:
+        text: green
+    green1:
+      name_black_text:
+        text: green1
+    green2:
+      name_black_text:
+        text: green2
+    green3:
+      name_black_text:
+        text: green3
+    green4:
+      name_black_text:
+        text: green4
+    greenyellow:
+      name_black_text:
+        text: greenyellow
+    grey0:
+      name_black_text:
+        text: grey0
+    grey:
+      name_black_text:
+        text: grey
+    grey100:
+      name_black_text:
+        text: grey100
+    grey10:
+      name_black_text:
+        text: grey10
+    grey1:
+      name_black_text:
+        text: grey1
+    grey11:
+      name_black_text:
+        text: grey11
+    grey12:
+      name_black_text:
+        text: grey12
+    grey13:
+      name_black_text:
+        text: grey13
+    grey14:
+      name_black_text:
+        text: grey14
+    grey15:
+      name_black_text:
+        text: grey15
+    grey16:
+      name_black_text:
+        text: grey16
+    grey17:
+      name_black_text:
+        text: grey17
+    grey18:
+      name_black_text:
+        text: grey18
+    grey19:
+      name_black_text:
+        text: grey19
+    grey2:
+      name_black_text:
+        text: grey2
+    grey20:
+      name_black_text:
+        text: grey20
+    grey21:
+      name_black_text:
+        text: grey21
+    grey22:
+      name_black_text:
+        text: grey22
+    grey23:
+      name_black_text:
+        text: grey23
+    grey24:
+      name_black_text:
+        text: grey24
+    grey25:
+      name_black_text:
+        text: grey25
+    grey26:
+      name_black_text:
+        text: grey26
+    grey27:
+      name_black_text:
+        text: grey27
+    grey28:
+      name_black_text:
+        text: grey28
+    grey29:
+      name_black_text:
+        text: grey29
+    grey30:
+      name_black_text:
+        text: grey30
+    grey3:
+      name_black_text:
+        text: grey3
+    grey31:
+      name_black_text:
+        text: grey31
+    grey32:
+      name_black_text:
+        text: grey32
+    grey33:
+      name_black_text:
+        text: grey33
+    grey34:
+      name_black_text:
+        text: grey34
+    grey35:
+      name_black_text:
+        text: grey35
+    grey36:
+      name_black_text:
+        text: grey36
+    grey37:
+      name_black_text:
+        text: grey37
+    grey38:
+      name_black_text:
+        text: grey38
+    grey39:
+      name_black_text:
+        text: grey39
+    grey4:
+      name_black_text:
+        text: grey4
+    grey40:
+      name_black_text:
+        text: grey40
+    grey41:
+      name_black_text:
+        text: grey41
+    grey42:
+      name_black_text:
+        text: grey42
+    grey43:
+      name_black_text:
+        text: grey43
+    grey44:
+      name_black_text:
+        text: grey44
+    grey45:
+      name_black_text:
+        text: grey45
+    grey46:
+      name_black_text:
+        text: grey46
+    grey47:
+      name_black_text:
+        text: grey47
+    grey48:
+      name_black_text:
+        text: grey48
+    grey49:
+      name_black_text:
+        text: grey49
+    grey50:
+      name_black_text:
+        text: grey50
+    grey5:
+      name_black_text:
+        text: grey5
+    grey51:
+      name_black_text:
+        text: grey51
+    grey52:
+      name_black_text:
+        text: grey52
+    grey53:
+      name_black_text:
+        text: grey53
+    grey54:
+      name_black_text:
+        text: grey54
+    grey55:
+      name_black_text:
+        text: grey55
+    grey56:
+      name_black_text:
+        text: grey56
+    grey57:
+      name_black_text:
+        text: grey57
+    grey58:
+      name_black_text:
+        text: grey58
+    grey59:
+      name_black_text:
+        text: grey59
+    grey6:
+      name_black_text:
+        text: grey6
+    grey60:
+      name_black_text:
+        text: grey60
+    grey61:
+      name_black_text:
+        text: grey61
+    grey62:
+      name_black_text:
+        text: grey62
+    grey63:
+      name_black_text:
+        text: grey63
+    grey64:
+      name_black_text:
+        text: grey64
+    grey65:
+      name_black_text:
+        text: grey65
+    grey66:
+      name_black_text:
+        text: grey66
+    grey67:
+      name_black_text:
+        text: grey67
+    grey68:
+      name_black_text:
+        text: grey68
+    grey69:
+      name_black_text:
+        text: grey69
+    grey70:
+      name_black_text:
+        text: grey70
+    grey7:
+      name_black_text:
+        text: grey7
+    grey71:
+      name_black_text:
+        text: grey71
+    grey72:
+      name_black_text:
+        text: grey72
+    grey73:
+      name_black_text:
+        text: grey73
+    grey74:
+      name_black_text:
+        text: grey74
+    grey75:
+      name_black_text:
+        text: grey75
+    grey76:
+      name_black_text:
+        text: grey76
+    grey77:
+      name_black_text:
+        text: grey77
+    grey78:
+      name_black_text:
+        text: grey78
+    grey79:
+      name_black_text:
+        text: grey79
+    grey8:
+      name_black_text:
+        text: grey8
+    grey80:
+      name_black_text:
+        text: grey80
+    grey81:
+      name_black_text:
+        text: grey81
+    grey82:
+      name_black_text:
+        text: grey82
+    grey83:
+      name_black_text:
+        text: grey83
+    grey84:
+      name_black_text:
+        text: grey84
+    grey85:
+      name_black_text:
+        text: grey85
+    grey86:
+      name_black_text:
+        text: grey86
+    grey87:
+      name_black_text:
+        text: grey87
+    grey88:
+      name_black_text:
+        text: grey88
+    grey89:
+      name_black_text:
+        text: grey89
+    grey90:
+      name_black_text:
+        text: grey90
+    grey9:
+      name_black_text:
+        text: grey9
+    grey91:
+      name_black_text:
+        text: grey91
+    grey92:
+      name_black_text:
+        text: grey92
+    grey93:
+      name_black_text:
+        text: grey93
+    grey94:
+      name_black_text:
+        text: grey94
+    grey95:
+      name_black_text:
+        text: grey95
+    grey96:
+      name_black_text:
+        text: grey96
+    grey97:
+      name_black_text:
+        text: grey97
+    grey98:
+      name_black_text:
+        text: grey98
+    grey99:
+      name_black_text:
+        text: grey99
+    honeydew:
+      name_black_text:
+        text: honeydew
+    honeydew1:
+      name_black_text:
+        text: honeydew1
+    honeydew2:
+      name_black_text:
+        text: honeydew2
+    honeydew3:
+      name_black_text:
+        text: honeydew3
+    honeydew4:
+      name_black_text:
+        text: honeydew4
+    hotpink:
+      name_black_text:
+        text: hotpink
+    hotpink1:
+      name_black_text:
+        text: hotpink1
+    hotpink2:
+      name_black_text:
+        text: hotpink2
+    hotpink3:
+      name_black_text:
+        text: hotpink3
+    hotpink4:
+      name_black_text:
+        text: hotpink4
+    indianred:
+      name_black_text:
+        text: indianred
+    indianred1:
+      name_black_text:
+        text: indianred1
+    indianred2:
+      name_black_text:
+        text: indianred2
+    indianred3:
+      name_black_text:
+        text: indianred3
+    indianred4:
+      name_black_text:
+        text: indianred4
+    ivory:
+      name_black_text:
+        text: ivory
+    ivory1:
+      name_black_text:
+        text: ivory1
+    ivory2:
+      name_black_text:
+        text: ivory2
+    ivory3:
+      name_black_text:
+        text: ivory3
+    ivory4:
+      name_black_text:
+        text: ivory4
+    khaki:
+      name_black_text:
+        text: khaki
+    khaki1:
+      name_black_text:
+        text: khaki1
+    khaki2:
+      name_black_text:
+        text: khaki2
+    khaki3:
+      name_black_text:
+        text: khaki3
+    khaki4:
+      name_black_text:
+        text: khaki4
+    lavender:
+      name_black_text:
+        text: lavender
+    lavenderblush:
+      name_black_text:
+        text: lavenderblush
+    lavenderblush1:
+      name_black_text:
+        text: lavenderblush1
+    lavenderblush2:
+      name_black_text:
+        text: lavenderblush2
+    lavenderblush3:
+      name_black_text:
+        text: lavenderblush3
+    lavenderblush4:
+      name_black_text:
+        text: lavenderblush4
+    lawngreen:
+      name_black_text:
+        text: lawngreen
+    lemonchiffon:
+      name_black_text:
+        text: lemonchiffon
+    lemonchiffon1:
+      name_black_text:
+        text: lemonchiffon1
+    lemonchiffon2:
+      name_black_text:
+        text: lemonchiffon2
+    lemonchiffon3:
+      name_black_text:
+        text: lemonchiffon3
+    lemonchiffon4:
+      name_black_text:
+        text: lemonchiffon4
+    lightblue:
+      name_black_text:
+        text: lightblue
+    lightblue1:
+      name_black_text:
+        text: lightblue1
+    lightblue2:
+      name_black_text:
+        text: lightblue2
+    lightblue3:
+      name_black_text:
+        text: lightblue3
+    lightblue4:
+      name_black_text:
+        text: lightblue4
+    lightcoral:
+      name_black_text:
+        text: lightcoral
+    lightcyan:
+      name_black_text:
+        text: lightcyan
+    lightcyan1:
+      name_black_text:
+        text: lightcyan1
+    lightcyan2:
+      name_black_text:
+        text: lightcyan2
+    lightcyan3:
+      name_black_text:
+        text: lightcyan3
+    lightcyan4:
+      name_black_text:
+        text: lightcyan4
+    lightgoldenrod:
+      name_black_text:
+        text: lightgoldenrod
+    lightgoldenrod1:
+      name_black_text:
+        text: lightgoldenrod1
+    lightgoldenrod2:
+      name_black_text:
+        text: lightgoldenrod2
+    lightgoldenrod3:
+      name_black_text:
+        text: lightgoldenrod3
+    lightgoldenrod4:
+      name_black_text:
+        text: lightgoldenrod4
+    lightgoldenrodyellow:
+      name_black_text:
+        text: lightgoldenrodyellow
+    lightgray:
+      name_black_text:
+        text: lightgray
+    lightgrey:
+      name_black_text:
+        text: lightgrey
+    lightpink:
+      name_black_text:
+        text: lightpink
+    lightpink1:
+      name_black_text:
+        text: lightpink1
+    lightpink2:
+      name_black_text:
+        text: lightpink2
+    lightpink3:
+      name_black_text:
+        text: lightpink3
+    lightpink4:
+      name_black_text:
+        text: lightpink4
+    lightsalmon:
+      name_black_text:
+        text: lightsalmon
+    lightsalmon1:
+      name_black_text:
+        text: lightsalmon1
+    lightsalmon2:
+      name_black_text:
+        text: lightsalmon2
+    lightsalmon3:
+      name_black_text:
+        text: lightsalmon3
+    lightsalmon4:
+      name_black_text:
+        text: lightsalmon4
+    lightseagreen:
+      name_black_text:
+        text: lightseagreen
+    lightskyblue:
+      name_black_text:
+        text: lightskyblue
+    lightskyblue1:
+      name_black_text:
+        text: lightskyblue1
+    lightskyblue2:
+      name_black_text:
+        text: lightskyblue2
+    lightskyblue3:
+      name_black_text:
+        text: lightskyblue3
+    lightskyblue4:
+      name_black_text:
+        text: lightskyblue4
+    lightslateblue:
+      name_black_text:
+        text: lightslateblue
+    lightslategray:
+      name_black_text:
+        text: lightslategray
+    lightslategrey:
+      name_black_text:
+        text: lightslategrey
+    lightsteelblue:
+      name_black_text:
+        text: lightsteelblue
+    lightsteelblue1:
+      name_black_text:
+        text: lightsteelblue1
+    lightsteelblue2:
+      name_black_text:
+        text: lightsteelblue2
+    lightsteelblue3:
+      name_black_text:
+        text: lightsteelblue3
+    lightsteelblue4:
+      name_black_text:
+        text: lightsteelblue4
+    lightyellow:
+      name_black_text:
+        text: lightyellow
+    lightyellow1:
+      name_black_text:
+        text: lightyellow1
+    lightyellow2:
+      name_black_text:
+        text: lightyellow2
+    lightyellow3:
+      name_black_text:
+        text: lightyellow3
+    lightyellow4:
+      name_black_text:
+        text: lightyellow4
+    limegreen:
+      name_black_text:
+        text: limegreen
+    linen:
+      name_black_text:
+        text: linen
+    magenta:
+      name_black_text:
+        text: magenta
+    magenta1:
+      name_black_text:
+        text: magenta1
+    magenta2:
+      name_black_text:
+        text: magenta2
+    magenta3:
+      name_black_text:
+        text: magenta3
+    magenta4:
+      name_black_text:
+        text: magenta4
+    maroon:
+      name_black_text:
+        text: maroon
+    maroon1:
+      name_black_text:
+        text: maroon1
+    maroon2:
+      name_black_text:
+        text: maroon2
+    maroon3:
+      name_black_text:
+        text: maroon3
+    maroon4:
+      name_black_text:
+        text: maroon4
+    mediumaquamarine:
+      name_black_text:
+        text: mediumaquamarine
+    mediumblue:
+      name_black_text:
+        text: mediumblue
+    mediumorchid:
+      name_black_text:
+        text: mediumorchid
+    mediumorchid1:
+      name_black_text:
+        text: mediumorchid1
+    mediumorchid2:
+      name_black_text:
+        text: mediumorchid2
+    mediumorchid3:
+      name_black_text:
+        text: mediumorchid3
+    mediumorchid4:
+      name_black_text:
+        text: mediumorchid4
+    mediumpurple:
+      name_black_text:
+        text: mediumpurple
+    mediumpurple1:
+      name_black_text:
+        text: mediumpurple1
+    mediumpurple2:
+      name_black_text:
+        text: mediumpurple2
+    mediumpurple3:
+      name_black_text:
+        text: mediumpurple3
+    mediumpurple4:
+      name_black_text:
+        text: mediumpurple4
+    mediumseagreen:
+      name_black_text:
+        text: mediumseagreen
+    mediumslateblue:
+      name_black_text:
+        text: mediumslateblue
+    mediumspringgreen:
+      name_black_text:
+        text: mediumspringgreen
+    mediumturquoise:
+      name_black_text:
+        text: mediumturquoise
+    mediumvioletred:
+      name_black_text:
+        text: mediumvioletred
+    midnightblue:
+      name_black_text:
+        text: midnightblue
+    mintcream:
+      name_black_text:
+        text: mintcream
+    mistyrose:
+      name_black_text:
+        text: mistyrose
+    mistyrose1:
+      name_black_text:
+        text: mistyrose1
+    mistyrose2:
+      name_black_text:
+        text: mistyrose2
+    mistyrose3:
+      name_black_text:
+        text: mistyrose3
+    mistyrose4:
+      name_black_text:
+        text: mistyrose4
+    moccasin:
+      name_black_text:
+        text: moccasin
+    navajowhite:
+      name_black_text:
+        text: navajowhite
+    navajowhite1:
+      name_black_text:
+        text: navajowhite1
+    navajowhite2:
+      name_black_text:
+        text: navajowhite2
+    navajowhite3:
+      name_black_text:
+        text: navajowhite3
+    navajowhite4:
+      name_black_text:
+        text: navajowhite4
+    navy:
+      name_black_text:
+        text: navy
+    navyblue:
+      name_black_text:
+        text: navyblue
+    oldlace:
+      name_black_text:
+        text: oldlace
+    olivedrab:
+      name_black_text:
+        text: olivedrab
+    olivedrab1:
+      name_black_text:
+        text: olivedrab1
+    olivedrab2:
+      name_black_text:
+        text: olivedrab2
+    olivedrab3:
+      name_black_text:
+        text: olivedrab3
+    olivedrab4:
+      name_black_text:
+        text: olivedrab4
+    orange:
+      name_black_text:
+        text: orange
+    orange1:
+      name_black_text:
+        text: orange1
+    orange2:
+      name_black_text:
+        text: orange2
+    orange3:
+      name_black_text:
+        text: orange3
+    orange4:
+      name_black_text:
+        text: orange4
+    orangered:
+      name_black_text:
+        text: orangered
+    orangered1:
+      name_black_text:
+        text: orangered1
+    orangered2:
+      name_black_text:
+        text: orangered2
+    orangered3:
+      name_black_text:
+        text: orangered3
+    orangered4:
+      name_black_text:
+        text: orangered4
+    orchid:
+      name_black_text:
+        text: orchid
+    orchid1:
+      name_black_text:
+        text: orchid1
+    orchid2:
+      name_black_text:
+        text: orchid2
+    orchid3:
+      name_black_text:
+        text: orchid3
+    orchid4:
+      name_black_text:
+        text: orchid4
+    palegoldenrod:
+      name_black_text:
+        text: palegoldenrod
+    palegreen:
+      name_black_text:
+        text: palegreen
+    palegreen1:
+      name_black_text:
+        text: palegreen1
+    palegreen2:
+      name_black_text:
+        text: palegreen2
+    palegreen3:
+      name_black_text:
+        text: palegreen3
+    palegreen4:
+      name_black_text:
+        text: palegreen4
+    paleturquoise:
+      name_black_text:
+        text: paleturquoise
+    paleturquoise1:
+      name_black_text:
+        text: paleturquoise1
+    paleturquoise2:
+      name_black_text:
+        text: paleturquoise2
+    paleturquoise3:
+      name_black_text:
+        text: paleturquoise3
+    paleturquoise4:
+      name_black_text:
+        text: paleturquoise4
+    palevioletred:
+      name_black_text:
+        text: palevioletred
+    palevioletred1:
+      name_black_text:
+        text: palevioletred1
+    palevioletred2:
+      name_black_text:
+        text: palevioletred2
+    palevioletred3:
+      name_black_text:
+        text: palevioletred3
+    palevioletred4:
+      name_black_text:
+        text: palevioletred4
+    papayawhip:
+      name_black_text:
+        text: papayawhip
+    peachpuff:
+      name_black_text:
+        text: peachpuff
+    peachpuff1:
+      name_black_text:
+        text: peachpuff1
+    peachpuff2:
+      name_black_text:
+        text: peachpuff2
+    peachpuff3:
+      name_black_text:
+        text: peachpuff3
+    peachpuff4:
+      name_black_text:
+        text: peachpuff4
+    peru:
+      name_black_text:
+        text: peru
+    pink:
+      name_black_text:
+        text: pink
+    pink1:
+      name_black_text:
+        text: pink1
+    pink2:
+      name_black_text:
+        text: pink2
+    pink3:
+      name_black_text:
+        text: pink3
+    pink4:
+      name_black_text:
+        text: pink4
+    plum:
+      name_black_text:
+        text: plum
+    plum1:
+      name_black_text:
+        text: plum1
+    plum2:
+      name_black_text:
+        text: plum2
+    plum3:
+      name_black_text:
+        text: plum3
+    plum4:
+      name_black_text:
+        text: plum4
+    powderblue:
+      name_black_text:
+        text: powderblue
+    purple:
+      name_black_text:
+        text: purple
+    purple1:
+      name_black_text:
+        text: purple1
+    purple2:
+      name_black_text:
+        text: purple2
+    purple3:
+      name_black_text:
+        text: purple3
+    purple4:
+      name_black_text:
+        text: purple4
+    red:
+      name_black_text:
+        text: red
+    red1:
+      name_black_text:
+        text: red1
+    red2:
+      name_black_text:
+        text: red2
+    red3:
+      name_black_text:
+        text: red3
+    red4:
+      name_black_text:
+        text: red4
+    rosybrown:
+      name_black_text:
+        text: rosybrown
+    rosybrown1:
+      name_black_text:
+        text: rosybrown1
+    rosybrown2:
+      name_black_text:
+        text: rosybrown2
+    rosybrown3:
+      name_black_text:
+        text: rosybrown3
+    rosybrown4:
+      name_black_text:
+        text: rosybrown4
+    royalblue:
+      name_black_text:
+        text: royalblue
+    royalblue1:
+      name_black_text:
+        text: royalblue1
+    royalblue2:
+      name_black_text:
+        text: royalblue2
+    royalblue3:
+      name_black_text:
+        text: royalblue3
+    royalblue4:
+      name_black_text:
+        text: royalblue4
+    saddlebrown:
+      name_black_text:
+        text: saddlebrown
+    salmon:
+      name_black_text:
+        text: salmon
+    salmon1:
+      name_black_text:
+        text: salmon1
+    salmon2:
+      name_black_text:
+        text: salmon2
+    salmon3:
+      name_black_text:
+        text: salmon3
+    salmon4:
+      name_black_text:
+        text: salmon4
+    sandybrown:
+      name_black_text:
+        text: sandybrown
+    seagreen:
+      name_black_text:
+        text: seagreen
+    seagreen1:
+      name_black_text:
+        text: seagreen1
+    seagreen2:
+      name_black_text:
+        text: seagreen2
+    seagreen3:
+      name_black_text:
+        text: seagreen3
+    seagreen4:
+      name_black_text:
+        text: seagreen4
+    seashell:
+      name_black_text:
+        text: seashell
+    seashell1:
+      name_black_text:
+        text: seashell1
+    seashell2:
+      name_black_text:
+        text: seashell2
+    seashell3:
+      name_black_text:
+        text: seashell3
+    seashell4:
+      name_black_text:
+        text: seashell4
+    sienna:
+      name_black_text:
+        text: sienna
+    sienna1:
+      name_black_text:
+        text: sienna1
+    sienna2:
+      name_black_text:
+        text: sienna2
+    sienna3:
+      name_black_text:
+        text: sienna3
+    sienna4:
+      name_black_text:
+        text: sienna4
+    skyblue:
+      name_black_text:
+        text: skyblue
+    skyblue1:
+      name_black_text:
+        text: skyblue1
+    skyblue2:
+      name_black_text:
+        text: skyblue2
+    skyblue3:
+      name_black_text:
+        text: skyblue3
+    skyblue4:
+      name_black_text:
+        text: skyblue4
+    slateblue:
+      name_black_text:
+        text: slateblue
+    slateblue1:
+      name_black_text:
+        text: slateblue1
+    slateblue2:
+      name_black_text:
+        text: slateblue2
+    slateblue3:
+      name_black_text:
+        text: slateblue3
+    slateblue4:
+      name_black_text:
+        text: slateblue4
+    slategray:
+      name_black_text:
+        text: slategray
+    slategray1:
+      name_black_text:
+        text: slategray1
+    slategray2:
+      name_black_text:
+        text: slategray2
+    slategray3:
+      name_black_text:
+        text: slategray3
+    slategray4:
+      name_black_text:
+        text: slategray4
+    slategrey:
+      name_black_text:
+        text: slategrey
+    snow:
+      name_black_text:
+        text: snow
+    snow1:
+      name_black_text:
+        text: snow1
+    snow2:
+      name_black_text:
+        text: snow2
+    snow3:
+      name_black_text:
+        text: snow3
+    snow4:
+      name_black_text:
+        text: snow4
+    springgreen:
+      name_black_text:
+        text: springgreen
+    springgreen1:
+      name_black_text:
+        text: springgreen1
+    springgreen2:
+      name_black_text:
+        text: springgreen2
+    springgreen3:
+      name_black_text:
+        text: springgreen3
+    springgreen4:
+      name_black_text:
+        text: springgreen4
+    steelblue:
+      name_black_text:
+        text: steelblue
+    steelblue1:
+      name_black_text:
+        text: steelblue1
+    steelblue2:
+      name_black_text:
+        text: steelblue2
+    steelblue3:
+      name_black_text:
+        text: steelblue3
+    steelblue4:
+      name_black_text:
+        text: steelblue4
+    tan:
+      name_black_text:
+        text: tan
+    tan1:
+      name_black_text:
+        text: tan1
+    tan2:
+      name_black_text:
+        text: tan2
+    tan3:
+      name_black_text:
+        text: tan3
+    tan4:
+      name_black_text:
+        text: tan4
+    thistle:
+      name_black_text:
+        text: thistle
+    thistle1:
+      name_black_text:
+        text: thistle1
+    thistle2:
+      name_black_text:
+        text: thistle2
+    thistle3:
+      name_black_text:
+        text: thistle3
+    thistle4:
+      name_black_text:
+        text: thistle4
+    tomato:
+      name_black_text:
+        text: tomato
+    tomato1:
+      name_black_text:
+        text: tomato1
+    tomato2:
+      name_black_text:
+        text: tomato2
+    tomato3:
+      name_black_text:
+        text: tomato3
+    tomato4:
+      name_black_text:
+        text: tomato4
+    turquoise:
+      name_black_text:
+        text: turquoise
+    turquoise1:
+      name_black_text:
+        text: turquoise1
+    turquoise2:
+      name_black_text:
+        text: turquoise2
+    turquoise3:
+      name_black_text:
+        text: turquoise3
+    turquoise4:
+      name_black_text:
+        text: turquoise4
+    violet:
+      name_black_text:
+        text: violet
+    violetred:
+      name_black_text:
+        text: violetred
+    violetred1:
+      name_black_text:
+        text: violetred1
+    violetred2:
+      name_black_text:
+        text: violetred2
+    violetred3:
+      name_black_text:
+        text: violetred3
+    violetred4:
+      name_black_text:
+        text: violetred4
+    wheat:
+      name_black_text:
+        text: wheat
+    wheat1:
+      name_black_text:
+        text: wheat1
+    wheat2:
+      name_black_text:
+        text: wheat2
+    wheat3:
+      name_black_text:
+        text: wheat3
+    wheat4:
+      name_black_text:
+        text: wheat4
+    white:
+      name_black_text:
+        text: white
+    whitesmoke:
+      name_black_text:
+        text: whitesmoke
+    yellow:
+      name_black_text:
+        text: yellow
+    yellow1:
+      name_black_text:
+        text: yellow1
+    yellow2:
+      name_black_text:
+        text: yellow2
+    yellow3:
+      name_black_text:
+        text: yellow3
+    yellow4:
+      name_black_text:
+        text: yellow4
+    yellowgreen:
+      name_black_text:
+        text: yellowgreen

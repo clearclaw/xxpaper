@@ -1,0 +1,76 @@
+CUT_ELEMENT: cutline_circle
+
+top_half_box:
+  x: ${token_interior_box/x}
+  y: $[${token_interior_box/y} / 2]
+  x_inset: 0
+  y_inset: $[${token_interior_box/y} / 2]
+  fill: ${_/_major_fill}
+
+bottom_half_box:
+  x: ${token_interior_box/x}
+  y: $[${token_interior_box/y} / 2]
+  fill: ${_/_minor_fill}
+
+outer_circle:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  radius: 24
+  fill: ${_/_major_fill}
+
+middle_circle:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  radius: 13
+  fill: ${_/_minor_fill}
+
+inner_circle:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  radius: 8
+  fill: ${_/_related_fill}
+
+middle_box:
+  x: 26
+  y: 26
+  x_inset: $[${token_interior_box/x} / 2 - 13]
+  y_inset: $[${token_interior_box/y} / 2 - 13]
+  fill: ${_/_major_fill}
+
+inner_box:
+  x: 12
+  y: 12
+  x_inset: $[${token_interior_box/x} / 2 - 6]
+  y_inset: $[${token_interior_box/y} / 2 - 6]
+  fill: ${_/_minor_fill}
+
+name_stripe_box:
+  x: ${token_interior_box/x}
+  y: 8
+  x_inset: 0
+  y_inset:  $[(${token_interior_box/y} / 2) - 4]
+  width: 0.5
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+
+short_name_text:
+  typeface: Times-Bold
+  x: $[${token_interior_box/x} / 2]
+  y: $[(${token_interior_box/y} / 2) - (${short_name/size} / 2) + 3.9]
+  h_center: 0
+  v_center: 0
+  size: 9
+
+outline_circle:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+
+cutline_circle:
+  x: $[${token_interior_box/x} / 2 + ${token_tile/margin}]
+  y: $[${token_interior_box/y} / 2 + ${token_tile/margin}]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
