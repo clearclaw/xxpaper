@@ -8,6 +8,17 @@ LOG = logging.getLogger (__name__)
 OPTIONS = ["help", "debug", "verbose", "version"]
 
 @app_main.subcommand (
+  name = "check",
+  description = "Check formatting of game file",
+  inherits = OPTIONS)
+@clip.arg (name = "template", default = None,
+           help = "XXPaper game file", required = True)
+@logtool.log_call
+def check (**kwargs):
+  from .cmd_check import do
+  do (**kwargs)
+
+@app_main.subcommand (
   name = "dump",
   description = "Dump the compiled game definition",
   inherits = OPTIONS)
