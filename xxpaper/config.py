@@ -72,6 +72,7 @@ class Config (object):
         m = EXP_VAR.search (rc)
         if m is not None:
           # pylint: disable=eval-used
+          # FIXME: box this up a bit
           v = eval (rc[m.start () + 2:m.end () - 1])
           if cls._verbose:
             print "\tExpression: %s => %s" % (rc[m.start ():m.end ()], v)

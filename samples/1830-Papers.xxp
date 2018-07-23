@@ -155,6 +155,7 @@ company:
         station_extra_count: 3
 
       token:
+
         index: "$[index_of (7)]"
 
     PRR:

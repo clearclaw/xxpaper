@@ -3,6 +3,8 @@ marker:
   index:
 
   -missing-:
+    CUT_ELEMENT: cutline_circle
+
     ELEMENTS:
       - token_interior_box
       - top_half_box

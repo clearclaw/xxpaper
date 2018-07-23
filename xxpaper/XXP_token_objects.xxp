@@ -38,6 +38,20 @@ bottom_half_box:
   y: $[${token_interior_box/y} / 2]
   fill: ${_/_minor_fill}
 
+top_line_box:
+  x: ${token_interior_box/x}
+  y: 4
+  x_inset: 0
+  y_inset: $[${token_interior_box/y} / 2.0 + 8]
+  fill: ${_/_major_fill_2}
+
+bottom_line_box:
+  x: ${token_interior_box/x}
+  y: 4
+  x_inset: 0
+  y_inset: $[${token_interior_box/y} / 2.0 - 12]
+  fill: ${_/_minor_fill_2}
+
 outer_circle:
   x: $[${token_interior_box/x} / 2]
   y: $[${token_interior_box/y} / 2]
