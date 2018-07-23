@@ -3,6 +3,7 @@ DEFAULT:
   typeface: "Times-Roman"
   size: 14
   suppress: False
+  cutline_width: 0.01
 
   COMPONENTS:
     - charter
@@ -53,7 +54,7 @@ DEFAULT:
     y_max: $[${asset_tile/y} - (2 * ${asset_tile/margin})]
     x_num: 5
     y_num: 4
-    width: 0.5
+    width: ${DEFAULT/cutline_width}
     stroke: ${colour/xxp/BLACK}
     margin: 4
 
@@ -65,7 +66,7 @@ DEFAULT:
     x_num: 2
     y_num: 2
     stroke: ${colour/xxp/BLACK}
-    width: 0.5
+    width: ${DEFAULT/cutline_width}
     margin: 4
 
   market2d_tile:
@@ -76,7 +77,7 @@ DEFAULT:
     x_num: 12
     y_num: 12
     stroke: ${colour/xxp/BLACK}
-    width: 0.5
+    width: ${DEFAULT/cutline_width}
     margin: 0
 
   swatch_tile:
@@ -87,7 +88,7 @@ DEFAULT:
     x_num: 5
     y_num: 20
     stroke: ${colour/xxp/BLACK}
-    width: 0.5
+    width: ${DEFAULT/cutline_width}
     margin: 0
 
   token_tile:
@@ -97,7 +98,7 @@ DEFAULT:
     y_max: $[${token_tile/y} - (2 * ${token_tile/margin})]
     x_num: 11
     y_num: 15
-    width: 0
+    width: ${DEFAULT/cutline_width}
     margin: $[(${token_tile/x} - ${token_interior_box/x}) / 2]
 
 _include_:

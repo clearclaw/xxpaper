@@ -72,5 +72,5 @@ cutline_circle:
   x: $[${token_interior_box/x} / 2 + ${token_tile/margin}]
   y: $[${token_interior_box/y} / 2 + ${token_tile/margin}]
   radius: 18
-  width: 0.5
+  width: ${DEFAULT/cutline_width}
   stroke: ${colour/xxp/BLACK}
