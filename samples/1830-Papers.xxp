@@ -17,7 +17,7 @@ company:
         _related_fill: ${colour/wikipedia/han_blue}
 
       token:
-        index: "$[{'%s' % i: None for i in range (5)}]"
+        index: "$[index_of (5)]"
 
     B&O:
       _:
@@ -59,7 +59,7 @@ company:
           - short_name_text
           - outline_circle
 
-        index: "$[{'%s' % i: None for i in range (6)}]"
+        index: "$[index_of (6)]"
 
     CPR:
       _:
@@ -79,7 +79,7 @@ company:
         _related_fill: ${colour/hollasch/brick}
 
       token:
-        index: "$[{'%s' % i: None for i in range (7)}]"
+        index: "$[index_of (7)]"
 
     C&O:
       _:
@@ -98,7 +98,7 @@ company:
         _related_fill: ${colour/hollasch/powder_blue}
 
       token:
-        index: "$[{'%s' % i: None for i in range (6)}]"
+        index: "$[index_of (6)]"
 
     ERIE:
       _:
@@ -116,7 +116,7 @@ company:
         _related_fill: ${colour/x11/darkgoldenrod1}
 
       token:
-        index: "$[{'%s' % i: None for i in range (6)}]"
+        index: "$[index_of (6)]"
 
     NYNH&H:
       _:
@@ -136,7 +136,7 @@ company:
           size: 13
 
       token:
-        index: "$[{'%s' % i: None for i in range (5)}]"
+        index: "$[index_of (5)]"
 
     NYC:
       _:
@@ -155,7 +155,7 @@ company:
         station_extra_count: 3
 
       token:
-        index: "$[{'%s' % i: None for i in range (7)}]"
+        index: "$[index_of (7)]"
 
     PRR:
       _:
@@ -174,7 +174,7 @@ company:
         station_extra_count: 3
 
       token:
-        index: "$[{'%s' % i: None for i in range (7)}]"
+        index: "$[index_of (7)]"
 
 marker:
   index:
@@ -281,7 +281,7 @@ train:
         long_name_text_text: "2"
         cost_text_text_p: $80
       model:
-        index: "$[{'%s' % i: None for i in range (6)}]"
+        index: "$[index_of (6)]"
 
     3T:
       _:
@@ -290,7 +290,7 @@ train:
         long_name_text_text: "3"
         cost_text_text_p: $180
       model:
-        index: "$[{'%s' % i: None for i in range (5)}]"
+        index: "$[index_of (5)]"
 
     4T:
       _:
@@ -301,7 +301,7 @@ train:
         note_text_text: |
             To DIESEL: $800
       model:
-        index: "$[{'%s' % i: None for i in range (4)}]"
+        index: "$[index_of (4)]"
 
     5T:
       _:
@@ -311,7 +311,7 @@ train:
         cost_text_text_p: $450
         rusted_text_text: PERMANENT
       model:
-        index: "$[{'%s' % i: None for i in range (3)}]"
+        index: "$[index_of (3)]"
 
     6T:
       _:
@@ -338,4 +338,4 @@ train:
       long_name_text:
         size: 32
       model:
-        index: "$[{'%s' % i: None for i in range (8)}]"
+        index: "$[index_of (8)]"

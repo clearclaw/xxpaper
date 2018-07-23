@@ -29,6 +29,10 @@ QUERIES = [
 RE_VAR = re.compile (r"(\$\{([A-Za-z0-9_-]*/)*([A-Za-z0-9_-]*)\})")
 EXP_VAR = re.compile (r"(\$\[[^\]]*\])")
 
+@logtool.log_call
+def index_of (n):
+  return {"%s" % i: None for i in xrange (n)}
+
 class Config (object):
   _state = {}
   _verbose = False
