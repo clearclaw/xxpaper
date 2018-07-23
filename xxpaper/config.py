@@ -29,12 +29,6 @@ QUERIES = [
 RE_VAR = re.compile (r"(\$\{([A-Za-z0-9_-]*/)*([A-Za-z0-9_-]*)\})")
 EXP_VAR = re.compile (r"(\$\[[^\]]*\])")
 
-@classmethod
-def items (n):
-  rc = {"%s" % i: None for i in range (n)}
-  print rc
-  return rc
-
 class Config (object):
   _state = {}
   _verbose = False
@@ -46,7 +40,6 @@ class Config (object):
       exts = ("", ".xxp", ".json", ".yaml", ".yml", ".toml")
       cls._state.update (CfgStack (
         fnames, dirs = dirs, exts = exts).data.to_dict ())
-
 
   #@logtool.log_call
   @classmethod
