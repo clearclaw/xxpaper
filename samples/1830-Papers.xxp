@@ -35,7 +35,37 @@ company:
         _related_fill: ${colour/hollasch/steel_blue}
 
       token:
-        index: "$[{'%s' % i: None for i in range (6)}]"
+        _:
+          _major_fill_1: ${colour/wikipedia/banana_yellow}
+          _major_fill_2: ${colour/hollasch/blue}
+          _minor_fill_2: ${colour/wikipedia/banana_yellow}
+          _minor_fill_1: ${colour/hollasch/blue}
+
+        ELEMENTS:
+          - token_interior_box
+          - ul_quarter_box
+          - ur_quarter_box
+          - ll_quarter_box
+          - lr_quarter_box
+          - name_stripe_box
+          - short_name_text
+
+        EMBED_ELEMENTS:
+          - ul_quarter_box
+          - ur_quarter_box
+          - ll_quarter_box
+          - lr_quarter_box
+          - name_stripe_box
+          - short_name_text
+          - outline_circle
+
+        index:
+          "1":
+          "2":
+          "3":
+          "4":
+          "5":
+          "6":
 
     CPR:
       _:

@@ -1,5 +1,31 @@
 CUT_ELEMENT: cutline_circle
 
+ul_quarter_box:
+  x: $[${token_interior_box/x} / 2.0]
+  y: $[${token_interior_box/y} / 2]
+  x_inset: 0
+  y_inset: $[${token_interior_box/y} / 2]
+  fill: ${_/_major_fill_1}
+
+ur_quarter_box:
+  x: $[${token_interior_box/x} / 2.0]
+  y: $[${token_interior_box/y} / 2]
+  x_inset: $[${token_interior_box/x} / 2.0]
+  y_inset: $[${token_interior_box/y} / 2]
+  fill: ${_/_major_fill_2}
+
+ll_quarter_box:
+  x: $[${token_interior_box/x} / 2.0]
+  y: $[${token_interior_box/y} / 2]
+  fill: ${_/_minor_fill_1}
+
+lr_quarter_box:
+  x: $[${token_interior_box/x} / 2.0]
+  y: $[${token_interior_box/y} / 2]
+  x_inset: $[${token_interior_box/x} / 2.0]
+  y_inset: 0
+  fill: ${_/_minor_fill_2}
+
 top_half_box:
   x: ${token_interior_box/x}
   y: $[${token_interior_box/y} / 2]
