@@ -1,7 +1,9 @@
 #! /usr/bin/env python
 
 from __future__ import absolute_import
-import itertools, json, logging, logtool, pprint, re, toml, yaml
+import itertools, json, logging, logtool, os, pkg_resources
+import pprint, re, toml, yaml
+from path import Path
 from cfgstack import CfgStack
 
 LOG = logging.getLogger (__name__)
@@ -154,3 +156,25 @@ class Config (object):
       return cls.as_toml ()
     else:
       raise ValueError ("Unknown form: " + form)
+
+@logtool.log_call
+def _config_dirs (templates):
+  fnames = [s.strip () for s in templates.split (",") if len (s.strip ()) != 0]
+  fdirs = list (set ([Path (d).dirname () for d in fnames]))
+  fdirs = ["./",] if fdirs == [] else fdirs
+  cdir = Path (pkg_resources.resource_filename ("xxpaper",
+                                                "XXP_DEFAULT.xxp")).dirname ()
+  rc = fdirs + [cdir,]
+  return rc
+
+@logtool.log_call
+def load_config (templates):
+  f_rc = Path (os.environ.get ("HOME", "./")) / ".xxpaperrc"
+  if f_rc.isfile ():
+    templates = ".xxpaperrc," + templates + ",XXP_DEFAULT.xxp"
+  else:
+    templates += ",XXP_DEFAULT.xxp"
+  fnames = [s.strip () for s in templates.split (",")
+                    if s.strip () != ""]
+  dirs = _config_dirs (templates)
+  Config (fnames = fnames, dirs = dirs)
