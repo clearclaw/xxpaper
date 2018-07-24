@@ -5,7 +5,9 @@ Installation:
 
 	     pip install xxpaper
 
-Should do the job.
+Should do the job.  Well, it will get you the older v0.x version of
+XXPaper, which is rather different and less well featured.  XXPaper
+v1.x is still upcoming.
 
 XXPaper generates artfiles representing charters, privates,
 shares, station markers, trains and (linear) stock markets (2D stock
