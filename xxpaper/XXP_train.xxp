@@ -45,7 +45,7 @@ train:
   note_text:
     fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}_TEXT}
     suppress: False
-    typeface: Times-Italic
+    typeface: ${DEFAULT/typeface_italic}
     size: 10
     h_center: 0
     v_center: -1

@@ -1,15 +1,23 @@
-xxpaper:
-  system_typefaces:
-    - AppleGaramond-BoldItalic.ttf
-    - AppleGaramond-Bold.ttf
-    - AppleGaramond-Italic.ttf
-    - AppleGaramond-LightItalic.ttf
-    - AppleGaramond-Light.ttf
-    - AppleGaramond.ttf
-
 DEFAULT:
   text: ""
   typeface: "Times-Roman"
+  typeface_bold: "Times-Bold"
+  typeface_bold_italic: "Times-BoldItalic"
+  typeface_bold_oblique:
+  typeface_italic: "Times-Italic"
+  typeface_oblique:
+  typeface_sans: "Helvetica"
+  typeface_sans_bold: "Helvetica-Bold"
+  typeface_sans_bold_italic:
+  typeface_sans_bold_oblique: "Helvetica-BoldOblique"
+  typeface_sans_italic:
+  typeface_sans_oblique: "Helvetica-Oblique"
+  typeface_mono: "Courier"
+  typeface_mono_bold: "Courier-Bold"
+  typeface_mono_bold_italic:
+  typeface_mono_bold_oblique: "Courier-BoldOblique"
+  typeface_mono_italic:
+  typeface_mono_oblique: "Courier-Oblique"
   size: 14
   suppress: False
   cutline_width: 0.01
@@ -27,12 +35,12 @@ DEFAULT:
   long_name_text:
     h_center: 0
     v_center: 1
-    typeface: Times-Bold
+    typeface: ${DEFAULT/typeface_bold}
 
   short_name_text:
     h_center: 0
     v_center: 0
-    typeface: Times-Roman
+    typeface: ${DEFAULT/typeface}
 
   asset_interior_box:
     x: ${asset_tile/x_max}

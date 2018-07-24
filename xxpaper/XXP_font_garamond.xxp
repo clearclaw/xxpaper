@@ -1,0 +1,16 @@
+xxpaper:
+  typefaces:
+    - AppleGaramond-BoldItalic.ttf
+    - AppleGaramond-Bold.ttf
+    - AppleGaramond-Italic.ttf
+    - AppleGaramond-LightItalic.ttf
+    - AppleGaramond-Light.ttf
+    - AppleGaramond.ttf
+
+DEFAULT:
+  typeface: "AppleGaramond"
+  typeface_bold: "AppleGaramond-Bold"
+  typeface_bold_italic: "AppleGaramond-BoldItalic"
+  typeface_bold_oblique:
+  typeface_italic: "AppleGaramond-Italic"
+  typeface_oblique:

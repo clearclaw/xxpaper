@@ -1,0 +1,13 @@
+xxpaper:
+  typefaces:
+    - LiberationSerif-BoldItalic.ttf
+    - LiberationSerif-Bold.ttf
+    - LiberationSerif-Italic.ttf
+    - LiberationSerif-Regular.ttf
+DEFAULT:
+  typeface: "LiberationSerif-Regular"
+  typeface_bold: "LiberationSerif-Bold"
+  typeface_bold_italic: "LiberationSerif-BoldItalic"
+  typeface_bold_oblique:
+  typeface_italic: "LiberationSerif-Italic"
+  typeface_oblique:

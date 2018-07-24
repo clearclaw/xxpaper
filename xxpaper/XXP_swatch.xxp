@@ -11,7 +11,7 @@ swatch:
   name_black_text:
     h_center: 0
     v_center: 0
-    typeface: Times-Roman
+    typeface: ${DEFAULT/typeface}
     size: 12
     x_inset: 54
     y_inset: 20
@@ -23,7 +23,7 @@ swatch:
     text: ${name_black_text/text}
     h_center: 0
     v_center: 0
-    typeface: Times-Roman
+    typeface: ${DEFAULT/typeface}
     size: 12
     x_inset: 54
     y_inset: 8

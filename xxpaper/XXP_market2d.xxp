@@ -15,7 +15,7 @@ market2d:
   cell_text:
     h_center: 0
     v_center: 0
-    typeface: Times-Roman
+    typeface: ${DEFAULT/typeface}
     size: 14
     dssx: 30
     y: 6

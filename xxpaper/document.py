@@ -24,9 +24,7 @@ class Document (object):
     ## we know some glyphs are missing, suppress warnings
     # import reportlab.rl_config
     # reportlab.rl_config.warnOnMissingFontGlyphs = 0
-    for ff in itertools.chain (
-        Config.get ("xxpaper/system_typefaces", {"default": []}),
-        Config.get ("xxpaper/extra_typefaces", {"default": []})):
+    for ff in Config.get ("xxpaper/typefaces", {"default": []}):
       for p in (Path (ff),
                 Path (pkg_resources.resource_filename ("xxpaper", ff))):
         if p.isfile ():
