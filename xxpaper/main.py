@@ -38,7 +38,6 @@ def option_version (opt): # pylint: disable=unused-argument
 def app_main (*args, **kwargs): # pylint: disable=unused-argument
   if kwargs["debug"]:
     logging.basicConfig (level = logging.DEBUG)
-  Config.set ("xxpaper/version", __version__)
 
 @logtool.log_call
 def main ():

@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 from __future__ import absolute_import
-import itertools, logging, logtool, pkg_resources
+import logging, logtool, pkg_resources
 from path import Path
 from reportlab.pdfgen import canvas as Canvas
 from reportlab.pdfbase import pdfmetrics

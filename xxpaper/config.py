@@ -5,6 +5,7 @@ import itertools, json, logging, logtool, os, pkg_resources
 import pprint, re, toml, yaml
 from path import Path
 from cfgstack import CfgStack
+from . import __version__
 
 LOG = logging.getLogger (__name__)
 QUERIES = [
@@ -176,3 +177,4 @@ def load_config (templates):
                     if s.strip () != ""]
   dirs = _config_dirs (templates)
   Config (fnames = fnames, dirs = dirs)
+  Config.set ("xxpaper/version", __version__)
