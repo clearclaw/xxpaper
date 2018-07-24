@@ -1,3 +1,12 @@
+xxpaper:
+  system_typefaces:
+    - AppleGaramond-BoldItalic.ttf
+    - AppleGaramond-Bold.ttf
+    - AppleGaramond-Italic.ttf
+    - AppleGaramond-LightItalic.ttf
+    - AppleGaramond-Light.ttf
+    - AppleGaramond.ttf
+
 DEFAULT:
   text: ""
   typeface: "Times-Roman"
