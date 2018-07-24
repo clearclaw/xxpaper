@@ -45,16 +45,21 @@ class Page (object):
     if self.in_page:
       self._end_page ()
     print "StartPage"
+    self.canvas.saveState ()
+    x_adjust = Config.get ("xxpaper/%s_x_adjust" % typ, {"default": None})
+    y_adjust = Config.get ("xxpaper/%s_y_adjust" % typ, {"default": None})
+    if x_adjust is not None and y_adjust is not None:
+      self.canvas.translate (x_adjust, y_adjust)
+    else:
+      self.canvas.translate (0.30 * inch, 0.50 * inch)
+      self.canvas.setStrokeColorRGB (1, 0, 0)
+      self.canvas.circle (0.75 * inch, 0, inch / 16, stroke = 1, fill = 0)
+      self.canvas.circle (6.75 * inch, 0, inch / 16, stroke = 1, fill = 0)
+      self.canvas.translate (0, 0.25 * inch)
     self.x_dim = Config.get (typ + "/x_num")
     self.y_dim = Config.get (typ + "/y_num")
     self.line = itertools.product (xrange (self.x_dim), xrange (self.y_dim))
     self.asset = asset
-    self.canvas.saveState ()
-    self.canvas.translate (0.30 * inch, 0.50 * inch)
-    self.canvas.setStrokeColorRGB (1, 0, 0)
-    self.canvas.circle (0.75 * inch, 0, inch / 16, stroke = 1, fill = 0)
-    self.canvas.circle (6.75 * inch, 0, inch / 16, stroke = 1, fill = 0)
-    self.canvas.translate (0, 0.25 * inch)
     self.ndx = 0
     self.in_page = True
 
