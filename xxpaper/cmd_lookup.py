@@ -8,12 +8,17 @@ from . import tile
 LOG = logging.getLogger (__name__)
 @logtool.log_call
 def do (**kwargs):
+  typ = kwargs["typ"]
+  name = kwargs["name"]
+  n = kwargs["n"]
+  key = kwargs["key"]
   load_config (kwargs["templates"])
   components = Config.get ("DEFAULT/COMPONENTS")
-  if kwargs["typ"] not in components:
+  if typ not in components:
     clip.exit (err = True,
-               message = "Unknown object typ: %s" % kwargs["typ"])
-  tl = tile.Tile (kwargs.get ("typ"),
-                  None, kwargs.get ("name"),
-                  kwargs.get ("n", 0))
-  print "%s => %s" % (kwargs["key"], tl.value (kwargs["key"]))
+               message = "Unknown object typ: %s" % typ)
+  try:
+    tl = tile.Tile (typ, None, name, n)
+    print "%s => %s" % (key, tl.value (key))
+  except KeyError as e:
+    clip.exit (err = True, message = "Key not found.  KeyError: %s" % key)
