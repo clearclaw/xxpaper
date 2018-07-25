@@ -21,9 +21,11 @@ DEFAULT:
   size: 14
   suppress: False
   cutline_width: 0.01
+  margin: 4
 
   COMPONENTS:
     - charter
+    - cousin
     - private
     - share
     - swatch
@@ -50,6 +52,10 @@ DEFAULT:
     x: ${charter_tile/x_max}
     y: ${charter_tile/y_max}
 
+  cousin_interior_box:
+    x: ${cousin_tile/x_max}
+    y: ${cousin_tile/y_max}
+
   market2d_interior_box:
     x: ${market2d_tile/x_max}
     y: ${market2d_tile/y_max}
@@ -73,18 +79,29 @@ DEFAULT:
     y_num: 4
     width: ${DEFAULT/cutline_width}
     stroke: ${colour/xxp/BLACK}
-    margin: 4
+    margin: ${DEFAULT/margin}
 
   charter_tile:
-    x: 270
-    y: 360
+    x: $[7.5 * 72 / 2.0]
+    y: $[10 * 72 / 2.0]
     x_max: $[${charter_tile/x} - (2 * ${charter_tile/margin})]
     y_max: $[${charter_tile/y} - (2 * ${charter_tile/margin})]
     x_num: 2
     y_num: 2
     stroke: ${colour/xxp/BLACK}
     width: ${DEFAULT/cutline_width}
-    margin: 4
+    margin: ${DEFAULT/margin}
+
+  cousin_tile:
+    x: $[7.5 * 72 / 2.0]
+    y: $[10 * 72 / 3.0]
+    x_max: $[${cousin_tile/x} - (2 * ${cousin_tile/margin})]
+    y_max: $[${cousin_tile/y} - (2 * ${cousin_tile/margin})]
+    x_num: 2
+    y_num: 3
+    stroke: ${colour/xxp/BLACK}
+    width: ${DEFAULT/cutline_width}
+    margin: ${DEFAULT/margin}
 
   market2d_tile:
     x: 45

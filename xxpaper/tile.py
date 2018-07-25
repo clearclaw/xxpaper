@@ -244,9 +244,11 @@ def items (canvas, asset):
   rc = []
   for name in sorted (Config.get (catalogue["name_index"]).keys ()):
     if catalogue["instance_index"] is not None:
-      for n in sorted (Tile (asset, canvas, name, 0).value (
-          catalogue["instance_index"]).keys ()):
-        rc.append (Tile (asset, canvas, name, n))
+      ndx = Tile (asset, canvas, name, 0).value (
+          catalogue["instance_index"])
+      if ndx is not None:
+        for n in sorted (ndx.keys ()):
+          rc.append (Tile (asset, canvas, name, n))
     else:
       rc.append (Tile (asset, canvas, name, 0))
   return rc
