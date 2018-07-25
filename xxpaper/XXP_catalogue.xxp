@@ -5,12 +5,12 @@ CATALOGUE:
     typ: charter
     name_index: company/index
     instance_index: charter/index
-  cousin:
-    tile_type: cousin_tile
+  minor_charter:
+    tile_type: minor_charter_tile
     klass: company
-    typ: cousin
+    typ: minor_charter
     name_index: company/index
-    instance_index: cousin/index
+    instance_index: minor_charter/index
   marker:
     tile_type: token_tile
     klass: marker

@@ -282,7 +282,7 @@ company:
       v_center: 0
       fill: ${colour/xxp/BLACK}
 
-  cousin:
+  minor_charter:
 
     CUT_ELEMENT: cutline_box
 
@@ -304,13 +304,13 @@ company:
 
     index:
 
-    cutline_box: ${DEFAULT/cousin_tile}
+    cutline_box: ${DEFAULT/minor_charter_tile}
 
     outside_box:
       x_inset: 10
       y_inset: 10
-      x: $[${cousin_interior_box/x} - (2 * ${outside_box/x_inset})]
-      y: $[${cousin_interior_box/y} - (2 * ${outside_box/y_inset})]
+      x: $[${minor_charter_interior_box/x} - (2 * ${outside_box/x_inset})]
+      y: $[${minor_charter_interior_box/y} - (2 * ${outside_box/y_inset})]
       radius: 30
       stroke: ${colour/xxp/BLACK}
       fill: ${colour/hollasch/cyan_white}
