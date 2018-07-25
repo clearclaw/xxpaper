@@ -200,13 +200,11 @@ class Tile (object):
           continue
         fn = getattr (self, "path_" + s)
         path = fn (key)
-        fill = (self.value (key + "/fill", default = None) is not None)
-        stroke = (self.value (key + "/stroke", default = None) is not None)
-        self.canvas.setLineWidth (0)
-        self.canvas.setStrokeColorRGB (0, 0, 0)
-        self.canvas.clipPath (cut, fill = 0)
+        self.canvas.clipPath (cut, fill = 0, stroke = 0)
         self._inset (key)
         self._set_properties (key)
+        fill = (self.value (key + "/fill", default = None) is not None)
+        stroke = (self.value (key + "/stroke", default = None) is not None)
         self.canvas.drawPath (path, fill = fill, stroke = stroke)
 
   @logtool.log_call
