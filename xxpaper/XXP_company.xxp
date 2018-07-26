@@ -56,7 +56,7 @@ company:
       y: 332
       radius: 30
       stroke: ${colour/xxp/BLACK}
-      fill: ${colour/hollasch/eggshell}
+      fill: ${colour/x11/antiquewhite1}
       width: 4
 
     title_box:
@@ -313,7 +313,7 @@ company:
       y: $[${minor_charter_interior_box/y} - (2 * ${outside_box/y_inset})]
       radius: 30
       stroke: ${colour/xxp/BLACK}
-      fill: ${colour/hollasch/cyan_white}
+      fill: ${colour/x11/honeydew2}
       width: 4
 
     title_box:
@@ -482,7 +482,7 @@ company:
     cutline_box: ${DEFAULT/asset_tile}
 
     asset_interior_box:
-      fill: ${colour/xxp/WHITE}
+      fill: ${colour/x11/ivory2}
 
     long_name_text:
       size: 14

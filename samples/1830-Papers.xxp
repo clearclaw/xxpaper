@@ -15,6 +15,7 @@ company:
             Founded in 1833 as the
             Andover & Wilmington Railroad
         _related_fill: ${colour/wikipedia/han_blue}
+        share_pct_text_stroke: ${colour/xxp/L_YELLOW}
 
       token:
         index: "$[index_of (5)]"

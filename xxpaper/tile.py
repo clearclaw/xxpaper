@@ -190,22 +190,12 @@ class Tile (object):
   @logtool.log_call
   def _draw_embed (self, typ):
     cut = self._get_cutpath (typ)
-    for key in self.value (typ + "/EMBED_ELEMENTS"):
-      with self._with_context ():
+    with self._with_context ():
+      self.canvas.clipPath (cut, fill = 0, stroke = 0)
+      for key in self.value (typ + "/EMBED_ELEMENTS"):
         s = key.split ("_")[-1]
-        if s in ("pop", "push", "rotate", "scale", "text", "xlate"):
-          # Because they're not supported by paths
-          fn = getattr (self, "draw_" + s)
-          fn (key)
-          continue
-        fn = getattr (self, "path_" + s)
-        path = fn (key)
-        self.canvas.clipPath (cut, fill = 0, stroke = 0)
-        self._inset (key)
-        self._set_properties (key)
-        fill = (self.value (key + "/fill", default = None) is not None)
-        stroke = (self.value (key + "/stroke", default = None) is not None)
-        self.canvas.drawPath (path, fill = fill, stroke = stroke)
+        fn = getattr (self, "draw_" + s)
+        fn (key)
 
   @logtool.log_call
   def draw_embed (self, key):
