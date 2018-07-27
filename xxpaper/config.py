@@ -55,34 +55,42 @@ class Config (object):
       rc = rc[k]
       if isinstance (rc, basestring):
         rc = rc.strip ()
-      while isinstance (rc, basestring):
-        m = RE_VAR.search (rc)
-        if m is None:
-          break
-        if cls._verbose:
-          print "\tInterpolation: %s" % rc[m.start ():m.end ()]
-        v = cls.get (rc[m.start () + 2:m.end () - 1], params = params)
-        if isinstance (v, basestring):
-          v = v.strip ()
-        if m.end () - m.start () == len (rc):
-          rc = v
-        else:
-          rc = ("%s%s%s" % (rc[:m.start ()], v, rc[m.end ():])).strip ()
-        continue
-      while isinstance (rc, basestring):
-        m = EXP_VAR.search (rc)
-        if m is not None:
-          # pylint: disable=eval-used
-          # FIXME: box this up a bit
-          v = eval (rc[m.start () + 2:m.end () - 1])
+      changed = True
+      while changed:
+        changed = False
+        while isinstance (rc, basestring):
+          m = RE_VAR.search (rc)
+          if m is None:
+            break
           if cls._verbose:
-            print "\tExpression: %s => %s" % (rc[m.start ():m.end ()], v)
+            print "\tInterpolation: %s" % rc[m.start ():m.end ()]
+          v = cls.get (rc[m.start () + 2:m.end () - 1], params = params)
+          if isinstance (v, basestring):
+            v = v.strip ()
           if m.end () - m.start () == len (rc):
             rc = v
           else:
             rc = ("%s%s%s" % (rc[:m.start ()], v, rc[m.end ():])).strip ()
+          changed = True
           continue
-        break
+        while isinstance (rc, basestring):
+          m = EXP_VAR.search (rc)
+          if m is not None:
+            # pylint: disable=eval-used
+            # FIXME: box this up a bit
+            l = {}
+            l.update (params if params else {})
+            l["index_of"] = index_of
+            v = eval (rc[m.start () + 2:m.end () - 1], {}, l)
+            if cls._verbose:
+              print "\tExpression: %s => %s" % (rc[m.start ():m.end ()], v)
+            if m.end () - m.start () == len (rc):
+              rc = v
+            else:
+              rc = ("%s%s%s" % (rc[:m.start ()], v, rc[m.end ():])).strip ()
+            changed = True
+            continue
+          break
     return rc
 
   #@logtool.log_call

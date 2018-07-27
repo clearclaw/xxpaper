@@ -15,7 +15,7 @@ company:
             Founded in 1833 as the
             Andover & Wilmington Railroad
         _related_fill: ${colour/wikipedia/han_blue}
-        share_pct_text_stroke: ${colour/xxp/L_YELLOW}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
         index: "$[index_of (5)]"
@@ -34,6 +34,7 @@ company:
             First to offer scheduled
             passenger service
         _related_fill: ${colour/hollasch/steel_blue}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
         _:
@@ -78,6 +79,7 @@ company:
             Canada's first
             transcontinental railway
         _related_fill: ${colour/hollasch/brick}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
         index: "$[index_of (7)]"
@@ -154,6 +156,7 @@ company:
         comment_text_text: The Water Level Route
         _related_fill: ${colour/x11/gray50}
         station_extra_count: 3
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
 
@@ -174,6 +177,7 @@ company:
         comment_text_text: 'The "Pennsy"'
         _related_fill: ${colour/hollasch/tomato}
         station_extra_count: 3
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
         index: "$[index_of (7)]"
