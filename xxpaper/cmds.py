@@ -57,6 +57,8 @@ def lookup (**kwargs):
            help = "Only these asset-types")
 @clip.opt ("-p", "--paper", name = "paper",
            default = "A4", help = "Paper size (A4, letter)")
+@clip.opt ("-r", "--repeat", name = "repeat",
+           default = "", help = "Make repeats of these (comma separated)")
 @clip.arg (name = "templates",
            help = "XXPaper game files (comma separated)", required = True)
 @clip.arg (name = "outfile",

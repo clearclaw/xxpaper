@@ -34,9 +34,11 @@ def do (**kwargs):
     filters = [
       "*%s*" % f for f in
       (match if match else "*").split (",")]
+    repeats = [s.strip () for s in kwargs["repeat"].split (",")]
     components = Config.get ("DEFAULT/COMPONENTS")
     todo = itertools.chain (
-      *[tile.items (canvas, c) for c in components
+      *[tile.items (canvas, c) * (repeats.count (c) + 1)
+        for c in components
         if _match_filter (c, filters)]
     )
     contents.Contents (canvas, todo).render ()
