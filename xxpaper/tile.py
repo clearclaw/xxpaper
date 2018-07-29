@@ -196,6 +196,25 @@ class Tile (object):
   def path_shape (self, key):
     if self.value (key + "/suppress", default = False):
       return self.canvas.beginPath ()
+    path = self.path_line (key)
+    path.close ()
+    return path
+
+  @logtool.log_call
+  def draw_line (self, key):
+    if self.value (key + "/suppress", default = False):
+      return
+    with self._with_context ():
+      self._inset (key)
+      path = self.path_line (key)
+      self._set_properties (key)
+      stroke = self.value (key + "/stroke", default = 0)
+      self.canvas.drawPath (path, stroke = 1 if stroke else 0)
+
+  @logtool.log_call
+  def path_line (self, key):
+    if self.value (key + "/suppress", default = False):
+      return self.canvas.beginPath ()
     path = self.canvas.beginPath ()
     x = self.value (key + "/x", default = None)
     y = self.value (key + "/y", default = None)
@@ -205,7 +224,6 @@ class Tile (object):
       fn = path.lineTo if len (point) == 2 else path.curveTo
       p = point if len (point) == 2 else [b for a in point for b in a]
       fn (*p)
-    path.close ()
     return path
 
   @logtool.log_call
