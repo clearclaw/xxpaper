@@ -59,25 +59,20 @@ class Tile (object):
 
   @logtool.log_call
   def draw_box (self, key):
-    if self.value (key + "/suppress", default = False):
-      return
-    with self._with_context ():
-      self._inset (key)
-      self._set_properties (key)
-      x = self.value (key + "/x")
-      y = self.value (key + "/y")
-      fill = self.value (key + "/fill", default = None)
-      stroke = self.value (key + "/stroke", default = None)
-      radius = self.value (key + "/radius", default = None)
-      if radius is None:
-        self.canvas.rect (0, 0, x, y,
-                          fill = 0 if fill is None else 1,
-                          stroke = 0 if stroke is None else 1)
-      else:
-        self.canvas.roundRect (0, 0, x, y,
-                               radius,
-                               fill = 0 if fill is None else 1,
-                               stroke = 0 if stroke is None else 1)
+    x = self.value (key + "/x")
+    y = self.value (key + "/y")
+    fill = self.value (key + "/fill", default = None)
+    stroke = self.value (key + "/stroke", default = None)
+    radius = self.value (key + "/radius", default = None)
+    if radius is None:
+      self.canvas.rect (0, 0, x, y,
+                        fill = 0 if fill is None else 1,
+                        stroke = 0 if stroke is None else 1)
+    else:
+      self.canvas.roundRect (0, 0, x, y,
+                             radius,
+                             fill = 0 if fill is None else 1,
+                             stroke = 0 if stroke is None else 1)
 
   @logtool.log_call
   def path_box (self, key):
@@ -95,44 +90,39 @@ class Tile (object):
 
   @logtool.log_call
   def draw_text (self, key):
-    if self.value (key + "/suppress", default = False):
+    x = self.value (key + "/x", default = 0)
+    y = self.value (key + "/y", default = 0)
+    txt = self.value (key + "/text")
+    h_center = self.value (key + "/h_center", default = 1)
+    v_center = self.value (key + "/v_center", default = 1)
+    typeface = self.value (key + "/typeface")
+    size = self.value (key + "/size")
+    line_height = self.value (key + "/line_height", default = size)
+    if txt in ("", None):
       return
-    with self._with_context ():
-      self._inset (key)
-      x = self.value (key + "/x", default = 0)
-      y = self.value (key + "/y", default = 0)
-      txt = self.value (key + "/text")
-      h_center = self.value (key + "/h_center", default = 1)
-      v_center = self.value (key + "/v_center", default = 1)
-      typeface = self.value (key + "/typeface")
-      size = self.value (key + "/size")
-      line_height = self.value (key + "/line_height", default = size)
-      if txt in ("", None):
-        return
-      lines = txt.split ("\n")
-      while lines[-1].strip () == "":
-        lines.pop ()
-      while lines[0].strip () == "":
-        lines = lines[1:]
-      if v_center == -1:
-        y += line_height * (len (lines) - 1)
-      elif v_center == 0:
-        y += line_height * (float (len (lines) - 1) / 2.0)
-      elif v_center == 1:
-        pass
-      # self.canvas.translate (x, y)
-      self.canvas.setFont (typeface, size)
-      self._set_properties (key)
-      for t in lines:
-        if h_center == -1:
-          self.canvas.drawRightString (x, y, t)
-        elif h_center == 0:
-          self.canvas.drawCentredString (x, y, t)
-        elif h_center == 1:
-          self.canvas.drawString (x, y, t)
-        else:
-          raise ValueError
-        y -= line_height
+    lines = txt.split ("\n")
+    while lines[-1].strip () == "":
+      lines.pop ()
+    while lines[0].strip () == "":
+      lines = lines[1:]
+    if v_center == -1:
+      y += line_height * (len (lines) - 1)
+    elif v_center == 0:
+      y += line_height * (float (len (lines) - 1) / 2.0)
+    elif v_center == 1:
+      pass
+    # self.canvas.translate (x, y)
+    self.canvas.setFont (typeface, size)
+    for t in lines:
+      if h_center == -1:
+        self.canvas.drawRightString (x, y, t)
+      elif h_center == 0:
+        self.canvas.drawCentredString (x, y, t)
+      elif h_center == 1:
+        self.canvas.drawString (x, y, t)
+      else:
+        raise ValueError
+      y -= line_height
 
   @logtool.log_call
   def path_text (self, key):
@@ -140,19 +130,14 @@ class Tile (object):
 
   @logtool.log_call
   def draw_circle (self, key):
-    if self.value (key + "/suppress", default = False):
-      return
-    with self._with_context ():
-      self._inset (key)
-      x = self.value (key + "/x", default = 0)
-      y = self.value (key + "/y", default = 0)
-      radius = self.value (key + "/radius")
-      self._set_properties (key)
-      fill = self.value (key + "/fill", default = None)
-      stroke = self.value (key + "/stroke", default = None)
-      self.canvas.circle (x, y, radius,
-                          fill = 1 if fill else 0,
-                          stroke = 1 if stroke else 0)
+    x = self.value (key + "/x", default = 0)
+    y = self.value (key + "/y", default = 0)
+    radius = self.value (key + "/radius")
+    fill = self.value (key + "/fill", default = None)
+    stroke = self.value (key + "/stroke", default = None)
+    self.canvas.circle (x, y, radius,
+                        fill = 1 if fill else 0,
+                        stroke = 1 if stroke else 0)
 
   @logtool.log_call
   def path_circle (self, key):
@@ -166,31 +151,15 @@ class Tile (object):
     return path
 
   @logtool.log_call
-  def draw_rotate (self, key): # pylint: disable=unused-argument
-    x = self.value (self.tile_type + "/x")
-    margin = self.value (self.tile_type + "/margin")
-    self.canvas.translate (x - (2 * margin), 0)
-    self.canvas.rotate (90)
-
-  @logtool.log_call
-  def path_rotate (self, key):
-    pass
-
-  @logtool.log_call
   def draw_shape (self, key):
-    if self.value (key + "/suppress", default = False):
-      return
-    with self._with_context ():
-      self._inset (key)
-      path = self.path_shape (key)
-      self._set_properties (key)
-      fill = self.value (key + "/fill", default = 0)
-      fill_mode = self.value (key + "/fill_mode", default = None)
-      stroke = self.value (key + "/stroke", default = 0)
-      self.canvas.drawPath (path,
-                            fill = 1 if fill else 0,
-                            fillMode = 1 if fill_mode else 0,
-                            stroke = 1 if stroke else 0)
+    path = self.path_shape (key)
+    fill = self.value (key + "/fill", default = 0)
+    fill_mode = self.value (key + "/fill_mode", default = None)
+    stroke = self.value (key + "/stroke", default = 0)
+    self.canvas.drawPath (path,
+                          fill = 1 if fill else 0,
+                          fillMode = 1 if fill_mode else 0,
+                          stroke = 1 if stroke else 0)
 
   @logtool.log_call
   def path_shape (self, key):
@@ -202,12 +171,7 @@ class Tile (object):
 
   @logtool.log_call
   def draw_line (self, key):
-    if self.value (key + "/suppress", default = False):
-      return
-    with self._with_context ():
-      self._inset (key)
       path = self.path_line (key)
-      self._set_properties (key)
       stroke = self.value (key + "/stroke", default = 0)
       self.canvas.drawPath (path, stroke = 1 if stroke else 0)
 
@@ -242,29 +206,37 @@ class Tile (object):
     cut = self._get_cutpath (typ)
     with self._with_context ():
       self.canvas.clipPath (cut, fill = 0, stroke = 0)
-      for key in self.value (typ + "/EMBED_ELEMENTS"):
-        s = key.split ("_")[-1]
-        fn = getattr (self, "draw_" + s)
-        fn (key)
+      self._render_elements (self.value (typ + "/EMBED_ELEMENTS"))
 
   @logtool.log_call
   def draw_embed (self, key):
-    if self.value (key + "/suppress", default = False):
-      return
     typ = self.value (key + "/embed")
     name = self.value (key + "/name", default = self.name)
     n = self.value (key + "/n", default = self.n)
-    with self._with_context ():
-      self._inset (key)
-      tile = Tile (typ, self.canvas, name, n)
-      tile._draw_embed (typ) # pylint: disable=protected-access
+    tile = Tile (typ, self.canvas, name, n)
+    tile._draw_embed (typ) # pylint: disable=protected-access
+
+  @logtool.log_call
+  def _render_elements (self, elements):
+   for key in elements:
+     if self.value (key + "/suppress", default = False):
+       continue
+     if key == "rotate":
+       x = self.value (self.tile_type + "/x")
+       margin = self.value (self.tile_type + "/margin")
+       self.canvas.translate (x - (2 * margin), 0)
+       self.canvas.rotate (90)
+       continue
+     with self._with_context ():
+       self._inset (key)
+       self._set_properties (key)
+       suffix = key.split ("_")[-1]
+       fn = getattr (self, "draw_" + suffix)
+       fn (key)
 
   @logtool.log_call
   def render (self):
-    for e in self.value (self.typ + "/ELEMENTS"):
-      suffix = e.split ("_")[-1]
-      fn = getattr (self, "draw_" + suffix)
-      fn (e)
+    self._render_elements (self.value (self.typ + "/ELEMENTS"))
 
   @logtool.log_call
   def cutline (self):
