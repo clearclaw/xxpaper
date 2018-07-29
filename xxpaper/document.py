@@ -29,6 +29,11 @@ class Document (object):
                 Path (pkg_resources.resource_filename ("xxpaper", ff))):
         if p.isfile ():
           pdfmetrics.registerFont (TTFont(p.namebase, str (p)))
+    self.canvas.setTitle (
+      "XXPaper: "
+      + Config.get ("xxpaper/title", {"default": "-missing-"}))
+    self.canvas.setAuthor (
+      Config.get ("xxpaper/author", {"default": "-missing-"}))
     return self.canvas
 
   @logtool.log_call

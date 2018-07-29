@@ -442,7 +442,8 @@ company:
       - asset_interior_box
       - rotate
       - side_bar_box
-      - side_bar_split_box
+      - side_bar_lsplit_box
+      - side_bar_rsplit_box
       - type_bar_box
       - share_desc_text
       - share_pct_text
@@ -457,8 +458,6 @@ company:
 
     index:
       "1":
-        side_bar_split_box:
-          suppress: False
         type_bar_box:
           suppress: False
         share_num_text:
@@ -497,9 +496,17 @@ company:
       y: ${asset_interior_box/x}
       fill: ${_/_related_fill}
 
-    side_bar_split_box:
-      suppress: True
-      x_inset: 17
+    side_bar_rsplit_box:
+      suppress: $[n != "1"]
+      x_inset: 15
+      y_inset: 0
+      x: 2
+      y: ${asset_interior_box/x}
+      fill: ${asset_interior_box/fill}
+
+    side_bar_lsplit_box:
+      suppress: $[n != "1"]
+      x_inset: 19
       y_inset: 0
       x: 2
       y: ${asset_interior_box/x}

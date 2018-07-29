@@ -77,7 +77,6 @@ class Config (object):
           m = EXP_VAR.search (rc)
           if m is not None:
             # pylint: disable=eval-used
-            # FIXME: box this up a bit
             l = {}
             l.update (params if params else {})
             l["index_of"] = index_of

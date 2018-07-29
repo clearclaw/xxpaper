@@ -82,8 +82,8 @@ class Tile (object):
   @logtool.log_call
   def path_box (self, key):
     if self.value (key + "/suppress", default = False):
-      return self.canvas.beginPath  ()
-    path = self.canvas.beginPath  ()
+      return self.canvas.beginPath ()
+    path = self.canvas.beginPath ()
     x = self.value (key + "/x")
     y = self.value (key + "/y")
     radius = self.value (key + "/radius", default = None)
@@ -139,13 +139,13 @@ class Tile (object):
     self.draw_text (key)
 
   @logtool.log_call
-  def draw_circle (self, key, x = None, y = None):
+  def draw_circle (self, key):
     if self.value (key + "/suppress", default = False):
       return
     with self._with_context ():
       self._inset (key)
-      x = x if x is not None else self.value (key + "/x")
-      y = y if y is not None else self.value (key + "/y")
+      x = self.value (key + "/x", default = 0)
+      y = self.value (key + "/y", default = 0)
       radius = self.value (key + "/radius")
       self._set_properties (key)
       fill = self.value (key + "/fill", default = None)
@@ -155,12 +155,12 @@ class Tile (object):
                           stroke = 1 if stroke else 0)
 
   @logtool.log_call
-  def path_circle (self, key, x = None, y = None):
+  def path_circle (self, key):
     if self.value (key + "/suppress", default = False):
-      return self.canvas.beginPath  ()
-    path = self.canvas.beginPath  ()
-    x = x if x is not None else self.value (key + "/x")
-    y = y if y is not None else self.value (key + "/y")
+      return self.canvas.beginPath ()
+    path = self.canvas.beginPath ()
+    x = self.value (key + "/x", default = 0)
+    y = self.value (key + "/y", default = 0)
     radius = self.value (key + "/radius")
     path.circle (x, y, radius)
     return path
@@ -175,6 +175,38 @@ class Tile (object):
   @logtool.log_call
   def path_rotate (self, key):
     pass
+
+  @logtool.log_call
+  def draw_shape (self, key):
+    if self.value (key + "/suppress", default = False):
+      return
+    with self._with_context ():
+      self._inset (key)
+      path = self.path_shape (key)
+      self._set_properties (key)
+      fill = self.value (key + "/fill", default = 0)
+      fill_mode = self.value (key + "/fill_mode", default = None)
+      stroke = self.value (key + "/stroke", default = 0)
+      self.canvas.drawPath (path,
+                            fill = 1 if fill else 0,
+                            fillMode = 1 if fill_mode else 0,
+                            stroke = 1 if stroke else 0)
+
+  @logtool.log_call
+  def path_shape (self, key):
+    if self.value (key + "/suppress", default = False):
+      return self.canvas.beginPath ()
+    path = self.canvas.beginPath ()
+    x = self.value (key + "/x", default = None)
+    y = self.value (key + "/y", default = None)
+    if x is not None and y is not None:
+      path.moveTo (x, y)
+    for point in self.value (key + "/points", default = []):
+      fn = path.lineTo if len (point) == 2 else path.curveTo
+      p = point if len (point) == 2 else [b for a in point for b in a]
+      fn (*p)
+    path.close ()
+    return path
 
   @logtool.log_call
   def _get_cutpath (self, typ):

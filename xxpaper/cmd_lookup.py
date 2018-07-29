@@ -20,5 +20,5 @@ def do (**kwargs):
   try:
     tl = tile.Tile (typ, None, name, n)
     print "%s => %s" % (key, tl.value (key))
-  except KeyError as e:
+  except: # pylint: disable=bare-except
     clip.exit (err = True, message = "Key not found.  KeyError: %s" % key)
