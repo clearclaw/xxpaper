@@ -5,7 +5,7 @@ company:
     B&M:
       _:
         long_name_text_text: |
-            Baltimore & Maine
+            Boston & Maine
         short_name_text_text: B&M
         token_1_text_text: Free
         token_2_text_text: $40
