@@ -1,8 +1,9 @@
 #! /usr/bin/env python
 
 from __future__ import absolute_import
-import itertools, logging, logtool
+import itertools, logging, logtool, sys
 from reportlab.lib.units import inch
+from . import __version__
 from .config import Config
 from .tile import Tile
 from .xlate_frame import XlateFrame
@@ -55,6 +56,12 @@ class Page (object):
       self.canvas.setStrokeColorRGB (1, 0, 0)
       self.canvas.circle (0.75 * inch, 0, inch / 16, stroke = 1, fill = 0)
       self.canvas.circle (6.75 * inch, 0, inch / 16, stroke = 1, fill = 0)
+      self.canvas.setFont ("Times-Roman", 12)
+      self.canvas.setFillColorRGB (0, 0, 0)
+      self.canvas.drawCentredString ((6 * inch) / 2.0 + 0.75 * inch, 0,
+                                     " ".join (sys.argv))
+      self.canvas.drawCentredString ((6 * inch) / 2.0 + 0.75 * inch, -12,
+                                     "XXPaper version: %s" % __version__)
       self.canvas.translate (0, 0.25 * inch)
     self.x_dim = Config.get (typ + "/x_num")
     self.y_dim = Config.get (typ + "/y_num")
