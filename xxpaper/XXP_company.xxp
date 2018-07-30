@@ -12,6 +12,7 @@ company:
     _share_pct_text_fill_x: ${colour/xxp/BLACK}
     _share_pct_text_fill_1: ${colour/xxp/BLACK}
     share_pct_text_fill: ${_/_share_pct_text_fill_$[1 if n == "1" else "x"]}
+    _related_fill: "$[desaturate_and_brighten (${_/_major_fill}, 0.4, 0.5)]"
 
   index:
 
@@ -59,8 +60,8 @@ company:
       y: 332
       radius: 30
       stroke: ${colour/xxp/BLACK}
-      fill: ${colour/x11/antiquewhite1}
       width: 4
+      fill: $[desaturate_and_brighten (${_/_related_fill}, 0.04, 0.95)]
 
     title_box:
       x_inset: 10
@@ -122,6 +123,7 @@ company:
       size: 16
       x: 143
       y: 305
+      fill: $[black_or_white (${_/_related_fill})]
 
     token_1_circle:
       suppress: $["${token_1_text/text}" == ""]
@@ -466,6 +468,7 @@ company:
           suppress: False
         share_pct_text:
           text: 20%
+          fill: $[black_or_white (${type_bar_box/fill})]
         token_1_embed:
           suppress: True
         token_2a_embed:
@@ -484,7 +487,7 @@ company:
     cutline_box: ${DEFAULT/asset_tile}
 
     asset_interior_box:
-      fill: ${colour/x11/ivory2}
+      fill: $[desaturate_and_brighten (${_/_related_fill}, 0.04, 0.95)]
 
     long_name_text:
       size: 14
@@ -535,6 +538,7 @@ company:
       v_center: -1
       typeface: ${DEFAULT/typeface_italic}
       size: 11
+      fill: $[black_or_white (${_/_related_fill})]
 
     share_desc_text:
       text: Director

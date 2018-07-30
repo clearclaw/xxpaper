@@ -28,8 +28,8 @@ company:
         token_1_text_text: Free
         token_2_text_text: $40
         token_3_text_text: $100
-        _major_fill: ${colour/wikipedia/banana_yellow}
-        _minor_fill: ${colour/hollasch/blue}
+        _major_fill: ${colour/hollasch/blue}
+        _minor_fill: ${colour/wikipedia/banana_yellow}
         comment_text_text: |
             First to offer scheduled
             passenger service
@@ -38,10 +38,10 @@ company:
 
       token:
         _:
-          _major_fill_1: ${colour/wikipedia/banana_yellow}
-          _major_fill_2: ${colour/hollasch/blue}
-          _minor_fill_2: ${colour/wikipedia/banana_yellow}
-          _minor_fill_1: ${colour/hollasch/blue}
+          _major_fill_1: ${colour/hollasch/blue}
+          _major_fill_2: ${colour/wikipedia/banana_yellow}
+          _minor_fill_1: ${colour/wikipedia/banana_yellow}
+          _minor_fill_2: ${colour/hollasch/blue}
 
         ELEMENTS:
           - token_interior_box
