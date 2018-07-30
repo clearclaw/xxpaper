@@ -464,7 +464,7 @@ company:
           text: 2 Shares
         share_desc_text:
           suppress: False
-        share_ptc_text:
+        share_pct_text:
           text: 20%
         token_1_embed:
           suppress: True
