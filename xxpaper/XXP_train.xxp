@@ -28,13 +28,13 @@ train:
     fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}}
 
   long_name_text:
-    fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}_TEXT}
+    fill: $[black_or_white (${asset_interior_box/fill})]
     size: 72
     x: 50
     y: 100
 
   cost_text:
-    fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}_TEXT}
+    fill: $[black_or_white (${asset_interior_box/fill})]
     size: 14
     h_center: 0
     v_center: 0
@@ -43,7 +43,7 @@ train:
     text: "Cost: ${_/cost_text_text_p}"
 
   note_text:
-    fill: ${colour/xxp/TRAIN_${_/asset_interior_box_fill_p}_TEXT}
+    fill: $[black_or_white (${asset_interior_box/fill})]
     suppress: False
     typeface: ${DEFAULT/typeface_italic}
     size: 10
@@ -53,12 +53,12 @@ train:
     y: 34
 
   rust_bar_box:
-    fill: ${colour/xxp/TRAIN_${_/rust_bar_box_fill_p}}
+    fill: $[black_or_white (${asset_interior_box/fill})]
     x: ${asset_interior_box/x}
     y: 30
 
   rusted_text:
-    fill: ${colour/xxp/TRAIN_${_/rust_bar_box_fill_p}_TEXT}
+    fill: $[black_or_white (${rust_bar_box/fill})]
     size: 12
     h_center: 0
     v_center: -1

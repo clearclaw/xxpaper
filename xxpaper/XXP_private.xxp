@@ -23,7 +23,6 @@ private:
     cost_text_text: "Cost: £XXX"
     revenue_text_text: "Revenue: £XXX"
 
-
   cutline_box: ${DEFAULT/asset_tile}
 
   asset_interior_box:
@@ -45,12 +44,13 @@ private:
     y_inset: 92
     x: 4
     y: 0
-    fill: ${colour/xxp/WHITE}
+    fill: $[black_or_white (${close_bar_box/fill})]
 
   long_name_text:
     size: 12
     x: 82
     y: 78
+    fill: $[black_or_white (${asset_interior_box/fill})]
 
   power_text:
     h_center: 0
@@ -60,6 +60,7 @@ private:
     y_inset: 16
     x: 0
     y: 0
+    fill: $[black_or_white (${asset_interior_box/fill})]
 
   money_bar_box:
     x: ${asset_interior_box/y}
@@ -73,7 +74,7 @@ private:
     v_center: 0
     typeface: ${DEFAULT/typeface_italic}
     size: 11
-    fill: ${colour/xxp/BLACK}
+    fill: $[black_or_white (${money_bar_box/fill})]
 
   revenue_text:
     x: 158
@@ -82,4 +83,4 @@ private:
     v_center: 0
     typeface: ${DEFAULT/typeface_italic}
     size: 11
-    fill: ${colour/xxp/BLACK}
+    fill: $[black_or_white (${money_bar_box/fill})]

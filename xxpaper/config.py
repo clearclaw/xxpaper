@@ -41,8 +41,9 @@ def index_of (n):
 @logtool.log_call
 def desaturate_and_brighten (colour, s, b):
   hsv_colour = colorsys.rgb_to_hsv(*colour)
-  desaturated_hsv_colour = (hsv_colour[0], hsv_colour[1] * s,
-                           hsv_colour[1] + (1-hsv_colour[1]) * b)
+  desaturated_hsv_colour = (hsv_colour[0],
+                            hsv_colour[1] * s,
+                            hsv_colour[1] + (1 - hsv_colour[1]) * b)
   desaturated_rgb_colour = colorsys.hsv_to_rgb (*desaturated_hsv_colour)
   return list (desaturated_rgb_colour)
 

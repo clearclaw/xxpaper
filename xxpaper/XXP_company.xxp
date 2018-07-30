@@ -88,7 +88,7 @@ company:
       y: 0
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${outside_box/fill})]
 
     top_note_text:
       suppress: True
@@ -100,7 +100,7 @@ company:
       y: 0
       h_center: 0
       v_center: 1
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${outside_box/fill})]
 
     bottom_note_text:
       suppress: False
@@ -115,7 +115,7 @@ company:
       y: 0
       h_center: 0
       v_center: -1
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${outside_box/fill})]
 
     long_name_text:
       h_center: 0
@@ -141,7 +141,7 @@ company:
       y: 228
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_1_circle/fill})]
 
     token_2_circle:
       suppress: $["${token_2_text/text}" == ""]
@@ -159,7 +159,7 @@ company:
       y: $[${token_5_text/y} + ((${token_1_text/y} - ${token_5_text/y}) * 3.0 / 4.0)]
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_2_circle/fill})]
 
     token_3_circle:
       suppress: $["${token_3_text/text}" == ""]
@@ -177,7 +177,7 @@ company:
       y: $[${token_5_text/y} + ((${token_1_text/y} - ${token_5_text/y}) * 2.0 / 4.0)]
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_3_circle/fill})]
 
     token_4_circle:
       suppress: $["${token_4_text/text}" == ""]
@@ -195,7 +195,7 @@ company:
       y: $[${token_5_text/y} + ((${token_1_text/y} - ${token_5_text/y}) * 1.0 / 4.0)]
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_4_circle/fill})]
 
     token_5_circle:
       suppress: $["${token_5_text/text}" == ""]
@@ -213,7 +213,7 @@ company:
       y: 36
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_5_circle/fill})]
 
     token_6_circle:
       suppress: $["${token_6_text/text}" == ""]
@@ -231,7 +231,7 @@ company:
       y: $[(${token_5_text/y} + ${token_4_text/y}) / 2.0]
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_6_circle/fill})]
 
     token_7_circle:
       suppress: $["${token_7_text/text}" == ""]
@@ -249,7 +249,7 @@ company:
       y: $[(${token_3_text/y} + ${token_4_text/y}) / 2.0]
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_7_circle/fill})]
 
     token_8_circle:
       suppress: $["${token_8_text/text}" == ""]
@@ -267,7 +267,7 @@ company:
       y: $[(${token_2_text/y} + ${token_3_text/y}) / 2.0]
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_8_circle/fill})]
 
     token_9_circle:
       suppress: $["${token_9_text/text}" == ""]
@@ -285,7 +285,7 @@ company:
       y: $[(${token_1_text/y} + ${token_2_text/y}) / 2.0]
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_9_circle/fill})]
 
   minor_charter:
 
@@ -318,8 +318,8 @@ company:
       y: $[${minor_charter_interior_box/y} - (2 * ${outside_box/y_inset})]
       radius: 30
       stroke: ${colour/xxp/BLACK}
-      fill: ${colour/x11/honeydew2}
       width: 4
+      fill: $[desaturate_and_brighten (${_/_related_fill}, 0.04, 0.95)]
 
     title_box:
       x_inset: ${outside_box/x_inset}
@@ -346,7 +346,7 @@ company:
       y: 0
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${outside_box/fill})]
 
     top_note_text:
       suppress: True
@@ -358,7 +358,7 @@ company:
       y: 0
       h_center: 0
       v_center: 1
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${outside_box/fill})]
 
     bottom_note_text:
       suppress: False
@@ -373,7 +373,7 @@ company:
       y: 0
       h_center: 0
       v_center: -1
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${outside_box/fill})]
 
     long_name_text:
       h_center: 0
@@ -381,6 +381,7 @@ company:
       size: 16
       x: 143
       y: 186.67
+      fill: $[black_or_white (${title_box/fill})]
 
     token_1_circle:
       suppress: $["${token_1_text/text}" == ""]
@@ -398,7 +399,7 @@ company:
       y: 99.67
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_1_circle/fill})]
 
     token_2_circle:
       suppress: $["${token_2_text/text}" == ""]
@@ -416,7 +417,7 @@ company:
       y: 36
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_2_circle/fill})]
 
     token_3_circle:
       suppress: $["${token_3_text/text}" == ""]
@@ -434,7 +435,7 @@ company:
       y: $[(${token_1_text/y} + ${token_2_text/y}) / 2.0]
       h_center: 0
       v_center: 0
-      fill: ${colour/xxp/BLACK}
+      fill: $[black_or_white (${token_3_circle/fill})]
 
   share:
 

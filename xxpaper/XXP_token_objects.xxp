@@ -100,6 +100,7 @@ short_name_text:
   h_center: 0
   v_center: 0
   size: 9
+  fill: $[black_or_white (${name_stripe_box/fill})]
 
 outline_circle:
   x: $[${token_interior_box/x} / 2]
