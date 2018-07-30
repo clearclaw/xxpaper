@@ -12,7 +12,7 @@ company:
     _share_pct_text_fill_x: ${colour/xxp/BLACK}
     _share_pct_text_fill_1: ${colour/xxp/BLACK}
     share_pct_text_fill: ${_/_share_pct_text_fill_$[1 if n == "1" else "x"]}
-    _related_fill: "$[desaturate_and_brighten (${_/_major_fill}, 0.4, 0.5)]"
+    _related_fill: "$[desaturate_and_brighten (${_/_minor_fill}, 0.4, 0.5)]"
 
   index:
 
