@@ -76,8 +76,6 @@ class Tile (object):
 
   @logtool.log_call
   def path_box (self, key):
-    if self.value (key + "/suppress", default = False):
-      return self.canvas.beginPath ()
     path = self.canvas.beginPath ()
     x = self.value (key + "/x")
     y = self.value (key + "/y")
@@ -141,8 +139,6 @@ class Tile (object):
 
   @logtool.log_call
   def path_circle (self, key):
-    if self.value (key + "/suppress", default = False):
-      return self.canvas.beginPath ()
     path = self.canvas.beginPath ()
     x = self.value (key + "/x", default = 0)
     y = self.value (key + "/y", default = 0)
@@ -163,31 +159,27 @@ class Tile (object):
 
   @logtool.log_call
   def path_shape (self, key):
-    if self.value (key + "/suppress", default = False):
-      return self.canvas.beginPath ()
     path = self.path_line (key)
     path.close ()
     return path
 
   @logtool.log_call
   def draw_line (self, key):
-      path = self.path_line (key)
-      stroke = self.value (key + "/stroke", default = 0)
-      self.canvas.drawPath (path, stroke = 1 if stroke else 0)
+    path = self.path_line (key)
+    stroke = self.value (key + "/stroke", default = 0)
+    self.canvas.drawPath (path, stroke = 1 if stroke else 0)
 
   @logtool.log_call
   def path_line (self, key):
-    if self.value (key + "/suppress", default = False):
-      return self.canvas.beginPath ()
     path = self.canvas.beginPath ()
     x = self.value (key + "/x", default = None)
     y = self.value (key + "/y", default = None)
     if x is not None and y is not None:
       path.moveTo (x, y)
-    for point in self.value (key + "/points", default = []):
-      fn = path.lineTo if len (point) == 2 else path.curveTo
-      p = point if len (point) == 2 else [b for a in point for b in a]
-      fn (*p)
+      for point in self.value (key + "/points", default = []):
+        fn = path.lineTo if len (point) == 2 else path.curveTo
+        p = point if len (point) == 2 else [b for a in point for b in a]
+        fn (*p)
     return path
 
   @logtool.log_call
@@ -218,21 +210,21 @@ class Tile (object):
 
   @logtool.log_call
   def _render_elements (self, elements):
-   for key in elements:
-     if self.value (key + "/suppress", default = False):
-       continue
-     if key == "rotate":
-       x = self.value (self.tile_type + "/x")
-       margin = self.value (self.tile_type + "/margin")
-       self.canvas.translate (x - (2 * margin), 0)
-       self.canvas.rotate (90)
-       continue
-     with self._with_context ():
-       self._inset (key)
-       self._set_properties (key)
-       suffix = key.split ("_")[-1]
-       fn = getattr (self, "draw_" + suffix)
-       fn (key)
+    for key in elements:
+      if self.value (key + "/suppress", default = False):
+        continue
+      if key == "rotate":
+        x = self.value (self.tile_type + "/x")
+        margin = self.value (self.tile_type + "/margin")
+        self.canvas.translate (x - (2 * margin), 0)
+        self.canvas.rotate (90)
+        continue
+      with self._with_context ():
+        self._inset (key)
+        self._set_properties (key)
+        suffix = key.split ("_")[-1]
+        fn = getattr (self, "draw_" + suffix)
+        fn (key)
 
   @logtool.log_call
   def render (self):
