@@ -24,3 +24,6 @@ Candidates
 - Recursive clip-art support?  (It should just work)
 - Support shares being _embed and _scale for B&O-like privates?
 - Support background _scale clips (eg for privates -- relevant image behind the text?)  (Will require alpa support?)
+- Colour dictionary for ISCC-NBS: http://tx4.us/isccnam.htm
+- Find and export of the NameThatColour space and add: http://people.csail.mit.edu/jaffer/Color/Dictionaries#ntc
+- XKCD colour dictionary?
