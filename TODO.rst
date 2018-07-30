@@ -18,7 +18,7 @@ Candidates
 - Do I really need a *_scale?  Assume that will necessitate a *_pop.
 - Hex clip-art for 1829
 - Anchor clip-art for 1843
-- Shield clip-art for weanies.
+- Shield clip-art for anoraks.
 - Basic heraldic patterning for shield interiors?
 - Also Amtrak-style fat shield?
 - Recursive clip-art support?  (It should just work)
