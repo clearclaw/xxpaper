@@ -2,10 +2,11 @@
 
 from __future__ import absolute_import
 import itertools, json, logging, logtool, os, pkg_resources
-import pprint, re, toml, yaml
+import pprint, re, toml, yaml, math
 from path import Path
 from cfgstack import CfgStack
 from . import __version__
+from colorsys import hsv_to_rgb, rgb_to_hsv
 
 LOG = logging.getLogger (__name__)
 QUERIES = [
@@ -28,11 +29,23 @@ QUERIES = [
   #"{original}",
 ]
 RE_VAR = re.compile (r"(\$\{([A-Za-z0-9_-]*/)*([A-Za-z0-9_-]*)\})")
-EXP_VAR = re.compile (r"(\$\[[^\]]*\])")
+EXP_VAR = re.compile (r"(\$\[([^\]]*\[[^\]]*\][^\]]*|[^\]]*)\])")
 
 @logtool.log_call
 def index_of (n):
   return {"%s" % i: None for i in xrange (n)}
+
+@logtool.log_call
+def desaturate_and_brighten (color, s, b):
+  hsv_color = rgb_to_hsv(*color)
+  desaturated_hsv_color = (hsv_color[0], hsv_color[1]*s, hsv_color[1] + (1-hsv_color[1])*b)
+  desaturated_rgb_color = hsv_to_rgb (*desaturated_hsv_color)
+  return desaturated_rgb_color
+
+@logtool.log_call
+def black_or_white (color):
+  brightness = math.sqrt (color[0]**2*.299 + color[1]**2*.587 + color[2]**2*.114)
+  return [0, 0, 0] if brightness > 0.6 else [1, 1, 1]
 
 class Config (object):
   _state = {}
@@ -80,6 +93,8 @@ class Config (object):
             l = {}
             l.update (params if params else {})
             l["index_of"] = index_of
+            l["desaturate_and_brighten"] = desaturate_and_brighten
+            l["black_or_white"] = black_or_white
             v = eval (rc[m.start () + 2:m.end () - 1], {}, l)
             if cls._verbose:
               print "\tExpression: %s => %s" % (rc[m.start ():m.end ()], v)
