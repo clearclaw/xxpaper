@@ -56,11 +56,15 @@ class Page (object):
       self.canvas.translate (0.30 * inch, 0.50 * inch)
       self.canvas.saveState ()
       self.canvas.setStrokeColorRGB (0, 0, 0)
-      self.canvas.circle (0.75 * inch, 0, 2.0 * inch / 16, stroke = 1, fill = 0)
-      self.canvas.circle (6.75 * inch, 0, 2.0 * inch / 16, stroke = 1, fill = 0)
+      self.canvas.circle (0.75 * inch, 0, 2.0 * inch / 16,
+                          stroke = 1, fill = 0)
+      self.canvas.circle (6.75 * inch, 0, 2.0 * inch / 16,
+                          stroke = 1, fill = 0)
       self.canvas.setFillColorRGB (0, 0, 0)
-      self.canvas.circle (0.75 * inch, 0, 1.0 * inch / 16, stroke = 1, fill = 1)
-      self.canvas.circle (6.75 * inch, 0, 1.0 * inch / 16, stroke = 1, fill = 1)
+      self.canvas.circle (0.75 * inch, 0, 1.0 * inch / 16,
+                          stroke = 1, fill = 1)
+      self.canvas.circle (6.75 * inch, 0, 1.0 * inch / 16,
+                          stroke = 1, fill = 1)
       self.canvas.setFillColorRGB (0, 0, 0)
       self.canvas.setFont ("Times-Roman", 10)
       self.canvas.drawCentredString (

@@ -193,6 +193,10 @@ class Config (object):
     else:
       raise ValueError ("Unknown form: " + form)
 
+#
+# Loaders
+#
+
 @logtool.log_call
 def _config_dirs (templates):
   fnames = [s.strip () for s in templates.split (",") if len (s.strip ()) != 0]
