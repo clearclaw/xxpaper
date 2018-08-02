@@ -43,7 +43,6 @@ class Tile (object):
     x = self.value (key + "/x" + suffix, default = None)
     y = self.value (key + "/y" + suffix, default = None)
     if x is not None and y is not None:
-      print x, y
       self.canvas.translate (x, y)
 
   @logtool.log_call
@@ -184,7 +183,6 @@ class Tile (object):
 
   @logtool.log_call
   def draw_clone (self, key):
-    print key
     of = self.value (key + "/of")
     od = self.value (key + "/.")
     odo = dict (od)
@@ -193,7 +191,6 @@ class Tile (object):
       if k not in od:
         od[k] = v # Nested clones will not merge the full stack
     # No ROTATE
-    print od
     self._inset (key)
     self._set_properties (key)
     suffix = of.split ("_")[-1]
