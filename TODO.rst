@@ -2,13 +2,10 @@ First release
 =============
 
 - Set the default adjustments for token pages to fit the GarageSalePup label sheets (or whtever I end up with).
-- See if *_embed can be/needs extension to allow in-typ named aggregations/clip-art.  Of create a *_thing(?) to the same end.
 - Look into support for radial fades for *_box.  Intended use is to blur the edges of *_interior_box so as to hide registration wobbles.
 - Probably then have to support linear fades just for completeness.
 - And fades in *_shapes?
 - Corner & end properties for *_line and *_shape?
-- Create XXP_font_* files for all of the Postscript 14.
-- Remove AppleGaramond -- the license isn't clean enough.
 - Validate .xxpaperrc use.
 
 Candidates
