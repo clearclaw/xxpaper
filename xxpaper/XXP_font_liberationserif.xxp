@@ -8,6 +8,6 @@ DEFAULT:
   typeface: "LiberationSerif-Regular"
   typeface_bold: "LiberationSerif-Bold"
   typeface_bold_italic: "LiberationSerif-BoldItalic"
-  typeface_bold_oblique:
+  typeface_bold_oblique: ${DEFAULT/typeface_italic}
   typeface_italic: "LiberationSerif-Italic"
-  typeface_oblique:
+  typeface_oblique: ${DEFAULT/typeface_italic}

@@ -1,0 +1,7 @@
+DEFAULT:
+  typeface: "Helvetica"
+  typeface_bold: "Helvetica-Bold"
+  typeface_bold_italic: ${DEFAULT/typeface_bold_oblique}
+  typeface_bold_oblique: "Helvetica-BoldOblique"
+  typeface_italic: ${DEFAULT/typeface_oblique}
+  typeface_oblique: "Helvetica-Oblique"

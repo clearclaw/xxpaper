@@ -9,6 +9,6 @@ DEFAULT:
   typeface: "LiberationSans-Regular"
   typeface_bold: "LiberationSans-Bold"
   typeface_bold_italic: "LiberationSans-BoldItalic"
-  typeface_bold_oblique:
+  typeface_bold_oblique: ${DEFAULT/typeface_bold_italic}
   typeface_italic: "LiberationSans-Italic"
-  typeface_oblique:
+  typeface_oblique: ${DEFAULT/typeface_italic}

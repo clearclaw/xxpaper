@@ -3,20 +3,20 @@ DEFAULT:
   typeface: "Times-Roman"
   typeface_bold: "Times-Bold"
   typeface_bold_italic: "Times-BoldItalic"
-  typeface_bold_oblique:
+  typeface_bold_oblique: ${DEFAULT/typeface_bold_italic}
   typeface_italic: "Times-Italic"
-  typeface_oblique:
+  typeface_oblique: ${DEFAULT/typeface_italic}
   typeface_sans: "Helvetica"
   typeface_sans_bold: "Helvetica-Bold"
-  typeface_sans_bold_italic:
+  typeface_sans_bold_italic: ${DEFAULT/typeface_sans_bold_oblique}
   typeface_sans_bold_oblique: "Helvetica-BoldOblique"
-  typeface_sans_italic:
+  typeface_sans_italic: ${DEFAULT/typeface_sans_oblique}
   typeface_sans_oblique: "Helvetica-Oblique"
   typeface_mono: "Courier"
   typeface_mono_bold: "Courier-Bold"
-  typeface_mono_bold_italic:
+  typeface_mono_bold_italic: ${DEFAULT/typeface_mono_bold_oblique}
   typeface_mono_bold_oblique: "Courier-BoldOblique"
-  typeface_mono_italic:
+  typeface_mono_italic: ${DEFAULT/typeface_mono_oblique}
   typeface_mono_oblique: "Courier-Oblique"
   size: 14
   suppress: False

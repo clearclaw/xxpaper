@@ -1,0 +1,7 @@
+DEFAULT:
+  typeface: "Courier"
+  typeface_bold: "Courier-Bold"
+  typeface_bold_italic: ${DEFAULT/typeface_bold_oblique}
+  typeface_bold_oblique: "Courier-BoldOblique"
+  typeface_italic: ${DEFAULT/typeface_oblique}
+  typeface_oblique: "Courier-Oblique"
