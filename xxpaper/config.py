@@ -76,6 +76,8 @@ class Config (object):
     # pylint: disable=too-many-branches
     rc = cls._state
     for k in key.split ("/"):
+      if k == ".":
+        return rc # Breaks the descent!
       rc = rc[k]
       if isinstance (rc, basestring):
         rc = rc.strip ()

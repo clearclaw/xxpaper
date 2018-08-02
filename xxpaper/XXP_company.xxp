@@ -74,7 +74,7 @@ company:
       fill: ${_/_related_fill}
 
     token_embed:
-      embed: token
+      typ: token
       x_inset: 18
       y_inset: 290
 
@@ -287,6 +287,29 @@ company:
       v_center: 0
       fill: $[black_or_white (${token_9_circle/fill})]
 
+    hexagon_shape:
+      fill: ${colour/xxp/TRAIN_YELLOW}
+      x: 10
+      y: 0
+      stroke: ${colour/xxp/BLACK}
+      weight: 1
+      points:
+        - [5, -9]
+        - [-5, -9]
+        - [-10, 0]
+        - [-5, 9]
+        - [5, 9]
+
+    hexagon_text:
+      typeface: ${DEFAULT/typeface}
+      x: 0
+      y: -2.55
+      h_center: 0
+      v_center: 0
+      size: 8
+      fill: $[black_or_white (${hexagon_shape/fill})]
+      text: $20
+
   minor_charter:
 
     CUT_ELEMENT: cutline_box
@@ -332,7 +355,7 @@ company:
       fill: ${_/_related_fill}
 
     token_embed:
-      embed: token
+      typ: token
       x_inset: 18
       y_inset: 170.33
 
@@ -561,32 +584,32 @@ company:
 
     token_1_embed:
       suppress: False
-      embed: token
+      typ: token
       x_inset: -4
       y_inset: $[(${token_2a_embed/y_inset} + ${token_2b_embed/y_inset}) / 2.0]
 
     token_2a_embed:
       suppress: True
-      embed: token
+      typ: token
       x_inset: -4
       y_inset: $[(${side_bar_box/y} - 10) / 2.0 + ${type_bar_box/y}]
 
     token_2b_embed:
       suppress: True
-      embed: token
+      typ: token
       x_inset: -4
       dfgfgy_inset: 20
       y_inset: 12
 
     token_3a_embed:
       suppress: True
-      embed: token
+      typ: token
       x_inset: -4
       y_inset: $[(${token_2a_embed/y_inset} + ${token_1_embed/y_inset}) / 2.0]
 
     token_3b_embed:
       suppress: True
-      embed: token
+      typ: token
       x_inset: -4
       y_inset: $[(${token_2b_embed/y_inset} + ${token_1_embed/y_inset}) / 2.0]
 

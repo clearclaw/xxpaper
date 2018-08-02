@@ -43,6 +43,7 @@ class Tile (object):
     x = self.value (key + "/x" + suffix, default = None)
     y = self.value (key + "/y" + suffix, default = None)
     if x is not None and y is not None:
+      print x, y
       self.canvas.translate (x, y)
 
   @logtool.log_call
@@ -172,15 +173,45 @@ class Tile (object):
   @logtool.log_call
   def path_line (self, key):
     path = self.canvas.beginPath ()
-    x = self.value (key + "/x", default = None)
-    y = self.value (key + "/y", default = None)
-    if x is not None and y is not None:
-      path.moveTo (x, y)
-      for point in self.value (key + "/points", default = []):
-        fn = path.lineTo if len (point) == 2 else path.curveTo
-        p = point if len (point) == 2 else [b for a in point for b in a]
-        fn (*p)
+    x = self.value (key + "/x", default = 0)
+    y = self.value (key + "/y", default = 0)
+    path.moveTo (x, y)
+    for point in self.value (key + "/points", default = []):
+      fn = path.lineTo if len (point) == 2 else path.curveTo
+      p = point if len (point) == 2 else [b for a in point for b in a]
+      fn (*p)
     return path
+
+  @logtool.log_call
+  def draw_clone (self, key):
+    print key
+    of = self.value (key + "/of")
+    od = self.value (key + "/.")
+    odo = dict (od)
+    cd = dict (self.value (of + "/."))
+    for k, v in cd.items ():
+      if k not in od:
+        od[k] = v # Nested clones will not merge the full stack
+    # No ROTATE
+    print od
+    self._inset (key)
+    self._set_properties (key)
+    suffix = of.split ("_")[-1]
+    fn = getattr (self, "draw_" + suffix)
+    fn (key)
+
+  @logtool.log_call
+  def path_clone (self, key):
+    of = self.value (key + "/of")
+    od = self.value (key + "/.")
+    cd = dict (self.value (of + "/."))
+    for k, v in cd.items ():
+      if k not in od:
+        od[k] = v # Nested clones will not merge the full stack
+    # No ROTATE
+    suffix = of.split ("_")[-1]
+    fn = getattr (self, "path_" + suffix)
+    return fn (key)
 
   @logtool.log_call
   def _get_cutpath (self, typ):
@@ -202,7 +233,7 @@ class Tile (object):
 
   @logtool.log_call
   def draw_embed (self, key):
-    typ = self.value (key + "/embed")
+    typ = self.value (key + "/typ")
     name = self.value (key + "/name", default = self.name)
     n = self.value (key + "/n", default = self.n)
     tile = Tile (typ, self.canvas, name, n)
