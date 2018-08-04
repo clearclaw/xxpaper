@@ -7,9 +7,7 @@ First release
 order.
 - Move the hexagon stuff to its own file and include at the top level
 so that all typds can use it?  
-- Corner & end properties for *_line and *_shape?
 - Support Alpha on fills or on all colours?
-- Dash lines?
 
 Candidates
 ==========

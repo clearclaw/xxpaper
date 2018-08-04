@@ -47,6 +47,10 @@ class Tile (object):
 
   @logtool.log_call
   def _set_properties (self, key):
+    dash = self.value (key + "/dash", default = None)
+    dash_phase = self.value (key + "/dash_phase", default = 0)
+    if dash is not None :
+      self.canvas.setDash (dash, phase = dash_phase)
     line_cap = self.value (key + "/line_cap", default = None)
     if line_cap is not None:
       self.canvas.setLineCap (line_cap)
