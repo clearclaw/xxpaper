@@ -47,15 +47,21 @@ class Tile (object):
 
   @logtool.log_call
   def _set_properties (self, key):
+    line_cap = self.value (key + "/line_cap", default = None)
+    if line_cap is not None:
+      self.canvas.setLineCap (line_cap)
+    line_join = self.value (key + "/line_join", default = None)
+    if line_join is not None:
+      self.canvas.setLineNJoin (line_join)
     fill = self.value (key + "/fill", default = None)
-    stroke = self.value (key + "/stroke", default = None)
-    width = self.value (key + "/width", default = None)
-    if stroke is not None:
-      self.canvas.setStrokeColorRGB (*stroke)
-    if width is not None:
-      self.canvas.setLineWidth (width)
     if fill is not None:
       self.canvas.setFillColorRGB (*fill)
+    stroke = self.value (key + "/stroke", default = None)
+    if stroke is not None:
+      self.canvas.setStrokeColorRGB (*stroke)
+    width = self.value (key + "/width", default = None)
+    if width is not None:
+      self.canvas.setLineWidth (width)
 
   @logtool.log_call
   def draw_box (self, key):
@@ -185,7 +191,6 @@ class Tile (object):
   def draw_clone (self, key):
     of = self.value (key + "/of")
     od = self.value (key + "/.")
-    odo = dict (od)
     cd = dict (self.value (of + "/."))
     for k, v in cd.items ():
       if k not in od:

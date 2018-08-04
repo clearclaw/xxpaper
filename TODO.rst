@@ -2,19 +2,26 @@ First release
 =============
 
 - Set the default adjustments for token pages to fit the GarageSalePup label sheets (or whtever I end up with).
-- Look into support for radial fades for *_box.  Intended use is to blur the edges of *_interior_box so as to hide registration wobbles.
-- Probably then have to support linear fades just for completeness.
-- And fades in *_shapes?
-- Corner & end properties for *_line and *_shape?
 - Validate .xxpaperrc use.
+- Figure the namespaces (DEFAULT, xxpaper, user?) and their resolution
+order.
+- Move the hexagon stuff to its own file and include at the top level
+so that all typds can use it?  
+- Corner & end properties for *_line and *_shape?
+- Support Alpha on fills or on all colours?
+- Dash lines?
 
 Candidates
 ==========
 
+- Anchor & shield also in clips?
+- Rotate primitive?
+- Scale primitive?
+- Look into support for radial gradients for *_box.  Intended use is to blur the edges of *_interior_box so as to hide registration wobbles.
+- Probably then have to support linear gradients just for completeness.
+- And gradients in *_shapes?
 - 1825-like share template option?
 - Do I really need a *_scale?  Assume that will necessitate a *_pop.
-- Hex clip-art for 1829
-- Anchor clip-art for 1843
 - Shield clip-art for anoraks.
 - Basic heraldic patterning for shield interiors?
 - Also Amtrak-style fat shield?
