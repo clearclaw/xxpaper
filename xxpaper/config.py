@@ -214,7 +214,7 @@ def _config_dirs (templates):
 def load_config (templates):
   f_rc = Path (os.environ.get ("HOME", "./")) / ".xxpaperrc"
   if f_rc.isfile ():
-    templates = ".xxpaperrc," + templates + ",XXP_DEFAULT.xxp"
+    templates = str (f_rc) + "," + templates + ",XXP_DEFAULT.xxp"
   else:
     templates += ",XXP_DEFAULT.xxp"
   fnames = [s.strip () for s in templates.split (",")

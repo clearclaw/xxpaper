@@ -52,6 +52,13 @@ bottom_line_box:
   y_inset: $[${token_interior_box/y} / 2.0 - 12]
   fill: ${_/_minor_fill_2}
 
+vertical stripe_box:
+  x_inset: $[${token_interior_box/x} / 2 - 4]
+  y_inset: 0
+  x: 8
+  y: ${token_interior_box/y}
+  fill: ${_/_minor_fill}
+
 outer_circle:
   x: $[${token_interior_box/x} / 2]
   y: $[${token_interior_box/y} / 2]

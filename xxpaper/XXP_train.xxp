@@ -59,7 +59,7 @@ train:
 
   rusted_text:
     fill: $[black_or_white (${rust_bar_box/fill})]
-    size: 12
+    size: 11
     h_center: 0
     v_center: -1
     x: 50

@@ -23,6 +23,9 @@ DEFAULT:
   cutline_width: 0.01
   margin: 4
 
+  _include_:
+    - XXP_clips.xxp
+
   COMPONENTS:
     - charter
     - minor_charter
@@ -131,7 +134,7 @@ DEFAULT:
     x_max: $[${token_tile/x} - (2 * ${token_tile/margin})]
     y_max: $[${token_tile/y} - (2 * ${token_tile/margin})]
     x_num: 11
-    y_num: 15
+    y_num: 14
     width: ${DEFAULT/cutline_width}
     margin: $[(${token_tile/x} - ${token_interior_box/x}) / 2]
 

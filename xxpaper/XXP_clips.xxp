@@ -1,0 +1,22 @@
+snall_hexagon_shape:
+  fill: ${colour/xxp/TRAIN_YELLOW}
+  x: 10
+  y: 0
+  stroke: ${colour/xxp/BLACK}
+  weight: 1
+  points:
+    - [5, -9]
+    - [-5, -9]
+    - [-10, 0]
+    - [-5, 9]
+    - [5, 9]
+
+small_hexagon_text:
+  typeface: ${DEFAULT/typeface}
+  x: 0
+  y: -2.55
+  h_center: 0
+  v_center: 0
+  size: 8
+  fill: $[black_or_white (${hexagon_shape/fill})]
+  text: $20

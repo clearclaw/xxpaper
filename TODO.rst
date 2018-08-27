@@ -5,13 +5,11 @@ First release
 - Validate .xxpaperrc use.
 - Figure the namespaces (DEFAULT, xxpaper, user?) and their resolution
 order.
-- Move the hexagon stuff to its own file and include at the top level
-so that all typds can use it?  
-- Support Alpha on fills or on all colours?
 
 Candidates
 ==========
 
+- Support Alpha on fills or on all colours?
 - Anchor & shield also in clips?
 - Rotate primitive?
 - Scale primitive?

@@ -53,7 +53,7 @@ class Page (object):
     if x_adjust is not None and y_adjust is not None:
       self.canvas.translate (x_adjust, y_adjust)
     else:
-      self.canvas.translate (0.30 * inch, 0.75 * inch)
+      self.canvas.translate (0.30 * inch, 0.30 * inch)
     self.canvas.saveState ()
     self.canvas.setStrokeColorRGB (0, 0, 0)
     self.canvas.setLineWidth (0.2)
