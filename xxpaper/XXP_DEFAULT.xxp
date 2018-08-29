@@ -23,6 +23,9 @@ DEFAULT:
   cutline_width: 0.01
   margin: 4
 
+  no_registration:
+    - token_tile      
+
   _include_:
     - XXP_clips.xxp
 

@@ -23,6 +23,8 @@ QUERIES = [
   "{klass}/index/{n}/{obj}/{key}",
   "{klass}/_/{obj}_{key}",
   "{klass}/{obj}/{key}",
+  "user/{obj}/{key}",
+  "xxpaper/{obj}/{key}",
   "DEFAULT/{obj}/{key}",
   "DEFAULT/{key}",
   #"{original}",

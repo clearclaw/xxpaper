@@ -48,38 +48,59 @@ class Page (object):
       self._end_page ()
     print "StartPage"
     self.canvas.saveState ()
-    x_adjust = Config.get ("xxpaper/%s_x_adjust" % typ, {"default": None})
-    y_adjust = Config.get ("xxpaper/%s_y_adjust" % typ, {"default": None})
-    if x_adjust is not None and y_adjust is not None:
+    x_adjust = Config.get ("user/%s_x_adjust" % typ, {"default": None})
+    y_adjust = Config.get ("user/%s_y_adjust" % typ, {"default": None})
+    nomark = Config.get ("DEFAULT/no_registration", {"default": []})
+    print "============", x_adjust, y_adjust, nomark, typ
+    if typ in nomark and x_adjust is not None and y_adjust is not None:
+      self.canvas.saveState ()
+      self.canvas.setStrokeColorRGB (0, 0, 0)
+      self.canvas.setLineWidth (0.2)
+      self.canvas.circle (0, 0,
+                          0.15 * inch / 2.0,
+                          stroke = 1, fill = 0)
+      self.canvas.line (0, 0, 0, 36)
+      self.canvas.line (0, 0, 36, 0)
+      self.canvas.restoreState ()
       self.canvas.translate (x_adjust, y_adjust)
+      self.canvas.saveState ()
+      self.canvas.setStrokeColorRGB (0, 0, 0)
+      self.canvas.setLineWidth (0.2)
+      self.canvas.setFillColorRGB (0, 0, 0)
+      self.canvas.circle (0, 0,
+                          0.15 * inch / 2.0,
+                          stroke = 1, fill = 1)
+      self.canvas.line (0, 0, 0, 36)
+      self.canvas.line (0, 0, 36, 0)
+      self.canvas.restoreState ()
     else:
       self.canvas.translate (0.30 * inch, 0.30 * inch)
-    self.canvas.saveState ()
-    self.canvas.setStrokeColorRGB (0, 0, 0)
-    self.canvas.setLineWidth (0.2)
-    self.canvas.circle (0.75 * inch, 0,
-                        0.15 * inch / 2.0,
-                        stroke = 1, fill = 0)
-    self.canvas.circle (6.75 * inch, 0,
-                        0.15 * inch / 2.0,
-                        stroke = 1, fill = 0)
-    self.canvas.setFillColorRGB (0, 0, 0)
-    self.canvas.circle (0.75 * inch, 0,
-                        0.1253 * inch / 2.0,
-                        stroke = 0, fill = 1)
-    self.canvas.circle (6.75 * inch, 0,
-                        0.1253 * inch / 2.0,
-                        stroke = 0, fill = 1)
-    self.canvas.setFillColorRGB (0, 0, 0)
-    self.canvas.setFont ("Times-Roman", 10)
-    self.canvas.drawCentredString (
-      (6 * inch) / 2.0 + 0.75 * inch, 4,
-      "XXPaper run: " + (
-        " ".join ([str (Path (sys.argv[0]).namebase),] + sys.argv[1:])))
-    self.canvas.drawCentredString ((6 * inch) / 2.0 + 0.75 * inch, -8,
-                                   "XXPaper version: %s" % __version__)
-    self.canvas.restoreState ()
-    self.canvas.translate (0, 0.25 * inch)
+      self.canvas.saveState ()
+      self.canvas.setStrokeColorRGB (0, 0, 0)
+      self.canvas.setLineWidth (0.2)
+      self.canvas.circle (0.75 * inch, 0,
+                          0.15 * inch / 2.0,
+                          stroke = 1, fill = 0)
+      self.canvas.circle (6.75 * inch, 0,
+                          0.15 * inch / 2.0,
+                          stroke = 1, fill = 0)
+      self.canvas.setFillColorRGB (0, 0, 0)
+      self.canvas.circle (0.75 * inch, 0,
+                          0.1253 * inch / 2.0,
+                          stroke = 0, fill = 1)
+      self.canvas.circle (6.75 * inch, 0,
+                          0.1253 * inch / 2.0,
+                          stroke = 0, fill = 1)
+      self.canvas.setFillColorRGB (0, 0, 0)
+      self.canvas.setFont ("Times-Roman", 10)
+      self.canvas.drawCentredString (
+        (6 * inch) / 2.0 + 0.75 * inch, 4,
+        "XXPaper run: " + (
+          " ".join ([str (Path (sys.argv[0]).namebase),] + sys.argv[1:])))
+      self.canvas.drawCentredString ((6 * inch) / 2.0 + 0.75 * inch, -8,
+                                     "XXPaper version: %s" % __version__)
+      self.canvas.restoreState ()
+      self.canvas.translate (0, 0.25 * inch)
     self.x_dim = Config.get (typ + "/x_num")
     self.y_dim = Config.get (typ + "/y_num")
     self.line = itertools.product (xrange (self.x_dim), xrange (self.y_dim))
