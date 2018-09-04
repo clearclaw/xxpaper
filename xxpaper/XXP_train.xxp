@@ -53,7 +53,7 @@ train:
     y: 34
 
   rust_bar_box:
-    fill: $[black_or_white (${asset_interior_box/fill})]
+    fill: ${colour/xxp/TRAIN_${_/rust_bar_box_fill_p}}
     x: ${asset_interior_box/x}
     y: 30
 
