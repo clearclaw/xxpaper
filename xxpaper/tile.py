@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 from __future__ import absolute_import
-import contextlib, logging, logtool
+import contextlib, logging, logtool, math
 from .config import Config
 
 LOG = logging.getLogger (__name__)
@@ -29,7 +29,20 @@ class Tile (object):
       "n": self.n,
     }
     params.update (kwargs)
-    return Config.get (key, params = params)
+    l = key.split ("/")
+    if not l[0].endswith ("_clone"):
+      return Config.get (key, params = params)
+    # Special case hack to make clone objects key transparent
+    flag = float ("nan") # Something that should be never used
+    d = params.get ("default", flag)
+    params["default"] = flag
+    rc = Config.get (key, params = params)
+    if not isinstance (rc, float) or not math.isnan (rc):
+      return rc
+    of = Config.get (l[0] + "/of", params = params)
+    params["default"] = d
+    rc = Config.get (of + "/" + l[1], params = params)
+    return rc
 
   @contextlib.contextmanager
   @logtool.log_call
@@ -194,17 +207,12 @@ class Tile (object):
   @logtool.log_call
   def draw_clone (self, key):
     of = self.value (key + "/of")
-    od = self.value (key + "/.")
-    cd = dict (self.value (of + "/."))
-    for k, v in cd.items ():
-      if k not in od:
-        od[k] = v # Nested clones will not merge the full stack
-    # No ROTATE
-    self._inset (key)
-    self._set_properties (key)
-    suffix = of.split ("_")[-1]
-    fn = getattr (self, "draw_" + suffix)
-    fn (key)
+    with self._with_context ():
+      self._inset (key)
+      self._set_properties (key)
+      suffix = of.split ("_")[-1]
+      fn = getattr (self, "draw_" + suffix)
+      fn (key)
 
   @logtool.log_call
   def path_clone (self, key):

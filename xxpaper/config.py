@@ -91,7 +91,7 @@ class Config (object):
           if m is None:
             break
           if cls._verbose:
-            print "\tInterpolation: %s" % rc[m.start ():m.end ()]
+            print "    Interpolation: %s" % rc[m.start ():m.end ()]
           v = cls.get (rc[m.start () + 2:m.end () - 1], params = params)
           if isinstance (v, basestring):
             v = v.strip ()
@@ -115,7 +115,7 @@ class Config (object):
             l.update (params if params else {})
             v = eval (rc[m.start () + 2:m.end () - 1], {}, l)
             if cls._verbose:
-              print "\tExpression: %s => %s" % (rc[m.start ():m.end ()], v)
+              print "    Expression: %s => %s" % (rc[m.start ():m.end ()], v)
             if m.end () - m.start () == len (rc):
               rc = v
             else:
@@ -136,22 +136,22 @@ class Config (object):
         p["klass"] = "colour"
         params = p
     if cls._verbose:
-      print "%s =>" % key
+      print "  %s =>" % key
     o, k = key.split ("/")
     for q in itertools.chain (QUERIES, [key,]):
       try:
         key_exp = q.format (obj = o, key = k, **(params if params else {}))
         if cls._verbose:
-          print "\t%s =>" % key_exp
+          print "    %s =>" % key_exp
         rc = cls._get (key_exp, params)
         if cls._verbose:
-          print "%s\n" % rc
+          print "  %s\n" % rc
         return rc
       except (AttributeError, KeyError, TypeError):
         continue
     if params and "default" in params:
       if cls._verbose:
-        print "%s => %s\n\t\t%s\n" % (key, "(default)", params["default"])
+        print "  %s => %s\n    %s\n" % (key, "(default)", params["default"])
       return params["default"]
     raise KeyError ("Not found: " + key)
 
