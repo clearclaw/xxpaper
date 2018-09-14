@@ -29,7 +29,7 @@ QUERIES = [
   "DEFAULT/{key}",
   #"{original}",
 ]
-RE_VAR = re.compile (r"(\$\{([A-Za-z0-9_-]*/)*([A-Za-z0-9_-]*)\})")
+RE_VAR = re.compile (r"(\$\{([A-Za-z0-9_-]*/)*([A-Za-z0-9_.-]*)\})")
 EXP_VAR = re.compile (r"(\$\[[^\]]*\])")
 
 #

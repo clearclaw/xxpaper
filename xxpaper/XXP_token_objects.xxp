@@ -1,5 +1,113 @@
 CUT_ELEMENT: cutline_circle
 
+TEMPLATE_boxes:
+  - token_interior_box
+  - outer_circle
+  - middle_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_boxes_embed:
+  - outer_circle
+  - middle_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_bullseye:
+  - token_interior_box
+  - outer_circle
+  - middle_circle
+  - inner_circle
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_bullseye_embed:
+  - outer_circle
+  - middle_circle
+  - inner_circle
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_chequer:
+  - token_interior_box
+  - ul_quarter_box
+  - ur_quarter_box
+  - ll_quarter_box
+  - lr_quarter_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_chequer_embed:
+  - ul_quarter_box
+  - ur_quarter_box
+  - ll_quarter_box
+  - lr_quarter_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_cross:
+  - token_interior_box
+  - outer_circle
+  - vertical stripe_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_cross_embed:
+  - outer_circle
+  - vertical stripe_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_default:
+  - token_interior_box
+  - top_half_box
+  - bottom_half_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_default_embed:
+  - top_half_box
+  - bottom_half_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_solid:
+  - token_interior_box
+  - ul_quarter_box
+  - ur_quarter_box
+  - ll_quarter_box
+  - lr_quarter_box
+  - short_name_text
+
+TEMPLATE_solid_embed:
+  - ul_quarter_box
+  - ur_quarter_box
+  - ll_quarter_box
+  - lr_quarter_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_stripey:
+  - token_interior_box
+  - outer_circle
+  - top_line_box
+  - bottom_line_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_stripey_embed:
+  - outer_circle
+  - top_line_box
+  - bottom_line_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
 ul_quarter_box:
   x: $[${token_interior_box/x} / 2.0]
   y: $[${token_interior_box/y} / 2]

@@ -19,6 +19,8 @@ def do (**kwargs):
                message = "Unknown object typ: %s" % typ)
   try:
     tl = tile.Tile (typ, None, name, n)
+    # import pudb
+    # pudb.set_trace ()
     print "%s => %s" % (key, tl.value (key))
   except: # pylint: disable=bare-except
     clip.exit (err = True, message = "Key not found.  KeyError: %s" % key)

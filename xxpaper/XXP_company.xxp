@@ -8,7 +8,6 @@ company:
     _minor_fill:
     _minor_fill_1:  ${_/_minor_fill}
     _minor_fill_2: ${_/_minor_fill_1}
-    station_extra_count: 3
     _share_pct_text_fill_x: ${colour/xxp/BLACK}
     _share_pct_text_fill_1: ${colour/xxp/BLACK}
     share_pct_text_fill: ${_/_share_pct_text_fill_$[1 if n == "1" else "x"]}
@@ -617,12 +616,7 @@ company:
 
     index:
 
-    ELEMENTS:
-      - token_interior_box
-      - top_half_box
-      - bottom_half_box
-      - name_stripe_box
-      - short_name_text
+    ELEMENTS: ${TEMPLATE_default/.}
 
     EMBED_ELEMENTS:
       - top_half_box
