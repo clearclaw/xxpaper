@@ -184,13 +184,15 @@ company:
 
 marker:
   index:
-    "round":
-      -missing-:
+    round:
+      token:
         ELEMENTS:
           - token_interior_box
           - outer_circle
           - middle_circle
           - inner_circle
+
+        index: "$[index_of (1)]"
 
       outer_circle:
         fill: ${colour/xxp/M_RED}

@@ -76,19 +76,29 @@ TEMPLATE_default_embed:
   - short_name_text
   - outline_circle
 
+TEMPLATE_ring:
+  - token_interior_box
+  - outer_circle
+  - middle_circle
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_ring_embed:
+  - outer_circle
+  - middle_circle
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
 TEMPLATE_solid:
   - token_interior_box
-  - ul_quarter_box
-  - ur_quarter_box
-  - ll_quarter_box
-  - lr_quarter_box
+  - outer_circle
+  - name_stripe_box
   - short_name_text
 
 TEMPLATE_solid_embed:
-  - ul_quarter_box
-  - ur_quarter_box
-  - ll_quarter_box
-  - lr_quarter_box
+  - outer_circle
+  - name_stripe_box
   - short_name_text
   - outline_circle
 

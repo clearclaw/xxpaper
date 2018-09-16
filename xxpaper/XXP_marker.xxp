@@ -2,7 +2,7 @@ marker:
 
   index:
 
-  -missing-:
+  token:
     CUT_ELEMENT: cutline_circle
 
     ELEMENTS:

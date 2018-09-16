@@ -14,9 +14,9 @@ CATALOGUE:
   marker:
     tile_type: token_tile
     klass: marker
-    typ: -missing-
+    typ: token
     name_index: marker/index
-    instance_index:
+    instance_index: token/index
   market2d:
     tile_type: market2d_tile
     klass: market2d
