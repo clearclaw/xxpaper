@@ -30,10 +30,11 @@ class Document (object):
         if p.isfile ():
           pdfmetrics.registerFont (TTFont(p.namebase, str (p)))
     self.canvas.setTitle (
-      "XXPaper: "
-      + Config.get ("xxpaper/title", {"default": "-missing-"}))
+      "XXPaper: " + Config.get ("meta/title", {"default": "-missing-"}))
     self.canvas.setAuthor (
-      Config.get ("xxpaper/author", {"default": "-missing-"}))
+      Config.get ("meta/author", {"default": "-missing-"}))
+    self.canvas.setSubject (
+      "XXPaper: " + Config.get ("meta/subject", {"default": "-missing-"}))
     return self.canvas
 
   @logtool.log_call

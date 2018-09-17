@@ -518,7 +518,9 @@ company:
       y: 84
 
     side_bar_box:
-      x: 36
+      x_inset: 4
+      y_inset: 0
+      x: 28
       y: ${asset_interior_box/x}
       fill: ${_/_related_fill}
 
