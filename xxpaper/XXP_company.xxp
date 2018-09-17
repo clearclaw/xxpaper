@@ -528,7 +528,7 @@ company:
       y_inset: 0
       x: 2
       y: ${asset_interior_box/x}
-      fill: ${asset_interior_box/fill}
+      fill: $[black_or_white (${side_bar_box/fill})]
 
     side_bar_lsplit_box:
       suppress: $[n != "1"]
@@ -536,7 +536,7 @@ company:
       y_inset: 0
       x: 2
       y: ${asset_interior_box/x}
-      fill: ${asset_interior_box/fill}
+      fill: $[black_or_white (${side_bar_box/fill})]
 
     type_bar_box:
       x: ${asset_interior_box/y}
