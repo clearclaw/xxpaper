@@ -1,0 +1,200 @@
+swatch:
+  swatch_interior_box:
+    fill: ${colour/xxp/${name_black_text/text}}
+
+  index:
+    WHITE:
+      name_black_text:
+        text: WHITE
+    BLACK:
+      name_black_text:
+        text: BLACK
+
+    DIRECTOR:
+      name_black_text:
+        text: DIRECTOR
+
+    TRAIN_YELLOW:
+      name_black_text:
+        text: TRAIN_YELLOW
+    TRAIN_GREEN:
+      name_black_text:
+        text: TRAIN_GREEN
+    TRAIN_BLUE:
+      name_black_text:
+        text: TRAIN_BLUE
+    TRAIN_BROWN:
+      name_black_text:
+        text: TRAIN_BROWN
+    TRAIN_RED:
+      name_black_text:
+        text: TRAIN_RED
+    TRAIN_GRAY:
+      name_black_text:
+        text: TRAIN_GRAY
+    TRAIN_PURPLE:
+      name_black_text:
+        text: TRAIN_PURPLE
+    TRAIN_BLACK:
+      name_black_text:
+        text: TRAIN_BLACK
+
+    H_GRAY:
+      name_black_text:
+        text: H_GRAY
+    P_GRAY:
+      name_black_text:
+        text: P_GRAY
+    L_GRAY:
+      name_black_text:
+        text: L_GRAY
+    M_GRAY:
+      name_black_text:
+        text: M_GRAY
+    D_GRAY:
+      name_black_text:
+        text: D_GRAY
+
+    L_GREEN:
+      name_black_text:
+        text: L_GREEN
+    H_GREEN:
+      name_black_text:
+        text: H_GREEN
+    P_GREEN:
+      name_black_text:
+        text: P_GREEN
+    M_GREEN:
+      name_black_text:
+        text: M_GREEN
+    D_GREEN:
+      name_black_text:
+        text: D_GREEN
+
+    L_TAN:
+      name_black_text:
+        text: L_TAN
+    H_TAN:
+      name_black_text:
+        text: H_TAN
+    P_TAN:
+      name_black_text:
+        text: P_TAN
+    M_TAN:
+      name_black_text:
+        text: M_TAN
+    D_TAN:
+      name_black_text:
+        text: D_TAN
+
+    L_PURPLE:
+      name_black_text:
+        text: L_PURPLE
+    H_PURPLE:
+      name_black_text:
+        text: H_PURPLE
+    P_PURPLE:
+      name_black_text:
+        text: P_PURPLE
+    M_PURPLE:
+      name_black_text:
+        text: M_PURPLE
+    D_PURPLE:
+      name_black_text:
+        text: D_PURPLE
+
+    L_RED:
+      name_black_text:
+        text: L_RED
+    H_RED:
+      name_black_text:
+        text: H_RED
+    P_RED:
+      name_black_text:
+        text: P_RED
+    M_RED:
+      name_black_text:
+        text: M_RED
+    D_RED:
+      name_black_text:
+        text: D_RED
+
+    L_BLUE:
+      name_black_text:
+        text: L_BLUE
+    H_BLUE:
+      name_black_text:
+        text: H_BLUE
+    P_BLUE:
+      name_black_text:
+        text: P_BLUE
+    M_BLUE:
+      name_black_text:
+        text: M_BLUE
+    D_BLUE:
+      name_black_text:
+        text: D_BLUE
+
+    L_YELLOW:
+      name_black_text:
+        text: L_YELLOW
+    H_YELLOW:
+      name_black_text:
+        text: H_YELLOW
+    P_YELLOW:
+      name_black_text:
+        text: P_YELLOW
+    M_YELLOW:
+      name_black_text:
+        text: M_YELLOW
+    D_YELLOW:
+      name_black_text:
+        text: D_YELLOW
+
+    L_BROWN:
+      name_black_text:
+        text: L_BROWN
+    H_BROWN:
+      name_black_text:
+        text: H_BROWN
+    P_BROWN:
+      name_black_text:
+        text: P_BROWN
+    M_BROWN:
+      name_black_text:
+        text: M_BROWN
+    D_BROWN:
+      name_black_text:
+        text: D_BROWN
+
+    L_PINK:
+      name_black_text:
+        text: L_PINK
+    H_PINK:
+      name_black_text:
+        text: H_PINK
+    P_PINK:
+      name_black_text:
+        text: P_PINK
+    M_PINK:
+      name_black_text:
+        text: M_PINK
+    D_PINK:
+      name_black_text:
+        text: D_PINK
+
+    L_AQUA:
+      name_black_text:
+        text: L_AQUA
+    H_AQUA:
+      name_black_text:
+        text: H_AQUA
+    P_AQUA:
+      name_black_text:
+        text: P_AQUA
+    M_AQUA:
+      name_black_text:
+        text: M_AQUA
+    D_AQUA:
+      name_black_text:
+        text: D_AQUA

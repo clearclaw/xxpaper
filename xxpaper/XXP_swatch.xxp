@@ -24,7 +24,7 @@ swatch:
     h_center: 0
     v_center: 0
     typeface: ${DEFAULT/typeface}
-    size: 12
+    size: ${name_black_text/size}
     x_inset: 54
     y_inset: 8
     x: 0

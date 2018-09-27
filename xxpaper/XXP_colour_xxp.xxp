@@ -14,15 +14,6 @@ xxp:
   TRAIN_PURPLE: ${colour/wikipedia/wisteria}
   TRAIN_BLACK: ${colour/xxp/BLACK}
 
-  TRAIN_YELLOW_TEXT: ${colour/xxp/BLACK}
-  TRAIN_GREEN_TEXT: ${colour/xxp/BLACK}
-  TRAIN_BLUE_TEXT: ${colour/xxp/BLACK}
-  TRAIN_BROWN_TEXT: ${colour/xxp/BLACK}
-  TRAIN_RED_TEXT: ${colour/xxp/BLACK}
-  TRAIN_GRAY_TEXT: ${colour/xxp/BLACK}
-  TRAIN_PURPLE_TEXT: ${colour/xxp/BLACK}
-  TRAIN_BLACK_TEXT: ${colour/xxp/WHITE}
-
   H_GRAY: [0.95, 0.95, 0.95]
   P_GRAY: [0.863, 0.863, 0.863]
   L_GRAY: [0.663, 0.663, 0.663]
