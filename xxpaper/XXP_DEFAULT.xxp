@@ -21,6 +21,7 @@ DEFAULT:
   size: 14
   suppress: False
   cutline_width: 0.01
+  cutline_stroke: ${colour/x11/gray90}
   margin: 4
 
   no_registration:
@@ -84,7 +85,7 @@ DEFAULT:
     x_num: 5
     y_num: 4
     width: ${DEFAULT/cutline_width}
-    stroke: ${colour/xxp/BLACK}
+    stroke: ${DEFAULT/cutline_stroke}
     margin: ${DEFAULT/margin}
 
   charter_tile:
@@ -94,7 +95,7 @@ DEFAULT:
     y_max: $[${charter_tile/y} - (2 * ${charter_tile/margin})]
     x_num: 2
     y_num: 2
-    stroke: ${colour/xxp/BLACK}
+    stroke: ${DEFAULT/cutline_stroke}
     width: ${DEFAULT/cutline_width}
     margin: ${DEFAULT/margin}
 
@@ -105,7 +106,7 @@ DEFAULT:
     y_max: $[${minor_charter_tile/y} - (2 * ${minor_charter_tile/margin})]
     x_num: 2
     y_num: 3
-    stroke: ${colour/xxp/BLACK}
+    stroke: ${DEFAULT/cutline_stroke}
     width: ${DEFAULT/cutline_width}
     margin: ${DEFAULT/margin}
 
@@ -116,7 +117,7 @@ DEFAULT:
     y_max: $[${market2d_tile/y} - (2 * ${market2d_tile/margin})]
     x_num: 12
     y_num: 12
-    stroke: ${colour/xxp/BLACK}
+    stroke: ${DEFAULT/cutline_stroke}
     width: ${DEFAULT/cutline_width}
     margin: 0
 
@@ -127,7 +128,7 @@ DEFAULT:
     y_max: $[${swatch_tile/y} - (2 * ${swatch_tile/margin})]
     x_num: 5
     y_num: 20
-    stroke: ${colour/xxp/BLACK}
+    stroke: ${DEFAULT/cutline_stroke}
     width: ${DEFAULT/cutline_width}
     margin: 0
 
