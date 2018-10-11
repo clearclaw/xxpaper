@@ -7,7 +7,9 @@ xxp:
 
   TRAIN_YELLOW: ${colour/hollasch/khaki}
   TRAIN_GREEN: ${colour/resene/Wistful}
-  TRAIN_BLUE: ${colour/resene/Downy}
+#  TRAIN_BLUE: ${colour/resene/Downy}
+#  TRAIN_BLUE: ${colour/hollasch/sky_blue}
+  TRAIN_BLUE: ${colour/wikipedia/light_cornflower_blue}
   TRAIN_BROWN: ${colour/resene/Viola}
   TRAIN_RED: ${colour/wikipedia/light_carmine_pink}
   TRAIN_GRAY: ${colour/x11/gray70}
