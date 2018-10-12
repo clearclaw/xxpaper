@@ -26,7 +26,7 @@ private:
   cutline_box: ${DEFAULT/asset_tile}
 
   asset_interior_box:
-    fill: ${colour/xxp/P_BROWN}
+    fill: ${colour/xxp/H_BROWN}
 
   close_bar_box:
     x_inset: 0
