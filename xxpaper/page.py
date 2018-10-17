@@ -79,10 +79,10 @@ class Page (object):
       self.canvas.setStrokeColorRGB (0, 0, 0)
       self.canvas.setLineWidth (0.2)
       self.canvas.circle (0.75 * inch, 0,
-                          0.15 * inch / 2.0,
+                          0.18 * inch / 2.0,
                           stroke = 1, fill = 0)
       self.canvas.circle (6.75 * inch, 0,
-                          0.15 * inch / 2.0,
+                          0.18 * inch / 2.0,
                           stroke = 1, fill = 0)
       self.canvas.setFillColorRGB (0, 0, 0)
       self.canvas.circle (0.75 * inch, 0,
