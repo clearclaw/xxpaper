@@ -16,6 +16,10 @@ def option_logging (flag): # pylint: disable=unused-argument
   logging.root.setLevel (logging.DEBUG)
 
 @logtool.log_call
+def option_nosentry (value):
+  Config._nosentry = value # pylint: disable=protected-access
+
+@logtool.log_call
 def option_verbose (value):
   Config._verbose = value # pylint: disable=protected-access
 
@@ -29,6 +33,9 @@ def option_version (opt): # pylint: disable=unused-argument
            tree_view = "-H")
 @clip.flag ("-H", "--HELP",  help = "Help for all sub-commands")
 @clip.flag ("-D", "--debug", name = "debug", help = "Enable debug logging",
+            callback = option_logging)
+@clip.flag ("-N", "--nosentry", name = "nosentry",
+            help = "Do not send exception reports to the developers",
             callback = option_logging)
 @clip.flag ("-v", "--verbose", help = "Show keys as they are resolved",
             callback = option_verbose)
@@ -50,11 +57,13 @@ def main ():
   except Exception as e:
     logtool.log_fault (e)
     print >> sys.stderr, ("Something broke!")
-    client = raven.Client (
-      "https://250e838eaff24eee9461682bc7160904"
-      ":b455442d9dcb4773a82786844f430386@sentry.io/127918")
-    h = client.captureException ()
-    print >> sys.stderr, "\t Sentry filed: %s" % h
+    if not (getattr (Config, "_nosentry", False)
+            or Config.get ("user/nosentry", params = {"default": False})):
+      client = raven.Client (
+        "https://250e838eaff24eee9461682bc7160904"
+        ":b455442d9dcb4773a82786844f430386@sentry.io/127918")
+      h = client.captureException ()
+      print >> sys.stderr, "\t Sentry filed: %s" % h
     sys.exit (1)
 
 if __name__ == "__main__":

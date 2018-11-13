@@ -5,7 +5,7 @@ import clip, logging, logtool
 from .main import app_main
 
 LOG = logging.getLogger (__name__)
-OPTIONS = ["help", "debug", "verbose", "version"]
+OPTIONS = ["help", "debug", "nosentry", "verbose", "version"]
 
 @app_main.subcommand (
   name = "check",
