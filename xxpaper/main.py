@@ -58,7 +58,7 @@ def main ():
     logtool.log_fault (e)
     print >> sys.stderr, ("Something broke!")
     if not (getattr (Config, "_nosentry", False)
-            or Config.get ("user/nosentry", params = {"default": False})):
+            or Config.get ("user/nosentry", params = {"default": True})):
       client = raven.Client (
         "https://250e838eaff24eee9461682bc7160904"
         ":b455442d9dcb4773a82786844f430386@sentry.io/127918")
