@@ -1,5 +1,9 @@
 company:
 
+  _:
+    token_1_text_text: Free
+    token_2_text_text: $40
+
   index:
 
     B&M:
@@ -7,26 +11,21 @@ company:
         long_name_text_text: |
             Boston & Maine
         short_name_text_text: B&M
-        token_1_text_text: Free
-        token_2_text_text: $40
         _major_fill: ${colour/wikipedia/ultramarine}
         _minor_fill: ${colour/wikipedia/ultramarine}
         comment_text_text: |
             Founded in 1833 as the
             Andover & Wilmington Railroad
         _related_fill: ${colour/wikipedia/han_blue}
-        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
-        index: "$[index_of (5)]"
+        index: $[index_of (5)]
 
     B&O:
       _:
         long_name_text_text: |
             Baltimore & Ohio
         short_name_text_text: B&O
-        token_1_text_text: Free
-        token_2_text_text: $40
         token_3_text_text: $100
         _major_fill: ${colour/wikipedia/banana_yellow}
         _minor_fill: ${colour/hollasch/blue}
@@ -34,7 +33,6 @@ company:
             First to offer scheduled
             passenger service
         _related_fill: ${colour/hollasch/steel_blue}
-        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
         _:
@@ -61,7 +59,7 @@ company:
           - short_name_text
           - outline_circle
 
-        index: "$[index_of (6)]"
+        index: $[index_of (6)]
 
     CPR:
       _:
@@ -69,8 +67,6 @@ company:
             Canada Pacific
             Railroad
         short_name_text_text: CPR
-        token_1_text_text: Free
-        token_2_text_text: $40
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/hollasch/brown_ochre}
@@ -79,10 +75,9 @@ company:
             Canada's first
             transcontinental railway
         _related_fill: ${colour/hollasch/brick}
-        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
-        index: "$[index_of (7)]"
+        index: $[index_of (7)]
 
     C&O:
       _:
@@ -90,8 +85,6 @@ company:
             Chesapeake & Ohio
             Railroad
         short_name_text_text: C&O
-        token_1_text_text: Free
-        token_2_text_text: $40
         token_3_text_text: $100
         _major_fill: ${colour/hollasch/sky_blue_deep}
         _minor_fill: ${colour/hollasch/sky_blue_deep}
@@ -101,15 +94,13 @@ company:
         _related_fill: ${colour/hollasch/powder_blue}
 
       token:
-        index: "$[index_of (6)]"
+        index: $[index_of (6)]
 
     ERIE:
       _:
         long_name_text_text: |
             Erie Railroad
         short_name_text_text: ERIE
-        token_1_text_text: Free
-        token_2_text_text: $40
         token_3_text_text: $100
         _major_fill: ${colour/x11/yellow}
         _minor_fill: ${colour/x11/yellow}
@@ -119,7 +110,7 @@ company:
         _related_fill: ${colour/x11/darkgoldenrod1}
 
       token:
-        index: "$[index_of (6)]"
+        index: $[index_of (6)]
 
     NYNH&H:
       _:
@@ -127,8 +118,6 @@ company:
             New York New Haven
             & Hartford Railway
         short_name_text_text: NH
-        token_1_text_text: Free
-        token_2_text_text: $40
         _major_fill: ${colour/x11/sandybrown}
         _minor_fill: ${colour/x11/sandybrown}
         comment_text_text: '"The Consolidated"'
@@ -139,7 +128,7 @@ company:
           size: 13
 
       token:
-        index: "$[index_of (5)]"
+        index: $[index_of (5)]
 
     NYC:
       _:
@@ -147,20 +136,16 @@ company:
             New York Central
             Railroad
         short_name_text_text: NYC
-        token_1_text_text: Free
-        token_2_text_text: $40
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/xxp/BLACK}
         _minor_fill: ${colour/xxp/BLACK}
         comment_text_text: The Water Level Route
         _related_fill: ${colour/x11/gray50}
-        station_extra_count: 3
-        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
 
-        index: "$[index_of (7)]"
+        index: $[index_of (7)]
 
     PRR:
       _:
@@ -168,19 +153,15 @@ company:
              Pennsylania
              Railroad
         short_name_text_text: PRR
-        token_1_text_text: Free
-        token_2_text_text: $40
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/hollasch/cadmium_red_light}
         _minor_fill: ${colour/hollasch/cadmium_red_light}
         comment_text_text: 'The "Pennsy"'
         _related_fill: ${colour/hollasch/tomato}
-        station_extra_count: 3
-        _share_pct_text_fill_x: ${colour/xxp/WHITE}
 
       token:
-        index: "$[index_of (7)]"
+        index: $[index_of (7)]
 
 marker:
   index:
@@ -192,7 +173,7 @@ marker:
           - middle_circle
           - inner_circle
 
-        index: "$[index_of (1)]"
+        index: $[index_of (1)]
 
       outer_circle:
         fill: ${colour/xxp/M_RED}
@@ -213,7 +194,7 @@ private:
             Schuykill Valley
             Railroad
         power_text_text: "Blocks: G15"
-        cost_text_text: "Cost: $40"
+        cost_text_text: "Cost: $20"
         revenue_text_text: "Revenue: $5"
 
     C&StL:
@@ -226,7 +207,7 @@ private:
             Owning corporation may place a free,
             track tile at B20 in addition to
             its normal track tile lay.
-        cost_text_text: "Cost: $60"
+        cost_text_text: "Cost: $40"
         revenue_text_text: "Revenue: $10"
 
     D&H:
@@ -289,7 +270,7 @@ train:
         long_name_text_text: "2"
         cost_text_text_p: $80
       model:
-        index: "$[index_of (6)]"
+        index: $[index_of (6)]
 
     3T:
       _:
@@ -298,7 +279,7 @@ train:
         long_name_text_text: "3"
         cost_text_text_p: $180
       model:
-        index: "$[index_of (5)]"
+        index: $[index_of (5)]
 
     4T:
       _:
@@ -309,7 +290,7 @@ train:
         note_text_text: |
             To DIESEL: $800
       model:
-        index: "$[index_of (4)]"
+        index: $[index_of (4)]
 
     5T:
       _:
@@ -319,7 +300,7 @@ train:
         cost_text_text_p: $450
         rusted_text_text: PERMANENT
       model:
-        index: "$[index_of (3)]"
+        index: $[index_of (3)]
 
     6T:
       _:
@@ -346,4 +327,4 @@ train:
       long_name_text:
         size: 32
       model:
-        index: "$[index_of (8)]"
+        index: $[index_of (8)]
