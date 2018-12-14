@@ -1,0 +1,105 @@
+asset_interior_box:
+  x: ${asset_tile/x_max}
+  y: ${asset_tile/y_max}
+
+charter_interior_box:
+  x: ${charter_tile/x_max}
+  y: ${charter_tile/y_max}
+
+narrow_charter_interior_box:
+  x: ${narrow_charter_tile/x_max}
+  y: ${narrow_charter_tile/y_max}
+
+minor_charter_interior_box:
+  x: ${minor_charter_tile/x_max}
+  y: ${minor_charter_tile/y_max}
+
+market2d_interior_box:
+  x: ${market2d_tile/x_max}
+  y: ${market2d_tile/y_max}
+
+swatch_interior_box:
+  x: ${swatch_tile/x_max}
+  y: ${swatch_tile/y_max}
+
+token_interior_box:
+  x: 44
+  y: 44
+  # x: ${token_tile/x_max}
+  # y: ${token_tile/y_max}
+
+asset_tile:
+  x: 108
+  y: 180
+  x_max: $[${asset_tile/x} - (2 * ${asset_tile/margin})]
+  y_max: $[${asset_tile/y} - (2 * ${asset_tile/margin})]
+  x_num: 5
+  y_num: 4
+  width: ${DEFAULT/cutline_width}
+  stroke: ${DEFAULT/cutline_stroke}
+  margin: ${DEFAULT/margin}
+
+charter_tile:
+  x: $[7.5 * 72 / 2.0]
+  y: $[10 * 72 / 2.0]
+  x_max: $[${charter_tile/x} - (2 * ${charter_tile/margin})]
+  y_max: $[${charter_tile/y} - (2 * ${charter_tile/margin})]
+  x_num: 2
+  y_num: 2
+  stroke: ${DEFAULT/cutline_stroke}
+  width: ${DEFAULT/cutline_width}
+  margin: ${DEFAULT/margin}
+
+narrow_charter_tile:
+  x: $[7.5 * 72 ]
+  y: $[10 * 72 / 3.0]
+  x_max: $[${narrow_charter_tile/x} - (2 * ${narrow_charter_tile/margin})]
+  y_max: $[${narrow_charter_tile/y} - (2 * ${narrow_charter_tile/margin})]
+  x_num: 1
+  y_num: 3
+  stroke: ${DEFAULT/cutline_stroke}
+  width: ${DEFAULT/cutline_width}
+  margin: ${DEFAULT/margin}
+
+minor_charter_tile:
+  x: $[7.5 * 72 / 2.0]
+  y: $[10 * 72 / 3.0]
+  x_max: $[${minor_charter_tile/x} - (2 * ${minor_charter_tile/margin})]
+  y_max: $[${minor_charter_tile/y} - (2 * ${minor_charter_tile/margin})]
+  x_num: 2
+  y_num: 3
+  stroke: ${DEFAULT/cutline_stroke}
+  width: ${DEFAULT/cutline_width}
+  margin: ${DEFAULT/margin}
+
+market2d_tile:
+  x: 45
+  y: 60
+  x_max: $[${market2d_tile/x} - (2 * ${market2d_tile/margin})]
+  y_max: $[${market2d_tile/y} - (2 * ${market2d_tile/margin})]
+  x_num: 12
+  y_num: 12
+  stroke: ${DEFAULT/cutline_stroke}
+  width: ${DEFAULT/cutline_width}
+  margin: 0
+
+swatch_tile:
+  x: 108
+  y: 36
+  x_max: $[${swatch_tile/x} - (2 * ${swatch_tile/margin})]
+  y_max: $[${swatch_tile/y} - (2 * ${swatch_tile/margin})]
+  x_num: 5
+  y_num: 20
+  stroke: ${DEFAULT/cutline_stroke}
+  width: ${DEFAULT/cutline_width}
+  margin: 0
+
+token_tile:
+  x: 50
+  y: 50
+  x_max: $[${token_tile/x} - (2 * ${token_tile/margin})]
+  y_max: $[${token_tile/y} - (2 * ${token_tile/margin})]
+  x_num: 11
+  y_num: 14
+  width: ${DEFAULT/cutline_width}
+  margin: $[(${token_tile/x} - ${token_interior_box/x}) / 2]
