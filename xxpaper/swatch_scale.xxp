@@ -724,3 +724,40 @@ swatch:
     colour_12_0:
       name_black_text:
         text: colour_12_0
+
+    private_01:
+      name_black_text:
+        text: private_01
+    private_02:
+      name_black_text:
+        text: private_02
+    private_03:
+      name_black_text:
+        text: private_03
+    private_04:
+      name_black_text:
+        text: private_04
+    private_05:
+      name_black_text:
+        text: private_05
+    private_06:
+      name_black_text:
+        text: private_06
+    private_07:
+      name_black_text:
+        text: private_07
+    private_08:
+      name_black_text:
+        text: private_08
+    private_09:
+      name_black_text:
+        text: private_09
+    private_10:
+      name_black_text:
+        text: private_10
+    private_11:
+      name_black_text:
+        text: private_11
+    private_12:
+      name_black_text:
+        text: private_12

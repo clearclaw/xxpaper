@@ -253,3 +253,16 @@ scale:
   colour_10_0: [0.996094, 0.796875, 0.996094]
   colour_11_0: [0.996094, 0.796875, 0.894531]
   colour_12_0: [0.996094, 0.996094, 0.996094]
+
+  private_12: ${colour/scale/colour_01_0}
+  private_11: ${colour/scale/colour_00_0}
+  private_10: ${colour/scale/colour_11_0}
+  private_09: ${colour/scale/colour_10_0}
+  private_08: ${colour/scale/colour_09_0}
+  private_07: ${colour/scale/colour_08_0}
+  private_06: ${colour/scale/colour_07_0}
+  private_05: ${colour/scale/colour_06_0}
+  private_04: ${colour/scale/colour_05_0}
+  private_03: ${colour/scale/colour_04_0}
+  private_02: ${colour/scale/colour_03_0}
+  private_01: ${colour/scale/colour_02_0}
