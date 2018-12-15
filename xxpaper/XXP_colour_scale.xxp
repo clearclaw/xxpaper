@@ -1,0 +1,255 @@
+# https://www.rapidtables.com/web/color/RGB_Color.html
+
+scale:
+
+  red_8:       ${colour/scale/colour_00_8}
+  orange_8:    ${colour/scale/colour_01_8}
+  yellow_8:    ${colour/scale/colour_02_8}
+  lime_8:      ${colour/scale/colour_03_8}
+  green_8:     ${colour/scale/colour_04_8}
+  cyan_8:      ${colour/scale/colour_05_8}
+  teal_8:      ${colour/scale/colour_06_8}
+  azure_8:     ${colour/scale/colour_07_8}
+  blue_8:      ${colour/scale/colour_08_8}
+  violet_8:    ${colour/scale/colour_09_8}
+  purple_8:    ${colour/scale/colour_10_8}
+  red_8:       ${colour/scale/colour_11_8}
+  gray_8:      ${colour/scale/colour_12_8}
+
+  red_7:       ${colour/scale/colour_00_7}
+  orange_7:    ${colour/scale/colour_01_7}
+  yellow_7:    ${colour/scale/colour_02_7}
+  lime_7:      ${colour/scale/colour_03_7}
+  green_7:     ${colour/scale/colour_04_7}
+  cyan_7:      ${colour/scale/colour_05_7}
+  teal_7:      ${colour/scale/colour_06_7}
+  azure_7:     ${colour/scale/colour_07_7}
+  blue_7:      ${colour/scale/colour_08_7}
+  violet_7:    ${colour/scale/colour_09_7}
+  purple_7:    ${colour/scale/colour_10_7}
+  red_7:       ${colour/scale/colour_11_7}
+  gray_7:      ${colour/scale/colour_12_7}
+
+  red_6:       ${colour/scale/colour_00_6}
+  orange_6:    ${colour/scale/colour_01_6}
+  yellow_6:    ${colour/scale/colour_02_6}
+  lime_6:      ${colour/scale/colour_03_6}
+  green_6:     ${colour/scale/colour_04_6}
+  cyan_6:      ${colour/scale/colour_05_6}
+  teal_6:      ${colour/scale/colour_06_6}
+  azure_6:     ${colour/scale/colour_07_6}
+  blue_6:      ${colour/scale/colour_08_6}
+  violet_6:    ${colour/scale/colour_09_6}
+  purple_6:    ${colour/scale/colour_10_6}
+  red_6:       ${colour/scale/colour_11_6}
+  gray_6:      ${colour/scale/colour_12_6}
+
+  red_5:       ${colour/scale/colour_00_5}
+  orange_5:    ${colour/scale/colour_01_5}
+  yellow_5:    ${colour/scale/colour_02_5}
+  lime_5:      ${colour/scale/colour_03_5}
+  green_5:     ${colour/scale/colour_04_5}
+  cyan_5:      ${colour/scale/colour_05_5}
+  teal_5:      ${colour/scale/colour_06_5}
+  azure_5:     ${colour/scale/colour_07_5}
+  blue_5:      ${colour/scale/colour_08_5}
+  violet_5:    ${colour/scale/colour_09_5}
+  purple_5:    ${colour/scale/colour_10_5}
+  red_5:       ${colour/scale/colour_11_5}
+  gray_5:      ${colour/scale/colour_12_5}
+
+  red_4:       ${colour/scale/colour_00_4}
+  orange_4:    ${colour/scale/colour_01_4}
+  yellow_4:    ${colour/scale/colour_02_4}
+  lime_4:      ${colour/scale/colour_03_4}
+  green_4:     ${colour/scale/colour_04_4}
+  cyan_4:      ${colour/scale/colour_05_4}
+  teal_4:      ${colour/scale/colour_06_4}
+  azure_4:     ${colour/scale/colour_07_4}
+  blue_4:      ${colour/scale/colour_08_4}
+  violet_4:    ${colour/scale/colour_09_4}
+  purple_4:    ${colour/scale/colour_10_4}
+  red_4:       ${colour/scale/colour_11_4}
+  gray_4:      ${colour/scale/colour_12_4}
+
+  red_3:       ${colour/scale/colour_00_3}
+  orange_3:    ${colour/scale/colour_01_3}
+  yellow_3:    ${colour/scale/colour_02_3}
+  lime_3:      ${colour/scale/colour_03_3}
+  green_3:     ${colour/scale/colour_04_3}
+  cyan_3:      ${colour/scale/colour_05_3}
+  teal_3:      ${colour/scale/colour_06_3}
+  azure_3:     ${colour/scale/colour_07_3}
+  blue_3:      ${colour/scale/colour_08_3}
+  violet_3:    ${colour/scale/colour_09_3}
+  purple_3:    ${colour/scale/colour_10_3}
+  red_3:       ${colour/scale/colour_11_3}
+  gray_3:      ${colour/scale/colour_12_3}
+
+  red_2:       ${colour/scale/colour_00_2}
+  orange_2:    ${colour/scale/colour_01_2}
+  yellow_2:    ${colour/scale/colour_02_2}
+  lime_2:      ${colour/scale/colour_03_2}
+  green_2:     ${colour/scale/colour_04_2}
+  cyan_2:      ${colour/scale/colour_05_2}
+  teal_2:      ${colour/scale/colour_06_2}
+  azure_2:     ${colour/scale/colour_07_2}
+  blue_2:      ${colour/scale/colour_08_2}
+  violet_2:    ${colour/scale/colour_09_2}
+  purple_2:    ${colour/scale/colour_10_2}
+  red_2:       ${colour/scale/colour_11_2}
+  gray_2:      ${colour/scale/colour_12_2}
+
+  red_1:       ${colour/scale/colour_00_1}
+  orange_1:    ${colour/scale/colour_01_1}
+  yellow_1:    ${colour/scale/colour_02_1}
+  lime_1:      ${colour/scale/colour_03_1}
+  green_1:     ${colour/scale/colour_04_1}
+  cyan_1:      ${colour/scale/colour_05_1}
+  teal_1:      ${colour/scale/colour_06_1}
+  azure_1:     ${colour/scale/colour_07_1}
+  blue_1:      ${colour/scale/colour_08_1}
+  violet_1:    ${colour/scale/colour_09_1}
+  purple_1:    ${colour/scale/colour_10_1}
+  red_1:       ${colour/scale/colour_11_1}
+  gray_1:      ${colour/scale/colour_12_1}
+
+  red_0:       ${colour/scale/colour_00_0}
+  orange_0:    ${colour/scale/colour_01_0}
+  yellow_0:    ${colour/scale/colour_02_0}
+  lime_0:      ${colour/scale/colour_03_0}
+  green_0:     ${colour/scale/colour_04_0}
+  cyan_0:      ${colour/scale/colour_05_0}
+  teal_0:      ${colour/scale/colour_06_0}
+  azure_0:     ${colour/scale/colour_07_0}
+  blue_0:      ${colour/scale/colour_08_0}
+  violet_0:    ${colour/scale/colour_09_0}
+  purple_0:    ${colour/scale/colour_10_0}
+  red_0:       ${colour/scale/colour_11_0}
+  gray_0:      ${colour/scale/colour_12_0}
+
+  colour_00_8: [0.199219, 0.000000, 0.000000]
+  colour_01_8: [0.199219, 0.097656, 0.000000]
+  colour_02_8: [0.199219, 0.199219, 0.000000]
+  colour_03_8: [0.097656, 0.199219, 0.000000]
+  colour_04_8: [0.000000, 0.199219, 0.000000]
+  colour_05_8: [0.000000, 0.199219, 0.097656]
+  colour_06_8: [0.000000, 0.199219, 0.199219]
+  colour_07_8: [0.000000, 0.097656, 0.199219]
+  colour_08_8: [0.000000, 0.000000, 0.199219]
+  colour_09_8: [0.097656, 0.000000, 0.199219]
+  colour_10_8: [0.199219, 0.000000, 0.199219]
+  colour_11_8: [0.199219, 0.000000, 0.097656]
+  colour_12_8: [0.000000, 0.000000, 0.000000]
+
+  colour_00_7: [0.398438, 0.000000, 0.000000]
+  colour_01_7: [0.398438, 0.199219, 0.000000]
+  colour_02_7: [0.398438, 0.398438, 0.000000]
+  colour_03_7: [0.199219, 0.398438, 0.000000]
+  colour_04_7: [0.000000, 0.398438, 0.000000]
+  colour_05_7: [0.000000, 0.398438, 0.199219]
+  colour_06_7: [0.000000, 0.398438, 0.398438]
+  colour_07_7: [0.000000, 0.199219, 0.398438]
+  colour_08_7: [0.000000, 0.000000, 0.398438]
+  colour_09_7: [0.199219, 0.000000, 0.398438]
+  colour_10_7: [0.398438, 0.000000, 0.398438]
+  colour_11_7: [0.398438, 0.000000, 0.199219]
+  colour_12_7: [0.125000, 0.125000, 0.125000]
+
+  colour_00_6: [0.597656, 0.000000, 0.000000]
+  colour_01_6: [0.597656, 0.296875, 0.000000]
+  colour_02_6: [0.597656, 0.597656, 0.000000]
+  colour_03_6: [0.296875, 0.597656, 0.000000]
+  colour_04_6: [0.000000, 0.597656, 0.000000]
+  colour_05_6: [0.000000, 0.597656, 0.296875]
+  colour_06_6: [0.000000, 0.597656, 0.597656]
+  colour_07_6: [0.000000, 0.296875, 0.597656]
+  colour_08_6: [0.000000, 0.000000, 0.597656]
+  colour_09_6: [0.296875, 0.000000, 0.597656]
+  colour_10_6: [0.597656, 0.000000, 0.597656]
+  colour_11_6: [0.597656, 0.000000, 0.296875]
+  colour_12_6: [0.250000, 0.250000, 0.250000]
+
+  colour_00_5: [0.796875, 0.000000, 0.000000]
+  colour_01_5: [0.796875, 0.398438, 0.000000]
+  colour_02_5: [0.796875, 0.796875, 0.000000]
+  colour_03_5: [0.398438, 0.796875, 0.000000]
+  colour_04_5: [0.000000, 0.796875, 0.000000]
+  colour_05_5: [0.000000, 0.796875, 0.398438]
+  colour_06_5: [0.000000, 0.796875, 0.796875]
+  colour_07_5: [0.000000, 0.398438, 0.796875]
+  colour_08_5: [0.000000, 0.000000, 0.796875]
+  colour_09_5: [0.398438, 0.000000, 0.796875]
+  colour_10_5: [0.796875, 0.000000, 0.796875]
+  colour_11_5: [0.796875, 0.000000, 0.398438]
+  colour_12_5: [0.375000, 0.375000, 0.375000]
+
+  colour_00_4: [0.996094, 0.000000, 0.000000]
+  colour_01_4: [0.996094, 0.500000, 0.000000]
+  colour_02_4: [0.996094, 0.996094, 0.000000]
+  colour_03_4: [0.500000, 0.996094, 0.000000]
+  colour_04_4: [0.000000, 0.996094, 0.000000]
+  colour_05_4: [0.000000, 0.996094, 0.500000]
+  colour_06_4: [0.000000, 0.996094, 0.996094]
+  colour_07_4: [0.000000, 0.500000, 0.996094]
+  colour_08_4: [0.000000, 0.000000, 0.996094]
+  colour_09_4: [0.496094, 0.000000, 0.996094]
+  colour_10_4: [0.996094, 0.000000, 0.996094]
+  colour_11_4: [0.996094, 0.000000, 0.496094]
+  colour_12_4: [0.500000, 0.500000, 0.500000]
+
+  colour_00_3: [0.996094, 0.199219, 0.199219]
+  colour_01_3: [0.996094, 0.597656, 0.199219]
+  colour_02_3: [0.996094, 0.996094, 0.199219]
+  colour_03_3: [0.597656, 0.996094, 0.199219]
+  colour_04_3: [0.199219, 0.996094, 0.199219]
+  colour_05_3: [0.199219, 0.996094, 0.597656]
+  colour_06_3: [0.199219, 0.996094, 0.996094]
+  colour_07_3: [0.199219, 0.597656, 0.996094]
+  colour_08_3: [0.199219, 0.199219, 0.996094]
+  colour_09_3: [0.597656, 0.199219, 0.996094]
+  colour_10_3: [0.996094, 0.199219, 0.996094]
+  colour_11_3: [0.996094, 0.199219, 0.597656]
+  colour_12_3: [0.625000, 0.625000, 0.625000]
+
+  colour_00_2: [0.996094, 0.398438, 0.398438]
+  colour_01_2: [0.996094, 0.695312, 0.398438]
+  colour_02_2: [0.996094, 0.996094, 0.398438]
+  colour_03_2: [0.695312, 0.996094, 0.398438]
+  colour_04_2: [0.398438, 0.996094, 0.398438]
+  colour_05_2: [0.398438, 0.996094, 0.695312]
+  colour_06_2: [0.398438, 0.996094, 0.996094]
+  colour_07_2: [0.398438, 0.695312, 0.996094]
+  colour_08_2: [0.398438, 0.398438, 0.996094]
+  colour_09_2: [0.695312, 0.398438, 0.996094]
+  colour_10_2: [0.996094, 0.398438, 0.996094]
+  colour_11_2: [0.996094, 0.398438, 0.695312]
+  colour_12_2: [0.750000, 0.750000, 0.750000]
+
+  colour_00_1: [0.996094, 0.597656, 0.597656]
+  colour_01_1: [0.996094, 0.796875, 0.597656]
+  colour_02_1: [0.996094, 0.996094, 0.597656]
+  colour_03_1: [0.796875, 0.996094, 0.597656]
+  colour_04_1: [0.597656, 0.996094, 0.597656]
+  colour_05_1: [0.597656, 0.996094, 0.796875]
+  colour_06_1: [0.597656, 0.996094, 0.996094]
+  colour_07_1: [0.597656, 0.796875, 0.996094]
+  colour_08_1: [0.597656, 0.597656, 0.996094]
+  colour_09_1: [0.796875, 0.597656, 0.996094]
+  colour_10_1: [0.996094, 0.597656, 0.996094]
+  colour_11_1: [0.996094, 0.597656, 0.796875]
+  colour_12_1: [0.875000, 0.875000, 0.875000]
+
+  colour_00_0: [0.996094, 0.796875, 0.796875]
+  colour_01_0: [0.996094, 0.894531, 0.796875]
+  colour_02_0: [0.996094, 0.996094, 0.796875]
+  colour_03_0: [0.894531, 0.996094, 0.796875]
+  colour_04_0: [0.796875, 0.996094, 0.796875]
+  colour_05_0: [0.796875, 0.996094, 0.894531]
+  colour_06_0: [0.796875, 0.996094, 0.996094]
+  colour_07_0: [0.796875, 0.894531, 0.996094]
+  colour_08_0: [0.796875, 0.796875, 0.996094]
+  colour_09_0: [0.894531, 0.796875, 0.996094]
+  colour_10_0: [0.996094, 0.796875, 0.996094]
+  colour_11_0: [0.996094, 0.796875, 0.894531]
+  colour_12_0: [0.996094, 0.996094, 0.996094]

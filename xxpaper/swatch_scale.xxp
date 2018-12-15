@@ -1,0 +1,726 @@
+swatch:
+  swatch_interior_box:
+    fill: ${colour/scale/${name_black_text/text}}
+
+  index:
+
+    red_8:
+      name_black_text:
+        text: red_8
+    orange_8:
+      name_black_text:
+        text: orange_8
+    yellow_8:
+      name_black_text:
+        text: yellow_8
+    lime_8:
+      name_black_text:
+        text: lime_8
+    green_8:
+      name_black_text:
+        text: green_8
+    cyan_8:
+      name_black_text:
+        text: cyan_8
+    teal_8:
+      name_black_text:
+        text: teal_8
+    azure_8:
+      name_black_text:
+        text: azure_8
+    blue_8:
+      name_black_text:
+        text: blue_8
+    violet_8:
+      name_black_text:
+        text: violet_8
+    purple_8:
+      name_black_text:
+        text: purple_8
+    red_8:
+      name_black_text:
+        text: red_8
+    gray_8:
+      name_black_text:
+        text: gray_8
+
+    red_7:
+      name_black_text:
+        text: red_7
+    orange_7:
+      name_black_text:
+        text: orange_7
+    yellow_7:
+      name_black_text:
+        text: yellow_7
+    lime_7:
+      name_black_text:
+        text: lime_7
+    green_7:
+      name_black_text:
+        text: green_7
+    cyan_7:
+      name_black_text:
+        text: cyan_7
+    teal_7:
+      name_black_text:
+        text: teal_7
+    azure_7:
+      name_black_text:
+        text: azure_7
+    blue_7:
+      name_black_text:
+        text: blue_7
+    violet_7:
+      name_black_text:
+        text: violet_7
+    purple_7:
+      name_black_text:
+        text: purple_7
+    red_7:
+      name_black_text:
+        text: red_7
+    gray_7:
+      name_black_text:
+        text: gray_7
+
+    red_6:
+      name_black_text:
+        text: red_6
+    orange_6:
+      name_black_text:
+        text: orange_6
+    yellow_6:
+      name_black_text:
+        text: yellow_6
+    lime_6:
+      name_black_text:
+        text: lime_6
+    green_6:
+      name_black_text:
+        text: green_6
+    cyan_6:
+      name_black_text:
+        text: cyan_6
+    teal_6:
+      name_black_text:
+        text: teal_6
+    azure_6:
+      name_black_text:
+        text: azure_6
+    blue_6:
+      name_black_text:
+        text: blue_6
+    violet_6:
+      name_black_text:
+        text: violet_6
+    purple_6:
+      name_black_text:
+        text: purple_6
+    red_6:
+      name_black_text:
+        text: red_6
+    gray_6:
+      name_black_text:
+        text: gray_6
+
+    red_5:
+      name_black_text:
+        text: red_5
+    orange_5:
+      name_black_text:
+        text: orange_5
+    yellow_5:
+      name_black_text:
+        text: yellow_5
+    lime_5:
+      name_black_text:
+        text: lime_5
+    green_5:
+      name_black_text:
+        text: green_5
+    cyan_5:
+      name_black_text:
+        text: cyan_5
+    teal_5:
+      name_black_text:
+        text: teal_5
+    azure_5:
+      name_black_text:
+        text: azure_5
+    blue_5:
+      name_black_text:
+        text: blue_5
+    violet_5:
+      name_black_text:
+        text: violet_5
+    purple_5:
+      name_black_text:
+        text: purple_5
+    red_5:
+      name_black_text:
+        text: red_5
+    gray_5:
+      name_black_text:
+        text: gray_5
+
+    red_4:
+      name_black_text:
+        text: red_4
+    orange_4:
+      name_black_text:
+        text: orange_4
+    yellow_4:
+      name_black_text:
+        text: yellow_4
+    lime_4:
+      name_black_text:
+        text: lime_4
+    green_4:
+      name_black_text:
+        text: green_4
+    cyan_4:
+      name_black_text:
+        text: cyan_4
+    teal_4:
+      name_black_text:
+        text: teal_4
+    azure_4:
+      name_black_text:
+        text: azure_4
+    blue_4:
+      name_black_text:
+        text: blue_4
+    violet_4:
+      name_black_text:
+        text: violet_4
+    purple_4:
+      name_black_text:
+        text: purple_4
+    red_4:
+      name_black_text:
+        text: red_4
+    gray_4:
+      name_black_text:
+        text: gray_4
+
+    red_3:
+      name_black_text:
+        text: red_3
+    orange_3:
+      name_black_text:
+        text: orange_3
+    yellow_3:
+      name_black_text:
+        text: yellow_3
+    lime_3:
+      name_black_text:
+        text: lime_3
+    green_3:
+      name_black_text:
+        text: green_3
+    cyan_3:
+      name_black_text:
+        text: cyan_3
+    teal_3:
+      name_black_text:
+        text: teal_3
+    azure_3:
+      name_black_text:
+        text: azure_3
+    blue_3:
+      name_black_text:
+        text: blue_3
+    violet_3:
+      name_black_text:
+        text: violet_3
+    purple_3:
+      name_black_text:
+        text: purple_3
+    red_3:
+      name_black_text:
+        text: red_3
+    gray_3:
+      name_black_text:
+        text: gray_3
+
+    red_2:
+      name_black_text:
+        text: red_2
+    orange_2:
+      name_black_text:
+        text: orange_2
+    yellow_2:
+      name_black_text:
+        text: yellow_2
+    lime_2:
+      name_black_text:
+        text: lime_2
+    green_2:
+      name_black_text:
+        text: green_2
+    cyan_2:
+      name_black_text:
+        text: cyan_2
+    teal_2:
+      name_black_text:
+        text: teal_2
+    azure_2:
+      name_black_text:
+        text: azure_2
+    blue_2:
+      name_black_text:
+        text: blue_2
+    violet_2:
+      name_black_text:
+        text: violet_2
+    purple_2:
+      name_black_text:
+        text: purple_2
+    red_2:
+      name_black_text:
+        text: red_2
+    gray_2:
+      name_black_text:
+        text: gray_2
+
+    red_1:
+      name_black_text:
+        text: red_1
+    orange_1:
+      name_black_text:
+        text: orange_1
+    yellow_1:
+      name_black_text:
+        text: yellow_1
+    lime_1:
+      name_black_text:
+        text: lime_1
+    green_1:
+      name_black_text:
+        text: green_1
+    cyan_1:
+      name_black_text:
+        text: cyan_1
+    teal_1:
+      name_black_text:
+        text: teal_1
+    azure_1:
+      name_black_text:
+        text: azure_1
+    blue_1:
+      name_black_text:
+        text: blue_1
+    violet_1:
+      name_black_text:
+        text: violet_1
+    purple_1:
+      name_black_text:
+        text: purple_1
+    red_1:
+      name_black_text:
+        text: red_1
+    gray_1:
+      name_black_text:
+        text: gray_1
+
+    red_0:
+      name_black_text:
+        text: red_0
+    orange_0:
+      name_black_text:
+        text: orange_0
+    yellow_0:
+      name_black_text:
+        text: yellow_0
+    lime_0:
+      name_black_text:
+        text: lime_0
+    green_0:
+      name_black_text:
+        text: green_0
+    cyan_0:
+      name_black_text:
+        text: cyan_0
+    teal_0:
+      name_black_text:
+        text: teal_0
+    azure_0:
+      name_black_text:
+        text: azure_0
+    blue_0:
+      name_black_text:
+        text: blue_0
+    violet_0:
+      name_black_text:
+        text: violet_0
+    purple_0:
+      name_black_text:
+        text: purple_0
+    red_0:
+      name_black_text:
+        text: red_0
+    gray_0:
+      name_black_text:
+        text: gray_0
+
+
+    colour_00_8:
+      name_black_text:
+        text: colour_00_8
+    colour_01_8:
+      name_black_text:
+        text: colour_01_8
+    colour_02_8:
+      name_black_text:
+        text: colour_02_8
+    colour_03_8:
+      name_black_text:
+        text: colour_03_8
+    colour_04_8:
+      name_black_text:
+        text: colour_04_8
+    colour_05_8:
+      name_black_text:
+        text: colour_05_8
+    colour_06_8:
+      name_black_text:
+        text: colour_06_8
+    colour_07_8:
+      name_black_text:
+        text: colour_07_8
+    colour_08_8:
+      name_black_text:
+        text: colour_08_8
+    colour_09_8:
+      name_black_text:
+        text: colour_09_8
+    colour_10_8:
+      name_black_text:
+        text: colour_10_8
+    colour_11_8:
+      name_black_text:
+        text: colour_11_8
+    colour_12_8:
+      name_black_text:
+        text: colour_12_8
+
+    colour_00_7:
+      name_black_text:
+        text: colour_00_7
+    colour_01_7:
+      name_black_text:
+        text: colour_01_7
+    colour_02_7:
+      name_black_text:
+        text: colour_02_7
+    colour_03_7:
+      name_black_text:
+        text: colour_03_7
+    colour_04_7:
+      name_black_text:
+        text: colour_04_7
+    colour_05_7:
+      name_black_text:
+        text: colour_05_7
+    colour_06_7:
+      name_black_text:
+        text: colour_06_7
+    colour_07_7:
+      name_black_text:
+        text: colour_07_7
+    colour_08_7:
+      name_black_text:
+        text: colour_08_7
+    colour_09_7:
+      name_black_text:
+        text: colour_09_7
+    colour_10_7:
+      name_black_text:
+        text: colour_10_7
+    colour_11_7:
+      name_black_text:
+        text: colour_11_7
+    colour_12_7:
+      name_black_text:
+        text: colour_12_7
+
+    colour_00_6:
+      name_black_text:
+        text: colour_00_6
+    colour_01_6:
+      name_black_text:
+        text: colour_01_6
+    colour_02_6:
+      name_black_text:
+        text: colour_02_6
+    colour_03_6:
+      name_black_text:
+        text: colour_03_6
+    colour_04_6:
+      name_black_text:
+        text: colour_04_6
+    colour_05_6:
+      name_black_text:
+        text: colour_05_6
+    colour_06_6:
+      name_black_text:
+        text: colour_06_6
+    colour_07_6:
+      name_black_text:
+        text: colour_07_6
+    colour_08_6:
+      name_black_text:
+        text: colour_08_6
+    colour_09_6:
+      name_black_text:
+        text: colour_09_6
+    colour_10_6:
+      name_black_text:
+        text: colour_10_6
+    colour_11_6:
+      name_black_text:
+        text: colour_11_6
+    colour_12_6:
+      name_black_text:
+        text: colour_12_6
+
+    colour_00_5:
+      name_black_text:
+        text: colour_00_5
+    colour_01_5:
+      name_black_text:
+        text: colour_01_5
+    colour_02_5:
+      name_black_text:
+        text: colour_02_5
+    colour_03_5:
+      name_black_text:
+        text: colour_03_5
+    colour_04_5:
+      name_black_text:
+        text: colour_04_5
+    colour_05_5:
+      name_black_text:
+        text: colour_05_5
+    colour_06_5:
+      name_black_text:
+        text: colour_06_5
+    colour_07_5:
+      name_black_text:
+        text: colour_07_5
+    colour_08_5:
+      name_black_text:
+        text: colour_08_5
+    colour_09_5:
+      name_black_text:
+        text: colour_09_5
+    colour_10_5:
+      name_black_text:
+        text: colour_10_5
+    colour_11_5:
+      name_black_text:
+        text: colour_11_5
+    colour_12_5:
+      name_black_text:
+        text: colour_12_5
+
+    colour_00_4:
+      name_black_text:
+        text: colour_00_4
+    colour_01_4:
+      name_black_text:
+        text: colour_01_4
+    colour_02_4:
+      name_black_text:
+        text: colour_02_4
+    colour_03_4:
+      name_black_text:
+        text: colour_03_4
+    colour_04_4:
+      name_black_text:
+        text: colour_04_4
+    colour_05_4:
+      name_black_text:
+        text: colour_05_4
+    colour_06_4:
+      name_black_text:
+        text: colour_06_4
+    colour_07_4:
+      name_black_text:
+        text: colour_07_4
+    colour_08_4:
+      name_black_text:
+        text: colour_08_4
+    colour_09_4:
+      name_black_text:
+        text: colour_09_4
+    colour_10_4:
+      name_black_text:
+        text: colour_10_4
+    colour_11_4:
+      name_black_text:
+        text: colour_11_4
+    colour_12_4:
+      name_black_text:
+        text: colour_12_4
+
+    colour_00_3:
+      name_black_text:
+        text: colour_00_3
+    colour_01_3:
+      name_black_text:
+        text: colour_01_3
+    colour_02_3:
+      name_black_text:
+        text: colour_02_3
+    colour_03_3:
+      name_black_text:
+        text: colour_03_3
+    colour_04_3:
+      name_black_text:
+        text: colour_04_3
+    colour_05_3:
+      name_black_text:
+        text: colour_05_3
+    colour_06_3:
+      name_black_text:
+        text: colour_06_3
+    colour_07_3:
+      name_black_text:
+        text: colour_07_3
+    colour_08_3:
+      name_black_text:
+        text: colour_08_3
+    colour_09_3:
+      name_black_text:
+        text: colour_09_3
+    colour_10_3:
+      name_black_text:
+        text: colour_10_3
+    colour_11_3:
+      name_black_text:
+        text: colour_11_3
+    colour_12_3:
+      name_black_text:
+        text: colour_12_3
+
+    colour_00_2:
+      name_black_text:
+        text: colour_00_2
+    colour_01_2:
+      name_black_text:
+        text: colour_01_2
+    colour_02_2:
+      name_black_text:
+        text: colour_02_2
+    colour_03_2:
+      name_black_text:
+        text: colour_03_2
+    colour_04_2:
+      name_black_text:
+        text: colour_04_2
+    colour_05_2:
+      name_black_text:
+        text: colour_05_2
+    colour_06_2:
+      name_black_text:
+        text: colour_06_2
+    colour_07_2:
+      name_black_text:
+        text: colour_07_2
+    colour_08_2:
+      name_black_text:
+        text: colour_08_2
+    colour_09_2:
+      name_black_text:
+        text: colour_09_2
+    colour_10_2:
+      name_black_text:
+        text: colour_10_2
+    colour_11_2:
+      name_black_text:
+        text: colour_11_2
+    colour_12_2:
+      name_black_text:
+        text: colour_12_2
+
+    colour_00_1:
+      name_black_text:
+        text: colour_00_1
+    colour_01_1:
+      name_black_text:
+        text: colour_01_1
+    colour_02_1:
+      name_black_text:
+        text: colour_02_1
+    colour_03_1:
+      name_black_text:
+        text: colour_03_1
+    colour_04_1:
+      name_black_text:
+        text: colour_04_1
+    colour_05_1:
+      name_black_text:
+        text: colour_05_1
+    colour_06_1:
+      name_black_text:
+        text: colour_06_1
+    colour_07_1:
+      name_black_text:
+        text: colour_07_1
+    colour_08_1:
+      name_black_text:
+        text: colour_08_1
+    colour_09_1:
+      name_black_text:
+        text: colour_09_1
+    colour_10_1:
+      name_black_text:
+        text: colour_10_1
+    colour_11_1:
+      name_black_text:
+        text: colour_11_1
+    colour_12_1:
+      name_black_text:
+        text: colour_12_1
+
+    colour_00_0:
+      name_black_text:
+        text: colour_00_0
+    colour_01_0:
+      name_black_text:
+        text: colour_01_0
+    colour_02_0:
+      name_black_text:
+        text: colour_02_0
+    colour_03_0:
+      name_black_text:
+        text: colour_03_0
+    colour_04_0:
+      name_black_text:
+        text: colour_04_0
+    colour_05_0:
+      name_black_text:
+        text: colour_05_0
+    colour_06_0:
+      name_black_text:
+        text: colour_06_0
+    colour_07_0:
+      name_black_text:
+        text: colour_07_0
+    colour_08_0:
+      name_black_text:
+        text: colour_08_0
+    colour_09_0:
+      name_black_text:
+        text: colour_09_0
+    colour_10_0:
+      name_black_text:
+        text: colour_10_0
+    colour_11_0:
+      name_black_text:
+        text: colour_11_0
+    colour_12_0:
+      name_black_text:
+        text: colour_12_0
