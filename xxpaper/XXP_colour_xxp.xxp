@@ -16,12 +16,6 @@ xxp:
   TRAIN_PURPLE: ${colour/wikipedia/wisteria}
   TRAIN_BLACK: ${colour/xxp/BLACK}
 
-  SCALE_5a_1: [1.0, 1.0, 0.8]
-  SCALE_5a_2: [1.0, 0.93333, 0.8]
-  SCALE_5a_3: [1.0, 0.86666, 0.8]
-  SCALE_5a_4: [1.0, 0.8, 0.8]
-  SCALE_5a_5: [1.0, 0.67777, 0.8]
-
   H_GRAY: [0.95, 0.95, 0.95]
   P_GRAY: [0.863, 0.863, 0.863]
   L_GRAY: [0.663, 0.663, 0.663]
