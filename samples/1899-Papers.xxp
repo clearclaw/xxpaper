@@ -1,0 +1,318 @@
+company:
+
+  _:
+    name_stripe_box_suppress: True
+    token_1_text_text: Free
+    token_2_text_text: $40
+
+  index:
+
+    B&M:
+      _:
+        long_name_text_text: |
+            Busan & Masan
+            Railway
+        short_name_text_text: B&M
+        token_3_text_text: $100
+        _major_fill: ${colour/x11/orchid2}
+        _related_fill: ${colour/x11/plum}
+
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (6)]
+
+    CSb:
+      _:
+        long_name_text_text: |
+            Chinesische
+            Staatsbahn
+        short_name_text_text: CSb
+        token_3_text_text: $100
+        _major_fill: ${colour/xxp/BLACK}
+        _related_fill: ${colour/x11/gray50}
+
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (6)]
+
+    FsR:
+      _:
+        long_name_text_text: |
+            Fushun Railway
+        short_name_text_text: FsR
+        _major_fill: ${colour/x11/dodgerblue4}
+        _related_fill: ${colour/x11/steelblue3}
+
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (5)]
+
+    NRC:
+      _:
+        long_name_text_text: |
+            Northern Railway
+            Corporation
+        short_name_text_text: NRC
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/hollasch/cerulean}
+        _related_fill: ${colour/hollasch/powder_blue}
+
+
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (7)]
+
+    Sjz:
+      _:
+        long_name_text_text: |
+            Shijiazhuang
+            Railway
+        short_name_text_text: Sjz
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/x11/khaki1}
+        _related_fill: ${colour/x11/lemonchiffon}
+
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (7)]
+
+    Tt:
+      _:
+        long_name_text_text: |
+            Tsingtau Railway
+        short_name_text_text: Tt
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/x11/gray60}
+        _related_fill: ${colour/x11/gray80}
+
+      share:
+        long_name_text:
+          size: 13
+
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (7)]
+
+    XzS:
+      _:
+        long_name_text_text: |
+            Xuzhou
+            & Shanghai
+            Railway
+        short_name_text_text: XzS
+        _major_fill: ${colour/x11/sienna}
+        _related_fill: ${colour/x11/sienna1}
+
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (5)]
+
+    1St:
+      _:
+        long_name_text_text: |
+             First Southern
+             Railway
+        short_name_text_text: 1St
+        token_3_text_text: $100
+        _major_fill: ${colour/x11/green}
+        _related_fill: ${colour/x11/olivedrab1}
+
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (6)]
+
+marker:
+  index:
+    round:
+      token:
+        ELEMENTS:
+          - token_interior_box
+          - outer_circle
+          - middle_circle
+          - inner_circle
+
+        index: $[index_of (1)]
+
+      outer_circle:
+        fill: ${colour/x11/yellowgreen}
+
+      middle_circle:
+        fill: ${colour/x11/yellow3}
+
+      inner_circle:
+        fill: ${colour/x11/yellow4}
+
+private:
+
+  index:
+
+    BMP:
+      _:
+        asset_interior_box_fill: ${colour/scale/private_02}
+        long_name_text_text: |
+            Busan-Masan
+        power_text_text: |
+            Blocks: C7.
+        cost_text_text: "Cost: $20"
+        revenue_text_text: "Revenue: $5"
+
+    FG:
+      _:
+        asset_interior_box_fill: ${colour/scale/private_03}
+        long_name_text_text: |
+            Fähren über den
+            gelben Fluß
+        power_text_text: |
+            Blocks: R6.
+            May place a track tile on R6
+            for free, whether connected or
+            not.  This counts as the
+            company's tile lay.
+        cost_text_text: "Cost: $40"
+        revenue_text_text: "Revenue: $10"
+
+    YSC:
+      _:
+        asset_interior_box_fill: ${colour/scale/private_04}
+        long_name_text_text: |
+            Yellow Sea
+            Company
+        power_text_text: |
+            Blocks: L4.
+            Owning company may build the ferry
+            route in M5 in addition to their
+            normal track build and/or may place
+            a station marker in L4 for free.
+        cost_text_text: "Cost: $70"
+        revenue_text_text: "Revenue: $15"
+
+    VPR:
+      _:
+        asset_interior_box_fill: ${colour/scale/private_08}
+        closes_text_text: "Closes: In BROWN phase or when power used"
+        long_name_text_text: |
+            Verband Pekinger
+            Rickschafahrer
+        power_text_text: |
+            Blocks: T4.
+            Owning player may exchange for a share
+            of B&M from bank or IPO.
+        cost_text_text: "Cost: $110"
+        revenue_text_text: "Revenue: $20"
+
+    ASC:
+      _:
+        asset_interior_box_fill: ${colour/scale/private_09}
+        long_name_text_text: |
+            An-dong & Sinuju
+            Companies
+        power_text_text: |
+            Blocks: H2 & G1.
+            Purchaser receives 10% FsR share.
+        cost_text_text: "Cost: $160"
+        revenue_text_text: "Revenue: $25"
+
+    X&S:
+      _:
+        asset_interior_box_fill: ${colour/scale/private_11}
+        long_name_text_text: |
+            Xuzhou & Shanghai
+            Railway
+        power_text_text: |
+            Blocks: I13 & I15.
+            Purchaser receives ZxS presidency and
+            sets par price. May not be sold to a
+            public company.
+        cost_text_text: "Cost: $200"
+        revenue_text_text: "Revenue: $30"
+
+train:
+
+  index:
+    2T:
+      _:
+        asset_interior_box_fill_p: YELLOW
+        rust_bar_box_fill_p: BLUE
+        long_name_text_text: "2"
+        cost_text_text_p: $80
+      model:
+        index: $[index_of (6)]
+
+    3T:
+      _:
+        asset_interior_box_fill_p: GREEN
+        rust_bar_box_fill_p: RED
+        long_name_text_text: "3"
+        cost_text_text_p: $180
+      model:
+        index: $[index_of (5)]
+
+    4T:
+      _:
+        asset_interior_box_fill_p: BLUE
+        rust_bar_box_fill_p: GRAY
+        long_name_text_text: "4"
+        cost_text_text_p: $300
+        note_text_text: |
+            To DIESEL: $800
+      model:
+        index: $[index_of (4)]
+
+    5T:
+      _:
+        asset_interior_box_fill_p: BROWN
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "5"
+        cost_text_text_p: $450
+        rusted_text_text: PERMANENT
+      model:
+        index: $[index_of (3)]
+
+    6T:
+      _:
+        asset_interior_box_fill_p: RED
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "6"
+        cost_text_text_p: $630
+        rusted_text_text: PERMANENT
+      model:
+        index: $[index_of (5)]
+
+    Diesel:
+      _:
+        asset_interior_box_fill_p: GRAY
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "Diesel"
+        cost_text_text_p: $1,100
+        rusted_text_text: PERMANENT
+      long_name_text:
+        size: 32
+      model:
+        index: $[index_of (8)]
