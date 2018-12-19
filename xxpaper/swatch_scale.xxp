@@ -37,9 +37,9 @@ swatch:
     purple_8:
       name_black_text:
         text: purple_8
-    red_8:
+    magenta_8:
       name_black_text:
-        text: red_8
+        text: magenta_8
     gray_8:
       name_black_text:
         text: gray_8
@@ -77,9 +77,9 @@ swatch:
     purple_7:
       name_black_text:
         text: purple_7
-    red_7:
+    magenta_7:
       name_black_text:
-        text: red_7
+        text: magenta_7
     gray_7:
       name_black_text:
         text: gray_7
@@ -117,9 +117,9 @@ swatch:
     purple_6:
       name_black_text:
         text: purple_6
-    red_6:
+    magenta_6:
       name_black_text:
-        text: red_6
+        text: magenta_6
     gray_6:
       name_black_text:
         text: gray_6
@@ -157,9 +157,9 @@ swatch:
     purple_5:
       name_black_text:
         text: purple_5
-    red_5:
+    magenta_5:
       name_black_text:
-        text: red_5
+        text: magenta_5
     gray_5:
       name_black_text:
         text: gray_5
@@ -197,9 +197,9 @@ swatch:
     purple_4:
       name_black_text:
         text: purple_4
-    red_4:
+    magenta_4:
       name_black_text:
-        text: red_4
+        text: magenta_4
     gray_4:
       name_black_text:
         text: gray_4
@@ -237,9 +237,9 @@ swatch:
     purple_3:
       name_black_text:
         text: purple_3
-    red_3:
+    magenta_3:
       name_black_text:
-        text: red_3
+        text: magenta_3
     gray_3:
       name_black_text:
         text: gray_3
@@ -277,9 +277,9 @@ swatch:
     purple_2:
       name_black_text:
         text: purple_2
-    red_2:
+    magenta_2:
       name_black_text:
-        text: red_2
+        text: magenta_2
     gray_2:
       name_black_text:
         text: gray_2
@@ -317,9 +317,9 @@ swatch:
     purple_1:
       name_black_text:
         text: purple_1
-    red_1:
+    magenta_1:
       name_black_text:
-        text: red_1
+        text: magenta_1
     gray_1:
       name_black_text:
         text: gray_1
@@ -357,9 +357,9 @@ swatch:
     purple_0:
       name_black_text:
         text: purple_0
-    red_0:
+    magenta_0:
       name_black_text:
-        text: red_0
+        text: magenta_0
     gray_0:
       name_black_text:
         text: gray_0
@@ -724,40 +724,3 @@ swatch:
     colour_12_0:
       name_black_text:
         text: colour_12_0
-
-    private_01:
-      name_black_text:
-        text: private_01
-    private_02:
-      name_black_text:
-        text: private_02
-    private_03:
-      name_black_text:
-        text: private_03
-    private_04:
-      name_black_text:
-        text: private_04
-    private_05:
-      name_black_text:
-        text: private_05
-    private_06:
-      name_black_text:
-        text: private_06
-    private_07:
-      name_black_text:
-        text: private_07
-    private_08:
-      name_black_text:
-        text: private_08
-    private_09:
-      name_black_text:
-        text: private_09
-    private_10:
-      name_black_text:
-        text: private_10
-    private_11:
-      name_black_text:
-        text: private_11
-    private_12:
-      name_black_text:
-        text: private_12

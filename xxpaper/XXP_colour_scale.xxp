@@ -13,7 +13,7 @@ scale:
   blue_8:      ${colour/scale/colour_08_8}
   violet_8:    ${colour/scale/colour_09_8}
   purple_8:    ${colour/scale/colour_10_8}
-  red_8:       ${colour/scale/colour_11_8}
+  magenta_8:   ${colour/scale/colour_11_8}
   gray_8:      ${colour/scale/colour_12_8}
 
   red_7:       ${colour/scale/colour_00_7}
@@ -27,7 +27,7 @@ scale:
   blue_7:      ${colour/scale/colour_08_7}
   violet_7:    ${colour/scale/colour_09_7}
   purple_7:    ${colour/scale/colour_10_7}
-  red_7:       ${colour/scale/colour_11_7}
+  magenta_7:   ${colour/scale/colour_11_7}
   gray_7:      ${colour/scale/colour_12_7}
 
   red_6:       ${colour/scale/colour_00_6}
@@ -41,7 +41,7 @@ scale:
   blue_6:      ${colour/scale/colour_08_6}
   violet_6:    ${colour/scale/colour_09_6}
   purple_6:    ${colour/scale/colour_10_6}
-  red_6:       ${colour/scale/colour_11_6}
+  magenta_6:   ${colour/scale/colour_11_6}
   gray_6:      ${colour/scale/colour_12_6}
 
   red_5:       ${colour/scale/colour_00_5}
@@ -55,7 +55,7 @@ scale:
   blue_5:      ${colour/scale/colour_08_5}
   violet_5:    ${colour/scale/colour_09_5}
   purple_5:    ${colour/scale/colour_10_5}
-  red_5:       ${colour/scale/colour_11_5}
+  magenta_5:   ${colour/scale/colour_11_5}
   gray_5:      ${colour/scale/colour_12_5}
 
   red_4:       ${colour/scale/colour_00_4}
@@ -69,7 +69,7 @@ scale:
   blue_4:      ${colour/scale/colour_08_4}
   violet_4:    ${colour/scale/colour_09_4}
   purple_4:    ${colour/scale/colour_10_4}
-  red_4:       ${colour/scale/colour_11_4}
+  magenta_4:   ${colour/scale/colour_11_4}
   gray_4:      ${colour/scale/colour_12_4}
 
   red_3:       ${colour/scale/colour_00_3}
@@ -83,7 +83,7 @@ scale:
   blue_3:      ${colour/scale/colour_08_3}
   violet_3:    ${colour/scale/colour_09_3}
   purple_3:    ${colour/scale/colour_10_3}
-  red_3:       ${colour/scale/colour_11_3}
+  magenta_3:   ${colour/scale/colour_11_3}
   gray_3:      ${colour/scale/colour_12_3}
 
   red_2:       ${colour/scale/colour_00_2}
@@ -97,7 +97,7 @@ scale:
   blue_2:      ${colour/scale/colour_08_2}
   violet_2:    ${colour/scale/colour_09_2}
   purple_2:    ${colour/scale/colour_10_2}
-  red_2:       ${colour/scale/colour_11_2}
+  magenta_2:   ${colour/scale/colour_11_2}
   gray_2:      ${colour/scale/colour_12_2}
 
   red_1:       ${colour/scale/colour_00_1}
@@ -111,7 +111,7 @@ scale:
   blue_1:      ${colour/scale/colour_08_1}
   violet_1:    ${colour/scale/colour_09_1}
   purple_1:    ${colour/scale/colour_10_1}
-  red_1:       ${colour/scale/colour_11_1}
+  magenta_1:   ${colour/scale/colour_11_1}
   gray_1:      ${colour/scale/colour_12_1}
 
   red_0:       ${colour/scale/colour_00_0}
@@ -125,7 +125,7 @@ scale:
   blue_0:      ${colour/scale/colour_08_0}
   violet_0:    ${colour/scale/colour_09_0}
   purple_0:    ${colour/scale/colour_10_0}
-  red_0:       ${colour/scale/colour_11_0}
+  magenta_0:   ${colour/scale/colour_11_0}
   gray_0:      ${colour/scale/colour_12_0}
 
   colour_00_8: [0.199219, 0.000000, 0.000000]
@@ -253,16 +253,3 @@ scale:
   colour_10_0: [0.996094, 0.796875, 0.996094]
   colour_11_0: [0.996094, 0.796875, 0.894531]
   colour_12_0: [0.996094, 0.996094, 0.996094]
-
-  private_12: ${colour/scale/colour_01_0}
-  private_11: ${colour/scale/colour_00_0}
-  private_10: ${colour/scale/colour_11_0}
-  private_09: ${colour/scale/colour_10_0}
-  private_08: ${colour/scale/colour_09_0}
-  private_07: ${colour/scale/colour_08_0}
-  private_06: ${colour/scale/colour_07_0}
-  private_05: ${colour/scale/colour_06_0}
-  private_04: ${colour/scale/colour_05_0}
-  private_03: ${colour/scale/colour_04_0}
-  private_02: ${colour/scale/colour_03_0}
-  private_01: ${colour/scale/colour_02_0}
