@@ -1,0 +1,1074 @@
+company:
+
+  _:
+    token_1_text_text: Free
+    token_2_text_text: "ƒx#"
+    token_3_text_text: "ƒx#"
+    token_4_text_text: "ƒx#"
+    token_5_text_text: "ƒx#"
+  charter:
+    _:
+      long_name_text_size: 14
+  narrow_charter:
+    _:
+      long_name_text_size: 14
+      outside_box_fill: ${_/asset_interior_box_fill}
+      token_1_text_text: ""
+      token_2_text_text: ""
+      token_3_text_text: ""
+      label_text_text: Shares & Treasury
+      comment_text_text: |
+          Half purchase price of shares goes to treasury until brown phase (rounding up), then full purchase price goes to treasury.
+          Shares in treasury pay dividends to treasury.
+          Income: Half of income of all public companies that run to this country.
+          Buy market shares first, pay dividend and adjust stock price, then buy trains.
+          Stock price additionally moves up once per pair of trains bought (rounding up).
+          Dividend: Half-pay total income.
+  share:
+    _:
+      long_name_text_size: 10
+      comment_text_suppress: True
+
+  index:
+
+    AMS:
+      _:
+        long_name_text_text: |
+            Aken-Maastrichtsche
+            Spoorweg-Maatschappij
+        short_name_text_text: AMS
+        _major_fill: ${colour/hollasch/purple}
+        _related_fill: ${colour/hollasch/plum}
+      token:
+        _:
+          name_stripe_box_suppress: true
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (10)]
+
+    HIJSM:
+      _:
+        long_name_text_text: |
+            Hollandsche IJzeren
+            Spoorweg-Maatschappij
+        short_name_text_text: HIJSM
+        _major_fill: ${colour/xxp/BLACK}
+        _related_fill: ${colour/x11/gray50}
+      token:
+        _:
+          name_stripe_box_suppress: true
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (10)]
+
+    NBDS:
+      _:
+        long_name_text_text: |
+            Noord-Brabantsch-Duitsche
+            Spoorweg-Maatschappi
+        long_name_text_size: 13
+        short_name_text_text: NBDS
+        _major_fill: ${colour/hollasch/dodger_blue}
+        _related_fill: ${colour/hollasch/sky_blue_light}
+      share:
+        _:
+          long_name_text_text: |
+            Noord-Brabantsch-
+            Duitsche
+            Spoorweg-
+            Maatschappi
+      token:
+        _:
+          name_stripe_box_suppress: true
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (10)]
+
+    NCS:
+      _:
+        long_name_text_text: |
+            Nederlandsche Centraal
+            Spoorweg-Maatschappij
+        short_name_text_text: NCS
+        _major_fill: ${colour/hollasch/cadmium_red_light}
+        _related_fill: ${colour/hollasch/tomato}
+      token:
+        _:
+          name_stripe_box_suppress: true
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (10)]
+
+    NRS:
+      _:
+        long_name_text_text: |
+            Nederlandsche
+            Rhijnspoorweg-
+            Maatschappij
+        short_name_text_text: NRS
+        _major_fill: ${colour/hollasch/naples_yellow_deep}
+        _related_fill: ${colour/hollasch/wheat}
+      token:
+        _:
+          name_stripe_box_suppress: true
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (10)]
+
+    NWS:
+      _:
+        long_name_text_text: |
+            Nederlandsch-
+            Westfaalsche
+            Spoorweg-Maatschappij
+        short_name_text_text: NWS
+        _major_fill: ${colour/x11/yellow}
+        _related_fill: ${colour/x11/darkgoldenrod1}
+      token:
+        _:
+          name_stripe_box_suppress: true
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (10)]
+
+    SS:
+      _:
+        long_name_text_text: |
+            Maatschappij tot
+            Exploitatie
+            van Staatsspoorwegen
+        short_name_text_text: SS
+        _major_fill: ${colour/x11/darkseagreen}
+        _related_fill: ${colour/x11/darkseagreen1}
+      token:
+        _:
+          name_stripe_box_suppress: true
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (10)]
+
+    ZHESM:
+      _:
+        long_name_text_text: |
+            Zuid-Hollandsche
+            Electrische
+            Spoorweg-Maatschappij
+        short_name_text_text: ZHESM
+        _major_fill: ${colour/hollasch/forest_green}
+        _related_fill: ${colour/hollasch/emerald_green}
+      token:
+        _:
+          name_stripe_box_suppress: true
+          short_name_text_fill: $[black_or_white (${_/_major_fill})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: $[index_of (10)]
+
+    BEL_1:
+      _:
+        asset_interior_box_fill: ${colour/xxp/H_YELLOW}
+        long_name_text_text: |
+            Belgie
+        short_name_text_text: BEL
+        short_name_text_fill: ${colour/xxp/WHITE}
+        name_stripe_box_suppress: True
+        _major_fill: ${colour/xxp/M_YELLOW}
+        _minor_fill: ${colour/xxp/M_PURPLE}
+        _related_fill: ${colour/xxp/L_PURPLE}
+        middle_box_fill: ${_/_minor_fill}
+      charter:
+        index:
+      narrow_charter:
+        index:
+          "1":
+      share:
+        _:
+          share_num_text_text: 1 Share
+          share_pct_text_text: 2%
+          type_bar_box_suppress: True
+          side_bar_lsplit_box_suppress: True
+          side_bar_rsplit_box_suppress: True
+          share_desc_text_suppress: True
+        index:
+          "1":
+            share_desc_text:
+              suppress: True
+            type_bar_box:
+              suppress: True
+            token_1_embed:
+              suppress: False
+            token_2a_embed:
+              suppress: True
+            token_2b_embed:
+              suppress: True
+          "2":
+          "3":
+          "4":
+          "5":
+          "6":
+          "7":
+          "8":
+          "9":
+          "10":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index: $[index_of (2)]
+
+    BEL_2:
+      _:
+        asset_interior_box_fill: ${colour/xxp/H_YELLOW}
+        long_name_text_text: |
+            Belgie
+        short_name_text_text: BEL
+        short_name_text_fill: ${colour/xxp/WHITE}
+        name_stripe_box_suppress: True
+        _major_fill: ${colour/xxp/M_YELLOW}
+        _minor_fill: ${colour/xxp/M_PURPLE}
+        _related_fill: ${colour/xxp/L_PURPLE}
+        middle_box_fill: ${_/_minor_fill}
+      charter:
+        index:
+      share:
+        _:
+          share_num_text_text: 2 Shares
+          share_pct_text_text: 4%
+          token_1_embed_suppress: True
+          token_2a_embed_suppress: False
+          token_2b_embed_suppress: False
+          type_bar_box_suppress: True
+          side_bar_lsplit_box_suppress: True
+          side_bar_rsplit_box_suppress: True
+        index:
+          "1":
+            share_desc_text:
+              suppress: True
+            type_bar_box:
+              suppress: True
+          "2":
+          "3":
+          "4":
+          "5":
+          "6":
+          "7":
+          "8":
+          "9":
+          "10":
+          "11":
+          "12":
+          "13":
+          "14":
+          "15":
+          "16":
+          "17":
+          "18":
+          "19":
+          "20":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index:
+
+    DE_1:
+      _:
+        asset_interior_box_fill: ${colour/xxp/H_RED}
+        long_name_text_text: |
+            Duitsland
+        short_name_text_text: D
+        name_stripe_box_suppress: True
+        _major_fill: ${colour/xxp/M_RED}
+        _minor_fill: ${colour/xxp/M_YELLOW}
+        _related_fill: ${colour/xxp/L_YELLOW}
+        middle_box_fill: ${_/_minor_fill}
+      charter:
+        index:
+      narrow_charter:
+        index:
+          "1":
+      share:
+        _:
+          share_num_text_text: 1 Share
+          share_pct_text_text: 2%
+          type_bar_box_suppress: True
+          side_bar_lsplit_box_suppress: True
+          side_bar_rsplit_box_suppress: True
+          share_desc_text_suppress: True
+        index:
+          "1":
+            share_desc_text:
+              suppress: True
+            type_bar_box:
+              suppress: True
+            token_1_embed:
+              suppress: False
+            token_2a_embed:
+              suppress: True
+            token_2b_embed:
+              suppress: True
+          "2":
+          "3":
+          "4":
+          "5":
+          "6":
+          "7":
+          "8":
+          "9":
+          "10":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index: $[index_of (2)]
+
+    DE_2:
+      _:
+        asset_interior_box_fill: ${colour/xxp/H_RED}
+        long_name_text_text: |
+            Duitsland
+        short_name_text_text: D
+        name_stripe_box_suppress: True
+        _major_fill: ${colour/xxp/M_RED}
+        _minor_fill: ${colour/xxp/M_YELLOW}
+        _related_fill: ${colour/xxp/L_YELLOW}
+        middle_box_fill: ${_/_minor_fill}
+      charter:
+        index:
+      share:
+        _:
+          share_num_text_text: 2 Shares
+          share_pct_text_text: 4%
+          token_1_embed_suppress: True
+          token_2a_embed_suppress: False
+          token_2b_embed_suppress: False
+          type_bar_box_suppress: True
+          side_bar_lsplit_box_suppress: True
+          side_bar_rsplit_box_suppress: True
+        index:
+          "1":
+            share_desc_text:
+              suppress: True
+            type_bar_box:
+              suppress: True
+          "2":
+          "3":
+          "4":
+          "5":
+          "6":
+          "7":
+          "8":
+          "9":
+          "10":
+          "11":
+          "12":
+          "13":
+          "14":
+          "15":
+          "16":
+          "17":
+          "18":
+          "19":
+          "20":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index:
+
+    OZ_1:
+      _:
+        asset_interior_box_fill: ${colour/xxp/H_GREEN}
+        long_name_text_text: |
+            Overzees
+        short_name_text_text: OZ
+        short_name_text_fill: ${colour/xxp/WHITE}
+        name_stripe_box_suppress: True
+        _major_fill: ${colour/xxp/M_GREEN}
+        _minor_fill: ${colour/xxp/M_BLUE}
+        _related_fill: ${colour/xxp/L_BLUE}
+        middle_box_fill: ${_/_minor_fill}
+      charter:
+        index:
+      narrow_charter:
+        index:
+          "1":
+      share:
+        _:
+          share_num_text_text: 1 Share
+          share_pct_text_text: 2%
+          type_bar_box_suppress: True
+          side_bar_lsplit_box_suppress: True
+          side_bar_rsplit_box_suppress: True
+          share_desc_text_suppress: True
+        index:
+          "1":
+            share_desc_text:
+              suppress: True
+            type_bar_box:
+              suppress: True
+            token_1_embed:
+              suppress: False
+            token_2a_embed:
+              suppress: True
+            token_2b_embed:
+              suppress: True
+          "2":
+          "3":
+          "4":
+          "5":
+          "6":
+          "7":
+          "8":
+          "9":
+          "10":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index: $[index_of (2)]
+
+    OZ_2:
+      _:
+        asset_interior_box_fill: ${colour/xxp/H_GREEN}
+        long_name_text_text: |
+            Overzees
+        short_name_text_text: OZ
+        short_name_text_fill: ${colour/xxp/WHITE}
+        name_stripe_box_suppress: True
+        _major_fill: ${colour/xxp/M_GREEN}
+        _minor_fill: ${colour/xxp/M_BLUE}
+        _related_fill: ${colour/xxp/L_BLUE}
+        middle_box_fill: ${_/_minor_fill}
+      charter:
+        index:
+      share:
+        _:
+          share_num_text_text: 2 Shares
+          share_pct_text_text: 4%
+          token_1_embed_suppress: True
+          token_2a_embed_suppress: False
+          token_2b_embed_suppress: False
+          type_bar_box_suppress: True
+          side_bar_lsplit_box_suppress: True
+          side_bar_rsplit_box_suppress: True
+        index:
+          "1":
+            share_desc_text:
+              suppress: True
+            type_bar_box:
+              suppress: True
+          "2":
+          "3":
+          "4":
+          "5":
+          "6":
+          "7":
+          "8":
+          "9":
+          "10":
+          "11":
+          "12":
+          "13":
+          "14":
+          "15":
+          "16":
+          "17":
+          "18":
+          "19":
+          "20":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index:
+
+    NFLM:
+      _:
+        long_name_text_text: |
+            Noord Friesche
+            Locaalspoorweg-
+            Maatschappij
+        short_name_text_text: NFLM
+        _major_fill: ${colour/xxp/WHITE}
+        _minor_fill: ${colour/xxp/WHITE}
+        middle_box_fill: ${_/_minor_fill}
+      charter:
+        index:
+      minor_charter:
+        _:
+          label_text_text: Treasury
+          comment_text_text: |
+              Owning player may place a yellow track
+              tile on a route connected to Leeuwarden,
+              Hoogezand, Roden or Groningen.  Revenue
+              is the 2-train route from that tile.
+          token_1_text_text: ""
+          token_2_text_text: ""
+          token_3_text_text: ""
+        index: $[index_of (6)]
+      share:
+        index:
+      token:
+        _:
+          short_name_text_text: NFLM
+          name_stripe_box_fill: ${colour/hollasch/light_goldenrod}
+        index: "$[index_of (4)]"
+
+marker:
+  index:
+
+    round:
+      _:
+        name_stripe_box_suppress: True
+        outer_circle_fill: ${colour/x11/darkgoldenrod1}
+        middle_circle_fill: ${colour/xxp/WHITE}
+        inner_circle_fill: ${colour/xxp/M_BLUE}
+      token:
+        ELEMENTS: ${TEMPLATE_bullseye/.}
+        index: "$[index_of (1)]"
+
+    SAVED:
+      token:
+        _:
+          name_stripe_box_fill: ${colour/xxp/BLACK}
+          short_name_text_text: SAVED
+          short_name_text_fill: ${colour/xxp/WHITE}
+          _major_fill: ${colour/x11/gray50}
+          _minor_fill: ${colour/x11/gray50}
+        index: $[index_of (4)]
+
+private:
+
+  index:
+
+    SCMP:
+      _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
+        cost_text_text: ""
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Staatslijn D:
+            Zutphen - Glanerbeek
+        power_text_text: |
+            Owned by the NWS.
+            Owning company may place up to four
+            track tiles (two may be upgrades)
+            as its entire track lay, for $10 each
+            plus any terrain and upgrade costs.
+        revenue_text_text: "Revenue: $20"
+
+    SDZG:
+      _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
+        cost_text_text: ""
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Staatslijn C:
+            Meppel - Groningen
+        power_text_text: |
+            Owned by the SS.
+            Owning company may place up to four
+            track tiles (two may be upgrades)
+            as its entire track lay, for $10 each
+            plus any terrain and upgrade costs.
+        revenue_text_text: "Revenue: $20"
+
+    SEMV:
+      _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
+        cost_text_text: ""
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Staatslijn E:
+            Maastricht - Venlo
+        power_text_text: |
+            Owned by the AMS.
+            Owning company may place up to five
+            track tiles (two may be upgrades)
+            as its entire track lay, for $10 each
+            plus any terrain and upgrade costs.
+        revenue_text_text: "Revenue: $20"
+
+    SKDHA:
+      _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
+        cost_text_text: ""
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Staatslijn K:
+            Den Helder - Amsterdam
+        power_text_text: |
+            Owned by the HIJSM.
+            Owning company may place up to four
+            track tiles \(two may be upgrades\)
+            as its entire track lay, for $10 each
+            plus any terrain and upgrade costs.
+        revenue_text_text: "Revenue: $20"
+
+    SZK:
+      _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
+        cost_text_text: ""
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Spoorlijn Zevenaar - Kleef
+        power_text_text: |
+            Owned by the NRS.
+            Owning company may place or upgrade
+            a tile and a station marker (must be both)
+            for $80 at I16 or K16 as part of their
+            normal station placement.
+        revenue_text_text: ""
+
+    IR:
+      _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
+        cost_text_text: ""
+        closes_text_text: |
+            Close: In GREEN phase.
+        long_name_text_text: |
+            IJzeren Rijn
+        power_text_text: |
+            Blocks L11 - L17.
+            Owned by the AMS.
+            IJzeren Rijn built when the first
+            green 3+ train is bought.
+        revenue_text_text: "Revenue: $20"
+
+
+    SO:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_0}
+        cost_text_text: "Cost: $300"
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Schielands Hoge Zeedijk
+        power_text_text: |
+            Blocks C10 and D9.
+            Comes with a 10% certificate. Owning
+            company may place a station or exchange
+            marker for half-cost. Afsluitdjidk built
+            when closed or bought by a company."
+        revenue_text_text: "Revenue: $25"
+
+    SO:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_0}
+        cost_text_text: "Cost: $160"
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Spoorwegwerken Oost
+        power_text_text: |
+            Owning company may place or upgrade
+            a tile and a station marker (must be both)
+            for $80 at K16 or for free at L3
+            as their yellow or upgrade track
+            lay and station placement.
+        revenue_text_text: "Revenue: $20"
+
+    LvdG:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_0}
+        cost_text_text: "Cost: $70"
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Het Laantje van der Gaag
+        power_text_text: |
+            Blocks H7.
+            Owning company may place an additional
+            yellow track tile or tile upgrade (if at
+            H7 there are no terrain costs, otherwise all
+            terrain costs must be paid as usual) in
+            addition to the company's normal track lay.
+        revenue_text_text: "Revenue: $5"
+
+    CO:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_0}
+        cost_text_text: "Cost: $160"
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Cornelis Outshoorn
+        power_text_text: |
+            Owning company may place an
+            exchange or station marker for free.
+        revenue_text_text: "Revenue: $20"
+
+    R:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_0}
+        cost_text_text: "Cost: $250"
+        closes_text_text: |
+            Close: In BROWN phase or when the company buys a train.
+        long_name_text_text: |
+            Rijkswaterstaat
+        power_text_text: |
+            Blocks F13 & G12.
+            Comes with a 20% presidency parred at $101.
+            That company gains a home station in
+            Emmen (D19).  Flevoland bypass built when
+            closed. May not be purchased by a company.
+        revenue_text_text: "Revenue: $35"
+
+    AB:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $180"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            August Borsig
+        power_text_text: |
+            All towns are +$20 revenue
+            for the owning company.
+        revenue_text_text: "Revenue: $20"
+
+    SPTT:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $220"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Staatsbedrijf der Posterijen
+            Telegrafie en Telefonie
+        power_text_text: |
+            Owning company may add $10 to its
+            income for every town or city encountered
+            by one of its train's routes.
+        revenue_text_text: "Revenue: $15"
+
+    L:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $140"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Lokaalspoorweg
+        power_text_text: |
+            Owning company may convert a yellow
+            town to a yellow city for a $20 terrain
+            fee as the company's yellow tile lay,
+            or may convert a yellow double town to
+            a green city for a f40 terrain fee
+            as the company's upgrade tile lay.
+        revenue_text_text: "Revenue: $15"
+
+    RG:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $160"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Regiment Genietroepen
+        power_text_text: |
+            Owning company has a $40
+            discount on all terrain costs.
+        revenue_text_text: "Revenue: $20 / $0"
+
+    WSM:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $180"
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Westlandsche Stoomtramweg
+            Maatschappij
+        power_text_text: |
+            Owning company may move one
+            of its placed station markers to
+            a new location.  This may include
+            converting an exchange marker into
+            a station marker, or visa versa.
+        revenue_text_text: "Revenue: $15 / $0"
+
+    ISM:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $180"
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            IJsel Stoomtramweg-
+            Maatschappij
+        power_text_text: |
+            Owning company may have one of its trains
+            run a route that is one city longer than
+            the train's limit, adding the extra stops'
+            revenue to its income.
+        revenue_text_text: "Revenue: $15 / $0"
+
+    VVDvH:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $120"
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            Van Vlissingen
+            & Dudok van Heel
+        power_text_text: |
+            Owning company may place up to four
+            track tiles (one may be an upgrade)
+            as its entire track lay, for f10 each
+            plus any terrain and upgrade costs.
+        revenue_text_text: "Revenue: $15"
+
+    NFLM:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $300"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Noord Friesche
+            Locaalspoorweg-Maatschappij
+        power_text_text: |
+            Owning player may place a yellow track
+            tile on a route connected to Leeuwarden,
+            Hoogezand, Roden or Groningen.  Revenue
+            is the 2-train route from that tile.
+        revenue_text_text: "Revenue: $? / $20"
+
+    DA:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        cost_text_text: "Cost: $140"
+        closes_text_text: |
+            Close: In BROWN phase or when power used.
+        long_name_text_text: |
+            De Ambachtsschool
+        power_text_text: |
+            Owning company may do two track upgrades
+            per operating round as their entire
+            track lay for a total cost of $20
+            plus any terrain costs.
+        revenue_text_text: "Revenue: $20 / $10"
+
+    KR:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $200"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Kabinet-Rochussen
+        power_text_text: |
+            Owning player may declare at SR end that
+            an unfloated company with 30% bought from
+            the IPO is floated.  Company is then 70%
+            capitalised & three shares are put in the
+            market along with 3*par.  That money is paid
+            to the company as those shares are bought.
+        revenue_text_text: "Revenue: $10"
+
+    V:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $180"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Verveers
+        power_text_text: |
+            Owning company may mark a train
+            so that it will run one more time after
+            it rusts, and will then immediately rust.
+        revenue_text_text: "Revenue: $20"
+
+    CM:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $200"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Credit Mobilier
+        power_text_text: |
+            Owning company has a discount on
+            train purchases: Green: $100,
+            Blue: $150, Brown: $250.
+        revenue_text_text: "Revenue: $10"
+
+    NFWS:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $210"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Nederlandsche Fabriek van
+            Werktuigen en
+            Spoorwegmaterieel
+        power_text_text: |
+            Owning company may buy a train,
+            as usual or as an emergency purchase
+            (if it has no train), at any time
+            during its operations.
+        revenue_text_text: "Revenue: $20"
+
+    FRSJJB:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $260"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Fabriek van Rijtuigen
+            en Spoorwagens J. J. Beijnes
+        power_text_text: |
+            May be converted by the owning company
+            to any single train prior to brown phase.
+            Auto-converts to a brown train at the
+            start of brown phase if owned by a company.
+        revenue_text_text: "Revenue: $0"
+
+    BPC:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $240"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Beyer, Peacock & Company
+        power_text_text: |
+            Owning company sells train markers (3)
+            to other companies for $200 each ($50
+            to treasury, $150 to bank).  Marked
+            trains run one more time after they
+            rust and then rust.
+        revenue_text_text: "Revenue: $25 / $0"
+
+    MES:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $180"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Maatschappij tot Exploitatie
+            van Staatsspoorwegen
+        power_text_text: |
+            Owning player or company is paid the
+            revenue value of each town or city that
+            a company that player or company
+            controls connects to a station marker
+            for the first time.
+        revenue_text_text: "Revenue: $? / $0"
+
+    RB:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $200"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Rotterdamsche Bank
+        power_text_text: |
+            Owning company may draw freely
+            on their president's assets for
+            station, track and train expenses,
+            including causing the president to
+            sell shares as if the expense were
+            an Emergency Train Purchase.
+        revenue_text_text: "Revenue: $30"
+
+    K&V:
+      _:
+        asset_interior_box_fill: ${colour/scale/orange_0}
+        cost_text_text: "Cost: $320"
+        closes_text_text: |
+            Close: In BROWN phase.
+        long_name_text_text: |
+            Ketwich & Voombergh
+        power_text_text: |
+            In yellow phase or later, during a
+            stock round, owning player can re-par
+            a company they just floated.  Re-parred
+            company is capitalised at the new rate.
+        revenue_text_text: "Revenue: $50 / $0"
+
+train:
+
+  index:
+    2T:
+      _:
+        asset_interior_box_fill_p: YELLOW
+        rust_bar_box_fill_p: BLUE
+        long_name_text_text: "2"
+        cost_text_text_p: ƒ80
+      model:
+        index: $[index_of (6)]
+
+    3+T:
+      _:
+        asset_interior_box_fill_p: GREEN
+        rust_bar_box_fill_p: RED
+        long_name_text_text: "3+"
+        cost_text_text_p: ƒ180
+      model:
+        index: $[index_of (5)]
+
+    5+T:
+      _:
+        asset_interior_box_fill_p: BLUE
+        rust_bar_box_fill_p: GRAY
+        long_name_text_text: "5+"
+        cost_text_text_p: ƒ300
+        note_text_text: |
+            To DIESEL: ƒ800
+      model:
+        index: $[index_of (4)]
+
+    7+T:
+      _:
+        asset_interior_box_fill_p: BROWN
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "7+"
+        cost_text_text_p: ƒ450
+        rusted_text_text: PERMANENT
+      model:
+        index: $[index_of (3)]
+
+    5+DT:
+      _:
+        asset_interior_box_fill_p: RED
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "5+D"
+        cost_text_text_p: ƒ630
+        rusted_text_text: PERMANENT
+      long_name_text:
+        size: 48
+      model:
+        index:
+          "1":
+            note_text:
+              text: Optional
+          "2":
+          "3":
+
+    FLOOD:
+      _:
+        asset_interior_box_fill_p: GRAY
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "FLOOD"
+        cost_text_text_p: ƒ1,100
+        rusted_text_text: PERMANENT
+      long_name_text:
+        size: 24
+      model:
+        index: $[index_of (8)]
