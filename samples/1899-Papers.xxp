@@ -175,7 +175,7 @@ private:
 
     BMP:
       _:
-        asset_interior_box_fill: ${colour/scale/private_02}
+        asset_interior_box_fill: ${colour/scale/yellow_0}
         long_name_text_text: |
             Busan-Masan
         power_text_text: |
@@ -185,7 +185,7 @@ private:
 
     FG:
       _:
-        asset_interior_box_fill: ${colour/scale/private_03}
+        asset_interior_box_fill: ${colour/scale/lime_0}
         long_name_text_text: |
             Fähren über den
             gelben Fluß
@@ -200,7 +200,7 @@ private:
 
     YSC:
       _:
-        asset_interior_box_fill: ${colour/scale/private_04}
+        asset_interior_box_fill: ${colour/scale/green_0}
         long_name_text_text: |
             Yellow Sea
             Company
@@ -215,7 +215,7 @@ private:
 
     VPR:
       _:
-        asset_interior_box_fill: ${colour/scale/private_08}
+        asset_interior_box_fill: ${colour/scale/cyan_0}
         closes_text_text: "Closes: In BROWN phase or when power used"
         long_name_text_text: |
             Verband Pekinger
@@ -229,7 +229,7 @@ private:
 
     ASC:
       _:
-        asset_interior_box_fill: ${colour/scale/private_09}
+        asset_interior_box_fill: ${colour/scale/teal_0}
         long_name_text_text: |
             An-dong & Sinuju
             Companies
@@ -241,7 +241,7 @@ private:
 
     X&S:
       _:
-        asset_interior_box_fill: ${colour/scale/private_11}
+        asset_interior_box_fill: ${colour/scale/blue_0}
         long_name_text_text: |
             Xuzhou & Shanghai
             Railway
