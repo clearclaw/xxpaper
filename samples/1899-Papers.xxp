@@ -160,14 +160,14 @@ marker:
 
         index: $[index_of (1)]
 
-      outer_circle:
-        fill: ${colour/x11/yellowgreen}
+        outer_circle:
+          fill: ${colour/x11/yellowgreen}
 
-      middle_circle:
-        fill: ${colour/x11/yellow3}
+        middle_circle:
+          fill: ${colour/x11/yellow3}
 
-      inner_circle:
-        fill: ${colour/x11/yellow4}
+        inner_circle:
+          fill: ${colour/x11/yellow4}
 
 private:
 
