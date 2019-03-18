@@ -48,6 +48,9 @@ class Page (object):
       self._end_page ()
     print "StartPage"
     self.canvas.saveState ()
+    x_scale = Config.get ("user/x_scale", {"default": 1})
+    y_scale = Config.get ("user/y_scale", {"default": 1})
+    self.canvas.scale (x_scale, y_scale)
     x_adjust = Config.get ("user/%s_x_adjust" % typ, {"default": None})
     y_adjust = Config.get ("user/%s_y_adjust" % typ, {"default": None})
     nomark = Config.get ("DEFAULT/no_registration", {"default": []})
