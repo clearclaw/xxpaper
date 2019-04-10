@@ -1,0 +1,122 @@
+TEMPLATE_share_default:
+  - asset_interior_box
+  - rotate
+  - side_bar_box
+  - side_bar_lsplit_box
+  - side_bar_rsplit_box
+  - type_bar_box
+  - share_desc_text
+  - share_pct_text
+  - share_num_text
+  - long_name_text
+  - comment_text
+  - token_2a_embed
+  - token_3a_embed
+  - token_1_embed
+  - token_3b_embed
+  - token_2b_embed
+
+asset_interior_box:
+  fill: $[desaturate_and_brighten (${_/_related_fill}, 0.04, 0.95)]
+
+long_name_text:
+  size: 14
+  x: 101
+  y: 84
+
+side_bar_box:
+  x_inset: 4
+  y_inset: 0
+  x: 28
+  y: ${asset_interior_box/x}
+  fill: ${_/_related_fill}
+
+side_bar_rsplit_box:
+  suppress: $[n != "1"]
+  x_inset: 15
+  y_inset: 0
+  x: 2
+  y: ${asset_interior_box/x}
+  fill: $[black_or_white (${side_bar_box/fill})]
+
+side_bar_lsplit_box:
+  suppress: $[n != "1"]
+  x_inset: 19
+  y_inset: 0
+  x: 2
+  y: ${asset_interior_box/x}
+  fill: $[black_or_white (${side_bar_box/fill})]
+
+type_bar_box:
+  x: ${asset_interior_box/y}
+  y: 11
+  fill: ${colour/xxp/DIRECTOR}
+  suppress: True
+
+share_num_text:
+  x: 160
+  y: 1.5
+  h_center: -1
+  v_center: 1
+  typeface: ${DEFAULT/typeface_italic}
+  size: 11
+  text: 1 Share
+
+share_pct_text:
+  text: 10%
+  x: 18
+  y: 1.5
+  h_center: 0
+  v_center: -1
+  typeface: ${DEFAULT/typeface_italic}
+  size: 11
+  fill: $[black_or_white (${_/_related_fill})]
+
+share_desc_text:
+  text: Director
+  x: 64
+  y: 1.5
+  h_center: 0
+  v_center: 1
+  typeface: ${DEFAULT/typeface_italic}
+  size: 11
+  suppress: True
+
+comment_text:
+  x: 101
+  y: 16
+  h_center: 0
+  v_center: -1
+  typeface: ${DEFAULT/typeface_italic}
+  size: 8
+
+token_1_embed:
+  suppress: False
+  typ: token
+  x_inset: -4
+  y_inset: $[(${token_2a_embed/y_inset} + ${token_2b_embed/y_inset}) / 2.0]
+
+token_2a_embed:
+  suppress: True
+  typ: token
+  x_inset: -4
+  y_inset: $[(${side_bar_box/y} - 10) / 2.0 + ${type_bar_box/y}]
+
+token_2b_embed:
+  suppress: True
+  typ: token
+  x_inset: -4
+  dfgfgy_inset: 20
+  y_inset: 12
+
+token_3a_embed:
+  suppress: True
+  typ: token
+  x_inset: -4
+  y_inset: $[(${token_2a_embed/y_inset} + ${token_1_embed/y_inset}) / 2.0]
+
+token_3b_embed:
+  suppress: True
+  typ: token
+  x_inset: -4
+  y_inset: $[(${token_2b_embed/y_inset} + ${token_1_embed/y_inset}) / 2.0]

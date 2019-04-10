@@ -1,0 +1,141 @@
+TEMPLATE_minor_charter_default:
+  - minor_charter_interior_box
+  - outside_box
+  - title_box
+  - token_embed
+  - label_text
+  - top_note_text
+  - comment_text
+  - long_name_text
+  - token_1_circle
+  - token_2_circle
+  - token_3_circle
+  - token_1_text
+  - token_2_text
+  - token_3_text
+
+outside_box:
+  x_inset: 10
+  y_inset: 10
+  x: $[${minor_charter_interior_box/x} - (2 * ${outside_box/x_inset})]
+  y: $[${minor_charter_interior_box/y} - (2 * ${outside_box/y_inset})]
+  radius: 30
+  stroke: ${colour/xxp/BLACK}
+  width: 4
+  fill: $[desaturate_and_brighten (${_/_related_fill}, 0.04, 0.95)]
+
+title_box:
+  x_inset: ${outside_box/x_inset}
+  y_inset: $[${outside_box/y} - 60 + 10]
+  x: ${outside_box/x}
+  y: 60
+  radius: 30
+  stroke: ${colour/xxp/BLACK}
+  width: 4
+  fill: ${_/_related_fill}
+
+token_embed:
+  typ: token
+  x_inset: 18
+  y_inset: 170.33
+
+label_text:
+  typeface: ${DEFAULT/typeface_italic}
+  size: 13
+  x_inset: 10
+  y_inset: 143.33
+  text: Assets, Treasury & Trains
+  x: $[${outside_box/x} / 2]
+  y: 0
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${outside_box/fill})]
+
+top_note_text:
+  suppress: True
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x_inset: 10
+  y_inset: 128.33
+  x: $[${outside_box/x} / 2]
+  y: 0
+  h_center: 0
+  v_center: 1
+  fill: $[black_or_white (${outside_box/fill})]
+
+comment_text:
+  suppress: False
+  text: |
+    Purchase price of shares goes to bank.
+    Pool shares pay dividends to treasury.
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x_inset: 10
+  y_inset: 20
+  x: $[${outside_box/x} / 2]
+  y: 0
+  h_center: 0
+  v_center: -1
+  fill: $[black_or_white (${outside_box/fill})]
+
+long_name_text:
+  h_center: 0
+  v_center: 0
+  size: 16
+  x: $[(${token_embed/x_inset} * 2) + (${outside_box/x} - ${token_embed/x_inset}) / 2]
+  y: 186.67
+  fill: $[black_or_white (${title_box/fill})]
+
+token_1_circle:
+  suppress: $["${token_1_text/text}" == ""]
+  x: 42
+  y: 103.67
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_1_text:
+  suppress: $["${token_1_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 42
+  y: 99.67
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_1_circle/fill})]
+
+token_2_circle:
+  suppress: $["${token_2_text/text}" == ""]
+  x: 42
+  y: 42
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_2_text:
+  suppress: $["${token_2_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 42
+  y: 36
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_2_circle/fill})]
+
+token_3_circle:
+  suppress: $["${token_3_text/text}" == ""]
+  x: 80
+  y: $[(${token_1_circle/y} + ${token_2_circle/y}) / 2.0]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_3_text:
+  suppress: $["${token_3_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 80
+  y: $[(${token_1_text/y} + ${token_2_text/y}) / 2.0]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_3_circle/fill})]

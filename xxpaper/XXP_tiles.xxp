@@ -49,7 +49,6 @@ charter_tile:
   stroke: ${DEFAULT/cutline_stroke}
   width: ${DEFAULT/cutline_width}
   margin: ${DEFAULT/margin}
-
 narrow_charter_tile:
   x: $[7.5 * 72 ]
   y: $[10 * 72 / 3.0]

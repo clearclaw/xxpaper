@@ -1,0 +1,282 @@
+TEMPLATE_charter_default:
+  - charter_interior_box
+  - outside_box
+  - title_box
+  - token_embed
+  - label_text
+  - top_note_text
+  - comment_text
+  - long_name_text
+  - token_1_circle
+  - token_2_circle
+  - token_3_circle
+  - token_4_circle
+  - token_5_circle
+  - token_6_circle
+  - token_7_circle
+  - token_8_circle
+  - token_9_circle
+  - token_1_text
+  - token_2_text
+  - token_3_text
+  - token_4_text
+  - token_5_text
+  - token_6_text
+  - token_7_text
+  - token_8_text
+  - token_9_text
+
+outside_box:
+  x_inset: 10
+  y_inset: 10
+  x: 242
+  y: 332
+  radius: 30
+  stroke: ${colour/xxp/BLACK}
+  width: 4
+  fill: $[desaturate_and_brighten (${_/_related_fill}, 0.04, 0.95)]
+
+title_box:
+  x_inset: 10
+  y_inset: 282
+  x: 242
+  y: 60
+  radius: 30
+  stroke: ${colour/xxp/BLACK}
+  width: 4
+  fill: ${_/_related_fill}
+
+token_embed:
+  typ: token
+  x_inset: 18
+  y_inset: 290
+
+label_text:
+  typeface: ${DEFAULT/typeface_italic}
+  size: 13
+  x_inset: 10
+  y_inset: 260
+  text: Assets, Treasury & Trains
+  x: $[${outside_box/x} / 2]
+  y: 0
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${outside_box/fill})]
+
+top_note_text:
+  suppress: True
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x_inset: 10
+  y_inset: 245
+  x: $[${outside_box/x} / 2]
+  y: 0
+  h_center: 0
+  v_center: 1
+  fill: $[black_or_white (${outside_box/fill})]
+
+comment_text:
+  suppress: False
+  text: ""
+  typeface: ${DEFAULT/typeface_italic}
+  size: 8
+  x_inset: 10
+  y_inset: 20
+  x: $[${outside_box/x} / 2]
+  y: 0
+  h_center: 0
+  v_center: -1
+  fill: $[black_or_white (${outside_box/fill})]
+
+long_name_text:
+  h_center: 0
+  v_center: 0
+  size: 16
+  x: $[(${token_embed/x_inset} * 2) + (${outside_box/x} - ${token_embed/x_inset}) / 2]
+  y: 305
+  fill: $[black_or_white (${_/_related_fill})]
+
+token_1_circle:
+  suppress: $["${token_1_text/text}" == ""]
+  x: 42
+  y: 232
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_1_text:
+  suppress: $["${token_1_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 42
+  y: 228
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_1_circle/fill})]
+
+token_2_circle:
+  suppress: $["${token_2_text/text}" == ""]
+  x: 42
+  y: $[${token_5_circle/y} + ((${token_1_circle/y} - ${token_5_circle/y}) * 3.0 / 4.0)]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_2_text:
+  suppress: $["${token_2_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 42
+  y: $[${token_5_text/y} + ((${token_1_text/y} - ${token_5_text/y}) * 3.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_2_circle/fill})]
+
+token_3_circle:
+  suppress: $["${token_3_text/text}" == ""]
+  x: 42
+  y: $[${token_5_circle/y} + ((${token_1_circle/y} - ${token_5_circle/y}) * 2.0 / 4.0)]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_3_text:
+  suppress: $["${token_3_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 42
+  y: $[${token_5_text/y} + ((${token_1_text/y} - ${token_5_text/y}) * 2.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_3_circle/fill})]
+
+token_4_circle:
+  suppress: $["${token_4_text/text}" == ""]
+  x: 42
+  y: $[${token_5_circle/y} + ((${token_1_circle/y} - ${token_5_circle/y}) * 1.0 / 4.0)]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_4_text:
+  suppress: $["${token_4_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 42
+  y: $[${token_5_text/y} + ((${token_1_text/y} - ${token_5_text/y}) * 1.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_4_circle/fill})]
+
+token_5_circle:
+  suppress: $["${token_5_text/text}" == ""]
+  x: 42
+  y: 42
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_5_text:
+  suppress: $["${token_5_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 42
+  y: 36
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_5_circle/fill})]
+
+token_6_circle:
+  suppress: $["${token_6_text/text}" == ""]
+  x: 80
+  y: $[(${token_5_circle/y} + ${token_4_circle/y}) / 2.0]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_6_text:
+  suppress: $["${token_6_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 80
+  y: $[(${token_5_text/y} + ${token_4_text/y}) / 2.0]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_6_circle/fill})]
+
+token_7_circle:
+  suppress: $["${token_7_text/text}" == ""]
+  x: 80
+  y: $[(${token_3_circle/y} + ${token_4_circle/y}) / 2.0]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_7_text:
+  suppress: $["${token_7_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 80
+  y: $[(${token_3_text/y} + ${token_4_text/y}) / 2.0]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_7_circle/fill})]
+
+token_8_circle:
+  suppress: $["${token_8_text/text}" == ""]
+  x: 80
+  y: $[(${token_2_circle/y} + ${token_3_circle/y}) / 2.0]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_8_text:
+  suppress: $["${token_8_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 80
+  y: $[(${token_2_text/y} + ${token_3_text/y}) / 2.0]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_8_circle/fill})]
+
+token_9_circle:
+  suppress: $["${token_9_text/text}" == ""]
+  x: 80
+  y: $[(${token_1_circle/y} + ${token_2_circle/y}) / 2.0]
+  radius: 18
+  width: 0.5
+  stroke: ${colour/xxp/BLACK}
+  fill:  ${colour/xxp/WHITE}
+
+token_9_text:
+  suppress: $["${token_9_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  x: 80
+  y: $[(${token_1_text/y} + ${token_2_text/y}) / 2.0]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${token_9_circle/fill})]
+
+hexagon_shape:
+  fill: ${colour/xxp/TRAIN_YELLOW}
+  x: 10
+  y: 0
+  stroke: ${colour/xxp/BLACK}
+  weight: 1
+  points:
+    - [5, -9]
+    - [-5, -9]
+    - [-10, 0]
+    - [-5, 9]
+    - [5, 9]
+
+hexagon_text:
+  typeface: ${DEFAULT/typeface}
+  x: 0
+  y: -2.55
+  h_center: 0
+  v_center: 0
+  size: 8
+  fill: $[black_or_white (${hexagon_shape/fill})]
+  text: $20
