@@ -21,5 +21,5 @@ class Contents (object):
         coords = pg.next (obj.asset)
         with XlateFrame (self.canvas, obj.tile_type, *coords,
                          inset_by = "margin"):
-          print "Obj: ", obj.asset
+          # print "Obj: ", obj.asset
           obj.render ()

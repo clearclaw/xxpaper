@@ -6,13 +6,17 @@ charter_interior_box:
   x: ${charter_tile/x_max}
   y: ${charter_tile/y_max}
 
+minor_charter_interior_box:
+  x: ${minor_charter_tile/x_max}
+  y: ${minor_charter_tile/y_max}
+
 narrow_charter_interior_box:
   x: ${narrow_charter_tile/x_max}
   y: ${narrow_charter_tile/y_max}
 
-minor_charter_interior_box:
-  x: ${minor_charter_tile/x_max}
-  y: ${minor_charter_tile/y_max}
+wide_charter_interior_box:
+  x: ${wide_charter_tile/x_max}
+  y: ${wide_charter_tile/y_max}
 
 market2d_interior_box:
   x: ${market2d_tile/x_max}
@@ -49,16 +53,6 @@ charter_tile:
   stroke: ${DEFAULT/cutline_stroke}
   width: ${DEFAULT/cutline_width}
   margin: ${DEFAULT/margin}
-narrow_charter_tile:
-  x: $[7.5 * 72 ]
-  y: $[10 * 72 / 3.0]
-  x_max: $[${narrow_charter_tile/x} - (2 * ${narrow_charter_tile/margin})]
-  y_max: $[${narrow_charter_tile/y} - (2 * ${narrow_charter_tile/margin})]
-  x_num: 1
-  y_num: 3
-  stroke: ${DEFAULT/cutline_stroke}
-  width: ${DEFAULT/cutline_width}
-  margin: ${DEFAULT/margin}
 
 minor_charter_tile:
   x: $[7.5 * 72 / 2.0]
@@ -70,6 +64,19 @@ minor_charter_tile:
   stroke: ${DEFAULT/cutline_stroke}
   width: ${DEFAULT/cutline_width}
   margin: ${DEFAULT/margin}
+
+narrow_charter_tile:
+  x: $[7.5 * 72 ]
+  y: $[10 * 72 / 3.0]
+  x_max: $[${narrow_charter_tile/x} - (2 * ${narrow_charter_tile/margin})]
+  y_max: $[${narrow_charter_tile/y} - (2 * ${narrow_charter_tile/margin})]
+  x_num: 1
+  y_num: 3
+  stroke: ${DEFAULT/cutline_stroke}
+  width: ${DEFAULT/cutline_width}
+  margin: ${DEFAULT/margin}
+
+wide_charter_tile: ${charter_tile/.}
 
 market2d_tile:
   x: 45

@@ -28,6 +28,19 @@ company:
     _include_:
       - XXP_company_charter_objects.xxp
 
+  minor_charter:
+
+    CUT_ELEMENT: cutline_box
+
+    ELEMENTS: ${TEMPLATE_minor_charter_default/.}
+
+    index:
+
+    cutline_box: ${DEFAULT/minor_charter_tile}
+
+    _include_:
+      - XXP_company_minor_charter_objects.xxp
+
   narrow_charter:
 
     CUT_ELEMENT: cutline_box
@@ -41,18 +54,18 @@ company:
     _include_:
       - XXP_company_narrow_charter_objects.xxp
 
-  minor_charter:
+  wide_charter:
 
     CUT_ELEMENT: cutline_box
 
-    ELEMENTS: ${TEMPLATE_minor_charter_default/.}
+    ELEMENTS: ${TEMPLATE_wide_charter_default/.}
 
     index:
 
-    cutline_box: ${DEFAULT/minor_charter_tile}
+    cutline_box: ${DEFAULT/wide_charter_tile}
 
     _include_:
-      - XXP_company_minor_charter_objects.xxp
+      - XXP_company_wide_charter_objects.xxp
 
   share:
 

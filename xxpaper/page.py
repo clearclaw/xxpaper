@@ -36,7 +36,7 @@ class Page (object):
   @logtool.log_call
   def _end_page (self):
     if self.asset is not None:
-      print "EndPage"
+      # print "EndPage"
       self._borders ()
       self.canvas.restoreState ()
       self.canvas.showPage ()
@@ -46,7 +46,7 @@ class Page (object):
   def _start_page (self, asset, typ):
     if self.in_page:
       self._end_page ()
-    print "StartPage"
+    # print "StartPage"
     self.canvas.saveState ()
     x_scale = Config.get ("user/x_scale", {"default": 1})
     y_scale = Config.get ("user/y_scale", {"default": 1})
@@ -54,7 +54,7 @@ class Page (object):
     x_adjust = Config.get ("user/%s_x_adjust" % typ, {"default": None})
     y_adjust = Config.get ("user/%s_y_adjust" % typ, {"default": None})
     nomark = Config.get ("DEFAULT/no_registration", {"default": []})
-    print "============", x_adjust, y_adjust, nomark, typ
+    # print "============", x_adjust, y_adjust, nomark, typ
     if typ in nomark and x_adjust is not None and y_adjust is not None:
       self.canvas.saveState ()
       self.canvas.setStrokeColorRGB (0, 0, 0)
