@@ -68,12 +68,12 @@ top_note_text:
   suppress: True
   typeface: ${DEFAULT/typeface}
   size: 8
-  x_inset: 10
-  y_inset: 245
   x: $[${outside_box/x} / 2]
   y: 0
+  x_inset: 10
+  y_inset: 150
   h_center: 0
-  v_center: 1
+  v_center: 0
   fill: $[black_or_white (${outside_box/fill})]
 
 comment_text:

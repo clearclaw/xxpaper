@@ -13,6 +13,9 @@ company:
             Busan & Masan
             Railway
         short_name_text_text: B&M
+        short_name_text_size: 12
+        short_name_text_x_inset: 0
+        short_name_text_y_inset: -2
         token_3_text_text: $100
         _major_fill: ${colour/x11/orchid2}
         _related_fill: ${colour/x11/plum}
@@ -30,6 +33,9 @@ company:
             Chinesische
             Staatsbahn
         short_name_text_text: CSb
+        short_name_text_size: 12
+        short_name_text_x_inset: 0
+        short_name_text_y_inset: -2
         token_3_text_text: $100
         _major_fill: ${colour/xxp/BLACK}
         _related_fill: ${colour/x11/gray50}
@@ -46,6 +52,9 @@ company:
         long_name_text_text: |
             Fushun Railway
         short_name_text_text: FsR
+        short_name_text_size: 12
+        short_name_text_x_inset: 0
+        short_name_text_y_inset: -2
         _major_fill: ${colour/x11/dodgerblue4}
         _related_fill: ${colour/x11/steelblue3}
 
@@ -62,6 +71,9 @@ company:
             Northern Railway
             Corporation
         short_name_text_text: NRC
+        short_name_text_size: 12
+        short_name_text_x_inset: 0
+        short_name_text_y_inset: -2
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/hollasch/cerulean}
@@ -81,6 +93,9 @@ company:
             Shijiazhuang
             Railway
         short_name_text_text: Sjz
+        short_name_text_size: 12
+        short_name_text_x_inset: 0
+        short_name_text_y_inset: -2
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/x11/khaki1}
@@ -98,6 +113,9 @@ company:
         long_name_text_text: |
             Tsingtau Railway
         short_name_text_text: Tt
+        short_name_text_size: 12
+        short_name_text_x_inset: 0
+        short_name_text_y_inset: -2
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/x11/gray60}
@@ -121,6 +139,9 @@ company:
             & Shanghai
             Railway
         short_name_text_text: XzS
+        short_name_text_size: 12
+        short_name_text_x_inset: 0
+        short_name_text_y_inset: -2
         _major_fill: ${colour/x11/sienna}
         _related_fill: ${colour/x11/sienna1}
 
@@ -137,6 +158,9 @@ company:
              First Southern
              Railway
         short_name_text_text: 1St
+        short_name_text_size: 12
+        short_name_text_x_inset: 0
+        short_name_text_y_inset: -2
         token_3_text_text: $100
         _major_fill: ${colour/x11/green}
         _related_fill: ${colour/x11/olivedrab1}
@@ -150,6 +174,17 @@ company:
 
 marker:
   index:
+    mountain:
+      token:
+        _:
+          name_stripe_box_suppress: True
+          short_name_text_text: ¥80
+          short_name_text_size: 12
+          short_name_text_x_inset: 0
+          short_name_text_y_inset: -2
+        ELEMENTS: ${TEMPLATE_solid/.}
+        index: $[index_of (4)]
+
     round:
       token:
         ELEMENTS:
@@ -157,15 +192,11 @@ marker:
           - outer_circle
           - middle_circle
           - inner_circle
-
         index: $[index_of (1)]
-
         outer_circle:
           fill: ${colour/x11/yellowgreen}
-
         middle_circle:
           fill: ${colour/x11/yellow3}
-
         inner_circle:
           fill: ${colour/x11/yellow4}
 
@@ -179,9 +210,9 @@ private:
         long_name_text_text: |
             Busan-Masan
         power_text_text: |
-            Blocks: C7.
-        cost_text_text: "Cost: $20"
-        revenue_text_text: "Revenue: $5"
+            Blocks: H21.
+        cost_text_text: "Cost: ¥20"
+        revenue_text_text: "Revenue: ¥5"
 
     FG:
       _:
@@ -190,13 +221,13 @@ private:
             Fähren über den
             gelben Fluß
         power_text_text: |
-            Blocks: R6.
-            May place a track tile on R6
+            Blocks: G6.
+            May place a track tile on G6
             for free, whether connected or
             not.  This counts as the
             company's tile lay.
-        cost_text_text: "Cost: $40"
-        revenue_text_text: "Revenue: $10"
+        cost_text_text: "Cost: ¥40"
+        revenue_text_text: "Revenue: ¥10"
 
     YSC:
       _:
@@ -205,13 +236,13 @@ private:
             Yellow Sea
             Company
         power_text_text: |
-            Blocks: L4.
+            Blocks: E12, F11 & G12.
             Owning company may build the ferry
-            route in M5 in addition to their
+            route in F11 in addition to their
             normal track build and/or may place
-            a station marker in L4 for free.
-        cost_text_text: "Cost: $70"
-        revenue_text_text: "Revenue: $15"
+            a station marker in E12 for free.
+        cost_text_text: "Cost: ¥70"
+        revenue_text_text: "Revenue: ¥15"
 
     VPR:
       _:
@@ -221,11 +252,11 @@ private:
             Verband Pekinger
             Rickschafahrer
         power_text_text: |
-            Blocks: T4.
+            Blocks: E4.
             Owning player may exchange for a share
             of B&M from bank or IPO.
-        cost_text_text: "Cost: $110"
-        revenue_text_text: "Revenue: $20"
+        cost_text_text: "Cost: ¥110"
+        revenue_text_text: "Revenue: ¥20"
 
     ASC:
       _:
@@ -234,10 +265,10 @@ private:
             An-dong & Sinuju
             Companies
         power_text_text: |
-            Blocks: H2 & G1.
+            Blocks: B17 & C16.
             Purchaser receives 10% FsR share.
-        cost_text_text: "Cost: $160"
-        revenue_text_text: "Revenue: $25"
+        cost_text_text: "Cost: ¥160"
+        revenue_text_text: "Revenue: ¥25"
 
     X&S:
       _:
@@ -246,12 +277,12 @@ private:
             Xuzhou & Shanghai
             Railway
         power_text_text: |
-            Blocks: I13 & I15.
+            Blocks: J5.
             Purchaser receives ZxS presidency and
             sets par price. May not be sold to a
             public company.
-        cost_text_text: "Cost: $200"
-        revenue_text_text: "Revenue: $30"
+        cost_text_text: "Cost: ¥200"
+        revenue_text_text: "Revenue: ¥30"
 
 train:
 
@@ -261,7 +292,7 @@ train:
         asset_interior_box_fill_p: YELLOW
         rust_bar_box_fill_p: BLUE
         long_name_text_text: "2"
-        cost_text_text_p: $80
+        cost_text_text_p: ¥80
       model:
         index: $[index_of (6)]
 
@@ -270,7 +301,7 @@ train:
         asset_interior_box_fill_p: GREEN
         rust_bar_box_fill_p: RED
         long_name_text_text: "3"
-        cost_text_text_p: $180
+        cost_text_text_p: ¥180
       model:
         index: $[index_of (5)]
 
@@ -279,9 +310,9 @@ train:
         asset_interior_box_fill_p: BLUE
         rust_bar_box_fill_p: GRAY
         long_name_text_text: "4"
-        cost_text_text_p: $300
+        cost_text_text_p: ¥300
         note_text_text: |
-            To DIESEL: $800
+            To DIESEL: ¥800
       model:
         index: $[index_of (4)]
 
@@ -290,7 +321,7 @@ train:
         asset_interior_box_fill_p: BROWN
         rust_bar_box_fill_p: BLACK
         long_name_text_text: "5"
-        cost_text_text_p: $450
+        cost_text_text_p: ¥450
         rusted_text_text: PERMANENT
       model:
         index: $[index_of (3)]
@@ -300,17 +331,17 @@ train:
         asset_interior_box_fill_p: RED
         rust_bar_box_fill_p: BLACK
         long_name_text_text: "6"
-        cost_text_text_p: $630
+        cost_text_text_p: ¥630
         rusted_text_text: PERMANENT
       model:
-        index: $[index_of (5)]
+        index: $[index_of (3)]
 
     Diesel:
       _:
         asset_interior_box_fill_p: GRAY
         rust_bar_box_fill_p: BLACK
         long_name_text_text: "Diesel"
-        cost_text_text_p: $1,100
+        cost_text_text_p: ¥1,100
         rusted_text_text: PERMANENT
       long_name_text:
         size: 32
