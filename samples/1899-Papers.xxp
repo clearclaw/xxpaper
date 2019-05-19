@@ -5,6 +5,14 @@ company:
     token_1_text_text: Free
     token_2_text_text: $40
 
+  charter:
+    _:
+      comment_text_text: |
+          Pay half the first & last
+          revenue centers of one train's
+          route to the treasury in each
+          Operating Round.
+
   index:
 
     B&M:
@@ -183,7 +191,7 @@ marker:
           short_name_text_x_inset: 0
           short_name_text_y_inset: -2
         ELEMENTS: ${TEMPLATE_solid/.}
-        index: $[index_of (4)]
+        index: $[index_of (3)]
 
     round:
       token:
@@ -270,7 +278,7 @@ private:
         cost_text_text: "Cost: ¥160"
         revenue_text_text: "Revenue: ¥25"
 
-    X&S:
+    XZS:
       _:
         asset_interior_box_fill: ${colour/scale/blue_0}
         long_name_text_text: |
@@ -281,7 +289,9 @@ private:
             Purchaser receives ZxS presidency and
             sets par price. May not be sold to a
             public company.
-        cost_text_text: "Cost: ¥200"
+        closes_text_text: |
+            Close: In BROWN phase or XzS aquires a train.
+        cost_text_text: "Cost: ¥220"
         revenue_text_text: "Revenue: ¥30"
 
 train:

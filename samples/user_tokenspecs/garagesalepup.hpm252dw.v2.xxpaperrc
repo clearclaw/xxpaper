@@ -1,0 +1,10 @@
+---
+# New settings using latest printer firmware
+user:
+  token_tile:
+    x: $[72 * 5.125 / 8]
+    y: $[72 * 7.81 / 13]
+    x_num: 12
+    y_num: 17
+  token_tile_x_adjust: 27.5
+  token_tile_y_adjust: 21.5
