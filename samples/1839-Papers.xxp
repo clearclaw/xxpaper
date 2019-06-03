@@ -217,6 +217,16 @@ company:
           "8":
           "9":
           "10":
+          "11":
+          "12":
+          "13":
+          "14":
+          "15":
+          "16":
+          "17":
+          "18":
+          "19":
+          "20":
       token:
         ELEMENTS: ${TEMPLATE_boxes/.}
         EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
@@ -266,11 +276,6 @@ company:
           "13":
           "14":
           "15":
-          "16":
-          "17":
-          "18":
-          "19":
-          "20":
       token:
         ELEMENTS: ${TEMPLATE_boxes/.}
         EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
@@ -321,6 +326,17 @@ company:
           "8":
           "9":
           "10":
+          "10":
+          "11":
+          "12":
+          "13":
+          "14":
+          "15":
+          "16":
+          "17":
+          "18":
+          "19":
+          "20":
       token:
         ELEMENTS: ${TEMPLATE_boxes/.}
         EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
@@ -369,11 +385,6 @@ company:
           "13":
           "14":
           "15":
-          "16":
-          "17":
-          "18":
-          "19":
-          "20":
       token:
         ELEMENTS: ${TEMPLATE_boxes/.}
         EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
@@ -425,6 +436,17 @@ company:
           "8":
           "9":
           "10":
+          "10":
+          "11":
+          "12":
+          "13":
+          "14":
+          "15":
+          "16":
+          "17":
+          "18":
+          "19":
+          "20":
       token:
         ELEMENTS: ${TEMPLATE_boxes/.}
         EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
@@ -474,11 +496,6 @@ company:
           "13":
           "14":
           "15":
-          "16":
-          "17":
-          "18":
-          "19":
-          "20":
       token:
         ELEMENTS: ${TEMPLATE_boxes/.}
         EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
@@ -1010,56 +1027,51 @@ train:
         asset_interior_box_fill_p: YELLOW
         rust_bar_box_fill_p: BLUE
         long_name_text_text: "2"
-        cost_text_text_p: ƒ80
+        cost_text_text_p: ƒ100
       model:
-        index: $[index_of (6)]
+        index: $[index_of (7)]
 
     3+T:
       _:
         asset_interior_box_fill_p: GREEN
         rust_bar_box_fill_p: RED
         long_name_text_text: "3+"
-        cost_text_text_p: ƒ180
+        cost_text_text_p: ƒ250
       model:
-        index: $[index_of (5)]
+        index: $[index_of (7)]
 
     5+T:
       _:
         asset_interior_box_fill_p: BLUE
         rust_bar_box_fill_p: GRAY
         long_name_text_text: "5+"
-        cost_text_text_p: ƒ300
+        cost_text_text_p: ƒ450
         note_text_text: |
             To DIESEL: ƒ800
       model:
-        index: $[index_of (4)]
+        index: $[index_of (7)]
 
     7+T:
       _:
         asset_interior_box_fill_p: BROWN
         rust_bar_box_fill_p: BLACK
         long_name_text_text: "7+"
-        cost_text_text_p: ƒ450
+        cost_text_text_p: ƒ1,250
         rusted_text_text: PERMANENT
       model:
-        index: $[index_of (3)]
+        index: $[index_of (6)]
 
     5+DT:
       _:
         asset_interior_box_fill_p: RED
         rust_bar_box_fill_p: BLACK
         long_name_text_text: "5+D"
-        cost_text_text_p: ƒ630
+        cost_text_text_p: ƒ2,000
         rusted_text_text: PERMANENT
       long_name_text:
         size: 48
       model:
-        index:
-          "1":
-            note_text:
-              text: Optional
-          "2":
-          "3":
+        index: $[index_of (5)]
 
     FLOOD:
       _:

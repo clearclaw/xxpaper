@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
 import contextlib, logging, logtool, math
 from .config import Config
 

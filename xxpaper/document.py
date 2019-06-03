@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
 import logging, logtool, pkg_resources
 from path import Path
 from reportlab.pdfgen import canvas as Canvas

@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
 import logging, logtool
 from .page import Page
 from .xlate_frame import XlateFrame
@@ -21,5 +20,5 @@ class Contents (object):
         coords = pg.next (obj.asset)
         with XlateFrame (self.canvas, obj.tile_type, *coords,
                          inset_by = "margin"):
-          # print "Obj: ", obj.asset
+          # print ("Obj: ", obj.asset)
           obj.render ()

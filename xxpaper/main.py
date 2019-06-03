@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
 import clip, logging, logtool, raven, sys
 from path import Path
 from .config import Config
@@ -56,14 +55,14 @@ def main ():
     sys.exit (0)
   except Exception as e:
     logtool.log_fault (e)
-    print >> sys.stderr, ("Something broke!")
+    sys.stderr.write ("Something broke!\n")
     if not (getattr (Config, "_nosentry", False)
             or Config.get ("user/nosentry", params = {"default": True})):
       client = raven.Client (
         "https://250e838eaff24eee9461682bc7160904"
         ":b455442d9dcb4773a82786844f430386@sentry.io/127918")
       h = client.captureException ()
-      print >> sys.stderr, "\t Sentry filed: %s" % h
+      sys.stderr.write  ("\t Sentry filed: %s\n" % h)
     sys.exit (1)
 
 if __name__ == "__main__":

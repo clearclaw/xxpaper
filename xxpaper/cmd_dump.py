@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
 import clip, logging, logtool
 from .config import Config, load_config
 
@@ -14,4 +13,4 @@ def do (**kwargs):
   if f not in formats:
     clip.exit (err = True,
                message = "Unknown format (%s), not one of: %s" % (f, formats))
-  print Config.dumps (form = f)
+  print (Config.dumps (form = f))

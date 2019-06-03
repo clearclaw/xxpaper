@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
-import colorsys, itertools, json, logging, logtool, os, pkg_resources
+import colorsys, functools, itertools, json, logging, logtool
+import os, pkg_resources
 import pprint, re, toml, yaml, math
 from path import Path
 from cfgstack import CfgStack
@@ -38,7 +38,7 @@ EXP_VAR = re.compile (r"(\$\[[^\]]*\])")
 
 @logtool.log_call
 def index_of (n):
-  return {"%s" % i: None for i in xrange (n)}
+  return {"%s" % i: None for i in range (n)}
 
 @logtool.log_call
 def desaturate_and_brighten (colour, s, b):
@@ -81,19 +81,19 @@ class Config (object):
       if k == ".":
         return rc # Breaks the descent!
       rc = rc[k]
-      if isinstance (rc, basestring):
+      if isinstance (rc, str):
         rc = rc.strip ()
       changed = True
       while changed:
         changed = False
-        while isinstance (rc, basestring):
+        while isinstance (rc, str):
           m = RE_VAR.search (rc)
           if m is None:
             break
           if cls._verbose:
-            print "    Interpolation: %s" % rc[m.start ():m.end ()]
+            print ("    Interpolation: %s" % rc[m.start ():m.end ()])
           v = cls.get (rc[m.start () + 2:m.end () - 1], params = params)
-          if isinstance (v, basestring):
+          if isinstance (v, str):
             v = v.strip ()
           if m.end () - m.start () == len (rc):
             rc = v
@@ -103,7 +103,7 @@ class Config (object):
             rc = ("%s%s%s" % (rc[:m.start ()], v, rc[m.end ():])).strip ()
           changed = True
           continue
-        while isinstance (rc, basestring):
+        while isinstance (rc, str):
           m = EXP_VAR.search (rc)
           if m is not None:
             # pylint: disable=eval-used
@@ -115,7 +115,7 @@ class Config (object):
             l.update (params if params else {})
             v = eval (rc[m.start () + 2:m.end () - 1], {}, l)
             if cls._verbose:
-              print "    Expression: %s => %s" % (rc[m.start ():m.end ()], v)
+              print ("    Expression: %s => %s" % (rc[m.start ():m.end ()], v))
             if m.end () - m.start () == len (rc):
               rc = v
             else:
@@ -136,22 +136,22 @@ class Config (object):
         p["klass"] = "colour"
         params = p
     if cls._verbose:
-      print "  %s =>" % key
+      print ("  %s =>" % key)
     o, k = key.split ("/")
     for q in itertools.chain (QUERIES, [key,]):
       try:
         key_exp = q.format (obj = o, key = k, **(params if params else {}))
         if cls._verbose:
-          print "    %s =>" % key_exp
+          print ("    %s =>" % key_exp)
         rc = cls._get (key_exp, params)
         if cls._verbose:
-          print "  %s\n" % rc
+          print ("  %s\n" % rc)
         return rc
       except (AttributeError, KeyError, TypeError):
         continue
     if params and "default" in params:
       if cls._verbose:
-        print "  %s => %s\n    %s\n" % (key, "(default)", params["default"])
+        print ("  %s => %s\n    %s\n" % (key, "(default)", params["default"]))
       return params["default"]
     raise KeyError ("Not found: " + key)
 
@@ -161,7 +161,7 @@ class Config (object):
     keys = [cls._state,] + key.split ("/")
     l = keys[:-1]
     r = keys[-1]
-    reduce (lambda x, y: x[y], l)[r] = value
+    functools.reduce (lambda x, y: x[y], l)[r] = value
 
   @classmethod
   @logtool.log_call

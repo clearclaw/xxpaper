@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
 import clip, fnmatch, itertools, logging, logtool
 from reportlab.lib.pagesizes import letter, A4
 from path import Path

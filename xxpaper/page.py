@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
 import itertools, logging, logtool, sys
 from reportlab.lib.units import inch
 from path import Path
@@ -36,7 +35,7 @@ class Page (object):
   @logtool.log_call
   def _end_page (self):
     if self.asset is not None:
-      # print "EndPage"
+      # print ("EndPage")
       self._borders ()
       self.canvas.restoreState ()
       self.canvas.showPage ()
@@ -46,7 +45,7 @@ class Page (object):
   def _start_page (self, asset, typ):
     if self.in_page:
       self._end_page ()
-    # print "StartPage"
+    # print ("StartPage")
     self.canvas.saveState ()
     x_scale = Config.get ("user/x_scale", {"default": 1})
     y_scale = Config.get ("user/y_scale", {"default": 1})
@@ -54,7 +53,7 @@ class Page (object):
     x_adjust = Config.get ("user/%s_x_adjust" % typ, {"default": None})
     y_adjust = Config.get ("user/%s_y_adjust" % typ, {"default": None})
     nomark = Config.get ("DEFAULT/no_registration", {"default": []})
-    # print "============", x_adjust, y_adjust, nomark, typ
+    # print ("============", x_adjust, y_adjust, nomark, typ)
     if typ in nomark and x_adjust is not None and y_adjust is not None:
       self.canvas.saveState ()
       self.canvas.setStrokeColorRGB (0, 0, 0)
@@ -106,7 +105,7 @@ class Page (object):
       self.canvas.translate (0, 0.25 * inch)
     self.x_dim = Config.get (typ + "/x_num")
     self.y_dim = Config.get (typ + "/y_num")
-    self.line = itertools.product (xrange (self.x_dim), xrange (self.y_dim))
+    self.line = itertools.product (range (self.x_dim), range (self.y_dim))
     self.asset = asset
     self.ndx = 0
     self.in_page = True
@@ -120,12 +119,12 @@ class Page (object):
       self._start_page (asset, new_typ)
     self.ndx += 1
     try:
-      return self.line.next ()
+      return next (self.line)
     except StopIteration:
       self._end_page ()
       self._start_page (asset, new_typ)
-      self.line = itertools.product (xrange (self.x_dim), xrange (self.y_dim))
-      return self.line.next ()
+      self.line = itertools.product (range (self.x_dim), range (self.y_dim))
+      return next (self.line)
 
   @logtool.log_call
   def __enter__ (self):

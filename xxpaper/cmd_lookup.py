@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import absolute_import
 import clip, logging, logtool
 from .config import Config, load_config
 from . import tile
@@ -21,6 +20,6 @@ def do (**kwargs):
     tl = tile.Tile (typ, None, name, n)
     # import pudb
     # pudb.set_trace ()
-    print "%s => %s" % (key, tl.value (key))
+    print ("%s => %s" % (key, tl.value (key)))
   except: # pylint: disable=bare-except
     clip.exit (err = True, message = "Key not found.  KeyError: %s" % key)
