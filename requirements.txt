@@ -14,7 +14,7 @@ lazy-object-proxy==1.4.1  # via astroid
 logtool==0.3.post17
 mccabe==0.6.1             # via pylint
 path.py==11.5.2
-pillow==6.0.0             # via reportlab
+pillow==6.2.0             # via reportlab
 pylint==1.9.4             # via setuptools-lint
 pyyaml==5.1
 raven==6.10.0
