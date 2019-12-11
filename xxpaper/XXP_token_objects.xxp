@@ -51,13 +51,13 @@ TEMPLATE_chequer_embed:
 TEMPLATE_cross:
   - token_interior_box
   - outer_circle
-  - vertical stripe_box
+  - vertical_stripe_box
   - name_stripe_box
   - short_name_text
 
 TEMPLATE_cross_embed:
   - outer_circle
-  - vertical stripe_box
+  - vertical_stripe_box
   - name_stripe_box
   - short_name_text
   - outline_circle
@@ -104,19 +104,82 @@ TEMPLATE_solid_embed:
 
 TEMPLATE_stripey:
   - token_interior_box
-  - outer_circle
+  - top_half_box
+  - bottom_half_box
   - top_line_box
   - bottom_line_box
   - name_stripe_box
   - short_name_text
 
 TEMPLATE_stripey_embed:
-  - outer_circle
+  - top_half_box
+  - bottom_half_box
   - top_line_box
   - bottom_line_box
   - name_stripe_box
   - short_name_text
-  - outline_circle
+
+TEMPLATE_stripey_cross:
+  - token_interior_box
+  - top_half_box
+  - bottom_half_box
+  - top_line_box
+  - bottom_line_box
+  - vertical_stripe_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_stripey_cross_embed:
+  - top_half_box
+  - bottom_half_box
+  - top_line_box
+  - bottom_line_box
+  - vertical_stripe_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_triple_up:
+  - token_interior_box
+  - bottom_half_box
+  - tri_up_left_shape
+  - tri_up_right_shape
+  - inner_circle
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_triple_up_embed:
+  - bottom_half_box
+  - tri_up_left_shape
+  - tri_up_right_shape
+  - inner_circle
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_wedges:
+  - token_interior_box
+  - wedge_1_shape
+  - wedge_2_shape
+  - wedge_3_shape
+  - wedge_4_shape
+  - wedge_5_shape
+  - wedge_6_shape
+  - wedge_7_shape
+  - wedge_8_shape
+  - wedge_9_shape
+  - wedge_10_shape
+  - wedge_11_shape
+  - wedge_12_shape
+  - wedge_13_shape
+  - wedge_14_shape
+  - wedge_15_shape
+  - wedge_16_shape
+  - wedge_17_shape
+  - wedge_18_shape
+  - wedge_19_shape
+  - wedge_20_shape
+  - inner_circle
+  - name_stripe_box
+  - short_name_text
 
 ul_quarter_box:
   x: $[${token_interior_box/x} / 2.0]
@@ -170,7 +233,7 @@ bottom_line_box:
   y_inset: $[${token_interior_box/y} / 2.0 - 12]
   fill: ${_/_minor_fill_2}
 
-vertical stripe_box:
+vertical_stripe_box:
   x_inset: $[${token_interior_box/x} / 2 - 4]
   y_inset: 0
   x: 8
@@ -208,6 +271,688 @@ inner_box:
   x_inset: $[${token_interior_box/x} / 2 - 6]
   y_inset: $[${token_interior_box/y} / 2 - 6]
   fill: ${_/_minor_fill}
+
+tri_up_left_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  points:
+    - [0, 0]
+    -
+      - 0
+      - $[${token_interior_box/y} / 2]
+    -
+      - $[-${token_interior_box/x} / 2]
+      - $[${token_interior_box/y} / 2]
+    -
+      - $[-${token_interior_box/x} / 2]
+      - $[-math.tan (30 * math.pi / 180.0) * ${token_interior_box/x} / 2]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+tri_up_right_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  points:
+    - [0, 0]
+    -
+      - 0
+      - $[${token_interior_box/y} / 2]
+    -
+      - $[${token_interior_box/x} / 2]
+      - $[${token_interior_box/y} / 2]
+    -
+      - $[${token_interior_box/x} / 2]
+      - $[-math.tan (30 * math.pi / 180.0) * ${token_interior_box/x} / 2]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedgeX_1_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((0 + ${wedgeX_1_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((0 + ${wedgeX_1_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((30 + ${wedgeX_1_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((30 + ${wedgeX_1_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedgeX_2_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((30 + ${wedgeX_2_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((30 + ${wedgeX_2_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((60 + ${wedgeX_2_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((60 + ${wedgeX_2_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedgeX_3_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((60 + ${wedgeX_3_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((60 + ${wedgeX_3_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((90 + ${wedgeX_3_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((90 + ${wedgeX_3_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedgeX_4_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((90 + ${wedgeX_4_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((90 + ${wedgeX_4_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((120 + ${wedgeX_4_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((120 + ${wedgeX_4_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedgeX_5_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((120 + ${wedgeX_5_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((120 + ${wedgeX_5_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((150 + ${wedgeX_5_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((150 + ${wedgeX_5_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedgeX_6_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((150 + ${wedgeX_6_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((150 + ${wedgeX_6_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((180 + ${wedgeX_6_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((180 + ${wedgeX_6_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedgeX_7_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((180 + ${wedgeX_7_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((180 + ${wedgeX_7_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((210 + ${wedgeX_7_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((210 + ${wedgeX_7_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedgeX_8_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((210 + ${wedgeX_8_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((210 + ${wedgeX_8_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((240 + ${wedgeX_8_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((240 + ${wedgeX_8_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedgeX_9_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((240 + ${wedgeX_9_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((240 + ${wedgeX_9_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((270 + ${wedgeX_9_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((270 + ${wedgeX_9_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedgeX_10_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((270 + ${wedgeX_10_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((270 + ${wedgeX_10_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((300 + ${wedgeX_10_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((300 + ${wedgeX_10_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedgeX_11_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((300 + ${wedgeX_11_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((300 + ${wedgeX_11_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((330 + ${wedgeX_11_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((330 + ${wedgeX_11_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedgeX_12_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((330 + ${wedgeX_12_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((330 + ${wedgeX_12_shape/rotation}) * math.pi / 180.0)]
+    -
+      - $[(${cutline_circle/radius} + 4) * math.cos ((360 + ${wedgeX_12_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + 4) * math.sin ((360 + ${wedgeX_12_shape/rotation}) * math.pi / 180.0)]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_1_shape:
+  suppress: $[1 * ${wedge_1_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[1 * ${wedge_1_shape/angle} + ${wedge_1_shape/rotation}]
+  _angle_end: $[2 * ${wedge_1_shape/angle} + ${wedge_1_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_1_shape/margin}) * math.cos ((${wedge_1_shape/_angle_beg} + ${wedge_1_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_1_shape/margin}) * math.sin (((${wedge_1_shape/_angle_beg} + ${wedge_1_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_1_shape/margin}) * math.cos (((${wedge_1_shape/_angle_end} + ${wedge_1_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_1_shape/margin}) * math.sin (((${wedge_1_shape/_angle_end} + ${wedge_1_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_2_shape:
+  suppress: $[2 * ${wedge_2_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[2 * ${wedge_2_shape/angle} + ${wedge_2_shape/rotation}]
+  _angle_end: $[3 * ${wedge_2_shape/angle} + ${wedge_2_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_2_shape/margin}) * math.cos ((${wedge_2_shape/_angle_beg} + ${wedge_2_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_2_shape/margin}) * math.sin (((${wedge_2_shape/_angle_beg} + ${wedge_2_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_2_shape/margin}) * math.cos (((${wedge_2_shape/_angle_end} + ${wedge_2_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_2_shape/margin}) * math.sin (((${wedge_2_shape/_angle_end} + ${wedge_2_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_3_shape:
+  suppress: $[3 * ${wedge_3_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[3 * ${wedge_3_shape/angle} + ${wedge_3_shape/rotation}]
+  _angle_end: $[4 * ${wedge_3_shape/angle} + ${wedge_3_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_3_shape/margin}) * math.cos ((${wedge_3_shape/_angle_beg} + ${wedge_3_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_3_shape/margin}) * math.sin (((${wedge_3_shape/_angle_beg} + ${wedge_3_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_3_shape/margin}) * math.cos (((${wedge_3_shape/_angle_end} + ${wedge_3_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_3_shape/margin}) * math.sin (((${wedge_3_shape/_angle_end} + ${wedge_3_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_4_shape:
+  suppress: $[4 * ${wedge_4_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[4 * ${wedge_4_shape/angle} + ${wedge_4_shape/rotation}]
+  _angle_end: $[5 * ${wedge_4_shape/angle} + ${wedge_4_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_4_shape/margin}) * math.cos ((${wedge_4_shape/_angle_beg} + ${wedge_4_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_4_shape/margin}) * math.sin (((${wedge_4_shape/_angle_beg} + ${wedge_4_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_4_shape/margin}) * math.cos (((${wedge_4_shape/_angle_end} + ${wedge_4_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_4_shape/margin}) * math.sin (((${wedge_4_shape/_angle_end} + ${wedge_4_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_5_shape:
+  suppress: $[5 * ${wedge_5_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[5 * ${wedge_5_shape/angle} + ${wedge_5_shape/rotation}]
+  _angle_end: $[6 * ${wedge_5_shape/angle} + ${wedge_5_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_5_shape/margin}) * math.cos ((${wedge_5_shape/_angle_beg} + ${wedge_5_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_5_shape/margin}) * math.sin (((${wedge_5_shape/_angle_beg} + ${wedge_5_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_5_shape/margin}) * math.cos (((${wedge_5_shape/_angle_end} + ${wedge_5_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_5_shape/margin}) * math.sin (((${wedge_5_shape/_angle_end} + ${wedge_5_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_6_shape:
+  suppress: $[6 * ${wedge_6_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[6 * ${wedge_6_shape/angle} + ${wedge_6_shape/rotation}]
+  _angle_end: $[7 * ${wedge_6_shape/angle} + ${wedge_6_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_6_shape/margin}) * math.cos ((${wedge_6_shape/_angle_beg} + ${wedge_6_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_6_shape/margin}) * math.sin (((${wedge_6_shape/_angle_beg} + ${wedge_6_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_6_shape/margin}) * math.cos (((${wedge_6_shape/_angle_end} + ${wedge_6_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_6_shape/margin}) * math.sin (((${wedge_6_shape/_angle_end} + ${wedge_6_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_7_shape:
+  suppress: $[7 * ${wedge_7_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[7 * ${wedge_7_shape/angle} + ${wedge_7_shape/rotation}]
+  _angle_end: $[8 * ${wedge_7_shape/angle} + ${wedge_7_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_7_shape/margin}) * math.cos ((${wedge_7_shape/_angle_beg} + ${wedge_7_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_7_shape/margin}) * math.sin (((${wedge_7_shape/_angle_beg} + ${wedge_7_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_7_shape/margin}) * math.cos (((${wedge_7_shape/_angle_end} + ${wedge_7_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_7_shape/margin}) * math.sin (((${wedge_7_shape/_angle_end} + ${wedge_7_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_8_shape:
+  suppress: $[8 * ${wedge_8_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[8 * ${wedge_8_shape/angle} + ${wedge_8_shape/rotation}]
+  _angle_end: $[9 * ${wedge_8_shape/angle} + ${wedge_8_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_8_shape/margin}) * math.cos ((${wedge_8_shape/_angle_beg} + ${wedge_8_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_8_shape/margin}) * math.sin (((${wedge_8_shape/_angle_beg} + ${wedge_8_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_8_shape/margin}) * math.cos (((${wedge_8_shape/_angle_end} + ${wedge_8_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_8_shape/margin}) * math.sin (((${wedge_8_shape/_angle_end} + ${wedge_8_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_9_shape:
+  suppress: $[9 * ${wedge_9_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[9 * ${wedge_9_shape/angle} + ${wedge_9_shape/rotation}]
+  _angle_end: $[10 * ${wedge_9_shape/angle} + ${wedge_9_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_9_shape/margin}) * math.cos ((${wedge_9_shape/_angle_beg} + ${wedge_9_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_9_shape/margin}) * math.sin (((${wedge_9_shape/_angle_beg} + ${wedge_9_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_9_shape/margin}) * math.cos (((${wedge_9_shape/_angle_end} + ${wedge_9_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_9_shape/margin}) * math.sin (((${wedge_9_shape/_angle_end} + ${wedge_9_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_10_shape:
+  suppress: $[10 * ${wedge_10_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[10 * ${wedge_10_shape/angle} + ${wedge_10_shape/rotation}]
+  _angle_end: $[11 * ${wedge_10_shape/angle} + ${wedge_10_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_10_shape/margin}) * math.cos ((${wedge_10_shape/_angle_beg} + ${wedge_10_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_10_shape/margin}) * math.sin (((${wedge_10_shape/_angle_beg} + ${wedge_10_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_10_shape/margin}) * math.cos (((${wedge_10_shape/_angle_end} + ${wedge_10_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_10_shape/margin}) * math.sin (((${wedge_10_shape/_angle_end} + ${wedge_10_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_11_shape:
+  suppress: $[11 * ${wedge_11_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[11 * ${wedge_11_shape/angle} + ${wedge_11_shape/rotation}]
+  _angle_end: $[12 * ${wedge_11_shape/angle} + ${wedge_11_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_11_shape/margin}) * math.cos ((${wedge_11_shape/_angle_beg} + ${wedge_11_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_11_shape/margin}) * math.sin (((${wedge_11_shape/_angle_beg} + ${wedge_11_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_11_shape/margin}) * math.cos (((${wedge_11_shape/_angle_end} + ${wedge_11_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_11_shape/margin}) * math.sin (((${wedge_11_shape/_angle_end} + ${wedge_11_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_12_shape:
+  suppress: $[12 * ${wedge_12_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[12 * ${wedge_12_shape/angle} + ${wedge_12_shape/rotation}]
+  _angle_end: $[13 * ${wedge_12_shape/angle} + ${wedge_12_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_12_shape/margin}) * math.cos ((${wedge_12_shape/_angle_beg} + ${wedge_12_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_12_shape/margin}) * math.sin (((${wedge_12_shape/_angle_beg} + ${wedge_12_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_12_shape/margin}) * math.cos (((${wedge_12_shape/_angle_end} + ${wedge_12_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_12_shape/margin}) * math.sin (((${wedge_12_shape/_angle_end} + ${wedge_12_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_13_shape:
+  suppress: $[13 * ${wedge_13_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[13 * ${wedge_13_shape/angle} + ${wedge_13_shape/rotation}]
+  _angle_end: $[14 * ${wedge_13_shape/angle} + ${wedge_13_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_13_shape/margin}) * math.cos ((${wedge_13_shape/_angle_beg} + ${wedge_13_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_13_shape/margin}) * math.sin (((${wedge_13_shape/_angle_beg} + ${wedge_13_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_13_shape/margin}) * math.cos (((${wedge_13_shape/_angle_end} + ${wedge_13_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_13_shape/margin}) * math.sin (((${wedge_13_shape/_angle_end} + ${wedge_13_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_14_shape:
+  suppress: $[14 * ${wedge_14_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[14 * ${wedge_14_shape/angle} + ${wedge_14_shape/rotation}]
+  _angle_end: $[15 * ${wedge_14_shape/angle} + ${wedge_14_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_14_shape/margin}) * math.cos ((${wedge_14_shape/_angle_beg} + ${wedge_14_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_14_shape/margin}) * math.sin (((${wedge_14_shape/_angle_beg} + ${wedge_14_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_14_shape/margin}) * math.cos (((${wedge_14_shape/_angle_end} + ${wedge_14_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_14_shape/margin}) * math.sin (((${wedge_14_shape/_angle_end} + ${wedge_14_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_15_shape:
+  suppress: $[15 * ${wedge_15_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[15 * ${wedge_15_shape/angle} + ${wedge_15_shape/rotation}]
+  _angle_end: $[16 * ${wedge_15_shape/angle} + ${wedge_15_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_15_shape/margin}) * math.cos ((${wedge_15_shape/_angle_beg} + ${wedge_15_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_15_shape/margin}) * math.sin (((${wedge_15_shape/_angle_beg} + ${wedge_15_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_15_shape/margin}) * math.cos (((${wedge_15_shape/_angle_end} + ${wedge_15_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_15_shape/margin}) * math.sin (((${wedge_15_shape/_angle_end} + ${wedge_15_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_16_shape:
+  suppress: $[16 * ${wedge_16_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[16 * ${wedge_16_shape/angle} + ${wedge_16_shape/rotation}]
+  _angle_end: $[17 * ${wedge_16_shape/angle} + ${wedge_16_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_16_shape/margin}) * math.cos ((${wedge_16_shape/_angle_beg} + ${wedge_16_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_16_shape/margin}) * math.sin (((${wedge_16_shape/_angle_beg} + ${wedge_16_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_16_shape/margin}) * math.cos (((${wedge_16_shape/_angle_end} + ${wedge_16_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_16_shape/margin}) * math.sin (((${wedge_16_shape/_angle_end} + ${wedge_16_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_17_shape:
+  suppress: $[17 * ${wedge_17_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[17 * ${wedge_17_shape/angle} + ${wedge_17_shape/rotation}]
+  _angle_end: $[18 * ${wedge_17_shape/angle} + ${wedge_17_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_17_shape/margin}) * math.cos ((${wedge_17_shape/_angle_beg} + ${wedge_17_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_17_shape/margin}) * math.sin (((${wedge_17_shape/_angle_beg} + ${wedge_17_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_17_shape/margin}) * math.cos (((${wedge_17_shape/_angle_end} + ${wedge_17_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_17_shape/margin}) * math.sin (((${wedge_17_shape/_angle_end} + ${wedge_17_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_18_shape:
+  suppress: $[18 * ${wedge_18_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[18 * ${wedge_18_shape/angle} + ${wedge_18_shape/rotation}]
+  _angle_end: $[19 * ${wedge_18_shape/angle} + ${wedge_18_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_18_shape/margin}) * math.cos ((${wedge_18_shape/_angle_beg} + ${wedge_18_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_18_shape/margin}) * math.sin (((${wedge_18_shape/_angle_beg} + ${wedge_18_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_18_shape/margin}) * math.cos (((${wedge_18_shape/_angle_end} + ${wedge_18_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_18_shape/margin}) * math.sin (((${wedge_18_shape/_angle_end} + ${wedge_18_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
+
+wedge_19_shape:
+  suppress: $[19 * ${wedge_19_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[19 * ${wedge_19_shape/angle} + ${wedge_19_shape/rotation}]
+  _angle_end: $[20 * ${wedge_19_shape/angle} + ${wedge_19_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_19_shape/margin}) * math.cos ((${wedge_19_shape/_angle_beg} + ${wedge_19_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_19_shape/margin}) * math.sin (((${wedge_19_shape/_angle_beg} + ${wedge_19_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_19_shape/margin}) * math.cos (((${wedge_19_shape/_angle_end} + ${wedge_19_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_19_shape/margin}) * math.sin (((${wedge_19_shape/_angle_end} + ${wedge_19_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_1}
+
+wedge_20_shape:
+  suppress: $[20 * ${wedge_20_shape/angle} > 360]
+  angle: ${_/_angle}
+  _angle_beg: $[20 * ${wedge_20_shape/angle} + ${wedge_20_shape/rotation}]
+  _angle_end: $[21 * ${wedge_20_shape/angle} + ${wedge_20_shape/rotation}]
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: 0
+  margin: ${DEFAULT/margin}
+  rotation: ${_/_rotation}
+  points:
+    - [0, 0]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_20_shape/margin}) * math.cos ((${wedge_20_shape/_angle_beg} + ${wedge_20_shape/rotation}) * math.pi / 180.0)]
+      - $[(${cutline_circle/radius} + ${wedge_20_shape/margin}) * math.sin (((${wedge_20_shape/_angle_beg} + ${wedge_20_shape/rotation}) * math.pi / 180.0))]
+    -
+      - $[(${cutline_circle/radius} + ${wedge_20_shape/margin}) * math.cos (((${wedge_20_shape/_angle_end} + ${wedge_20_shape/rotation}) * math.pi / 180.0))]
+      - $[(${cutline_circle/radius} + ${wedge_20_shape/margin}) * math.sin (((${wedge_20_shape/_angle_end} + ${wedge_20_shape/rotation}) * math.pi / 180.0))]
+    - [0, 0]
+  fill: ${_/_major_fill_2}
 
 name_stripe_box:
   x: ${token_interior_box/x}

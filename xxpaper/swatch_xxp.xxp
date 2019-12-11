@@ -1,6 +1,8 @@
 swatch:
   swatch_interior_box:
     fill: ${colour/xxp/${name_black_text/text}}
+  name_black_text:
+    size: 8
 
   index:
     WHITE:
@@ -198,3 +200,93 @@ swatch:
     D_AQUA:
       name_black_text:
         text: D_AQUA
+
+    TRAIN_LIGHT_YELLOW:
+      name_black_text:
+        text: TRAIN_LIGHT_YELLOW
+
+    TRAIN_MEDIUM_YELLOW:
+      name_black_text:
+        text: TRAIN_MEDIUM_YELLOW
+
+    TRAIN_DARK_YELLOW:
+      name_black_text:
+        text: TRAIN_DARK_YELLOW
+
+
+    TRAIN_LIGHT_GREEN:
+      name_black_text:
+        text: TRAIN_LIGHT_GREEN
+
+    TRAIN_MEDIUM_GREEN:
+      name_black_text:
+        text: TRAIN_MEDIUM_GREEN
+
+    TRAIN_DARK_GREEN:
+      name_black_text:
+        text: TRAIN_DARK_GREEN
+
+
+    TRAIN_LIGHT_BLUE:
+      name_black_text:
+        text: TRAIN_LIGHT_BLUE
+
+    TRAIN_MEDIUM_BLUE:
+      name_black_text:
+        text: TRAIN_MEDIUM_BLUE
+
+    TRAIN_DARK_BLUE:
+      name_black_text:
+        text: TRAIN_DARK_BLUE
+
+
+    TRAIN_LIGHT_BROWN:
+      name_black_text:
+        text: TRAIN_LIGHT_BROWN
+
+    TRAIN_MEDIUM_BROWN:
+      name_black_text:
+        text: TRAIN_MEDIUM_BROWN
+
+    TRAIN_DARK_BROWN:
+      name_black_text:
+        text: TRAIN_DARK_BROWN
+
+
+    TRAIN_LIGHT_RED:
+      name_black_text:
+        text: TRAIN_LIGHT_RED
+
+    TRAIN_MEDIUM_RED:
+      name_black_text:
+        text: TRAIN_MEDIUM_RED
+
+    TRAIN_DARK_RED:
+      name_black_text:
+        text: TRAIN_DARK_RED
+
+
+    TRAIN_LIGHT_GRAY:
+      name_black_text:
+        text: TRAIN_LIGHT_GRAY
+
+    TRAIN_MEDIUM_GRAY:
+      name_black_text:
+        text: TRAIN_MEDIUM_GRAY
+
+    TRAIN_DARK_GRAY:
+      name_black_text:
+        text: TRAIN_DARK_GRAY
+
+
+    TRAIN_LIGHT_PURPLE:
+      name_black_text:
+        text: TRAIN_LIGHT_PURPLE
+
+    TRAIN_MEDIUM_PURPLE:
+      name_black_text:
+        text: TRAIN_MEDIUM_PURPLE
+
+    TRAIN_DARK_PURPLE:
+      name_black_text:
+        text: TRAIN_DARK_PURPLE

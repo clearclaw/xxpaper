@@ -1,0 +1,92 @@
+TEMPLATE_concession_default:
+  - asset_interior_box
+  - rotate
+  - side_bar_box
+  - token_embed
+  - top_bar_box
+  - closes_text
+  - long_name_text
+  - comment_text
+  - bottom_bar_box
+  - cost_text
+  - bid_text
+
+_:
+  closes_text_text: "Closes: In BROWN phase"
+  long_name_text_text: ""
+  cost_text_text: "Cost: £XXX"
+  bid_text_text: "Revenue: £XXX"
+
+cutline_box: ${DEFAULT/asset_tile}
+
+asset_interior_box:
+  fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
+
+top_bar_box:
+  x_inset: 0
+  y_inset: 89
+  x: ${asset_interior_box/y}
+  y: 11
+  fill: ${colour/xxp/BLACK}
+
+closes_text:
+  h_center: 1
+  v_center: 0
+  typeface: ${DEFAULT/typeface_bold_italic}
+  size: 8
+  x_inset: 0
+  y_inset: 92
+  x: 4
+  y: 0
+  fill: $[black_or_white (${top_bar_box/fill})]
+
+side_bar_box:
+  suppress: True
+  x_inset: 4
+  y_inset: 0
+  x: 28
+  y: ${asset_interior_box/x}
+  fill: ${_/_related_fill}
+
+token_embed:
+  suppress: False
+  typ: token
+  x_inset: -4
+  y_inset: $[(${side_bar_box/y} - 10) / 2.0 - 18]
+
+long_name_text:
+  size: 14
+  x: $[(${asset_interior_box/y} - ${side_bar_box/x} - ${side_bar_box/x_inset}) / 2.0 + ${side_bar_box/x} + ${side_bar_box/x_inset}]
+  y: 70
+  fill: $[black_or_white (${asset_interior_box/fill})]
+
+comment_text:
+  x: 101
+  y: 16
+  h_center: 0
+  v_center: -1
+  typeface: ${DEFAULT/typeface_italic}
+  size: 8
+
+bottom_bar_box:
+  x: ${asset_interior_box/y}
+  y: 11
+  fill: ${colour/xxp/L_RED}
+
+cost_text:
+  x: 4
+  y: 2
+  h_center: 1
+  v_center: 0
+  typeface: ${DEFAULT/typeface_bold_italic}
+  size: 11
+  fill: $[black_or_white (${bottom_bar_box/fill})]
+
+bid_text:
+  x: 158
+  y: 2
+  h_center: -1
+  v_center: 0
+  typeface: ${DEFAULT/typeface_bold_italic}
+  size: 11
+  fill: $[black_or_white (${bottom_bar_box/fill})]

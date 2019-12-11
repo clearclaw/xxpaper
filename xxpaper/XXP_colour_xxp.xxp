@@ -16,6 +16,34 @@ xxp:
   TRAIN_PURPLE: ${colour/wikipedia/wisteria}
   TRAIN_BLACK: ${colour/xxp/BLACK}
 
+  TRAIN_LIGHT_YELLOW: ${colour/xxp/H_YELLOW}
+  TRAIN_MEDIUM_YELLOW: ${colour/xxp/P_YELLOW}
+  TRAIN_DARK_YELLOW: ${colour/xxp/L_YELLOW}
+
+  TRAIN_LIGHT_GREEN: ${colour/xxp/H_GREEN}
+  TRAIN_MEDIUM_GREEN: ${colour/xxp/P_GREEN}
+  TRAIN_DARK_GREEN: ${colour/xxp/L_GREEN}
+
+  TRAIN_LIGHT_BLUE: ${colour/xxp/H_BLUE}
+  TRAIN_MEDIUM_BLUE: ${colour/xxp/P_BLUE}
+  TRAIN_DARK_BLUE: ${colour/xxp/L_BLUE}
+
+  TRAIN_LIGHT_BROWN: ${colour/xxp/H_BROWN}
+  TRAIN_MEDIUM_BROWN: ${colour/xxp/H_BROWN}
+  TRAIN_DARK_BROWN: ${colour/xxp/L_BROWN}
+
+  TRAIN_LIGHT_RED: ${colour/xxp/H_RED}
+  TRAIN_MEDIUM_RED: ${colour/xxp/H_RED}
+  TRAIN_DARK_RED: ${colour/xxp/L_RED}
+
+  TRAIN_LIGHT_GRAY: ${colour/xxp/H_GRAY}
+  TRAIN_MEDIUM_GRAY: ${colour/xxp/H_GRAY}
+  TRAIN_DARK_GRAY: ${colour/xxp/L_GRAY}
+
+  TRAIN_LIGHT_PURPLE: ${colour/xxp/H_PURPLE}
+  TRAIN_MEDIUM_PURPLE: ${colour/xxp/P_PURPLE}
+  TRAIN_DARK_PURPLE: ${colour/xxp/L_PURPLE}
+
   H_GRAY: [0.95, 0.95, 0.95]
   P_GRAY: [0.863, 0.863, 0.863]
   L_GRAY: [0.663, 0.663, 0.663]

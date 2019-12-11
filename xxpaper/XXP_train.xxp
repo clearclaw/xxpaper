@@ -19,7 +19,7 @@ train:
     long_name_text_text: 000
     note_text_text: ""
     rust_bar_box_fill_p: YELLOW
-    rusted_text_text: "Rusted by: ${_/rust_bar_box_fill_p}"
+    rusted_text_text: "Rusted by: $['${_/rust_bar_box_fill_p}'.replace ('_', ' ')]"
     asset_interior_box_fill_p: YELLOW
 
   cutline_box: ${DEFAULT/asset_tile}

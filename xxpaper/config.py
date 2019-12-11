@@ -72,6 +72,81 @@ class Config (object):
       cls._state.update (CfgStack (
         fnames, dirs = dirs, exts = exts).data.to_dict ())
 
+  @logtool.log_call
+  @classmethod
+  def _expand_str (cls, s, params):
+    if not isinstance (s, str):
+      return s
+    rc = s.strip ()
+    changed = True
+    while changed:
+      changed = False
+      while isinstance (rc, str):
+        m = RE_VAR.search (rc)
+        if m is None:
+          break
+        if cls._verbose:
+          print ("    Interpolation: %s" % rc[m.start ():m.end ()])
+        v = cls.get (rc[m.start () + 2:m.end () - 1], params = params)
+        if isinstance (v, str):
+          v = v.strip ()
+        if m.end () - m.start () == len (rc):
+          rc = v
+        else:
+          if isinstance (v, list): # Get rid of squares
+            v = tuple (v)
+          rc = ("%s%s%s" % (rc[:m.start ()], v, rc[m.end ():])).strip ()
+        changed = True
+        continue
+      while isinstance (rc, str):
+        m = EXP_VAR.search (rc)
+        if m is not None:
+          # pylint: disable=eval-used
+          l = {
+            "black_or_white": black_or_white,
+            "desaturate_and_brighten": desaturate_and_brighten,
+            "index_of": index_of,
+            "math": math,
+          }
+          l.update (params if params else {})
+          v = eval (rc[m.start () + 2:m.end () - 1], {}, l)
+          if cls._verbose:
+            print ("    Expression: %s => %s" % (rc[m.start ():m.end ()], v))
+          if m.end () - m.start () == len (rc):
+            rc = v
+          else:
+            rc = ("%s%s%s" % (rc[:m.start ()], v, rc[m.end ():])).strip ()
+          changed = True
+          continue
+        break
+    return rc
+
+  #@logtool.log_call
+  @classmethod
+  def _expand_vector (cls, v, params):
+    if isinstance (v, list) or isinstance (v, tuple):
+      return [cls._expand (i, params) for i in v]
+    return v
+
+  #@logtool.log_call
+  @classmethod
+  def _expand (cls, v, params):
+    if isinstance (v, list) or isinstance (v, tuple):
+      return cls._expand_vector (v, params)
+    if isinstance (v, str):
+      return cls._expand_str (v, params)
+    return v
+
+  #@logtool.log_call
+  @classmethod
+  def expand (cls, v, params = None):
+    if cls._verbose:
+      print ("  %s =>" % v)
+    rc = cls._expand (v, params)
+    if cls._verbose:
+      print ("  %s\n" % rc)
+    return rc
+
   #@logtool.log_call
   @classmethod
   def _get (cls, key, params):
@@ -81,48 +156,7 @@ class Config (object):
       if k == ".":
         return rc # Breaks the descent!
       rc = rc[k]
-      if isinstance (rc, str):
-        rc = rc.strip ()
-      changed = True
-      while changed:
-        changed = False
-        while isinstance (rc, str):
-          m = RE_VAR.search (rc)
-          if m is None:
-            break
-          if cls._verbose:
-            print ("    Interpolation: %s" % rc[m.start ():m.end ()])
-          v = cls.get (rc[m.start () + 2:m.end () - 1], params = params)
-          if isinstance (v, str):
-            v = v.strip ()
-          if m.end () - m.start () == len (rc):
-            rc = v
-          else:
-            if isinstance (v, list): # Get rid of squares
-              v = tuple (v)
-            rc = ("%s%s%s" % (rc[:m.start ()], v, rc[m.end ():])).strip ()
-          changed = True
-          continue
-        while isinstance (rc, str):
-          m = EXP_VAR.search (rc)
-          if m is not None:
-            # pylint: disable=eval-used
-            l = {
-              "black_or_white": black_or_white,
-              "desaturate_and_brighten": desaturate_and_brighten,
-              "index_of": index_of,
-            }
-            l.update (params if params else {})
-            v = eval (rc[m.start () + 2:m.end () - 1], {}, l)
-            if cls._verbose:
-              print ("    Expression: %s => %s" % (rc[m.start ():m.end ()], v))
-            if m.end () - m.start () == len (rc):
-              rc = v
-            else:
-              rc = ("%s%s%s" % (rc[:m.start ()], v, rc[m.end ():])).strip ()
-            changed = True
-            continue
-          break
+      rc = cls._expand (rc, params)
     return rc
 
   #@logtool.log_call
@@ -146,13 +180,13 @@ class Config (object):
         rc = cls._get (key_exp, params)
         if cls._verbose:
           print ("  %s\n" % rc)
-        return rc
+        return cls.expand (rc, params)
       except (AttributeError, KeyError, TypeError):
         continue
     if params and "default" in params:
       if cls._verbose:
         print ("  %s => %s\n    %s\n" % (key, "(default)", params["default"]))
-      return params["default"]
+      return cls.expand (params["default"], params)
     raise KeyError ("Not found: " + key)
 
   @logtool.log_call

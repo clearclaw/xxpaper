@@ -11,14 +11,21 @@ company:
         long_name_text_text: |
             Boston & Maine
         short_name_text_text: B&M
+        token_1_text_text: Free
+        token_2_text_text: $40
         _major_fill: ${colour/wikipedia/ultramarine}
-        _minor_fill: ${colour/wikipedia/ultramarine}
+        name_stripe_box_suppress: True
         comment_text_text: |
-            Founded in 1833 as the
-            Andover & Wilmington Railroad
+            "Banks & Money"
         _related_fill: ${colour/wikipedia/han_blue}
-
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
       token:
+        _:
+          _major_fill: ${colour/wikipedia/ultramarine}
+          _minor_fill: ${colour/wikipedia/ultramarine}
+          short_name_text_fill: $[black_or_white (${colour/wikipedia/ultramarine})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
         index: $[index_of (5)]
 
     B&O:
@@ -26,56 +33,41 @@ company:
         long_name_text_text: |
             Baltimore & Ohio
         short_name_text_text: B&O
+        token_1_text_text: Free
+        token_2_text_text: $40
         token_3_text_text: $100
         _major_fill: ${colour/wikipedia/banana_yellow}
         _minor_fill: ${colour/hollasch/blue}
         comment_text_text: |
-            First to offer scheduled
-            passenger service
+            "Backward & Obsolete"
         _related_fill: ${colour/hollasch/steel_blue}
-
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
       token:
         _:
           _major_fill_1: ${colour/wikipedia/banana_yellow}
           _major_fill_2: ${colour/hollasch/blue}
           _minor_fill_1: ${colour/hollasch/blue}
           _minor_fill_2: ${colour/wikipedia/banana_yellow}
-
-        ELEMENTS:
-          - token_interior_box
-          - ul_quarter_box
-          - ur_quarter_box
-          - ll_quarter_box
-          - lr_quarter_box
-          - name_stripe_box
-          - short_name_text
-
-        EMBED_ELEMENTS:
-          - ul_quarter_box
-          - ur_quarter_box
-          - ll_quarter_box
-          - lr_quarter_box
-          - name_stripe_box
-          - short_name_text
-          - outline_circle
-
+        ELEMENTS: ${TEMPLATE_chequer/.}
+        EMBED_ELEMENTS: ${TEMPLATE_chequer_embed/.}
         index: $[index_of (6)]
 
     CPR:
       _:
         long_name_text_text: |
-            Canada Pacific
+            Canadian Pacific
             Railroad
         short_name_text_text: CPR
+        token_1_text_text: Free
+        token_2_text_text: $40
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/hollasch/brown_ochre}
         _minor_fill: ${colour/hollasch/brown_ochre}
         comment_text_text: |
-            Canada's first
-            transcontinental railway
+            "Can't Please"
         _related_fill: ${colour/hollasch/brick}
-
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
       token:
         index: $[index_of (7)]
 
@@ -85,15 +77,19 @@ company:
             Chesapeake & Ohio
             Railroad
         short_name_text_text: C&O
+        token_1_text_text: Free
+        token_2_text_text: $40
         token_3_text_text: $100
-        _major_fill: ${colour/hollasch/sky_blue_deep}
-        _minor_fill: ${colour/hollasch/sky_blue_deep}
+        _major_fill: ${colour/hollasch/cerulean}
+        name_stripe_box_suppress: True
         comment_text_text: |
-            The first C&O train ran on
-            Wednesday, 20 December 1837
+            "Chessie & the Orphan"
         _related_fill: ${colour/hollasch/powder_blue}
-
       token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/wikipedia/ultramarine})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
         index: $[index_of (6)]
 
     ERIE:
@@ -101,33 +97,43 @@ company:
         long_name_text_text: |
             Erie Railroad
         short_name_text_text: ERIE
+        token_1_text_text: Free
+        token_2_text_text: $40
         token_3_text_text: $100
         _major_fill: ${colour/x11/yellow}
         _minor_fill: ${colour/x11/yellow}
         comment_text_text: |
-            The scarlet woman
-            of Wall Street
+            "The scarlet woman
+            of Wall Street"
         _related_fill: ${colour/x11/darkgoldenrod1}
-
       token:
         index: $[index_of (6)]
 
     NYNH&H:
       _:
         long_name_text_text: |
-            New York New Haven
+            New York, New Haven
             & Hartford Railway
-        short_name_text_text: NH
+        short_name_text_text: NYH
+        token_1_text_text: Free
+        token_2_text_text: $40
         _major_fill: ${colour/x11/sandybrown}
-        _minor_fill: ${colour/x11/sandybrown}
-        comment_text_text: '"The Consolidated"'
-        _related_fill: ${colour/x11/khaki2}
-
+        _major_fill_2: ${colour/x11/bisque}
+        _minor_fill_2: ${colour/x11/bisque}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Not Yet, No How & Hopeless"
+        _related_fill: ${colour/hollasch/tan}
       share:
         long_name_text:
           size: 13
-
       token:
+        _:
+          _major_fill: ${colour/x11/sandybrown}
+          _minor_fill: ${colour/x11/sandybrown}
+          short_name_text_fill: $[black_or_white (${colour/x11/sandybrown})]
+        ELEMENTS: ${TEMPLATE_stripey/.}
+        EMBED_ELEMENTS: ${TEMPLATE_stripey_embed/.}
         index: $[index_of (5)]
 
     NYC:
@@ -136,15 +142,21 @@ company:
             New York Central
             Railroad
         short_name_text_text: NYC
+        token_1_text_text: Free
+        token_2_text_text: $100
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/xxp/BLACK}
         _minor_fill: ${colour/xxp/BLACK}
-        comment_text_text: The Water Level Route
+        comment_text_text: |
+            "No You Can't"
         _related_fill: ${colour/x11/gray50}
-
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
       token:
-
+        ELEMENTS: ${TEMPLATE_cross/.}
+        EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
+        vertical stripe_box:
+          fill: ${colour/xxp/WHITE}
         index: $[index_of (7)]
 
     PRR:
@@ -153,14 +165,22 @@ company:
              Pennsylania
              Railroad
         short_name_text_text: PRR
+        token_1_text_text: Free
+        token_2_text_text: $40
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/hollasch/cadmium_red_light}
-        _minor_fill: ${colour/hollasch/cadmium_red_light}
-        comment_text_text: 'The "Pennsy"'
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Poor Ragged Rascal"
         _related_fill: ${colour/hollasch/tomato}
-
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+        short_name_text_fill: $[black_or_white (${colour/hollasch/cadmium_red_light})]
       token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/wikipedia/ultramarine})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
         index: $[index_of (7)]
 
 marker:
@@ -179,10 +199,10 @@ marker:
         fill: ${colour/xxp/M_RED}
 
       middle_circle:
-        fill: ${colour/xxp/WHITE}
+        fill: ${colour/xxp/M_BLUE}
 
       inner_circle:
-        fill: ${colour/xxp/M_BLUE}
+        fill: ${colour/xxp/WHITE}
 
 private:
 
@@ -190,6 +210,7 @@ private:
 
     SV:
       _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
         long_name_text_text: |
             Schuykill Valley
             Railroad
@@ -199,6 +220,7 @@ private:
 
     C&StL:
       _:
+        asset_interior_box_fill: ${colour/scale/lime_0}
         long_name_text_text: |
             Champlain & St Larence
             Railway
@@ -212,6 +234,7 @@ private:
 
     D&H:
       _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
         long_name_text_text: |
             Delaware & Hudson
             Railroad
@@ -225,6 +248,7 @@ private:
 
     M&H:
       _:
+        asset_interior_box_fill: ${colour/scale/magenta_0}
         closes_text_text: "Closes: In BROWN phase or when power used"
         long_name_text_text: |
             Mohawk & Hudson
@@ -238,6 +262,7 @@ private:
 
     C&A:
       _:
+        asset_interior_box_fill: ${colour/scale/red_1}
         long_name_text_text: |
             Camden & Amboy
             Railroad
@@ -249,6 +274,7 @@ private:
 
     B&O:
       _:
+        asset_interior_box_fill: ${colour/scale/green_1}
         long_name_text_text: |
             Baltimore & Ohio
             Railroad

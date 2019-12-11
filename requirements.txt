@@ -6,7 +6,7 @@
 #
 addict==2.2.1             # via cfgstack
 astroid==1.6.6            # via pylint
-cfgstack==0.1.post27
+cfgstack==0.1.post28
 clip.py==0.3.2
 importlib-metadata==0.12  # via path.py
 isort==4.3.20             # via pylint

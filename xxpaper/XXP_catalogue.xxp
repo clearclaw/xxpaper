@@ -5,6 +5,12 @@ CATALOGUE:
     typ: charter
     name_index: company/index
     instance_index: charter/index
+  concession:
+    tile_type: asset_tile
+    klass: company
+    typ: concession
+    name_index: company/index
+    instance_index: concession/index
   minor_charter:
     tile_type: minor_charter_tile
     klass: company
