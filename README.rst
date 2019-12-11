@@ -17,4 +17,7 @@ them are better.  Maybe a few things are worse.  Sample configuration
 files can be found in the "samples" directory of the source tree.
 Their number will grow over time.
 
+Note: XXPaper is now a Python3 project.  It may still work under
+Python 2, but that is neither tested or expected.
+
 -- JCL
