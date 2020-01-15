@@ -104,6 +104,20 @@ company:
     _include_:
       - XXP_company_share_objects.xxp
 
+  concession:
+ 
+    CUT_ELEMENT: cutline_box
+
+    ELEMENTS: ${TEMPLATE_concession_default/.}
+
+    index:
+
+    cutline_box: ${DEFAULT/asset_tile}
+
+    _include_:
+      - XXP_company_concession_objects.xxp
+
+
   token:
 
     index:
