@@ -1,0 +1,919 @@
+meta:
+  author: J C Lawrence
+  title: "1841"
+  subject: 18xx art file for ${meta/title}
+
+company:
+  concession:
+    _:
+      closes_text_text: "Closes: In BLUE phase"
+      cost_text_text: "Cost: L.50"
+      bid_text_text: "Minimum bid: L.20"
+  charter:
+    _:
+      token_1_circle_fill: ${colour/scale/gray_2}
+      token_2_circle_fill: ${colour/scale/gray_2}
+  narrow_charter:
+    _:
+      token_1_circle_fill: ${colour/scale/gray_2}
+      token_2_circle_fill: ${colour/scale/gray_2}
+  index:
+
+    IRSFF:
+      _:
+        long_name_text_text: |
+            Imperial Regia
+            Strada Ferrata
+            Ferdinandea
+        short_name_text_text: IRSFF
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        token_3_text_text: L.50
+        token_4_text_text: L.50
+        token_5_text_text: L.50
+        _major_fill: ${colour/hollasch/carrot}
+        _minor_fill: ${colour/hollasch/van_dyke_brown}
+        comment_text_text: |
+            "Ferdinandea"
+        _related_fill: ${colour/x11/orange}
+      narrow_charter:
+        index:
+          "1":
+      concession:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_cross/.}
+        EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
+        index: "$[index_of (7)]"
+
+    SB:
+      _:
+        long_name_text_text: |
+            Strada Ferrate del
+            Sud dell' Austria
+        short_name_text_text: SB
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        token_3_text_text: L.50
+        token_4_text_text: L.50
+        token_5_text_text: L.50
+        _major_fill: ${colour/x11/yellow}
+        _minor_fill: ${colour/hollasch/red}
+        comment_text_text: |
+            "Sudbahn"
+        _related_fill: ${colour/x11/gold}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_cross/.}
+        EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
+        index: "$[index_of (7)]"
+
+    SFL:
+      _:
+        long_name_text_text: |
+            Strade Ferrate della
+            Lombardia &
+            dell'Italia Centrale
+        short_name_text_text: SFL
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        token_3_text_text: L.50
+        token_4_text_text: L.50
+        token_5_text_text: L.50
+        _major_fill: ${colour/hollasch/cyan}
+        _minor_fill: ${colour/hollasch/red}
+        comment_text_text: |
+            "Lombarda"
+        _related_fill: ${colour/x11/paleturquoise1}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_cross/.}
+        EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
+        index: "$[index_of (7)]"
+
+    SFLi:
+      _:
+        long_name_text_text: |
+            Strade Ferrate
+            Livornesi
+        short_name_text_text: SFLi
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        token_3_text_text: L.50
+        token_4_text_text: L.50
+        token_5_text_text: L.50
+        _major_fill: ${colour/wikipedia/banana_yellow}
+        _minor_fill: ${colour/hollasch/blue}
+        comment_text_text: |
+            "Livornese"
+        _related_fill: ${colour/hollasch/plum}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          _major_fill_1: ${colour/hollasch/violet_dark}
+          _minor_fill_1: ${colour/hollasch/cinnabar_green}
+          _major_fill_2: ${colour/hollasch/geranium_lake}
+          _minor_fill_2: ${colour/hollasch/violet_dark}
+        ELEMENTS: ${TEMPLATE_chequer/.}
+        EMBED_ELEMENTS: ${TEMPLATE_chequer_embed/.}
+        index: "$[index_of (7)]"
+
+    SSFL:
+      _:
+        long_name_text_text: |
+            Società per la Strada
+            Ferrata Leopolda
+        short_name_text_text: SSFL
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        token_3_text_text: L.50
+        token_4_text_text: L.50
+        token_5_text_text: L.50
+        _major_fill: ${colour/hollasch/violet_dark}
+        _minor_fill: ${colour/xxp/WHITE}
+        comment_text_text: |
+            "Leopolda"
+        _related_fill: ${colour/hollasch/orchid}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+      concession:
+        index:
+          "1":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          _major_fill_1: ${colour/hollasch/violet_dark}
+          _major_fill_2: ${colour/xxp/WHITE}
+          _minor_fill_1: ${colour/xxp/WHITE}
+          _minor_fill_2: ${colour/hollasch/violet_dark}
+        ELEMENTS: ${TEMPLATE_chequer/.}
+        EMBED_ELEMENTS: ${TEMPLATE_chequer_embed/.}
+        index: "$[index_of (7)]"
+
+    SFLP:
+      _:
+        long_name_text_text: |
+            Strada Ferrata da
+            Lucca a Pistoia
+        short_name_text_text: SFLP
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        _major_fill: ${colour/hollasch/cinnabar_green}
+        _minor_fill: ${colour/xxp/WHITE}
+        comment_text_text: |
+            "Lucchese"
+        _related_fill: ${colour/x11/greenyellow}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+        token_2_circle_fill: ${colour/xxp/WHITE}
+      concession:
+        index:
+          "1":
+      share:
+        _:
+          share_pct_text_text: 20%
+          share_pct_text_fill: $[black_or_white (${type_bar_box/fill})]
+        index:
+          "1":
+            type_bar_box:
+              suppress: False
+            share_num_text:
+              text: 2 Shares
+            share_desc_text:
+              suppress: False
+            share_pct_text:
+              text: 40%
+              fill: $[black_or_white (${type_bar_box/fill})]
+            token_1_embed:
+              suppress: True
+            token_2a_embed:
+              suppress: False
+            token_2b_embed:
+              suppress: False
+          "2":
+          "3":
+          "4":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          _major_fill_1: ${colour/hollasch/cinnabar_green}
+          _major_fill_2: ${colour/xxp/WHITE}
+          _minor_fill_1: ${colour/hollasch/cinnabar_green}
+          _minor_fill_2: ${colour/xxp/WHITE}
+        ELEMENTS: ${TEMPLATE_chequer/.}
+        EMBED_ELEMENTS: ${TEMPLATE_chequer_embed/.}
+        index: "$[index_of (4)]"
+
+    SFMA:
+      _:
+        long_name_text_text: |
+            Strada Ferrata
+            Maria Antonia
+        short_name_text_text: SFMA
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        _major_fill: ${colour/hollasch/geranium_lake}
+        _minor_fill: ${colour/xxp/WHITE}
+        comment_text_text: |
+            "Maria Antonia"
+        _related_fill: ${colour/hollasch/tomato}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+        token_2_circle_fill: ${colour/xxp/WHITE}
+      concession:
+        index:
+          "1":
+      share:
+        _:
+          share_pct_text_text: 20%
+          share_pct_text_fill: $[black_or_white (${type_bar_box/fill})]
+        index:
+          "1":
+            type_bar_box:
+              suppress: False
+            share_num_text:
+              text: 2 Shares
+            share_desc_text:
+              suppress: False
+            share_pct_text:
+              text: 40%
+              fill: $[black_or_white (${type_bar_box/fill})]
+            token_1_embed:
+              suppress: True
+            token_2a_embed:
+              suppress: False
+            token_2b_embed:
+              suppress: False
+          "2":
+          "3":
+          "4":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          _major_fill_1: ${colour/xxp/WHITE}
+          _major_fill_2: ${colour/hollasch/geranium_lake}
+          _minor_fill_1: ${colour/xxp/WHITE}
+          _minor_fill_2: ${colour/hollasch/geranium_lake}
+        ELEMENTS: ${TEMPLATE_chequer/.}
+        EMBED_ELEMENTS: ${TEMPLATE_chequer_embed/.}
+        index: "$[index_of (4)]"
+
+    SFTC:
+      _:
+        long_name_text_text: |
+            Strada di Ferro da
+            Torino a Cuneo
+        short_name_text_text: SFTC
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        token_3_text_text: L.50
+        token_4_text_text: L.50
+        token_5_text_text: L.50
+        _major_fill: ${colour/x11/yellow}
+        _minor_fill: ${colour/hollasch/olive_drab}
+        comment_text_text: |
+            "Cuneense"
+        _related_fill: ${colour/x11/yellow3}
+      concession:
+        index:
+          "1":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_bullseye/.}
+        EMBED_ELEMENTS: ${TEMPLATE_bullseye_embed/.}
+        middle_circle:
+          fill: ${_/_minor_fill}
+        inner_circle:
+          fill: ${_/_major_fill}
+        index: "$[index_of (7)]"
+
+    SFTG:
+      _:
+        long_name_text_text: |
+            Strada Ferrata da
+            Torino a Genova
+        short_name_text_text: SFTG
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        token_3_text_text: L.50
+        token_4_text_text: L.50
+        token_5_text_text: L.50
+        _major_fill: ${colour/hollasch/dodger_blue}
+        _minor_fill: ${colour/xxp/WHITE}
+        comment_text_text: |
+            "Genovese"
+        _related_fill: ${colour/hollasch/powder_blue}
+      concession:
+        index:
+          "1":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_bullseye/.}
+        EMBED_ELEMENTS: ${TEMPLATE_bullseye_embed/.}
+        middle_circle:
+          fill: ${_/_minor_fill}
+        inner_circle:
+          fill: ${_/_major_fill}
+        index: "$[index_of (7)]"
+
+    SFTN:
+      _:
+        long_name_text_text: |
+            Strada di Ferro da
+            Torino a Novara
+        short_name_text_text: SFTN
+        token_1_text_text: L.50
+        token_2_text_text: L.50
+        token_3_text_text: L.50
+        token_4_text_text: L.50
+        token_5_text_text: L.50
+        _major_fill: ${colour/hollasch/raw_sienna}
+        _minor_fill: ${colour/xxp/WHITE}
+        comment_text_text: |
+            "Novarese"
+        _related_fill: ${colour/x11/wheat}
+      concession:
+        index:
+          "1":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_bullseye/.}
+        EMBED_ELEMENTS: ${TEMPLATE_bullseye_embed/.}
+        middle_circle:
+          fill: ${_/_minor_fill}
+        inner_circle:
+          fill: ${_/_major_fill}
+        index: "$[index_of (7)]"
+
+    CTLP:
+      _:
+        long_name_text_text: |
+            Compagnia
+            Transporti
+            La Patria
+        short_name_text_text: CTLP
+        token_1_text_text:
+        token_2_text_text:
+        _major_fill: ${colour/xxp/WHITE}
+        _minor_fill: ${colour/x11/turquoise1}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "La Patria"
+        _related_fill: ${colour/x11/lightcyan}
+        middle_box_fill: ${_/_minor_fill}
+        token_2_circle_fill: ${colour/xxp/WHITE}
+      share:
+        _:
+          share_pct_text_text: 20%
+          share_pct_text_fill: $[black_or_white (${type_bar_box/fill})]
+        index:
+          "1":
+            type_bar_box:
+              suppress: False
+            share_num_text:
+              text: 2 Shares
+            share_desc_text:
+              suppress: False
+            share_pct_text:
+              text: 40%
+              fill: $[black_or_white (${type_bar_box/fill})]
+            token_1_embed:
+              suppress: True
+            token_2a_embed:
+              suppress: False
+            token_2b_embed:
+              suppress: False
+          "2":
+          "3":
+          "4":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index: "$[index_of (4)]"
+
+    FTP:
+      _:
+        long_name_text_text: |
+            Ferrovie Trans
+            Padane
+        short_name_text_text: FTP
+        token_1_text_text:
+        token_2_text_text:
+        _major_fill: ${colour/xxp/BLACK}
+        _minor_fill: ${colour/wikipedia/corn}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Padana"
+        _related_fill: ${colour/resene/LondonHue}
+        middle_box_fill: ${_/_minor_fill}
+        token_2_circle_fill: ${colour/xxp/WHITE}
+      share:
+        _:
+          share_pct_text_text: 20%
+          share_pct_text_fill: $[black_or_white (${type_bar_box/fill})]
+        index:
+          "1":
+            type_bar_box:
+              suppress: False
+            share_num_text:
+              text: 2 Shares
+            share_desc_text:
+              suppress: False
+            share_pct_text:
+              text: 40%
+              fill: $[black_or_white (${type_bar_box/fill})]
+            token_1_embed:
+              suppress: True
+            token_2a_embed:
+              suppress: False
+            token_2b_embed:
+              suppress: False
+          "2":
+          "3":
+          "4":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index: "$[index_of (4)]"
+
+    SLDV:
+      _:
+        long_name_text_text: |
+            Società
+            Leonardo Da Vinci
+        short_name_text_text: SLDV
+        short_name_text_fill: ${colour/xxp/WHITE}
+        token_1_text_text:
+        token_2_text_text:
+        _major_fill: ${colour/hollasch/blanched_almond}
+        _minor_fill: ${colour/x11/darkgreen}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Leonardo"
+        _related_fill: ${colour/hollasch/sea_green}
+        middle_box_fill: ${_/_minor_fill}
+        token_2_circle_fill: ${colour/xxp/WHITE}
+      share:
+        _:
+          share_pct_text_text: 20%
+          share_pct_text_fill: $[black_or_white (${type_bar_box/fill})]
+        index:
+          "1":
+            type_bar_box:
+              suppress: False
+            share_num_text:
+              text: 2 Shares
+            share_desc_text:
+              suppress: False
+            share_pct_text:
+              text: 40%
+              fill: $[black_or_white (${type_bar_box/fill})]
+            token_1_embed:
+              suppress: True
+            token_2a_embed:
+              suppress: False
+            token_2b_embed:
+              suppress: False
+          "2":
+          "3":
+          "4":
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index: "$[index_of (4)]"
+
+    AFI:
+      _:
+        long_name_text_text: |
+            Azienda Ferroviaria
+            Italica
+        short_name_text_text: AFI
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/resene/VisVis}
+        _major_fill_2: ${colour/resene/Victoria}
+        _minor_fill: ${colour/resene/VisVis}
+        _minor_fill_2: ${colour/resene/Victoria}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Italica"
+        _related_fill: ${colour/resene/Mimosa}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/resene/VisVis})]
+        ELEMENTS: ${TEMPLATE_stripey/.}
+        EMBED_ELEMENTS: ${TEMPLATE_stripey_embed/.}
+        index: "$[index_of (7)]"
+
+    ATFA:
+      _:
+        long_name_text_text: |
+            Azienda Trasporti
+            Ferroviari Ausonia
+        short_name_text_text: ATFA
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/hollasch/melon}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Ausonia"
+        _related_fill: ${colour/hollasch/peach_puff}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/hollasch/melon})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: "$[index_of (7)]"
+
+    CTDA:
+      _:
+        long_name_text_text: |
+            Compagnia
+            Trasporti
+            Dante Alighieri
+        short_name_text_text: CTDA
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/hollasch/blue}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Dante"
+        _related_fill: ${colour/hollasch/sky_blue_deep}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/hollasch/blue})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: "$[index_of (7)]"
+
+    CFCC:
+      _:
+        long_name_text_text: |
+            Compagnia
+            Ferroviaria
+            Conte di Cavour
+        short_name_text_text: CFCC
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/hollasch/raw_umber}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Cavour"
+        _related_fill: ${colour/hollasch/raw_sienna}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/hollasch/raw_umber})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: "$[index_of (7)]"
+
+    CGTF:
+      _:
+        long_name_text_text: |
+            Compagnia Garibaldi
+            per i Trasporti
+            Ferroviari
+        short_name_text_text: CGTF
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/hollasch/red}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Garibaldi"
+        _related_fill: ${colour/resene/Geraldine}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/resene/Crusta})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: "$[index_of (7)]"
+
+    CTS:
+      _:
+        long_name_text_text: |
+            Compagnia Traporti
+            Subalpini
+        short_name_text_text: CTS
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/hollasch/turquoise_pale}
+        _minor_fill: ${colour/hollasch/steel_blue_light}
+        comment_text_text: |
+            "Subalpini"
+        _related_fill: ${colour/hollasch/steel_blue_light}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        index: "$[index_of (7)]"
+
+    ICSF:
+      _:
+        long_name_text_text: |
+            Impresa Centrale
+            Strade Ferrate
+        short_name_text_text: ICSF
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/x11/olivedrab}
+        _minor_fill: ${colour/x11/orange3}
+        comment_text_text: |
+            "Centrale"
+        _related_fill: ${colour/x11/palegreen3}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        index: "$[index_of (7)]"
+
+    IFAI:
+      _:
+        long_name_text_text: |
+            Impresa Ferroviaria
+            Alta Italia
+        short_name_text_text: IFAI
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/x11/maroon1}
+        _minor_fill: ${colour/x11/mediumpurple2}
+        comment_text_text: |
+            "Alta Italia"
+        _related_fill: ${colour/resene/Zombie}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        index: "$[index_of (7)]"
+
+    ILTF:
+      _:
+        long_name_text_text: |
+            Impresa Latina
+            Trasporti su Ferro
+        short_name_text_text: ILTF
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/hollasch/lawn_green}
+        _minor_fill: ${colour/x11/green4}
+        comment_text_text: |
+            "Latina"
+        _related_fill: ${colour/hollasch/manganese_blue}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        index: "$[index_of (7)]"
+
+    RATF:
+      _:
+        long_name_text_text: |
+            Regia Azienda
+            Trasporti Ferroviari
+        short_name_text_text: RATF
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/x11/yellow}
+        _minor_fill: ${colour/x11/firebrick}
+        comment_text_text: |
+            "Regia"
+        _related_fill: ${colour/x11/darkorange1}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        index: "$[index_of (7)]"
+
+    RSFS:
+      _:
+        long_name_text_text: |
+            Reale Società
+            Ferroviaria Sabauda
+        short_name_text_text: RSFS
+        token_1_text_text:
+        token_2_text_text:
+        token_3_text_text:
+        token_4_text_text:
+        token_5_text_text:
+        _major_fill: ${colour/x11/firebrick3}
+        _minor_fill: ${colour/xxp/BLACK}
+        _major_fill_2: ${colour/xxp/WHITE}
+        comment_text_text: |
+            "Sabauda"
+        _related_fill: ${colour/x11/slategray4}
+      narrow_charter:
+        index:
+          "1":
+      token:
+        ELEMENTS: ${TEMPLATE_stripey/.}
+        EMBED_ELEMENTS: ${TEMPLATE_stripey_embed/.}
+        index: "$[index_of (7)]"
+
+marker:
+  index:
+    round:
+      _:
+        name_stripe_box_suppress: True
+        outer_circle_fill: ${colour/xxp/M_GREEN}
+        middle_circle_fill: ${colour/xxp/WHITE}
+        inner_circle_fill: ${colour/xxp/M_RED}
+      token:
+        ELEMENTS: ${TEMPLATE_bullseye/.}
+        index: "$[index_of (1)]"
+
+
+private:
+
+  index:
+
+    SANC:
+      _:
+        asset_interior_box_fill: ${colour/scale/gray_4}
+        closes_text_text: "Closes: In BLUE phase"
+        cost_text_text: "Cost: L.50"
+        revenue_text_text: "Revenue: L.20"
+        long_name_text_text: |
+            Società della Strada
+            di Ferro da Napoli
+            A Nocera e
+            Castellammare
+
+train:
+
+  index:
+    2T:
+      _:
+        asset_interior_box_fill_p: YELLOW
+        rust_bar_box_fill_p: BLUE
+        long_name_text_text: "2"
+        cost_text_text_p: L.100
+      model:
+        index:
+          "1":
+            note_text:
+              text: |
+                  Remove for
+                  1841 Lite
+          "2":
+            note_text:
+              text: |
+                  Remove for
+                  1841 Lite
+          "3":
+          "4":
+          "5":
+          "6":
+          "7":
+          "8":
+
+    3T:
+      _:
+        asset_interior_box_fill_p: GREEN
+        rust_bar_box_fill_p: BROWN
+        long_name_text_text: "3"
+        cost_text_text_p: L.200
+      model:
+        index:
+          "1":
+            note_text:
+              text: |
+                  Remove for
+                  1841 Lite
+          "2":
+          "3":
+          "4":
+          "5":
+          "6":
+
+    4T:
+      _:
+        asset_interior_box_fill_p: BLUE
+        rust_bar_box_fill_p: GRAY
+        long_name_text_text: "4"
+        cost_text_text_p: L.350
+      model:
+        index:
+          "1":
+            note_text:
+              text: |
+                  Remove for
+                  1841 Lite
+          "2":
+          "3":
+          "4":
+
+    5T:
+      _:
+        asset_interior_box_fill_p: BROWN
+        rust_bar_box_fill_p: PURPLE
+        long_name_text_text: "5"
+        cost_text_text_p: L.550
+      model:
+        index:
+          "1":
+            note_text:
+              text: |
+                  Remove for
+                  1841 Lite
+          "2":
+          "3":
+
+    6T:
+      _:
+        asset_interior_box_fill_p: RED
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "6"
+        cost_text_text_p: L.800
+        rusted_text_text: PERMANENT
+      model:
+        index: "$[index_of (2)]"
+
+    7T:
+      _:
+        asset_interior_box_fill_p: GRAY
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "7"
+        cost_text_text_p: L.1,100
+        rusted_text_text: PERMANENT
+      model:
+        index: "$[index_of (2)]"
+
+    8T:
+      _:
+        asset_interior_box_fill_p: PURPLE
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "8"
+        cost_text_text_p: L.1,450
+        rusted_text_text: PERMANENT
+      model:
+        index: "$[index_of (7)]"

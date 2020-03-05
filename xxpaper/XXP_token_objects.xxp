@@ -181,6 +181,31 @@ TEMPLATE_wedges:
   - name_stripe_box
   - short_name_text
 
+TEMPLATE_wedges_embed:
+  - wedge_1_shape
+  - wedge_2_shape
+  - wedge_3_shape
+  - wedge_4_shape
+  - wedge_5_shape
+  - wedge_6_shape
+  - wedge_7_shape
+  - wedge_8_shape
+  - wedge_9_shape
+  - wedge_10_shape
+  - wedge_11_shape
+  - wedge_12_shape
+  - wedge_13_shape
+  - wedge_14_shape
+  - wedge_15_shape
+  - wedge_16_shape
+  - wedge_17_shape
+  - wedge_18_shape
+  - wedge_19_shape
+  - wedge_20_shape
+  - inner_circle
+  - name_stripe_box
+  - short_name_text
+
 ul_quarter_box:
   x: $[${token_interior_box/x} / 2.0]
   y: $[${token_interior_box/y} / 2]

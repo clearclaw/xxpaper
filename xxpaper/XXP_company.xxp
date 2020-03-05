@@ -15,64 +15,49 @@ company:
   index:
 
   charter:
-
     CUT_ELEMENT: cutline_box
-
     ELEMENTS: ${TEMPLATE_charter_default/.}
-
     cutline_box: ${DEFAULT/charter_tile}
-
     index:
       "1":
-
     _include_:
       - XXP_company_charter_objects.xxp
 
-  minor_charter:
-
+  concession:
     CUT_ELEMENT: cutline_box
-
-    ELEMENTS: ${TEMPLATE_minor_charter_default/.}
-
+    ELEMENTS: ${TEMPLATE_concession_default/.}
+    cutline_box: ${DEFAULT/asset_tile}
     index:
+    _include_:
+      - XXP_company_concession_objects.xxp
 
+  minor_charter:
+    CUT_ELEMENT: cutline_box
+    ELEMENTS: ${TEMPLATE_minor_charter_default/.}
+    index:
     cutline_box: ${DEFAULT/minor_charter_tile}
-
     _include_:
       - XXP_company_minor_charter_objects.xxp
 
   narrow_charter:
-
     CUT_ELEMENT: cutline_box
-
     ELEMENTS: ${TEMPLATE_narrow_charter_default/.}
-
     index:
-
     cutline_box: ${DEFAULT/narrow_charter_tile}
-
     _include_:
       - XXP_company_narrow_charter_objects.xxp
 
   wide_charter:
-
     CUT_ELEMENT: cutline_box
-
     ELEMENTS: ${TEMPLATE_wide_charter_default/.}
-
     index:
-
     cutline_box: ${DEFAULT/wide_charter_tile}
-
     _include_:
       - XXP_company_wide_charter_objects.xxp
 
   share:
-
     CUT_ELEMENT: cutline_box
-
     ELEMENTS: ${TEMPLATE_share_default/.}
-
     index:
       "1":
         type_bar_box:
@@ -98,26 +83,19 @@ company:
       "7":
       "8":
       "9":
-
     cutline_box: ${DEFAULT/asset_tile}
-
     _include_:
       - XXP_company_share_objects.xxp
 
   token:
-
     index:
-
     ELEMENTS: ${TEMPLATE_default/.}
-
     EMBED_ELEMENTS:
       - top_half_box
       - bottom_half_box
       - name_stripe_box
       - short_name_text
       - outline_circle
-
     EMBED_CUT_ELEMENT: outline_circle
-
     _include_:
       - XXP_token_objects.xxp
