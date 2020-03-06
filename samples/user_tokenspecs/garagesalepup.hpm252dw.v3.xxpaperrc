@@ -1,0 +1,10 @@
+user:
+  token_tile:
+    x: $[72 * 5.125 / 8]
+    y: $[72 * 7.81 / 13]
+    x_num: 12
+    y_num: 17
+  __token_tile_x_adjust: 27.5
+  __token_tile_y_adjust: 26
+  token_tile_x_adjust: 28.25
+  token_tile_y_adjust: 25.5
