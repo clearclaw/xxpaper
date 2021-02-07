@@ -136,6 +136,7 @@ TEMPLATE_stripey_embed:
   - pop
   - name_stripe_box
   - short_name_text
+  - outline_circle
 
 TEMPLATE_stripey_cross:
   - token_interior_box
@@ -155,6 +156,7 @@ TEMPLATE_stripey_cross_embed:
   - vertical_stripe_box
   - name_stripe_box
   - short_name_text
+  - outline_circle
 
 TEMPLATE_triple_up:
   - token_interior_box
@@ -172,6 +174,7 @@ TEMPLATE_triple_up_embed:
   - inner_circle
   - name_stripe_box
   - short_name_text
+  - outline_circle
 
 TEMPLATE_wedges:
   - token_interior_box
