@@ -17,6 +17,7 @@ TEMPLATE_boxes_embed:
   - middle_box
   - pop
   - name_stripe_box
+
   - short_name_text
   - outline_circle
 
@@ -226,6 +227,7 @@ TEMPLATE_wedges_embed:
   - inner_circle
   - name_stripe_box
   - short_name_text
+  - outline_circle
 
 ul_quarter_box:
   x: $[${token_interior_box/x} / 2.0]
