@@ -17,9 +17,12 @@ def do (**kwargs):
     clip.exit (err = True,
                message = "Unknown object typ: %s" % typ)
   try:
+    Config.set ("xxpaper/tile_type",
+                Config.get ("CATALOGUE/" + typ)["tile_type"])
     tl = tile.Tile (typ, None, name, n)
     # import pudb
     # pudb.set_trace ()
     print ("%s => %s" % (key, tl.value (key)))
-  except: # pylint: disable=bare-except
+  except Exception as e: # pylint: disable=bare-except
+    print (e)
     clip.exit (err = True, message = "Key not found.  KeyError: %s" % key)

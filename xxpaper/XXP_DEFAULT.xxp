@@ -37,6 +37,12 @@ DEFAULT:
     v_center: 0
     typeface: ${DEFAULT/typeface}
 
+  rotate:
+    x: $[${${xxpaper/tile_type}/x_max}]
+    y: 0
+    angle: 90
+    return: false
+
   _include_:
     - XXP_components.xxp
     - XXP_clips.xxp

@@ -18,6 +18,7 @@ class Tile (object):
     self.canvas = canvas
     self.name = name
     self.n = n
+    self.push_count = 0
 
   #@logtool.log_call
   def value (self, key, **kwargs):
@@ -141,7 +142,7 @@ class Tile (object):
       elif h_center == 1:
         self.canvas.drawString (x, y, t)
       else:
-        raise ValueError
+        raise ValueError ("Unsupported h_center value: " + h_center)
       y -= line_height
 
   @logtool.log_call
@@ -167,6 +168,58 @@ class Tile (object):
     radius = self.value (key + "/radius")
     path.circle (x, y, radius)
     return path
+
+  @logtool.log_call
+  def draw_pop (self, key):
+    self.canvas.restoreState ()
+    self.push_count -= 1
+
+  @logtool.log_call
+  def path_pop (self, key):
+    self.canvas.restoreState ()
+    self.push_count -= 1
+
+  @logtool.log_call
+  def draw_push (self, key):
+    self.canvas.saveState ()
+    self.push_count += 1
+
+  @logtool.log_call
+  def path_push (self, key):
+    self.canvas.saveState ()
+    self.push_count += 1
+
+  @logtool.log_call
+  def draw_rotate (self, key):
+    x = self.value (key + "/x", default = 0)
+    y = self.value (key + "/y", default = 0)
+    angle = self.value (key + "/angle", default = 0)
+    self.canvas.translate (x, y)
+    self.canvas.rotate (angle)
+    if self.value (key + "/return", default = False):
+      self.canvas.translate (-x, -y)
+
+  @logtool.log_call
+  def path_rotate (self, key):
+    x = self.value (key + "/x", default = 0)
+    y = self.value (key + "/y", default = 0)
+    angle = self.value (key + "/angle", default = 0)
+    self.canvas.translate (x, y)
+    self.canvas.rotate (angle)
+    if self.value (key + "/return", default = False):
+      self.canvas.translate (-x, -y)
+
+  @logtool.log_call
+  def draw_translate (self, key):
+    x = self.value (key + "/x", default = 0)
+    y = self.value (key + "/y", default = 0)
+    self.canvas.translate (x, y)
+
+  @logtool.log_call
+  def path_translate (self, key):
+    x = self.value (key + "/x", default = 0)
+    y = self.value (key + "/y", default = 0)
+    self.canvas.translate (x, y)
 
   @logtool.log_call
   def draw_shape (self, key):
@@ -257,11 +310,11 @@ class Tile (object):
     for key in elements:
       if self.value (key + "/suppress", default = False):
         continue
-      if key == "rotate":
-        x = self.value (self.tile_type + "/x")
-        margin = self.value (self.tile_type + "/margin")
-        self.canvas.translate (x - (2 * margin), 0)
-        self.canvas.rotate (90)
+      suffix = key.split ("_")[-1]
+      if suffix in ("pop", "push",
+                    "rotate", "translate"): # don't get a save-context etc
+        fn = getattr (self, "draw_" + suffix)
+        fn (key)
         continue
       with self._with_context ():
         self._inset (key)
@@ -269,6 +322,10 @@ class Tile (object):
         suffix = key.split ("_")[-1]
         fn = getattr (self, "draw_" + suffix)
         fn (key)
+    if self.push_count:
+      raise ValueError (
+        "Unbalanced push/pop ({}) by end of element: {}".format (
+          self.push_count, repr (elements)))
 
   @logtool.log_call
   def render (self):
