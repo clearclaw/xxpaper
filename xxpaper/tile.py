@@ -307,25 +307,30 @@ class Tile (object):
 
   @logtool.log_call
   def _render_elements (self, elements):
-    for key in elements:
-      if self.value (key + "/suppress", default = False):
-        continue
-      suffix = key.split ("_")[-1]
-      if suffix in ("pop", "push",
-                    "rotate", "translate"): # don't get a save-context etc
-        fn = getattr (self, "draw_" + suffix)
-        fn (key)
-        continue
-      with self._with_context ():
-        self._inset (key)
-        self._set_properties (key)
+    with self._with_context ():
+      cutpath = self.path_box ("_".join (self.tile_type.split ("_")[:-1])
+                               + "_interior_box")
+      cutpath.isClipPath = True
+      self.canvas.clipPath (cutpath, fill = 0, stroke = 0)
+      for key in elements:
+        if self.value (key + "/suppress", default = False):
+          continue
         suffix = key.split ("_")[-1]
-        fn = getattr (self, "draw_" + suffix)
-        fn (key)
-    if self.push_count:
-      raise ValueError (
-        "Unbalanced push/pop ({}) by end of element: {}".format (
-          self.push_count, repr (elements)))
+        if suffix in ("pop", "push",
+                      "rotate", "translate"): # don't get a save-context etc
+          fn = getattr (self, "draw_" + suffix)
+          fn (key)
+          continue
+        with self._with_context ():
+          self._inset (key)
+          self._set_properties (key)
+          suffix = key.split ("_")[-1]
+          fn = getattr (self, "draw_" + suffix)
+          fn (key)
+      if self.push_count:
+        raise ValueError (
+          "Unbalanced push/pop ({}) by end of element: {}".format (
+            self.push_count, repr (elements)))
 
   @logtool.log_call
   def render (self):

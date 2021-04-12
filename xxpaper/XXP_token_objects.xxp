@@ -1,5 +1,23 @@
 CUT_ELEMENT: cutline_circle
 
+TEMPLATE_basketball:
+  - token_interior_box
+  - outer_circle
+  - left_circle
+  - right_circle
+  - center_stripe_box
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_basketball_embed:
+  - outer_circle
+  - left_circle
+  - right_circle
+  - center_stripe_box
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
 TEMPLATE_boxes:
   - token_interior_box
   - outer_circle
@@ -17,7 +35,6 @@ TEMPLATE_boxes_embed:
   - middle_box
   - pop
   - name_stripe_box
-
   - short_name_text
   - outline_circle
 
@@ -71,12 +88,14 @@ TEMPLATE_cross_embed:
 
 TEMPLATE_default:
   - token_interior_box
+  - outer_circle
   - top_half_box
   - bottom_half_box
   - name_stripe_box
   - short_name_text
 
 TEMPLATE_default_embed:
+  - outer_circle
   - top_half_box
   - bottom_half_box
   - name_stripe_box
@@ -105,6 +124,22 @@ TEMPLATE_solid:
 
 TEMPLATE_solid_embed:
   - outer_circle
+  - name_stripe_box
+  - short_name_text
+  - outline_circle
+
+TEMPLATE_star:
+  - token_interior_box
+  - outer_circle
+  - triangle1_shape
+  - triangle2_shape
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_star_embed:
+  - outer_circle
+  - triangle1_shape
+  - triangle2_shape
   - name_stripe_box
   - short_name_text
   - outline_circle
@@ -229,6 +264,27 @@ TEMPLATE_wedges_embed:
   - short_name_text
   - outline_circle
 
+center_stripe_box:
+  x_inset: $[${token_interior_box/x} / 2 - 1.5]
+  y_inset: 0
+  x: 3
+  y: ${token_interior_box/y}
+  fill: ${_/_minor_fill}
+
+left_circle:
+  x: $[${token_interior_box/x} + 15]
+  y: $[${token_interior_box/y} / 2]
+  radius: 30
+  width: 3
+  stroke: ${_/_minor_fill}
+
+right_circle:
+  x: -15
+  y: $[${token_interior_box/y} / 2]
+  radius: 30
+  width: 3
+  stroke: ${_/_minor_fill}
+
 ul_quarter_box:
   x: $[${token_interior_box/x} / 2.0]
   y: $[${token_interior_box/y} / 2]
@@ -337,6 +393,50 @@ inner_box:
   x_inset: $[${token_interior_box/x} / 2 - 6]
   y_inset: $[${token_interior_box/y} / 2 - 6]
   fill: ${_/_minor_fill}
+
+triangle1_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: $[2 -${cutline_circle/radius}]
+  fill: ${_/_minor_fill_2}
+  fill_mode: 0
+  stroke:
+  points:
+    -
+      - 0
+      - $[2 - ${cutline_circle/radius}]
+    -
+      - $[(${cutline_circle/radius} - 2) * math.sin (60 * math.pi / 180)]
+      - $[(${cutline_circle/radius} - 2) * math.cos (60 * math.pi / 180)]
+    -
+      - $[-(${cutline_circle/radius} - 2) * math.sin (60 * math.pi / 180)]
+      - $[(${cutline_circle/radius} - 2) * math.cos (60 * math.pi / 180)]
+    -
+      - 0
+      - $[2 - ${cutline_circle/radius}]
+
+triangle2_shape:
+  x_inset: $[${token_interior_box/x} / 2]
+  y_inset: $[${token_interior_box/y} / 2]
+  x: 0
+  y: $[${cutline_circle/radius} - 2]
+  fill: ${_/_minor_fill_1}
+  fill_mode: 0
+  stroke:
+  points:
+    -
+      - 0
+      - $[${cutline_circle/radius} - 2]
+    -
+      - $[(${cutline_circle/radius} - 2) * math.sin (60 * math.pi / 180)]
+      - $[-(${cutline_circle/radius} - 2) * math.cos (60 * math.pi / 180)]
+    -
+      - $[-(${cutline_circle/radius} - 2) * math.sin (60 * math.pi / 180)]
+      - $[-(${cutline_circle/radius} - 2) * math.cos (60 * math.pi / 180)]
+    -
+      - 0
+      - $[${cutline_circle/radius} - 2]
 
 tri_up_left_shape:
   x_inset: $[${token_interior_box/x} / 2]
