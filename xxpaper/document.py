@@ -9,7 +9,7 @@ from .config import Config
 
 LOG = logging.getLogger (__name__)
 
-class Document (object):
+class Document:
 
   @logtool.log_call
   def __init__ (self, fname, **kwargs):

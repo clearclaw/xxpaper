@@ -60,7 +60,7 @@ def black_or_white (colour):
 # Config
 #
 
-class Config (object):
+class Config:
   _state = {}
   _verbose = False
 
@@ -124,14 +124,14 @@ class Config (object):
   #@logtool.log_call
   @classmethod
   def _expand_vector (cls, v, params):
-    if isinstance (v, list) or isinstance (v, tuple):
+    if isinstance (v, (list, tuple)):
       return [cls._expand (i, params) for i in v]
     return v
 
   #@logtool.log_call
   @classmethod
   def _expand (cls, v, params):
-    if isinstance (v, list) or isinstance (v, tuple):
+    if isinstance (v, (list, tuple)):
       return cls._expand_vector (v, params)
     if isinstance (v, str):
       return cls._expand_str (v, params)

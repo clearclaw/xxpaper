@@ -6,7 +6,7 @@ from .xlate_frame import XlateFrame
 
 LOG = logging.getLogger (__name__)
 
-class Contents (object):
+class Contents:
 
   @logtool.log_call
   def __init__ (self, canvas, objects):

@@ -6,6 +6,7 @@ from .main import app_main
 LOG = logging.getLogger (__name__)
 OPTIONS = ["help", "debug", "nosentry", "verbose", "version"]
 
+# pylint: disable=import-outside-toplevel
 @app_main.subcommand (
   name = "check",
   description = "Check formatting of game file",

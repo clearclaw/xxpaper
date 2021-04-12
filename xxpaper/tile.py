@@ -5,7 +5,7 @@ from .config import Config
 
 LOG = logging.getLogger (__name__)
 
-class Tile (object):
+class Tile:
 
   @logtool.log_call
   def __init__ (self, asset, canvas, name, n):
@@ -170,12 +170,12 @@ class Tile (object):
     return path
 
   @logtool.log_call
-  def draw_pop (self, key):
+  def draw_pop (self, _):
     self.canvas.restoreState ()
     self.push_count -= 1
 
   @logtool.log_call
-  def path_pop (self, key):
+  def path_pop (self, _):
     self.canvas.restoreState ()
     self.push_count -= 1
 
@@ -185,7 +185,7 @@ class Tile (object):
     self.push_count += 1
 
   @logtool.log_call
-  def path_push (self, key):
+  def path_push (self, _):
     self.canvas.saveState ()
     self.push_count += 1
 

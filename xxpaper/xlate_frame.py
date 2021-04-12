@@ -5,7 +5,7 @@ from .config import Config
 
 LOG = logging.getLogger (__name__)
 
-class XlateFrame (object):
+class XlateFrame:
 
   @logtool.log_call
   def __init__ (self, canvas, typ, x, y, inset_by = False):
