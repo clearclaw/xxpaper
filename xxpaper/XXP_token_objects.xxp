@@ -75,13 +75,19 @@ TEMPLATE_chequer_embed:
 TEMPLATE_cross:
   - token_interior_box
   - outer_circle
+  - push
+  - middle_rotate
   - vertical_stripe_box
+  - pop
   - name_stripe_box
   - short_name_text
 
 TEMPLATE_cross_embed:
   - outer_circle
+  - push
+  - middle_rotate
   - vertical_stripe_box
+  - pop
   - name_stripe_box
   - short_name_text
   - outline_circle
@@ -180,7 +186,10 @@ TEMPLATE_stripey_cross:
   - bottom_half_box
   - top_line_box
   - bottom_line_box
+  - push
+  - middle_rotate
   - vertical_stripe_box
+  - pop
   - name_stripe_box
   - short_name_text
 
@@ -189,7 +198,10 @@ TEMPLATE_stripey_cross_embed:
   - bottom_half_box
   - top_line_box
   - bottom_line_box
+  - push
+  - middle_rotate
   - vertical_stripe_box
+  - pop
   - name_stripe_box
   - short_name_text
   - outline_circle
