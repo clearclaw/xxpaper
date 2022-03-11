@@ -10,10 +10,10 @@ astroid==1.6.6
     # via pylint
 cfgstack==0.1.post28
     # via -r requirements.in
-clip.py==0.3.2
+clip-py==0.3.2
     # via -r requirements.in
 importlib-metadata==0.12
-    # via path.py
+    # via path-py
 isort==4.3.20
     # via pylint
 lazy-object-proxy==1.4.1
@@ -24,9 +24,9 @@ logtool==0.3.post17
     #   cfgstack
 mccabe==0.6.1
     # via pylint
-path.py==11.5.2
+path-py==11.5.2
     # via -r requirements.in
-pillow==8.1.0
+pillow==9.0.1
     # via reportlab
 pylint==1.9.4
     # via setuptools-lint
