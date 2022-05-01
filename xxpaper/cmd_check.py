@@ -16,6 +16,7 @@ def do (**kwargs):
     if f.isfile ():
       try:
         print ("Trying to load %s as JSON." % f)
+        # pylint: disable=consider-using-with
         d = json.loads (open (f, encoding='utf-8').read ())
         print ("\tSuccessfully loaded as JSON.")
         if Config._verbose: # pylint: disable=protected-access
@@ -29,7 +30,7 @@ def do (**kwargs):
           if Config._verbose: # pylint: disable=protected-access
             print ("\nResult:\n========\n\n%s" % yaml.dump (
               d, width = 70, indent = 2, default_flow_style = False))
-        except Exception as e:
+        except Exception as e: # pylint: disable=redefined-outer-name
           print ("\tFailed: %s" % e)
           try:
             print ("Trying to load %s as TOML." % f)
@@ -37,5 +38,5 @@ def do (**kwargs):
             print ("\tSuccessfully loaded as TOML.")
             if Config._verbose: # pylint: disable=protected-access
               print ("\nResult:\n========\n\n%s" % toml.dumps (d))
-          except Exception as e:
+          except Exception as e: # pylint: disable=redefined-outer-name
             print ("\tFailed: %s" % e)

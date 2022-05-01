@@ -6,6 +6,7 @@ from .config import Config
 LOG = logging.getLogger (__name__)
 
 class Tile:
+  # pylint: disable=too-many-public-methods
 
   @logtool.log_call
   def __init__ (self, asset, canvas, name, n):
@@ -180,7 +181,7 @@ class Tile:
     self.push_count -= 1
 
   @logtool.log_call
-  def draw_push (self, key):
+  def draw_push (self, key): # pylint: disable=unused-argument
     self.canvas.saveState ()
     self.push_count += 1
 
@@ -197,6 +198,7 @@ class Tile:
     self.canvas.translate (x, y)
     self.canvas.rotate (angle)
     if self.value (key + "/return", default = False):
+      # pylint: disable=invalid-unary-operand-type
       self.canvas.translate (-x, -y)
 
   @logtool.log_call
@@ -207,6 +209,7 @@ class Tile:
     self.canvas.translate (x, y)
     self.canvas.rotate (angle)
     if self.value (key + "/return", default = False):
+      # pylint: disable=invalid-unary-operand-type
       self.canvas.translate (-x, -y)
 
   @logtool.log_call

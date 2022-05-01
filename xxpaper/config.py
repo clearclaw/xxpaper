@@ -71,11 +71,11 @@ class Config:
       exts = ("", ".xxp", ".json", ".yaml", ".yml", ".toml")
       cls._state.update (CfgStack (
         fnames, dirs = dirs, exts = exts).data.to_dict ())
-      open ("t.json", "w").write (json.dumps (cls._state, indent = 2))
 
   @logtool.log_call
   @classmethod
   def _expand_str (cls, s, params):
+    # pylint: disable=too-many-branches
     if not isinstance (s, str):
       return s
     rc = s.strip ()
@@ -226,12 +226,11 @@ class Config:
       form = "yaml"
     if form in ("JSON", "json"):
       return cls.as_json (indent = indent)
-    elif form in ("YAML", "yaml", "yml"):
+    if form in ("YAML", "yaml", "yml"):
       return cls.as_yaml (indent = indent)
-    elif form in ("TOML", "toml"):
+    if form in ("TOML", "toml"):
       return cls.as_toml ()
-    else:
-      raise ValueError ("Unknown form: " + form)
+    raise ValueError ("Unknown form: " + form)
 
 #
 # Loaders
@@ -240,8 +239,8 @@ class Config:
 @logtool.log_call
 def _config_dirs (templates):
   fnames = [s.strip () for s in templates.split (",") if len (s.strip ()) != 0]
-  fdirs = list (set ([Path (d).dirname () for d in fnames]))
-  fdirs = ["./",] if fdirs == [] else fdirs
+  fdirs = list ({Path (d).dirname () for d in fnames})
+  fdirs = ["./",] if not fdirs else fdirs
   cdir = Path (pkg_resources.resource_filename ("xxpaper",
                                                 "XXP_DEFAULT.xxp")).dirname ()
   rc = fdirs + [cdir,]
@@ -255,7 +254,7 @@ def load_config (templates):
   else:
     templates += ",XXP_DEFAULT.xxp"
   fnames = [s.strip () for s in templates.split (",")
-                    if s.strip () != ""]
+            if s.strip () != ""]
   dirs = _config_dirs (templates)
   Config (fnames = fnames, dirs = dirs)
   Config.set ("xxpaper/version", __version__)

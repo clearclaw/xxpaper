@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 
 import logging, logtool
-from reportlab.lib.pagesizes import letter, A4
 from path import Path
 from .config import Config
 from .xlate_frame import XlateFrame

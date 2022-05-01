@@ -52,7 +52,7 @@ def lookup (**kwargs):
   description = "Make game files",
   inherits = OPTIONS)
 @logtool.log_call
-def make (**kwargs):
+def make (**kwargs): # pylint: disable=unused-argument
   pass
 
 @make.subcommand (
