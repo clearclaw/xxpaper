@@ -28,7 +28,7 @@ def option_version (opt): # pylint: disable=unused-argument
   sys.exit (0)
 
 @APP.main (name = Path (sys.argv[0]).basename (),
-           description = "18xx rapid prototyping tool",
+           description = "18xx asset generation tool",
            tree_view = "-H")
 @clip.flag ("-H", "--HELP",  help = "Help for all sub-commands")
 @clip.flag ("-D", "--debug", name = "debug", help = "Enable debug logging",

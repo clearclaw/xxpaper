@@ -1,7 +1,7 @@
 cfgstack
 clip.py
 logtool
-path.py
+path
 pyyaml
 raven
 reportlab

@@ -49,7 +49,15 @@ def lookup (**kwargs):
 
 @app_main.subcommand (
   name = "make",
-  description = "Make artfile for a game",
+  description = "Make game files",
+  inherits = OPTIONS)
+@logtool.log_call
+def make (**kwargs):
+  pass
+
+@make.subcommand (
+  name = "assets",
+  description = "Make assets artfile for a game",
   inherits = OPTIONS)
 @clip.flag ("-c", "--cutline", name = "cutline",
             default = False, help = "Draw cutlines")
@@ -65,6 +73,24 @@ def lookup (**kwargs):
            help = "File to produce (default: first template .pdf)",
            required = False)
 @logtool.log_call
-def make (**kwargs):
-  from .cmd_make import do
+def assets (**kwargs):
+  from .cmd_assets import do
+  do (**kwargs)
+
+@make.subcommand (
+  name = "cards",
+  description = "Make card artfiles for a game",
+  inherits = OPTIONS)
+@clip.flag ("-c", "--cutline", name = "cutline",
+            default = False, help = "Draw cutlines")
+@clip.opt ("-f", "--filter", name = "filter",
+           help = "Only these asset-types")
+@clip.arg (name = "templates",
+           help = "XXPaper game files (comma separated)", required = True)
+@clip.arg (name = "outfile",
+           help = "File prefix(es) to produce (default: first template .pdf)",
+           required = False)
+@logtool.log_call
+def cards (**kwargs):
+  from .cmd_cards import do
   do (**kwargs)

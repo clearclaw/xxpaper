@@ -22,7 +22,8 @@ DEFAULT:
   suppress: False
   cutline_width: 0.01
   cutline_stroke: ${colour/x11/gray90}
-  margin: 4
+  inset_x: 4
+  inset_y: 4
 
   no_registration:
     - token_tile

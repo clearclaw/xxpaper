@@ -12,15 +12,16 @@ class XlateFrame:
     self.canvas = canvas
     self.x_sz = Config.get (typ + "/x")
     self.y_sz = Config.get (typ + "/y")
-    self.inset = Config.get (typ + "/" + inset_by) if inset_by else 0
+    self.inset_x = Config.get (typ + "/" + inset_by + "_x") if inset_by else 0
+    self.inset_y = Config.get (typ + "/" + inset_by + "_y") if inset_by else 0
     self.x = x
     self.y = y
 
   @logtool.log_call
   def __enter__ (self):
     self.canvas.saveState ()
-    self.canvas.translate ((self.x * self.x_sz) + self.inset,
-                           (self.y * self.y_sz) + self.inset)
+    self.canvas.translate ((self.x * self.x_sz) + self.inset_x,
+                           (self.y * self.y_sz) + self.inset_y)
 
   @logtool.log_call
   def __exit__ (self, etyp, e, tb):

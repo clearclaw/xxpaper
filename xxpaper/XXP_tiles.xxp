@@ -35,77 +35,78 @@ token_interior_box:
 asset_tile:
   x: 108
   y: 180
-  x_max: $[${asset_tile/x} - (2 * ${asset_tile/margin})]
-  y_max: $[${asset_tile/y} - (2 * ${asset_tile/margin})]
+  x_max: $[${asset_tile/x} - (2 * ${asset_tile/inset_x})]
+  y_max: $[${asset_tile/y} - (2 * ${asset_tile/inset_y})]
   x_num: 5
   y_num: 4
   width: ${DEFAULT/cutline_width}
   stroke: ${DEFAULT/cutline_stroke}
-  margin: ${DEFAULT/margin}
 
 charter_tile:
   x: $[7.5 * 72 / 2.0]
   y: $[10 * 72 / 2.0]
-  x_max: $[${charter_tile/x} - (2 * ${charter_tile/margin})]
-  y_max: $[${charter_tile/y} - (2 * ${charter_tile/margin})]
+  x_max: $[${charter_tile/x} - (2 * ${charter_tile/inset_x})]
+  y_max: $[${charter_tile/y} - (2 * ${charter_tile/inset_y})]
   x_num: 2
   y_num: 2
   stroke: ${DEFAULT/cutline_stroke}
   width: ${DEFAULT/cutline_width}
-  margin: ${DEFAULT/margin}
 
 minor_charter_tile:
   x: $[7.5 * 72 / 2.0]
   y: $[10 * 72 / 3.0]
-  x_max: $[${minor_charter_tile/x} - (2 * ${minor_charter_tile/margin})]
-  y_max: $[${minor_charter_tile/y} - (2 * ${minor_charter_tile/margin})]
+  x_max: $[${minor_charter_tile/x} - (2 * ${minor_charter_tile/inset_x})]
+  y_max: $[${minor_charter_tile/y} - (2 * ${minor_charter_tile/inset_y})]
   x_num: 2
   y_num: 3
   stroke: ${DEFAULT/cutline_stroke}
   width: ${DEFAULT/cutline_width}
-  margin: ${DEFAULT/margin}
 
 narrow_charter_tile:
   x: $[7.5 * 72 ]
   y: $[10 * 72 / 3.0]
-  x_max: $[${narrow_charter_tile/x} - (2 * ${narrow_charter_tile/margin})]
-  y_max: $[${narrow_charter_tile/y} - (2 * ${narrow_charter_tile/margin})]
+  x_max: $[${narrow_charter_tile/x} - (2 * ${narrow_charter_tile/inset_x})]
+  y_max: $[${narrow_charter_tile/y} - (2 * ${narrow_charter_tile/inset_y})]
   x_num: 1
   y_num: 3
   stroke: ${DEFAULT/cutline_stroke}
   width: ${DEFAULT/cutline_width}
-  margin: ${DEFAULT/margin}
 
 wide_charter_tile: ${charter_tile/.}
 
 market2d_tile:
   x: 45
   y: 60
-  x_max: $[${market2d_tile/x} - (2 * ${market2d_tile/margin})]
-  y_max: $[${market2d_tile/y} - (2 * ${market2d_tile/margin})]
+  x_max: $[${market2d_tile/x} - (2 * ${market2d_tile/inset_x})]
+  y_max: $[${market2d_tile/y} - (2 * ${market2d_tile/inset_y})]
   x_num: 12
   y_num: 12
   stroke: ${DEFAULT/cutline_stroke}
   width: ${DEFAULT/cutline_width}
-  margin: 0
+  inset_x: 0
+  inset_y: 0
 
 swatch_tile:
   x: 108
   y: 36
-  x_max: $[${swatch_tile/x} - (2 * ${swatch_tile/margin})]
-  y_max: $[${swatch_tile/y} - (2 * ${swatch_tile/margin})]
+  x_max: $[${swatch_tile/x} - (2 * ${swatch_tile/inset_x})]
+  y_max: $[${swatch_tile/y} - (2 * ${swatch_tile/inset_y})]
   x_num: 5
   y_num: 20
   stroke: ${DEFAULT/cutline_stroke}
   width: ${DEFAULT/cutline_width}
-  margin: 0
+  inset_x: 0
+  inset_y: 0
 
 token_tile:
   x: 50
   y: 50
-  x_max: $[${token_tile/x} - (2 * ${token_tile/margin})]
-  y_max: $[${token_tile/y} - (2 * ${token_tile/margin})]
+  x_max: $[${token_tile/x} - (2 * ${token_tile/inset_x})]
+  y_max: $[${token_tile/y} - (2 * ${token_tile/inset_y})]
   x_num: 11
   y_num: 14
   width: ${DEFAULT/cutline_width}
-  margin: $[(${token_tile/x} - ${token_interior_box/x}) / 2]
+  # margin: $[(${token_tile/x} - ${token_interior_box/x}) / 2]
+  inset_x: $[(${token_tile/x} - ${token_interior_box/x}) / 2]
+  inset_y: $[(${token_tile/y} - ${token_interior_box/y}) / 2]
+  #inset_y: ${token_tile/inset_x}

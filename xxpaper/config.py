@@ -71,6 +71,7 @@ class Config:
       exts = ("", ".xxp", ".json", ".yaml", ".yml", ".toml")
       cls._state.update (CfgStack (
         fnames, dirs = dirs, exts = exts).data.to_dict ())
+      open ("t.json", "w").write (json.dumps (cls._state, indent = 2))
 
   @logtool.log_call
   @classmethod

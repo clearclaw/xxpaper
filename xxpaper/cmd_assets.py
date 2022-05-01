@@ -26,7 +26,7 @@ def do (**kwargs):
   load_config (kwargs["templates"])
   match = kwargs.get ("filter")
   if kwargs.get ("outfile") is None:
-    outfile = Path (kwargs["templates"].split (",")[0]).namebase + ".pdf"
+    outfile = Path (kwargs["templates"].split (",")[0]).name + ".pdf"
   else:
     outfile = Path (kwargs["outfile"])
   with document.Document (outfile, pagesize = paper) as canvas:

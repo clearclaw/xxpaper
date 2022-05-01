@@ -98,7 +98,7 @@ class Page:
       self.canvas.drawCentredString (
         (6 * inch) / 2.0 + 0.75 * inch, 4,
         "XXPaper run: " + (
-          " ".join ([str (Path (sys.argv[0]).namebase),] + sys.argv[1:])))
+          " ".join ([str (Path (sys.argv[0]).name),] + sys.argv[1:])))
       self.canvas.drawCentredString ((6 * inch) / 2.0 + 0.75 * inch, -8,
                                      "XXPaper version: %s" % __version__)
       self.canvas.restoreState ()

@@ -30,7 +30,7 @@ private:
 
   close_bar_box:
     x_inset: 0
-    y_inset: 89
+    y_inset: $[${asset_interior_box/x} - 11]
     x: ${asset_interior_box/y}
     y: 11
     fill: ${colour/xxp/BLACK}
@@ -41,7 +41,7 @@ private:
     typeface: ${DEFAULT/typeface_bold_italic}
     size: 8
     x_inset: 0
-    y_inset: 92
+    y_inset: $[${asset_interior_box/x} - 11 + 3]
     x: 4
     y: 0
     fill: $[black_or_white (${close_bar_box/fill})]

@@ -5,6 +5,14 @@ xxp:
 
   DIRECTOR: ${colour/hollasch/light_goldenrod}
 
+  TRACK_YELLOW: ${colour/x11/gold}
+  TRACK_GREEN: ${colour/resene/DaisyBush}
+  TRACK_BROWN: ${colour/resene/Hibiscus}
+  TRACK_GRAY: [0.6, 0.6, 0.6]
+  # TRACK_PURPLE:
+  TRACK_BLUE: [0.1, 0.4, 0.8]
+  # TRACK_OFFBOARD:
+
   TRAIN_YELLOW: ${colour/hollasch/khaki}
   TRAIN_GREEN: ${colour/resene/Wistful}
 #  TRAIN_BLUE: ${colour/resene/Downy}

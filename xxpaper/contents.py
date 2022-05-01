@@ -19,6 +19,6 @@ class Contents:
       for obj in self.objects:
         coords = pg.next (obj.asset)
         with XlateFrame (self.canvas, obj.tile_type, *coords,
-                         inset_by = "margin"):
+                         inset_by = "inset"):
           # print ("Obj: ", obj.asset)
           obj.render ()
