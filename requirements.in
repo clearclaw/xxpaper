@@ -1,5 +1,6 @@
 cfgstack
 clip.py
+findfile_path
 logtool
 path
 pyyaml

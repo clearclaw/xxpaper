@@ -3,8 +3,9 @@
 import colorsys, functools, itertools, json, logging, logtool
 import os, pkg_resources
 import pprint, re, toml, yaml, math
-from path import Path
 from cfgstack import CfgStack
+from findfile_path import findfile_path
+from path import Path
 from . import __version__
 
 LOG = logging.getLogger (__name__)
@@ -61,16 +62,49 @@ def black_or_white (colour):
 #
 
 class Config:
+  _dirs = None
+  _exts = ("", ".xxp", ".json", ".yaml", ".yml", ".toml")
+  _fnames = None
   _state = {}
+  _templates = None
   _verbose = False
 
   @logtool.log_call
   @classmethod
-  def __init__ (cls, fnames = None, dirs = None):
-    if fnames is not None:
-      exts = ("", ".xxp", ".json", ".yaml", ".yml", ".toml")
+  def __init__ (cls, templates = None):
+    if templates is not None:
+      cls.templates = templates
+      cls._get_conffiles ()
+      # pylint: disable=not-an-iterable()
+      cls._dirs = list ({Path (d).dirname () for d in cls._fnames
+         if Path (d).dirname () != ""})
+      # dirs -- In case there are nested _includes_s
       cls._state.update (CfgStack (
-        fnames, dirs = dirs, exts = exts).data.to_dict ())
+        cls._fnames, dirs = cls._dirs, exts = cls._exts).data.to_dict ())
+
+  @logtool.log_call
+  @classmethod
+  def _get_conffiles (cls):
+    cdir = Path (
+      pkg_resources.resource_filename (
+        "xxpaper",
+        "XXP_DEFAULT.xxp")).dirname ()
+    paths = ["./", "~/.config/xxpaper", "~/.xxpaper", "~/",
+             os.environ.get ("HOME", "./"), cdir]
+    rcfile = findfile_path (("xxpaperrc", ".xxpaperrc"), paths, cls._exts)
+    cls._fnames = [rcfile] if rcfile is not None else []
+    for t in cls.templates.split(","):
+      if t.strip () == "":
+        continue
+      p = Path (t).dirname () if Path (t).dirname () != "" else "./"
+      tfile = findfile_path (t, [p,] + paths, cls._exts)
+      if tfile is None:
+        # Must find the files the user specifies
+        raise ValueError ("Could not find file for parameter: %s" % t)
+      cls._fnames.append (tfile)
+    cfile = findfile_path ("XXP_DEFAULT", paths, cls._exts)
+    if cfile is not None:
+      cls._fnames.append (cfile)
 
   @logtool.log_call
   @classmethod
@@ -237,24 +271,6 @@ class Config:
 #
 
 @logtool.log_call
-def _config_dirs (templates):
-  fnames = [s.strip () for s in templates.split (",") if len (s.strip ()) != 0]
-  fdirs = list ({Path (d).dirname () for d in fnames})
-  fdirs = ["./",] if not fdirs else fdirs
-  cdir = Path (pkg_resources.resource_filename ("xxpaper",
-                                                "XXP_DEFAULT.xxp")).dirname ()
-  rc = fdirs + [cdir,]
-  return rc
-
-@logtool.log_call
 def load_config (templates):
-  f_rc = Path (os.environ.get ("HOME", "./")) / ".xxpaperrc"
-  if f_rc.isfile ():
-    templates = str (f_rc) + "," + templates + ",XXP_DEFAULT.xxp"
-  else:
-    templates += ",XXP_DEFAULT.xxp"
-  fnames = [s.strip () for s in templates.split (",")
-            if s.strip () != ""]
-  dirs = _config_dirs (templates)
-  Config (fnames = fnames, dirs = dirs)
+  Config (templates = templates)
   Config.set ("xxpaper/version", __version__)

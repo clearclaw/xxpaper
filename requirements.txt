@@ -6,14 +6,16 @@
 #
 addict==2.4.0
     # via cfgstack
-astroid==2.11.3
+astroid==2.11.5
     # via pylint
-cfgstack==0.1.post28
+cfgstack==0.1.post29
     # via -r requirements.in
 clip.py==0.3.2
     # via -r requirements.in
 dill==0.3.4
     # via pylint
+findfile-path==0.0.1.post6
+    # via -r requirements.in
 isort==5.10.1
     # via pylint
 lazy-object-proxy==1.7.1
@@ -22,15 +24,18 @@ logtool==0.3.post17
     # via
     #   -r requirements.in
     #   cfgstack
+    #   findfile-path
 mccabe==0.7.0
     # via pylint
 path==16.4.0
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   findfile-path
 pillow==9.1.0
     # via reportlab
 platformdirs==2.5.2
     # via pylint
-pylint==2.13.7
+pylint==2.13.9
     # via setuptools-lint
 pyyaml==6.0
     # via
@@ -54,7 +59,9 @@ typing-extensions==4.2.0
     # via
     #   astroid
     #   pylint
-wrapt==1.14.0
+versioneer==0.22
+    # via findfile-path
+wrapt==1.14.1
     # via
     #   astroid
     #   logtool
