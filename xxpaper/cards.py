@@ -18,7 +18,8 @@ class Cards:
   def render (self, kwargs):
     for obj in self.objects:
       if kwargs.get ("outfile") is None:
-        outfile = (Path (kwargs["templates"].split (",")[0]).name
+        outfile = (Path (
+          kwargs["templates"].split (",")[0]).basename ().splitext ()[0]
                    + "--%s_%s_%s.pdf" % (obj.name, obj.asset, obj.n))
       else:
         outfile = Path (kwargs["outfile"]
