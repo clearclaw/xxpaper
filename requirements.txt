@@ -10,7 +10,7 @@ astroid==2.11.5
     # via pylint
 cfgstack==0.1.post29
     # via -r requirements.in
-clip.py==0.3.2
+clip-py==0.3.2
     # via -r requirements.in
 dill==0.3.4
     # via pylint
@@ -31,7 +31,7 @@ path==16.4.0
     # via
     #   -r requirements.in
     #   findfile-path
-pillow==9.1.0
+pillow==9.1.1
     # via reportlab
 platformdirs==2.5.2
     # via pylint
@@ -55,10 +55,6 @@ toml==0.10.2
     #   cfgstack
 tomli==2.0.1
     # via pylint
-typing-extensions==4.2.0
-    # via
-    #   astroid
-    #   pylint
 versioneer==0.22
     # via findfile-path
 wrapt==1.14.1
