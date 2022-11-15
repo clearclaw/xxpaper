@@ -56,7 +56,8 @@ private:
     h_center: 0
     v_center: -1
     size: 9
-    x_inset: 86
+    # x_inset: 86
+    x_inset: $[${asset_interior_box/y} / 2]
     y_inset: 16
     x: 0
     y: 0

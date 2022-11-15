@@ -22,7 +22,8 @@ asset_interior_box:
 long_name_text:
   size: 14
   x: 101
-  y: 84
+  # y: 84
+  y: $[${asset_interior_box/y} / 2]
 
 side_bar_box:
   x_inset: 4
