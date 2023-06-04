@@ -90,7 +90,7 @@ class Config:
         "xxpaper",
         "XXP_DEFAULT.xxp")).dirname ()
     paths = ["./", "~/.config/xxpaper", "~/.xxpaper", "~/",
-             os.environ.get ("HOME", "./"), cdir]
+             os.environ.get ("HOME", "./"), cdir] # pylint: disable=no-member
     rcfile = findfile_path (("xxpaperrc", ".xxpaperrc"), paths, cls._exts)
     cls._fnames = [rcfile] if rcfile is not None else []
     for t in cls.templates.split(","):

@@ -143,7 +143,7 @@ company:
             Railroad
         short_name_text_text: NYC
         token_1_text_text: Free
-        token_2_text_text: $100
+        token_2_text_text: $40
         token_3_text_text: $100
         token_4_text_text: $100
         _major_fill: ${colour/xxp/BLACK}

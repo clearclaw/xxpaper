@@ -63,6 +63,7 @@ company:
         type_bar_box:
           suppress: False
         share_num_text:
+          fill: $[black_or_white (${type_bar_box/fill})]
           text: 2 Shares
         share_desc_text:
           suppress: False

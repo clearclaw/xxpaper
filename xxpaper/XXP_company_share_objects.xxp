@@ -24,6 +24,7 @@ long_name_text:
   x: 101
   # y: 84
   y: $[${asset_interior_box/y} / 2]
+  fill: $[black_or_white (${asset_interior_box/fill})]
 
 side_bar_box:
   x_inset: 4
@@ -59,6 +60,7 @@ share_num_text:
   y: 1.5
   h_center: -1
   v_center: 1
+  fill: $[black_or_white (${asset_interior_box/fill})]
   typeface: ${DEFAULT/typeface_italic}
   size: 11
   text: 1 Share
@@ -88,6 +90,7 @@ comment_text:
   y: 16
   h_center: 0
   v_center: -1
+  fill: $[black_or_white (${asset_interior_box/fill})]
   typeface: ${DEFAULT/typeface_italic}
   size: 8
 
