@@ -247,6 +247,7 @@ TEMPLATE_wedges:
   - wedge_19_shape
   - wedge_20_shape
   - inner_circle
+  - bottom_half_box
   - name_stripe_box
   - short_name_text
 
@@ -272,6 +273,7 @@ TEMPLATE_wedges_embed:
   - wedge_19_shape
   - wedge_20_shape
   - inner_circle
+  - bottom_half_box
   - name_stripe_box
   - short_name_text
   - outline_circle

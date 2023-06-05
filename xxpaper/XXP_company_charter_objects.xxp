@@ -25,6 +25,26 @@ TEMPLATE_charter_default:
   - token_7_text
   - token_8_text
   - token_9_text
+  - loan_1_square_shape
+  - loan_1_text
+  - loan_2_square_shape
+  - loan_2_text    
+  - loan_3_square_shape
+  - loan_3_text      
+  - loan_4_square_shape
+  - loan_4_text  
+  - loan_5_square_shape
+  - loan_5_text
+  - loan_6_square_shape
+  - loan_6_text  
+  - loan_7_square_shape
+  - loan_7_text      
+  - loan_8_square_shape
+  - loan_8_text  
+  - loan_9_square_shape
+  - loan_9_text
+  - loan_10_square_shape
+  - loan_10_text
 
 outside_box:
   x_inset: 10
@@ -257,6 +277,284 @@ token_9_text:
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${token_9_circle/fill})]
+
+loan_1_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 175
+  y: 250
+  points:
+    - [175, 250]
+    - [204, 250]
+    - [204, 221]
+    - [175, 221]
+    
+loan_1_text:
+  suppress: $["${loan_1_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_1_square_shape/x} + 15]
+  y: $[${loan_1_square_shape/y} - 17]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_1_square_shape/fill})]
+
+loan_2_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 175
+  y: $[${loan_5_square_shape/y} + ((${loan_1_square_shape/y} - ${loan_5_square_shape/y}) * 3.0 / 4.0)]
+  points:
+    - 
+      - 175
+      - $[${loan_2_square_shape/y}]
+    - 
+      - 204
+      - $[${loan_2_square_shape/y}]
+    - 
+      - 204
+      - $[${loan_2_square_shape/y} - 29]
+    - 
+      - 175
+      - $[${loan_2_square_shape/y} - 29]
+
+loan_2_text:
+  suppress: $["${loan_2_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_5_text/x} + ((${loan_1_text/x} - ${loan_5_text/x}) * 3.0 / 4.0)]
+  y: $[${loan_5_text/y} + ((${loan_1_text/y} - ${loan_5_text/y}) * 3.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_2_square_shape/fill})]
+  
+loan_3_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 175
+  y: $[${loan_5_square_shape/y} + ((${loan_1_square_shape/y} - ${loan_5_square_shape/y}) * 2.0 / 4.0)]
+  points:
+    - 
+      - 175
+      - $[${loan_3_square_shape/y}]
+    - 
+      - 204
+      - $[${loan_3_square_shape/y}]
+    - 
+      - 204
+      - $[${loan_3_square_shape/y} - 29]
+    - 
+      - 175
+      - $[${loan_3_square_shape/y} - 29]
+
+loan_3_text:
+  suppress: $["${loan_3_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_5_text/x} + ((${loan_1_text/x} - ${loan_5_text/x}) * 2.0 / 4.0)]
+  y: $[${loan_5_text/y} + ((${loan_1_text/y} - ${loan_5_text/y}) * 2.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_3_square_shape/fill})]
+  
+loan_4_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 175
+  y: $[${loan_5_square_shape/y} + ((${loan_1_square_shape/y} - ${loan_5_square_shape/y}) * 1.0 / 4.0)]
+  points:
+    - 
+      - 175
+      - $[${loan_4_square_shape/y}]
+    - 
+      - 204
+      - $[${loan_4_square_shape/y}]
+    - 
+      - 204
+      - $[${loan_4_square_shape/y} - 29]
+    - 
+      - 175
+      - $[${loan_4_square_shape/y} - 29]
+
+loan_4_text:
+  suppress: $["${loan_4_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_5_text/x} + ((${loan_1_text/x} - ${loan_5_text/x}) * 1.0 / 4.0)]
+  y: $[${loan_5_text/y} + ((${loan_1_text/y} - ${loan_5_text/y}) * 1.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_4_square_shape/fill})]
+
+loan_5_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 175
+  y: 108
+  points:
+    - [175, 108]
+    - [204, 108]
+    - [204, 77]
+    - [175, 77]
+
+loan_5_text:
+  suppress: $["${loan_5_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_5_square_shape/x} + 15]
+  y: $[${loan_5_square_shape/y} - 17]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_5_square_shape/fill})]
+
+loan_6_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 210
+  y: 250
+  points:
+    - [210, 250]
+    - [239, 250]
+    - [239, 221]
+    - [210, 221]
+
+loan_6_text:
+  suppress: $["${loan_6_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_6_square_shape/x} + 15]
+  y: $[${loan_6_square_shape/y} - 17]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_6_square_shape/fill})]
+
+loan_7_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 210
+  y: $[${loan_10_square_shape/y} + ((${loan_6_square_shape/y} - ${loan_10_square_shape/y}) * 3.0 / 4.0)]
+  points:
+    - 
+      - 210
+      - $[${loan_7_square_shape/y}]
+    - 
+      - 239
+      - $[${loan_7_square_shape/y}]
+    - 
+      - 239
+      - $[${loan_7_square_shape/y} - 29]
+    - 
+      - 210
+      - $[${loan_7_square_shape/y} - 29]
+
+loan_7_text:
+  suppress: $["${loan_7_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_10_text/x} + ((${loan_6_text/x} - ${loan_10_text/x}) * 3.0 / 4.0)]
+  y: $[${loan_10_text/y} + ((${loan_6_text/y} - ${loan_10_text/y}) * 3.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_7_square_shape/fill})]
+  
+loan_8_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 210
+  y: $[${loan_10_square_shape/y} + ((${loan_6_square_shape/y} - ${loan_10_square_shape/y}) * 2.0 / 4.0)]
+  points:
+    - 
+      - 210
+      - $[${loan_8_square_shape/y}]
+    - 
+      - 239
+      - $[${loan_8_square_shape/y}]
+    - 
+      - 239
+      - $[${loan_8_square_shape/y} - 29]
+    - 
+      - 210
+      - $[${loan_8_square_shape/y} - 29]
+
+loan_8_text:
+  suppress: $["${loan_8_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_10_text/x} + ((${loan_6_text/x} - ${loan_10_text/x}) * 2.0 / 4.0)]
+  y: $[${loan_10_text/y} + ((${loan_6_text/y} - ${loan_10_text/y}) * 2.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_8_square_shape/fill})]
+  
+loan_9_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 210
+  y: $[${loan_10_square_shape/y} + ((${loan_6_square_shape/y} - ${loan_10_square_shape/y}) * 1.0 / 4.0)]
+  points:
+    - 
+      - 210
+      - $[${loan_9_square_shape/y}]
+    - 
+      - 239
+      - $[${loan_9_square_shape/y}]
+    - 
+      - 239
+      - $[${loan_9_square_shape/y} - 29]
+    - 
+      - 210
+      - $[${loan_9_square_shape/y} - 29]
+
+loan_9_text:
+  suppress: $["${loan_9_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_10_text/x} + ((${loan_6_text/x} - ${loan_10_text/x}) * 1.0 / 4.0)]
+  y: $[${loan_10_text/y} + ((${loan_6_text/y} - ${loan_10_text/y}) * 1.0 / 4.0)]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_9_square_shape/fill})]
+
+loan_10_square_shape:
+  suppress: True
+  fill: ${colour/xxp/WHITE}
+  stroke: ${colour/xxp/BLACK}
+  width: 0.5
+  x: 210
+  y: 108
+  points:
+    - [210, 108]
+    - [239, 108]
+    - [239, 77]
+    - [210, 77]
+
+loan_10_text:
+  suppress: $["${loan_1_text/text}" == ""]
+  typeface: ${DEFAULT/typeface}
+  size: 8
+  x: $[${loan_10_square_shape/x} + 15]
+  y: $[${loan_10_square_shape/y} - 17]
+  h_center: 0
+  v_center: 0
+  fill: $[black_or_white (${loan_10_square_shape/fill})]
 
 hexagon_shape:
   fill: ${colour/xxp/TRAIN_YELLOW}
