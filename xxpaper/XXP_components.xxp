@@ -6,6 +6,7 @@ COMPONENTS:
   - concession
   - private
   - share
+  - short
   - swatch
   - train
   - token

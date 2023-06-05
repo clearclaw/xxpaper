@@ -38,8 +38,11 @@ EXP_VAR = re.compile (r"(\$\[[^\]]*\])")
 #
 
 @logtool.log_call
-def index_of (n):
-  return {"%s" % i: None for i in range (n)}
+def black_or_white (colour):
+  brightness = math.sqrt (colour[0] ** 2 * 0.299
+                          + colour[1] ** 2 * 0.587
+                          + colour[2] ** 2 * 0.114)
+  return "${colour/xxp/" + ("BLACK}" if brightness > 0.6 else "WHITE}")
 
 @logtool.log_call
 def desaturate_and_brighten (colour, s, b):
@@ -51,11 +54,8 @@ def desaturate_and_brighten (colour, s, b):
   return list (desaturated_rgb_colour)
 
 @logtool.log_call
-def black_or_white (colour):
-  brightness = math.sqrt (colour[0] ** 2 * 0.299
-                          + colour[1] ** 2 * 0.587
-                          + colour[2] ** 2 * 0.114)
-  return "${colour/xxp/" + ("BLACK}" if brightness > 0.6 else "WHITE}")
+def index_of (n):
+  return {"%s" % i: None for i in range (n)}
 
 #
 # Config

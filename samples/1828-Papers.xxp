@@ -1,0 +1,876 @@
+meta:
+  author: J C Lawrence
+  title: "1828"
+  subject: 18xx art file for ${meta/title}
+
+company:
+
+  small_hexagon_1s_clone:
+    of: small_hexagon_shape
+    x_inset: 112
+    y_inset: 125
+  small_hexagon_2s_clone:
+    of: small_hexagon_shape
+    x_inset: 112
+    y_inset: 113
+  small_hexagon_2t_clone:
+    of: arbitrary_text
+    x_inset: 111.75
+    y_inset: 112.5
+    size: 9
+    text: $40
+
+  TEMPLATE_CHARTER_track_hexes:
+    - charter_interior_box
+    - outside_box
+    - title_box
+    - token_embed
+    - label_text
+    - top_note_text
+    - comment_text
+    - long_name_text
+    - token_1_circle
+    - token_2_circle
+    - token_3_circle
+    - token_4_circle
+    - token_5_circle
+    - token_6_circle
+    - token_7_circle
+    - token_8_circle
+    - token_9_circle
+    - token_1_text
+    - token_2_text
+    - token_3_text
+    - token_4_text
+    - token_5_text
+    - token_6_text
+    - token_7_text
+    - token_8_text
+    - token_9_text
+    - small_hexagon_1s_clone
+    - small_hexagon_2s_clone
+    - small_hexagon_2t_clone
+
+  index:
+
+    B&M:
+      _:
+        long_name_text_text: |
+            Boston & Maine
+        short_name_text_text: B&M
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/wikipedia/ultramarine}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Banks & Money"
+        _related_fill: ${colour/wikipedia/han_blue}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+      charter:
+        ELEMENTS: ${TEMPLATE_CHARTER_track_hexes/.}
+      token:
+        _:
+          _major_fill: ${colour/wikipedia/ultramarine}
+          _minor_fill: ${colour/wikipedia/ultramarine}
+          short_name_text_fill: $[black_or_white (${colour/wikipedia/ultramarine})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: "$[index_of (11)]"
+
+    B&O:
+      _:
+        long_name_text_text: |
+            Baltimore & Ohio
+        short_name_text_text: B&O
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        _major_fill: ${colour/wikipedia/banana_yellow}
+        _minor_fill: ${colour/hollasch/blue}
+        comment_text_text: |
+            "Backward & Obsolete"
+        _related_fill: ${colour/hollasch/steel_blue}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+      token:
+        _:
+          _major_fill_1: ${colour/wikipedia/banana_yellow}
+          _major_fill_2: ${colour/hollasch/blue}
+          _minor_fill_1: ${colour/hollasch/blue}
+          _minor_fill_2: ${colour/wikipedia/banana_yellow}
+        ELEMENTS: ${TEMPLATE_chequer/.}
+        EMBED_ELEMENTS: ${TEMPLATE_chequer_embed/.}
+        index: "$[index_of (10)]"
+
+    CPR:
+      _:
+        long_name_text_text: |
+            Canadian Pacific
+            Railroad
+        short_name_text_text: CPR
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/hollasch/brown_ochre}
+        _minor_fill: ${colour/hollasch/brown_ochre}
+        comment_text_text: |
+            "Can't Please"
+        _related_fill: ${colour/hollasch/brick}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+      token:
+        index: "$[index_of (11)]"
+
+    C&O:
+      _:
+        long_name_text_text: |
+            Chesapeake & Ohio
+            Railroad
+        short_name_text_text: C&O
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        _major_fill: ${colour/hollasch/cerulean}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Chessie & the Orphan"
+        _related_fill: ${colour/hollasch/powder_blue}
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/wikipedia/ultramarine})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: "$[index_of (10)]"
+
+    GT:
+      _:
+        long_name_text_text: Grand Trunk
+        short_name_text_text: GT
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        _major_fill: ${colour/x11/yellow}
+        _minor_fill: ${colour/x11/red}
+        comment_text_text: |
+            "Gone Too"
+        _related_fill: ${colour/x11/khaki}
+      token:
+        ELEMENTS: ${TEMPLATE_cross/.}
+        EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
+        index: "$[index_of (10)]"
+
+    ERIE:
+      _:
+        long_name_text_text: |
+            Erie Railroad
+        short_name_text_text: ERIE
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        _major_fill: ${colour/x11/yellow}
+        _minor_fill: ${colour/x11/yellow}
+        comment_text_text: |
+            "The scarlet woman
+            of Wall Street"
+        _related_fill: ${colour/x11/darkgoldenrod1}
+      token:
+        index: "$[index_of (10)]"
+
+    IC:
+      _:
+        long_name_text_text: Illinois Central
+        short_name_text_text: IC
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/x11/gold}
+        _minor_fill: ${colour/x11/limegreen}
+        comment_text_text: |
+            The "Ill Cent"
+        _related_fill: ${colour/x11/yellowgreen}
+      token:
+        index: "$[index_of (11)]"
+
+    MC:
+      _:
+        long_name_text_text: Michigan Central
+        short_name_text_text: MC
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/xxp/BLACK}
+        _minor_fill: ${colour/wikipedia/corn}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "More Crap"
+        _related_fill: ${colour/x11/gray70}
+        middle_box_fill: ${_/_minor_fill}
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        index: "$[index_of (11)]"
+
+    MP:
+      _:
+        long_name_text_text: |
+            Missouri Pacific
+            Railroad
+        short_name_text_text: MP
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/wikipedia/boston_university_red}
+        _minor_fill: ${colour/xxp/WHITE}
+        comment_text_text: |
+            "The Mop"
+        _related_fill: ${colour/hollasch/khaki_dark}
+      token:
+        ELEMENTS: ${TEMPLATE_bullseye/.}
+        EMBED_ELEMENTS: ${TEMPLATE_bullseye_embed/.}
+        middle_circle:
+          fill: ${_/_minor_fill}
+        inner_circle:
+          fill: ${_/_major_fill}
+        index: "$[index_of (11)]"
+
+    NKP:
+      _:
+        long_name_text_text: |
+            New York, Chicago
+            & St. Louis Railroad
+        short_name_text_text: NKP
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        _major_fill: ${colour/hollasch/cornflower}
+        _minor_fill: ${colour/hollasch/blue}
+        comment_text_text: |
+            "Nickel Plate Road"
+        _related_fill: ${colour/x11/thistle2}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+      token:
+        index: "$[index_of (10)]"
+
+    NW:
+      _:
+        long_name_text_text: |
+            Norfolk & Western
+            Railway
+        short_name_text_text: NW
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/wikipedia/boston_university_red}
+        _minor_fill: ${colour/wikipedia/boston_university_red}
+        _major_fill_2: ${colour/wikipedia/amber}
+        _minor_fill_2: ${colour/wikipedia/amber}
+        _related_fill: ${colour/x11/lightcoral}
+        comment_text_text: |
+            "Narrow & Wobbly"
+      token:
+        ELEMENTS: ${TEMPLATE_stripey/.}
+        EMBED_ELEMENTS: ${TEMPLATE_stripey_embed/.}
+        index: "$[index_of (11)]"
+
+    NYNH&H:
+      _:
+        long_name_text_text: |
+            New York, New Haven
+            & Hartford Railway
+        short_name_text_text: NYH
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        _major_fill: ${colour/x11/sandybrown}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Not Yet, No How & Hopeless"
+        _related_fill: ${colour/hollasch/tan}
+      charter:
+        ELEMENTS: ${TEMPLATE_CHARTER_track_hexes/.}
+      share:
+        long_name_text:
+          size: 13
+      token:
+        _:
+          _major_fill: ${colour/x11/sandybrown}
+          _minor_fill: ${colour/x11/sandybrown}
+          short_name_text_fill: $[black_or_white (${colour/x11/sandybrown})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: "$[index_of (10)]"
+
+    NYC:
+      _:
+        long_name_text_text: |
+            New York Central
+            Railroad
+        short_name_text_text: NYC
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        _major_fill: ${colour/xxp/BLACK}
+        _minor_fill: ${colour/xxp/BLACK}
+        comment_text_text: |
+            "No You Can't"
+        _related_fill: ${colour/x11/gray50}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+      token:
+        ELEMENTS: ${TEMPLATE_cross/.}
+        EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
+        vertical_stripe_box:
+          fill: ${colour/xxp/WHITE}
+        index: "$[index_of (10)]"
+
+    OS&H:
+      _:
+        long_name_text_text: |
+             Ontario, Simcoe
+             & Huron
+        short_name_text_text: OS&H
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/xxp/D_GREEN}
+        _minor_fill: ${colour/xxp/H_GREEN}
+        _related_fill: ${colour/hollasch/cinnabar_green}
+        comment_text_text: |
+            "Oats, Straw, & Hay"
+      token:
+        ELEMENTS: ${TEMPLATE_cross/.}
+        EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
+        index: "$[index_of (11)]"
+
+    PRR:
+      _:
+        long_name_text_text: |
+             Pennsylvania
+             Railroad
+        short_name_text_text: PRR
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        token_4_text_text: $100
+        _major_fill: ${colour/hollasch/cadmium_red_light}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Poor Ragged Rascal"
+        _related_fill: ${colour/hollasch/tomato}
+        _share_pct_text_fill_x: ${colour/xxp/WHITE}
+        short_name_text_fill: $[black_or_white (${colour/hollasch/cadmium_red_light})]
+      token:
+        _:
+          short_name_text_fill: $[black_or_white (${colour/wikipedia/ultramarine})]
+        ELEMENTS: ${TEMPLATE_solid/.}
+        EMBED_ELEMENTS: ${TEMPLATE_solid_embed/.}
+        index: "$[index_of (11)]"
+
+    WAB:
+      _:
+        long_name_text_text: |
+             Wabash Railroad
+        short_name_text_text: WAB
+        token_1_text_text: Free
+        token_2_text_text: $100
+        token_3_text_text: $100
+        _major_fill: ${colour/hollasch/english_red}
+        _minor_fill: ${colour/hollasch/cobalt}
+        name_stripe_box_suppress: True
+        comment_text_text: |
+            "Follow the Flag"
+        _related_fill: ${colour/x11/plum}
+        middle_box_fill: ${_/_minor_fill}
+      token:
+        ELEMENTS: ${TEMPLATE_boxes/.}
+        EMBED_ELEMENTS: ${TEMPLATE_boxes_embed/.}
+        short_name_text:
+          fill:  ${colour/wikipedia/canary_yellow}
+        index: $[index_of (10)]
+
+    C&P:
+      _:
+        long_name_text_text: |
+            Cobourg & Peterborough
+            Railway
+        short_name_text_text: C&P
+        _major_fill: ${colour/xxp/WHITE}
+        _minor_fill: ${colour/xxp/WHITE}
+        middle_box_fill: ${_/_minor_fill}
+      charter:
+        index:
+      minor_charter:
+        _:
+          label_text_text: Treasury
+          comment_text_text: |
+              Owning player may place or upgrade track
+              tiles on a route connected to Peterborough
+              (C15). Half-pays the revenue of a 2-train
+              route from that track tile.
+        index: $[index_of (6)]
+      share:
+        index:
+      token:
+        _:
+          short_name_text_text: C&P
+          name_stripe_box_fill: ${colour/hollasch/light_goldenrod}
+        index: "$[index_of (1)]"
+
+marker:
+  index:
+
+    block:
+      token:
+        _:
+          name_stripe_box_suppress: True
+          outer_circle_fill:  ${colour/xxp/BLACK}
+        ELEMENTS: ${TEMPLATE_solid/.}
+        index: "$[index_of (8)]"
+
+    coal:
+      token:
+        _:
+          short_name_text: coal
+          name_stripe_box_suppress: True
+          short_name_text_text: coal
+          short_name_text_fill: ${colour/xxp/WHITE}
+          short_name_text_size: 14
+          outer_circle_fill: ${colour/xxp/BLACK}
+          middle_circle_fill: ${colour/x11/gray50}
+        ELEMENTS: ${TEMPLATE_ring/.}
+        index: "$[index_of (3)]"
+
+    merger:
+      _:
+        name_stripe_box_suppress: True
+        outer_circle_fill: ${colour/wikipedia/bleu_de_france}
+        middle_circle_fill: ${colour/wikipedia/amber}
+        inner_circle_fill: ${colour/wikipedia/boston_university_red}
+      token:
+        ELEMENTS: ${TEMPLATE_bullseye/.}
+        index: "$[index_of (1)]"
+
+    round:
+      _:
+        name_stripe_box_suppress: True
+        outer_circle_fill: ${colour/wikipedia/bleu_de_france}
+        middle_circle_fill: ${colour/xxp/WHITE}
+        inner_circle_fill: ${colour/wikipedia/boston_university_red}
+      token:
+        ELEMENTS: ${TEMPLATE_bullseye/.}
+        index: "$[index_of (1)]"
+
+private:
+  _:
+    closes_text_text: "Closes: In RED phase"
+
+  index:
+
+    SV:
+      _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
+        long_name_text_text: |
+            Schuylkill Valley
+            Navigation
+        power_text_text: "Blocks: G19."
+        cost_text_text: "Cost: $20"
+        revenue_text_text: "Revenue: $5"
+
+    StC:
+      _:
+        asset_interior_box_fill: ${colour/scale/yellow_0}
+        long_name_text_text: |
+            Saint Clair Tunnel
+        power_text_text: "Blocks: D10."
+        cost_text_text: "Cost: $20"
+        revenue_text_text: "Revenue: $5/$10"
+
+    C&StL:
+      _:
+        asset_interior_box_fill: ${colour/scale/lime_0}
+        long_name_text_text: |
+            Champlain & St Lawrence
+            Railway
+        power_text_text: |
+            Blocks: Burlington (B24).
+            Owning corporation may place a free,
+            track tile at B24 at any time in
+            its operations.
+        cost_text_text: "Cost: $40"
+        revenue_text_text: "Revenue: $10"
+
+    D&H:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        long_name_text_text: |
+            Delaware & Hudson
+            Railroad
+        power_text_text: |
+            Blocks: Scranton (F20).
+            Owning company may place a track tile
+            (or track tile upgrade) in Scranton (F20)
+            along with an (optional) station
+            marker for $120.
+        cost_text_text: "Cost: $80"
+        revenue_text_text: "Revenue: $15"
+
+
+    C&PYR:
+      _:
+        asset_interior_box_fill: ${colour/scale/azure_0}
+        long_name_text_text: |
+            Cobourg & Peterborough
+            Railway
+        power_text_text: |
+            Blocks: Peterborough (C15).
+            Owning player may place or upgrade track
+            tiles on a route connected to Peterborough
+            (C16). Half-pays the revenue of a 2-train
+            route from that track tile.
+        cost_text_text: "Cost: $80"
+        revenue_text_text: "Revenue: $??/$15"
+
+    M&H:
+      _:
+        asset_interior_box_fill: ${colour/scale/magenta_0}
+        long_name_text_text: |
+            Mohawk & Hudson
+            Railroad
+        power_text_text: |
+            Blocks: D22.
+            Owning player may exchange for a share
+            of any company from bank or IPO.
+        cost_text_text: "Cost: $120"
+        revenue_text_text: "Revenue: $20"
+        closes_text_text: "Closes: In RED phase or when power used"
+
+    E&K:
+      _:
+        asset_interior_box_fill: ${colour/scale/magenta_0}
+        long_name_text_text: |
+            Erie & Kalamazoo
+            Railroad
+        power_text_text: |
+            Blocks: Adrian & Ann Arbor (E7).
+            A yellow track tile is placed at E7 when
+            purchased by a company.  Owning company
+            may (once) place an additional yellow track
+            tile for $20 as part of its normal track-build.
+        cost_text_text: "Cost: $120"
+        revenue_text_text: "Revenue: $20"
+
+    C&A:
+      _:
+        asset_interior_box_fill: ${colour/scale/red_0}
+        long_name_text_text: |
+            Camden & Amboy
+            Railroad
+        power_text_text: |
+            Blocks: Philadelphia & Trenton (H22).
+            Purchaser receives 10% of PRR.
+        cost_text_text: "Cost: $160"
+        revenue_text_text: "Revenue: $25"
+
+    CPR:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_1}
+        long_name_text_text: |
+            Canadian Pacific
+            Railroad
+        power_text_text: |
+            Purchaser receives
+            30% of CPR & sets par price.
+            May not be sold to a public company.
+        cost_text_text: "Cost: $250"
+        revenue_text_text: "Revenue: $40"
+        closes_text_text: "Closes: In RED phase or when acquires a train"
+
+    GT:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_1}
+        long_name_text_text: |
+            Grand Trunk
+        power_text_text: |
+            Purchaser receives
+            30% of GT & sets par price.
+            May not be sold to a public company.
+        cost_text_text: "Cost: $250"
+        revenue_text_text: "Revenue: $40"
+        closes_text_text: "Closes: In RED phase or when acquires a train"
+
+    IC:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_1}
+        long_name_text_text: |
+            Illinois Central
+        power_text_text: |
+            Purchaser receives
+            30% of IC & sets par price.
+            May not be sold to a public company.
+        cost_text_text: "Cost: $250"
+        revenue_text_text: "Revenue: $40"
+        closes_text_text: "Closes: In RED phase or when acquires a train"
+
+    MC:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_1}
+        long_name_text_text: |
+            Michigan Central
+            Railroad
+        power_text_text: |
+            Purchaser receives
+            30% of MC & sets par price.
+            May not be sold to a public company.
+        cost_text_text: "Cost: $250"
+        revenue_text_text: "Revenue: $40"
+        closes_text_text: "Closes: In RED phase or when acquires a train"
+
+    MP:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_1}
+        long_name_text_text: |
+            Missouri Pacific
+            Railroad
+        power_text_text: |
+            Purchaser receives
+            30% of MP & sets par price.
+            May not be sold to a public company.
+        cost_text_text: "Cost: $250"
+        revenue_text_text: "Revenue: $40"
+        closes_text_text: "Closes: In RED phase or when acquires a train"
+
+    NKP:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_1}
+        long_name_text_text: |
+            New York, Chicago
+            & St. Louis Railroad
+        power_text_text: |
+            Purchaser receives
+            30% of NKP & sets par price.
+            May not be sold to a public company.
+        cost_text_text: "Cost: $250"
+        revenue_text_text: "Revenue: $40"
+        closes_text_text: "Closes: In RED phase or when acquires a train"
+
+    NW:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_1}
+        long_name_text_text: |
+            Norfolk & Western
+            Railway
+        power_text_text: |
+            Purchaser receives
+            30% of NW & sets par price.
+            May not be sold to a public company.
+        cost_text_text: "Cost: $250"
+        revenue_text_text: "Revenue: $40"
+        closes_text_text: "Closes: In RED phase or when acquires a train"
+
+    OS&H:
+      _:
+        asset_interior_box_fill: ${colour/scale/green_1}
+        long_name_text_text: |
+            Ontario, Simcoe
+            & Huron
+        power_text_text: |
+            Purchaser receives
+            30% of OS&H & sets par price.
+            May not be sold to a public company.
+        cost_text_text: "Cost: $250"
+        revenue_text_text: "Revenue: $40"
+        closes_text_text: "Closes: In RED phase or when acquires a train"
+
+train:
+
+  index:
+    2T:
+      _:
+        asset_interior_box_fill_p: YELLOW
+        rust_bar_box_fill_p: BLUE
+        long_name_text_text: "2"
+        cost_text_text_p: $80
+      model:
+        index: "$[index_of (6)]"
+
+    3T:
+      _:
+        asset_interior_box_fill_p: GREEN
+        rust_bar_box_fill_p: RED
+        long_name_text_text: "3"
+        cost_text_text_p: $160
+      model:
+        index: "$[index_of (9)]"
+
+    5T:
+      _:
+        asset_interior_box_fill_p: BLUE
+        rust_bar_box_fill_p: GRAY
+        long_name_text_text: "5"
+        cost_text_text_p: $250
+      model:
+        index: "$[index_of (4)]"
+
+    3+DT:
+      _:
+        asset_interior_box_fill_p: BROWN
+        rust_bar_box_fill_p: PURPLE
+        long_name_text_text: "3+D"
+        cost_text_text_p: $350
+        long_name_text_size: 44
+
+      model:
+        index: "$[index_of (6)]"
+
+    6T:
+      _:
+        asset_interior_box_fill_p: RED
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "6"
+        cost_text_text_p: $650
+        rusted_text_text: PERMANENT
+      model:
+        index: "$[index_of (4)]"
+
+    8ET:
+      _:
+        asset_interior_box_fill_p: GRAY
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "8E"
+        cost_text_text_p: $800
+        rusted_text_text: PERMANENT
+      model:
+        index: "$[index_of (3)]"
+
+    Diesel:
+      _:
+        asset_interior_box_fill_p: PURPLE
+        rust_bar_box_fill_p: BLACK
+        long_name_text_text: "Diesel"
+        cost_text_text_p: $900
+        rusted_text_text: PERMANENT
+      long_name_text:
+        size: 32
+      model:
+        index: "$[index_of (6)]"
+
+    p1Pa:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/bleu_de_france}
+        rust_bar_box_fill: ${colour/wikipedia/cerise}
+        long_name_text_text: "1"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p2Pa:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/bleu_de_france}
+        rust_bar_box_fill: ${colour/wikipedia/cerise}
+        long_name_text_text: "2"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p3Pa:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/bleu_de_france}
+        rust_bar_box_fill: ${colour/wikipedia/cerise}
+        long_name_text_text: "3"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p4Pa:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/bleu_de_france}
+        rust_bar_box_fill: ${colour/wikipedia/cerise}
+        long_name_text_text: "4"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p5Pa:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/bleu_de_france}
+        rust_bar_box_fill: ${colour/wikipedia/cerise}
+        long_name_text_text: "5"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p1Pb:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/cerise}
+        rust_bar_box_fill: ${colour/wikipedia/bleu_de_france}
+        long_name_text_text: "1"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p2Pb:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/cerise}
+        rust_bar_box_fill: ${colour/wikipedia/bleu_de_france}
+        long_name_text_text: "2"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p3Pb:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/cerise}
+        rust_bar_box_fill: ${colour/wikipedia/bleu_de_france}
+        long_name_text_text: "3"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p4Pb:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/cerise}
+        rust_bar_box_fill: ${colour/wikipedia/bleu_de_france}
+        long_name_text_text: "4"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    p5Pb:
+      _:
+        asset_interior_box_fill: ${colour/wikipedia/cerise}
+        rust_bar_box_fill: ${colour/wikipedia/bleu_de_france}
+        long_name_text_text: "5"
+        cost_text_text:
+        rusted_text_text:
+      model:
+        index:  "$[index_of (2)]"
+
+    xx_notecard:
+      _:
+        long_name_text_text: |
+            The second set of
+            # cards & extra
+            C&P charters are
+            spares to ease bulk
+            production of the
+            game.
+        long_name_text_size: 12
+        cost_text_text:
+        rusted_text_text:
+
+      model:
+        index:  "$[index_of (1)]"

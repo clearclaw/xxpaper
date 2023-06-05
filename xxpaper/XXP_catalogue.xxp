@@ -53,6 +53,12 @@ CATALOGUE:
     typ: share
     name_index: company/index
     instance_index: share/index
+  short:
+    tile_type: asset_tile
+    klass: company
+    typ: short
+    name_index: company/index
+    instance_index: short/index
   swatch:
     tile_type: swatch_tile
     klass: swatch

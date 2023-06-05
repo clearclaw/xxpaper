@@ -88,6 +88,14 @@ company:
     _include_:
       - XXP_company_share_objects.xxp
 
+  short:
+    CUT_ELEMENT: cutline_box
+    ELEMENTS: ${TEMPLATE_short_default/.}
+    index:
+    cutline_box: ${DEFAULT/asset_tile}
+    _include_:
+      - XXP_company_short_objects.xxp
+
   token:
     index:
     ELEMENTS: ${TEMPLATE_default/.}
