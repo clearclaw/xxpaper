@@ -284,8 +284,8 @@ loan_1_box:
   stroke: ${colour/xxp/BLACK}
   width: 0.5
   x: 36
-  y: 36
-  x_inset: $[${outside_box/x} - 36 * 2 - 14.5]
+  y: ${loan_1_box/x}
+  x_inset: $[${outside_box/x} - ${loan_1_box/x} * 2 - 14.5]
   y_inset: 215
   radius: 5
 
@@ -293,8 +293,8 @@ loan_1_text:
   suppress: $["${loan_1_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_1_box/x_inset} + 36 / 2]
-  y: $[${loan_1_box/y_inset} + 36 / 2 - ${loan_1_text/size} / 2 + 1]
+  x: $[${loan_1_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_1_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_1_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_1_box/fill})]
@@ -304,9 +304,9 @@ loan_2_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
-  x_inset: $[${loan_1_box/x_inset} + 36 + 7]
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
+  x_inset: $[${loan_1_box/x_inset} + ${loan_1_box/x} + 7]
   y_inset: 215
   radius: 5
 
@@ -314,8 +314,8 @@ loan_2_text:
   suppress: $["${loan_2_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_2_box/x_inset} + 36 / 2]
-  y: $[${loan_2_box/y_inset} + 36 / 2 - ${loan_2_text/size} / 2 + 1]
+  x: $[${loan_2_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_2_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_2_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_2_box/fill})]
@@ -325,18 +325,18 @@ loan_3_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
   x_inset: ${loan_1_box/x_inset}
-  y_inset: $[${loan_1_box/y_inset} - 36 - 7]
+  y_inset: $[${loan_1_box/y_inset} - ${loan_1_box/x} - 7]
   radius: 5
 
 loan_3_text:
   suppress: $["${loan_3_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_3_box/x_inset} + 36 / 2]
-  y: $[${loan_3_box/y_inset} + 36 / 2 - ${loan_3_text/size} / 2 + 1]
+  x: $[${loan_3_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_3_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_3_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_3_box/fill})]
@@ -346,18 +346,18 @@ loan_4_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
   x_inset: ${loan_2_box/x_inset}
-  y_inset: $[${loan_2_box/y_inset} - 36 - 7]
+  y_inset: $[${loan_2_box/y_inset} - ${loan_1_box/x} - 7]
   radius: 5
 
 loan_4_text:
   suppress: $["${loan_4_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_4_box/x_inset} + 36 / 2]
-  y: $[${loan_4_box/y_inset} + 36 / 2 - ${loan_4_text/size} / 2 + 1]
+  x: $[${loan_4_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_4_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_4_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_4_box/fill})]
@@ -367,18 +367,18 @@ loan_5_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
   x_inset: ${loan_1_box/x_inset}
-  y_inset: $[${loan_3_box/y_inset} - 36 - 7]
+  y_inset: $[${loan_3_box/y_inset} - ${loan_1_box/x} - 7]
   radius: 5
 
 loan_5_text:
   suppress: $["${loan_5_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_5_box/x_inset} + 36 / 2]
-  y: $[${loan_5_box/y_inset} + 36 / 2 - ${loan_5_text/size} / 2 + 1]
+  x: $[${loan_5_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_5_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_5_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_5_box/fill})]
@@ -388,18 +388,18 @@ loan_6_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
   x_inset: ${loan_2_box/x_inset}
-  y_inset: $[${loan_4_box/y_inset} - 36 - 7]
+  y_inset: $[${loan_4_box/y_inset} - ${loan_1_box/x} - 7]
   radius: 5
 
 loan_6_text:
   suppress: $["${loan_6_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_6_box/x_inset} + 36 / 2]
-  y: $[${loan_6_box/y_inset} + 36 / 2 - ${loan_6_text/size} / 2 + 1]
+  x: $[${loan_6_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_6_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_6_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_6_box/fill})]
@@ -409,18 +409,18 @@ loan_7_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
   x_inset: ${loan_1_box/x_inset}
-  y_inset: $[${loan_5_box/y_inset} - 36 - 7]
+  y_inset: $[${loan_5_box/y_inset} - ${loan_1_box/x} - 7]
   radius: 5
 
 loan_7_text:
   suppress: $["${loan_7_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_7_box/x_inset} + 36 / 2]
-  y: $[${loan_7_box/y_inset} + 36 / 2 - ${loan_7_text/size} / 2 + 1]
+  x: $[${loan_7_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_7_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_7_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_7_box/fill})]
@@ -430,18 +430,18 @@ loan_8_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
   x_inset: ${loan_2_box/x_inset}
-  y_inset: $[${loan_6_box/y_inset} - 36 - 7]
+  y_inset: $[${loan_6_box/y_inset} - ${loan_1_box/x} - 7]
   radius: 5
 
 loan_8_text:
   suppress: $["${loan_8_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_8_box/x_inset} + 36 / 2]
-  y: $[${loan_8_box/y_inset} + 36 / 2 - ${loan_8_text/size} / 2 + 1]
+  x: $[${loan_8_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_8_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_8_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_8_box/fill})]
@@ -451,18 +451,18 @@ loan_9_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
   x_inset: ${loan_1_box/x_inset}
-  y_inset: $[${loan_7_box/y_inset} - 36 - 7]
+  y_inset: $[${loan_7_box/y_inset} - ${loan_1_box/x} - 7]
   radius: 5
 
 loan_9_text:
   suppress: $["${loan_9_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_9_box/x_inset} + 36 / 2]
-  y: $[${loan_9_box/y_inset} + 36 / 2 - ${loan_9_text/size} / 2 + 1]
+  x: $[${loan_9_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_9_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_9_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_9_box/fill})]
@@ -472,18 +472,18 @@ loan_10_box:
   fill: ${colour/xxp/WHITE}
   stroke: ${colour/xxp/BLACK}
   width: 0.5
-  x: 36
-  y: 36
+  x: ${loan_1_box/x}
+  y: ${loan_1_box/x}
   x_inset: ${loan_2_box/x_inset}
-  y_inset: $[${loan_8_box/y_inset} - 36 - 7]
+  y_inset: $[${loan_8_box/y_inset} - ${loan_1_box/x} - 7]
   radius: 5
 
 loan_10_text:
   suppress: $["${loan_1_text/text}" == ""]
   typeface: ${DEFAULT/typeface}
   size: 8
-  x: $[${loan_10_box/x_inset} + 36 / 2]
-  y: $[${loan_10_box/y_inset} + 36 / 2 - ${loan_10_text/size} / 2 + 1]
+  x: $[${loan_10_box/x_inset} + ${loan_1_box/x} / 2]
+  y: $[${loan_10_box/y_inset} + ${loan_1_box/x} / 2 - ${loan_10_text/size} / 2 + 1]
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${loan_10_box/fill})]
