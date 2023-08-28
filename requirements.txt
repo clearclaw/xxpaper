@@ -10,7 +10,7 @@ astroid==2.11.5
     # via pylint
 cfgstack==0.1.post29
     # via -r requirements.in
-clip.py==0.3.2
+clip-py==0.3.2
     # via -r requirements.in
 dill==0.3.4
     # via pylint
@@ -43,7 +43,7 @@ pyyaml==6.0
     #   cfgstack
 raven==6.10.0
     # via -r requirements.in
-reportlab==3.6.9
+reportlab==3.6.13
     # via -r requirements.in
 setuptools-lint==0.6.0
     # via cfgstack
