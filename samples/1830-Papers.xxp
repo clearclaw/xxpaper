@@ -283,7 +283,7 @@ private:
             Purchaser receives B&O presidency and
             sets par price. May not be sold to a
             public company.
-        cost_text_text: "Cost: $200"
+        cost_text_text: "Cost: $220"
         revenue_text_text: "Revenue: $30"
 
 train:
