@@ -10,7 +10,7 @@ version="0.0"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-cfgstack = "^0.2.post1"
+cfgstack = "^0.2.post2"
 clip-py = "^0.3.2"
 findfile-path = "^0.2.post1"
 logtool = "^0.4.post1"
@@ -35,6 +35,9 @@ style = "pep440"
 tagged-metadata = true
 pattern = "default-unprefixed"
 vcs = "git"
+
+[tool.poetry.scripts]
+xxpaper = "xxpaper.main:main"
 
 [build-system]
 build-backend = "poetry_dynamic_versioning.backend"
