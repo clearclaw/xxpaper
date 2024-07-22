@@ -13,13 +13,13 @@ files = [
 
 [[package]]
 name = "cfgstack"
-version = "0.2.post1"
+version = "0.2.post2"
 description = "Load stacks of JSON, TOML or YAML data"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "cfgstack-0.2.post1-py3-none-any.whl", hash = "sha256:03473a629ede2f55c1e34a476dff9406f6ddff2dcacc9a769955554e22d415c0"},
-    {file = "cfgstack-0.2.post1.tar.gz", hash = "sha256:cde7116d9ecf105f60b82f06b62c959780d0321296fadb6a1b54e5a10ea85a81"},
+    {file = "cfgstack-0.2.post2-py3-none-any.whl", hash = "sha256:5c549c1b0707ae954f0339190eef23fd8080081463aeb79380648492af4b3195"},
+    {file = "cfgstack-0.2.post2.tar.gz", hash = "sha256:45f274ab517fa5d983a81a6dfc26ba2070fcc2ca8c4e7ce5e129e06980f22d5a"},
 ]
 
 [package.dependencies]
@@ -54,13 +54,13 @@ files = [
 
 [[package]]
 name = "findfile-path"
-version = "0.2.post1"
+version = "0.2.post3"
 description = "Find file on path with optional extensions"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "findfile_path-0.2.post1-py3-none-any.whl", hash = "sha256:141cedc1ebabd22cfe96488b2921c99f93237490e590c276f460eb33a6ea7b7a"},
-    {file = "findfile_path-0.2.post1.tar.gz", hash = "sha256:c4c5f0438299e0eae8cff4877375b935d13f9c8141a66484cfbd01e8fbad760f"},
+    {file = "findfile_path-0.2.post3-py3-none-any.whl", hash = "sha256:4c18483a00d5530548ecc5bddaf71808135446e462ae685303268c54e7c0ae28"},
+    {file = "findfile_path-0.2.post3.tar.gz", hash = "sha256:74ecf7a698e04aa1f8ed94244d0c5756adf3f92e3c99bf3c5ef2ef4a60696e8b"},
 ]
 
 [package.dependencies]
@@ -69,13 +69,13 @@ path = ">=16.14.0"
 
 [[package]]
 name = "logtool"
-version = "0.4.post1"
+version = "0.4.post2"
 description = "Methods and tools that assist logging"
 optional = false
 python-versions = "<4.0,>=3.7"
 files = [
-    {file = "logtool-0.4.post1-py3-none-any.whl", hash = "sha256:63aa1318e364f5c1eb20ad8f2dd57c177c93bacc37af20f509aaf3725f3a8953"},
-    {file = "logtool-0.4.post1.tar.gz", hash = "sha256:6411fb022153acc9c36500a4a2fa1b6b4595c5ebaf0d94c4895a0557333aea83"},
+    {file = "logtool-0.4.post2-py3-none-any.whl", hash = "sha256:5f562a83e3d1323bd93f5ff55ac82b1bc00084f898067c4adf30e93394f7ef32"},
+    {file = "logtool-0.4.post2.tar.gz", hash = "sha256:78d4669f5be91591de7278947da6d8a4f15ab5016ee55aa39f9b000ef113a839"},
 ]
 
 [package.dependencies]
@@ -381,4 +381,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "391ffce3801e94cf3887224543d004a9ed6f2d7e401bad5a2a7dfcc429ea358c"
+content-hash = "0d27460c7bedf8da453fb4afc5a9937e67f54ad7cf6a92c7b6b1a2bee6cba148"
