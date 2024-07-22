@@ -24,21 +24,27 @@ def do (**kwargs):
   paper = A4 if kwargs["paper"] == "A4" else letter
   Config.set ("xxpaper/cutline", kwargs["cutline"])
   load_config (kwargs["templates"])
-  match = kwargs.get ("filter")
+  nam_match = kwargs.get ("name")
+  typ_match = kwargs.get ("filter")
   if kwargs.get ("outfile") is None:
     outfile = Path (
       kwargs["templates"].split (",")[0]).basename ().splitext ()[0] + ".pdf"
   else:
     outfile = Path (kwargs["outfile"])
   with document.Document (outfile, pagesize = paper) as canvas:
-    filters = [
+    nam_filters = [
+      "%s*" % f for f in
+      (nam_match if nam_match else "*").split (",")]
+    typ_filters = [
       "*%s*" % f for f in
-      (match if match else "*").split (",")]
+      (typ_match if typ_match else "*").split (",")]
     repeats = [s.strip () for s in kwargs["repeat"].split (",")]
     components = Config.get ("DEFAULT/COMPONENTS")
     todo = itertools.chain (
-      *[tile.items (canvas, c) * (repeats.count (c) + 1)
+      *[[n for n in tile.items (canvas, c)
+         if _match_filter (n.name, nam_filters)]
+        * (repeats.count (c) + 1)
         for c in components
-        if _match_filter (c, filters)]
+        if _match_filter (c, typ_filters)]
     )
     contents.Contents (canvas, todo).render ()

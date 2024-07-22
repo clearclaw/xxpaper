@@ -65,7 +65,7 @@ train:
     fill: $[black_or_white (${rust_bar_box/fill})]
     size: 11
     h_center: 0
-    v_center: -1
+    v_center: 0
     # x: 50
     x: $[${asset_interior_box/x} / 2]
     y: $[${rust_bar_box/y} / 2 - ${rusted_text/size} / 2]

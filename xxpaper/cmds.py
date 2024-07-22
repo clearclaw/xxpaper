@@ -63,6 +63,8 @@ def make (**kwargs): # pylint: disable=unused-argument
             default = False, help = "Draw cutlines")
 @clip.opt ("-f", "--filter", name = "filter",
            help = "Only these asset-types")
+@clip.opt ("-n", "--name", name = "name",
+           help = "Only these asset-names")
 @clip.opt ("-p", "--paper", name = "paper",
            default = "A4", help = "Paper size (A4, letter)")
 @clip.opt ("-r", "--repeat", name = "repeat",

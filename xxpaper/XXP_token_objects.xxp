@@ -92,6 +92,33 @@ TEMPLATE_cross_embed:
   - short_name_text
   - outline_circle
 
+TEMPLATE_cross2:
+  - token_interior_box
+  - outer_circle
+  - push
+  - middle_1_rotate
+  - vertical_1_stripe_box
+  - pop
+  - push
+  - middle_2_rotate
+  - vertical_2_stripe_box
+  - pop
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_cross2_embed:
+  - outer_circle
+  - push
+  - middle_1_rotate
+  - vertical_1_stripe_box
+  - pop
+  - push
+  - middle_2_rotate
+  - vertical_2_stripe_box
+  - pop
+  - name_stripe_box
+  - short_name_text
+
 TEMPLATE_default:
   - token_interior_box
   - outer_circle
@@ -107,6 +134,39 @@ TEMPLATE_default_embed:
   - name_stripe_box
   - short_name_text
   - outline_circle
+
+TEMPLATE_hatch:
+  - token_interior_box
+  - top_half_box
+  - bottom_half_box
+  - top_line_box
+  - bottom_line_box
+  - push
+  - top_rotate
+  - top_line_box
+  - pop
+  - push
+  - bottom_rotate
+  - bottom_line_box
+  - pop
+  - name_stripe_box
+  - short_name_text
+
+TEMPLATE_hatch_embed:
+  - top_half_box
+  - bottom_half_box
+  - top_line_box
+  - bottom_line_box
+  - push
+  - top_rotate
+  - top_line_box
+  - pop
+  - push
+  - bottom_rotate
+  - bottom_line_box
+  - pop
+  - name_stripe_box
+  - short_name_text
 
 TEMPLATE_ring:
   - token_interior_box
@@ -370,6 +430,20 @@ vertical_stripe_box:
   y: ${token_interior_box/y}
   fill: ${_/_minor_fill}
 
+vertical_1_stripe_box:
+  x_inset: $[${token_interior_box/x} / 2 - 4]
+  y_inset: 0
+  x: 8
+  y: ${token_interior_box/y}
+  fill: ${_/_minor_1_fill}
+
+vertical_2_stripe_box:
+  x_inset: $[${token_interior_box/x} / 2 - 4]
+  y_inset: 0
+  x: 8
+  y: ${token_interior_box/y}
+  fill: ${_/_minor_2_fill}
+
 outer_circle:
   x: $[${token_interior_box/x} / 2]
   y: $[${token_interior_box/y} / 2]
@@ -396,6 +470,18 @@ middle_box:
   fill: ${_/_major_fill}
 
 middle_rotate:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  angle: 0
+  return: true
+
+middle_1_rotate:
+  x: $[${token_interior_box/x} / 2]
+  y: $[${token_interior_box/y} / 2]
+  angle: 0
+  return: true
+
+middle_2_rotate:
   x: $[${token_interior_box/x} / 2]
   y: $[${token_interior_box/y} / 2]
   angle: 0
