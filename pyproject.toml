@@ -1,41 +1,41 @@
+[tool.poetry]
+authors = ["J C Lawrence <claw@kanga.nu>"]
+description = "Tools for generating printable files for 18xx games."
+license = "GPL-3.0-only"
+name = "xxpaper"
+packages = [{include = "xxpaper"}]
+readme = "README.rst"
+repository = "https://github.com/clearclaw/cfgstack"
+version="0.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+cfgstack = "^0.2.post1"
+clip-py = "^0.3.2"
+findfile-path = "^0.2.post1"
+logtool = "^0.4.post1"
+path = "^16.14.0"
+pyyaml = "^6.0.1"
+raven = "^6.10.0"
+reportlab = "^4.2.2"
+toml = "^0.10.2"
+
+[tool.poetry-dynamic-versioning]
+dirty = true
+enable = true
+format-jinja = """
+    {%- if dirty != "dirty" -%}
+        {{ serialize_pep440(base, stage, revision, distance|string) }}
+    {%- else -%}
+        {{ serialize_pep440(base, stage, revision, dev=distance, metadata=[commit]) }}
+    {%- endif -%}
+"""
+metadata = true
+style = "pep440"
+tagged-metadata = true
+pattern = "default-unprefixed"
+vcs = "git"
+
 [build-system]
-  # build-backend = "hatchling.build"
-  build-backend = "setuptools.build_meta"
-  # requires = ["hatchling"]
-  requires = ["setuptools", "versioneer[toml]"]
-
-[options]
-  zip_safe = false
-  include_package_data = true
-
-[project]
-  name = "xxpaper"
-  # version = "0.0.1"
-  authors = [
-    { name="J C Lawrence", email="claw@kanga.nu" },
-  ]
-  description = "Tools for generating printable files of shares, privates, trains etc for 18xx and like games."
-  dynamic = ["dependencies", "version",]
-  readme = "README.rst"
-  requires-python = ">=3.7"
-  classifiers = [
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
-    "Topic :: Games/Entertainment :: Board Games",
-  ]
-
-[project.scripts]
-  xxpaper = "xxpaper.main:main"
-
-[project.urls]
-  "Homepage" = "https://github.com/clearclaw/xxpaper"
-  
-[tool.versioneer]
-  VCS = "git"
-  style = "pep440-old"
-  versionfile_source = "xxpaper/_version.py"
-  versionfile_build = "xxpaper/_version.py"
-  tag_prefix = ""
-  parentdir_prefix = "xxpaper-"
-   
+build-backend = "poetry_dynamic_versioning.backend"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
