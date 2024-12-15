@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
-import colorsys, functools, itertools, json, logging, logtool
-import os, pkg_resources
+import colorsys, functools, importlib, itertools, json
+import logging, logtool, os
 import pprint, re, toml, yaml, math
 from cfgstack import CfgStack
 from findfile_path import findfile_path
@@ -85,26 +85,29 @@ class Config:
   @logtool.log_call
   @classmethod
   def _get_conffiles (cls):
-    cdir = Path (
-      pkg_resources.resource_filename (
-        "xxpaper",
-        "XXP_DEFAULT.xxp")).dirname ()
-    paths = ["./", "~/.config/xxpaper", "~/.xxpaper", "~/",
-             os.environ.get ("HOME", "./"), cdir] # pylint: disable=no-member
-    rcfile = findfile_path (("xxpaperrc", ".xxpaperrc"), paths, cls._exts)
-    cls._fnames = [rcfile] if rcfile is not None else []
-    for t in cls.templates.split(","):
-      if t.strip () == "":
-        continue
-      p = Path (t).dirname () if Path (t).dirname () != "" else "./"
-      tfile = findfile_path (t, [p,] + paths, cls._exts)
-      if tfile is None:
-        # Must find the files the user specifies
-        raise ValueError ("Could not find file for parameter: %s" % t)
-      cls._fnames.append (tfile)
-    cfile = findfile_path ("XXP_DEFAULT", paths, cls._exts)
-    if cfile is not None:
-      cls._fnames.append (cfile)
+    ref = importlib.resources.files("xxpaper") / "XXP_DEFAULT.xxp"
+    #cdir = Path (
+    #  pkg_resources.resource_filename (
+    #    "xxpaper",e
+    #    "XXP_DEFAULT.xxp")).dirname ()
+    with importlib.resources.as_file (
+        importlib.resources.files("xxpaper") / "XXP_DEFAULT.xxp") as cdir:
+      paths = ["./", "~/.config/xxpaper", "~/.xxpaper", "~/",
+               os.environ.get ("HOME", "./"), Path (cdir).dirname ()] # pylint: disable=no-member
+      rcfile = findfile_path (("xxpaperrc", ".xxpaperrc"), paths, cls._exts)
+      cls._fnames = [rcfile] if rcfile is not None else []
+      for t in cls.templates.split(","):
+        if t.strip () == "":
+          continue
+        p = Path (t).dirname () if Path (t).dirname () != "" else "./"
+        tfile = findfile_path (t, [p,] + paths, cls._exts)
+        if tfile is None:
+          # Must find the files the user specifies
+          raise ValueError ("Could not find file for parameter: %s" % t)
+        cls._fnames.append (tfile)
+      cfile = findfile_path ("XXP_DEFAULT", paths, cls._exts)
+      if cfile is not None:
+        cls._fnames.append (cfile)
 
   @logtool.log_call
   @classmethod

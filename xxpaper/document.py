@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-import logging, logtool, os, pkg_resources
+import importlib, logging, logtool, os
 from findfile_path import findfile_path
 from path import Path
 from reportlab.pdfgen import canvas as Canvas
@@ -24,21 +24,23 @@ class Document:
     ## we know some glyphs are missing, suppress warnings
     # import reportlab.rl_config
     # reportlab.rl_config.warnOnMissingFontGlyphs = 0
-    cdir = Path (
-      pkg_resources.resource_filename (
-        "xxpaper",
-        "XXP_DEFAULT.xxp")).dirname () # Just to get the directory
-    paths = (["./", "~/.config/xxpaper", "~/.xxpaper", "~/",
-             os.environ.get ("HOME", "./"), cdir] # pylint: disable=no-member
-             + Config._dirs)
-    for ff in Config.get ("xxpaper/typefaces", {"default": []}):
-      p = Path (findfile_path (ff, paths))
-      if p is not None:
-        pdfmetrics.registerFont (
-          TTFont(p.basename ().splitext ()[0], str (p)))
-      else:
-        raise ValueError (
-          "Could not find fontfile: %s -- searched: %s" % (ff, paths))
+    with importlib.resources.as_file (
+      importlib.resources.files ("xxpaper") / "XXP_DEFAULT.xxp") as cdir:
+    #cdir = Path (
+    #  pkg_resources.resource_filename (
+    #    "xxpaper",
+    #    "XXP_DEFAULT.xxp")).dirname () # Just to get the directory
+      paths = (["./", "~/.config/xxpaper", "~/.xxpaper", "~/",
+               os.environ.get ("HOME", "./"), Path (cdir).dirname ()] # pylint: disable=no-member
+               + Config._dirs)
+      for ff in Config.get ("xxpaper/typefaces", {"default": []}):
+        p = Path (findfile_path (ff, paths))
+        if p is not None:
+          pdfmetrics.registerFont (
+            TTFont(p.basename ().splitext ()[0], str (p)))
+        else:
+          raise ValueError (
+            "Could not find fontfile: %s -- searched: %s" % (ff, paths))
     self.canvas.setTitle (
       "XXPaper: " + Config.get ("meta/title", {"default": "-missing-"}))
     self.canvas.setAuthor (
