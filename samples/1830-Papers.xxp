@@ -324,6 +324,8 @@ train:
         rust_bar_box_fill_p: BLACK
         long_name_text_text: "5"
         cost_text_text_p: $450
+        note_text_text: |
+            To DIESEL: $800
         rusted_text_text: PERMANENT
       model:
         index: $[index_of (3)]
@@ -335,11 +337,15 @@ train:
         long_name_text_text: "6"
         cost_text_text_p: $630
         rusted_text_text: PERMANENT
+        note_text_text: |
+            To DIESEL: $800
       model:
         index:
           "1":
             note_text:
-              text: Optional
+              text: |
+                (Optional)
+                To DIESEL: $800
           "2":
           "3":
 

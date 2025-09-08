@@ -53,6 +53,7 @@ _include_:
   - XXP_catalogue.xxp
   - XXP_colour.xxp
   - XXP_company.xxp
+  - XXP_location.xxp
   - XXP_marker.xxp
   - XXP_market2d.xxp
   - XXP_private.xxp

@@ -11,6 +11,12 @@ CATALOGUE:
     typ: concession
     name_index: company/index
     instance_index: concession/index
+  location:
+    tile_type: asset_tile
+    klass: location
+    typ: -missing-
+    name_index: location/index
+    instance_index:
   minor_charter:
     tile_type: minor_charter_tile
     klass: company

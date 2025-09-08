@@ -1,4 +1,4 @@
 #! /bin/bash
 
-poetry build --publish
-# poetry publish
+poetry build
+poetry publish

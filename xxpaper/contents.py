@@ -16,9 +16,10 @@ class Contents:
   @logtool.log_call
   def render (self):
     with Page (self.canvas) as pg:
+      # print ("New page")
       for obj in self.objects:
         coords = pg.next (obj.asset)
         with XlateFrame (self.canvas, obj.tile_type, *coords,
                          inset_by = "inset"):
-          # print ("Obj: ", obj.tile_type)
+          # print (f"\tObj: {obj.klass} {obj.tile_type} {obj.typ} {obj.name} {obj.n}")
           obj.render ()

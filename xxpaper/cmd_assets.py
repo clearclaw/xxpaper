@@ -47,4 +47,7 @@ def do (**kwargs):
         for c in components
         if _match_filter (c, typ_filters)]
     )
+    #for t in todo:
+    #  print (f"\tObj: {t.klass} {t.tile_type} {t.typ} {t.name} {t.n}")
+
     contents.Contents (canvas, todo).render ()

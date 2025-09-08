@@ -337,6 +337,7 @@ class Tile:
 
   @logtool.log_call
   def render (self):
+    # print (f"\t\tELE: {self.value (self.typ + "/ELEMENTS")}")
     self._render_elements (self.value (self.typ + "/ELEMENTS"))
 
   @logtool.log_call

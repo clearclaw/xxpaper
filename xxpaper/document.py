@@ -31,7 +31,8 @@ class Document:
     #    "xxpaper",
     #    "XXP_DEFAULT.xxp")).dirname () # Just to get the directory
       paths = (["./", "~/.config/xxpaper", "~/.xxpaper", "~/",
-               os.environ.get ("HOME", "./"), Path (cdir).dirname ()] # pylint: disable=no-member
+                os.environ.get ("HOME", "./"),
+                Path (cdir).dirname ()] # pylint: disable=no-member
                + Config._dirs)
       for ff in Config.get ("xxpaper/typefaces", {"default": []}):
         p = Path (findfile_path (ff, paths))

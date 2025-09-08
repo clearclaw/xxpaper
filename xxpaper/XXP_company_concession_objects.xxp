@@ -9,6 +9,7 @@ TEMPLATE_concession_default:
   - comment_text
   - bottom_bar_box
   - cost_text
+  - revenue_text
   - bid_text
 
 _:
@@ -67,6 +68,7 @@ comment_text:
   v_center: -1
   typeface: ${DEFAULT/typeface_italic}
   size: 8
+  fill: $[black_or_white (${asset_interior_box/fill})]  
 
 bottom_bar_box:
   x: ${asset_interior_box/y}
@@ -89,4 +91,4 @@ bid_text:
   v_center: 0
   typeface: ${DEFAULT/typeface_bold_italic}
   size: 11
-  fill: $[black_or_white (${bottom_bar_box/fill})]
+  fill: $[black_or_white (${money_bar_box/fill})]

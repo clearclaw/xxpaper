@@ -115,6 +115,7 @@ class Page:
     old_typ = (Config.get ("CATALOGUE/" + self.asset)["tile_type"]
                if self.asset is not None else None)
     new_typ = Config.get ("CATALOGUE/" + asset)["tile_type"]
+    # print (f"ObjTyp: Old: {old_typ}    New: {new_typ}")
     if old_typ != new_typ:
       self._start_page (asset, new_typ)
       Config.set ("xxpaper/tile_type", new_typ)

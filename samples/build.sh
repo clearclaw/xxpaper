@@ -11,6 +11,7 @@ else
 fi
 for xxp in ${files}
 do
+  echo ${xxp}
   pushd build
     for paper in letter A4
     do

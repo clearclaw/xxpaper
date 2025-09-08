@@ -12,8 +12,8 @@ def do (**kwargs):
   fname = kwargs["template"]
   d = None
   for ext in exts:
-    f = Path ("%s%s" % (fname, ext))
-    if f.isfile ():
+    f = Path (f"{fname}{ext}")
+    if f.is_file ():
       try:
         print ("Trying to load %s as JSON." % f)
         # pylint: disable=consider-using-with
