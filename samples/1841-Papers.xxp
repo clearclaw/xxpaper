@@ -6,25 +6,28 @@ meta:
 company:
   concession:
     _:
+      asset_interior_box_fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
       closes_text_text: "Closes: In BLUE phase"
       cost_text_text: "Cost: L.50"
       bid_text_text: "Minimum bid: L.20"
   charter:
-    _:
-      token_1_circle_fill: ${colour/scale/gray_2}
-      token_2_circle_fill: ${colour/scale/gray_2}
+    index:
   narrow_charter:
     _:
       token_1_circle_fill: ${colour/scale/gray_2}
       token_2_circle_fill: ${colour/scale/gray_2}
-  index:
+    index:
+      "1":
 
+  index:
     IRSFF:
       _:
+        asset_interior_box_fill: ${colour/hollasch/burlywood}
+        outside_box_fill: ${colour/hollasch/burlywood}
         long_name_text_text: |
-            Imperial Regia
-            Strada Ferrata
-            Ferdinandea
+          Imperial Regia
+          Strada Ferrata
+          Ferdinandea
         short_name_text_text: IRSFF
         token_1_text_text: L.50
         token_2_text_text: L.50
@@ -34,12 +37,11 @@ company:
         _major_fill: ${colour/hollasch/carrot}
         _minor_fill: ${colour/hollasch/van_dyke_brown}
         comment_text_text: |
-            "Ferdinandea"
+          "Ferdinandea"
         _related_fill: ${colour/x11/orange}
-      narrow_charter:
-        index:
-          "1":
       concession:
+        _:
+          asset_interior_box_fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
         index:
           "1":
       token:
@@ -49,9 +51,11 @@ company:
 
     SB:
       _:
+        asset_interior_box_fill: ${colour/hollasch/burlywood}
+        outside_box_fill: ${colour/hollasch/burlywood}
         long_name_text_text: |
-            Strada Ferrate del
-            Sud dell' Austria
+          Strada Ferrate del
+          Sud dell' Austria
         short_name_text_text: SB
         token_1_text_text: L.50
         token_2_text_text: L.50
@@ -61,11 +65,8 @@ company:
         _major_fill: ${colour/x11/yellow}
         _minor_fill: ${colour/hollasch/red}
         comment_text_text: |
-            "Sudbahn"
+          "Sudbahn"
         _related_fill: ${colour/x11/gold}
-      narrow_charter:
-        index:
-          "1":
       token:
         ELEMENTS: ${TEMPLATE_cross/.}
         EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
@@ -73,10 +74,12 @@ company:
 
     SFL:
       _:
+        asset_interior_box_fill: ${colour/hollasch/burlywood}
+        outside_box_fill: ${colour/hollasch/burlywood}
         long_name_text_text: |
-            Strade Ferrate della
-            Lombardia &
-            dell'Italia Centrale
+          Strade Ferrate della
+          Lombardia &
+          dell'Italia Centrale
         short_name_text_text: SFL
         token_1_text_text: L.50
         token_2_text_text: L.50
@@ -86,11 +89,8 @@ company:
         _major_fill: ${colour/hollasch/cyan}
         _minor_fill: ${colour/hollasch/red}
         comment_text_text: |
-            "Lombarda"
+          "Lombarda"
         _related_fill: ${colour/x11/paleturquoise1}
-      narrow_charter:
-        index:
-          "1":
       token:
         ELEMENTS: ${TEMPLATE_cross/.}
         EMBED_ELEMENTS: ${TEMPLATE_cross_embed/.}
@@ -98,9 +98,11 @@ company:
 
     SFLi:
       _:
+        asset_interior_box_fill: ${colour/hollasch/burlywood}
+        outside_box_fill: ${colour/hollasch/burlywood}
         long_name_text_text: |
-            Strade Ferrate
-            Livornesi
+          Strade Ferrate
+          Livornesi
         short_name_text_text: SFLi
         token_1_text_text: L.50
         token_2_text_text: L.50
@@ -110,12 +112,9 @@ company:
         _major_fill: ${colour/wikipedia/banana_yellow}
         _minor_fill: ${colour/hollasch/blue}
         comment_text_text: |
-            "Livornese"
+          "Livornese"
         _related_fill: ${colour/hollasch/plum}
         _share_pct_text_fill_x: ${colour/xxp/WHITE}
-      narrow_charter:
-        index:
-          "1":
       token:
         _:
           _major_fill_1: ${colour/hollasch/violet_dark}
@@ -128,9 +127,11 @@ company:
 
     SSFL:
       _:
+        asset_interior_box_fill: ${colour/hollasch/burlywood}
+        outside_box_fill: ${colour/hollasch/burlywood}
         long_name_text_text: |
-            Società per la Strada
-            Ferrata Leopolda
+          Società per la Strada
+          Ferrata Leopolda
         short_name_text_text: SSFL
         token_1_text_text: L.50
         token_2_text_text: L.50
@@ -140,10 +141,12 @@ company:
         _major_fill: ${colour/hollasch/violet_dark}
         _minor_fill: ${colour/xxp/WHITE}
         comment_text_text: |
-            "Leopolda"
+          "Leopolda"
         _related_fill: ${colour/hollasch/orchid}
         _share_pct_text_fill_x: ${colour/xxp/WHITE}
       concession:
+        _:
+          asset_interior_box_fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
         index:
           "1":
       narrow_charter:
@@ -161,20 +164,25 @@ company:
 
     SFLP:
       _:
+        asset_interior_box_fill: ${colour/hollasch/lamp_black}
+        outside_box_fill: ${colour/hollasch/lamp_black}
+        # asset_interior_box_fill: ${colour/x11/greenyellow}
         long_name_text_text: |
-            Strada Ferrata da
-            Lucca a Pistoia
+          Strada Ferrata da
+          Lucca a Pistoia
         short_name_text_text: SFLP
         token_1_text_text: L.50
         token_2_text_text: L.50
         _major_fill: ${colour/hollasch/cinnabar_green}
         _minor_fill: ${colour/xxp/WHITE}
         comment_text_text: |
-            "Lucchese"
+          "Lucchese"
         _related_fill: ${colour/x11/greenyellow}
         _share_pct_text_fill_x: ${colour/xxp/WHITE}
         token_2_circle_fill: ${colour/xxp/WHITE}
       concession:
+        _:
+          asset_interior_box_fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
         index:
           "1":
       share:
@@ -216,20 +224,24 @@ company:
 
     SFMA:
       _:
+        asset_interior_box_fill: ${colour/hollasch/lamp_black}
+        outside_box_fill: ${colour/hollasch/lamp_black}
         long_name_text_text: |
-            Strada Ferrata
-            Maria Antonia
+          Strada Ferrata
+          Maria Antonia
         short_name_text_text: SFMA
         token_1_text_text: L.50
         token_2_text_text: L.50
         _major_fill: ${colour/hollasch/geranium_lake}
         _minor_fill: ${colour/xxp/WHITE}
         comment_text_text: |
-            "Maria Antonia"
+          "Maria Antonia"
         _related_fill: ${colour/hollasch/tomato}
         _share_pct_text_fill_x: ${colour/xxp/WHITE}
         token_2_circle_fill: ${colour/xxp/WHITE}
       concession:
+        _:
+          asset_interior_box_fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
         index:
           "1":
       share:
@@ -271,9 +283,11 @@ company:
 
     SFTC:
       _:
+        asset_interior_box_fill: ${colour/hollasch/burlywood}
+        outside_box_fill: ${colour/hollasch/burlywood}
         long_name_text_text: |
-            Strada di Ferro da
-            Torino a Cuneo
+          Strada di Ferro da
+          Torino a Cuneo
         short_name_text_text: SFTC
         token_1_text_text: L.50
         token_2_text_text: L.50
@@ -283,9 +297,11 @@ company:
         _major_fill: ${colour/x11/yellow}
         _minor_fill: ${colour/hollasch/olive_drab}
         comment_text_text: |
-            "Cuneense"
+          "Cuneense"
         _related_fill: ${colour/x11/yellow3}
       concession:
+        _:
+          asset_interior_box_fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
         index:
           "1":
       narrow_charter:
@@ -302,9 +318,11 @@ company:
 
     SFTG:
       _:
+        asset_interior_box_fill: ${colour/hollasch/burlywood}
+        outside_box_fill: ${colour/hollasch/burlywood}
         long_name_text_text: |
-            Strada Ferrata da
-            Torino a Genova
+          Strada Ferrata da
+          Torino a Genova
         short_name_text_text: SFTG
         token_1_text_text: L.50
         token_2_text_text: L.50
@@ -314,9 +332,11 @@ company:
         _major_fill: ${colour/hollasch/dodger_blue}
         _minor_fill: ${colour/xxp/WHITE}
         comment_text_text: |
-            "Genovese"
+          "Genovese"
         _related_fill: ${colour/hollasch/powder_blue}
       concession:
+        _:
+          asset_interior_box_fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
         index:
           "1":
       narrow_charter:
@@ -333,9 +353,11 @@ company:
 
     SFTN:
       _:
+        asset_interior_box_fill: ${colour/hollasch/burlywood}
+        outside_box_fill: ${colour/hollasch/burlywood}
         long_name_text_text: |
-            Strada di Ferro da
-            Torino a Novara
+          Strada di Ferro da
+          Torino a Novara
         short_name_text_text: SFTN
         token_1_text_text: L.50
         token_2_text_text: L.50
@@ -345,9 +367,11 @@ company:
         _major_fill: ${colour/hollasch/raw_sienna}
         _minor_fill: ${colour/xxp/WHITE}
         comment_text_text: |
-            "Novarese"
+          "Novarese"
         _related_fill: ${colour/x11/wheat}
       concession:
+        _:
+          asset_interior_box_fill: $[desaturate_and_brighten (${_/_related_fill}, 0.30, 0.95)]
         index:
           "1":
       narrow_charter:
@@ -364,10 +388,12 @@ company:
 
     CTLP:
       _:
+        asset_interior_box_fill: ${colour/hollasch/lamp_black}
+        outside_box_fill: ${colour/hollasch/lamp_black}
         long_name_text_text: |
-            Compagnia
-            Transporti
-            La Patria
+          Compagnia
+          Transporti
+          La Patria
         short_name_text_text: CTLP
         token_1_text_text:
         token_2_text_text:
@@ -375,7 +401,7 @@ company:
         _minor_fill: ${colour/x11/turquoise1}
         name_stripe_box_suppress: True
         comment_text_text: |
-            "La Patria"
+          "La Patria"
         _related_fill: ${colour/x11/lightcyan}
         middle_box_fill: ${_/_minor_fill}
         token_2_circle_fill: ${colour/xxp/WHITE}
@@ -413,9 +439,11 @@ company:
 
     FTP:
       _:
+        asset_interior_box_fill: ${colour/hollasch/lamp_black}
+        outside_box_fill: ${colour/hollasch/lamp_black}
         long_name_text_text: |
-            Ferrovie Trans
-            Padane
+          Ferrovie Trans
+          Padane
         short_name_text_text: FTP
         token_1_text_text:
         token_2_text_text:
@@ -423,7 +451,7 @@ company:
         _minor_fill: ${colour/wikipedia/corn}
         name_stripe_box_suppress: True
         comment_text_text: |
-            "Padana"
+          "Padana"
         _related_fill: ${colour/resene/LondonHue}
         middle_box_fill: ${_/_minor_fill}
         token_2_circle_fill: ${colour/xxp/WHITE}
@@ -461,9 +489,11 @@ company:
 
     SLDV:
       _:
+        asset_interior_box_fill: ${colour/hollasch/lamp_black}
+        outside_box_fill: ${colour/hollasch/lamp_black}
         long_name_text_text: |
-            Società
-            Leonardo Da Vinci
+          Società
+          Leonardo Da Vinci
         short_name_text_text: SLDV
         short_name_text_fill: ${colour/xxp/WHITE}
         token_1_text_text:
@@ -472,7 +502,7 @@ company:
         _minor_fill: ${colour/x11/darkgreen}
         name_stripe_box_suppress: True
         comment_text_text: |
-            "Leonardo"
+          "Leonardo"
         _related_fill: ${colour/hollasch/sea_green}
         middle_box_fill: ${_/_minor_fill}
         token_2_circle_fill: ${colour/xxp/WHITE}
@@ -511,8 +541,8 @@ company:
     AFI:
       _:
         long_name_text_text: |
-            Azienda Ferroviaria
-            Italica
+          Azienda Ferroviaria
+          Italica
         short_name_text_text: AFI
         token_1_text_text:
         token_2_text_text:
@@ -525,7 +555,7 @@ company:
         _minor_fill_2: ${colour/resene/Victoria}
         name_stripe_box_suppress: True
         comment_text_text: |
-            "Italica"
+          "Italica"
         _related_fill: ${colour/resene/Mimosa}
       narrow_charter:
         index:
@@ -540,8 +570,8 @@ company:
     ATFA:
       _:
         long_name_text_text: |
-            Azienda Trasporti
-            Ferroviari Ausonia
+          Azienda Trasporti
+          Ferroviari Ausonia
         short_name_text_text: ATFA
         token_1_text_text:
         token_2_text_text:
@@ -551,7 +581,7 @@ company:
         _major_fill: ${colour/hollasch/melon}
         name_stripe_box_suppress: True
         comment_text_text: |
-            "Ausonia"
+          "Ausonia"
         _related_fill: ${colour/hollasch/peach_puff}
       narrow_charter:
         index:
@@ -566,9 +596,9 @@ company:
     CTDA:
       _:
         long_name_text_text: |
-            Compagnia
-            Trasporti
-            Dante Alighieri
+          Compagnia
+          Trasporti
+          Dante Alighieri
         short_name_text_text: CTDA
         token_1_text_text:
         token_2_text_text:
@@ -578,7 +608,7 @@ company:
         _major_fill: ${colour/hollasch/blue}
         name_stripe_box_suppress: True
         comment_text_text: |
-            "Dante"
+          "Dante"
         _related_fill: ${colour/hollasch/sky_blue_deep}
       narrow_charter:
         index:
@@ -593,9 +623,9 @@ company:
     CFCC:
       _:
         long_name_text_text: |
-            Compagnia
-            Ferroviaria
-            Conte di Cavour
+          Compagnia
+          Ferroviaria
+          Conte di Cavour
         short_name_text_text: CFCC
         token_1_text_text:
         token_2_text_text:
@@ -605,7 +635,7 @@ company:
         _major_fill: ${colour/hollasch/raw_umber}
         name_stripe_box_suppress: True
         comment_text_text: |
-            "Cavour"
+          "Cavour"
         _related_fill: ${colour/hollasch/raw_sienna}
       narrow_charter:
         index:
@@ -620,9 +650,9 @@ company:
     CGTF:
       _:
         long_name_text_text: |
-            Compagnia Garibaldi
-            per i Trasporti
-            Ferroviari
+          Compagnia Garibaldi
+          per i Trasporti
+          Ferroviari
         short_name_text_text: CGTF
         token_1_text_text:
         token_2_text_text:
@@ -632,7 +662,7 @@ company:
         _major_fill: ${colour/hollasch/red}
         name_stripe_box_suppress: True
         comment_text_text: |
-            "Garibaldi"
+          "Garibaldi"
         _related_fill: ${colour/resene/Geraldine}
       narrow_charter:
         index:
@@ -647,8 +677,8 @@ company:
     CTS:
       _:
         long_name_text_text: |
-            Compagnia Traporti
-            Subalpini
+          Compagnia Traporti
+          Subalpini
         short_name_text_text: CTS
         token_1_text_text:
         token_2_text_text:
@@ -658,7 +688,7 @@ company:
         _major_fill: ${colour/hollasch/turquoise_pale}
         _minor_fill: ${colour/hollasch/steel_blue_light}
         comment_text_text: |
-            "Subalpini"
+          "Subalpini"
         _related_fill: ${colour/hollasch/steel_blue_light}
       narrow_charter:
         index:
@@ -669,8 +699,8 @@ company:
     ICSF:
       _:
         long_name_text_text: |
-            Impresa Centrale
-            Strade Ferrate
+          Impresa Centrale
+          Strade Ferrate
         short_name_text_text: ICSF
         token_1_text_text:
         token_2_text_text:
@@ -680,7 +710,7 @@ company:
         _major_fill: ${colour/x11/olivedrab}
         _minor_fill: ${colour/x11/orange3}
         comment_text_text: |
-            "Centrale"
+          "Centrale"
         _related_fill: ${colour/x11/palegreen3}
       narrow_charter:
         index:
@@ -691,8 +721,8 @@ company:
     IFAI:
       _:
         long_name_text_text: |
-            Impresa Ferroviaria
-            Alta Italia
+          Impresa Ferroviaria
+          Alta Italia
         short_name_text_text: IFAI
         token_1_text_text:
         token_2_text_text:
@@ -702,7 +732,7 @@ company:
         _major_fill: ${colour/x11/maroon1}
         _minor_fill: ${colour/x11/mediumpurple2}
         comment_text_text: |
-            "Alta Italia"
+          "Alta Italia"
         _related_fill: ${colour/resene/Zombie}
       narrow_charter:
         index:
@@ -713,8 +743,8 @@ company:
     ILTF:
       _:
         long_name_text_text: |
-            Impresa Latina
-            Trasporti su Ferro
+          Impresa Latina
+          Trasporti su Ferro
         short_name_text_text: ILTF
         token_1_text_text:
         token_2_text_text:
@@ -724,7 +754,7 @@ company:
         _major_fill: ${colour/hollasch/lawn_green}
         _minor_fill: ${colour/x11/green4}
         comment_text_text: |
-            "Latina"
+          "Latina"
         _related_fill: ${colour/hollasch/manganese_blue}
       narrow_charter:
         index:
@@ -735,8 +765,8 @@ company:
     RATF:
       _:
         long_name_text_text: |
-            Regia Azienda
-            Trasporti Ferroviari
+          Regia Azienda
+          Trasporti Ferroviari
         short_name_text_text: RATF
         token_1_text_text:
         token_2_text_text:
@@ -746,7 +776,7 @@ company:
         _major_fill: ${colour/x11/yellow}
         _minor_fill: ${colour/x11/firebrick}
         comment_text_text: |
-            "Regia"
+          "Regia"
         _related_fill: ${colour/x11/darkorange1}
       narrow_charter:
         index:
@@ -757,8 +787,8 @@ company:
     RSFS:
       _:
         long_name_text_text: |
-            Reale Società
-            Ferroviaria Sabauda
+          Reale Società
+          Ferroviaria Sabauda
         short_name_text_text: RSFS
         token_1_text_text:
         token_2_text_text:
@@ -769,7 +799,7 @@ company:
         _minor_fill: ${colour/xxp/BLACK}
         _major_fill_2: ${colour/xxp/WHITE}
         comment_text_text: |
-            "Sabauda"
+          "Sabauda"
         _related_fill: ${colour/x11/slategray4}
       narrow_charter:
         index:
@@ -791,11 +821,8 @@ marker:
         ELEMENTS: ${TEMPLATE_bullseye/.}
         index: "$[index_of (1)]"
 
-
 private:
-
   index:
-
     SANC:
       _:
         asset_interior_box_fill: ${colour/scale/gray_4}
@@ -803,13 +830,12 @@ private:
         cost_text_text: "Cost: L.50"
         revenue_text_text: "Revenue: L.20"
         long_name_text_text: |
-            Società della Strada
-            di Ferro da Napoli
-            A Nocera e
-            Castellammare
+          Società della Strada
+          di Ferro da Napoli
+          A Nocera e
+          Castellammare
 
 train:
-
   index:
     2T:
       _:
@@ -822,13 +848,13 @@ train:
           "1":
             note_text:
               text: |
-                  Remove for
-                  1841 Lite
+                Remove for
+                1841 Lite
           "2":
             note_text:
               text: |
-                  Remove for
-                  1841 Lite
+                Remove for
+                1841 Lite
           "3":
           "4":
           "5":
@@ -847,8 +873,8 @@ train:
           "1":
             note_text:
               text: |
-                  Remove for
-                  1841 Lite
+                Remove for
+                1841 Lite
           "2":
           "3":
           "4":
@@ -866,8 +892,8 @@ train:
           "1":
             note_text:
               text: |
-                  Remove for
-                  1841 Lite
+                Remove for
+                1841 Lite
           "2":
           "3":
           "4":
@@ -883,8 +909,8 @@ train:
           "1":
             note_text:
               text: |
-                  Remove for
-                  1841 Lite
+                Remove for
+                1841 Lite
           "2":
           "3":
 
