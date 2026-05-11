@@ -1,3 +1,11 @@
+[build-system]
+build-backend = "poetry_dynamic_versioning.backend"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+
+[project]
+dynamic = ["version"]
+name = "xxpaper"
+
 [tool.poetry]
 authors = ["J C Lawrence <claw@kanga.nu>"]
 description = "Tools for generating printable files for 18xx games."
@@ -6,7 +14,7 @@ name = "xxpaper"
 packages = [{include = "xxpaper"}]
 readme = "README.rst"
 repository = "https://github.com/clearclaw/cfgstack"
-version="0.0"
+version="0.0.0"
 
 [tool.poetry.dependencies]
 python = "^3.13"
@@ -35,9 +43,8 @@ tagged-metadata = true
 pattern = "default-unprefixed"
 vcs = "git"
 
+[tool.poetry.requires-plugins]
+poetry-dynamic-versioning = { version = ">=1.0.0,<2.0.0", extras = ["plugin"] }
+
 [tool.poetry.scripts]
 xxpaper = "xxpaper.main:main"
-
-[build-system]
-build-backend = "poetry_dynamic_versioning.backend"
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
