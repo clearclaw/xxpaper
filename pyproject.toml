@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "poetry_dynamic_versioning.backend"
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+requires = ["poetry-core>=2.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
 
 [project]
 dynamic = ["version"]
@@ -13,7 +13,7 @@ license = "GPL-3.0-only"
 name = "xxpaper"
 packages = [{include = "xxpaper"}]
 readme = "README.rst"
-repository = "https://github.com/clearclaw/cfgstack"
+repository = "https://github.com/clearclaw/xxpaper"
 version="0.0.0"
 
 [tool.poetry.dependencies]
