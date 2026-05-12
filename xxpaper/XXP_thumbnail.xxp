@@ -1,0 +1,55 @@
+thumbnail:
+
+  index:
+
+  model:
+
+    CUT_ELEMENT: cutline_box
+
+    ELEMENTS:
+      - thumbnail_interior_box
+      - name_text
+      - note_text
+      - comment_text
+
+  _:
+    comment_text_text: comment
+    name_text_text: name
+    note_text_text: note
+    thumbnail_interior_box_fill_p: YELLOW
+
+  cutline_box: ${DEFAULT/thumbnail_tile}
+
+  thumbnail_interior_box:
+    fill: ${colour/xxp/TRAIN_${_/thumbnail_interior_box_fill_p}}
+
+  name_text:
+    fill: $[black_or_white (${thumbnail_interior_box/fill})]
+    size: 32
+    h_center: 0
+    v_center: 1
+    x: $[${thumbnail_interior_box/x} / 2]
+    y: $[${thumbnail_interior_box/y} * 3 / 5]
+
+  comment_text:
+    fill: $[black_or_white (${thumbnail_interior_box/fill})]
+    suppress: False
+    typeface: ${DEFAULT/typeface_italic}
+    size: 16
+    h_center: 0
+    v_center: 0
+    # x: 50
+    x: $[${thumbnail_interior_box/x} / 2]
+    y: $[${thumbnail_interior_box/y} * 2 / 9]
+
+  note_text:
+    fill: $[black_or_white (${thumbnail_interior_box/fill})]
+    suppress: False
+    _typeface: ${DEFAULT/typeface_italic}
+    size: 10
+    h_center: 0
+    v_center: -1
+    # x: 50
+    x: $[${thumbnail_interior_box/x} / 2]
+    y: $[${thumbnail_interior_box/y} / 8]
+

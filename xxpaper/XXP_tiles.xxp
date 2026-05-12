@@ -26,6 +26,10 @@ swatch_interior_box:
   x: ${swatch_tile/x_max}
   y: ${swatch_tile/y_max}
 
+thumbnail_interior_box:
+  x: ${thumbnail_tile/x_max}
+  y: ${thumbnail_tile/y_max}
+
 token_interior_box:
   x: 44
   y: 44
@@ -97,6 +101,16 @@ swatch_tile:
   width: ${DEFAULT/cutline_width}
   inset_x: 0
   inset_y: 0
+
+thumbnail_tile:
+  x: 108
+  y: 90
+  x_max: $[${thumbnail_tile/x} - (2 * ${thumbnail_tile/inset_x})]
+  y_max: $[${thumbnail_tile/y} - (2 * ${thumbnail_tile/inset_y})]
+  x_num: 5
+  y_num: 8
+  width: ${DEFAULT/cutline_width}
+  stroke: ${DEFAULT/cutline_stroke}
 
 token_tile:
   x: 50

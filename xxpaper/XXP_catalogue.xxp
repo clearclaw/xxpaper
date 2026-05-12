@@ -71,6 +71,12 @@ CATALOGUE:
     typ: -missing-
     name_index: swatch/index
     instance_index:
+  thumbnail:
+    tile_type: thumbnail_tile
+    klass: thumbnail
+    typ: model
+    name_index: thumbnail/index
+    instance_index: model/index
   token:
     tile_type: token_tile
     klass: company

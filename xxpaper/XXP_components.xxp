@@ -9,6 +9,7 @@ COMPONENTS:
   - share
   - short
   - swatch
+  - thumbnail
   - train
   - token
   - marker
