@@ -5,22 +5,131 @@ meta:
 
 company:
 
-  small_hexagon_1s_clone:
-    of: small_hexagon_shape
+  charter:
+    index:
+      "1":
+
+  wide_charter:
+    index:
+      "1":
+
+  large_charter:
+    index:
+      "1":
+
+  charter_track_cost_hex_upper_clone:
+    of: hexagon_shape
     x_inset: 112
     y_inset: 125
-  small_hexagon_2s_clone:
-    of: small_hexagon_shape
+  charter_track_cost_hex_lower_clone:
+    of: hexagon_shape
     x_inset: 112
     y_inset: 113
-  small_hexagon_2t_clone:
+  charter_track_cost_hex_label_clone:
     of: arbitrary_text
     x_inset: 111.75
     y_inset: 112.5
     size: 9
     text: $40
 
-  TEMPLATE_CHARTER_track_hexes:
+  wide_charter_track_cost_hex_upper_clone:
+    of: hexagon_shape
+    x_inset: 155
+    y_inset: 80
+  wide_charter_track_cost_hex_lower_clone:
+    of: hexagon_shape
+    x_inset: 155
+    y_inset: 68
+  wide_charter_track_cost_hex_label_clone:
+    of: arbitrary_text
+    x_inset: 154.75
+    y_inset: 67.5
+    size: 9
+    text: $40
+
+  large_charter_track_cost_hex_upper_clone:
+    of: hexagon_shape
+    scale: 2
+    x_inset: 260
+    y_inset: 130
+  large_charter_track_cost_hex_lower_clone:
+    of: hexagon_shape
+    scale: 2
+    x_inset: 260
+    y_inset: 108
+  large_charter_track_cost_hex_label_clone:
+    of: arbitrary_text
+    x_inset: 259.75
+    y_inset: 107.5
+    size: 12
+    text: $40
+
+
+  TEMPLATE_WIDE_CHARTER_with_track_hexes:
+    - charter_interior_box
+    - rotate
+    - outside_box
+    - title_box
+    - token_embed
+    - label_text
+    - top_note_text
+    - comment_text
+    - long_name_text
+    - token_1_circle
+    - token_2_circle
+    - token_3_circle
+    - token_4_circle
+    - token_5_circle
+    - token_6_circle
+    - token_7_circle
+    - token_8_circle
+    - token_9_circle
+    - token_1_text
+    - token_2_text
+    - token_3_text
+    - token_4_text
+    - token_5_text
+    - token_6_text
+    - token_7_text
+    - token_8_text
+    - token_9_text
+    - wide_charter_track_cost_hex_upper_clone
+    - wide_charter_track_cost_hex_lower_clone
+    - wide_charter_track_cost_hex_label_clone
+
+  TEMPLATE_LARGE_CHARTER_with_track_hexes:
+    - charter_interior_box
+    - rotate
+    - outside_box
+    - title_box
+    - token_embed
+    - label_text
+    - top_note_text
+    - comment_text
+    - long_name_text
+    - token_1_circle
+    - token_2_circle
+    - token_3_circle
+    - token_4_circle
+    - token_5_circle
+    - token_6_circle
+    - token_7_circle
+    - token_8_circle
+    - token_9_circle
+    - token_1_text
+    - token_2_text
+    - token_3_text
+    - token_4_text
+    - token_5_text
+    - token_6_text
+    - token_7_text
+    - token_8_text
+    - token_9_text
+    - large_charter_track_cost_hex_upper_clone
+    - large_charter_track_cost_hex_lower_clone
+    - large_charter_track_cost_hex_label_clone
+
+  TEMPLATE_CHARTER_with_track_hexes:
     - charter_interior_box
     - outside_box
     - title_box
@@ -47,9 +156,9 @@ company:
     - token_7_text
     - token_8_text
     - token_9_text
-    - small_hexagon_1s_clone
-    - small_hexagon_2s_clone
-    - small_hexagon_2t_clone
+    - charter_track_cost_hex_upper_clone
+    - charter_track_cost_hex_lower_clone
+    - charter_track_cost_hex_label_clone
 
   index:
 
@@ -69,7 +178,11 @@ company:
         _related_fill: ${colour/wikipedia/han_blue}
         _share_pct_text_fill_x: ${colour/xxp/WHITE}
       charter:
-        ELEMENTS: ${TEMPLATE_CHARTER_track_hexes/.}
+        ELEMENTS: ${TEMPLATE_CHARTER_with_track_hexes/.}
+      wide_charter:
+        ELEMENTS: ${TEMPLATE_WIDE_CHARTER_with_track_hexes/.}
+      large_charter:
+        ELEMENTS: ${TEMPLATE_LARGE_CHARTER_with_track_hexes/.}
       token:
         _:
           _major_fill: ${colour/wikipedia/ultramarine}
@@ -292,7 +405,11 @@ company:
             "Not Yet, No How & Hopeless"
         _related_fill: ${colour/hollasch/tan}
       charter:
-        ELEMENTS: ${TEMPLATE_CHARTER_track_hexes/.}
+        ELEMENTS: ${TEMPLATE_CHARTER_with_track_hexes/.}
+      wide_charter:
+        ELEMENTS: ${TEMPLATE_WIDE_CHARTER_with_track_hexes/.}
+      large_charter:
+        ELEMENTS: ${TEMPLATE_LARGE_CHARTER_with_track_hexes/.}
       share:
         long_name_text:
           size: 13

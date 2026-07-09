@@ -55,6 +55,14 @@ company:
     _include_:
       - XXP_company_wide_charter_objects.xxp
 
+  large_charter:
+    CUT_ELEMENT: cutline_box
+    ELEMENTS: ${TEMPLATE_large_charter_default/.}
+    index:
+    cutline_box: ${DEFAULT/large_charter_tile}
+    _include_:
+      - XXP_company_large_charter_objects.xxp
+
   share:
     CUT_ELEMENT: cutline_box
     ELEMENTS: ${TEMPLATE_share_default/.}

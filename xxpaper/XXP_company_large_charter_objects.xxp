@@ -1,4 +1,4 @@
-TEMPLATE_wide_charter_default:
+TEMPLATE_large_charter_default:
   - charter_interior_box
   - rotate
   - outside_box
@@ -28,35 +28,36 @@ TEMPLATE_wide_charter_default:
   - token_9_text
 
 outside_box:
-  x_inset: 10
-  y_inset: 10
-  x: $[${wide_charter_interior_box/y} - (2 * ${outside_box/y_inset})]
-  y: $[${wide_charter_interior_box/x} - (2 * ${outside_box/x_inset})]
-  radius: 30
+  x_inset: 15
+  y_inset: 15
+  x: $[${large_charter_interior_box/y} - (2 * ${outside_box/y_inset})]
+  y: $[${large_charter_interior_box/x} - (2 * ${outside_box/x_inset})]
+  radius: 45
   stroke: ${colour/xxp/BLACK}
-  width: 4
+  width: 6
   fill: $[desaturate_and_brighten (${_/_related_fill}, 0.04, 0.95)]
 
 title_box:
   x_inset: ${outside_box/x_inset}
-  y_inset: $[${outside_box/y} - 60 + 10]
+  y_inset: $[${outside_box/y} - 90 + 15]
   x: ${outside_box/x}
-  y: 60
-  radius: 30
+  y: 90
+  radius: 45
   stroke: ${colour/xxp/BLACK}
-  width: 4
+  width: 6
   fill: ${_/_related_fill}
 
 token_embed:
   typ: token
-  x_inset: 18
-  y_inset: 200
+  scale: 2
+  x_inset: 25
+  y_inset: 304
 
 label_text:
   typeface: ${DEFAULT/typeface_italic}
-  size: 13
-  x_inset: 10
-  y_inset: 170
+  size: 20
+  x_inset: 15
+  y_inset: 264
   text: Assets, Treasury & Trains
   x: $[${outside_box/x} / 2]
   y: 0
@@ -67,11 +68,11 @@ label_text:
 top_note_text:
   suppress: True
   typeface: ${DEFAULT/typeface}
-  size: 8
+  size: 12
   x: $[${outside_box/x} / 2]
   y: 0
-  x_inset: 10
-  y_inset: 150
+  x_inset: 15
+  y_inset: 234
   h_center: 0
   v_center: 0
   fill: $[black_or_white (${outside_box/fill})]
@@ -80,9 +81,9 @@ comment_text:
   suppress: False
   text: ""
   typeface: ${DEFAULT/typeface_italic}
-  size: 8
-  x_inset: 10
-  y_inset: 20
+  size: 12
+  x_inset: 15
+  y_inset: 30
   x: $[${outside_box/x} / 2]
   y: 0
   h_center: 0
@@ -92,15 +93,15 @@ comment_text:
 long_name_text:
   h_center: 0
   v_center: 0
-  size: 16
+  size: 30
   x: $[(${token_embed/x_inset} * 2) + (${outside_box/x} - ${token_embed/x_inset}) / 2]
-  y: 215
+  y: 339
   fill: $[black_or_white (${_/_related_fill})]
 
 token_1_circle:
   suppress: $["${token_1_text/text}" == ""]
-  x: 40
-  y: 144
+  x: 69
+  y: 264
   radius: 18
   width: 0.5
   stroke: ${colour/xxp/BLACK}
@@ -153,8 +154,8 @@ token_3_text:
 
 token_4_circle:
   suppress: $["${token_4_text/text}" == ""]
-  x: $[${token_1_circle/x} + 47]
-  y: $[${token_1_circle/y}]
+  x: $[${token_1_circle/x}]
+  y: $[${token_3_circle/y} - 47]
   radius: 18
   width: 0.5
   stroke: ${colour/xxp/BLACK}
@@ -171,7 +172,7 @@ token_4_text:
 
 token_5_circle:
   suppress: $["${token_5_text/text}" == ""]
-  x: $[${token_4_circle/x}]
+  x: $[${token_1_circle/x}]
   y: $[${token_4_circle/y} - 47]
   radius: 18
   width: 0.5
@@ -189,8 +190,8 @@ token_5_text:
 
 token_6_circle:
   suppress: $["${token_6_text/text}" == ""]
-  x: $[${token_4_circle/x}]
-  y: $[${token_5_circle/y} - 47]
+  x: $[${token_2_circle/x} + 47]
+  y: $[${token_2_circle/y}]
   radius: 18
   width: 0.5
   stroke: ${colour/xxp/BLACK}
@@ -207,8 +208,8 @@ token_6_text:
 
 token_7_circle:
   suppress: $["${token_7_text/text}" == ""]
-  x: $[${token_4_circle/x} + 47]
-  y: $[${token_1_circle/y}]
+  x: $[${token_6_circle/x}]
+  y: $[${token_6_circle/y} - 47]
   radius: 18
   width: 0.5
   stroke: ${colour/xxp/BLACK}
@@ -225,7 +226,7 @@ token_7_text:
 
 token_8_circle:
   suppress: $["${token_8_text/text}" == ""]
-  x: $[${token_7_circle/x}]
+  x: $[${token_6_circle/x}]
   y: $[${token_7_circle/y} - 47]
   radius: 18
   width: 0.5
@@ -243,7 +244,7 @@ token_8_text:
 
 token_9_circle:
   suppress: $["${token_9_text/text}" == ""]
-  x: $[${token_7_circle/x}]
+  x: $[${token_6_circle/x}]
   y: $[${token_8_circle/y} - 47]
   radius: 18
   width: 0.5

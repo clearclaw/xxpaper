@@ -265,6 +265,9 @@ class Tile:
     with self._with_context ():
       self._inset (key)
       self._set_properties (key)
+      scale = self.value (key + "/scale", default = 1)
+      if scale != 1:
+        self.canvas.scale (scale, scale)
       suffix = of.split ("_")[-1]
       fn = getattr (self, "draw_" + suffix)
       fn (key)
@@ -305,7 +308,10 @@ class Tile:
     typ = self.value (key + "/typ")
     name = self.value (key + "/name", default = self.name)
     n = self.value (key + "/n", default = self.n)
+    scale = self.value (key + "/scale", default = 1)
     tile = Tile (typ, self.canvas, name, n)
+    if scale != 1:
+      self.canvas.scale (scale, scale)
     tile._draw_embed (typ) # pylint: disable=protected-access
 
   @logtool.log_call

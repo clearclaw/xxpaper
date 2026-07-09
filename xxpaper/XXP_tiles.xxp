@@ -18,6 +18,10 @@ wide_charter_interior_box:
   x: ${wide_charter_tile/x_max}
   y: ${wide_charter_tile/y_max}
 
+large_charter_interior_box:
+  x: ${large_charter_tile/x_max}
+  y: ${large_charter_tile/y_max}
+
 market2d_interior_box:
   x: ${market2d_tile/x_max}
   y: ${market2d_tile/y_max}
@@ -77,6 +81,16 @@ narrow_charter_tile:
   width: ${DEFAULT/cutline_width}
 
 wide_charter_tile: ${charter_tile/.}
+
+large_charter_tile:
+  x: $[14.6 * 72 / 2.54]
+  y: $[20.8 * 72 / 2.54]
+  x_max: $[${large_charter_tile/x} - (2 * ${large_charter_tile/inset_x})]
+  y_max: $[${large_charter_tile/y} - (2 * ${large_charter_tile/inset_y})]
+  x_num: 1
+  y_num: 1
+  stroke: ${DEFAULT/cutline_stroke}
+  width: ${DEFAULT/cutline_width}
 
 market2d_tile:
   x: 45
