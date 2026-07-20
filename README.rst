@@ -1,3 +1,9 @@
+This project is a fork of the original xxpaper project by JC Lawrence, and is distributed in accordance with the terms of the GNU General Public License (GPL). You can find it here: https://github.com/clearclaw/xxpaper
+
+It includes modifications and enhancements specific to this fork. The original project's copyright and license notices have been retained where required. Unless otherwise noted, changes made in this repository are also licensed under the GPL.
+
+For the full license terms, see the LICENSE file included with this repository.
+
 XXPaper
 =======
 
