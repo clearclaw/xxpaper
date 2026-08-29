@@ -35,6 +35,12 @@ CATALOGUE:
     typ: wide_charter
     name_index: company/index
     instance_index: wide_charter/index
+  large_charter:
+    tile_type: large_charter_tile
+    klass: company
+    typ: large_charter
+    name_index: company/index
+    instance_index: large_charter/index
   marker:
     tile_type: token_tile
     klass: marker
